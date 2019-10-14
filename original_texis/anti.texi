@@ -1,0 +1,117 @@
+@c -*-texinfo-*-
+@c This is part of the GNU Emacs Lisp Reference Manual.
+@c Copyright (C) 1999, 2002-2016 Free Software Foundation, Inc.
+@c See the file elisp.texi for copying conditions.
+
+@c This node must have no pointers.
+
+@node Antinews
+@appendix Emacs 24 Antinews
+@c Update the elisp.texi Antinews menu entry with the above version number.
+
+For those users who live backwards in time, here is information about
+downgrading to Emacs version 24.5.  We hope you will enjoy the greater
+simplicity that results from the absence of many Emacs @value{EMACSVER}
+features.
+
+@section Old Lisp Features in Emacs 24
+
+@itemize @bullet
+@item
+The requirement that @code{setq} and @code{setf} must be called with
+an even number of arguments has been removed.  You can now call them
+with an odd number of arguments, and Emacs will helpfully supply a
+@code{nil} for the missing one.  Simplicity rules!
+
+@item
+@kbd{M-x shell} and @kbd{M-x compile} set the @env{EMACS} environment
+variable, as they should, to indicate that the subprocess is run by
+Emacs.  This is so packages that took years to learn how to work
+around that setting could continue using their code to that effect.
+
+@item
+The @code{save-excursion} form saves and restores the mark, as
+expected.  No more need for the new @code{save-mark-and-excursion},
+which has been deleted.
+
+@item
+We have removed the @code{text-quoting-style} variable and the
+associated functionality that translates quote characters in messages
+displayed to the user and in help buffers.  Emacs now shows exactly
+the same quote characters as you wrote in your code!  Likewise,
+@code{substitute-command-keys} leaves the quote characters alone.  As
+you move back in time, Unicode support becomes less and less
+important, so no need to display those fancy new quotes the Unicode
+Standard invented.
+
+@item
+Regular expressions have been simplified by removing support for
+Unicode character properties in regexp classes.  As result,
+@code{[:alpha:]} and @code{[:alnum:]} will match any character with a
+word syntax, and @code{[:graph:]} and @code{[:print:]} will match any
+multibyte character, including surrogates and unassigned codepoints.
+Once again, this is in line with diminishing importance of Unicode as
+you move back in time.
+
+@item
+Evaluating @samp{(/ @var{n})} will now yield @var{n}.  We have
+realized that interpreting that as in Common Lisp was a bad mistake
+that needed to be corrected.
+
+@item
+The @code{pcase} form was significantly simplified by removing the
+UPatterns @code{quote} and @code{app}.  To further simplify this
+facility, we've removed @code{pcase-defmacro}, since we found no need
+for letting Lisp programs define new UPatterns.
+
+@item
+We've removed the text properties @code{cursor-intangible} and
+@code{cursor-sensor-functions}, replacing them by the much simpler
+@code{intangible}, @code{point-entered}, and @code{point-left}
+properties.  The latter are implemented on a much lower level, and
+therefore are better integrated with user expectations.  For similar
+reasons, @code{cursor-intangible-mode} and @code{cursor-sensor-mode}
+were removed; use the hook variable @code{inhibit-point-motion-hooks}
+which is no longer obsolete.
+
+@item
+Process creation and management functions were significantly improved
+and simplified by removing @code{make-process} and the @code{pipe}
+connection type.  Redirecting @code{stderr} of a subprocess should be
+done with shell facilities, not by Emacs.
+
+@item
+We decided that shutting up informative messages is bad for user
+interaction, so we've removed the @code{inhibit-message} variable
+which could be used to that effect.
+
+@item
+Support for generators and for finalizers has been removed, as we
+found no real need for these facilities.
+
+@item
+Due to excessive complexity and the diminishing need for Unicode
+support, the functions @code{string-collate-lessp} and
+@code{string-collate-equalp} were removed.  Their locale-independent
+counterparts @code{string-lessp} and @code{string-equal} are so much
+more simple and yield predictable results that we don't see any
+situation where the locale-dependent collation could be useful in
+Emacs.  As result, the @file{ls-lisp.el} package sorts files in a
+locale-independent manner.
+
+@item
+In preparation for removal in some past version of Emacs of the
+bidirectional editing support, we started by deleting two functions
+@code{bidi-find-overridden-directionality} and
+@code{buffer-substring-with-bidi-context}.
+
+@item
+Time conversion functions, such as @code{current-time-string}, no
+longer accept an optional @var{zone} argument.  If you need to change
+the current time zone (why?), do that explicitly with
+@code{set-time-zone-rule}.
+
+@item
+As part of the ongoing quest for simplicity, many other functions and
+variables have been eliminated.
+@end itemize

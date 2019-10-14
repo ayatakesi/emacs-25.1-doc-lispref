@@ -1,0 +1,2518 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-10-14 22:49+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: chapter
+#: original_texis/numbers.texi:6 original_texis/numbers.texi:7
+#, no-wrap
+msgid "Numbers"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:8
+#, no-wrap
+msgid "integers"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:9
+#, no-wrap
+msgid "numbers"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:20
+msgid ""
+"GNU Emacs supports two numeric data types: @dfn{integers} and "
+"@dfn{floating-point numbers}.  Integers are whole numbers such as @minus{}3, "
+"0, 7, 13, and 511.  Floating-point numbers are numbers with fractional "
+"parts, such as @minus{}4.5, 0.0, and 2.71828.  They can also be expressed in "
+"exponential notation: @samp{1.5e2} is the same as @samp{150.0}; here, "
+"@samp{e2} stands for ten to the second power, and that is multiplied by "
+"1.5.  Integer computations are exact, though they may overflow.  "
+"Floating-point computations often involve rounding errors, as the numbers "
+"have a fixed amount of precision."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:34 original_texis/numbers.texi:35
+#, no-wrap
+msgid "Integer Basics"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Representation and range of integers."
+msgstr ""
+
+#. type: node
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:196
+#, no-wrap
+msgid "Float Basics"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Representation and range of floating point."
+msgstr ""
+
+#. type: node
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:297
+#, no-wrap
+msgid "Predicates on Numbers"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Testing for numbers."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:341 original_texis/numbers.texi:342
+#, no-wrap
+msgid "Comparison of Numbers"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Equality and inequality predicates."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:458 original_texis/numbers.texi:459
+#, no-wrap
+msgid "Numeric Conversions"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Converting float to integer and vice versa."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:553 original_texis/numbers.texi:554
+#, no-wrap
+msgid "Arithmetic Operations"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "How to add, subtract, multiply and divide."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:783 original_texis/numbers.texi:784
+#, no-wrap
+msgid "Rounding Operations"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Explicitly rounding floating-point numbers."
+msgstr ""
+
+#. type: node
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:815
+#, no-wrap
+msgid "Bitwise Operations"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Logical and, or, not, shifting."
+msgstr ""
+
+#. type: node
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:1114
+#, no-wrap
+msgid "Math Functions"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Trig, exponential and logarithmic functions."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:32 original_texis/numbers.texi:1218 original_texis/numbers.texi:1219
+#, no-wrap
+msgid "Random Numbers"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/numbers.texi:32
+msgid "Obtaining random integers, predictable or not."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:39
+msgid ""
+"The range of values for an integer depends on the machine.  The minimum "
+"range is @minus{}536,870,912 to 536,870,911 (30 bits; i.e.,"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:41 original_texis/numbers.texi:178
+msgid "@minus{}2**29"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:44 original_texis/numbers.texi:181
+#, no-wrap
+msgid "@math{-2^{29}}\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:46
+msgid "to"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:48
+msgid "2**29 @minus{} 1),"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:51
+#, no-wrap
+msgid "@math{2^{29}-1}),\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:54
+msgid ""
+"but many machines provide a wider range.  Many examples in this chapter "
+"assume the minimum integer width of 30 bits."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:54
+#, no-wrap
+msgid "overflow"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:59
+msgid ""
+"The Lisp reader reads an integer as a sequence of digits with optional "
+"initial sign and optional final period.  An integer that is out of the Emacs "
+"range is treated as a floating-point number."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:69
+#, no-wrap
+msgid ""
+" 1               ; @r{The integer 1.}\n"
+" 1.              ; @r{The integer 1.}\n"
+"+1               ; @r{Also the integer 1.}\n"
+"-1               ; @r{The integer @minus{}1.}\n"
+" 9000000000000000000\n"
+"                 ; @r{The floating-point number 9e18.}\n"
+" 0               ; @r{The integer 0.}\n"
+"-0               ; @r{The integer 0.}\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:71
+#, no-wrap
+msgid "integers in specific radix"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:72
+#, no-wrap
+msgid "radix for reading an integer"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:73
+#, no-wrap
+msgid "base for reading an integer"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:74
+#, no-wrap
+msgid "hex numbers"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:75
+#, no-wrap
+msgid "octal numbers"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:76
+#, no-wrap
+msgid "reading numbers in hex, octal, and binary"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:85
+msgid ""
+"The syntax for integers in bases other than 10 uses @samp{#} followed by a "
+"letter that specifies the radix: @samp{b} for binary, @samp{o} for octal, "
+"@samp{x} for hex, or @samp{@var{radix}r} to specify radix @var{radix}.  Case "
+"is not significant for the letter that specifies the radix.  Thus, "
+"@samp{#b@var{integer}} reads @var{integer} in binary, and "
+"@samp{#@var{radix}r@var{integer}} reads @var{integer} in radix @var{radix}.  "
+"Allowed values of @var{radix} run from 2 to 36.  For example:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:91
+#, no-wrap
+msgid ""
+"#b101100 @result{} 44\n"
+"#o54 @result{} 44\n"
+"#x2c @result{} 44\n"
+"#24r1k @result{} 44\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:96
+msgid ""
+"To understand how various functions work on integers, especially the bitwise "
+"operators (@pxref{Bitwise Operations}), it is often helpful to view the "
+"numbers in their binary form."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:98
+msgid "In 30-bit binary, the decimal integer 5 looks like this:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:101
+#, no-wrap
+msgid "0000...000101 (30 bits total)\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:107
+msgid ""
+"(The @samp{...} stands for enough bits to fill out a 30-bit word; in this "
+"case, @samp{...} stands for twenty 0 bits.  Later examples also use the "
+"@samp{...} notation to make binary integers easier to read.)"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:109
+msgid "The integer @minus{}1 looks like this:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:112
+#, no-wrap
+msgid "1111...111111 (30 bits total)\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:115
+#, no-wrap
+msgid "two's complement"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:118
+msgid ""
+"@minus{}1 is represented as 30 ones.  (This is called @dfn{two's complement} "
+"notation.)"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:122
+msgid ""
+"Subtracting 4 from @minus{}1 returns the negative integer @minus{}5.  In "
+"binary, the decimal integer 4 is 100.  Consequently, @minus{}5 looks like "
+"this:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:125
+#, no-wrap
+msgid "1111...111011 (30 bits total)\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:129
+msgid ""
+"In this implementation, the largest 30-bit binary integer is 536,870,911 in "
+"decimal.  In binary, it looks like this:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:132
+#, no-wrap
+msgid "0111...111111 (30 bits total)\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:137
+msgid ""
+"Since the arithmetic functions do not check whether integers go outside "
+"their range, when you add 1 to 536,870,911, the value is the negative "
+"integer @minus{}536,870,912:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:142
+#, no-wrap
+msgid ""
+"(+ 1 536870911)\n"
+"     @result{} -536870912\n"
+"     @result{} 1000...000000 (30 bits total)\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:149
+msgid ""
+"Many of the functions described in this chapter accept markers for arguments "
+"in place of numbers.  (@xref{Markers}.)  Since the actual arguments to such "
+"functions may be either numbers or markers, we often give these arguments "
+"the name @var{number-or-marker}.  When the argument value is a marker, its "
+"position value is used and its buffer is ignored."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:150
+#, no-wrap
+msgid "largest Lisp integer"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:151
+#, no-wrap
+msgid "maximum Lisp integer"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:152
+#, no-wrap
+msgid "most-positive-fixnum"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:155
+msgid ""
+"The value of this variable is the largest integer that Emacs Lisp can "
+"handle.  Typical values are"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:157
+msgid "2**29 @minus{} 1"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:160
+#, no-wrap
+msgid "@math{2^{29}-1}\n"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:162 original_texis/numbers.texi:183
+msgid "on 32-bit and"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:164
+msgid "2**61 @minus{} 1"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:167
+#, no-wrap
+msgid "@math{2^{61}-1}\n"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:169 original_texis/numbers.texi:190
+msgid "on 64-bit platforms."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:171
+#, no-wrap
+msgid "smallest Lisp integer"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:172
+#, no-wrap
+msgid "minimum Lisp integer"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:173
+#, no-wrap
+msgid "most-negative-fixnum"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:176
+msgid ""
+"The value of this variable is the smallest integer that Emacs Lisp can "
+"handle.  It is negative.  Typical values are"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:185
+msgid "@minus{}2**61"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:188
+#, no-wrap
+msgid "@math{-2^{61}}\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:195
+msgid ""
+"In Emacs Lisp, text characters are represented by integers.  Any integer "
+"between zero and the value of @code{(max-char)}, inclusive, is considered to "
+"be valid as a character.  @xref{Character Codes}."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:197
+#, no-wrap
+msgid "Floating-Point Basics"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:199
+#, no-wrap
+msgid "@acronym{IEEE} floating point"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:205
+msgid ""
+"Floating-point numbers are useful for representing numbers that are not "
+"integral.  The range of floating-point numbers is the same as the range of "
+"the C data type @code{double} on the machine you are using.  On all "
+"computers currently supported by Emacs, this is double-precision "
+"@acronym{IEEE} floating point."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:214
+msgid ""
+"The read syntax for floating-point numbers requires either a decimal point, "
+"an exponent, or both.  Optional signs (@samp{+} or @samp{-})  precede the "
+"number and its exponent.  For example, @samp{1500.0}, @samp{+15e2}, "
+"@samp{15.0e+2}, @samp{+1500000e-3}, and @samp{.15e4} are five ways of "
+"writing a floating-point number whose value is 1500.  They are all "
+"equivalent.  Like Common Lisp, Emacs Lisp requires at least one digit after "
+"any decimal point in a floating-point number; @samp{1500.} is an integer, "
+"not a floating-point number."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:220
+msgid ""
+"Emacs Lisp treats @code{-0.0} as numerically equal to ordinary zero with "
+"respect to @code{equal} and @code{=}.  This follows the @acronym{IEEE} "
+"floating-point standard, which says @code{-0.0} and @code{0.0} are "
+"numerically equal even though other operations can distinguish them."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:221
+#, no-wrap
+msgid "positive infinity"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:222
+#, no-wrap
+msgid "negative infinity"
+msgstr ""
+
+#. type: item
+#: original_texis/numbers.texi:223 original_texis/numbers.texi:236
+#, no-wrap
+msgid "infinity"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:224
+#, no-wrap
+msgid "NaN"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:232
+msgid ""
+"The @acronym{IEEE} floating-point standard supports positive infinity and "
+"negative infinity as floating-point values.  It also provides for a class of "
+"values called NaN, or ``not a number''; numerical functions return such "
+"values in cases where there is no correct answer.  For example, @code{(/ 0.0 "
+"0.0)} returns a NaN@.  Although NaN values carry a sign, for practical "
+"purposes there is no other significant difference between different NaN "
+"values in Emacs Lisp."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:234
+msgid "Here are read syntaxes for these special floating-point values:"
+msgstr ""
+
+#. type: table
+#: original_texis/numbers.texi:238
+msgid "@samp{1.0e+INF} and @samp{-1.0e+INF}"
+msgstr ""
+
+#. type: item
+#: original_texis/numbers.texi:238
+#, no-wrap
+msgid "not-a-number"
+msgstr ""
+
+#. type: table
+#: original_texis/numbers.texi:240
+msgid "@samp{0.0e+NaN} and @samp{-0.0e+NaN}"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:244
+msgid "The following functions are specialized for handling floating-point numbers:"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:245
+#, no-wrap
+msgid "isnan x"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:248
+msgid ""
+"This predicate returns @code{t} if its floating-point argument is a NaN, "
+"@code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:250
+#, no-wrap
+msgid "frexp x"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:254
+msgid ""
+"This function returns a cons cell @code{(@var{s} . @var{e})}, where @var{s} "
+"and @var{e} are respectively the significand and exponent of the "
+"floating-point number @var{x}."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:257
+msgid ""
+"If @var{x} is finite, then @var{s} is a floating-point number between 0.5 "
+"(inclusive) and 1.0 (exclusive), @var{e} is an integer, and"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:259
+msgid "@var{x} = @var{s} * 2**@var{e}."
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:262
+#, no-wrap
+msgid "@math{x = s 2^e}.\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:266
+msgid ""
+"If @var{x} is zero or infinity, then @var{s} is the same as @var{x}.  If "
+"@var{x} is a NaN, then @var{s} is also a NaN@.  If @var{x} is zero, then "
+"@var{e} is 0."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:268
+#, no-wrap
+msgid "ldexp s e"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:271
+msgid ""
+"Given a numeric significand @var{s} and an integer exponent @var{e}, this "
+"function returns the floating point number"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:273
+msgid "@var{s} * 2**@var{e}."
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:276
+#, no-wrap
+msgid "@math{s 2^e}.\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:279
+#, no-wrap
+msgid "copysign x1 x2"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:282
+msgid ""
+"This function copies the sign of @var{x2} to the value of @var{x1}, and "
+"returns the result.  @var{x1} and @var{x2} must be floating point."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:284
+#, no-wrap
+msgid "logb x"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:288
+msgid ""
+"This function returns the binary exponent of @var{x}.  More precisely, the "
+"value is the logarithm base 2 of @math{|x|}, rounded down to an integer."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:294
+#, no-wrap
+msgid ""
+"(logb 10)\n"
+"     @result{} 3\n"
+"(logb 10.0e20)\n"
+"     @result{} 69\n"
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:298
+#, no-wrap
+msgid "Type Predicates for Numbers"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:299
+#, no-wrap
+msgid "predicates for numbers"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:307
+msgid ""
+"The functions in this section test for numbers, or for a specific type of "
+"number.  The functions @code{integerp} and @code{floatp} can take any type "
+"of Lisp object as argument (they would not be of much use otherwise), but "
+"the @code{zerop} predicate requires a number as its argument.  See also "
+"@code{integer-or-marker-p} and @code{number-or-marker-p}, in @ref{Predicates "
+"on Markers}."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:308
+#, no-wrap
+msgid "floatp object"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:311
+msgid ""
+"This predicate tests whether its argument is floating point and returns "
+"@code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:313
+#, no-wrap
+msgid "integerp object"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:316
+msgid ""
+"This predicate tests whether its argument is an integer, and returns "
+"@code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:318
+#, no-wrap
+msgid "numberp object"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:321
+msgid ""
+"This predicate tests whether its argument is a number (either integer or "
+"floating point), and returns @code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:323
+#, no-wrap
+msgid "natnump object"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:324
+#, no-wrap
+msgid "natural numbers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:329
+msgid ""
+"This predicate (whose name comes from the phrase ``natural number'')  tests "
+"to see whether its argument is a nonnegative integer, and returns @code{t} "
+"if so, @code{nil} otherwise.  0 is considered non-negative."
+msgstr ""
+
+#. type: findex
+#: original_texis/numbers.texi:330
+#, no-wrap
+msgid "wholenump"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:332
+msgid "@code{wholenump} is a synonym for @code{natnump}."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:334
+#, no-wrap
+msgid "zerop number"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:337
+msgid ""
+"This predicate tests whether its argument is zero, and returns @code{t} if "
+"so, @code{nil} otherwise.  The argument must be a number."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:339
+msgid "@code{(zerop x)} is equivalent to @code{(= x 0)}."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:343
+#, no-wrap
+msgid "number comparison"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:344
+#, no-wrap
+msgid "comparing numbers"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:352
+msgid ""
+"To test numbers for numerical equality, you should normally use @code{=}, "
+"not @code{eq}.  There can be many distinct floating-point objects with the "
+"same numeric value.  If you use @code{eq} to compare them, then you test "
+"whether two values are the same @emph{object}.  By contrast, @code{=} "
+"compares only the numeric values of the objects."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:361
+msgid ""
+"In Emacs Lisp, each integer is a unique Lisp object.  Therefore, @code{eq} "
+"is equivalent to @code{=} where integers are concerned.  It is sometimes "
+"convenient to use @code{eq} for comparing an unknown value with an integer, "
+"because @code{eq} does not report an error if the unknown value is not a "
+"number---it accepts arguments of any type.  By contrast, @code{=} signals an "
+"error if the arguments are not numbers or markers.  However, it is better "
+"programming practice to use @code{=} if you can, even for comparing "
+"integers."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:367
+msgid ""
+"Sometimes it is useful to compare numbers with @code{equal}, which treats "
+"two numbers as equal if they have the same data type (both integers, or both "
+"floating point) and the same value.  By contrast, @code{=} can treat an "
+"integer and a floating-point number as equal.  @xref{Equality Predicates}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:372
+msgid ""
+"There is another wrinkle: because floating-point arithmetic is not exact, it "
+"is often a bad idea to check for equality of floating-point values.  Usually "
+"it is better to test for approximate equality.  Here's a function to do "
+"this:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:380
+#, no-wrap
+msgid ""
+"(defvar fuzz-factor 1.0e-6)\n"
+"(defun approx-equal (x y)\n"
+"  (or (= x y)\n"
+"      (< (/ (abs (- x y))\n"
+"            (max (abs x) (abs y)))\n"
+"         fuzz-factor)))\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:382
+#, no-wrap
+msgid "CL note---integers vrs @code{eq}"
+msgstr ""
+
+#. type: quotation
+#: original_texis/numbers.texi:389
+msgid ""
+"@b{Common Lisp note:} Comparing numbers in Common Lisp always requires "
+"@code{=} because Common Lisp implements multi-word integers, and two "
+"distinct integer objects can have the same numeric value.  Emacs Lisp can "
+"have just one integer object for any given value because it has a limited "
+"range of integers."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:391
+#, no-wrap
+msgid "= number-or-marker &rest number-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:394
+msgid ""
+"This function tests whether all its arguments are numerically equal, and "
+"returns @code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:396
+#, no-wrap
+msgid "eql value1 value2"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:401
+msgid ""
+"This function acts like @code{eq} except when both arguments are numbers.  "
+"It compares numbers by type and numeric value, so that @code{(eql 1.0 1)} "
+"returns @code{nil}, but @code{(eql 1.0 1.0)} and @code{(eql 1 1)} both "
+"return @code{t}."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:403
+#, no-wrap
+msgid "/= number-or-marker1 number-or-marker2"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:406
+msgid ""
+"This function tests whether its arguments are numerically equal, and returns "
+"@code{t} if they are not, and @code{nil} if they are."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:408
+#, no-wrap
+msgid "<  number-or-marker &rest number-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:411
+msgid ""
+"This function tests whether each argument is strictly less than the "
+"following argument.  It returns @code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:413
+#, no-wrap
+msgid "<= number-or-marker &rest number-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:416
+msgid ""
+"This function tests whether each argument is less than or equal to the "
+"following argument.  It returns @code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:418
+#, no-wrap
+msgid "> number-or-marker &rest number-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:421
+msgid ""
+"This function tests whether each argument is strictly greater than the "
+"following argument.  It returns @code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:423
+#, no-wrap
+msgid ">= number-or-marker &rest number-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:426
+msgid ""
+"This function tests whether each argument is greater than or equal to the "
+"following argument.  It returns @code{t} if so, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:428
+#, no-wrap
+msgid "max number-or-marker &rest numbers-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:432
+msgid ""
+"This function returns the largest of its arguments.  If any of the arguments "
+"is floating point, the value is returned as floating point, even if it was "
+"given as an integer."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:440
+#, no-wrap
+msgid ""
+"(max 20)\n"
+"     @result{} 20\n"
+"(max 1 2.5)\n"
+"     @result{} 2.5\n"
+"(max 1 3 2.5)\n"
+"     @result{} 3.0\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:443
+#, no-wrap
+msgid "min number-or-marker &rest numbers-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:447
+msgid ""
+"This function returns the smallest of its arguments.  If any of the "
+"arguments is floating point, the value is returned as floating point, even "
+"if it was given as an integer."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:451
+#, no-wrap
+msgid ""
+"(min -4 1)\n"
+"     @result{} -4\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:454
+#, no-wrap
+msgid "abs number"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:456
+msgid "This function returns the absolute value of @var{number}."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:460
+#, no-wrap
+msgid "rounding in conversions"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:461
+#, no-wrap
+msgid "number conversions"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:462
+#, no-wrap
+msgid "converting numbers"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:465
+msgid "To convert an integer to floating point, use the function @code{float}."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:466
+#, no-wrap
+msgid "float number"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:470
+msgid ""
+"This returns @var{number} converted to floating point.  If @var{number} is "
+"already floating point, @code{float} returns it unchanged."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:482
+msgid ""
+"There are four functions to convert floating-point numbers to integers; they "
+"differ in how they round.  All accept an argument @var{number} and an "
+"optional argument @var{divisor}.  Both arguments may be integers or "
+"floating-point numbers.  @var{divisor} may also be @code{nil}.  If "
+"@var{divisor} is @code{nil} or omitted, these functions convert @var{number} "
+"to an integer, or return it unchanged if it already is an integer.  If "
+"@var{divisor} is non-@code{nil}, they divide @var{number} by @var{divisor} "
+"and convert the result to an integer.  If @var{divisor} is zero (whether "
+"integer or floating point), Emacs signals an @code{arith-error} error."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:483
+#, no-wrap
+msgid "truncate number &optional divisor"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:486
+msgid "This returns @var{number}, converted to an integer by rounding towards zero."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:496
+#, no-wrap
+msgid ""
+"(truncate 1.2)\n"
+"     @result{} 1\n"
+"(truncate 1.7)\n"
+"     @result{} 1\n"
+"(truncate -1.2)\n"
+"     @result{} -1\n"
+"(truncate -1.7)\n"
+"     @result{} -1\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:499
+#, no-wrap
+msgid "floor number &optional divisor"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:502
+msgid ""
+"This returns @var{number}, converted to an integer by rounding downward "
+"(towards negative infinity)."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:505
+msgid ""
+"If @var{divisor} is specified, this uses the kind of division operation that "
+"corresponds to @code{mod}, rounding downward."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:517
+#, no-wrap
+msgid ""
+"(floor 1.2)\n"
+"     @result{} 1\n"
+"(floor 1.7)\n"
+"     @result{} 1\n"
+"(floor -1.2)\n"
+"     @result{} -2\n"
+"(floor -1.7)\n"
+"     @result{} -2\n"
+"(floor 5.99 3)\n"
+"     @result{} 1\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:520
+#, no-wrap
+msgid "ceiling number &optional divisor"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:523
+msgid ""
+"This returns @var{number}, converted to an integer by rounding upward "
+"(towards positive infinity)."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:533
+#, no-wrap
+msgid ""
+"(ceiling 1.2)\n"
+"     @result{} 2\n"
+"(ceiling 1.7)\n"
+"     @result{} 2\n"
+"(ceiling -1.2)\n"
+"     @result{} -1\n"
+"(ceiling -1.7)\n"
+"     @result{} -1\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:536
+#, no-wrap
+msgid "round number &optional divisor"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:540
+msgid ""
+"This returns @var{number}, converted to an integer by rounding towards the "
+"nearest integer.  Rounding a value equidistant between two integers returns "
+"the even integer."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:550
+#, no-wrap
+msgid ""
+"(round 1.2)\n"
+"     @result{} 1\n"
+"(round 1.7)\n"
+"     @result{} 2\n"
+"(round -1.2)\n"
+"     @result{} -1\n"
+"(round -1.7)\n"
+"     @result{} -2\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:555
+#, no-wrap
+msgid "arithmetic operations"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:563
+msgid ""
+"Emacs Lisp provides the traditional four arithmetic operations (addition, "
+"subtraction, multiplication, and division), as well as remainder and modulus "
+"functions, and functions to add or subtract 1.  Except for @code{%}, each of "
+"these functions accepts both integer and floating-point arguments, and "
+"returns a floating-point number if any argument is floating point."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:567
+msgid ""
+"Emacs Lisp arithmetic functions do not check for integer overflow.  Thus "
+"@code{(1+ 536870911)} may evaluate to @minus{}536870912, depending on your "
+"hardware."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:568
+#, no-wrap
+msgid "1+ number-or-marker"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:571
+msgid "This function returns @var{number-or-marker} plus 1.  For example,"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:577
+#, no-wrap
+msgid ""
+"(setq foo 4)\n"
+"     @result{} 4\n"
+"(1+ foo)\n"
+"     @result{} 5\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:581
+msgid ""
+"This function is not analogous to the C operator @code{++}---it does not "
+"increment a variable.  It just computes a sum.  Thus, if we continue,"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:585
+#, no-wrap
+msgid ""
+"foo\n"
+"     @result{} 4\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:589
+msgid "If you want to increment the variable, you must use @code{setq}, like this:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:593
+#, no-wrap
+msgid ""
+"(setq foo (1+ foo))\n"
+"     @result{} 5\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:596
+#, no-wrap
+msgid "1- number-or-marker"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:598
+msgid "This function returns @var{number-or-marker} minus 1."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:600
+#, no-wrap
+msgid "+ &rest numbers-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:603
+msgid ""
+"This function adds its arguments together.  When given no arguments, "
+"@code{+} returns 0."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:611
+#, no-wrap
+msgid ""
+"(+)\n"
+"     @result{} 0\n"
+"(+ 1)\n"
+"     @result{} 1\n"
+"(+ 1 2 3 4)\n"
+"     @result{} 10\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:614
+#, no-wrap
+msgid "- &optional number-or-marker &rest more-numbers-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:620
+msgid ""
+"The @code{-} function serves two purposes: negation and subtraction.  When "
+"@code{-} has a single argument, the value is the negative of the argument.  "
+"When there are multiple arguments, @code{-} subtracts each of the "
+"@var{more-numbers-or-markers} from @var{number-or-marker}, cumulatively.  If "
+"there are no arguments, the result is 0."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:628
+#, no-wrap
+msgid ""
+"(- 10 1 2 3 4)\n"
+"     @result{} 0\n"
+"(- 10)\n"
+"     @result{} -10\n"
+"(-)\n"
+"     @result{} 0\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:631
+#, no-wrap
+msgid "* &rest numbers-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:634
+msgid ""
+"This function multiplies its arguments together, and returns the product.  "
+"When given no arguments, @code{*} returns 1."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:642
+#, no-wrap
+msgid ""
+"(*)\n"
+"     @result{} 1\n"
+"(* 1)\n"
+"     @result{} 1\n"
+"(* 1 2 3 4)\n"
+"     @result{} 24\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:645
+#, no-wrap
+msgid "/ number &rest divisors"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:651
+msgid ""
+"With one or more @var{divisors}, this function divides @var{number} by each "
+"divisor in @var{divisors} in turn, and returns the quotient.  With no "
+"@var{divisors}, this function returns 1/@var{number}, i.e., the "
+"multiplicative inverse of @var{number}.  Each argument may be a number or a "
+"marker."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:654
+msgid ""
+"If all the arguments are integers, the result is an integer, obtained by "
+"rounding the quotient towards zero after each division."
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:659
+#, no-wrap
+msgid ""
+"(/ 6 2)\n"
+"     @result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:663
+#, no-wrap
+msgid ""
+"(/ 5 2)\n"
+"     @result{} 2\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:667
+#, no-wrap
+msgid ""
+"(/ 5.0 2)\n"
+"     @result{} 2.5\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:671
+#, no-wrap
+msgid ""
+"(/ 5 2.0)\n"
+"     @result{} 2.5\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:675
+#, no-wrap
+msgid ""
+"(/ 5.0 2.0)\n"
+"     @result{} 2.5\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:679
+#, no-wrap
+msgid ""
+"(/ 4.0)\n"
+"     @result{} 0.25\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:683
+#, no-wrap
+msgid ""
+"(/ 4)\n"
+"     @result{} 0\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:687
+#, no-wrap
+msgid ""
+"(/ 25 3 2)\n"
+"     @result{} 4\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:691
+#, no-wrap
+msgid ""
+"(/ -17 6)\n"
+"     @result{} -2\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:694
+#, no-wrap
+msgid "@code{arith-error} in division"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:699
+msgid ""
+"If you divide an integer by the integer 0, Emacs signals an "
+"@code{arith-error} error (@pxref{Errors}).  Floating-point division of a "
+"nonzero number by zero yields either positive or negative infinity "
+"(@pxref{Float Basics})."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:701
+#, no-wrap
+msgid "% dividend divisor"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:702
+#, no-wrap
+msgid "remainder"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:705
+msgid ""
+"This function returns the integer remainder after division of @var{dividend} "
+"by @var{divisor}.  The arguments must be integers or markers."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:707
+msgid "For any two integers @var{dividend} and @var{divisor},"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:712
+#, no-wrap
+msgid ""
+"(+ (% @var{dividend} @var{divisor})\n"
+"   (* (/ @var{dividend} @var{divisor}) @var{divisor}))\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:717
+msgid "always equals @var{dividend} if @var{divisor} is nonzero."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:727
+#, no-wrap
+msgid ""
+"(% 9 4)\n"
+"     @result{} 1\n"
+"(% -9 4)\n"
+"     @result{} -1\n"
+"(% 9 -4)\n"
+"     @result{} 1\n"
+"(% -9 -4)\n"
+"     @result{} -1\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:730
+#, no-wrap
+msgid "mod dividend divisor"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:731
+#, no-wrap
+msgid "modulus"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:736
+msgid ""
+"This function returns the value of @var{dividend} modulo @var{divisor}; in "
+"other words, the remainder after division of @var{dividend} by "
+"@var{divisor}, but with the same sign as @var{divisor}.  The arguments must "
+"be numbers or markers."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:740
+msgid ""
+"Unlike @code{%}, @code{mod} permits floating-point arguments; it rounds the "
+"quotient downward (towards minus infinity) to an integer, and uses that "
+"quotient to compute the remainder."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:743
+msgid ""
+"If @var{divisor} is zero, @code{mod} signals an @code{arith-error} error if "
+"both arguments are integers, and returns a NaN otherwise."
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:748
+#, no-wrap
+msgid ""
+"(mod 9 4)\n"
+"     @result{} 1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:752
+#, no-wrap
+msgid ""
+"(mod -9 4)\n"
+"     @result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:756
+#, no-wrap
+msgid ""
+"(mod 9 -4)\n"
+"     @result{} -3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:760
+#, no-wrap
+msgid ""
+"(mod -9 -4)\n"
+"     @result{} -1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:764
+#, no-wrap
+msgid ""
+"(mod 5.5 2.5)\n"
+"     @result{} .5\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:768
+msgid "For any two numbers @var{dividend} and @var{divisor},"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:773
+#, no-wrap
+msgid ""
+"(+ (mod @var{dividend} @var{divisor})\n"
+"   (* (floor @var{dividend} @var{divisor}) @var{divisor}))\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:781
+msgid ""
+"always equals @var{dividend}, subject to rounding error if either argument "
+"is floating point and to an @code{arith-error} if @var{dividend} is an "
+"integer and @var{divisor} is 0.  For @code{floor}, see @ref{Numeric "
+"Conversions}."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:785
+#, no-wrap
+msgid "rounding without conversion"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:793
+msgid ""
+"The functions @code{ffloor}, @code{fceiling}, @code{fround}, and "
+"@code{ftruncate} take a floating-point argument and return a floating-point "
+"result whose value is a nearby integer.  @code{ffloor} returns the nearest "
+"integer below; @code{fceiling}, the nearest integer above; @code{ftruncate}, "
+"the nearest integer in the direction towards zero; @code{fround}, the "
+"nearest integer."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:794
+#, no-wrap
+msgid "ffloor float"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:797
+msgid ""
+"This function rounds @var{float} to the next lower integral value, and "
+"returns that value as a floating-point number."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:799
+#, no-wrap
+msgid "fceiling float"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:802
+msgid ""
+"This function rounds @var{float} to the next higher integral value, and "
+"returns that value as a floating-point number."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:804
+#, no-wrap
+msgid "ftruncate float"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:807
+msgid ""
+"This function rounds @var{float} towards zero to an integral value, and "
+"returns that value as a floating-point number."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:809
+#, no-wrap
+msgid "fround float"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:813
+msgid ""
+"This function rounds @var{float} to the nearest integral value, and returns "
+"that value as a floating-point number.  Rounding a value equidistant between "
+"two integers returns the even integer."
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:816
+#, no-wrap
+msgid "Bitwise Operations on Integers"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:817
+#, no-wrap
+msgid "bitwise arithmetic"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:818
+#, no-wrap
+msgid "logical arithmetic"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:825
+msgid ""
+"In a computer, an integer is represented as a binary number, a sequence of "
+"@dfn{bits} (digits which are either zero or one).  A bitwise operation acts "
+"on the individual bits of such a sequence.  For example, @dfn{shifting} "
+"moves the whole sequence left or right one or more places, reproducing the "
+"same pattern moved over."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:827
+msgid "The bitwise operations in Emacs Lisp apply only to integers."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:828
+#, no-wrap
+msgid "lsh integer1 count"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:829
+#, no-wrap
+msgid "logical shift"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:836
+msgid ""
+"@code{lsh}, which is an abbreviation for @dfn{logical shift}, shifts the "
+"bits in @var{integer1} to the left @var{count} places, or to the right if "
+"@var{count} is negative, bringing zeros into the vacated bits.  If "
+"@var{count} is negative, @code{lsh} shifts zeros into the leftmost "
+"(most-significant) bit, producing a positive result even if @var{integer1} "
+"is negative.  Contrast this with @code{ash}, below."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:840
+msgid ""
+"Here are two examples of @code{lsh}, shifting a pattern of bits one place to "
+"the left.  We show only the low-order eight bits of the binary pattern; the "
+"rest are all zero."
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:847
+#, no-wrap
+msgid ""
+"(lsh 5 1)\n"
+"     @result{} 10\n"
+";; @r{Decimal 5 becomes decimal 10.}\n"
+"00000101 @result{} 00001010\n"
+"\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:852
+#, no-wrap
+msgid ""
+"(lsh 7 1)\n"
+"     @result{} 14\n"
+";; @r{Decimal 7 becomes decimal 14.}\n"
+"00000111 @result{} 00001110\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:859
+msgid ""
+"As the examples illustrate, shifting the pattern of bits one place to the "
+"left produces a number that is twice the value of the previous number."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:862
+msgid ""
+"Shifting a pattern of bits two places to the left produces results like this "
+"(with 8-bit binary numbers):"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:869
+#, no-wrap
+msgid ""
+"(lsh 3 2)\n"
+"     @result{} 12\n"
+";; @r{Decimal 3 becomes decimal 12.}\n"
+"00000011 @result{} 00001100\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:873
+msgid "On the other hand, shifting one place to the right looks like this:"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:880
+#, no-wrap
+msgid ""
+"(lsh 6 -1)\n"
+"     @result{} 3\n"
+";; @r{Decimal 6 becomes decimal 3.}\n"
+"00000110 @result{} 00000011\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:887
+#, no-wrap
+msgid ""
+"(lsh 5 -1)\n"
+"     @result{} 2\n"
+";; @r{Decimal 5 becomes decimal 2.}\n"
+"00000101 @result{} 00000010\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:893
+msgid ""
+"As the example illustrates, shifting one place to the right divides the "
+"value of a positive integer by two, rounding downward."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:898
+msgid ""
+"The function @code{lsh}, like all Emacs Lisp arithmetic functions, does not "
+"check for overflow, so shifting left can discard significant bits and change "
+"the sign of the number.  For example, left shifting 536,870,911 produces "
+"@minus{}2 in the 30-bit implementation:"
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:902
+#, no-wrap
+msgid ""
+"(lsh 536870911 1)          ; @r{left shift}\n"
+"     @result{} -2\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:905
+msgid "In binary, the argument looks like this:"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:910
+#, no-wrap
+msgid ""
+";; @r{Decimal 536,870,911}\n"
+"0111...111111 (30 bits total)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:915
+msgid "which becomes the following when left shifted:"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:920
+#, no-wrap
+msgid ""
+";; @r{Decimal @minus{}2}\n"
+"1111...111110 (30 bits total)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:924
+#, no-wrap
+msgid "ash integer1 count"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:925
+#, no-wrap
+msgid "arithmetic shift"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:929
+msgid ""
+"@code{ash} (@dfn{arithmetic shift}) shifts the bits in @var{integer1} to the "
+"left @var{count} places, or to the right if @var{count} is negative."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:934
+msgid ""
+"@code{ash} gives the same results as @code{lsh} except when @var{integer1} "
+"and @var{count} are both negative.  In that case, @code{ash} puts ones in "
+"the empty bit positions on the left, while @code{lsh} puts zeros in those "
+"bit positions."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:937
+msgid ""
+"Thus, with @code{ash}, shifting the pattern of bits one place to the right "
+"looks like this:"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:945
+#, no-wrap
+msgid ""
+"(ash -6 -1) @result{} -3\n"
+";; @r{Decimal @minus{}6 becomes decimal @minus{}3.}\n"
+"1111...111010 (30 bits total)\n"
+"     @result{}\n"
+"1111...111101 (30 bits total)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:950
+msgid ""
+"In contrast, shifting the pattern of bits one place to the right with "
+"@code{lsh} looks like this:"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:958
+#, no-wrap
+msgid ""
+"(lsh -6 -1) @result{} 536870909\n"
+";; @r{Decimal @minus{}6 becomes decimal 536,870,909.}\n"
+"1111...111010 (30 bits total)\n"
+"     @result{}\n"
+"0111...111101 (30 bits total)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:962
+msgid "Here are other examples:"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:968
+#, no-wrap
+msgid ""
+"                   ;  @r{       30-bit binary values}\n"
+"\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:971
+#, no-wrap
+msgid ""
+"(lsh 5 2)          ;   5  =  @r{0000...000101}\n"
+"     @result{} 20         ;      =  @r{0000...010100}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:979
+#, no-wrap
+msgid ""
+"(ash 5 2)\n"
+"     @result{} 20\n"
+"(lsh -5 2)         ;  -5  =  @r{1111...111011}\n"
+"     @result{} -20        ;      =  @r{1111...101100}\n"
+"(ash -5 2)\n"
+"     @result{} -20\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:983
+#, no-wrap
+msgid ""
+"(lsh 5 -2)         ;   5  =  @r{0000...000101}\n"
+"     @result{} 1          ;      =  @r{0000...000001}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:987
+#, no-wrap
+msgid ""
+"(ash 5 -2)\n"
+"     @result{} 1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:992
+#, no-wrap
+msgid ""
+"(lsh -5 -2)        ;  -5  =  @r{1111...111011}\n"
+"     @result{} 268435454\n"
+"                   ;      =  @r{0011...111110}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:996
+#, no-wrap
+msgid ""
+"(ash -5 -2)        ;  -5  =  @r{1111...111011}\n"
+"     @result{} -2         ;      =  @r{1111...111110}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1000
+#, no-wrap
+msgid "logand &rest ints-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1004
+msgid ""
+"This function returns the bitwise AND of the arguments: the @var{n}th bit is "
+"1 in the result if, and only if, the @var{n}th bit is 1 in all the "
+"arguments."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1011
+msgid ""
+"For example, using 4-bit binary numbers, the bitwise AND of 13 and 12 is 12: "
+"1101 combined with 1100 produces 1100.  In both the binary numbers, the "
+"leftmost two bits are both 1 so the leftmost two bits of the returned value "
+"are both 1.  However, for the rightmost two bits, each is 0 in at least one "
+"of the arguments, so the rightmost two bits of the returned value are both "
+"0."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1014
+msgid "Therefore,"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1019
+#, no-wrap
+msgid ""
+"(logand 13 12)\n"
+"     @result{} 12\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1026
+msgid ""
+"If @code{logand} is not passed any argument, it returns a value of "
+"@minus{}1.  This number is an identity element for @code{logand} because its "
+"binary representation consists entirely of ones.  If @code{logand} is passed "
+"just one argument, it returns that argument."
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1030 original_texis/numbers.texi:1060 original_texis/numbers.texi:1085
+#, no-wrap
+msgid ""
+"                   ; @r{       30-bit binary values}\n"
+"\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1034
+#, no-wrap
+msgid ""
+"(logand 14 13)     ; 14  =  @r{0000...001110}\n"
+"                   ; 13  =  @r{0000...001101}\n"
+"     @result{} 12         ; 12  =  @r{0000...001100}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1041
+#, no-wrap
+msgid ""
+"(logand 14 13 4)   ; 14  =  @r{0000...001110}\n"
+"                   ; 13  =  @r{0000...001101}\n"
+"                   ;  4  =  @r{0000...000100}\n"
+"     @result{} 4          ;  4  =  @r{0000...000100}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1046
+#, no-wrap
+msgid ""
+"(logand)\n"
+"     @result{} -1         ; -1  =  @r{1111...111111}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1050
+#, no-wrap
+msgid "logior &rest ints-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1056
+msgid ""
+"This function returns the bitwise inclusive OR of its arguments: the "
+"@var{n}th bit is 1 in the result if, and only if, the @var{n}th bit is 1 in "
+"at least one of the arguments.  If there are no arguments, the result is 0, "
+"which is an identity element for this operation.  If @code{logior} is passed "
+"just one argument, it returns that argument."
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1064
+#, no-wrap
+msgid ""
+"(logior 12 5)      ; 12  =  @r{0000...001100}\n"
+"                   ;  5  =  @r{0000...000101}\n"
+"     @result{} 13         ; 13  =  @r{0000...001101}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1071
+#, no-wrap
+msgid ""
+"(logior 12 5 7)    ; 12  =  @r{0000...001100}\n"
+"                   ;  5  =  @r{0000...000101}\n"
+"                   ;  7  =  @r{0000...000111}\n"
+"     @result{} 15         ; 15  =  @r{0000...001111}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1075
+#, no-wrap
+msgid "logxor &rest ints-or-markers"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1081
+msgid ""
+"This function returns the bitwise exclusive OR of its arguments: the "
+"@var{n}th bit is 1 in the result if, and only if, the @var{n}th bit is 1 in "
+"an odd number of the arguments.  If there are no arguments, the result is 0, "
+"which is an identity element for this operation.  If @code{logxor} is passed "
+"just one argument, it returns that argument."
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1089
+#, no-wrap
+msgid ""
+"(logxor 12 5)      ; 12  =  @r{0000...001100}\n"
+"                   ;  5  =  @r{0000...000101}\n"
+"     @result{} 9          ;  9  =  @r{0000...001001}\n"
+msgstr ""
+
+#. type: group
+#: original_texis/numbers.texi:1096
+#, no-wrap
+msgid ""
+"(logxor 12 5 7)    ; 12  =  @r{0000...001100}\n"
+"                   ;  5  =  @r{0000...000101}\n"
+"                   ;  7  =  @r{0000...000111}\n"
+"     @result{} 14         ; 14  =  @r{0000...001110}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1100
+#, no-wrap
+msgid "lognot integer"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1104
+msgid ""
+"This function returns the bitwise complement of its argument: the @var{n}th "
+"bit is one in the result if, and only if, the @var{n}th bit is zero in "
+"@var{integer}, and vice-versa."
+msgstr ""
+
+#. type: example
+#: original_texis/numbers.texi:1111
+#, no-wrap
+msgid ""
+"(lognot 5)\n"
+"     @result{} -6\n"
+";;  5  =  @r{0000...000101} (30 bits total)\n"
+";; @r{becomes}\n"
+";; -6  =  @r{1111...111010} (30 bits total)\n"
+msgstr ""
+
+#. type: section
+#: original_texis/numbers.texi:1115
+#, no-wrap
+msgid "Standard Mathematical Functions"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:1116
+#, no-wrap
+msgid "transcendental functions"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:1117
+#, no-wrap
+msgid "mathematical functions"
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:1118
+#, no-wrap
+msgid "floating-point functions"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:1122
+msgid ""
+"These mathematical functions allow integers as well as floating-point "
+"numbers as arguments."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1123
+#, no-wrap
+msgid "sin arg"
+msgstr ""
+
+#. type: defunx
+#: original_texis/numbers.texi:1124
+#, no-wrap
+msgid "cos arg"
+msgstr ""
+
+#. type: defunx
+#: original_texis/numbers.texi:1125
+#, no-wrap
+msgid "tan arg"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1128
+msgid ""
+"These are the basic trigonometric functions, with argument @var{arg} "
+"measured in radians."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1130
+#, no-wrap
+msgid "asin arg"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1132
+msgid "The value of @code{(asin @var{arg})} is a number between"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:1134 original_texis/numbers.texi:1165
+msgid "@minus{}pi/2"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:1137 original_texis/numbers.texi:1168
+#, no-wrap
+msgid "@math{-\\pi/2}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1139 original_texis/numbers.texi:1170
+msgid "and"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:1141 original_texis/numbers.texi:1172
+msgid "pi/2"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:1144 original_texis/numbers.texi:1175
+#, no-wrap
+msgid "@math{\\pi/2}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1147
+msgid ""
+"(inclusive) whose sine is @var{arg}.  If @var{arg} is out of range (outside "
+"[@minus{}1, 1]), @code{asin} returns a NaN."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1149
+#, no-wrap
+msgid "acos arg"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1151
+msgid "The value of @code{(acos @var{arg})} is a number between 0 and"
+msgstr ""
+
+#. type: ifnottex
+#: original_texis/numbers.texi:1153
+msgid "pi"
+msgstr ""
+
+#. type: tex
+#: original_texis/numbers.texi:1156
+#, no-wrap
+msgid "@math{\\pi}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1159
+msgid ""
+"(inclusive) whose cosine is @var{arg}.  If @var{arg} is out of range "
+"(outside [@minus{}1, 1]), @code{acos} returns a NaN."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1161
+#, no-wrap
+msgid "atan y &optional x"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1163
+msgid "The value of @code{(atan @var{y})} is a number between"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1180
+msgid ""
+"(exclusive) whose tangent is @var{y}.  If the optional second argument "
+"@var{x} is given, the value of @code{(atan y x)} is the angle in radians "
+"between the vector @code{[@var{x}, @var{y}]} and the @code{X} axis."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1182
+#, no-wrap
+msgid "exp arg"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1185
+msgid ""
+"This is the exponential function; it returns @math{e} to the power "
+"@var{arg}."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1187
+#, no-wrap
+msgid "log arg &optional base"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1192
+msgid ""
+"This function returns the logarithm of @var{arg}, with base @var{base}.  If "
+"you don't specify @var{base}, the natural base @math{e} is used.  If "
+"@var{arg} or @var{base} is negative, @code{log} returns a NaN."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1194
+#, no-wrap
+msgid "expt x y"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1200
+msgid ""
+"This function returns @var{x} raised to power @var{y}.  If both arguments "
+"are integers and @var{y} is positive, the result is an integer; in this "
+"case, overflow causes truncation, so watch out.  If @var{x} is a finite "
+"negative number and @var{y} is a finite non-integer, @code{expt} returns a "
+"NaN."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1202
+#, no-wrap
+msgid "sqrt arg"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1205
+msgid ""
+"This returns the square root of @var{arg}.  If @var{arg} is finite and less "
+"than zero, @code{sqrt} returns a NaN."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:1209
+msgid "In addition, Emacs defines the following common mathematical constants:"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:1210
+#, no-wrap
+msgid "float-e"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:1212
+msgid "The mathematical constant @math{e} (2.71828@dots{})."
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:1214
+#, no-wrap
+msgid "float-pi"
+msgstr ""
+
+#. type: defvar
+#: original_texis/numbers.texi:1216
+msgid "The mathematical constant @math{pi} (3.14159@dots{})."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:1220
+#, no-wrap
+msgid "random numbers"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:1228
+msgid ""
+"A deterministic computer program cannot generate true random numbers.  For "
+"most purposes, @dfn{pseudo-random numbers} suffice.  A series of "
+"pseudo-random numbers is generated in a deterministic fashion.  The numbers "
+"are not truly random, but they have certain properties that mimic a random "
+"series.  For example, all possible values occur equally often in a "
+"pseudo-random series."
+msgstr ""
+
+#. type: cindex
+#: original_texis/numbers.texi:1229
+#, no-wrap
+msgid "seed, for random number generation"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:1235
+msgid ""
+"Pseudo-random numbers are generated from a @dfn{seed value}.  Starting from "
+"any given seed, the @code{random} function always generates the same "
+"sequence of numbers.  By default, Emacs initializes the random seed at "
+"startup, in such a way that the sequence of values of @code{random} (with "
+"overwhelming likelihood) differs in each Emacs run."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/numbers.texi:1243
+msgid ""
+"Sometimes you want the random number sequence to be repeatable.  For "
+"example, when debugging a program whose behavior depends on the random "
+"number sequence, it is helpful to get the same behavior in each program "
+"run.  To make the sequence repeat, execute @code{(random \"\")}.  This sets "
+"the seed to a constant value for your particular Emacs executable (though it "
+"may differ for other Emacs builds).  You can use other strings to choose "
+"various seed values."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1244
+#, no-wrap
+msgid "random &optional limit"
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1247
+msgid ""
+"This function returns a pseudo-random integer.  Repeated calls return a "
+"series of pseudo-random integers."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1253
+msgid ""
+"If @var{limit} is a positive integer, the value is chosen to be nonnegative "
+"and less than @var{limit}.  Otherwise, the value might be any integer "
+"representable in Lisp, i.e., an integer between @code{most-negative-fixnum} "
+"and @code{most-positive-fixnum} (@pxref{Integer Basics})."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1258
+msgid ""
+"If @var{limit} is @code{t}, it means to choose a new seed as if Emacs were "
+"restarting, typically from the system entropy.  On systems lacking entropy "
+"pools, choose the seed from less-random volatile data such as the current "
+"time."
+msgstr ""
+
+#. type: defun
+#: original_texis/numbers.texi:1261
+msgid ""
+"If @var{limit} is a string, it means to choose a new seed based on the "
+"string's contents."
+msgstr ""

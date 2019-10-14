@@ -1,0 +1,3238 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-10-14 22:49+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: node
+#: original_texis/sequences.texi:6
+#, no-wrap
+msgid "Sequences Arrays Vectors"
+msgstr ""
+
+#. type: chapter
+#: original_texis/sequences.texi:7
+#, no-wrap
+msgid "Sequences, Arrays, and Vectors"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:8
+#, no-wrap
+msgid "sequence"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:14
+msgid ""
+"The @dfn{sequence} type is the union of two other Lisp types: lists and "
+"arrays.  In other words, any list is a sequence, and any array is a "
+"sequence.  The common property that all sequences have is that each is an "
+"ordered collection of elements."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:18
+msgid ""
+"An @dfn{array} is a fixed-length object with a slot for each of its "
+"elements.  All the elements are accessible in constant time.  The four types "
+"of arrays are strings, vectors, char-tables and bool-vectors."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:24
+msgid ""
+"A list is a sequence of elements, but it is not a single primitive object; "
+"it is made of cons cells, one cell per element.  Finding the @var{n}th "
+"element requires looking through @var{n} cons cells, so elements farther "
+"from the beginning of the list take longer to access.  But it is possible to "
+"add elements to the list, or remove elements."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:26
+msgid "The following diagram shows the relationship between these types:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:45
+#, no-wrap
+msgid ""
+"          _____________________________________________\n"
+"         |                                             |\n"
+"         |          Sequence                           |\n"
+"         |  ______   ________________________________  |\n"
+"         | |      | |                                | |\n"
+"         | | List | |             Array              | |\n"
+"         | |      | |    ________       ________     | |\n"
+"         | |______| |   |        |     |        |    | |\n"
+"         |          |   | Vector |     | String |    | |\n"
+"         |          |   |________|     |________|    | |\n"
+"         |          |  ____________   _____________  | |\n"
+"         |          | |            | |             | | |\n"
+"         |          | | Char-table | | Bool-vector | | |\n"
+"         |          | |____________| |_____________| | |\n"
+"         |          |________________________________| |\n"
+"         |_____________________________________________|\n"
+msgstr ""
+
+#. type: node
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:59
+#, no-wrap
+msgid "Sequence Functions"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "Functions that accept any kind of sequence."
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1014 original_texis/sequences.texi:1015
+#, no-wrap
+msgid "Arrays"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "Characteristics of arrays in Emacs Lisp."
+msgstr ""
+
+#. type: node
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1082
+#, no-wrap
+msgid "Array Functions"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "Functions specifically for arrays."
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1182 original_texis/sequences.texi:1183
+#, no-wrap
+msgid "Vectors"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "Special characteristics of Emacs Lisp vectors."
+msgstr ""
+
+#. type: node
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1220
+#, no-wrap
+msgid "Vector Functions"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "Functions specifically for vectors."
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1310 original_texis/sequences.texi:1311
+#, no-wrap
+msgid "Char-Tables"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "How to work with char-tables."
+msgstr ""
+
+#. type: node
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1485
+#, no-wrap
+msgid "Bool-Vectors"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "How to work with bool-vectors."
+msgstr ""
+
+#. type: node
+#: original_texis/sequences.texi:57 original_texis/sequences.texi:1602
+#, no-wrap
+msgid "Rings"
+msgstr ""
+
+#. type: menuentry
+#: original_texis/sequences.texi:57
+msgid "Managing a fixed-size ring of objects."
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:60
+#, no-wrap
+msgid "Sequences"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:63
+msgid "This section describes functions that accept any kind of sequence."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:64
+#, no-wrap
+msgid "sequencep object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:67
+msgid ""
+"This function returns @code{t} if @var{object} is a list, vector, string, "
+"bool-vector, or char-table, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:69
+#, no-wrap
+msgid "length sequence"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:70
+#, no-wrap
+msgid "string length"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:71
+#, no-wrap
+msgid "list length"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:72
+#, no-wrap
+msgid "vector length"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:73
+#, no-wrap
+msgid "sequence length"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:74
+#, no-wrap
+msgid "char-table length"
+msgstr ""
+
+#. type: anchor{#1}
+#: original_texis/sequences.texi:81
+msgid "Definition of length"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:81
+msgid ""
+"This function returns the number of elements in @var{sequence}.  If "
+"@var{sequence} is a dotted list, a @code{wrong-type-argument} error is "
+"signaled.  Circular lists may cause an infinite loop.  For a char-table, the "
+"value returned is always one more than the maximum Emacs character code."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:83
+msgid ""
+"@xref{Definition of safe-length}, for the related function "
+"@code{safe-length}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:88
+#, no-wrap
+msgid ""
+"(length '(1 2 3))\n"
+"    @result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:92
+#, no-wrap
+msgid ""
+"(length ())\n"
+"    @result{} 0\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:96
+#, no-wrap
+msgid ""
+"(length \"foobar\")\n"
+"    @result{} 6\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:100
+#, no-wrap
+msgid ""
+"(length [1 2 3])\n"
+"    @result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:104
+#, no-wrap
+msgid ""
+"(length (make-bool-vector 5 nil))\n"
+"    @result{} 5\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:110
+msgid "See also @code{string-bytes}, in @ref{Text Representations}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:115
+msgid ""
+"If you need to compute the width of a string on display, you should use "
+"@code{string-width} (@pxref{Size of Displayed Text}), not @code{length}, "
+"since @code{length} only counts the number of characters, but does not "
+"account for the display width of each character."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:116
+#, no-wrap
+msgid "elt sequence index"
+msgstr ""
+
+#. type: anchor{#1}
+#: original_texis/sequences.texi:118
+msgid "Definition of elt"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:118
+#, no-wrap
+msgid "elements of sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:125
+msgid ""
+"This function returns the element of @var{sequence} indexed by @var{index}.  "
+"Legitimate values of @var{index} are integers ranging from 0 up to one less "
+"than the length of @var{sequence}.  If @var{sequence} is a list, "
+"out-of-range values behave as for @code{nth}.  @xref{Definition of nth}.  "
+"Otherwise, out-of-range values trigger an @code{args-out-of-range} error."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:130
+#, no-wrap
+msgid ""
+"(elt [1 2 3 4] 2)\n"
+"     @result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:134
+#, no-wrap
+msgid ""
+"(elt '(1 2 3 4) 2)\n"
+"     @result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:139
+#, no-wrap
+msgid ""
+";; @r{We use @code{string} to show clearly which character @code{elt} "
+"returns.}\n"
+"(string (elt \"1234\" 2))\n"
+"     @result{} \"3\"\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:143
+#, no-wrap
+msgid ""
+"(elt [1 2 3 4] 4)\n"
+"     @error{} Args out of range: [1 2 3 4], 4\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:147
+#, no-wrap
+msgid ""
+"(elt [1 2 3 4] -1)\n"
+"     @error{} Args out of range: [1 2 3 4], -1\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:152
+msgid ""
+"This function generalizes @code{aref} (@pxref{Array Functions}) and "
+"@code{nth} (@pxref{Definition of nth})."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:154
+#, no-wrap
+msgid "copy-sequence sequence"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:155
+#, no-wrap
+msgid "copying sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:159
+msgid ""
+"This function returns a copy of @var{sequence}.  The copy is the same type "
+"of object as the original sequence, and it has the same elements in the same "
+"order."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:166
+msgid ""
+"Storing a new element into the copy does not affect the original "
+"@var{sequence}, and vice versa.  However, the elements of the new sequence "
+"are not copies; they are identical (@code{eq}) to the elements of the "
+"original.  Therefore, changes made within these elements, as found via the "
+"copied sequence, are also visible in the original sequence."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:171
+msgid ""
+"If the sequence is a string with text properties, the property list in the "
+"copy is itself a copy, not shared with the original's property list.  "
+"However, the actual values of the properties are shared.  @xref{Text "
+"Properties}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:174
+msgid ""
+"This function does not work for dotted lists.  Trying to copy a circular "
+"list may cause an infinite loop."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:178
+msgid ""
+"See also @code{append} in @ref{Building Lists}, @code{concat} in "
+"@ref{Creating Strings}, and @code{vconcat} in @ref{Vector Functions}, for "
+"other ways to copy sequences."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:183
+#, no-wrap
+msgid ""
+"(setq bar '(1 2))\n"
+"     @result{} (1 2)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:187
+#, no-wrap
+msgid ""
+"(setq x (vector 'foo bar))\n"
+"     @result{} [foo (1 2)]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:191
+#, no-wrap
+msgid ""
+"(setq y (copy-sequence x))\n"
+"     @result{} [foo (1 2)]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:196
+#, no-wrap
+msgid ""
+"(eq x y)\n"
+"     @result{} nil\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:200
+#, no-wrap
+msgid ""
+"(equal x y)\n"
+"     @result{} t\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:204
+#, no-wrap
+msgid ""
+"(eq (elt x 1) (elt y 1))\n"
+"     @result{} t\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:211
+#, no-wrap
+msgid ""
+";; @r{Replacing an element of one sequence.}\n"
+"(aset x 0 'quux)\n"
+"x @result{} [quux (1 2)]\n"
+"y @result{} [foo (1 2)]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:218
+#, no-wrap
+msgid ""
+";; @r{Modifying the inside of a shared element.}\n"
+"(setcar (aref x 1) 69)\n"
+"x @result{} [quux (69 2)]\n"
+"y @result{} [foo (69 2)]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:222
+#, no-wrap
+msgid "reverse sequence"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:223
+#, no-wrap
+msgid "string reverse"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:224
+#, no-wrap
+msgid "list reverse"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:225
+#, no-wrap
+msgid "vector reverse"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:226
+#, no-wrap
+msgid "sequence reverse"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:230
+msgid ""
+"This function creates a new sequence whose elements are the elements of "
+"@var{sequence}, but in reverse order.  The original argument @var{sequence} "
+"is @emph{not} altered.  Note that char-tables cannot be reversed."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:235
+#, no-wrap
+msgid ""
+"(setq x '(1 2 3 4))\n"
+"     @result{} (1 2 3 4)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:241
+#, no-wrap
+msgid ""
+"(reverse x)\n"
+"     @result{} (4 3 2 1)\n"
+"x\n"
+"     @result{} (1 2 3 4)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:245
+#, no-wrap
+msgid ""
+"(setq x [1 2 3 4])\n"
+"     @result{} [1 2 3 4]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:251
+#, no-wrap
+msgid ""
+"(reverse x)\n"
+"     @result{} [4 3 2 1]\n"
+"x\n"
+"     @result{} [1 2 3 4]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:255
+#, no-wrap
+msgid ""
+"(setq x \"xyzzy\")\n"
+"     @result{} \"xyzzy\"\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:261
+#, no-wrap
+msgid ""
+"(reverse x)\n"
+"     @result{} \"yzzyx\"\n"
+"x\n"
+"     @result{} \"xyzzy\"\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:265
+#, no-wrap
+msgid "nreverse sequence"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:266
+#, no-wrap
+msgid "reversing a string"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:267
+#, no-wrap
+msgid "reversing a list"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:268
+#, no-wrap
+msgid "reversing a vector"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:271
+msgid ""
+"This function reverses the order of the elements of @var{sequence}.  Unlike "
+"@code{reverse} the original @var{sequence} may be modified."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:273
+msgid "For example:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:278
+#, no-wrap
+msgid ""
+"(setq x '(a b c))\n"
+"     @result{} (a b c)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:284
+#, no-wrap
+msgid ""
+"x\n"
+"     @result{} (a b c)\n"
+"(nreverse x)\n"
+"     @result{} (c b a)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:289
+#, no-wrap
+msgid ""
+";; @r{The cons cell that was first is now last.}\n"
+"x\n"
+"     @result{} (a)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:294
+msgid ""
+"To avoid confusion, we usually store the result of @code{nreverse} back in "
+"the same variable which held the original list:"
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:297
+#, no-wrap
+msgid "(setq x (nreverse x))\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:301
+msgid ""
+"Here is the @code{nreverse} of our favorite example, @code{(a b c)}, "
+"presented graphically:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:312
+#, no-wrap
+msgid ""
+"@r{Original list head:}                       @r{Reversed list:}\n"
+" -------------        -------------        ------------\n"
+"| car  | cdr  |      | car  | cdr  |      | car | cdr  |\n"
+"|   a  |  nil |<--   |   b  |   o  |<--   |   c |   o  |\n"
+"|      |      |   |  |      |   |  |   |  |     |   |  |\n"
+" -------------    |   --------- | -    |   -------- | -\n"
+"                  |             |      |            |\n"
+"                   -------------        ------------\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:316
+msgid "For the vector, it is even simpler because you don't need setq:"
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:324
+#, no-wrap
+msgid ""
+"(setq x [1 2 3 4])\n"
+"     @result{} [1 2 3 4]\n"
+"(nreverse x)\n"
+"     @result{} [4 3 2 1]\n"
+"x\n"
+"     @result{} [4 3 2 1]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:329
+msgid ""
+"Note that unlike @code{reverse}, this function doesn't work with strings.  "
+"Although you can alter string data by using @code{aset}, it is strongly "
+"encouraged to treat strings as immutable."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:332
+#, no-wrap
+msgid "sort sequence predicate"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:333
+#, no-wrap
+msgid "stable sort"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:334
+#, no-wrap
+msgid "sorting lists"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:335
+#, no-wrap
+msgid "sorting vectors"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:343
+msgid ""
+"This function sorts @var{sequence} stably.  Note that this function doesn't "
+"work for all sequences; it may be used only for lists and vectors.  If "
+"@var{sequence} is a list, it is modified destructively.  This functions "
+"returns the sorted @var{sequence} and compares elements using "
+"@var{predicate}.  A stable sort is one in which elements with equal sort "
+"keys maintain their relative order before and after the sort.  Stability is "
+"important when successive sorts are used to order elements according to "
+"different criteria."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:348
+msgid ""
+"The argument @var{predicate} must be a function that accepts two arguments.  "
+"It is called with two elements of @var{sequence}.  To get an increasing "
+"order sort, the @var{predicate} should return non-@code{nil} if the first "
+"element is ``less'' than the second, or @code{nil} if not."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:357
+msgid ""
+"The comparison function @var{predicate} must give reliable results for any "
+"given pair of arguments, at least within a single call to @code{sort}.  It "
+"must be @dfn{antisymmetric}; that is, if @var{a} is less than @var{b}, "
+"@var{b} must not be less than @var{a}.  It must be @dfn{transitive}---that "
+"is, if @var{a} is less than @var{b}, and @var{b} is less than @var{c}, then "
+"@var{a} must be less than @var{c}.  If you use a comparison function which "
+"does not meet these requirements, the result of @code{sort} is "
+"unpredictable."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:363
+msgid ""
+"The destructive aspect of @code{sort} for lists is that it rearranges the "
+"cons cells forming @var{sequence} by changing @sc{cdr}s.  A nondestructive "
+"sort function would create new cons cells to store the elements in their "
+"sorted order.  If you wish to make a sorted copy without destroying the "
+"original, copy it first with @code{copy-sequence} and then sort."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:369
+msgid ""
+"Sorting does not change the @sc{car}s of the cons cells in @var{sequence}; "
+"the cons cell that originally contained the element @code{a} in "
+"@var{sequence} still has @code{a} in its @sc{car} after sorting, but it now "
+"appears in a different position in the list due to the change of @sc{cdr}s.  "
+"For example:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:374
+#, no-wrap
+msgid ""
+"(setq nums '(1 3 2 6 5 4 0))\n"
+"     @result{} (1 3 2 6 5 4 0)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:378
+#, no-wrap
+msgid ""
+"(sort nums '<)\n"
+"     @result{} (0 1 2 3 4 5 6)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:382
+#, no-wrap
+msgid ""
+"nums\n"
+"     @result{} (1 2 3 4 5 6)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:392
+msgid ""
+"@strong{Warning}: Note that the list in @code{nums} no longer contains 0; "
+"this is the same cons cell that it was before, but it is no longer the first "
+"one in the list.  Don't assume a variable that formerly held the argument "
+"now holds the entire sorted list! Instead, save the result of @code{sort} "
+"and use that.  Most often we store the result back into the variable that "
+"held the original list:"
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:395
+#, no-wrap
+msgid "(setq nums (sort nums '<))\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:402
+msgid ""
+"For the better understanding of what stable sort is, consider the following "
+"vector example.  After sorting, all items whose @code{car} is 8 are grouped "
+"at the beginning of @code{vector}, but their relative order is preserved.  "
+"All items whose @code{car} is 9 are grouped at the end of @code{vector}, but "
+"their relative order is also preserved:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:411
+#, no-wrap
+msgid ""
+"(setq\n"
+"  vector\n"
+"  (vector '(8 . \"xxx\") '(9 . \"aaa\") '(8 . \"bbb\") '(9 . \"zzz\")\n"
+"          '(9 . \"ppp\") '(8 . \"ttt\") '(8 . \"eee\") '(9 . \"fff\")))\n"
+"     @result{} [(8 . \"xxx\") (9 . \"aaa\") (8 . \"bbb\") (9 . \"zzz\")\n"
+"         (9 . \"ppp\") (8 . \"ttt\") (8 . \"eee\") (9 . \"fff\")]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:416
+#, no-wrap
+msgid ""
+"(sort vector (lambda (x y) (< (car x) (car y))))\n"
+"     @result{} [(8 . \"xxx\") (8 . \"bbb\") (8 . \"ttt\") (8 . \"eee\")\n"
+"         (9 . \"aaa\") (9 . \"zzz\") (9 . \"ppp\") (9 . \"fff\")]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:422
+msgid ""
+"@xref{Sorting}, for more functions that perform sorting.  See "
+"@code{documentation} in @ref{Accessing Documentation}, for a useful example "
+"of @code{sort}."
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:424
+#, no-wrap
+msgid "sequence functions in seq"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:425
+#, no-wrap
+msgid "seq library"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:429
+msgid ""
+"The @file{seq.el} library provides the following additional sequence "
+"manipulation macros and functions, prefixed with @code{seq-}.  To use them, "
+"you must first load the @file{seq} library."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:435
+msgid ""
+"All functions defined in this library are free of side-effects; i.e., they "
+"do not modify any sequence (list, vector, or string) that you pass as an "
+"argument.  Unless otherwise stated, the result is a sequence of the same "
+"type as the input.  For those functions that take a predicate, this should "
+"be a function of one argument."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:440
+msgid ""
+"The @file{seq.el} library can be extended to work with additional types of "
+"sequential data-structures.  For that purpose, all functions are defined "
+"using @code{cl-defgeneric}.  @xref{Generic Functions}, for more details "
+"about using @code{cl-defgeneric} for adding extensions."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:441
+#, no-wrap
+msgid "seq-elt sequence index"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:447
+msgid ""
+"This function returns the element of @var{sequence} at the specified "
+"@var{index}, which is an integer whose valid value range is zero to one less "
+"than the length of @var{sequence}.  For out-of-range values on built-in "
+"sequence types, @code{seq-elt} behaves like @code{elt}.  For the details, "
+"see @ref{Definition of elt}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:452
+#, no-wrap
+msgid ""
+"(seq-elt [1 2 3 4] 2)\n"
+"@result{} 3\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:457
+msgid ""
+"@code{seq-elt} returns places settable using @code{setf} (@pxref{Setting "
+"Generalized Variables})."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:464
+#, no-wrap
+msgid ""
+"(setq vec [1 2 3 4])\n"
+"(setf (seq-elt vec 2) 5)\n"
+"vec\n"
+"@result{} [1 2 5 4]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:468
+#, no-wrap
+msgid "seq-length sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:472
+msgid ""
+"This function returns the number of elements in @var{sequence}.  For "
+"built-in sequence types, @code{seq-length} behaves like @code{length}.  "
+"@xref{Definition of length}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:474
+#, no-wrap
+msgid "seqp sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:478
+msgid ""
+"This function returns non-@code{nil} if @var{sequence} is a sequence (a list "
+"or array), or any additional type of sequence defined via @file{seq.el} "
+"generic functions."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:483
+#, no-wrap
+msgid ""
+"(seqp [1 2])\n"
+"@result{} t\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:487
+#, no-wrap
+msgid ""
+"(seqp 2)\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:491
+#, no-wrap
+msgid "seq-drop sequence n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:495
+msgid ""
+"This function returns all but the first @var{n} (an integer)  elements of "
+"@var{sequence}.  If @var{n} is negative or zero, the result is "
+"@var{sequence}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:500
+#, no-wrap
+msgid ""
+"(seq-drop [1 2 3 4 5 6] 3)\n"
+"@result{} [4 5 6]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:504
+#, no-wrap
+msgid ""
+"(seq-drop \"hello world\" -4)\n"
+"@result{} \"hello world\"\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:508
+#, no-wrap
+msgid "seq-take sequence n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:512
+msgid ""
+"This function returns the first @var{n} (an integer) elements of "
+"@var{sequence}.  If @var{n} is negative or zero, the result is @code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:517
+#, no-wrap
+msgid ""
+"(seq-take '(1 2 3 4) 3)\n"
+"@result{} (1 2 3)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:521
+#, no-wrap
+msgid ""
+"(seq-take [1 2 3 4] 0)\n"
+"@result{} []\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:525
+#, no-wrap
+msgid "seq-take-while predicate sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:528
+msgid ""
+"This function returns the members of @var{sequence} in order, stopping "
+"before the first one for which @var{predicate} returns @code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:533
+#, no-wrap
+msgid ""
+"(seq-take-while (lambda (elt) (> elt 0)) '(1 2 3 -1 -2))\n"
+"@result{} (1 2 3)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:537
+#, no-wrap
+msgid ""
+"(seq-take-while (lambda (elt) (> elt 0)) [-1 4 6])\n"
+"@result{} []\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:541
+#, no-wrap
+msgid "seq-drop-while predicate sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:544
+msgid ""
+"This function returns the members of @var{sequence} in order, starting from "
+"the first one for which @var{predicate} returns @code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:549
+#, no-wrap
+msgid ""
+"(seq-drop-while (lambda (elt) (> elt 0)) '(1 2 3 -1 -2))\n"
+"@result{} (-1 -2)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:553
+#, no-wrap
+msgid ""
+"(seq-drop-while (lambda (elt) (< elt 0)) [1 4 6])\n"
+"@result{} [1 4 6]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:557
+#, no-wrap
+msgid "seq-do function sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:561
+msgid ""
+"This function applies @var{function} to each element of @var{sequence} in "
+"turn (presumably for side effects), and returns @var{sequence}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:563
+#, no-wrap
+msgid "seq-map function sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:566
+msgid ""
+"This function returns the result of applying @var{function} to each element "
+"of @var{sequence}.  The returned value is a list."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:571
+#, no-wrap
+msgid ""
+"(seq-map #'1+ '(2 4 6))\n"
+"@result{} (3 5 7)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:575
+#, no-wrap
+msgid ""
+"(seq-map #'symbol-name [foo bar])\n"
+"@result{} (\"foo\" \"bar\")\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:579
+#, no-wrap
+msgid "seq-mapn function &rest sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:585
+msgid ""
+"This function returns the result of applying @var{function} to each element "
+"of @var{sequences}.  The arity (@pxref{What Is a Function, sub-arity}) of "
+"@var{function} must match the number of sequences.  Mapping stops at the end "
+"of the shortest sequence, and the returned value is a list."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:590
+#, no-wrap
+msgid ""
+"(seq-mapn #'+ '(2 4 6) '(20 40 60))\n"
+"@result{} (22 44 66)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:594
+#, no-wrap
+msgid ""
+"(seq-mapn #'concat '(\"moskito\" \"bite\") [\"bee\" \"sting\"])\n"
+"@result{} (\"moskitobee\" \"bitesting\")\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:598
+#, no-wrap
+msgid "seq-filter predicate sequence"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:599
+#, no-wrap
+msgid "filtering sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:602
+msgid ""
+"This function returns a list of all the elements in @var{sequence} for which "
+"@var{predicate} returns non-@code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:607
+#, no-wrap
+msgid ""
+"(seq-filter (lambda (elt) (> elt 0)) [1 -1 3 -3 5])\n"
+"@result{} (1 3 5)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:611
+#, no-wrap
+msgid ""
+"(seq-filter (lambda (elt) (> elt 0)) '(-1 -3 -5))\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:615
+#, no-wrap
+msgid "seq-remove predicate sequence"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:616
+#, no-wrap
+msgid "removing from sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:619
+msgid ""
+"This function returns a list of all the elements in @var{sequence} for which "
+"@var{predicate} returns @code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:624
+#, no-wrap
+msgid ""
+"(seq-remove (lambda (elt) (> elt 0)) [1 -1 3 -3 5])\n"
+"@result{} (-1 -3)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:628
+#, no-wrap
+msgid ""
+"(seq-remove (lambda (elt) (< elt 0)) '(-1 -3 -5))\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:632
+#, no-wrap
+msgid "seq-reduce function sequence initial-value"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:633
+#, no-wrap
+msgid "reducing sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:641
+msgid ""
+"This function returns the result of calling @var{function} with "
+"@var{initial-value} and the first element of @var{sequence}, then calling "
+"@var{function} with that result and the second element of @var{sequence}, "
+"then with that result and the third element of @var{sequence}, etc.  "
+"@var{function} should be a function of two arguments.  If @var{sequence} is "
+"empty, this returns @var{initial-value} without calling @var{function}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:646
+#, no-wrap
+msgid ""
+"(seq-reduce #'+ [1 2 3 4] 0)\n"
+"@result{} 10\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:650
+#, no-wrap
+msgid ""
+"(seq-reduce #'+ '(1 2 3 4) 5)\n"
+"@result{} 15\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:654
+#, no-wrap
+msgid ""
+"(seq-reduce #'+ '() 3)\n"
+"@result{} 3\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:658
+#, no-wrap
+msgid "seq-some predicate sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:661
+msgid ""
+"This function returns the first non-@code{nil} value returned by applying "
+"@var{predicate} to each element of @var{sequence} in turn."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:666
+#, no-wrap
+msgid ""
+"(seq-some #'numberp [\"abc\" 1 nil])\n"
+"@result{} t\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:670
+#, no-wrap
+msgid ""
+"(seq-some #'numberp [\"abc\" \"def\"])\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:674
+#, no-wrap
+msgid ""
+"(seq-some #'null [\"abc\" 1 nil])\n"
+"@result{} t\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:678
+#, no-wrap
+msgid ""
+"(seq-some #'1+ [2 4 6])\n"
+"@result{} 3\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:682
+#, no-wrap
+msgid "seq-find predicate sequence &optional default"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:686
+msgid ""
+"This function returns the first element in @var{sequence} for which "
+"@var{predicate} returns non-@code{nil}.  If no element matches "
+"@var{predicate}, the function returns @var{default}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:690
+msgid ""
+"Note that this function has an ambiguity if the found element is identical "
+"to @var{default}, as in that case it cannot be known whether an element was "
+"found or not."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:695
+#, no-wrap
+msgid ""
+"(seq-find #'numberp [\"abc\" 1 nil])\n"
+"@result{} 1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:699
+#, no-wrap
+msgid ""
+"(seq-find #'numberp [\"abc\" \"def\"])\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:703
+#, no-wrap
+msgid "seq-every-p predicate sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:706
+msgid ""
+"This function returns non-@code{nil} if applying @var{predicate} to every "
+"element of @var{sequence} returns non-@code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:711
+#, no-wrap
+msgid ""
+"(seq-every-p #'numberp [2 4 6])\n"
+"@result{} t\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:715
+#, no-wrap
+msgid ""
+"(seq-some #'numberp [2 4 \"6\"])\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:719
+#, no-wrap
+msgid "seq-empty-p sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:721
+msgid "This function returns non-@code{nil} if @var{sequence} is empty."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:726
+#, no-wrap
+msgid ""
+"(seq-empty-p \"not empty\")\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:730
+#, no-wrap
+msgid ""
+"(seq-empty-p \"\")\n"
+"@result{} t\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:734
+#, no-wrap
+msgid "seq-count predicate sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:737
+msgid ""
+"This function returns the number of elements in @var{sequence} for which "
+"@var{predicate} returns non-@code{nil}."
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:741
+#, no-wrap
+msgid ""
+"(seq-count (lambda (elt) (> elt 0)) [-1 2 0 3 -2])\n"
+"@result{} 2\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:744
+#, no-wrap
+msgid "sorting sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:745
+#, no-wrap
+msgid "seq-sort function sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:749
+msgid ""
+"This function returns a copy of @var{sequence} that is sorted according to "
+"@var{function}, a function of two arguments that returns non-@code{nil} if "
+"the first argument should sort before the second."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:751
+#, no-wrap
+msgid "seq-contains sequence elt &optional function"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:755
+msgid ""
+"This function returns the first element in @var{sequence} that is equal to "
+"@var{elt}.  If the optional argument @var{function} is non-@code{nil}, it is "
+"a function of two arguments to use instead of the default @code{equal}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:760
+#, no-wrap
+msgid ""
+"(seq-contains '(symbol1 symbol2) 'symbol1)\n"
+"@result{} symbol1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:764
+#, no-wrap
+msgid ""
+"(seq-contains '(symbol1 symbol2) 'symbol3)\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:769
+#, no-wrap
+msgid "seq-position sequence elt &optional function"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:774
+msgid ""
+"This function returns the index of the first element in @var{sequence} that "
+"is equal to @var{elt}.  If the optional argument @var{function} is "
+"non-@code{nil}, it is a function of two arguments to use instead of the "
+"default @code{equal}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:779
+#, no-wrap
+msgid ""
+"(seq-position '(a b c) 'b)\n"
+"@result{} 1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:783
+#, no-wrap
+msgid ""
+"(seq-position '(a b c) 'd)\n"
+"@result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:788
+#, no-wrap
+msgid "seq-uniq sequence &optional function"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:792
+msgid ""
+"This function returns a list of the elements of @var{sequence} with "
+"duplicates removed.  If the optional argument @var{function} is "
+"non-@code{nil}, it is a function of two arguments to use instead of the "
+"default @code{equal}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:797
+#, no-wrap
+msgid ""
+"(seq-uniq '(1 2 2 1 3))\n"
+"@result{} (1 2 3)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:801
+#, no-wrap
+msgid ""
+"(seq-uniq '(1 2 2.0 1.0) #'=)\n"
+"@result{} [3 4]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:805
+#, no-wrap
+msgid "seq-subseq sequence start &optional end"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:810
+msgid ""
+"This function returns a subset of @var{sequence} from @var{start} to "
+"@var{end}, both integers (@var{end} defaults to the last element).  If "
+"@var{start} or @var{end} is negative, it counts from the end of "
+"@var{sequence}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:815
+#, no-wrap
+msgid ""
+"(seq-subseq '(1 2 3 4 5) 1)\n"
+"@result{} (2 3 4 5)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:819
+#, no-wrap
+msgid ""
+"(seq-subseq '[1 2 3 4 5] 1 3)\n"
+"@result{} [2 3]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:823
+#, no-wrap
+msgid ""
+"(seq-subseq '[1 2 3 4 5] -3 -1)\n"
+"@result{} [3 4]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:827
+#, no-wrap
+msgid "seq-concatenate type &rest sequences"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:831
+msgid ""
+"This function returns a sequence of type @var{type} made of the "
+"concatenation of @var{sequences}.  @var{type} may be: @code{vector}, "
+"@code{list} or @code{string}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:836
+#, no-wrap
+msgid ""
+"(seq-concatenate 'list '(1 2) '(3 4) [5 6])\n"
+"@result{} (1 2 3 5 6)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:840
+#, no-wrap
+msgid ""
+"(seq-concatenate 'string \"Hello \" \"world\")\n"
+"@result{} \"Hello world\"\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:844
+#, no-wrap
+msgid "seq-mapcat function sequence &optional type"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:849
+msgid ""
+"This function returns the result of applying @code{seq-concatenate} to the "
+"result of applying @var{function} to each element of @var{sequence}.  The "
+"result is a sequence of type @var{type}, or a list if @var{type} is "
+"@code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:854
+#, no-wrap
+msgid ""
+"(seq-mapcat #'seq-reverse '((3 2 1) (6 5 4)))\n"
+"@result{} (1 2 3 4 5 6)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:858
+#, no-wrap
+msgid "seq-partition sequence n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:863
+msgid ""
+"This function returns a list of the elements of @var{sequence} grouped into "
+"sub-sequences of length @var{n}.  The last sequence may contain less "
+"elements than @var{n}.  @var{n} must be an integer.  If @var{n} is a "
+"negative integer or 0, the return value is @code{nil}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:868
+#, no-wrap
+msgid ""
+"(seq-partition '(0 1 2 3 4 5 6 7) 3)\n"
+"@result{} ((0 1 2) (3 4 5) (6 7))\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:872
+#, no-wrap
+msgid "seq-intersection sequence1 sequence2 &optional function"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:877
+msgid ""
+"This function returns a list of the elements that appear both in "
+"@var{sequence1} and @var{sequence2}.  If the optional argument "
+"@var{function} is non-@code{nil}, it is a function of two arguments to use "
+"to compare elements instead of the default @code{equal}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:882
+#, no-wrap
+msgid ""
+"(seq-intersection [2 3 4 5] [1 3 5 6 7])\n"
+"@result{} (3 5)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:887
+#, no-wrap
+msgid "seq-difference sequence1 sequence2 &optional function"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:892
+msgid ""
+"This function returns a list of the elements that appear in @var{sequence1} "
+"but not in @var{sequence2}.  If the optional argument @var{function} is "
+"non-@code{nil}, it is a function of two arguments to use to compare elements "
+"instead of the default @code{equal}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:897
+#, no-wrap
+msgid ""
+"(seq-difference '(2 3 4 5) [1 3 5 6 7])\n"
+"@result{} (2 4)\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:901
+#, no-wrap
+msgid "seq-group-by function sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:905
+msgid ""
+"This function separates the elements of @var{sequence} into an alist whose "
+"keys are the result of applying @var{function} to each element of "
+"@var{sequence}.  Keys are compared using @code{equal}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:910
+#, no-wrap
+msgid ""
+"(seq-group-by #'integerp '(1 2.1 3 2 3.2))\n"
+"@result{} ((t 1 3 2) (nil 2.1 3.2))\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:914
+#, no-wrap
+msgid ""
+"(seq-group-by #'car '((a 1) (b 2) (a 3) (c 4)))\n"
+"@result{} ((b (b 2)) (a (a 1) (a 3)) (c (c 4)))\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:918
+#, no-wrap
+msgid "seq-into sequence type"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:922
+msgid ""
+"This function converts the sequence @var{sequence} into a sequence of type "
+"@var{type}.  @var{type} can be one of the following symbols: @code{vector}, "
+"@code{string} or @code{list}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:927
+#, no-wrap
+msgid ""
+"(seq-into [1 2 3] 'list)\n"
+"@result{} (1 2 3)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:931
+#, no-wrap
+msgid ""
+"(seq-into nil 'vector)\n"
+"@result{} []\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:935
+#, no-wrap
+msgid ""
+"(seq-into \"hello\" 'vector)\n"
+"@result{} [104 101 108 108 111]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:939
+#, no-wrap
+msgid "seq-min sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:943
+msgid ""
+"This function returns the smallest element of @var{sequence}.  The elements "
+"of @var{sequence} must be numbers or markers (@pxref{Markers})."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:948
+#, no-wrap
+msgid ""
+"(seq-min [3 1 2])\n"
+"@result{} 1\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:952
+#, no-wrap
+msgid ""
+"(seq-min \"Hello\")\n"
+"@result{} 72\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:956
+#, no-wrap
+msgid "seq-max sequence"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:959
+msgid ""
+"This function returns the largest element of @var{sequence}.  The elements "
+"of @var{sequence} must be numbers or markers."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:964
+#, no-wrap
+msgid ""
+"(seq-max [1 3 2])\n"
+"@result{} 3\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:968
+#, no-wrap
+msgid ""
+"(seq-max \"Hello\")\n"
+"@result{} 111\n"
+msgstr ""
+
+#. type: defmac
+#: original_texis/sequences.texi:972
+#, no-wrap
+msgid "seq-doseq (var sequence) body@dots{}"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:973
+#, no-wrap
+msgid "sequence iteration"
+msgstr ""
+
+#. type: defmac
+#: original_texis/sequences.texi:977
+msgid ""
+"This macro is like @code{dolist} (@pxref{Iteration, dolist}), except that "
+"@var{sequence} can be a list, vector or string.  This is primarily useful "
+"for side-effects."
+msgstr ""
+
+#. type: defmac
+#: original_texis/sequences.texi:979
+#, no-wrap
+msgid "seq-let arguments sequence body@dots{}"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:980
+#, no-wrap
+msgid "sequence destructuring"
+msgstr ""
+
+#. type: defmac
+#: original_texis/sequences.texi:984
+msgid ""
+"This macro binds the variables defined in @var{arguments} to the elements of "
+"@var{sequence}.  @var{arguments} can themselves include sequences, allowing "
+"for nested destructuring."
+msgstr ""
+
+#. type: defmac
+#: original_texis/sequences.texi:988
+msgid ""
+"The @var{arguments} sequence can also include the @code{&rest} marker "
+"followed by a variable name to be bound to the rest of @code{sequence}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:994
+#, no-wrap
+msgid ""
+"(seq-let [first second] [1 2 3 4]\n"
+"  (list first second))\n"
+"@result{} (1 2)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:999
+#, no-wrap
+msgid ""
+"(seq-let (_ a _ b) '(1 2 3 4)\n"
+"  (list a b))\n"
+"@result{} (2 4)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1004
+#, no-wrap
+msgid ""
+"(seq-let [a [b [c]]] [1 [2 [3]]]\n"
+"  (list a b c))\n"
+"@result{} (1 2 3)\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1008
+#, no-wrap
+msgid ""
+"(seq-let [a b &rest others] [1 2 3 4]\n"
+"  others)\n"
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:1010
+#, no-wrap
+msgid "@result{} [3 4]\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1016
+#, no-wrap
+msgid "array"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1023
+msgid ""
+"An @dfn{array} object has slots that hold a number of other Lisp objects, "
+"called the elements of the array.  Any element of an array may be accessed "
+"in constant time.  In contrast, the time to access an element of a list is "
+"proportional to the position of that element in the list."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1030
+msgid ""
+"Emacs defines four types of array, all one-dimensional: @dfn{strings} "
+"(@pxref{String Type}), @dfn{vectors} (@pxref{Vector Type}), "
+"@dfn{bool-vectors} (@pxref{Bool-Vector Type}), and @dfn{char-tables} "
+"(@pxref{Char-Table Type}).  Vectors and char-tables can hold elements of any "
+"type, but strings can only hold characters, and bool-vectors can only hold "
+"@code{t} and @code{nil}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1032
+msgid "All four kinds of array share these characteristics:"
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1038
+msgid ""
+"The first element of an array has index zero, the second element has index "
+"1, and so on.  This is called @dfn{zero-origin} indexing.  For example, an "
+"array of four elements has indices 0, 1, 2, @w{and 3}."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1042
+msgid ""
+"The length of the array is fixed once you create it; you cannot change the "
+"length of an existing array."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1046
+msgid ""
+"For purposes of evaluation, the array is a constant---i.e., it evaluates to "
+"itself."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1050
+msgid ""
+"The elements of an array may be referenced or changed with the functions "
+"@code{aref} and @code{aset}, respectively (@pxref{Array Functions})."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1055
+msgid ""
+"When you create an array, other than a char-table, you must specify its "
+"length.  You cannot specify the length of a char-table, because that is "
+"determined by the range of character codes."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1059
+msgid ""
+"In principle, if you want an array of text characters, you could use either "
+"a string or a vector.  In practice, we always choose strings for such "
+"applications, for four reasons:"
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1063
+msgid "They occupy one-fourth the space of a vector of the same elements."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1067
+msgid "Strings are printed in a way that shows the contents more clearly as text."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1070
+msgid "Strings can hold text properties.  @xref{Text Properties}."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1075
+msgid ""
+"Many of the specialized editing and I/O facilities of Emacs accept only "
+"strings.  For example, you cannot insert a vector of characters into a "
+"buffer the way you can insert a string.  @xref{Strings and Characters}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1081
+msgid ""
+"By contrast, for an array of keyboard input characters (such as a key "
+"sequence), a vector may be necessary, because many keyboard input characters "
+"are outside the range that will fit in a string.  @xref{Key Sequence Input}."
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:1083
+#, no-wrap
+msgid "Functions that Operate on Arrays"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1087
+msgid "In this section, we describe the functions that accept all types of arrays."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1088
+#, no-wrap
+msgid "arrayp object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1091
+msgid ""
+"This function returns @code{t} if @var{object} is an array (i.e., a vector, "
+"a string, a bool-vector or a char-table)."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1100
+#, no-wrap
+msgid ""
+"(arrayp [a])\n"
+"     @result{} t\n"
+"(arrayp \"asdf\")\n"
+"     @result{} t\n"
+"(arrayp (syntax-table))    ;; @r{A char-table.}\n"
+"     @result{} t\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1104
+#, no-wrap
+msgid "aref array index"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1105
+#, no-wrap
+msgid "array elements"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1108
+msgid ""
+"This function returns the @var{index}th element of @var{array}.  The first "
+"element is at index zero."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1115
+#, no-wrap
+msgid ""
+"(setq primes [2 3 5 7 11 13])\n"
+"     @result{} [2 3 5 7 11 13]\n"
+"(aref primes 4)\n"
+"     @result{} 11\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1119
+#, no-wrap
+msgid ""
+"(aref \"abcdefg\" 1)\n"
+"     @result{} 98           ; @r{@samp{b} is @acronym{ASCII} code 98.}\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1123
+msgid "See also the function @code{elt}, in @ref{Sequence Functions}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1125
+#, no-wrap
+msgid "aset array index object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1128
+msgid ""
+"This function sets the @var{index}th element of @var{array} to be "
+"@var{object}.  It returns @var{object}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1137
+#, no-wrap
+msgid ""
+"(setq w [foo bar baz])\n"
+"     @result{} [foo bar baz]\n"
+"(aset w 0 'fu)\n"
+"     @result{} fu\n"
+"w\n"
+"     @result{} [fu bar baz]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1146
+#, no-wrap
+msgid ""
+"(setq x \"asdfasfd\")\n"
+"     @result{} \"asdfasfd\"\n"
+"(aset x 3 ?Z)\n"
+"     @result{} 90\n"
+"x\n"
+"     @result{} \"asdZasfd\"\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1152
+msgid ""
+"If @var{array} is a string and @var{object} is not a character, a "
+"@code{wrong-type-argument} error results.  The function converts a unibyte "
+"string to multibyte if necessary to insert a character."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1154
+#, no-wrap
+msgid "fillarray array object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1157
+msgid ""
+"This function fills the array @var{array} with @var{object}, so that each "
+"element of @var{array} is @var{object}.  It returns @var{array}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1166
+#, no-wrap
+msgid ""
+"(setq a [a b c d e f g])\n"
+"     @result{} [a b c d e f g]\n"
+"(fillarray a 0)\n"
+"     @result{} [0 0 0 0 0 0 0]\n"
+"a\n"
+"     @result{} [0 0 0 0 0 0 0]\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1172
+#, no-wrap
+msgid ""
+"(setq s \"When in the course\")\n"
+"     @result{} \"When in the course\"\n"
+"(fillarray s ?-)\n"
+"     @result{} \"------------------\"\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1177
+msgid ""
+"If @var{array} is a string and @var{object} is not a character, a "
+"@code{wrong-type-argument} error results."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1181
+msgid ""
+"The general sequence functions @code{copy-sequence} and @code{length} are "
+"often useful for objects known to be arrays.  @xref{Sequence Functions}."
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1184
+#, no-wrap
+msgid "vector (type)"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1193
+msgid ""
+"A @dfn{vector} is a general-purpose array whose elements can be any Lisp "
+"objects.  (By contrast, the elements of a string can only be characters.  "
+"@xref{Strings and Characters}.)  Vectors are used in Emacs for many "
+"purposes: as key sequences (@pxref{Key Sequences}), as symbol-lookup tables "
+"(@pxref{Creating Symbols}), as part of the representation of a byte-compiled "
+"function (@pxref{Byte Compilation}), and more."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1196
+msgid ""
+"Like other arrays, vectors use zero-origin indexing: the first element has "
+"index 0."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1201
+msgid ""
+"Vectors are printed with square brackets surrounding the elements.  Thus, a "
+"vector whose elements are the symbols @code{a}, @code{b} and @code{a} is "
+"printed as @code{[a b a]}.  You can write vectors in the same way in Lisp "
+"input."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1206
+msgid ""
+"A vector, like a string or a number, is considered a constant for "
+"evaluation: the result of evaluating it is the same vector.  This does not "
+"evaluate or even examine the elements of the vector.  @xref{Self-Evaluating "
+"Forms}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1208
+msgid "Here are examples illustrating these principles:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1217
+#, no-wrap
+msgid ""
+"(setq avector [1 two '(three) \"four\" [five]])\n"
+"     @result{} [1 two (quote (three)) \"four\" [five]]\n"
+"(eval avector)\n"
+"     @result{} [1 two (quote (three)) \"four\" [five]]\n"
+"(eq avector (eval avector))\n"
+"     @result{} t\n"
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:1221
+#, no-wrap
+msgid "Functions for Vectors"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1224
+msgid "Here are some functions that relate to vectors:"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1225
+#, no-wrap
+msgid "vectorp object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1227
+msgid "This function returns @code{t} if @var{object} is a vector."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1234
+#, no-wrap
+msgid ""
+"(vectorp [a])\n"
+"     @result{} t\n"
+"(vectorp \"asdf\")\n"
+"     @result{} nil\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1238
+#, no-wrap
+msgid "vector &rest objects"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1241
+msgid ""
+"This function creates and returns a vector whose elements are the arguments, "
+"@var{objects}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1248
+#, no-wrap
+msgid ""
+"(vector 'foo 23 [bar baz] \"rats\")\n"
+"     @result{} [foo 23 [bar baz] \"rats\"]\n"
+"(vector)\n"
+"     @result{} []\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1252
+#, no-wrap
+msgid "make-vector length object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1255
+msgid ""
+"This function returns a new vector consisting of @var{length} elements, each "
+"initialized to @var{object}."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1260
+#, no-wrap
+msgid ""
+"(setq sleepy (make-vector 9 'Z))\n"
+"     @result{} [Z Z Z Z Z Z Z Z Z]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1264
+#, no-wrap
+msgid "vconcat &rest sequences"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1265
+#, no-wrap
+msgid "copying vectors"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1270
+msgid ""
+"This function returns a new vector containing all the elements of "
+"@var{sequences}.  The arguments @var{sequences} may be true lists, vectors, "
+"strings or bool-vectors.  If no @var{sequences} are given, the empty vector "
+"is returned."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1273
+msgid ""
+"The value is either the empty vector, or is a newly constructed nonempty "
+"vector that is not @code{eq} to any existing vector."
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1280
+#, no-wrap
+msgid ""
+"(setq a (vconcat '(A B C) '(D E F)))\n"
+"     @result{} [A B C D E F]\n"
+"(eq a (vconcat a))\n"
+"     @result{} nil\n"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1286
+#, no-wrap
+msgid ""
+"(vconcat)\n"
+"     @result{} []\n"
+"(vconcat [A B C] \"aa\" '(foo (6 7)))\n"
+"     @result{} [A B C 97 97 foo (6 7)]\n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1292
+msgid ""
+"The @code{vconcat} function also allows byte-code function objects as "
+"arguments.  This is a special feature to make it easy to access the entire "
+"contents of a byte-code function object.  @xref{Byte-Code Objects}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1296
+msgid ""
+"For other concatenation functions, see @code{mapconcat} in @ref{Mapping "
+"Functions}, @code{concat} in @ref{Creating Strings}, and @code{append} in "
+"@ref{Building Lists}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1300
+msgid ""
+"The @code{append} function also provides a way to convert a vector into a "
+"list with the same elements:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1307
+#, no-wrap
+msgid ""
+"(setq avector [1 two (quote (three)) \"four\" [five]])\n"
+"     @result{} [1 two (quote (three)) \"four\" [five]]\n"
+"(append avector nil)\n"
+"     @result{} (1 two (quote (three)) \"four\" [five])\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1312
+#, no-wrap
+msgid "char-tables"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1313
+#, no-wrap
+msgid "extra slots of char-table"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1323
+msgid ""
+"A char-table is much like a vector, except that it is indexed by character "
+"codes.  Any valid character code, without modifiers, can be used as an index "
+"in a char-table.  You can access a char-table's elements with @code{aref} "
+"and @code{aset}, as with any array.  In addition, a char-table can have "
+"@dfn{extra slots} to hold additional data not associated with particular "
+"character codes.  Like vectors, char-tables are constants when evaluated, "
+"and can hold elements of any type."
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1324
+#, no-wrap
+msgid "subtype of char-table"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1327
+msgid "Each char-table has a @dfn{subtype}, a symbol, which serves two purposes:"
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1335
+msgid ""
+"The subtype provides an easy way to tell what the char-table is for.  For "
+"instance, display tables are char-tables with @code{display-table} as the "
+"subtype, and syntax tables are char-tables with @code{syntax-table} as the "
+"subtype.  The subtype can be queried using the function "
+"@code{char-table-subtype}, described below."
+msgstr ""
+
+#. type: itemize
+#: original_texis/sequences.texi:1343
+msgid ""
+"The subtype controls the number of @dfn{extra slots} in the char-table.  "
+"This number is specified by the subtype's @code{char-table-extra-slots} "
+"symbol property (@pxref{Symbol Properties}), whose value should be an "
+"integer between 0 and 10.  If the subtype has no such symbol property, the "
+"char-table has no extra slots."
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1345
+#, no-wrap
+msgid "parent of char-table"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1352
+msgid ""
+"A char-table can have a @dfn{parent}, which is another char-table.  If it "
+"does, then whenever the char-table specifies @code{nil} for a particular "
+"character @var{c}, it inherits the value specified in the parent.  In other "
+"words, @code{(aref @var{char-table} @var{c})} returns the value from the "
+"parent of @var{char-table} if @var{char-table} itself specifies @code{nil}."
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1353
+#, no-wrap
+msgid "default value of char-table"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1357
+msgid ""
+"A char-table can also have a @dfn{default value}.  If so, then @code{(aref "
+"@var{char-table} @var{c})} returns the default value whenever the char-table "
+"does not specify any other non-@code{nil} value."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1358
+#, no-wrap
+msgid "make-char-table subtype &optional init"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1363
+msgid ""
+"Return a newly-created char-table, with subtype @var{subtype} (a symbol).  "
+"Each element is initialized to @var{init}, which defaults to @code{nil}.  "
+"You cannot alter the subtype of a char-table after the char-table is "
+"created."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1366
+msgid ""
+"There is no argument to specify the length of the char-table, because all "
+"char-tables have room for any valid character code as an index."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1373
+msgid ""
+"If @var{subtype} has the @code{char-table-extra-slots} symbol property, that "
+"specifies the number of extra slots in the char-table.  This should be an "
+"integer between 0 and 10; otherwise, @code{make-char-table} raises an "
+"error.  If @var{subtype} has no @code{char-table-extra-slots} symbol "
+"property (@pxref{Property Lists}), the char-table has no extra slots."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1375
+#, no-wrap
+msgid "char-table-p object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1378
+msgid ""
+"This function returns @code{t} if @var{object} is a char-table, and "
+"@code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1380
+#, no-wrap
+msgid "char-table-subtype char-table"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1382
+msgid "This function returns the subtype symbol of @var{char-table}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1386
+msgid ""
+"There is no special function to access default values in a char-table.  To "
+"do that, use @code{char-table-range} (see below)."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1387
+#, no-wrap
+msgid "char-table-parent char-table"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1390
+msgid ""
+"This function returns the parent of @var{char-table}.  The parent is always "
+"either @code{nil} or another char-table."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1392
+#, no-wrap
+msgid "set-char-table-parent char-table new-parent"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1394
+msgid "This function sets the parent of @var{char-table} to @var{new-parent}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1396
+#, no-wrap
+msgid "char-table-extra-slot char-table n"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1400
+msgid ""
+"This function returns the contents of extra slot @var{n} (zero based)  of "
+"@var{char-table}.  The number of extra slots in a char-table is determined "
+"by its subtype."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1402
+#, no-wrap
+msgid "set-char-table-extra-slot char-table n value"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1405
+msgid ""
+"This function stores @var{value} in extra slot @var{n} (zero based) of "
+"@var{char-table}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1409
+msgid ""
+"A char-table can specify an element value for a single character code; it "
+"can also specify a value for an entire character set."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1410
+#, no-wrap
+msgid "char-table-range char-table range"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1413
+msgid ""
+"This returns the value specified in @var{char-table} for a range of "
+"characters @var{range}.  Here are the possibilities for @var{range}:"
+msgstr ""
+
+#. type: code{#1}
+#: original_texis/sequences.texi:1415 original_texis/sequences.texi:1433
+#, no-wrap
+msgid "nil"
+msgstr ""
+
+#. type: table
+#: original_texis/sequences.texi:1417 original_texis/sequences.texi:1435
+msgid "Refers to the default value."
+msgstr ""
+
+#. type: var{#1}
+#: original_texis/sequences.texi:1418 original_texis/sequences.texi:1439
+#, no-wrap
+msgid "char"
+msgstr ""
+
+#. type: table
+#: original_texis/sequences.texi:1421 original_texis/sequences.texi:1442
+msgid ""
+"Refers to the element for character @var{char} (supposing @var{char} is a "
+"valid character code)."
+msgstr ""
+
+#. type: code{#1}
+#: original_texis/sequences.texi:1422 original_texis/sequences.texi:1443
+#, no-wrap
+msgid "(@var{from} . @var{to})"
+msgstr ""
+
+#. type: table
+#: original_texis/sequences.texi:1425 original_texis/sequences.texi:1446
+msgid ""
+"A cons cell refers to all the characters in the inclusive range "
+"@samp{[@var{from}..@var{to}]}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1428
+#, no-wrap
+msgid "set-char-table-range char-table range value"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1431
+msgid ""
+"This function sets the value in @var{char-table} for a range of characters "
+"@var{range}.  Here are the possibilities for @var{range}:"
+msgstr ""
+
+#. type: code{#1}
+#: original_texis/sequences.texi:1436
+#, no-wrap
+msgid "t"
+msgstr ""
+
+#. type: table
+#: original_texis/sequences.texi:1438
+msgid "Refers to the whole range of character codes."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1449
+#, no-wrap
+msgid "map-char-table function char-table"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1457
+msgid ""
+"This function calls its argument @var{function} for each element of "
+"@var{char-table} that has a non-@code{nil} value.  The call to "
+"@var{function} is with two arguments, a key and a value.  The key is a "
+"possible @var{range} argument for @code{char-table-range}---either a valid "
+"character or a cons cell @code{(@var{from} . @var{to})}, specifying a range "
+"of characters that share the same value.  The value is what "
+"@code{(char-table-range @var{char-table} @var{key})} returns."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1460
+msgid ""
+"Overall, the key-value pairs passed to @var{function} describe all the "
+"values stored in @var{char-table}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1464
+msgid ""
+"The return value is always @code{nil}; to make calls to "
+"@code{map-char-table} useful, @var{function} should have side effects.  For "
+"example, here is how to examine the elements of the syntax table:"
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:1482
+#, no-wrap
+msgid ""
+"(let (accumulator)\n"
+"   (map-char-table\n"
+"    #'(lambda (key value)\n"
+"        (setq accumulator\n"
+"              (cons (list\n"
+"                     (if (consp key)\n"
+"                         (list (car key) (cdr key))\n"
+"                       key)\n"
+"                     value)\n"
+"                    accumulator)))\n"
+"    (syntax-table))\n"
+"   accumulator)\n"
+"@result{}\n"
+"(((2597602 4194303) (2)) ((2597523 2597601) (3))\n"
+" ... (65379 (5 . 65378)) (65378 (4 . 65379)) (65377 (1))\n"
+" ... (12 (0)) (11 (3)) (10 (12)) (9 (0)) ((0 8) (3)))\n"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1486 original_texis/sequences.texi:1487
+#, no-wrap
+msgid "Bool-vectors"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1495
+msgid ""
+"A bool-vector is much like a vector, except that it stores only the values "
+"@code{t} and @code{nil}.  If you try to store any non-@code{nil} value into "
+"an element of the bool-vector, the effect is to store @code{t} there.  As "
+"with all arrays, bool-vector indices start from 0, and the length cannot be "
+"changed once the bool-vector is created.  Bool-vectors are constants when "
+"evaluated."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1499
+msgid ""
+"Several functions work specifically with bool-vectors; aside from that, you "
+"manipulate them with same functions used for other kinds of arrays."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1500
+#, no-wrap
+msgid "make-bool-vector length initial"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1503
+msgid ""
+"Return a new bool-vector of @var{length} elements, each one initialized to "
+"@var{initial}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1505
+#, no-wrap
+msgid "bool-vector &rest objects"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1508
+msgid ""
+"This function creates and returns a bool-vector whose elements are the "
+"arguments, @var{objects}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1510
+#, no-wrap
+msgid "bool-vector-p object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1513
+msgid ""
+"This returns @code{t} if @var{object} is a bool-vector, and @code{nil} "
+"otherwise."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1516
+msgid "There are also some bool-vector set operation functions, described below:"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1517
+#, no-wrap
+msgid "bool-vector-exclusive-or a b &optional c"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1521
+msgid ""
+"Return @dfn{bitwise exclusive or} of bool vectors @var{a} and @var{b}.  If "
+"optional argument @var{c} is given, the result of this operation is stored "
+"into @var{c}.  All arguments should be bool vectors of the same length."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1523
+#, no-wrap
+msgid "bool-vector-union a b &optional c"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1527
+msgid ""
+"Return @dfn{bitwise or} of bool vectors @var{a} and @var{b}.  If optional "
+"argument @var{c} is given, the result of this operation is stored into "
+"@var{c}.  All arguments should be bool vectors of the same length."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1529
+#, no-wrap
+msgid "bool-vector-intersection a b &optional c"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1533
+msgid ""
+"Return @dfn{bitwise and} of bool vectors @var{a} and @var{b}.  If optional "
+"argument @var{c} is given, the result of this operation is stored into "
+"@var{c}.  All arguments should be bool vectors of the same length."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1535
+#, no-wrap
+msgid "bool-vector-set-difference a b &optional c"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1539
+msgid ""
+"Return @dfn{set difference} of bool vectors @var{a} and @var{b}.  If "
+"optional argument @var{c} is given, the result of this operation is stored "
+"into @var{c}.  All arguments should be bool vectors of the same length."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1541
+#, no-wrap
+msgid "bool-vector-not a &optional b"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1545
+msgid ""
+"Return @dfn{set complement} of bool vector @var{a}.  If optional argument "
+"@var{b} is given, the result of this operation is stored into @var{b}.  All "
+"arguments should be bool vectors of the same length."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1547
+#, no-wrap
+msgid "bool-vector-subsetp a b"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1551
+msgid ""
+"Return @code{t} if every @code{t} value in @var{a} is also t in @var{b}, "
+"@code{nil} otherwise.  All arguments should be bool vectors of the same "
+"length."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1553
+#, no-wrap
+msgid "bool-vector-count-consecutive a b i"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1557
+msgid ""
+"Return the number of consecutive elements in @var{a} equal @var{b} starting "
+"at @var{i}.  @code{a} is a bool vector, @var{b} is @code{t} or @code{nil}, "
+"and @var{i} is an index into @code{a}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1559
+#, no-wrap
+msgid "bool-vector-count-population a"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1561
+msgid "Return the number of elements that are @code{t} in bool vector @var{a}."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1565
+msgid "The printed form represents up to 8 boolean values as a single character:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1572
+#, no-wrap
+msgid ""
+"(bool-vector t nil t nil)\n"
+"     @result{} #&4\"^E\"\n"
+"(bool-vector)\n"
+"     @result{} #&0\"\"\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1576
+msgid "You can use @code{vconcat} to print a bool-vector like other vectors:"
+msgstr ""
+
+#. type: group
+#: original_texis/sequences.texi:1581
+#, no-wrap
+msgid ""
+"(vconcat (bool-vector nil t nil t))\n"
+"     @result{} [nil t nil t]\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1586
+msgid "Here is another example of creating, examining, and updating a bool-vector:"
+msgstr ""
+
+#. type: example
+#: original_texis/sequences.texi:1596
+#, no-wrap
+msgid ""
+"(setq bv (make-bool-vector 5 t))\n"
+"     @result{} #&5\"^_\"\n"
+"(aref bv 1)\n"
+"     @result{} t\n"
+"(aset bv 3 nil)\n"
+"     @result{} nil\n"
+"bv\n"
+"     @result{} #&5\"^W\"\n"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1601
+msgid ""
+"These results make sense because the binary codes for control-_ and "
+"control-W are 11111 and 10111, respectively."
+msgstr ""
+
+#. type: section
+#: original_texis/sequences.texi:1603
+#, no-wrap
+msgid "Managing a Fixed-Size Ring of Objects"
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1605
+#, no-wrap
+msgid "ring data structure"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1610
+msgid ""
+"A @dfn{ring} is a fixed-size data structure that supports insertion, "
+"deletion, rotation, and modulo-indexed reference and traversal.  An "
+"efficient ring data structure is implemented by the @code{ring} package.  It "
+"provides the functions listed in this section."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1615
+msgid ""
+"Note that several rings in Emacs, like the kill ring and the mark ring, are "
+"actually implemented as simple lists, @emph{not} using the @code{ring} "
+"package; thus the following functions won't work on them."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1616
+#, no-wrap
+msgid "make-ring size"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1619
+msgid ""
+"This returns a new ring capable of holding @var{size} objects.  @var{size} "
+"should be an integer."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1621
+#, no-wrap
+msgid "ring-p object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1623
+msgid "This returns @code{t} if @var{object} is a ring, @code{nil} otherwise."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1625
+#, no-wrap
+msgid "ring-size ring"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1627
+msgid "This returns the maximum capacity of the @var{ring}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1629
+#, no-wrap
+msgid "ring-length ring"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1632
+msgid ""
+"This returns the number of objects that @var{ring} currently contains.  The "
+"value will never exceed that returned by @code{ring-size}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1634
+#, no-wrap
+msgid "ring-elements ring"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1636
+msgid "This returns a list of the objects in @var{ring}, in order, newest first."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1638
+#, no-wrap
+msgid "ring-copy ring"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1641
+msgid ""
+"This returns a new ring which is a copy of @var{ring}.  The new ring "
+"contains the same (@code{eq}) objects as @var{ring}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1643
+#, no-wrap
+msgid "ring-empty-p ring"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1645
+msgid "This returns @code{t} if @var{ring} is empty, @code{nil} otherwise."
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1651
+msgid ""
+"The newest element in the ring always has index 0.  Higher indices "
+"correspond to older elements.  Indices are computed modulo the ring length.  "
+"Index @minus{}1 corresponds to the oldest element, @minus{}2 to the "
+"next-oldest, and so forth."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1652
+#, no-wrap
+msgid "ring-ref ring index"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1656
+msgid ""
+"This returns the object in @var{ring} found at index @var{index}.  "
+"@var{index} may be negative or greater than the ring length.  If @var{ring} "
+"is empty, @code{ring-ref} signals an error."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1658
+#, no-wrap
+msgid "ring-insert ring object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1661
+msgid ""
+"This inserts @var{object} into @var{ring}, making it the newest element, and "
+"returns @var{object}."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1664
+msgid ""
+"If the ring is full, insertion removes the oldest element to make room for "
+"the new element."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1666
+#, no-wrap
+msgid "ring-remove ring &optional index"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1671
+msgid ""
+"Remove an object from @var{ring}, and return that object.  The argument "
+"@var{index} specifies which item to remove; if it is @code{nil}, that means "
+"to remove the oldest item.  If @var{ring} is empty, @code{ring-remove} "
+"signals an error."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1673
+#, no-wrap
+msgid "ring-insert-at-beginning ring object"
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1676
+msgid ""
+"This inserts @var{object} into @var{ring}, treating it as the oldest "
+"element.  The return value is not significant."
+msgstr ""
+
+#. type: defun
+#: original_texis/sequences.texi:1679
+msgid ""
+"If the ring is full, this function removes the newest element to make room "
+"for the inserted element."
+msgstr ""
+
+#. type: cindex
+#: original_texis/sequences.texi:1681
+#, no-wrap
+msgid "fifo data structure"
+msgstr ""
+
+#. type: Plain text
+#: original_texis/sequences.texi:1684
+msgid ""
+"If you are careful not to exceed the ring size, you can use the ring as a "
+"first-in-first-out queue.  For example:"
+msgstr ""
+
+#. type: lisp
+#: original_texis/sequences.texi:1693
+#, no-wrap
+msgid ""
+"(let ((fifo (make-ring 5)))\n"
+"  (mapc (lambda (obj) (ring-insert fifo obj))\n"
+"        '(0 one \"two\"))\n"
+"  (list (ring-remove fifo) t\n"
+"        (ring-remove fifo) t\n"
+"        (ring-remove fifo)))\n"
+"     @result{} (0 t one t \"two\")\n"
+msgstr ""
