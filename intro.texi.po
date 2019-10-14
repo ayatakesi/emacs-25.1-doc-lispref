@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-10 22:24+0900\n"
+"PO-Revision-Date: 2019-10-15 01:05+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -23,15 +23,13 @@ msgstr "Introduction"
 
 #. type: Plain text
 #: original_texis/intro.texi:15
-#, fuzzy
-#| msgid "Most of the GNU Emacs text editor is written in the programming language called Emacs Lisp.  You can write new code in Emacs Lisp and install it as an extension to the editor.  However, Emacs Lisp is more than a mere ``extension language''; it is a full computer programming language in its own right.  You can use it as you would any other programming language."
 msgid "Most of the GNU Emacs text editor is written in the programming language called Emacs Lisp.  You can write new code in Emacs Lisp and install it as an extension to the editor.  However, Emacs Lisp is more than a mere extension language; it is a full computer programming language in its own right.  You can use it as you would any other programming language."
-msgstr "GNU Emacsテキストエディターのほとんどの部分は、Emacs Lispと呼ばれるプログラミング言語で記述されています。新しいコードをEmacs Lispで記述して、このエディターの拡張としてインストールできます。しかしEmacs Lispは、単なる``拡張言語''を越えた言語であり、それ自体で完全なコンピュータープログラミング言語です。他のプログラミング言語で行なうすべてのことに、この言語を使用できます。"
+msgstr "GNU Emacsテキストエディターのほとんどの部分は、Emacs Lispと呼ばれるプログラミング言語で記述されています。新しいコードをEmacs Lispで記述して、このエディターの拡張としてインストールできます。しかしEmacs Lispは、単なる拡張言語を越える言語であり、それ自体で完全なコンピュータープログラミング言語です。他のプログラミング言語で行なうすべてのことに、この言語を使用できます。"
 
 #. type: Plain text
 #: original_texis/intro.texi:22
 msgid "Because Emacs Lisp is designed for use in an editor, it has special features for scanning and parsing text as well as features for handling files, buffers, displays, subprocesses, and so on.  Emacs Lisp is closely integrated with the editing facilities; thus, editing commands are functions that can also conveniently be called from Lisp programs, and parameters for customization are ordinary Lisp variables."
-msgstr "Emacs Lispはエディターの中で使用するようにデザインされているので、テキストのスキャンやパースのための特別な機能をもち、同様にファイル、バッファー、ディスプレー、サブプロセスを処理する機能をもちます。Emacs Lispは編集機能と密に統合されています。したがって編集コマンドはLispプログラムから簡単に呼び出せる関数であり、カスタマイズのためのパラメーターは普通のLisp変数です。"
+msgstr "Emacs Lispはエディターの中で使用するようにデザインされているので、テキストのスキャンやパースのための特別な機能をもち、同様にファイル、バッファー、ディスプレー、サブプロセスを処理する機能をもちます。Emacs Lispは編集機能と密に統合されています。つまり編集コマンドはLispプログラムから簡単に呼び出せる関数で、カスタマイズのためのパラメーターは普通のLisp変数です。"
 
 #. type: Plain text
 #: original_texis/intro.texi:29
@@ -41,7 +39,7 @@ msgstr "このマニュアルはEmacs Lispの完全な記述を試みます。�
 #. type: Plain text
 #: original_texis/intro.texi:34
 msgid "Generally speaking, the earlier chapters describe features of Emacs Lisp that have counterparts in many programming languages, and later chapters describe features that are peculiar to Emacs Lisp or relate specifically to editing."
-msgstr "おおまかに言うと、前の方のチャプターでは多くのプログラミング言語に対応するEmacs Lispの機能について説明し、後のチャプターではEmacs Lispに特異な機能や、特に編集に関連した機能を説明します。"
+msgstr "おおまかに言うと、前の方のチャプターでは多くのプログラミング言語の機能にたいして、Emacs Lispでの対応する機能を説明し、後の方のチャプターではEmacs Lispに特異な機能や、編集に特化した関連する機能を説明します。"
 
 #. type: Plain text
 #: original_texis/intro.texi:36
@@ -80,7 +78,7 @@ msgstr "Lisp History"
 #. type: menuentry
 #: original_texis/intro.texi:48
 msgid "Emacs Lisp is descended from Maclisp."
-msgstr "Emacs LispはMaclispの子孫です。"
+msgstr "Maclispを後継するEmacs Lisp。"
 
 #. type: section
 #: original_texis/intro.texi:48 original_texis/intro.texi:128
@@ -131,12 +129,12 @@ msgstr "このマニュアルは幾多のドラフトを経てきました。ほ
 #. type: Plain text
 #: original_texis/intro.texi:67
 msgid "The manual should be fully correct in what it does cover, and it is therefore open to criticism on anything it says---from specific examples and descriptive text, to the ordering of chapters and sections.  If something is confusing, or you find that you have to look at the sources or experiment to learn something not covered in the manual, then perhaps the manual should be fixed.  Please let us know."
-msgstr "このマニュアルは、それがカバーしている事柄については完全に正しくあるべきあり、故に、特定の説明テキスト、チャプターやセクションの順番にたいしての批判に開かれているべきです。判りにくかったり、このマニュアルでカバーされていない何かを学ぶためにソースを見たり実験から学ぶ必要があるなら、このマニュアルはおそらくフィクスされるべきなのかもしれません。わたしたちにそれを教えてください。"
+msgstr "このマニュアルは、それがカバーしている事柄については完全に正しくあるべきあり、故に特定の説明テキスト、チャプターやセクションの順番にたいしての批判にオープンであるべきです。判りにくかったり、このマニュアルでカバーされていない何かを学ぶためにソースを見たり実地から学ぶ必要があるなら、このマニュアルはおそらく訂正されるべきなのかもしれません。どうかわたしたちにそれを教えてください。"
 
 #. type: iftex
 #: original_texis/intro.texi:77
 msgid "As you use this manual, we ask that you mark pages with corrections so you can later look them up and send them to us.  If you think of a simple, real-life example for a function or group of functions, please make an effort to write it up and send it in.  Please reference any comments to the chapter name, section name, and function name, as appropriate, since page numbers and chapter and section numbers will change and we may have trouble finding the text you are talking about.  Also state the version of the edition you are criticizing."
-msgstr "このマニュアルを使用するときは、訂正のためにページにマークしてください。そうすれば後でそれを探して、わたしたちに送ることができます。関数または関数グループの単純な現実例を考えたときは、ぜひそれを記述して送ってください。それが妥当ならコメントでチャプター名、セクション名、関数名を参照してください。なぜならページ番号やチャプター番号、セクション番号は変更されるので、あなたが言及しているテキストを探すのに問題が生じるかもしれないからです。あなたが訂正を求めるエディションのバージョンも示してください。"
+msgstr "このマニュアルを使用するときは、訂正のためにページにマークしてください。そうすれば後でそれを探して、わたしたちに送ることができます。関数や関数グループの単純で現実的な例を思いついたときは、ぜひそれを記述して送ってください。それが妥当ならチャプター名、セクション名、関数名への参照をコメントしてください。なぜならページ番号やチャプター番号、セクション番号は変更されるので、あなたが言及しているテキストを探すのに問題が生じるかもしれないからです。あなたが訂正を求めるエディションのバージョンも示してください。"
 
 #. type: ifnottex
 #: original_texis/intro.texi:86
@@ -158,7 +156,7 @@ msgstr "suggestions"
 #. type: Plain text
 #: original_texis/intro.texi:91
 msgid "Please send comments and corrections using @kbd{M-x report-emacs-bug}."
-msgstr "@kbd{M-x report-emacs-bug}を使用してコメントや訂正を送ってください。"
+msgstr "@kbd{M-x report-emacs-bug}を使用して、コメントや訂正を送ってください。"
 
 #. type: cindex
 #: original_texis/intro.texi:94
@@ -186,12 +184,12 @@ msgstr "Common Lisp"
 #. type: Plain text
 #: original_texis/intro.texi:110
 msgid "Dozens of Lisp implementations have been built over the years, each with its own idiosyncrasies.  Many of them were inspired by Maclisp, which was written in the 1960s at MIT's Project MAC@.  Eventually the implementers of the descendants of Maclisp came together and developed a standard for Lisp systems, called Common Lisp.  In the meantime, Gerry Sussman and Guy Steele at MIT developed a simplified but very powerful dialect of Lisp, called Scheme."
-msgstr "長年の間に何ダースものLisp実装が構築されてきて、それぞれ特異な点があります。これらの多くは、1960年代にMITのProject MACで記述された、Maclispに影響を受けています。最終的に、Maclisp後裔の実装者は共同して、Common Lispと呼ばれる標準のLispシステムを開発しました。その間に、MITのGerry SussmanとGuy Steeleにより、簡潔だがとても強力なLisp方言である、Schemeが開発されました。"
+msgstr "長年の間に何ダースものLisp実装が構築されてきて、それらのそれぞれに特異な点があります。これらの多くは、1960年代にMITのProject MACで記述された、Maclispに影響を受けています。最終的に、Maclisp後裔の実装者は共同して、Common Lispと呼ばれる標準のLispシステムを開発しました。その間にMITのGerry SussmanとGuy Steeleにより、簡潔ながらとても強力なLisp方言の、Schemeが開発されました。"
 
 #. type: Plain text
 #: original_texis/intro.texi:119
 msgid "GNU Emacs Lisp is largely inspired by Maclisp, and a little by Common Lisp.  If you know Common Lisp, you will notice many similarities.  However, many features of Common Lisp have been omitted or simplified in order to reduce the memory requirements of GNU Emacs.  Sometimes the simplifications are so drastic that a Common Lisp user might be very confused.  We will occasionally point out how GNU Emacs Lisp differs from Common Lisp.  If you don't know Common Lisp, don't worry about it; this manual is self-contained."
-msgstr "GNU Emacs LispはMaclispから多く、Common Lispから少し影響を受けています。Common Lispを知っている場合、多くの類似点に気がつくでしょう。しかしCommon Lispの多くの機能は、GNU Emacsが要求するメモリー量を削減するために、省略されるか単純化されています。ときには劇的に単純化がされているために、Common Lispユーザーは混乱するかもしれません。わたしたちは時折GNU Emacs LispがCommon Lispと異なるか示すでしょう。Common Lispを知らない場合、それについて心配する必要はありません。このマニュアルは自己完結しています。"
+msgstr "GNU Emacs LispはMaclispから多く、Common Lispから少し影響を受けています。Common Lispを知っている場合、多くの類似点に気づくでしょう。しかしCommon Lispの多くの機能は、GNU Emacsが要求するメモリー量を削減するために、省略または単純化されています。ときには劇的に単純化されているために、Common Lispユーザーは混乱するかもしれません。わたしたちは時折GNU Emacs LispがCommon Lispと異なるか示すでしょう。Common Lispを知らない場合、それについて心配する必要はありません。このマニュアルは、それ自体で自己完結しています。"
 
 #. type: pindex
 #: original_texis/intro.texi:120
@@ -212,7 +210,7 @@ msgstr "Emacs LispはSchemeの影響は受けていません。しかしGNUプ�
 #. type: Plain text
 #: original_texis/intro.texi:133
 msgid "This section explains the notational conventions that are used in this manual.  You may want to skip this section and refer back to it later."
-msgstr "このセクションでは、このマニュアルで使用する表記規約を説明します。あなたはこのセクションはスキップして、後で参照したいと思うかもしれません。"
+msgstr "このセクションでは、このマニュアルで使用する表記規約を説明します。あなたはこのセクションをスキップして、後から参照したいと思うかもしれません。"
 
 #. type: subsection
 #: original_texis/intro.texi:142 original_texis/intro.texi:144
@@ -299,10 +297,8 @@ msgstr "関数や変数などの説明にたいする表記。"
 
 #. type: Plain text
 #: original_texis/intro.texi:154
-#, fuzzy
-#| msgid "Throughout this manual, the phrases ``the Lisp reader'' and ``the Lisp printer'' refer to those routines in Lisp that convert textual representations of Lisp objects into actual Lisp objects, and vice versa.  @xref{Printed Representation}, for more details.  You, the person reading this manual, are thought of as ``the programmer'' and are addressed as ``you''.  ``The user'' is the person who uses Lisp programs, including those you write."
 msgid "Throughout this manual, the phrases ``the Lisp reader'' and ``the Lisp printer'' refer to those routines in Lisp that convert textual representations of Lisp objects into actual Lisp objects, and vice versa.  @xref{Printed Representation}, for more details.  You, the person reading this manual, are thought of as the programmer and are addressed as ``you''.  The user is the person who uses Lisp programs, including those you write."
-msgstr "このマニュアルでは、``Lispリーダー''および``Lispプリンター''という用語で、Lispのテキスト表現を実際のLispオブジェクトに変換したり、その逆を行なうLispルーチンを参照します。詳細については、@ref{Printed Representation}を参照してください。あなた、つまりこのマニュアルを読んでいる人のことは``プログラマー''と考えて``あなた''と呼びます。``ユーザー''とは、あなたの記述したものも含めて、Lispプログラムを使用する人を指します。"
+msgstr "このマニュアルでは、``Lispリーダー''および``Lispプリンター''という用語で、Lispのテキスト表現を実際のLispオブジェクトに変換したり、その逆を行なうLispルーチンを参照します。詳細については、@ref{Printed Representation}を参照してください。あなた、つまりこのマニュアルを読んでいる人のことはプログラマーと考えて``あなた''と呼びます。``ユーザー''とは、あなたの記述したものも含めて、Lispプログラムを使用する人を指します。"
 
 #. type: cindex
 #: original_texis/intro.texi:155
@@ -313,7 +309,7 @@ msgstr "typographic conventions"
 #. type: Plain text
 #: original_texis/intro.texi:159
 msgid "Examples of Lisp code are formatted like this: @code{(list 1 2 3)}.  Names that represent metasyntactic variables, or arguments to a function being described, are formatted like this: @var{first-number}."
-msgstr "Lispコードの例は、@code{(list 1 2 3)}のようなフォーマットです。メタ構文変数(metasyntactic variables)を表す名前や、説明されている関数の引数名前は、@var{first-number}のような形式です。"
+msgstr "Lispコードの例は、@code{(list 1 2 3)}のようなフォーマットです。メタ構文変数(metasyntactic variables)を表す名前や、説明されている関数の引数名前は、@var{first-number}のようにフォーマットされています。"
 
 #. type: subsection
 #: original_texis/intro.texi:161
@@ -384,15 +380,13 @@ msgstr "true"
 
 #. type: Plain text
 #: original_texis/intro.texi:197
-#, fuzzy
-#| msgid "In contexts where a truth value is expected, any non-@code{nil} value is considered to be @var{true}.  However, @code{t} is the preferred way to represent the truth value @var{true}.  When you need to choose a value which represents @var{true}, and there is no other basis for choosing, use @code{t}.  The symbol @code{t} always has the value @code{t}."
 msgid "In contexts where a truth value is expected, any non-@code{nil} value is considered to be @var{true}.  However, @code{t} is the preferred way to represent the truth value @var{true}.  When you need to choose a value that represents @var{true}, and there is no other basis for choosing, use @code{t}.  The symbol @code{t} always has the value @code{t}."
-msgstr "論理値が期待されているコンテキストでは、非@code{nil}は@var{true}と判断されます。しかし論理値の@var{true}を表す好ましい方法は@code{t}です。@var{true}を表す値を選択する必要があり、他に選択の根拠がない場合は、@code{t}を使用してください。シンボル@code{t}は、常に値@code{t}をもちます。"
+msgstr "論理値が期待されているコンテキストでは、非@code{nil}は@var{true}と判断されます。しかし論理値の@var{true}を表す好ましい方法は@code{t}です。@var{true}を表す値を選択する必要があり、他に選択の根拠がない場合は@code{t}を使用してください。シンボル@code{t}は、常に値@code{t}をもちます。"
 
 #. type: Plain text
 #: original_texis/intro.texi:203
 msgid "In Emacs Lisp, @code{nil} and @code{t} are special symbols that always evaluate to themselves.  This is so that you do not need to quote them to use them as constants in a program.  An attempt to change their values results in a @code{setting-constant} error.  @xref{Constant Variables}."
-msgstr "Emacs Lispでは、@code{nil}と@code{t}は、常に自分自身を評価する、特別なシンボルです。そのためプログラムでこれらを定数として使用する場合、クォートする必要はありません。これらの値を変更しようと試みると、結果は@code{setting-constant}エラーとなります。@ref{Constant Variables}を参照してください。"
+msgstr "Emacs Lispでの@code{nil}と@code{t}は、常に自分自身を評価する特別なシンボルです。そのためプログラムでこれらを定数として使用する場合、クォートする必要はありません。これらの値の変更を試みると、結果は@code{setting-constant}エラーとなります。@ref{Constant Variables}を参照してください。"
 
 #. type: defun
 #: original_texis/intro.texi:204
@@ -403,7 +397,7 @@ msgstr "booleanp object"
 #. type: defun
 #: original_texis/intro.texi:207
 msgid "Return non-@code{nil} if @var{object} is one of the two canonical boolean values: @code{t} or @code{nil}."
-msgstr "@var{object}が、2つの正規のブーリーン値(@code{t}または@code{nil})の場合は、非@code{nil}をリターンします。"
+msgstr "@var{object}が2つの正規のブーリーン値(@code{t}か@code{nil})のいずれかなら、非@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/intro.texi:211
@@ -426,7 +420,7 @@ msgstr "notation"
 #. type: Plain text
 #: original_texis/intro.texi:218
 msgid "A Lisp expression that you can evaluate is called a @dfn{form}.  Evaluating a form always produces a result, which is a Lisp object.  In the examples in this manual, this is indicated with @samp{@result{}}:"
-msgstr "評価することができるLisp式のことを、@dfn{フォーム(form)}と呼びます。フォームの評価により、これは結果として常に、Lispオブジェクトを生成します。このマニュアルの例では、これを@samp{@result{}}で表します:"
+msgstr "評価できるLisp式のことを@dfn{フォーム(form)}と呼びます。フォームの評価により、これは結果として常にLispオブジェクトを生成します。このマニュアルの例では、これを@samp{@result{}}で表します:"
 
 #. type: example
 #: original_texis/intro.texi:222
@@ -441,12 +435,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/intro.texi:226
 msgid "You can read this as ``@code{(car '(1 2))} evaluates to 1''."
-msgstr "これは、``@code{(car '(1 2))}を評価すると1になる''と読むことができます。"
+msgstr "これは``@code{(car '(1 2))}を評価すると、1になる''と読むことができます。"
 
 #. type: Plain text
 #: original_texis/intro.texi:231
 msgid "When a form is a macro call, it expands into a new form for Lisp to evaluate.  We show the result of the expansion with @samp{@expansion{}}.  We may or may not show the result of the evaluation of the expanded form."
-msgstr "フォームがマクロ呼び出しの場合、それは評価されるための新しいLispのフォームに展開されます。展開された結果は@samp{@expansion{}}で表します。展開されたフォームを評価した結果を表すこともあれば、表さない場合もあります。"
+msgstr "フォームがマクロ呼び出しの場合、それは評価されるための新たなLispフォームに展開されます。展開された結果は@samp{@expansion{}}で表します。わたしたちは展開されたフォームの評価し結果を示すこともあれば、示さない場合もあります。"
 
 #. type: example
 #: original_texis/intro.texi:236
@@ -480,7 +474,7 @@ msgstr "printing notation"
 #. type: Plain text
 #: original_texis/intro.texi:256
 msgid "Many of the examples in this manual print text when they are evaluated.  If you execute example code in a Lisp Interaction buffer (such as the buffer @file{*scratch*}), the printed text is inserted into the buffer.  If you execute the example by other means (such as by evaluating the function @code{eval-region}), the printed text is displayed in the echo area."
-msgstr "このマニュアルの例の多くは、それらが評価されるときにテキストをプリントします。(@file{*scratch*}バッファーのような)Lisp Interactionバッファーでコード例を実行する場合、プリントされるテキストはそのバッファーに挿入されます。(関数@code{eval-region}で評価するなど)他の方法でコード例を実行する場合、プリントされるテキストはエコーエリアに表示されます。"
+msgstr "このマニュアルの例の多くは、それらが評価されるときにテキストをプリントします。(@file{*scratch*}バッファーのような)Lisp Interactionバッファーでコード例を実行する場合、プリントされるテキストはそのバッファーに挿入されます。(関数@code{eval-region}での評価のように)他の方法でコード例を実行する場合、プリントされるテキストはエコーエリアに表示されます。"
 
 #. type: Plain text
 #: original_texis/intro.texi:261
@@ -510,7 +504,7 @@ msgstr "error message notation"
 #. type: Plain text
 #: original_texis/intro.texi:279
 msgid "Some examples signal errors.  This normally displays an error message in the echo area.  We show the error message on a line starting with @samp{@error{}}.  Note that @samp{@error{}} itself does not appear in the echo area."
-msgstr "エラーをシグナルする例も、いくつかあります。これは通常、エコーエリアにエラーメッセージを表示します。エラーメッセージの行は、@samp{@error{}}で始まります。@samp{@error{}}自体は、エコーエリアに表示されないことに注意してください。"
+msgstr "エラーをシグナルする例もあります。これは通常、エコーエリアにエラーメッセージを表示します。エラーメッセージの行は@samp{@error{}}で始まります。@samp{@error{}}自体は、エコーエリアに表示されないことに注意してください。"
 
 #. type: example
 #: original_texis/intro.texi:283
@@ -530,10 +524,8 @@ msgstr "buffer text notation"
 
 #. type: Plain text
 #: original_texis/intro.texi:296
-#, fuzzy
-#| msgid "Some examples describe modifications to the contents of a buffer, by showing the ``before'' and ``after'' versions of the text.  These examples show the contents of the buffer in question between two lines of dashes containing the buffer name.  In addition, @samp{@point{}} indicates the location of point.  (The symbol for point, of course, is not part of the text in the buffer; it indicates the place @emph{between} two characters where point is currently located.)"
 msgid "Some examples describe modifications to the contents of a buffer, by showing the before and after versions of the text.  These examples show the contents of the buffer in question between two lines of dashes containing the buffer name.  In addition, @samp{@point{}} indicates the location of point.  (The symbol for point, of course, is not part of the text in the buffer; it indicates the place @emph{between} two characters where point is currently located.)"
-msgstr "バッファー内容の変更を説明する例もあり、それらの例ではテキストの``before(以前)''と``after(以後)''のバージョンを示します。それらの例では、バッファー内容の該当する部分を、ダッシュを用いた2行の破線(バッファー名を含む)で示します。さらに、@samp{@point{}}はポイントの位置を表します(もちろんポイントのシンボルは、バッファーのテキストの一部ではなく、それはポイントが現在配されている2つの文字の@emph{間}の位置を表します)。"
+msgstr "バッファー内容の変更を説明する例もあます。それらの例では、そのテキストのbefore(以前)とafter(以後)のバージョンを示します。それらの例では、バッファー内容の該当する部分を、ダッシュを用いた2行の破線(バッファー名を含む)で示します。さらに、@samp{@point{}}はポイントの位置を表します(もちろんポイントのシンボルはバッファーのテキストの一部ではなく、ポイントが現在配されている2つの文字の@emph{間}の位置を表す)。"
 
 #. type: example
 #: original_texis/intro.texi:301
@@ -647,12 +639,12 @@ msgstr "関数の記述では、関数の名前が最初に記述されます。
 #. type: Plain text
 #: original_texis/intro.texi:351
 msgid "The appearance of the keyword @code{&optional} in the argument list indicates that the subsequent arguments may be omitted (omitted arguments default to @code{nil}).  Do not write @code{&optional} when you call the function."
-msgstr "引数リストの中にキーワード@code{&optional}がある場合、その後の引数が省略可能であることを示します(省略された引数のデフォルトは@code{nil}です)。その関数を呼び出すときは、@code{&optional}を記述しないでください。"
+msgstr "引数リストの中にキーワード@code{&optional}がある場合、その後の引数が省略可能であることを示します(省略された引数のデフォルトは@code{nil})。その関数を呼び出すときは、@code{&optional}を記述しないでください。"
 
 #. type: Plain text
 #: original_texis/intro.texi:357
 msgid "The keyword @code{&rest} (which must be followed by a single argument name) indicates that any number of arguments can follow.  The single argument name following @code{&rest} receives, as its value, a list of all the remaining arguments passed to the function.  Do not write @code{&rest} when you call the function."
-msgstr "キーワード@code{&rest}(これの後には1つの引数名を続けなければなりません)は、その後に任意の引数を続けることができることを表します。@code{&rest}の後に記述された引数名の値には、その関数に渡された残りのすべての引数がリストとしてセットされます。この関数を呼び出すときは、@code{&rest}を記述しないでください。"
+msgstr "キーワード@code{&rest}(これの後には1つの引数名を続けなければならない)は、その後に任意の引数を続けることができることを表します。@code{&rest}の後に記述された引数名の値には、その関数に渡された残りのすべての引数がリストとしてセットされます。この関数を呼び出すときは、@code{&rest}を記述しないでください。"
 
 #. type: Plain text
 #: original_texis/intro.texi:359
@@ -668,7 +660,7 @@ msgstr "foo integer1 &optional integer2 &rest integers"
 #. type: defun
 #: original_texis/intro.texi:364
 msgid "The function @code{foo} subtracts @var{integer1} from @var{integer2}, then adds all the rest of the arguments to the result.  If @var{integer2} is not supplied, then the number 19 is used by default."
-msgstr "関数@code{foo}は@var{integer2}から@var{integer1}を減じてから、その結果に残りすべての引数を加えます。@var{integer2}が与えられなかった場合、デフォルトして数値19が使用されます。"
+msgstr "関数@code{foo}は@var{integer2}から@var{integer1}を減じてから、その結果に残りすべての引数を加える。@var{integer2}が与えられなかった場合、デフォルトして数値19が使用される。"
 
 #. type: example
 #: original_texis/intro.texi:370
@@ -704,17 +696,17 @@ msgstr ""
 #. type: Plain text
 #: original_texis/intro.texi:391
 msgid "By convention, any argument whose name contains the name of a type (e.g., @var{integer}, @var{integer1} or @var{buffer}) is expected to be of that type.  A plural of a type (such as @var{buffers}) often means a list of objects of that type.  An argument named @var{object} may be of any type.  (For a list of Emacs object types, @pxref{Lisp Data Types}.)  An argument with any other sort of name (e.g., @var{new-file}) is specific to the function; if the function has a documentation string, the type of the argument should be described there (@pxref{Documentation})."
-msgstr "慣例として引数の名前には、(たとえば@var{integer}、@var{integer1}、@var{buffer}のような)期待されるタイプ名が含めます。(@var{buffers}のような)複数形のタイプは、しばしばそのタイプのオブジェクトのリストを意味します。@var{object}のような引き数名は、それが任意のタイプであることを表します(Emacsオブジェクトタイプのリストは、@ref{Lisp Data Types}を参照してください)。他の名前をもつ引数(たとえば@var{new-file})は、関数に固有の引数で、関数がドキュメント文字列をもつ場合、引数のタイプはその中で説明されるべきです(@ref{Documentation}を参照してください)。"
+msgstr "慣例として引数の名前には、(たとえば@var{integer}、@var{integer1}、@var{buffer}のような)期待されるタイプ名が含まれます。(@var{buffers}のような)複数形のタイプは、しばしばその型のオブジェクトのリストを意味します。@var{object}のような引き数名は、それが任意の型であることを表します(Emacsオブジェクトタイプのリストは@ref{Lisp Data Types}を参照)。他の名前をもつ引数(たとえば@var{new-file})はその関数に固有の引数で、関数がドキュメント文字列をもつ場合、引数のタイプはその中で説明されるべきです(@ref{Documentation}を参照)。"
 
 #. type: Plain text
 #: original_texis/intro.texi:394
 msgid "@xref{Lambda Expressions}, for a more complete description of arguments modified by @code{&optional} and @code{&rest}."
-msgstr "@code{&optional}や@code{&rest}により修飾される引数の、より完全な説明は、@ref{Lambda Expressions}を参照してください。"
+msgstr "@code{&optional}や@code{&rest}により修飾される引数のより完全な説明は、@ref{Lambda Expressions}を参照してください。"
 
 #. type: Plain text
 #: original_texis/intro.texi:401
 msgid "Command, macro, and special form descriptions have the same format, but the word @samp{Function} is replaced by @samp{Command}, @samp{Macro}, or @samp{Special Form}, respectively.  Commands are simply functions that may be called interactively; macros process their arguments differently from functions (the arguments are not evaluated), but are presented the same way."
-msgstr "コマンド(command)、マクロ(macro)、スペシャルフォーム(special form)の説明も同じフォーマットをもちますが、@samp{Function}が@samp{Command}、@samp{Macro}、@samp{Special Form}に置き換えられます。コマンドは単にインタラクティブに呼び出すことができる関数です。マクロは関数とは違う方法(引数は評価されません)で引数を処理しますは、同じ方法で記述されます。"
+msgstr "コマンド(command)、マクロ(macro)、スペシャルフォーム(special form)の説明も同じフォーマットですが、@samp{Function}が@samp{Command}、@samp{Macro}、@samp{Special Form}に置き換えられます。コマンドはとは単に、インタラクティブ(interactive: 対話的)に呼び出すことができる関数です。マクロは関数とは違う方法(引数は評価されない)で引数を処理しますが、同じ方法で記述します。"
 
 #. type: Plain text
 #: original_texis/intro.texi:410
@@ -730,7 +722,7 @@ msgstr "count-loop (var [from to [inc]]) body@dots{}"
 #. type: defspec
 #: original_texis/intro.texi:418
 msgid "This imaginary special form implements a loop that executes the @var{body} forms and then increments the variable @var{var} on each iteration.  On the first iteration, the variable has the value @var{from}; on subsequent iterations, it is incremented by one (or by @var{inc} if that is given).  The loop exits before executing @var{body} if @var{var} equals @var{to}.  Here is an example:"
-msgstr "この架空のスペシャルフォームは、 @var{body}フォームを実行してから変数@var{var}をインクリメントするループを実装します。最初の繰り返しでは変数は値@var{from}をもちます。以降の繰り返しでは、変数は1(@var{inc}が与えられた場合は@var{inc})増加されます。@var{var}が@var{to}に等しい場合、@var{body}を実行する前にループをexitします。以下は例です:"
+msgstr "この架空のスペシャルフォームは、 @var{body}フォームを実行してから変数@var{var}をインクリメントするループを実装します。最初の繰り返しでは変数は値@var{from}をもちます。以降の繰り返しでは、変数は1(@var{inc}が与えられた場合は@var{inc})増分されます。@var{var}が@var{to}に等しい場合、@var{body}を実行する前にループをexitします。以下は例です:"
 
 #. type: example
 #: original_texis/intro.texi:424
@@ -768,7 +760,7 @@ msgstr ""
 #. type: defspec
 #: original_texis/intro.texi:442
 msgid "In this special form, the arguments @var{from} and @var{to} are optional, but must both be present or both absent.  If they are present, @var{inc} may optionally be specified as well.  These arguments are grouped with the argument @var{var} into a list, to distinguish them from @var{body}, which includes all remaining elements of the form."
-msgstr "このスペシャルフォームでは、引数@var{from}および@var{to}はオプションですが、両方を指定するか、両方を未指定にしなければなりません。これらの引数が与えられた場合、オプションで@var{inc}も同様に指定することができます。これらの引数は、フォームのすべての残りの要素を含む@var{body}と区別するために、引数@var{var}とともにリストにグループ化されます。"
+msgstr "このスペシャルフォームでは、引数@var{from}と@var{to}はオプションですが、両方を指定するか未指定にするかのいずれかでなければなりません。これらの引数が与えられた場合には、オプションで@var{inc}も同様に指定することができます。これらの引数は、フォームのすべての残りの要素を含む@var{body}と区別するために、引数@var{var}とともにリストにグループ化されます。"
 
 #. type: cindex
 #: original_texis/intro.texi:446
@@ -785,12 +777,12 @@ msgstr "option descriptions"
 #. type: Plain text
 #: original_texis/intro.texi:457
 msgid "A @dfn{variable} is a name that can be @dfn{bound} (or @dfn{set}) to an object.  The object to which a variable is bound is called a @dfn{value}; we say also that variable holds that value.  Although nearly all variables can be set by the user, certain variables exist specifically so that users can change them; these are called @dfn{user options}.  Ordinary variables and user options are described using a format like that for functions, except that there are no arguments."
-msgstr "@dfn{変数(variable)}とは、オブジェクトに@dfn{バインド(bind)}(または@dfn{set})される名前です。変数がバインドされたオブジェクトのことを@dfn{値(value)}と呼びます。このような場合、その変数が値をもつ、という言い方もします。ほとんどすべての変数はユーザーがセットすることができますが、特にユーザーが変更できる特定の変数も存在し、これらは@dfn{ユーザーオプション(user options)}と呼ばれます。通常の変数およびユーザーオプションは、関数と同様のフォーマットを使用して説明されますが、それらには引数がありません。"
+msgstr "@dfn{変数(variable)}とは、オブジェクトに@dfn{バインド(bind)}される名前です(@dfn{セット(set)}とも言う)。変数がバインドされたオブジェクトのことを@dfn{値(value)}と呼びます。このような場合には、その変数が値をもつという言い方もします。ほとんどすべての変数はユーザーがセットすることができますが、特にユーザーが変更できる特定の変数も存在し、これらは@dfn{ユーザーオプション(user options)}と呼ばれます。通常の変数およびユーザーオプションは、関数と同様のフォーマットを使用して説明されますが、それらには引数がありません。"
 
 #. type: Plain text
 #: original_texis/intro.texi:460
 msgid "Here is a description of the imaginary @code{electric-future-map} variable."
-msgstr "以下は架空の変数@code{electric-future-map}にたいする説明です。"
+msgstr "以下は架空の変数@code{electric-future-map}の説明です。"
 
 #. type: defvar
 #: original_texis/intro.texi:461
@@ -801,7 +793,7 @@ msgstr "electric-future-map"
 #. type: defvar
 #: original_texis/intro.texi:465
 msgid "The value of this variable is a full keymap used by Electric Command Future mode.  The functions in this map allow you to edit commands you have not yet thought about executing."
-msgstr "この変数の値はElectric Command Futureモードで使用される完全なキーマップです。このマップの関数により、まだ実行していないコマンドの編集が可能になります。"
+msgstr "この変数の値はElectric Command Futureモードで使用される完全なキーマップである。このマップ内の関数により、まだ実行を考えていないコマンドの編集が可能になる。"
 
 #. type: Plain text
 #: original_texis/intro.texi:469
@@ -817,7 +809,7 @@ msgstr "Version Information"
 #. type: Plain text
 #: original_texis/intro.texi:475
 msgid "These facilities provide information about which version of Emacs is in use."
-msgstr "以下の機能は使用しているEmacsに関する情報を提供します。"
+msgstr "以下の機能は、使用しているEmacsに関する情報を提供します。"
 
 #. type: deffn
 #: original_texis/intro.texi:476
@@ -828,28 +820,24 @@ msgstr "Command emacs-version &optional here"
 #. type: deffn
 #: original_texis/intro.texi:479
 msgid "This function returns a string describing the version of Emacs that is running.  It is useful to include this string in bug reports."
-msgstr "この関数は実行しているEmacsのバージョンを説明する文字列をreturnそます。バグレポートにこの文字列を含めるときに役立ちます。"
+msgstr "この関数は実行しているEmacsのバージョンを説明する文字列をreturnすす。これはバグレポートにこの文字列を含めるときに有用である。"
 
 #. type: group
 #: original_texis/intro.texi:485
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(emacs-version)\n"
-#| "  @result{} \"GNU Emacs 23.1 (i686-pc-linux-gnu, GTK+ Version 2.14.4)\n"
-#| "             of 2009-06-01 on cyd.mit.edu\"\n"
+#, no-wrap
 msgid ""
 "(emacs-version)\n"
 "  @result{} \"GNU Emacs 24.5.1 (x86_64-unknown-linux-gnu, GTK+ Version 3.16)\n"
 "             of 2015-06-01\"\n"
 msgstr ""
 "(emacs-version)\n"
-"  @result{} \"GNU Emacs 23.1 (i686-pc-linux-gnu, GTK+ Version 2.14.4)\n"
-"             of 2009-06-01 on cyd.mit.edu\"\n"
+"  @result{} \"GNU Emacs 24.5.1 (x86_64-unknown-linux-gnu, GTK+ Version 3.16)\n"
+"             of 2015-06-01\"\n"
 
 #. type: deffn
 #: original_texis/intro.texi:492
 msgid "If @var{here} is non-@code{nil}, it inserts the text in the buffer before point, and returns @code{nil}.  When this function is called interactively, it prints the same information in the echo area, but giving a prefix argument makes @var{here} non-@code{nil}."
-msgstr "@var{here}が非@code{nil}の場合、関数はテキストをバッファーのポイントの前に挿入し、@code{nil}をreturnします。この関数がインタラクティブに呼び出された場合は、同じ情報をエコーエリアに出力しますが、プレフィクス引数を与えた場合は、@var{here}が非@code{nil}になります。"
+msgstr "@var{here}が非@code{nil}ならテキストをバッファーのポイントの前に挿入して、@code{nil}をリターンする。この関数がインタラクティブに呼び出すと、同じ情報をエコーエリアに出力する。プレフィクス引数を与えると、@var{here}が非@code{nil}になる。"
 
 #. type: defvar
 #: original_texis/intro.texi:494
@@ -860,7 +848,7 @@ msgstr "emacs-build-time"
 #. type: defvar
 #: original_texis/intro.texi:498
 msgid "The value of this variable indicates the time at which Emacs was built.  It is a list of four integers, like the value of @code{current-time} (@pxref{Time of Day})."
-msgstr "この変数の値は、Emacsがビルドされた日時を示します。値は、@code{current-time}の値と同様の、4つの整数からなるリストです(@ref{Time of Day}を参照してください)。"
+msgstr "この変数の値はEmacsがビルドされた日時を示す。値は@code{current-time}と同様の、4つの整数からなるリストである(@ref{Time of Day}を参照)。"
 
 #. type: group
 #: original_texis/intro.texi:503
@@ -881,7 +869,7 @@ msgstr "emacs-version"
 #. type: defvar
 #: original_texis/intro.texi:514
 msgid "The value of this variable is the version of Emacs being run.  It is a string such as @code{\"23.1.1\"}.  The last number in this string is not really part of the Emacs release version number; it is incremented each time Emacs is built in any given directory.  A value with four numeric components, such as @code{\"22.0.91.1\"}, indicates an unreleased test version."
-msgstr "この変数の値は実行中のEmacsのバージョンで、@code{\"23.1.1\"}のような文字列です。この文字列の最後の数字は、実際にはEmacsのリリースバージョン番号の一部ではなく、任意のディレクトリーにおいてEmacsがビルドされる度にインクリメントされます。@code{\"22.0.91.1\"}のように4つの数字から構成される値は、それがリリースではないテストバージョンであることを示します。"
+msgstr "この変数の値は実行中のEmacsのバージョンであり、@code{\"23.1.1\"}のような文字列。この文字列の最後の数字は、実際にはEmacsリリースのバージョン番号の一部ではなく、任意のディレクトリーにおいてEmacsがビルドされる度に増分される。@code{\"22.0.91.1\"}のように4つの数字から構成される値は、それがリリースではないテストバージョンであることを示す。"
 
 #. type: defvar
 #: original_texis/intro.texi:516
@@ -892,7 +880,7 @@ msgstr "emacs-major-version"
 #. type: defvar
 #: original_texis/intro.texi:519
 msgid "The major version number of Emacs, as an integer.  For Emacs version 23.1, the value is 23."
-msgstr "Emacsのメジャーバージョン番号を示す整数です。Emacs 23.1では、値は23になります。"
+msgstr "Emacsのメジャーバージョン番号を示す整数。Emacs 23.1では値は23。"
 
 #. type: defvar
 #: original_texis/intro.texi:521
@@ -903,12 +891,12 @@ msgstr "emacs-minor-version"
 #. type: defvar
 #: original_texis/intro.texi:524
 msgid "The minor version number of Emacs, as an integer.  For Emacs version 23.1, the value is 1."
-msgstr "Emacsのマイナーバージョン番号をしめす整数です。Emacs 23.1では、値は1になります。"
+msgstr "Emacsのマイナーバージョン番号を示す整数。Emacs 23.1では値は1。"
 
 #. type: Plain text
 #: original_texis/intro.texi:539
 msgid "This manual was originally written by Robert Krawitz, Bil Lewis, Dan LaLiberte, Richard@tie{}M. Stallman and Chris Welty, the volunteers of the GNU manual group, in an effort extending over several years.  Robert@tie{}J. Chassell helped to review and edit the manual, with the support of the Defense Advanced Research Projects Agency, ARPA Order 6082, arranged by Warren@tie{}A. Hunt, Jr.@: of Computational Logic, Inc.  Additional sections have since been written by Miles Bader, Lars Brinkhoff, Chong Yidong, Kenichi Handa, Lute Kamstra, Juri Linkov, Glenn Morris, Thien-Thi Nguyen, Dan Nicolaescu, Martin Rudalics, Kim F. Storm, Luc Teirlinck, and Eli Zaretskii, and others."
-msgstr "このマニュアルは当初、Robert Krawitz、Bil Lewis、Dan LaLiberte、Richard@tie{}M. Stallman、Chris Welty、GNUマニュアルグループのボランティアーにより、数年を費やして記述されました。Robert@tie{}J. Chassellはこのマニュアルのレビューと編集をDefense Advanced Research Projects Agency、ARPA Order 6082のサポートのもとに手助けしてくれ、Computational Logic, IncのWarren@tie{}A. Hunt, Jr.によりアレンジされました。それ以降も、追加のセクションがMiles Bader、Lars Brinkhoff、Chong Yidong、Kenichi Handa、Lute Kamstra、Juri Linkov、Glenn Morris、Thien-Thi Nguyen、Dan Nicolaescu、Martin Rudalics、Kim F. Storm、Luc Teirlinck、Eli Zaretskii、およびその他の人たちにより記述されました。"
+msgstr "このマニュアルは当初、Robert Krawitz、Bil Lewis、Dan LaLiberte、Richard@tie{}M. Stallman、Chris Welty、およびGNUマニュアルグループのボランティアにより、数年を費やして記述されました。Robert@tie{}J. Chassellはこのマニュアルのレビューと編集をDefense Advanced Research Projects Agency、ARPA Order 6082のサポートのもとに手助けしてくれ、Computational Logic, IncのWarren@tie{}A. Hunt, Jr.によりアレンジされました。それ以降も追加のセクションがMiles Bader、Lars Brinkhoff、Chong Yidong、Kenichi Handa、Lute Kamstra、Juri Linkov、Glenn Morris、Thien-Thi Nguyen、Dan Nicolaescu、Martin Rudalics、Kim F. Storm、Luc Teirlinck、Eli Zaretskii、およびその他の人たちにより記述されました。"
 
 #. type: Plain text
 #: original_texis/intro.texi:553

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-03-07 14:19+0900\n"
+"PO-Revision-Date: 2019-10-15 00:49+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -4528,7 +4528,7 @@ msgstr "Testing Availability of Network Features"
 #. type: Plain text
 #: original_texis/processes.texi:2714
 msgid "To test for the availability of a given network feature, use @code{featurep} like this:"
-msgstr "与えられネットワーク機能が▼利用可能かテストするためには、以下のように@code{featurep}を使用します:"
+msgstr "与えられネットワーク機能が利用可能かテストするためには、以下のように@code{featurep}を使用します:"
 
 #. type: example
 #: original_texis/processes.texi:2717
@@ -5507,7 +5507,7 @@ msgstr "bindat-unpack spec bindat-raw &optional bindat-idx"
 #. type: defun
 #: original_texis/processes.texi:3200
 msgid "This function unpacks data from the unibyte string or byte array @code{bindat-raw} according to @var{spec}.  Normally, this starts unpacking at the beginning of the byte array, but if @var{bindat-idx} is non-@code{nil}, it specifies a zero-based starting position to use instead."
-msgstr "この関数はユニバイト文字列、またはバイト配列@code{bindat-raw}のデータを、@var{spec}に▼応じてunpackする。これは通常はバイト配列の先頭からunpack化を開始するが、@var{bindat-idx}が非@code{nil}なら、それはかわりに使用する0基準の開始位置を指定する。"
+msgstr "この関数はユニバイト文字列、またはバイト配列@code{bindat-raw}のデータを、@var{spec}に応じてunpackする。これは通常はバイト配列の先頭からunpack化を開始するが、@var{bindat-idx}が非@code{nil}なら、それはかわりに使用する0基準の開始位置を指定する。"
 
 #. type: defun
 #: original_texis/processes.texi:3203
