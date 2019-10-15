@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-10 23:47+0900\n"
+"PO-Revision-Date: 2019-10-15 17:56+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -440,7 +440,7 @@ msgstr "car-safe object"
 #. type: defun
 #: original_texis/lists.texi:208
 msgid "This function lets you take the @sc{car} of a cons cell while avoiding errors for other data types.  It returns the @sc{car} of @var{object} if @var{object} is a cons cell, @code{nil} otherwise.  This is in contrast to @code{car}, which signals an error if @var{object} is not a list."
-msgstr "この関数により、他のデータ型によるエラーを起こさずに、コンスセルの@sc{car}を取得できます。この関数は、@var{object}がコンスセルの場合は@var{object}の@sc{car}、それ以外は@code{nil}をreturnします。この関数は、@var{object}がリスとでないときはエラーをシグナルする@code{car}とは対象的です。"
+msgstr "この関数により、他のデータ型によるエラーを起こさずに、コンスセルの@sc{car}を取得できます。この関数は、@var{object}がコンスセルの場合は@var{object}の@sc{car}、それ以外は@code{nil}をreturnします。この関数は、@var{object}がリストでないときはエラーをシグナルする@code{car}とは対象的です。"
 
 #. type: group
 #: original_texis/lists.texi:217
@@ -469,7 +469,7 @@ msgstr "cdr-safe object"
 #. type: defun
 #: original_texis/lists.texi:227
 msgid "This function lets you take the @sc{cdr} of a cons cell while avoiding errors for other data types.  It returns the @sc{cdr} of @var{object} if @var{object} is a cons cell, @code{nil} otherwise.  This is in contrast to @code{cdr}, which signals an error if @var{object} is not a list."
-msgstr "この関数により、他のデータ型によるエラーを起こさずに、コンスセルの@sc{cdr}を取得できます。この関数は、@var{object}がコンスセルの場合は@var{object}の@sc{cdr}、それ以外は@code{nil}をreturnします。この関数は、@var{object}がリスとでないときはエラーをシグナルする@code{cdr}とは対象的です。"
+msgstr "この関数により、他のデータ型によるエラーを起こさずに、コンスセルの@sc{cdr}を取得できます。この関数は、@var{object}がコンスセルの場合は@var{object}の@sc{cdr}、それ以外は@code{nil}をreturnします。この関数は、@var{object}がリストでないときはエラーをシグナルする@code{cdr}とは対象的です。"
 
 #. type: group
 #: original_texis/lists.texi:236
@@ -1112,7 +1112,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/lists.texi:605
 msgid "The second example shows that when the final argument is a sequence but not a list, the sequence's elements do not become elements of the resulting list.  Instead, the sequence becomes the final @sc{cdr}, like any other non-list final argument."
-msgstr "2番目の例は、最後の引数はシーケンスですがリスとではない場合で、このシーケンスの要素は、結果リストの要素にはなりません。かわりに、最後の引数がリストでないときと同様、シーケンスが最後の@sc{cdr}になります。"
+msgstr "2番目の例は、最後の引数はシーケンスですがリストではない場合で、このシーケンスの要素は、結果リストの要素にはなりません。かわりに、最後の引数がリストでないときと同様、シーケンスが最後の@sc{cdr}になります。"
 
 #. type: defun
 #: original_texis/lists.texi:606
@@ -2017,7 +2017,7 @@ msgstr ""
 #. type: defun
 #: original_texis/lists.texi:1081
 msgid "Since the last argument of @code{nconc} is not itself modified, it is reasonable to use a constant list, such as @code{'(4 5)}, as in the above example.  For the same reason, the last argument need not be a list:"
-msgstr "@code{nconc}の最後の引数は変更されないので、上記の例のように、@code{'(4 5)}のような定数リストを使用するのが理に適っています。また、同じ理由により、最後の引数がリスとである必要はありません。"
+msgstr "@code{nconc}の最後の引数は変更されないので、上記の例のように、@code{'(4 5)}のような定数リストを使用するのが理に適っています。また、同じ理由により、最後の引数がリストである必要はありません。"
 
 #. type: group
 #: original_texis/lists.texi:1090
