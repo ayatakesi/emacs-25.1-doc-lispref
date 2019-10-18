@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-24.5\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2018-01-27 10:04+0900\n"
+"PO-Revision-Date: 2019-10-18 02:27+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -746,9 +746,8 @@ msgstr "@kbd{f}コマンドは柔軟性を与えるために、@code{forward-sex
 #. type: Plain text
 #: original_texis/edebug.texi:386
 #, fuzzy
-#| msgid "The @kbd{o} command continues ``out of'' an expression.  It places a temporary breakpoint at the end of the sexp containing point.  If the containing sexp is a function definition itself, @kbd{o} continues until just before the last sexp in the definition.  If that is where you are now, it returns from the function and then stops.  In other words, this command does not exit the currently executing function unless you are positioned after the last sexp."
 msgid "The @kbd{o} command continues out of an expression.  It places a temporary breakpoint at the end of the sexp containing point.  If the containing sexp is a function definition itself, @kbd{o} continues until just before the last sexp in the definition.  If that is where you are now, it returns from the function and then stops.  In other words, this command does not exit the currently executing function unless you are positioned after the last sexp."
-msgstr "@kbd{o}コマンドは、式の``外側''で実行を継続します。これは、ポイントを含む式の最後に一時的なbreakpointを配します。ポイントを含むsexpが関数定義の場合、@kbd{o}はその定義内の最後のsexpの直前まで実行を継続します。もし定義内の最後のsexpの直前にポイントがある場合は、その関数からリターンしてからストップします。他の言い方をすると、このコマンドは最後のsexpの後にポイントがない場合は、カレントで実行中の関数からexitしません。"
+msgstr "@kbd{o}コマンドは、式の``外側''で実行を継続します。これは、ポイントを含む式の最後に一時的なbreakpointを配します。ポイントを含むsexpが関数定義の場合、@kbd{o}はその定義内の最後のsexpの直前まで実行を継続します。もし定義内の最後のsexpの直前にポイントがある場合は、その関数からリターンしてからストップします。言い換えると、このコマンドは最後のsexpの後にポイントがない場合は、カレントで実行中の関数からexitしません。"
 
 #. type: Plain text
 #: original_texis/edebug.texi:392
@@ -1617,9 +1616,8 @@ msgstr "このコマンドは、コードの各行の下にコメント行とし
 #. type: deffn
 #: original_texis/edebug.texi:925
 #, fuzzy
-#| msgid "The character @samp{=} following the count for an expression says that the expression has returned the same value each time it was evaluated.  In other words, it is not yet ``covered'' for coverage testing purposes."
 msgid "The character @samp{=} following the count for an expression says that the expression has returned the same value each time it was evaluated.  In other words, it is not yet covered for coverage testing purposes."
-msgstr "ある式にたいする頻度数の後に文字@samp{=}がある場合、それはその式が評価されるたびに毎回同じ値をリターンしていることを表す。他の言い方をすると、カバレッジテストの目的からは、その式はまだ``カバー''されていないということである。"
+msgstr "ある式にたいする頻度数の後に文字@samp{=}がある場合、それはその式が評価されるたびに毎回同じ値をリターンしていることを表す。言い換えると、カバレッジテストの目的からは、その式はまだ``カバー''されていないということである。"
 
 #. type: deffn
 #: original_texis/edebug.texi:928

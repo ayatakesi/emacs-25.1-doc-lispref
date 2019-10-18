@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-11 03:13+0900\n"
+"PO-Revision-Date: 2019-10-18 02:27+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -2340,7 +2340,7 @@ msgstr "void function cell"
 #. type: Plain text
 #: original_texis/functions.texi:1361
 msgid "If you have never given a symbol any function definition, we say that that symbol's function cell is @dfn{void}.  In other words, the function cell does not have any Lisp object in it.  If you try to call the symbol as a function, Emacs signals a @code{void-function} error."
-msgstr "シンボルに何の関数定義も与えていない場合、そのシンボルの関数セルは@dfn{void}だと言います。別の言い方をすると、その関数セルは、どんなLispオブジェクトも保持しません。そのシンボルを関数として呼びだそうとすると、Emacsは@code{void-function}エラーをシグナルします。"
+msgstr "シンボルに何の関数定義も与えていない場合、そのシンボルの関数セルは@dfn{void}だと言います。言い換えると、その関数セルは、どんなLispオブジェクトも保持しません。そのシンボルを関数として呼びだそうとすると、Emacsは@code{void-function}エラーをシグナルします。"
 
 #. type: Plain text
 #: original_texis/functions.texi:1367

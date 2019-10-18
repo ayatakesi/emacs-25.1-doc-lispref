@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2016-06-26 22:18+0900\n"
+"PO-Revision-Date: 2019-10-17 21:56+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -397,7 +397,7 @@ msgstr "Definition of maphash"
 #. type: defun
 #: original_texis/hash.texi:228
 msgid "This function calls @var{function} once for each of the associations in @var{table}.  The function @var{function} should accept two arguments---a @var{key} listed in @var{table}, and its associated @var{value}.  @code{maphash} returns @code{nil}."
-msgstr "この関数は、@var{table}内の各連想にたいして、1度ずつ@var{function}を呼び出します。関数@var{function}は2つの引数 --- @var{table}にリストされた@var{key}と、それに関連づけられた@var{value} --- をとるべきです。@code{maphash}は@code{nil}をreturnします。"
+msgstr "この関数は、@var{table}内の各連想にたいして、一度ずつ@var{function}を呼び出します。関数@var{function}は2つの引数 --- @var{table}にリストされた@var{key}と、それに関連づけられた@var{value} --- をとるべきです。@code{maphash}は@code{nil}をreturnします。"
 
 #. type: section
 #: original_texis/hash.texi:231

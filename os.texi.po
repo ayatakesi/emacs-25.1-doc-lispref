@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-11 23:53+0900\n"
+"PO-Revision-Date: 2019-10-17 21:57+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -833,7 +833,7 @@ msgstr "before-init-hook"
 #. type: defvar
 #: original_texis/os.texi:422
 msgid "This normal hook is run, once, just before loading all the init files (@file{site-start.el}, your init file, and @file{default.el}).  (The only way to change it with real effect is before dumping Emacs.)"
-msgstr "このノーマルフックは、すべてのinitファイル(@file{site-start.el}、ユーザーのinitファイル、および@file{default.el})のロード直前に1度実行される。(実際に効果があるようにこれを変更するには、Emacsのdump前に変更するのが唯一の方法となる。)"
+msgstr "このノーマルフックは、すべてのinitファイル(@file{site-start.el}、ユーザーのinitファイル、および@file{default.el})のロード直前に一度実行される。(実際に効果があるようにこれを変更するには、Emacsのdump前に変更するのが唯一の方法となる。)"
 
 #. type: defvar
 #: original_texis/os.texi:424
@@ -844,7 +844,7 @@ msgstr "after-init-hook"
 #. type: defvar
 #: original_texis/os.texi:429
 msgid "This normal hook is run, once, just after loading all the init files (@file{site-start.el}, your init file, and @file{default.el}), before loading the terminal-specific library (if started on a text terminal) and processing the command-line action arguments."
-msgstr "このノーマルフックは、すべてのinitファイル(@file{site-start.el}、ユーザーのinitファイル、および@file{default.el})のロード直後、端末固有ライブラリーのロードとコマンドラインアクション引数の処理の前に1度実行される。"
+msgstr "このノーマルフックは、すべてのinitファイル(@file{site-start.el}、ユーザーのinitファイル、および@file{default.el})のロード直後、端末固有ライブラリーのロードとコマンドラインアクション引数の処理の前に一度実行される。"
 
 #. type: defvar
 #: original_texis/os.texi:431
@@ -855,7 +855,7 @@ msgstr "emacs-startup-hook"
 #. type: defvar
 #: original_texis/os.texi:434
 msgid "This normal hook is run, once, just after handling the command line arguments.  In batch mode, Emacs does not run this hook."
-msgstr "このノーマルフックは、コマンドライン引数の処理直後に1度実行される。batchモードでは、Emacsはこのフックを実行しない。"
+msgstr "このノーマルフックは、コマンドライン引数の処理直後に一度実行される。batchモードでは、Emacsはこのフックを実行しない。"
 
 #. type: defvar
 #: original_texis/os.texi:436

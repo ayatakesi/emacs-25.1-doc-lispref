@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:47+0900\n"
-"PO-Revision-Date: 2019-02-17 14:32+0900\n"
+"PO-Revision-Date: 2019-10-18 02:26+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -691,7 +691,7 @@ msgstr "fundamental-mode-abbrev-table"
 #. type: defvar
 #: original_texis/abbrevs.texi:408
 msgid "This is the local abbrev table used in Fundamental mode; in other words, it is the local abbrev table in all buffers in Fundamental mode."
-msgstr "これは、Fundamentalモードで使用される、ローカルabbrevテーブルである。別の言い方をすると、これはFundamentalモードにあるすべてのバッファーの、ローカルabbrevテーブルである。"
+msgstr "これは、Fundamentalモードで使用される、ローカルabbrevテーブルである。言い換えると、これはFundamentalモードにあるすべてのバッファーの、ローカルabbrevテーブルである。"
 
 #. type: defvar
 #: original_texis/abbrevs.texi:410

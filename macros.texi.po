@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-11 03:27+0900\n"
+"PO-Revision-Date: 2019-10-17 21:56+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -140,7 +140,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/macros.texi:57
 msgid "When this is called with @code{(inc x)}, the argument @var{var} is the symbol @code{x}---@emph{not} the @emph{value} of @code{x}, as it would be in a function.  The body of the macro uses this to construct the expansion, which is @code{(setq x (1+ x))}.  Once the macro definition returns this expansion, Lisp proceeds to evaluate it, thus incrementing @code{x}."
-msgstr "これを@code{(inc x)}のように呼び出すと、引数@var{var}はシンボル@code{x}になります --- 関数のときのように@code{x}の@emph{値}では@emph{ありません}。このマクロのbodyはこれを展開の構築に使用して、展開形は@code{(setq x (1+ x))}になります。マクロが1度この展開形をreturnすると。Lispはそれを評価するので、@code{x}はインクリメントされます。"
+msgstr "これを@code{(inc x)}のように呼び出すと、引数@var{var}はシンボル@code{x}になります --- 関数のときのように@code{x}の@emph{値}では@emph{ありません}。このマクロのbodyはこれを展開の構築に使用して、展開形は@code{(setq x (1+ x))}になります。マクロが一度この展開形をreturnすると。Lispはそれを評価するので、@code{x}はインクリメントされます。"
 
 #. type: defun
 #: original_texis/macros.texi:58
@@ -467,7 +467,7 @@ msgstr "Argument Evaluation"
 #. type: menuentry
 #: original_texis/macros.texi:277
 msgid "The expansion should evaluate each macro arg once."
-msgstr "展開形は各マクロ引数を1度評価すること。"
+msgstr "展開形は各マクロ引数を一度評価すること。"
 
 #. type: node
 #: original_texis/macros.texi:277 original_texis/macros.texi:413

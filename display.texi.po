@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-09-27 03:53+0900\n"
+"PO-Revision-Date: 2019-10-18 02:26+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -10879,9 +10879,8 @@ msgstr "controller part, model/view/controller"
 #. type: Plain text
 #: original_texis/display.texi:6356
 #, fuzzy
-#| msgid "This example can be extended to be a ``color selection widget'' (in other words, the controller part of the ``model/view/controller'' design paradigm) by defining commands to modify @code{colorcomp-data} and to ``finish'' the selection process, and a keymap to tie it all together conveniently."
 msgid "This example can be extended to be a color selection widget (in other words, the ``controller'' part of the ``model--view--controller'' design paradigm) by defining commands to modify @code{colorcomp-data} and to finish the selection process, and a keymap to tie it all together conveniently."
-msgstr "この例は、@code{colorcomp-data}の変更して、選択プロセスを``完了''し、それらを互いに簡便に結ぶキーマップを定義することにより(別の言い方をすると``model/view/controller''デザインパラダイムのcontroller部分)、``color selection widget''への拡張が可能です。"
+msgstr "この例は、@code{colorcomp-data}の変更して、選択プロセスを``完了''し、それらを互いに簡便に結ぶキーマップを定義することにより(言い換えると``model/view/controller''デザインパラダイムのcontroller部分)、``color selection widget''への拡張が可能です。"
 
 #. type: smallexample
 #: original_texis/display.texi:6366

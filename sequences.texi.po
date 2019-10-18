@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2016-06-26 11:39+0900\n"
+"PO-Revision-Date: 2019-10-18 02:30+0900\n"
 "Last-Translator: Takeshi Ayanokoji <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: Japanese <h1r0p@outlook.jp>\n"
 "Language: ja\n"
@@ -36,7 +36,7 @@ msgstr "sequence"
 #. type: Plain text
 #: original_texis/sequences.texi:14
 msgid "The @dfn{sequence} type is the union of two other Lisp types: lists and arrays.  In other words, any list is a sequence, and any array is a sequence.  The common property that all sequences have is that each is an ordered collection of elements."
-msgstr "@dfn{シーケンス(sequence)}型は、2つの異なるLisp型 --- リストと配列 --- を結合した型です。他の言い方をすると、任意のリストはシーケンスであり、任意の配列はシーケンスです。すべてのシーケンスがもつ共通な属性は、それぞれが順序づけされた要素のコレクションであることです。"
+msgstr "@dfn{シーケンス(sequence)}型は、2つの異なるLisp型 --- リストと配列 --- を結合した型です。言い換えると、任意のリストはシーケンスであり、任意の配列はシーケンスです。すべてのシーケンスがもつ共通な属性は、それぞれが順序づけされた要素のコレクションであることです。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:18

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-01-28 16:13+0900\n"
+"PO-Revision-Date: 2019-10-18 02:29+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -309,7 +309,7 @@ msgstr "byte-to-position byte-position"
 #. type: defun
 #: original_texis/nonascii.texi:124
 msgid "Return the buffer position, in character units, corresponding to given @var{byte-position} in the current buffer.  If @var{byte-position} is out of range, the value is @code{nil}.  In a multibyte buffer, an arbitrary value of @var{byte-position} can be not at character boundary, but inside a multibyte sequence representing a single character; in this case, this function returns the buffer position of the character whose multibyte sequence includes @var{byte-position}.  In other words, the value does not change for all byte positions that belong to the same character."
-msgstr "カレントバッファー内で、与えられた@var{byte-position}に対応するバッファー位置を、文字単位でリターンする。@var{byte-position}が範囲外なら、値は@code{nil}になる。マルチバイトバッファーでは、@var{byte-position}の任意の値が文字境界上になく、1文字として表現されたマルチバイトシーケンス内にあるかもしれない。この場合、関数はその文字のマルチバイトシーケンスが@var{byte-position}を含むようなバッファー位置をリターンする。他の言い方をすると、この値は同じ文字に属するすべてのバイト位置にたいして変化しない。"
+msgstr "カレントバッファー内で、与えられた@var{byte-position}に対応するバッファー位置を、文字単位でリターンする。@var{byte-position}が範囲外なら、値は@code{nil}になる。マルチバイトバッファーでは、@var{byte-position}の任意の値が文字境界上になく、1文字として表現されたマルチバイトシーケンス内にあるかもしれない。この場合、関数はその文字のマルチバイトシーケンスが@var{byte-position}を含むようなバッファー位置をリターンする。言い換えると、この値は同じ文字に属するすべてのバイト位置にたいして変化しない。"
 
 #. type: cindex
 #: original_texis/nonascii.texi:126

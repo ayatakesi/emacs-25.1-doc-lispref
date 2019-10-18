@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-01-19 20:23+0900\n"
+"PO-Revision-Date: 2019-10-18 02:31+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -907,7 +907,7 @@ msgstr "insert &rest args"
 #. type: defun
 #: original_texis/text.texi:410
 msgid "This function inserts the strings and/or characters @var{args} into the current buffer, at point, moving point forward.  In other words, it inserts the text before point.  An error is signaled unless all @var{args} are either strings or characters.  The value is @code{nil}."
-msgstr "この関数は、文字列および/または1つ以上の文字@var{args}を、カレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。別の言い方をすると、ポイントの前にテキストを挿入する。すべての@var{args}が文字列が文字列と文字のいずれでもない場合は、エラーをシグナルする。値は@code{nil}。"
+msgstr "この関数は、文字列および/または1つ以上の文字@var{args}を、カレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。言い換えると、ポイントの前にテキストを挿入する。すべての@var{args}が文字列が文字列と文字のいずれでもない場合は、エラーをシグナルする。値は@code{nil}。"
 
 #. type: defun
 #: original_texis/text.texi:412
@@ -4851,7 +4851,7 @@ msgstr "next-property-change pos &optional object limit"
 #. type: defun
 #: original_texis/text.texi:3002
 msgid "The function scans the text forward from position @var{pos} in the string or buffer @var{object} until it finds a change in some text property, then returns the position of the change.  In other words, it returns the position of the first character beyond @var{pos} whose properties are not identical to those of the character just after @var{pos}."
-msgstr "この関数は文字列またはバッファー@var{object}内の位置@var{pos}から、何らかのテキストプロパティの変化が見つかるまで、テキストを前方にスキャンして、変化のあった位置をリターンする。別の言い方をすると、@var{pos}の直後の文字とプロパティが等しくない、@var{pos}の先にある最初の文字の位置をリターンする。"
+msgstr "この関数は文字列またはバッファー@var{object}内の位置@var{pos}から、何らかのテキストプロパティの変化が見つかるまで、テキストを前方にスキャンして、変化のあった位置をリターンする。言い換えると、@var{pos}の直後の文字とプロパティが等しくない、@var{pos}の先にある最初の文字の位置をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:3006
@@ -4908,7 +4908,7 @@ msgstr "next-single-property-change pos prop &optional object limit"
 #. type: defun
 #: original_texis/text.texi:3040
 msgid "The function scans text for a change in the @var{prop} property, then returns the position of the change.  The scan goes forward from position @var{pos} in the string or buffer @var{object}.  In other words, this function returns the position of the first character beyond @var{pos} whose @var{prop} property differs from that of the character just after @var{pos}."
-msgstr "この関数はプロパティ@var{prop}内の変化についてテキストをスキャンして、変化があった位置をリターンする。このスキャンは、文字列またはバッファー@var{object}内の位置@var{pos}から、前方に行われる。別の言い方をすると、@var{pos}の直後の文字とプロパティ@var{prop}が等しくない、@var{pos}の先にある最初の文字の位置をリターンする。"
+msgstr "この関数はプロパティ@var{prop}内の変化についてテキストをスキャンして、変化があった位置をリターンする。このスキャンは、文字列またはバッファー@var{object}内の位置@var{pos}から、前方に行われる。言い換えると、@var{pos}の直後の文字とプロパティ@var{prop}が等しくない、@var{pos}の先にある最初の文字の位置をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:3044
@@ -5452,7 +5452,7 @@ msgstr "カーソルは通常、カレントバッファー位置にあるオー
 #. type: table
 #: original_texis/text.texi:3362
 msgid "In other words, the string character with the @code{cursor} property of any non-@code{nil} value is the character where to display the cursor.  The value of the property says for which buffer positions to display the cursor there.  If the value is an integer @var{n}, the cursor is displayed there when point is anywhere between the beginning of the overlay or @code{display} property and @var{n} positions after that.  If the value is anything else and non-@code{nil}, the cursor is displayed there only when point is at the beginning of the @code{display} property or at @code{overlay-start}."
-msgstr "他の言い方をすると、文字列の非@code{nil}値の@code{cursor}プロパティをもつ文字は、カーソルが表示される文字である。このプロパティの値は、カーソルを表示するバッファーの位置を告げる。値が整数なら、オーバーレイまたは@code{display}プロパティの始まりから@var{n}後ろの位置までの間にポイントがあるとき、カーソルはそこに表示される。値がそれ以外の非@code{nil}なら、ポイントが@code{display}プロパティの先頭、または@code{overlay-start}の位置だけに表示される。"
+msgstr "言い換えると、文字列の非@code{nil}値の@code{cursor}プロパティをもつ文字は、カーソルが表示される文字である。このプロパティの値は、カーソルを表示するバッファーの位置を告げる。値が整数なら、オーバーレイまたは@code{display}プロパティの始まりから@var{n}後ろの位置までの間にポイントがあるとき、カーソルはそこに表示される。値がそれ以外の非@code{nil}なら、ポイントが@code{display}プロパティの先頭、または@code{overlay-start}の位置だけに表示される。"
 
 #. type: cindex
 #: original_texis/text.texi:3363
@@ -6430,9 +6430,8 @@ msgstr "constrain-to-field new-pos old-pos &optional escape-from-edge only-in-li
 #. type: defun
 #: original_texis/text.texi:3974
 #, fuzzy
-#| msgid "This function ``constrains'' @var{new-pos} to the field that @var{old-pos} belongs to---in other words, it returns the position closest to @var{new-pos} that is in the same field as @var{old-pos}."
 msgid "This function constrains @var{new-pos} to the field that @var{old-pos} belongs to---in other words, it returns the position closest to @var{new-pos} that is in the same field as @var{old-pos}."
-msgstr "この関数は@var{new-pos}を@var{old-pos}が属するフィールドに``拘束(constrain)''する。別の言い方をすると、これは @var{old-pos}と同じフィールド内で@var{new-pos}にもっとも近い位置をリターンする。"
+msgstr "この関数は@var{new-pos}を@var{old-pos}が属するフィールドに``拘束(constrain)''する。言い換えると、これは @var{old-pos}と同じフィールド内で@var{new-pos}にもっとも近い位置をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:3978

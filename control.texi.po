@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:47+0900\n"
-"PO-Revision-Date: 2019-10-11 00:06+0900\n"
+"PO-Revision-Date: 2019-10-17 21:55+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -1079,7 +1079,7 @@ msgstr "recursion"
 #. type: Plain text
 #: original_texis/control.texi:632
 msgid "Iteration means executing part of a program repetitively.  For example, you might want to repeat some computation once for each element of a list, or once for each integer from 0 to @var{n}.  You can do this in Emacs Lisp with the special form @code{while}:"
-msgstr "繰り返し(iteration)とは、プログラムの一部を繰り返し実行することを意味します。たとえば、リストの各要素、または0から@var{n}の整数にたいして、1度ずつ繰り返し何らかの計算をおこないたいとしましょうEmacs Lispでは、スペシャルフォーム@code{while}でこれを行なうことができます:"
+msgstr "繰り返し(iteration)とは、プログラムの一部を繰り返し実行することを意味します。たとえば、リストの各要素、または0から@var{n}の整数にたいして、一度ずつ繰り返し何らかの計算をおこないたいとしましょうEmacs Lispでは、スペシャルフォーム@code{while}でこれを行なうことができます:"
 
 #. type: defspec
 #: original_texis/control.texi:633
@@ -1172,7 +1172,7 @@ msgstr "dolist (var list [result]) body@dots{}"
 #. type: defmac
 #: original_texis/control.texi:691
 msgid "This construct executes @var{body} once for each element of @var{list}, binding the variable @var{var} locally to hold the current element.  Then it returns the value of evaluating @var{result}, or @code{nil} if @var{result} is omitted.  For example, here is how you could use @code{dolist} to define the @code{reverse} function:"
-msgstr "この構成は、@var{list}の各要素にたいして1度@var{body}を実行し、カレント要素をローカルに保持するように、変数@var{var}にバインドします。その後、@var{result}を評価した値、または@var{result}が省略された場合は@code{nil}をreturnします。たとえば、以下は@code{reverse}関数を定義するために、@code{dolist}を使用する方法の例です:"
+msgstr "この構成は、@var{list}の各要素にたいして一度@var{body}を実行し、カレント要素をローカルに保持するように、変数@var{var}にバインドします。その後、@var{result}を評価した値、または@var{result}が省略された場合は@code{nil}をreturnします。たとえば、以下は@code{reverse}関数を定義するために、@code{dolist}を使用する方法の例です:"
 
 #. type: example
 #: original_texis/control.texi:697
@@ -1197,7 +1197,7 @@ msgstr "dotimes (var count [result]) body@dots{}"
 #. type: defmac
 #: original_texis/control.texi:706
 msgid "This construct executes @var{body} once for each integer from 0 (inclusive) to @var{count} (exclusive), binding the variable @var{var} to the integer for the current iteration.  Then it returns the value of evaluating @var{result}, or @code{nil} if @var{result} is omitted.  Here is an example of using @code{dotimes} to do something 100 times:"
-msgstr "この構成は、0以上@var{count}未満の各整数にたいして1度@var{body}を実行し、その繰り返しでの整数を、変数@var{var}にバインドします。その後、@var{result}の値、または@var{result}が省略された場合は@code{nil}をreturnします。以下は、@code{dotimes}を使用して、何らかの処理を100回行なう例です:"
+msgstr "この構成は、0以上@var{count}未満の各整数にたいして一度@var{body}を実行し、その繰り返しでの整数を、変数@var{var}にバインドします。その後、@var{result}の値、または@var{result}が省略された場合は@code{nil}をreturnします。以下は、@code{dotimes}を使用して、何らかの処理を100回行なう例です:"
 
 #. type: example
 #: original_texis/control.texi:710
@@ -1600,7 +1600,7 @@ msgstr "@code{foo}が非@code{nil}をreturnした場合、即座に処理を止�
 #. type: Plain text
 #: original_texis/control.texi:978
 msgid "Here are two tricky examples, slightly different, showing two return points at once.  First, two return points with the same tag, @code{hack}:"
-msgstr "以下では、2つのreturn位置を1度に表す、微妙に異なるトリッキーな例を2つ示します。最初に、同じタグ@code{hack}にたいする2つのreturn位置があります:"
+msgstr "以下では、2つのreturn位置を一度に表す、微妙に異なるトリッキーな例を2つ示します。最初に、同じタグ@code{hack}にたいする2つのreturn位置があります:"
 
 #. type: group
 #: original_texis/control.texi:985

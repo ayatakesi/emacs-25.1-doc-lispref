@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-17 20:33+0900\n"
+"PO-Revision-Date: 2019-10-17 21:55+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2731,7 +2731,7 @@ msgstr "Argument Evaluation"
 #. type: menuentry
 #: original_texis/elisp.texi:586
 msgid "The expansion should evaluate each macro arg once."
-msgstr "展開形は各マクロ引数を1度評価すること。"
+msgstr "展開形は各マクロ引数を一度評価すること。"
 
 #. type: menuentry
 #: original_texis/elisp.texi:586

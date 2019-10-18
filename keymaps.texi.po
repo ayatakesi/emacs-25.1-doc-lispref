@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2018-04-06 14:19+0900\n"
+"PO-Revision-Date: 2019-10-18 02:28+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -353,7 +353,7 @@ msgstr "あるキーシーケンスのバインディングがキーマップで
 #. type: Plain text
 #: original_texis/keymaps.texi:134
 msgid "The rule for finding the binding of a key sequence assumes that the intermediate bindings (found for the events before the last) are all keymaps; if this is not so, the sequence of events does not form a unit---it is not really one key sequence.  In other words, removing one or more events from the end of any valid key sequence must always yield a prefix key.  For example, @kbd{C-f C-n} is not a key sequence; @kbd{C-f} is not a prefix key, so a longer sequence starting with @kbd{C-f} cannot be a key sequence."
-msgstr "キーシーケンスのバインディングを見つけ出すルールは、(最後のイベントの前までに見つかる)中間的なバインディングがすべてキーマップであると仮定します。もしそうでなければ、そのイベントシーケンスは単位を形成せず、実際の単一キーシーケンスではありません。他の言い方をすると、任意の有効なキーシーケンスから1つ以上のイベントを取り除くと、常にプレフィクスキーにならなければなりません。たとえば@kbd{C-f C-n}はキーシーケンスではありません。@kbd{C-f}はプレフィクスキーではないので、@kbd{C-f}で始まるこれより長いシーケンスは、キーシーケンスであり得ないのです。"
+msgstr "キーシーケンスのバインディングを見つけ出すルールは、(最後のイベントの前までに見つかる)中間的なバインディングがすべてキーマップであると仮定します。もしそうでなければ、そのイベントシーケンスは単位を形成せず、実際の単一キーシーケンスではありません。言い換えると、任意の有効なキーシーケンスから1つ以上のイベントを取り除くと、常にプレフィクスキーにならなければなりません。たとえば@kbd{C-f C-n}はキーシーケンスではありません。@kbd{C-f}はプレフィクスキーではないので、@kbd{C-f}で始まるこれより長いシーケンスは、キーシーケンスであり得ないのです。"
 
 #. type: Plain text
 #: original_texis/keymaps.texi:140
@@ -2390,7 +2390,7 @@ msgstr "replace bindings"
 #. type: defun
 #: original_texis/keymaps.texi:1389
 msgid "This function replaces @var{olddef} with @var{newdef} for any keys in @var{keymap} that were bound to @var{olddef}.  In other words, @var{olddef} is replaced with @var{newdef} wherever it appears.  The function returns @code{nil}."
-msgstr "この関数は、@var{keymap}内で@var{olddef}にバインドされるすべてのキーについて、@var{olddef}を@var{newdef}に置き換える。別の言い方をすると、@var{olddef}が出現する箇所すべてを@var{newdef}に置き換える。この関数は@code{nil}をリターンする。"
+msgstr "この関数は、@var{keymap}内で@var{olddef}にバインドされるすべてのキーについて、@var{olddef}を@var{newdef}に置き換える。言い換えると、@var{olddef}が出現する箇所すべてを@var{newdef}に置き換える。この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/keymaps.texi:1392
@@ -4320,7 +4320,7 @@ msgstr "ここで@var{key}は、そのアイテムを他のアイテムと区別
 #. type: Plain text
 #: original_texis/keymaps.texi:2607
 msgid "The usual menu keymap item properties, @code{:visible}, @code{:enable}, @code{:button}, and @code{:filter}, are useful in tool bar bindings and have their normal meanings.  The @var{real-binding} in the item must be a command, not a keymap; in other words, it does not work to define a tool bar icon as a prefix key."
-msgstr "メニューキーマップの通常のプロパティ@code{:visible}、@code{:enable}、@code{:button}、@code{:filter}はツールバーバインディングでも役に立ち、いずれのプロパティも通常通りの意味をもちます。アイテム内の@var{real-binding}は、キーマップではなくコマンドでなければなりません。別の言い方をすると、これはツールバーアイコンをプレフィクスキーとして定義するようには機能しないということです。"
+msgstr "メニューキーマップの通常のプロパティ@code{:visible}、@code{:enable}、@code{:button}、@code{:filter}はツールバーバインディングでも役に立ち、いずれのプロパティも通常通りの意味をもちます。アイテム内の@var{real-binding}は、キーマップではなくコマンドでなければなりません。言い換えると、これはツールバーアイコンをプレフィクスキーとして定義するようには機能しないということです。"
 
 #. type: Plain text
 #: original_texis/keymaps.texi:2611

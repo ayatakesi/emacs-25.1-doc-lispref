@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2016-08-30 00:41+0900\n"
+"PO-Revision-Date: 2019-10-18 02:31+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -3352,7 +3352,7 @@ msgstr "以下のLispフォームはジェネリック変数として機能す�
 #. type: itemize
 #: original_texis/variables.texi:2043
 msgid "A symbol naming a variable.  In other words, @code{(setf x y)} is exactly equivalent to @code{(setq x y)}, and @code{setq} itself is strictly speaking redundant given that @code{setf} exists.  Many programmers continue to prefer @code{setq} for setting simple variables, though, purely for stylistic or historical reasons.  The macro @code{(setf x y)} actually expands to @code{(setq x y)}, so there is no performance penalty for using it in compiled code."
-msgstr "変数を命名するシンボル。他の言い方をすると、@code{(setf x y)}は完全に@code{(setq x y)}と等しく、厳密に言うと@code{setq}自体は@code{setf}が存在するので冗長です。これは純粋にスタイルと歴史的な理由によりますが、多くのプログラマーは依然として単純な変数へのセットには@code{setq}の方を好みます。マクロ@code{(setf x y)}は、実際には@code{(setq x y)}に展開されるので、コンパイルされたコードでこれを使用することにパフォーマンス的な不利はありません。"
+msgstr "変数を命名するシンボル。言い換えると、@code{(setf x y)}は完全に@code{(setq x y)}と等しく、厳密に言うと@code{setq}自体は@code{setf}が存在するので冗長です。これは純粋にスタイルと歴史的な理由によりますが、多くのプログラマーは依然として単純な変数へのセットには@code{setq}の方を好みます。マクロ@code{(setf x y)}は、実際には@code{(setq x y)}に展開されるので、コンパイルされたコードでこれを使用することにパフォーマンス的な不利はありません。"
 
 #. type: itemize
 #: original_texis/variables.texi:2046
