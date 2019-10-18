@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2016-06-30 22:35+0900\n"
+"PO-Revision-Date: 2019-10-19 00:47+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -257,7 +257,7 @@ msgstr "@code{defun}は、ラムダ式(lambda expression)を生成して、そ�
 #. type: Plain text
 #: original_texis/symbols.texi:155
 msgid "@code{defmacro} defines a symbol as a macro.  It creates a macro object and stores it in the function cell of the symbol.  Note that a given symbol can be a macro or a function, but not both at once, because both macro and function definitions are kept in the function cell, and that cell can hold only one Lisp object at any given time.  @xref{Macros}."
-msgstr "@code{defmacro}は、シンボルをマクロとして定義します。これはマクロオブジェクトを作成して、そのシンボルの関数セルにそれを格納します。シンボルにはマクロと関数を与えることができますが、マクロと関数定義はどちらも関数セルに保持されるのにたいし、関数セルに保持できるのは常にただ1つのLispオブジェクトなので、両方1度にそれを行なうことはできないことに注意してください。@ref{Macros}を参照してください。"
+msgstr "@code{defmacro}は、シンボルをマクロとして定義します。これはマクロオブジェクトを作成して、そのシンボルの関数セルにそれを格納します。シンボルにはマクロと関数を与えることができますが、マクロと関数定義はどちらも関数セルに保持されるのにたいし、関数セルに保持できるのは常にただ1つのLispオブジェクトなので、両方一度にそれを行なうことはできないことに注意してください。@ref{Macros}を参照してください。"
 
 #. type: Plain text
 #: original_texis/symbols.texi:159
@@ -583,7 +583,7 @@ msgstr "Definition of mapatoms"
 #. type: defun
 #: original_texis/symbols.texi:349
 msgid "This function calls @var{function} once with each symbol in the obarray @var{obarray}.  Then it returns @code{nil}.  If @var{obarray} is omitted, it defaults to the value of @code{obarray}, the standard obarray for ordinary symbols."
-msgstr "この関数は、オブジェクト配列@var{obarray}の中のシンボルに1つにたいして、1度ずつ@var{function}を呼び出し、その後@code{nil}をreturnします。@var{obarray}が省略された場合は、通常のシンボルにたいする標準のオブジェクト配列@code{obarray}の値がデフォルトになります。"
+msgstr "この関数は、オブジェクト配列@var{obarray}の中のシンボルに1つにたいして、一度ずつ@var{function}を呼び出し、その後@code{nil}をreturnします。@var{obarray}が省略された場合は、通常のシンボルにたいする標準のオブジェクト配列@code{obarray}の値がデフォルトになります。"
 
 #. type: example
 #: original_texis/symbols.texi:360

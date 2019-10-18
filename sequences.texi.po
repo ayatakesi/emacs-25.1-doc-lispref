@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-18 02:30+0900\n"
+"PO-Revision-Date: 2019-10-19 02:00+0900\n"
 "Last-Translator: Takeshi Ayanokoji <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: Japanese <h1r0p@outlook.jp>\n"
 "Language: ja\n"
@@ -36,22 +36,22 @@ msgstr "sequence"
 #. type: Plain text
 #: original_texis/sequences.texi:14
 msgid "The @dfn{sequence} type is the union of two other Lisp types: lists and arrays.  In other words, any list is a sequence, and any array is a sequence.  The common property that all sequences have is that each is an ordered collection of elements."
-msgstr "@dfn{シーケンス(sequence)}型は、2つの異なるLisp型 --- リストと配列 --- を結合した型です。言い換えると、任意のリストはシーケンスであり、任意の配列はシーケンスです。すべてのシーケンスがもつ共通な属性は、それぞれが順序づけされた要素のコレクションであることです。"
+msgstr "@dfn{シーケンス(sequence)}型は2つの異なるLisp型 --- リストと配列 --- を結合した型です。言い換えると任意のリストはシーケンスであり任意の配列はシーケンスです。すべてのシーケンスがもつ共通な属性は、それぞれが順序づけされた要素のコレクションであることです。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:18
 msgid "An @dfn{array} is a fixed-length object with a slot for each of its elements.  All the elements are accessible in constant time.  The four types of arrays are strings, vectors, char-tables and bool-vectors."
-msgstr "@dfn{配列(array)}は各スロットが要素である、固定長のオブジェクトです。すべての要素に一定時間でアクセスできます。配列の4つの型として、文字列、ベクター、文字テーブル、ブールベクターがあります。"
+msgstr "@dfn{配列(array)}はスロットがその要素であるような、固定長のオブジェクトです。すべての要素に一定時間でアクセスできます。配列の4つの型として文字列、ベクター、文字テーブル、ブールベクターがあります。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:24
 msgid "A list is a sequence of elements, but it is not a single primitive object; it is made of cons cells, one cell per element.  Finding the @var{n}th element requires looking through @var{n} cons cells, so elements farther from the beginning of the list take longer to access.  But it is possible to add elements to the list, or remove elements."
-msgstr "リストは要素のシーケンスですが、要素は単一の基本オブジェクトではありません。リストはコンスセルにより作られ、要素ごとに1つのセルをもちます。@var{n}番目の要素を探すには、@var{n}個のコンスセルを走査する必要があるので、先頭から離れた要素ほどアクセスに時間を要します。しかしリストは要素の追加や削除が可能です。"
+msgstr "リストは要素のシーケンスですが、要素は単一の基本オブジェクトではありません。リストはコンスセルにより作られ、要素ごとに1つのセルをもちます。@var{n}番目の要素を探すには@var{n}個のコンスセルを走査する必要があるので、先頭から離れた要素ほどアクセスに時間を要します。しかしリストは要素の追加や削除が可能です。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:26
 msgid "The following diagram shows the relationship between these types:"
-msgstr "以下の図は、これらの型の関連を表します:"
+msgstr "以下の図はこれらの型の関連を表しています:"
 
 #. type: group
 #: original_texis/sequences.texi:45
@@ -107,7 +107,7 @@ msgstr "任意の種類のシーケンスを許す関数。"
 #: original_texis/sequences.texi:1015
 #, no-wrap
 msgid "Arrays"
-msgstr ""
+msgstr "Arrays"
 
 #. type: menuentry
 #: original_texis/sequences.texi:57
@@ -130,7 +130,7 @@ msgstr "配列に特化した関数。"
 #: original_texis/sequences.texi:1183
 #, no-wrap
 msgid "Vectors"
-msgstr ""
+msgstr "Vectors"
 
 #. type: menuentry
 #: original_texis/sequences.texi:57
@@ -191,7 +191,7 @@ msgstr "Sequences"
 #. type: Plain text
 #: original_texis/sequences.texi:63
 msgid "This section describes functions that accept any kind of sequence."
-msgstr "このセクションでは、任意の種類のシーケンスを許す関数を説明します。"
+msgstr "このセクションでは任意の種類のシーケンスを許す関数を説明します。"
 
 #. type: defun
 #: original_texis/sequences.texi:64
@@ -202,7 +202,7 @@ msgstr "sequencep object"
 #. type: defun
 #: original_texis/sequences.texi:67
 msgid "This function returns @code{t} if @var{object} is a list, vector, string, bool-vector, or char-table, @code{nil} otherwise."
-msgstr "この関数は、@var{object}がリスト、ベクター、文字列、ブールベクター、文字テーブルの場合は@code{t}、それ以外は@code{nil}をreturnします。"
+msgstr "この関数は@var{object}がリスト、ベクター、文字列、ブールベクター、文字テーブルなら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:69
@@ -243,17 +243,17 @@ msgstr "char-table length"
 #. type: anchor{#1}
 #: original_texis/sequences.texi:81
 msgid "Definition of length"
-msgstr ""
+msgstr "Definition of length"
 
 #. type: defun
 #: original_texis/sequences.texi:81
 msgid "This function returns the number of elements in @var{sequence}.  If @var{sequence} is a dotted list, a @code{wrong-type-argument} error is signaled.  Circular lists may cause an infinite loop.  For a char-table, the value returned is always one more than the maximum Emacs character code."
-msgstr "この関数は、@var{sequence}内の要素の数をreturnします。@var{sequence}がドットリストの場合、@code{wrong-type-argument}エラーがシグナルされます。循環リストは無限ループを引き起こします。文字テーブルでは、Emacsの最大文字コードより、常に1大きい値がreturnされます。"
+msgstr "この関数は@var{sequence}内の要素の数をリターンする。@var{sequence}がドットリストなら@code{wrong-type-argument}エラーがシグナルされる。循環リストは無限ループを引き起こす。文字テーブルではEmacsの最大文字コードより1大きい値が常にリターンされる。"
 
 #. type: defun
 #: original_texis/sequences.texi:83
 msgid "@xref{Definition of safe-length}, for the related function @code{safe-length}."
-msgstr "関連する関数@code{safe-length}については、@ref{Definition of safe-length}を参照してください。"
+msgstr "関連する関数@code{safe-length}については@ref{Definition of safe-length}を参照のこと。"
 
 #. type: group
 #: original_texis/sequences.texi:88
@@ -308,12 +308,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/sequences.texi:110
 msgid "See also @code{string-bytes}, in @ref{Text Representations}."
-msgstr "@ref{Text Representations}の@code{string-bytes}も参照してください。"
+msgstr "@ref{Text Representations}の@code{string-bytes}も参照されたい。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:115
 msgid "If you need to compute the width of a string on display, you should use @code{string-width} (@pxref{Size of Displayed Text}), not @code{length}, since @code{length} only counts the number of characters, but does not account for the display width of each character."
-msgstr "ディスプレー上での文字列の幅を計算する必要がある場合、文字数だけを数えて各文字のディスプレー幅を計算しない@code{length}ではなく、@code{string-width} (@ref{Size of Displayed Text}を参照してください)を使用するべきです。"
+msgstr "ディスプレー上での文字列の幅を計算する必要があるなら、文字数だけを数えて各文字のディスプレー幅を計算しない@code{length}ではなく、@code{string-width} (@ref{Size of Displayed Text}を参照)を使用すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:116
@@ -324,7 +324,7 @@ msgstr "elt sequence index"
 #. type: anchor{#1}
 #: original_texis/sequences.texi:118
 msgid "Definition of elt"
-msgstr ""
+msgstr "Definition of elt"
 
 #. type: cindex
 #: original_texis/sequences.texi:118
@@ -335,7 +335,7 @@ msgstr "elements of sequences"
 #. type: defun
 #: original_texis/sequences.texi:125
 msgid "This function returns the element of @var{sequence} indexed by @var{index}.  Legitimate values of @var{index} are integers ranging from 0 up to one less than the length of @var{sequence}.  If @var{sequence} is a list, out-of-range values behave as for @code{nth}.  @xref{Definition of nth}.  Otherwise, out-of-range values trigger an @code{args-out-of-range} error."
-msgstr "この関数は、@var{index}によりインデックスづけされた、@var{sequence}の要素をreturnします。@var{index}の値として妥当なのは、0から@var{sequence}の長さより1小さい数までの範囲の整数です。@var{sequence}がリストの場合、範囲外の値は@code{nth}と同じように振る舞います。@ref{Definition of nth}を参照してください。それ以外の場合、範囲外の値は@code{args-out-of-range}エラーを引き起こします。"
+msgstr "この関数は@var{index}によりインデックスづけされた、@var{sequence}の要素をリターンする。@var{index}の値として妥当なのは、0から@var{sequence}の長さより1小さい数までの範囲の整数。@var{sequence}がリストなら範囲外の値は@code{nth}と同じように振る舞う。@ref{Definition of nth}を参照のこと。それ以外なら範囲外の値は@code{args-out-of-range}エラーを引き起こす。"
 
 #. type: group
 #: original_texis/sequences.texi:130
@@ -365,7 +365,7 @@ msgid ""
 "(string (elt \"1234\" 2))\n"
 "     @result{} \"3\"\n"
 msgstr ""
-";; @r{@code{elt}がどの文字をreturnするか明確にするために@code{string}を使用。}\n"
+";; @r{@code{elt}がどの文字をreturnするか明確にするために@code{string}を使用}\n"
 "(string (elt \"1234\" 2))\n"
 "     @result{} \"3\"\n"
 
@@ -392,7 +392,7 @@ msgstr ""
 #. type: defun
 #: original_texis/sequences.texi:152
 msgid "This function generalizes @code{aref} (@pxref{Array Functions}) and @code{nth} (@pxref{Definition of nth})."
-msgstr "この関数は、@code{aref} (@ref{Array Functions}い)と@code{nth} (@ref{Definition of nth}を参照してください)を一般化したものです。"
+msgstr "この関数は@code{aref} (@ref{Array Functions}を参照)と@code{nth} (@ref{Definition of nth}を参照)を一般化したものである。"
 
 #. type: defun
 #: original_texis/sequences.texi:154
@@ -409,27 +409,27 @@ msgstr "copying sequences"
 #. type: defun
 #: original_texis/sequences.texi:159
 msgid "This function returns a copy of @var{sequence}.  The copy is the same type of object as the original sequence, and it has the same elements in the same order."
-msgstr "この関数は、@var{sequence}のコピーをreturnします。コピーは元のシーケンスと同じ型で、同じ要素が同じ順番でもちます。"
+msgstr "この関数は@var{sequence}のコピーをリターンする。コピーは元のシーケンスと同じ型、同じ要素、同じ順番となる。"
 
 #. type: defun
 #: original_texis/sequences.texi:166
 msgid "Storing a new element into the copy does not affect the original @var{sequence}, and vice versa.  However, the elements of the new sequence are not copies; they are identical (@code{eq}) to the elements of the original.  Therefore, changes made within these elements, as found via the copied sequence, are also visible in the original sequence."
-msgstr "コピーに新しい要素を格納するのは、元の@var{sequence}に影響を与えず、その逆も真です。しかし新しいシーケンス内の要素がコピーされたものでない場合は、元のシーケンスの要素と同一(@code{eq})になります。したがって、コピーされたシーケンスを通じて見つかった要素を変更すると、この変更は元のシーケンスでも見ることができます。"
+msgstr "コピーに新しい要素を格納するのは、元の@var{sequence}に影響を与えずその逆も真である。しかし新しいシーケンス内の要素がコピーされたものでなければ、元のシーケンスの要素と同一(@code{eq})になる。したがって、コピーされたシーケンスを介して見つかった要素を変更すると、この変更は元のシーケンスでも見ることができる。"
 
 #. type: defun
 #: original_texis/sequences.texi:171
 msgid "If the sequence is a string with text properties, the property list in the copy is itself a copy, not shared with the original's property list.  However, the actual values of the properties are shared.  @xref{Text Properties}."
-msgstr "シーケンスがテキストプロパティーをともなう文字列の場合、コピー内のプロパティーリスト自身もコピーとなり、元のシーケンスのプロパティーリストと共有はされません。しかし、プロパティーリストの実際の値は共有されます。@ref{Text Properties}を参照してください。"
+msgstr "シーケンスがテキストプロパティーをもつ文字列なら、コピー内のプロパティーリスト自身もコピーとなり、元のシーケンスのプロパティーリストと共有はされない。しかしプロパティーリストの実際の値は共有される。@ref{Text Properties}を参照のこと。"
 
 #. type: defun
 #: original_texis/sequences.texi:174
 msgid "This function does not work for dotted lists.  Trying to copy a circular list may cause an infinite loop."
-msgstr "この関数は、ドットリストでは機能しません。循環リストのコピーは、無限ループを起こすでしょう。"
+msgstr "この関数はドットリストでは機能しない。循環リストのコピーは無限ループを起こすだろう。"
 
 #. type: defun
 #: original_texis/sequences.texi:178
 msgid "See also @code{append} in @ref{Building Lists}, @code{concat} in @ref{Creating Strings}, and @code{vconcat} in @ref{Vector Functions}, for other ways to copy sequences."
-msgstr "シーケンスをコピーする別の方法は、@ref{Building Lists}の@code{append}、@ref{Creating Strings}の@code{concat}、@ref{Vector Functions}の@code{vconcat}も参照してください。"
+msgstr "シーケンスをコピーする別の方法については@ref{Building Lists}の@code{append}、@ref{Creating Strings}の@code{concat}、@ref{Vector Functions}の@code{vconcat}も参照されたい。"
 
 #. type: group
 #: original_texis/sequences.texi:183
@@ -500,7 +500,7 @@ msgid ""
 "x @result{} [quux (1 2)]\n"
 "y @result{} [foo (1 2)]\n"
 msgstr ""
-";; @r{一方のシーケンスの要素を置き換え。}\n"
+";; @r{一方のシーケンスの要素を置き換え}\n"
 "(aset x 0 'quux)\n"
 "x @result{} [quux (1 2)]\n"
 "y @result{} [foo (1 2)]\n"
@@ -514,121 +514,103 @@ msgid ""
 "x @result{} [quux (69 2)]\n"
 "y @result{} [foo (69 2)]\n"
 msgstr ""
-";; @r{共有された要素の内部を変更。}\n"
+";; @r{共有された要素の内部を変更}\n"
 "(setcar (aref x 1) 69)\n"
 "x @result{} [quux (69 2)]\n"
 "y @result{} [foo (69 2)]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:222
-#, fuzzy, no-wrap
-#| msgid "elements of sequences"
+#, no-wrap
 msgid "reverse sequence"
-msgstr "elements of sequences"
+msgstr "reverse sequence"
 
 #. type: cindex
 #: original_texis/sequences.texi:223
 #, no-wrap
 msgid "string reverse"
-msgstr ""
+msgstr "string reverse"
 
 #. type: cindex
 #: original_texis/sequences.texi:224
 #, no-wrap
 msgid "list reverse"
-msgstr ""
+msgstr "list reverse"
 
 #. type: cindex
 #: original_texis/sequences.texi:225
-#, fuzzy, no-wrap
-#| msgid "vector &rest objects"
+#, no-wrap
 msgid "vector reverse"
-msgstr "vector &rest objects"
+msgstr "vector reverse"
 
 #. type: cindex
 #: original_texis/sequences.texi:226
-#, fuzzy, no-wrap
-#| msgid "sequence"
+#, no-wrap
 msgid "sequence reverse"
-msgstr "sequence"
+msgstr "sequence reverse"
 
 #. type: defun
 #: original_texis/sequences.texi:230
 msgid "This function creates a new sequence whose elements are the elements of @var{sequence}, but in reverse order.  The original argument @var{sequence} is @emph{not} altered.  Note that char-tables cannot be reversed."
-msgstr ""
+msgstr "この関数は@var{sequence}の要素を反転した要素をもつ新たなシーケンスを作成する。元となる引数@var{sequence}は@emph{変更されない}。文字テーブルは反転できないことに注意。"
 
 #. type: group
 #: original_texis/sequences.texi:235
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(setq x '(1 2 3 4))\n"
 "     @result{} (1 2 3 4)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(setq x '(1 2 3 4))\n"
+"     @result{} (1 2 3 4)\n"
 
 #. type: group
 #: original_texis/sequences.texi:241
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(reverse x)\n"
 "     @result{} (4 3 2 1)\n"
 "x\n"
 "     @result{} (1 2 3 4)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(reverse x)\n"
+"     @result{} (4 3 2 1)\n"
+"x\n"
+"     @result{} (1 2 3 4)\n"
 
 #. type: group
 #: original_texis/sequences.texi:245
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(setq x [1 2 3 4])\n"
 "     @result{} [1 2 3 4]\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(setq x [1 2 3 4])\n"
+"     @result{} [1 2 3 4]\n"
 
 #. type: group
 #: original_texis/sequences.texi:251
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq primes [2 3 5 7 11 13])\n"
-#| "     @result{} [2 3 5 7 11 13]\n"
-#| "(aref primes 4)\n"
-#| "     @result{} 11\n"
+#, no-wrap
 msgid ""
 "(reverse x)\n"
 "     @result{} [4 3 2 1]\n"
 "x\n"
 "     @result{} [1 2 3 4]\n"
 msgstr ""
-"(setq primes [2 3 5 7 11 13])\n"
-"     @result{} [2 3 5 7 11 13]\n"
-"(aref primes 4)\n"
-"     @result{} 11\n"
+"(reverse x)\n"
+"     @result{} [4 3 2 1]\n"
+"x\n"
+"     @result{} [1 2 3 4]\n"
 
 #. type: group
 #: original_texis/sequences.texi:255
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(setq x \"xyzzy\")\n"
 "     @result{} \"xyzzy\"\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(setq x \"xyzzy\")\n"
+"     @result{} \"xyzzy\"\n"
 
 #. type: group
 #: original_texis/sequences.texi:261
@@ -639,54 +621,54 @@ msgid ""
 "x\n"
 "     @result{} \"xyzzy\"\n"
 msgstr ""
+"(reverse x)\n"
+"     @result{} \"yzzyx\"\n"
+"x\n"
+"     @result{} \"xyzzy\"\n"
 
 #. type: defun
 #: original_texis/sequences.texi:265
-#, fuzzy, no-wrap
-#| msgid "elements of sequences"
+#, no-wrap
 msgid "nreverse sequence"
-msgstr "elements of sequences"
+msgstr "nreverse sequence"
 
 #. type: cindex
 #: original_texis/sequences.texi:266
 #, no-wrap
 msgid "reversing a string"
-msgstr ""
+msgstr "reversing a string"
 
 #. type: cindex
 #: original_texis/sequences.texi:267
 #, no-wrap
 msgid "reversing a list"
-msgstr ""
+msgstr "reversing a list"
 
 #. type: cindex
 #: original_texis/sequences.texi:268
 #, no-wrap
 msgid "reversing a vector"
-msgstr ""
+msgstr "reversing a vector"
 
 #. type: defun
 #: original_texis/sequences.texi:271
 msgid "This function reverses the order of the elements of @var{sequence}.  Unlike @code{reverse} the original @var{sequence} may be modified."
-msgstr ""
+msgstr "この関数は@var{sequence}の要素を反転する。@code{reverse}とは異なり、元となる@var{sequence}は変更されるかもしれない。"
 
 #. type: defun
 #: original_texis/sequences.texi:273
 msgid "For example:"
-msgstr ""
+msgstr "たとえば:"
 
 #. type: group
 #: original_texis/sequences.texi:278
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(setq x '(a b c))\n"
 "     @result{} (a b c)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(setq x '(a b c))\n"
+"     @result{} (a b c)\n"
 
 #. type: group
 #: original_texis/sequences.texi:284
@@ -697,6 +679,10 @@ msgid ""
 "(nreverse x)\n"
 "     @result{} (c b a)\n"
 msgstr ""
+"x\n"
+"     @result{} (a b c)\n"
+"(nreverse x)\n"
+"     @result{} (c b a)\n"
 
 #. type: group
 #: original_texis/sequences.texi:289
@@ -706,22 +692,25 @@ msgid ""
 "x\n"
 "     @result{} (a)\n"
 msgstr ""
+";; @r{先頭にあったコンスセルが末尾となった}\n"
+"x\n"
+"     @result{} (a)\n"
 
 #. type: defun
 #: original_texis/sequences.texi:294
 msgid "To avoid confusion, we usually store the result of @code{nreverse} back in the same variable which held the original list:"
-msgstr ""
+msgstr "混乱しないように、通常は元となるリストを保持する同じ変数に、@code{nreverse}の結果を書き戻す:"
 
 #. type: example
 #: original_texis/sequences.texi:297
 #, no-wrap
 msgid "(setq x (nreverse x))\n"
-msgstr ""
+msgstr "(setq x (nreverse x))\n"
 
 #. type: defun
 #: original_texis/sequences.texi:301
 msgid "Here is the @code{nreverse} of our favorite example, @code{(a b c)}, presented graphically:"
-msgstr ""
+msgstr "お馴染の例@code{(a b c)}の@code{nreverse}を以下に図示する:"
 
 #. type: group
 #: original_texis/sequences.texi:312
@@ -736,22 +725,23 @@ msgid ""
 "                  |             |      |            |\n"
 "                   -------------        ------------\n"
 msgstr ""
+"@r{Original list head:}                       @r{Reversed list:}\n"
+" -------------        -------------        ------------\n"
+"| car  | cdr  |      | car  | cdr  |      | car | cdr  |\n"
+"|   a  |  nil |<--   |   b  |   o  |<--   |   c |   o  |\n"
+"|      |      |   |  |      |   |  |   |  |     |   |  |\n"
+" -------------    |   --------- | -    |   -------- | -\n"
+"                  |             |      |            |\n"
+"                   -------------        ------------\n"
 
 #. type: defun
 #: original_texis/sequences.texi:316
 msgid "For the vector, it is even simpler because you don't need setq:"
-msgstr ""
+msgstr "setqが不要なのでベクターはより単純になる:"
 
 #. type: example
 #: original_texis/sequences.texi:324
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq a [a b c d e f g])\n"
-#| "     @result{} [a b c d e f g]\n"
-#| "(fillarray a 0)\n"
-#| "     @result{} [0 0 0 0 0 0 0]\n"
-#| "a\n"
-#| "     @result{} [0 0 0 0 0 0 0]\n"
+#, no-wrap
 msgid ""
 "(setq x [1 2 3 4])\n"
 "     @result{} [1 2 3 4]\n"
@@ -760,124 +750,112 @@ msgid ""
 "x\n"
 "     @result{} [4 3 2 1]\n"
 msgstr ""
-"(setq a [a b c d e f g])\n"
-"     @result{} [a b c d e f g]\n"
-"(fillarray a 0)\n"
-"     @result{} [0 0 0 0 0 0 0]\n"
-"a\n"
-"     @result{} [0 0 0 0 0 0 0]\n"
+"(setq x [1 2 3 4])\n"
+"     @result{} [1 2 3 4]\n"
+"(nreverse x)\n"
+"     @result{} [4 3 2 1]\n"
+"x\n"
+"     @result{} [4 3 2 1]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:329
 msgid "Note that unlike @code{reverse}, this function doesn't work with strings.  Although you can alter string data by using @code{aset}, it is strongly encouraged to treat strings as immutable."
-msgstr ""
+msgstr "@code{reverse}とは異なり、この関数は文字列では機能しない。@code{aset}を使用して文字列データを変更できても、文字列は不変として扱うことを強く推奨する。"
 
 #. type: defun
 #: original_texis/sequences.texi:332
-#, fuzzy, no-wrap
-#| msgid "elt sequence index"
+#, no-wrap
 msgid "sort sequence predicate"
-msgstr "elt sequence index"
+msgstr "sort sequence predicate"
 
 #. type: cindex
 #: original_texis/sequences.texi:333
 #, no-wrap
 msgid "stable sort"
-msgstr ""
+msgstr "stable sort"
 
 #. type: cindex
 #: original_texis/sequences.texi:334
-#, fuzzy, no-wrap
-#| msgid "string length"
+#, no-wrap
 msgid "sorting lists"
-msgstr "string length"
+msgstr "sorting lists"
 
 #. type: cindex
 #: original_texis/sequences.texi:335
-#, fuzzy, no-wrap
-#| msgid "copying vectors"
+#, no-wrap
 msgid "sorting vectors"
-msgstr "copying vectors"
+msgstr "sorting vectors"
 
 #. type: defun
 #: original_texis/sequences.texi:343
 msgid "This function sorts @var{sequence} stably.  Note that this function doesn't work for all sequences; it may be used only for lists and vectors.  If @var{sequence} is a list, it is modified destructively.  This functions returns the sorted @var{sequence} and compares elements using @var{predicate}.  A stable sort is one in which elements with equal sort keys maintain their relative order before and after the sort.  Stability is important when successive sorts are used to order elements according to different criteria."
-msgstr ""
+msgstr "この関数は@var{sequence}を安定ソートする。この関数はすべてのシーケンスにたいしては機能せず、リストとベクターにたいしてのみ使用できることに注意されたい。@var{sequence}がリストなら破壊的に変更される。この関数はソートされた@var{sequence}をリターンして、要素の比較には@var{predicate}を使用する。安定ソートでは、ソートキーが等しい要素の相対順序がソートの前後で保たれる。この安定性は異なる条件により要素を並べ替えるために、連続してソートを行う場合に重要となる。"
 
 #. type: defun
 #: original_texis/sequences.texi:348
 msgid "The argument @var{predicate} must be a function that accepts two arguments.  It is called with two elements of @var{sequence}.  To get an increasing order sort, the @var{predicate} should return non-@code{nil} if the first element is ``less'' than the second, or @code{nil} if not."
-msgstr ""
+msgstr "引数@var{predicate}は2つの引数を受け取る関数でなければならない。これは@var{sequence}の2つの要素で呼び出される。昇順でソートするなら、1つ目の要素が2つ目の要素より``小''なら非@code{nil}、それ以外なら@code{nil}をリターンすること。"
 
 #. type: defun
 #: original_texis/sequences.texi:357
 msgid "The comparison function @var{predicate} must give reliable results for any given pair of arguments, at least within a single call to @code{sort}.  It must be @dfn{antisymmetric}; that is, if @var{a} is less than @var{b}, @var{b} must not be less than @var{a}.  It must be @dfn{transitive}---that is, if @var{a} is less than @var{b}, and @var{b} is less than @var{c}, then @var{a} must be less than @var{c}.  If you use a comparison function which does not meet these requirements, the result of @code{sort} is unpredictable."
-msgstr ""
+msgstr "比較関数@var{predicate}は、少なくとも@code{sort}の単一の呼び出しにおいて、与えられた任意の引数ペアにたいして信頼できる結果をリターンしなければならない。これは@dfn{非対照的(antisymmetric)}、すなわち@var{a}が@var{b}より小なら、@var{b}が@var{a}より小であってはならず、@dfn{推移律(transitive)}、すなわち@var{a}が@var{b}より小、かつ@var{b}が@var{c}より小なら、@var{a}は@var{c}より小でなければならない。これらの要件に合致しない比較関数を使用すると、@code{sort}の結果は予想できない。"
 
 #. type: defun
 #: original_texis/sequences.texi:363
 msgid "The destructive aspect of @code{sort} for lists is that it rearranges the cons cells forming @var{sequence} by changing @sc{cdr}s.  A nondestructive sort function would create new cons cells to store the elements in their sorted order.  If you wish to make a sorted copy without destroying the original, copy it first with @code{copy-sequence} and then sort."
-msgstr ""
+msgstr "@code{sort}のリストにたいする破壊的側面は、@sc{cdr}を変更することにより@var{sequence}を形成するコンスセルを再配置することにある。非破壊ソート関数は、それらのソート順に要素を格納するために、新たなコンスセルを作成するだろう。オリジナルを破壊せずにソートしたコピーを望むなら、まず@code{copy-sequence}でコピーしてからソートすること。"
 
 #. type: defun
 #: original_texis/sequences.texi:369
 msgid "Sorting does not change the @sc{car}s of the cons cells in @var{sequence}; the cons cell that originally contained the element @code{a} in @var{sequence} still has @code{a} in its @sc{car} after sorting, but it now appears in a different position in the list due to the change of @sc{cdr}s.  For example:"
-msgstr ""
+msgstr "ソートにより@var{sequence}のコンスセルの@sc{car}は変化しない。元々@var{sequence}内で要素@code{a}を含むコンスセルは、ソート後もその@sc{car}に@code{a}を保持する。しかし@sc{cdr}の変更により、ソート後には異なる位置に出現する。たとえば:"
 
 #. type: group
 #: original_texis/sequences.texi:374
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(setq nums '(1 3 2 6 5 4 0))\n"
 "     @result{} (1 3 2 6 5 4 0)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(setq nums '(1 3 2 6 5 4 0))\n"
+"     @result{} (1 3 2 6 5 4 0)\n"
 
 #. type: group
 #: original_texis/sequences.texi:378
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(sort nums '<)\n"
 "     @result{} (0 1 2 3 4 5 6)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(sort nums '<)\n"
+"     @result{} (0 1 2 3 4 5 6)\n"
 
 #. type: group
 #: original_texis/sequences.texi:382
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "nums\n"
 "     @result{} (1 2 3 4 5 6)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"nums\n"
+"     @result{} (1 2 3 4 5 6)\n"
 
 #. type: defun
 #: original_texis/sequences.texi:392
 msgid "@strong{Warning}: Note that the list in @code{nums} no longer contains 0; this is the same cons cell that it was before, but it is no longer the first one in the list.  Don't assume a variable that formerly held the argument now holds the entire sorted list! Instead, save the result of @code{sort} and use that.  Most often we store the result back into the variable that held the original list:"
-msgstr ""
+msgstr "@strong{警告} @code{nums}内のリストが0を含まないことに注意。これはソート前と同じコンスセルだがもはやリストの先頭ではない。ソート前に引数を保持していた変数がソート済みリスト全体を保持すると仮定してはならない! かわりに@code{sort}の結果を保存して、それを使うこと。ほとんどの場合、わたしたちは元のリストを保持していた変数に結果を書き戻すようにしている。"
 
 #. type: example
 #: original_texis/sequences.texi:395
 #, no-wrap
 msgid "(setq nums (sort nums '<))\n"
-msgstr ""
+msgstr "(setq nums (sort nums '<))\n"
 
 #. type: defun
 #: original_texis/sequences.texi:402
 msgid "For the better understanding of what stable sort is, consider the following vector example.  After sorting, all items whose @code{car} is 8 are grouped at the beginning of @code{vector}, but their relative order is preserved.  All items whose @code{car} is 9 are grouped at the end of @code{vector}, but their relative order is also preserved:"
-msgstr ""
+msgstr "安定ソートの何たるかをより理解するには、以下のベクターのサンプルを考えてみよ。ソート後、@code{car}が8であるようなすべてのアイテムは@code{vector}の先頭にグループ化されるが、それらの相対的な順序は保たれる。@code{car}が9であるようなすべてのアイテムは@code{vector}の末尾にグループ化されるが、それらの相対的な順序も保たれる。"
 
 #. type: group
 #: original_texis/sequences.texi:411
@@ -890,6 +868,12 @@ msgid ""
 "     @result{} [(8 . \"xxx\") (9 . \"aaa\") (8 . \"bbb\") (9 . \"zzz\")\n"
 "         (9 . \"ppp\") (8 . \"ttt\") (8 . \"eee\") (9 . \"fff\")]\n"
 msgstr ""
+"(setq\n"
+"  vector\n"
+"  (vector '(8 . \"xxx\") '(9 . \"aaa\") '(8 . \"bbb\") '(9 . \"zzz\")\n"
+"          '(9 . \"ppp\") '(8 . \"ttt\") '(8 . \"eee\") '(9 . \"fff\")))\n"
+"     @result{} [(8 . \"xxx\") (9 . \"aaa\") (8 . \"bbb\") (9 . \"zzz\")\n"
+"         (9 . \"ppp\") (8 . \"ttt\") (8 . \"eee\") (9 . \"fff\")]\n"
 
 #. type: group
 #: original_texis/sequences.texi:416
@@ -899,71 +883,67 @@ msgid ""
 "     @result{} [(8 . \"xxx\") (8 . \"bbb\") (8 . \"ttt\") (8 . \"eee\")\n"
 "         (9 . \"aaa\") (9 . \"zzz\") (9 . \"ppp\") (9 . \"fff\")]\n"
 msgstr ""
+"(sort vector (lambda (x y) (< (car x) (car y))))\n"
+"     @result{} [(8 . \"xxx\") (8 . \"bbb\") (8 . \"ttt\") (8 . \"eee\")\n"
+"         (9 . \"aaa\") (9 . \"zzz\") (9 . \"ppp\") (9 . \"fff\")]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:422
 msgid "@xref{Sorting}, for more functions that perform sorting.  See @code{documentation} in @ref{Accessing Documentation}, for a useful example of @code{sort}."
-msgstr ""
+msgstr "ソートを行う他の関数については@ref{Sorting}を参照のこと。@code{sort}の有用な例は、@ref{Accessing Documentation}の@code{documentation}を参照されたい。"
 
 #. type: cindex
 #: original_texis/sequences.texi:424
-#, fuzzy, no-wrap
-#| msgid "Sequence Functions"
+#, no-wrap
 msgid "sequence functions in seq"
-msgstr "Sequence Functions"
+msgstr "sequence functions in seq"
 
 #. type: cindex
 #: original_texis/sequences.texi:425
 #, no-wrap
 msgid "seq library"
-msgstr ""
+msgstr "seq library"
 
 #. type: Plain text
 #: original_texis/sequences.texi:429
 msgid "The @file{seq.el} library provides the following additional sequence manipulation macros and functions, prefixed with @code{seq-}.  To use them, you must first load the @file{seq} library."
-msgstr ""
+msgstr "@file{seq.el}ライブラリーは、以下のようなプレフィクス@code{seq-}がついたシーケンス操作用の追加のマクロと関数を提供します。それらを使用するには、最初に@file{seq}ライブラリーをロードしなければなりません。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:435
 msgid "All functions defined in this library are free of side-effects; i.e., they do not modify any sequence (list, vector, or string) that you pass as an argument.  Unless otherwise stated, the result is a sequence of the same type as the input.  For those functions that take a predicate, this should be a function of one argument."
-msgstr ""
+msgstr "このライブラリー内で定義されたすべての関数は、副作用をもちません。これらは引数として渡されたすべてのシーケンス(リスト、ベクター、文字列)を変更しません。特に明記しなければ、結果は入力と同じ型のシーケンスです。述語を受け取る関数では、それらは単一の関数である必要があります。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:440
 msgid "The @file{seq.el} library can be extended to work with additional types of sequential data-structures.  For that purpose, all functions are defined using @code{cl-defgeneric}.  @xref{Generic Functions}, for more details about using @code{cl-defgeneric} for adding extensions."
-msgstr ""
+msgstr "@file{seq.el}ライブラリーは、シーケンシャルなデータ構造の追加型で機能するように拡張可能です。そのためにすべての関数は@code{cl-defgeneric}を使用して定義されています。@code{cl-defgeneric}を使用した拡張の追加に関する詳細は、@ref{Generic Functions}を参照してください。"
 
 #. type: defun
 #: original_texis/sequences.texi:441
-#, fuzzy, no-wrap
-#| msgid "elt sequence index"
+#, no-wrap
 msgid "seq-elt sequence index"
-msgstr "elt sequence index"
+msgstr "seq-elt sequence index"
 
 #. type: defun
 #: original_texis/sequences.texi:447
-#, fuzzy
-#| msgid "This function returns the element of @var{sequence} indexed by @var{index}.  Legitimate values of @var{index} are integers ranging from 0 up to one less than the length of @var{sequence}.  If @var{sequence} is a list, out-of-range values behave as for @code{nth}.  @xref{Definition of nth}.  Otherwise, out-of-range values trigger an @code{args-out-of-range} error."
 msgid "This function returns the element of @var{sequence} at the specified @var{index}, which is an integer whose valid value range is zero to one less than the length of @var{sequence}.  For out-of-range values on built-in sequence types, @code{seq-elt} behaves like @code{elt}.  For the details, see @ref{Definition of elt}."
-msgstr "この関数は、@var{index}によりインデックスづけされた、@var{sequence}の要素をreturnします。@var{index}の値として妥当なのは、0から@var{sequence}の長さより1小さい数までの範囲の整数です。@var{sequence}がリストの場合、範囲外の値は@code{nth}と同じように振る舞います。@ref{Definition of nth}を参照してください。それ以外の場合、範囲外の値は@code{args-out-of-range}エラーを引き起こします。"
+msgstr "この関数は@var{index}(有効な範囲は0から@var{sequence}の長さより1少ない整数)で指定された@var{sequence}の要素をリターンする。ビルトインのシーケンス型にたいする範囲外(out-of-range)の値にたいして、@code{seq-elt}は@code{elt}と同様に振る舞う。詳細は@ref{Definition of elt}を参照のこと。"
 
 #. type: group
 #: original_texis/sequences.texi:452
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-elt [1 2 3 4] 2)\n"
 "@result{} 3\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-elt [1 2 3 4] 2)\n"
+"@result{} 3\n"
 
 #. type: defun
 #: original_texis/sequences.texi:457
 msgid "@code{seq-elt} returns places settable using @code{setf} (@pxref{Setting Generalized Variables})."
-msgstr ""
+msgstr "@code{seq-elt}は@code{setf}を使用してセット可能なplaceをリターンする(@ref{Setting Generalized Variables}を参照)。"
 
 #. type: group
 #: original_texis/sequences.texi:464
@@ -974,81 +954,73 @@ msgid ""
 "vec\n"
 "@result{} [1 2 5 4]\n"
 msgstr ""
+"(setq vec [1 2 3 4])\n"
+"(setf (seq-elt vec 2) 5)\n"
+"vec\n"
+"@result{} [1 2 5 4]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:468
-#, fuzzy, no-wrap
-#| msgid "length sequence"
+#, no-wrap
 msgid "seq-length sequence"
-msgstr "length sequence"
+msgstr "seq-length sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:472
 msgid "This function returns the number of elements in @var{sequence}.  For built-in sequence types, @code{seq-length} behaves like @code{length}.  @xref{Definition of length}."
-msgstr ""
+msgstr "この関数は@var{sequence}内の要素の個数をリターンする。ビルトインのシーケンス型にたいして@code{seq-length}は@code{length}と同様に振る舞う。@ref{Definition of length}を参照のこと。"
 
 #. type: defun
 #: original_texis/sequences.texi:474
-#, fuzzy, no-wrap
-#| msgid "length sequence"
+#, no-wrap
 msgid "seqp sequence"
-msgstr "length sequence"
+msgstr "seqp sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:478
 msgid "This function returns non-@code{nil} if @var{sequence} is a sequence (a list or array), or any additional type of sequence defined via @file{seq.el} generic functions."
-msgstr ""
+msgstr "この関数は@var{sequence}がシーケンス(リストか配列)、または@file{seq.el}のジェネリック関数を通じて定義されたすべての追加シーケンス型なら非@code{nil}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:483
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(length [1 2 3])\n"
-#| "    @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seqp [1 2])\n"
 "@result{} t\n"
 msgstr ""
-"(length [1 2 3])\n"
-"    @result{} 3\n"
+"(seqp [1 2])\n"
+"@result{} t\n"
 
 #. type: group
 #: original_texis/sequences.texi:487
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(eq x y)\n"
-#| "     @result{} nil\n"
+#, no-wrap
 msgid ""
 "(seqp 2)\n"
 "@result{} nil\n"
 msgstr ""
-"(eq x y)\n"
-"     @result{} nil\n"
+"(seqp 2)\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:491
-#, fuzzy, no-wrap
-#| msgid "elt sequence index"
+#, no-wrap
 msgid "seq-drop sequence n"
-msgstr "elt sequence index"
+msgstr "seq-drop sequence n"
 
 #. type: defun
 #: original_texis/sequences.texi:495
 msgid "This function returns all but the first @var{n} (an integer)  elements of @var{sequence}.  If @var{n} is negative or zero, the result is @var{sequence}."
-msgstr ""
+msgstr "この関数は@var{sequence}の最初の@var{n}個(整数)を除く、すべての要素をリターンする.@var{n}が0以下なら結果は@var{sequence}。"
 
 #. type: group
 #: original_texis/sequences.texi:500
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-drop [1 2 3 4 5 6] 3)\n"
 "@result{} [4 5 6]\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-drop [1 2 3 4 5 6] 3)\n"
+"@result{} [4 5 6]\n"
 
 #. type: group
 #: original_texis/sequences.texi:504
@@ -1057,57 +1029,50 @@ msgid ""
 "(seq-drop \"hello world\" -4)\n"
 "@result{} \"hello world\"\n"
 msgstr ""
+"(seq-drop \"hello world\" -4)\n"
+"@result{} \"hello world\"\n"
 
 #. type: defun
 #: original_texis/sequences.texi:508
-#, fuzzy, no-wrap
-#| msgid "elt sequence index"
+#, no-wrap
 msgid "seq-take sequence n"
-msgstr "elt sequence index"
+msgstr "seq-take sequence n"
 
 #. type: defun
 #: original_texis/sequences.texi:512
-#, fuzzy
-#| msgid "This function returns the @var{index}th element of @var{array}.  The first element is at index zero."
 msgid "This function returns the first @var{n} (an integer) elements of @var{sequence}.  If @var{n} is negative or zero, the result is @code{nil}."
-msgstr "この関数は、@var{array}の@var{index}番目の要素をreturnします。1番目の要素のインデクスは0です。"
+msgstr "この関数は@var{sequence}の最初の@var{n}個(整数)の要素をリターンする。@var{n}が0以下なら結果は@code{nil}。"
 
 #. type: group
 #: original_texis/sequences.texi:517
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt '(1 2 3 4) 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-take '(1 2 3 4) 3)\n"
 "@result{} (1 2 3)\n"
 msgstr ""
-"(elt '(1 2 3 4) 2)\n"
-"     @result{} 3\n"
+"(seq-take '(1 2 3 4) 3)\n"
+"@result{} (1 2 3)\n"
 
 #. type: group
 #: original_texis/sequences.texi:521
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-take [1 2 3 4] 0)\n"
 "@result{} []\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-take [1 2 3 4] 0)\n"
+"@result{} []\n"
 
 #. type: defun
 #: original_texis/sequences.texi:525
 #, no-wrap
 msgid "seq-take-while predicate sequence"
-msgstr ""
+msgstr "seq-take-while predicate sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:528
 msgid "This function returns the members of @var{sequence} in order, stopping before the first one for which @var{predicate} returns @code{nil}."
-msgstr ""
+msgstr "この関数は@var{sequence}のメンバーを順にリターンし、@var{predicate}が最初に@code{nil}をリターンした要素の前で停止する。"
 
 #. type: group
 #: original_texis/sequences.texi:533
@@ -1116,6 +1081,8 @@ msgid ""
 "(seq-take-while (lambda (elt) (> elt 0)) '(1 2 3 -1 -2))\n"
 "@result{} (1 2 3)\n"
 msgstr ""
+"(seq-take-while (lambda (elt) (> elt 0)) '(1 2 3 -1 -2))\n"
+"@result{} (1 2 3)\n"
 
 #. type: group
 #: original_texis/sequences.texi:537
@@ -1124,17 +1091,19 @@ msgid ""
 "(seq-take-while (lambda (elt) (> elt 0)) [-1 4 6])\n"
 "@result{} []\n"
 msgstr ""
+"(seq-take-while (lambda (elt) (> elt 0)) [-1 4 6])\n"
+"@result{} []\n"
 
 #. type: defun
 #: original_texis/sequences.texi:541
 #, no-wrap
 msgid "seq-drop-while predicate sequence"
-msgstr ""
+msgstr "seq-drop-while predicate sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:544
 msgid "This function returns the members of @var{sequence} in order, starting from the first one for which @var{predicate} returns @code{nil}."
-msgstr ""
+msgstr "この関数は@var{predicate}が最初に@code{nil}をリターンした要素から、@var{sequence}のメンバーを順にリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:549
@@ -1143,6 +1112,8 @@ msgid ""
 "(seq-drop-while (lambda (elt) (> elt 0)) '(1 2 3 -1 -2))\n"
 "@result{} (-1 -2)\n"
 msgstr ""
+"(seq-drop-while (lambda (elt) (> elt 0)) '(1 2 3 -1 -2))\n"
+"@result{} (-1 -2)\n"
 
 #. type: group
 #: original_texis/sequences.texi:553
@@ -1151,45 +1122,40 @@ msgid ""
 "(seq-drop-while (lambda (elt) (< elt 0)) [1 4 6])\n"
 "@result{} [1 4 6]\n"
 msgstr ""
+"(seq-drop-while (lambda (elt) (< elt 0)) [1 4 6])\n"
+"@result{} [1 4 6]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:557
 #, no-wrap
 msgid "seq-do function sequence"
-msgstr ""
+msgstr "seq-do function sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:561
-#, fuzzy
-#| msgid "This function sets the @var{index}th element of @var{array} to be @var{object}.  It returns @var{object}."
 msgid "This function applies @var{function} to each element of @var{sequence} in turn (presumably for side effects), and returns @var{sequence}."
-msgstr "この関数は、@var{array}の@var{index}番目の要素を、@var{object}にセットします。この関数は@var{object}をeturnします。"
+msgstr "この関数は@var{sequence}の各要素にたいして、(恐らくは副作用を得るために)順番に@var{function}を適用して、@var{sequence}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:563
 #, no-wrap
 msgid "seq-map function sequence"
-msgstr ""
+msgstr "seq-map function sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:566
-#, fuzzy
-#| msgid "This function returns the @var{index}th element of @var{array}.  The first element is at index zero."
 msgid "This function returns the result of applying @var{function} to each element of @var{sequence}.  The returned value is a list."
-msgstr "この関数は、@var{array}の@var{index}番目の要素をreturnします。1番目の要素のインデクスは0です。"
+msgstr "この関数は@var{sequence}の各要素に@var{function}を適用した結果をリターンする。リターン値はリスト。"
 
 #. type: group
 #: original_texis/sequences.texi:571
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-map #'1+ '(2 4 6))\n"
 "@result{} (3 5 7)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-map #'1+ '(2 4 6))\n"
+"@result{} (3 5 7)\n"
 
 #. type: group
 #: original_texis/sequences.texi:575
@@ -1198,18 +1164,19 @@ msgid ""
 "(seq-map #'symbol-name [foo bar])\n"
 "@result{} (\"foo\" \"bar\")\n"
 msgstr ""
+"(seq-map #'symbol-name [foo bar])\n"
+"@result{} (\"foo\" \"bar\")\n"
 
 #. type: defun
 #: original_texis/sequences.texi:579
-#, fuzzy, no-wrap
-#| msgid "vconcat &rest sequences"
+#, no-wrap
 msgid "seq-mapn function &rest sequences"
-msgstr "vconcat &rest sequences"
+msgstr "seq-mapn function &rest sequences"
 
 #. type: defun
 #: original_texis/sequences.texi:585
 msgid "This function returns the result of applying @var{function} to each element of @var{sequences}.  The arity (@pxref{What Is a Function, sub-arity}) of @var{function} must match the number of sequences.  Mapping stops at the end of the shortest sequence, and the returned value is a list."
-msgstr ""
+msgstr "この関数は@var{sequences}の各要素に@var{function}を適用した結果をリターンする。 @var{function}のarity (関数が受け取れる引数の個数。@ref{What Is a Function, sub-arity}を参照)はシーケンスの個数にマッチしなければならない。マッピングは最短のシーケンス終端で停止する。リターン値はリスト。"
 
 #. type: group
 #: original_texis/sequences.texi:590
@@ -1218,6 +1185,8 @@ msgid ""
 "(seq-mapn #'+ '(2 4 6) '(20 40 60))\n"
 "@result{} (22 44 66)\n"
 msgstr ""
+"(seq-mapn #'+ '(2 4 6) '(20 40 60))\n"
+"@result{} (22 44 66)\n"
 
 #. type: group
 #: original_texis/sequences.texi:594
@@ -1226,24 +1195,25 @@ msgid ""
 "(seq-mapn #'concat '(\"moskito\" \"bite\") [\"bee\" \"sting\"])\n"
 "@result{} (\"moskitobee\" \"bitesting\")\n"
 msgstr ""
+"(seq-mapn #'concat '(\"moskito\" \"bite\") [\"bee\" \"sting\"])\n"
+"@result{} (\"moskitobee\" \"bitesting\")\n"
 
 #. type: defun
 #: original_texis/sequences.texi:598
 #, no-wrap
 msgid "seq-filter predicate sequence"
-msgstr ""
+msgstr "seq-filter predicate sequence"
 
 #. type: cindex
 #: original_texis/sequences.texi:599
-#, fuzzy, no-wrap
-#| msgid "copying sequences"
+#, no-wrap
 msgid "filtering sequences"
-msgstr "copying sequences"
+msgstr "filtering sequences"
 
 #. type: defun
 #: original_texis/sequences.texi:602
 msgid "This function returns a list of all the elements in @var{sequence} for which @var{predicate} returns non-@code{nil}."
-msgstr ""
+msgstr "この関数は@var{predicate}が非@code{nil}をリターンした@var{sequence}内のすべての要素のリストをリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:607
@@ -1252,6 +1222,8 @@ msgid ""
 "(seq-filter (lambda (elt) (> elt 0)) [1 -1 3 -3 5])\n"
 "@result{} (1 3 5)\n"
 msgstr ""
+"(seq-filter (lambda (elt) (> elt 0)) [1 -1 3 -3 5])\n"
+"@result{} (1 3 5)\n"
 
 #. type: group
 #: original_texis/sequences.texi:611
@@ -1260,26 +1232,25 @@ msgid ""
 "(seq-filter (lambda (elt) (> elt 0)) '(-1 -3 -5))\n"
 "@result{} nil\n"
 msgstr ""
+"(seq-filter (lambda (elt) (> elt 0)) '(-1 -3 -5))\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:615
 #, no-wrap
 msgid "seq-remove predicate sequence"
-msgstr ""
+msgstr "seq-remove predicate sequence"
 
 #. type: cindex
 #: original_texis/sequences.texi:616
-#, fuzzy, no-wrap
-#| msgid "copying sequences"
+#, no-wrap
 msgid "removing from sequences"
-msgstr "copying sequences"
+msgstr "removing from sequences"
 
 #. type: defun
 #: original_texis/sequences.texi:619
-#, fuzzy
-#| msgid "This function sets the @var{index}th element of @var{array} to be @var{object}.  It returns @var{object}."
 msgid "This function returns a list of all the elements in @var{sequence} for which @var{predicate} returns @code{nil}."
-msgstr "この関数は、@var{array}の@var{index}番目の要素を、@var{object}にセットします。この関数は@var{object}をeturnします。"
+msgstr "この関数は@var{predicate}が@code{nil}をリターンした@var{sequence}内のすべての要素のリストをリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:624
@@ -1288,6 +1259,8 @@ msgid ""
 "(seq-remove (lambda (elt) (> elt 0)) [1 -1 3 -3 5])\n"
 "@result{} (-1 -3)\n"
 msgstr ""
+"(seq-remove (lambda (elt) (> elt 0)) [1 -1 3 -3 5])\n"
+"@result{} (-1 -3)\n"
 
 #. type: group
 #: original_texis/sequences.texi:628
@@ -1296,75 +1269,66 @@ msgid ""
 "(seq-remove (lambda (elt) (< elt 0)) '(-1 -3 -5))\n"
 "@result{} nil\n"
 msgstr ""
+"(seq-remove (lambda (elt) (< elt 0)) '(-1 -3 -5))\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:632
 #, no-wrap
 msgid "seq-reduce function sequence initial-value"
-msgstr ""
+msgstr "seq-reduce function sequence initial-value"
 
 #. type: cindex
 #: original_texis/sequences.texi:633
-#, fuzzy, no-wrap
-#| msgid "copying sequences"
+#, no-wrap
 msgid "reducing sequences"
-msgstr "copying sequences"
+msgstr "reducing sequences"
 
 #. type: defun
 #: original_texis/sequences.texi:641
 msgid "This function returns the result of calling @var{function} with @var{initial-value} and the first element of @var{sequence}, then calling @var{function} with that result and the second element of @var{sequence}, then with that result and the third element of @var{sequence}, etc.  @var{function} should be a function of two arguments.  If @var{sequence} is empty, this returns @var{initial-value} without calling @var{function}."
-msgstr ""
+msgstr "この関数は@var{initial-value}と@var{sequence}の1つ目の要素で@var{function}を呼び出し、次にその結果と@var{sequence}の2つ目の要素で@var{function}を呼び出し、その次にその結果と@var{sequence}の3つ目の要素で、...と呼び出した結果をリターンする。@var{function}は引数が2つの関数であること。@var{sequence}が空なら、これは@var{function}を呼び出さずに@var{initial-value}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:646
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-reduce #'+ [1 2 3 4] 0)\n"
 "@result{} 10\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-reduce #'+ [1 2 3 4] 0)\n"
+"@result{} 10\n"
 
 #. type: group
 #: original_texis/sequences.texi:650
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt '(1 2 3 4) 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-reduce #'+ '(1 2 3 4) 5)\n"
 "@result{} 15\n"
 msgstr ""
-"(elt '(1 2 3 4) 2)\n"
-"     @result{} 3\n"
+"(seq-reduce #'+ '(1 2 3 4) 5)\n"
+"@result{} 15\n"
 
 #. type: group
 #: original_texis/sequences.texi:654
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(length '(1 2 3))\n"
-#| "    @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-reduce #'+ '() 3)\n"
 "@result{} 3\n"
 msgstr ""
-"(length '(1 2 3))\n"
-"    @result{} 3\n"
+"(seq-reduce #'+ '() 3)\n"
+"@result{} 3\n"
 
 #. type: defun
 #: original_texis/sequences.texi:658
-#, fuzzy, no-wrap
-#| msgid "copy-sequence sequence"
+#, no-wrap
 msgid "seq-some predicate sequence"
-msgstr "copy-sequence sequence"
+msgstr "seq-some predicate sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:661
 msgid "This function returns the first non-@code{nil} value returned by applying @var{predicate} to each element of @var{sequence} in turn."
-msgstr ""
+msgstr "この関数は@var{sequence}の各要素に順に@var{predicate}を適用してリターンされた、最初の非@code{nil}値をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:666
@@ -1373,6 +1337,8 @@ msgid ""
 "(seq-some #'numberp [\"abc\" 1 nil])\n"
 "@result{} t\n"
 msgstr ""
+"(seq-some #'numberp [\"abc\" 1 nil])\n"
+"@result{} t\n"
 
 #. type: group
 #: original_texis/sequences.texi:670
@@ -1381,6 +1347,8 @@ msgid ""
 "(seq-some #'numberp [\"abc\" \"def\"])\n"
 "@result{} nil\n"
 msgstr ""
+"(seq-some #'numberp [\"abc\" \"def\"])\n"
+"@result{} nil\n"
 
 #. type: group
 #: original_texis/sequences.texi:674
@@ -1389,35 +1357,34 @@ msgid ""
 "(seq-some #'null [\"abc\" 1 nil])\n"
 "@result{} t\n"
 msgstr ""
+"(seq-some #'null [\"abc\" 1 nil])\n"
+"@result{} t\n"
 
 #. type: group
 #: original_texis/sequences.texi:678
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt '(1 2 3 4) 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-some #'1+ [2 4 6])\n"
 "@result{} 3\n"
 msgstr ""
-"(elt '(1 2 3 4) 2)\n"
-"     @result{} 3\n"
+"(seq-some #'1+ [2 4 6])\n"
+"@result{} 3\n"
 
 #. type: defun
 #: original_texis/sequences.texi:682
 #, no-wrap
 msgid "seq-find predicate sequence &optional default"
-msgstr ""
+msgstr "seq-find predicate sequence &optional default"
 
 #. type: defun
 #: original_texis/sequences.texi:686
 msgid "This function returns the first element in @var{sequence} for which @var{predicate} returns non-@code{nil}.  If no element matches @var{predicate}, the function returns @var{default}."
-msgstr ""
+msgstr "この関数は@var{predicate}が非@code{nil}をリターンした、@var{sequence}内の最初の要素をリターンする。@var{predicate}にマッチする要素がなければ、この関数は@var{default}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:690
 msgid "Note that this function has an ambiguity if the found element is identical to @var{default}, as in that case it cannot be known whether an element was found or not."
-msgstr ""
+msgstr "この関数は見つかった要素が@var{default}と等しい場合、要素が見つかったかどうかを知る術がないので曖昧さをもつことに注意。"
 
 #. type: group
 #: original_texis/sequences.texi:695
@@ -1426,6 +1393,8 @@ msgid ""
 "(seq-find #'numberp [\"abc\" 1 nil])\n"
 "@result{} 1\n"
 msgstr ""
+"(seq-find #'numberp [\"abc\" 1 nil])\n"
+"@result{} 1\n"
 
 #. type: group
 #: original_texis/sequences.texi:699
@@ -1434,17 +1403,19 @@ msgid ""
 "(seq-find #'numberp [\"abc\" \"def\"])\n"
 "@result{} nil\n"
 msgstr ""
+"(seq-find #'numberp [\"abc\" \"def\"])\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:703
 #, no-wrap
 msgid "seq-every-p predicate sequence"
-msgstr ""
+msgstr "seq-every-p predicate sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:706
 msgid "This function returns non-@code{nil} if applying @var{predicate} to every element of @var{sequence} returns non-@code{nil}."
-msgstr ""
+msgstr "この関数は@var{sequence}の各要素に@var{predicate}を適用して、すべてが非@code{nil}をリターンしたら非@code{nil}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:711
@@ -1453,6 +1424,8 @@ msgid ""
 "(seq-every-p #'numberp [2 4 6])\n"
 "@result{} t\n"
 msgstr ""
+"(seq-every-p #'numberp [2 4 6])\n"
+"@result{} t\n"
 
 #. type: group
 #: original_texis/sequences.texi:715
@@ -1461,102 +1434,88 @@ msgid ""
 "(seq-some #'numberp [2 4 \"6\"])\n"
 "@result{} nil\n"
 msgstr ""
+"(seq-some #'numberp [2 4 \"6\"])\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:719
-#, fuzzy, no-wrap
-#| msgid "elements of sequences"
+#, no-wrap
 msgid "seq-empty-p sequence"
-msgstr "elements of sequences"
+msgstr "seq-empty-p sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:721
-#, fuzzy
-#| msgid "This function returns @code{t} if @var{object} is a vector."
 msgid "This function returns non-@code{nil} if @var{sequence} is empty."
-msgstr "この関数は、@var{object}がベクターの場合は、@code{t}をreturnします。"
+msgstr "この関数は@var{sequence}が空なら@code{nil}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:726
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(eq x y)\n"
-#| "     @result{} nil\n"
+#, no-wrap
 msgid ""
 "(seq-empty-p \"not empty\")\n"
 "@result{} nil\n"
 msgstr ""
-"(eq x y)\n"
-"     @result{} nil\n"
+"(seq-empty-p \"not empty\")\n"
+"@result{} nil\n"
 
 #. type: group
 #: original_texis/sequences.texi:730
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(equal x y)\n"
-#| "     @result{} t\n"
+#, no-wrap
 msgid ""
 "(seq-empty-p \"\")\n"
 "@result{} t\n"
 msgstr ""
-"(equal x y)\n"
-"     @result{} t\n"
+"(seq-empty-p \"\")\n"
+"@result{} t\n"
 
 #. type: defun
 #: original_texis/sequences.texi:734
-#, fuzzy, no-wrap
-#| msgid "copy-sequence sequence"
+#, no-wrap
 msgid "seq-count predicate sequence"
-msgstr "copy-sequence sequence"
+msgstr "seq-count predicate sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:737
-#, fuzzy
-#| msgid "This function sets the @var{index}th element of @var{array} to be @var{object}.  It returns @var{object}."
 msgid "This function returns the number of elements in @var{sequence} for which @var{predicate} returns non-@code{nil}."
-msgstr "この関数は、@var{array}の@var{index}番目の要素を、@var{object}にセットします。この関数は@var{object}をeturnします。"
+msgstr "この関数は@var{sequence}内で@var{predicate}が非@code{nil}をリターンした要素の個数をリターンする。"
 
 #. type: example
 #: original_texis/sequences.texi:741
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(eq (elt x 1) (elt y 1))\n"
-#| "     @result{} t\n"
+#, no-wrap
 msgid ""
 "(seq-count (lambda (elt) (> elt 0)) [-1 2 0 3 -2])\n"
 "@result{} 2\n"
 msgstr ""
-"(eq (elt x 1) (elt y 1))\n"
-"     @result{} t\n"
+"(seq-count (lambda (elt) (> elt 0)) [-1 2 0 3 -2])\n"
+"@result{} 2\n"
 
 #. type: cindex
 #: original_texis/sequences.texi:744
-#, fuzzy, no-wrap
-#| msgid "copying sequences"
+#, no-wrap
 msgid "sorting sequences"
-msgstr "copying sequences"
+msgstr "sorting sequences"
 
 #. type: defun
 #: original_texis/sequences.texi:745
 #, no-wrap
 msgid "seq-sort function sequence"
-msgstr ""
+msgstr "seq-sort function sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:749
 msgid "This function returns a copy of @var{sequence} that is sorted according to @var{function}, a function of two arguments that returns non-@code{nil} if the first argument should sort before the second."
-msgstr ""
+msgstr "この関数は@var{function}に応じてソートされた@var{sequence}のコピーをリターンする。@var{function}は2つの引数を受け取り、1つ目の引数が2つ目より前にソートされるべきなら非@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:751
 #, no-wrap
 msgid "seq-contains sequence elt &optional function"
-msgstr ""
+msgstr "seq-contains sequence elt &optional function"
 
 #. type: defun
 #: original_texis/sequences.texi:755
 msgid "This function returns the first element in @var{sequence} that is equal to @var{elt}.  If the optional argument @var{function} is non-@code{nil}, it is a function of two arguments to use instead of the default @code{equal}."
-msgstr ""
+msgstr "この関数は@var{sequence}内の@var{elt}と@code{equal}であるような最初の要素をリターンする。オプション引数@var{function}が非@code{nil}なら、それはデフォルトの@code{equal}のかわりに使用する2つの引数を受け取る関数であること。"
 
 #. type: group
 #: original_texis/sequences.texi:760
@@ -1565,6 +1524,8 @@ msgid ""
 "(seq-contains '(symbol1 symbol2) 'symbol1)\n"
 "@result{} symbol1\n"
 msgstr ""
+"(seq-contains '(symbol1 symbol2) 'symbol1)\n"
+"@result{} symbol1\n"
 
 #. type: group
 #: original_texis/sequences.texi:764
@@ -1573,155 +1534,132 @@ msgid ""
 "(seq-contains '(symbol1 symbol2) 'symbol3)\n"
 "@result{} nil\n"
 msgstr ""
+"(seq-contains '(symbol1 symbol2) 'symbol3)\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:769
 #, no-wrap
 msgid "seq-position sequence elt &optional function"
-msgstr ""
+msgstr "seq-position sequence elt &optional function"
 
 #. type: defun
 #: original_texis/sequences.texi:774
 msgid "This function returns the index of the first element in @var{sequence} that is equal to @var{elt}.  If the optional argument @var{function} is non-@code{nil}, it is a function of two arguments to use instead of the default @code{equal}."
-msgstr ""
+msgstr "この関数は@var{elt}と@code{equal}であるような@var{sequence}内の最初の要素のインデックスをリターンする。オプション引数@var{function}が非@code{nil}なら、それはデフォルトの@code{equal}のかわりに使用する2つの引数を受け取る関数であること。"
 
 #. type: group
 #: original_texis/sequences.texi:779
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt '(1 2 3 4) 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-position '(a b c) 'b)\n"
 "@result{} 1\n"
 msgstr ""
-"(elt '(1 2 3 4) 2)\n"
-"     @result{} 3\n"
+"(seq-position '(a b c) 'b)\n"
+"@result{} 1\n"
 
 #. type: group
 #: original_texis/sequences.texi:783
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(eq x y)\n"
-#| "     @result{} nil\n"
+#, no-wrap
 msgid ""
 "(seq-position '(a b c) 'd)\n"
 "@result{} nil\n"
 msgstr ""
-"(eq x y)\n"
-"     @result{} nil\n"
+"(seq-position '(a b c) 'd)\n"
+"@result{} nil\n"
 
 #. type: defun
 #: original_texis/sequences.texi:788
 #, no-wrap
 msgid "seq-uniq sequence &optional function"
-msgstr ""
+msgstr "seq-uniq sequence &optional function"
 
 #. type: defun
 #: original_texis/sequences.texi:792
 msgid "This function returns a list of the elements of @var{sequence} with duplicates removed.  If the optional argument @var{function} is non-@code{nil}, it is a function of two arguments to use instead of the default @code{equal}."
-msgstr ""
+msgstr "この関数は重複を削除した@var{sequence}の要素のリストをリターンする。オプション引数@var{function}が非@code{nil}なら、それはデフォルトの@code{equal}のかわりに使用する2つの引数を受け取る関数であること。"
 
 #. type: group
 #: original_texis/sequences.texi:797
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-uniq '(1 2 2 1 3))\n"
 "@result{} (1 2 3)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-uniq '(1 2 2 1 3))\n"
+"@result{} (1 2 3)\n"
 
 #. type: group
 #: original_texis/sequences.texi:801
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt '(1 2 3 4) 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-uniq '(1 2 2.0 1.0) #'=)\n"
 "@result{} [3 4]\n"
 msgstr ""
-"(elt '(1 2 3 4) 2)\n"
-"     @result{} 3\n"
+"(seq-uniq '(1 2 2.0 1.0) #'=)\n"
+"@result{} [3 4]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:805
 #, no-wrap
 msgid "seq-subseq sequence start &optional end"
-msgstr ""
+msgstr "seq-subseq sequence start &optional end"
 
 #. type: defun
 #: original_texis/sequences.texi:810
 msgid "This function returns a subset of @var{sequence} from @var{start} to @var{end}, both integers (@var{end} defaults to the last element).  If @var{start} or @var{end} is negative, it counts from the end of @var{sequence}."
-msgstr ""
+msgstr "この関数は@var{sequence}の@var{start}から@var{end}(いずれも整数)までのサブセットをリターンする(@var{end}のデフォルトは最後の要素)。@var{start}か@var{end}が負なら@var{sequence}の最後から数える。"
 
 #. type: group
 #: original_texis/sequences.texi:815
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt '(1 2 3 4) 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-subseq '(1 2 3 4 5) 1)\n"
 "@result{} (2 3 4 5)\n"
 msgstr ""
-"(elt '(1 2 3 4) 2)\n"
-"     @result{} 3\n"
+"(seq-subseq '(1 2 3 4 5) 1)\n"
+"@result{} (2 3 4 5)\n"
 
 #. type: group
 #: original_texis/sequences.texi:819
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-subseq '[1 2 3 4 5] 1 3)\n"
 "@result{} [2 3]\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-subseq '[1 2 3 4 5] 1 3)\n"
+"@result{} [2 3]\n"
 
 #. type: group
 #: original_texis/sequences.texi:823
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-subseq '[1 2 3 4 5] -3 -1)\n"
 "@result{} [3 4]\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-subseq '[1 2 3 4 5] -3 -1)\n"
+"@result{} [3 4]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:827
-#, fuzzy, no-wrap
-#| msgid "vconcat &rest sequences"
+#, no-wrap
 msgid "seq-concatenate type &rest sequences"
-msgstr "vconcat &rest sequences"
+msgstr "seq-concatenate type &rest sequences"
 
 #. type: defun
 #: original_texis/sequences.texi:831
 msgid "This function returns a sequence of type @var{type} made of the concatenation of @var{sequences}.  @var{type} may be: @code{vector}, @code{list} or @code{string}."
-msgstr ""
+msgstr "この関数は@var{sequences}を結合して作成された@var{type}型のシーケンスをリターンする。@var{type}は@code{vector}、@code{list}、@code{string}のいずれか。"
 
 #. type: group
 #: original_texis/sequences.texi:836
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-concatenate 'list '(1 2) '(3 4) [5 6])\n"
 "@result{} (1 2 3 5 6)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-concatenate 'list '(1 2) '(3 4) [5 6])\n"
+"@result{} (1 2 3 5 6)\n"
 
 #. type: group
 #: original_texis/sequences.texi:840
@@ -1730,17 +1668,19 @@ msgid ""
 "(seq-concatenate 'string \"Hello \" \"world\")\n"
 "@result{} \"Hello world\"\n"
 msgstr ""
+"(seq-concatenate 'string \"Hello \" \"world\")\n"
+"@result{} \"Hello world\"\n"
 
 #. type: defun
 #: original_texis/sequences.texi:844
 #, no-wrap
 msgid "seq-mapcat function sequence &optional type"
-msgstr ""
+msgstr "seq-mapcat function sequence &optional type"
 
 #. type: defun
 #: original_texis/sequences.texi:849
 msgid "This function returns the result of applying @code{seq-concatenate} to the result of applying @var{function} to each element of @var{sequence}.  The result is a sequence of type @var{type}, or a list if @var{type} is @code{nil}."
-msgstr ""
+msgstr "この関数は@var{sequence}の各要素に@var{function}を適用した結果に、@code{seq-concatenate}を適用した結果をリターンする。結果は@var{type}型のシーケンス、または@var{type}が@code{nil}ならリストである。"
 
 #. type: group
 #: original_texis/sequences.texi:854
@@ -1749,90 +1689,82 @@ msgid ""
 "(seq-mapcat #'seq-reverse '((3 2 1) (6 5 4)))\n"
 "@result{} (1 2 3 4 5 6)\n"
 msgstr ""
+"(seq-mapcat #'seq-reverse '((3 2 1) (6 5 4)))\n"
+"@result{} (1 2 3 4 5 6)\n"
 
 #. type: defun
 #: original_texis/sequences.texi:858
-#, fuzzy, no-wrap
-#| msgid "elt sequence index"
+#, no-wrap
 msgid "seq-partition sequence n"
-msgstr "elt sequence index"
+msgstr "seq-partition sequence n"
 
 #. type: defun
 #: original_texis/sequences.texi:863
 msgid "This function returns a list of the elements of @var{sequence} grouped into sub-sequences of length @var{n}.  The last sequence may contain less elements than @var{n}.  @var{n} must be an integer.  If @var{n} is a negative integer or 0, the return value is @code{nil}."
-msgstr ""
+msgstr "この関数は長さ@var{n}のサブシーケンスへグループ化した@var{sequence}の要素のリストをリターンする。最後のシーケンスに含まれる要素は@var{n}より少ないかもしれない。@var{n}は整数であること。@var{n}が0以下の整数ならリターン値は@code{nil}。"
 
 #. type: group
 #: original_texis/sequences.texi:868
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-partition '(0 1 2 3 4 5 6 7) 3)\n"
 "@result{} ((0 1 2) (3 4 5) (6 7))\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-partition '(0 1 2 3 4 5 6 7) 3)\n"
+"@result{} ((0 1 2) (3 4 5) (6 7))\n"
 
 #. type: defun
 #: original_texis/sequences.texi:872
 #, no-wrap
 msgid "seq-intersection sequence1 sequence2 &optional function"
-msgstr ""
+msgstr "seq-intersection sequence1 sequence2 &optional function"
 
 #. type: defun
 #: original_texis/sequences.texi:877
 msgid "This function returns a list of the elements that appear both in @var{sequence1} and @var{sequence2}.  If the optional argument @var{function} is non-@code{nil}, it is a function of two arguments to use to compare elements instead of the default @code{equal}."
-msgstr ""
+msgstr "この関数は@var{sequence1}と@var{sequence2}の両方に出現する要素のリストをリターンする。オプション引数@var{function}が非@code{nil}なら、それはデフォルトの@code{equal}のかわりに比較に使用する2つの引数を受け取る関数であること。"
 
 #. type: group
 #: original_texis/sequences.texi:882
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-intersection [2 3 4 5] [1 3 5 6 7])\n"
 "@result{} (3 5)\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-intersection [2 3 4 5] [1 3 5 6 7])\n"
+"@result{} (3 5)\n"
 
 #. type: defun
 #: original_texis/sequences.texi:887
 #, no-wrap
 msgid "seq-difference sequence1 sequence2 &optional function"
-msgstr ""
+msgstr "seq-difference sequence1 sequence2 &optional function"
 
 #. type: defun
 #: original_texis/sequences.texi:892
 msgid "This function returns a list of the elements that appear in @var{sequence1} but not in @var{sequence2}.  If the optional argument @var{function} is non-@code{nil}, it is a function of two arguments to use to compare elements instead of the default @code{equal}."
-msgstr ""
+msgstr "この関数は@var{sequence1}に出現するが@var{sequence2}に出現しない要素のリストをリターンする。オプション引数@var{function}が非@code{nil}なら、それはデフォルトの@code{equal}のかわりに比較に使用する2つの引数を受け取る関数であること。"
 
 #. type: group
 #: original_texis/sequences.texi:897
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-difference '(2 3 4 5) [1 3 5 6 7])\n"
 "@result{} (2 4)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-difference '(2 3 4 5) [1 3 5 6 7])\n"
+"@result{} (2 4)\n"
 
 #. type: defun
 #: original_texis/sequences.texi:901
 #, no-wrap
 msgid "seq-group-by function sequence"
-msgstr ""
+msgstr "seq-group-by function sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:905
 msgid "This function separates the elements of @var{sequence} into an alist whose keys are the result of applying @var{function} to each element of @var{sequence}.  Keys are compared using @code{equal}."
-msgstr ""
+msgstr "この関数は@var{sequence}の各要素に@var{function}を適用して、その結果をキーとして@var{sequence}をalistに分割する。キーの比較には@code{equal}を使用する。"
 
 #. type: group
 #: original_texis/sequences.texi:910
@@ -1841,6 +1773,8 @@ msgid ""
 "(seq-group-by #'integerp '(1 2.1 3 2 3.2))\n"
 "@result{} ((t 1 3 2) (nil 2.1 3.2))\n"
 msgstr ""
+"(seq-group-by #'integerp '(1 2.1 3 2 3.2))\n"
+"@result{} ((t 1 3 2) (nil 2.1 3.2))\n"
 
 #. type: group
 #: original_texis/sequences.texi:914
@@ -1849,44 +1783,39 @@ msgid ""
 "(seq-group-by #'car '((a 1) (b 2) (a 3) (c 4)))\n"
 "@result{} ((b (b 2)) (a (a 1) (a 3)) (c (c 4)))\n"
 msgstr ""
+"(seq-group-by #'car '((a 1) (b 2) (a 3) (c 4)))\n"
+"@result{} ((b (b 2)) (a (a 1) (a 3)) (c (c 4)))\n"
 
 #. type: defun
 #: original_texis/sequences.texi:918
-#, fuzzy, no-wrap
-#| msgid "elt sequence index"
+#, no-wrap
 msgid "seq-into sequence type"
-msgstr "elt sequence index"
+msgstr "seq-into sequence type"
 
 #. type: defun
 #: original_texis/sequences.texi:922
 msgid "This function converts the sequence @var{sequence} into a sequence of type @var{type}.  @var{type} can be one of the following symbols: @code{vector}, @code{string} or @code{list}."
-msgstr ""
+msgstr "この関数はシーケンス@var{sequence}を@var{type}型のシーケンスに変換する。@var{type}は@code{vector}、@code{string}、@code{list}のいずれかであること。"
 
 #. type: group
 #: original_texis/sequences.texi:927
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(length [1 2 3])\n"
-#| "    @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-into [1 2 3] 'list)\n"
 "@result{} (1 2 3)\n"
 msgstr ""
-"(length [1 2 3])\n"
-"    @result{} 3\n"
+"(seq-into [1 2 3] 'list)\n"
+"@result{} (1 2 3)\n"
 
 #. type: group
 #: original_texis/sequences.texi:931
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq x (vector 'foo bar))\n"
-#| "     @result{} [foo (1 2)]\n"
+#, no-wrap
 msgid ""
 "(seq-into nil 'vector)\n"
 "@result{} []\n"
 msgstr ""
-"(setq x (vector 'foo bar))\n"
-"     @result{} [foo (1 2)]\n"
+"(seq-into nil 'vector)\n"
+"@result{} []\n"
 
 #. type: group
 #: original_texis/sequences.texi:935
@@ -1895,128 +1824,109 @@ msgid ""
 "(seq-into \"hello\" 'vector)\n"
 "@result{} [104 101 108 108 111]\n"
 msgstr ""
+"(seq-into \"hello\" 'vector)\n"
+"@result{} [104 101 108 108 111]\n"
 
 #. type: defun
 #: original_texis/sequences.texi:939
-#, fuzzy, no-wrap
-#| msgid "length sequence"
+#, no-wrap
 msgid "seq-min sequence"
-msgstr "length sequence"
+msgstr "seq-min sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:943
-#, fuzzy
-#| msgid "This function returns the @var{index}th element of @var{array}.  The first element is at index zero."
 msgid "This function returns the smallest element of @var{sequence}.  The elements of @var{sequence} must be numbers or markers (@pxref{Markers})."
-msgstr "この関数は、@var{array}の@var{index}番目の要素をreturnします。1番目の要素のインデクスは0です。"
+msgstr "この関数は@var{sequence}の最小の要素をリターンする。@var{sequence}の要素は数字かマーカー(@ref{Markers}を参照)でなければならない。"
 
 #. type: group
 #: original_texis/sequences.texi:948
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(length [1 2 3])\n"
-#| "    @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-min [3 1 2])\n"
 "@result{} 1\n"
 msgstr ""
-"(length [1 2 3])\n"
-"    @result{} 3\n"
+"(seq-min [3 1 2])\n"
+"@result{} 1\n"
 
 #. type: group
 #: original_texis/sequences.texi:952
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(length \"foobar\")\n"
-#| "    @result{} 6\n"
+#, no-wrap
 msgid ""
 "(seq-min \"Hello\")\n"
 "@result{} 72\n"
 msgstr ""
-"(length \"foobar\")\n"
-"    @result{} 6\n"
+"(seq-min \"Hello\")\n"
+"@result{} 72\n"
 
 #. type: defun
 #: original_texis/sequences.texi:956
-#, fuzzy, no-wrap
-#| msgid "length sequence"
+#, no-wrap
 msgid "seq-max sequence"
-msgstr "length sequence"
+msgstr "seq-max sequence"
 
 #. type: defun
 #: original_texis/sequences.texi:959
-#, fuzzy
-#| msgid "This function returns the @var{index}th element of @var{array}.  The first element is at index zero."
 msgid "This function returns the largest element of @var{sequence}.  The elements of @var{sequence} must be numbers or markers."
-msgstr "この関数は、@var{array}の@var{index}番目の要素をreturnします。1番目の要素のインデクスは0です。"
+msgstr "この関数は@var{sequence}の最大の要素をリターンする。@var{sequence}の要素は数字かマーカーでなければならない。"
 
 #. type: group
 #: original_texis/sequences.texi:964
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(elt [1 2 3 4] 2)\n"
-#| "     @result{} 3\n"
+#, no-wrap
 msgid ""
 "(seq-max [1 3 2])\n"
 "@result{} 3\n"
 msgstr ""
-"(elt [1 2 3 4] 2)\n"
-"     @result{} 3\n"
+"(seq-max [1 3 2])\n"
+"@result{} 3\n"
 
 #. type: group
 #: original_texis/sequences.texi:968
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(eq x y)\n"
-#| "     @result{} nil\n"
+#, no-wrap
 msgid ""
 "(seq-max \"Hello\")\n"
 "@result{} 111\n"
 msgstr ""
-"(eq x y)\n"
-"     @result{} nil\n"
+"(seq-max \"Hello\")\n"
+"@result{} 111\n"
 
 #. type: defmac
 #: original_texis/sequences.texi:972
 #, no-wrap
 msgid "seq-doseq (var sequence) body@dots{}"
-msgstr ""
+msgstr "seq-doseq (var sequence) body@dots{}"
 
 #. type: cindex
 #: original_texis/sequences.texi:973
-#, fuzzy, no-wrap
-#| msgid "Sequence Functions"
+#, no-wrap
 msgid "sequence iteration"
-msgstr "Sequence Functions"
+msgstr "sequence iteration"
 
 #. type: defmac
 #: original_texis/sequences.texi:977
 msgid "This macro is like @code{dolist} (@pxref{Iteration, dolist}), except that @var{sequence} can be a list, vector or string.  This is primarily useful for side-effects."
-msgstr ""
+msgstr "このマクロは@code{dolist} (@ref{Iteration, dolist}を参照)と同様だが、@var{sequence}にリスト、ベクター、文字列のいずれかを指定できる点が異なる。これ主な利点は副作用である。"
 
 #. type: defmac
 #: original_texis/sequences.texi:979
-#, fuzzy, no-wrap
-#| msgid "elements of sequences"
+#, no-wrap
 msgid "seq-let arguments sequence body@dots{}"
-msgstr "elements of sequences"
+msgstr "seq-let arguments sequence body@dots{}"
 
 #. type: cindex
 #: original_texis/sequences.texi:980
-#, fuzzy, no-wrap
-#| msgid "sequence length"
+#, no-wrap
 msgid "sequence destructuring"
-msgstr "sequence length"
+msgstr "sequence destructuring"
 
 #. type: defmac
 #: original_texis/sequences.texi:984
 msgid "This macro binds the variables defined in @var{arguments} to the elements of @var{sequence}.  @var{arguments} can themselves include sequences, allowing for nested destructuring."
-msgstr ""
+msgstr "このマクロは@var{arguments}内で定義される変数に@var{sequence}の要素をバインドする。@var{arguments}はネストされた非構造化を許容することにより、自身にシーケンスを含むことができる。"
 
 #. type: defmac
 #: original_texis/sequences.texi:988
 msgid "The @var{arguments} sequence can also include the @code{&rest} marker followed by a variable name to be bound to the rest of @code{sequence}."
-msgstr ""
+msgstr "@var{arguments}シーケンスには、@code{sequence}の残りにバインドされる変数名が後続するような、@code{&rest}マーカーを含めることもできる。"
 
 #. type: group
 #: original_texis/sequences.texi:994
@@ -2026,34 +1936,33 @@ msgid ""
 "  (list first second))\n"
 "@result{} (1 2)\n"
 msgstr ""
+"(seq-let [first second] [1 2 3 4]\n"
+"  (list first second))\n"
+"@result{} (1 2)\n"
 
 #. type: group
 #: original_texis/sequences.texi:999
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-let (_ a _ b) '(1 2 3 4)\n"
 "  (list a b))\n"
 "@result{} (2 4)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-let (_ a _ b) '(1 2 3 4)\n"
+"  (list a b))\n"
+"@result{} (2 4)\n"
 
 #. type: group
 #: original_texis/sequences.texi:1004
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq bar '(1 2))\n"
-#| "     @result{} (1 2)\n"
+#, no-wrap
 msgid ""
 "(seq-let [a [b [c]]] [1 [2 [3]]]\n"
 "  (list a b c))\n"
 "@result{} (1 2 3)\n"
 msgstr ""
-"(setq bar '(1 2))\n"
-"     @result{} (1 2)\n"
+"(seq-let [a [b [c]]] [1 [2 [3]]]\n"
+"  (list a b c))\n"
+"@result{} (1 2 3)\n"
 
 #. type: group
 #: original_texis/sequences.texi:1008
@@ -2062,12 +1971,14 @@ msgid ""
 "(seq-let [a b &rest others] [1 2 3 4]\n"
 "  others)\n"
 msgstr ""
+"(seq-let [a b &rest others] [1 2 3 4]\n"
+"  others)\n"
 
 #. type: example
 #: original_texis/sequences.texi:1010
 #, no-wrap
 msgid "@result{} [3 4]\n"
-msgstr ""
+msgstr "@result{} [3 4]\n"
 
 #. type: cindex
 #: original_texis/sequences.texi:1016
@@ -2078,72 +1989,72 @@ msgstr "array"
 #. type: Plain text
 #: original_texis/sequences.texi:1023
 msgid "An @dfn{array} object has slots that hold a number of other Lisp objects, called the elements of the array.  Any element of an array may be accessed in constant time.  In contrast, the time to access an element of a list is proportional to the position of that element in the list."
-msgstr "@dfn{配列(array)}オブジェクトは、いくつかのLispオブジェクトを保持するスロットをもち、これらのオブジェクトは配列の要素と呼ばれます。配列内の任意の要素は、一定時間でアクセスされます。対照的に、リスト内の要素のアクセスに要する時間は、その要素がリスト内のどの位置にあるかに比例します。"
+msgstr "@dfn{配列(array)}オブジェクトは、いくつかのLispオブジェクトを保持するスロットをもち、これらのオブジェクトは配列の要素と呼ばれます。配列内の任意の要素は一定時間でアクセスされます。対照的にリスト内の要素のアクセスに要する時間は、その要素がリスト内のどの位置にあるかに比例します。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1030
 msgid "Emacs defines four types of array, all one-dimensional: @dfn{strings} (@pxref{String Type}), @dfn{vectors} (@pxref{Vector Type}), @dfn{bool-vectors} (@pxref{Bool-Vector Type}), and @dfn{char-tables} (@pxref{Char-Table Type}).  Vectors and char-tables can hold elements of any type, but strings can only hold characters, and bool-vectors can only hold @code{t} and @code{nil}."
-msgstr "Emacsは4つの配列型 ---@dfn{文字列(strings。@ref{String Type}を参照してください)}、@dfn{ベクター(vectors。@ref{Vector Type}を参照してください)}、@dfn{ブールベクター(bool-vectors。@ref{Bool-Vector Type}を参照してください)}、@dfn{文字テーブル(char-tables。@ref{Char-Table Type}を参照してください)} --- を定義し、これらはすべて1次元です。ベクターと文字テーブルは任意の型の要素を保持できますが、文字列は文字だけ、ブールベクターは@code{t}か@code{nil}しか保持できません。"
+msgstr "Emacsは4つの配列型 ---@dfn{文字列(strings、@ref{String Type}を参照)}、@dfn{ベクター(vectors、@ref{Vector Type}を参照)}、@dfn{ブールベクター(bool-vectors、@ref{Bool-Vector Type}を参照)}、@dfn{文字テーブル(char-tables、@ref{Char-Table Type}を参照)} --- を定義しており、これらはすべて1次元です。ベクターと文字テーブルは任意の型の要素を保持できますが、文字列は文字だけ、ブールベクターは@code{t}か@code{nil}しか保持できません。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1032
 msgid "All four kinds of array share these characteristics:"
-msgstr "4種のすべての配列は、これらの特性を共有します:"
+msgstr "4種のすべての配列はこれらの特性を共有します:"
 
 #. type: itemize
 #: original_texis/sequences.texi:1038
 msgid "The first element of an array has index zero, the second element has index 1, and so on.  This is called @dfn{zero-origin} indexing.  For example, an array of four elements has indices 0, 1, 2, @w{and 3}."
-msgstr "配列の1番目の要素はインデックス0、2番目はインデックス1、...となります。これは@dfn{0基準(zero-origin)}のインデックスづけと呼ばれます。たとえば、4つの要素の配列のインデックスは0、1、2、3です。"
+msgstr "配列の1番目の要素はインデックス0、2番目はインデックス1、...となる。これは@dfn{0基準(zero-origin)}のインデックスづけと呼ばれる。たとえば4要素の配列のインデックスは0、1、2、3。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1042
 msgid "The length of the array is fixed once you create it; you cannot change the length of an existing array."
-msgstr "配列の長さは、1度配列が作成されたら固定されるので、既存の配列の長さは変更できません。"
+msgstr "配列の長さは一度配列が作成されたら固定されるので、既存の配列の長さは変更できない。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1046
 msgid "For purposes of evaluation, the array is a constant---i.e., it evaluates to itself."
-msgstr "評価において、配列は定数 --- つまりそれ自身に評価されます。"
+msgstr "評価において配列は定数 --- つまりそれ自身へと評価される。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1050
 msgid "The elements of an array may be referenced or changed with the functions @code{aref} and @code{aset}, respectively (@pxref{Array Functions})."
-msgstr "配列の要素は、関数@code{aref}により参照されたり、関数@code{aset}により変更されるかもしれません(@ref{Array Functions}を参照してください)。"
+msgstr "配列の要素は関数@code{aref}で参照したり、関数@code{aset}で変更できる(@ref{Array Functions}を参照)。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1055
 msgid "When you create an array, other than a char-table, you must specify its length.  You cannot specify the length of a char-table, because that is determined by the range of character codes."
-msgstr "配列を作成したとき、文字テーブル以外では、長さを指定しなければなりません。文字テーブルの長さは、文字コードの範囲により決定されるので、長さを指定できません。"
+msgstr "配列を作成したとき、文字テーブル以外では長さを指定しなければなりません。文字テーブルの長さは文字コードの範囲により決定されるので長さを指定できません。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1059
 msgid "In principle, if you want an array of text characters, you could use either a string or a vector.  In practice, we always choose strings for such applications, for four reasons:"
-msgstr "原則として、テキスト文字の配列が欲しい場合は、文字列とベクターのどちらかを使用できます。実際のところ、そのような用途にたいしては、4つの理由により、わたしたちは常に文字列を選択します:"
+msgstr "原則として、テキスト文字の配列が欲しい場合は、文字列とベクターのどちらかを使用できます。実際のところ4つの理由により,そのような用途にたいしては、わたしたちは常に文字列を選択します:"
 
 #. type: itemize
 #: original_texis/sequences.texi:1063
 msgid "They occupy one-fourth the space of a vector of the same elements."
-msgstr "文字列は、同じ要素をもつベクターと比較して、占めるスペースが1/4です。"
+msgstr "文字列は同じ要素をもつベクターと比較して占めるスペースが1/4である。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1067
 msgid "Strings are printed in a way that shows the contents more clearly as text."
-msgstr "文字列の内容は、テキストとしてより明解な方法によりプリントされます。"
+msgstr "文字列の内容はテキストとして、より明解な方法によりプリントされる。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1070
 msgid "Strings can hold text properties.  @xref{Text Properties}."
-msgstr "文字列はテキストプロパティーを保持できます。@ref{Text Properties}を参照してください。"
+msgstr "文字列はテキストプロパティーを保持できる。@ref{Text Properties}を参照のこと。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1075
 msgid "Many of the specialized editing and I/O facilities of Emacs accept only strings.  For example, you cannot insert a vector of characters into a buffer the way you can insert a string.  @xref{Strings and Characters}."
-msgstr "Emacsがもつ特化された編集機能およびI/O機能の多くが、文字列だけに適用されます。たとえば、文字列をバッファーに挿入する方法では、文字のベクターをバッファーに挿入できません。@ref{Strings and Characters}を参照してください"
+msgstr "Emacsの特化した編集機能とI/O機能の多くが文字列だけに適用される。たとえば文字列をバッファーに挿入する方法では、文字のベクターをバッファーに挿入できない。@ref{Strings and Characters}を参照のこと"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1081
 msgid "By contrast, for an array of keyboard input characters (such as a key sequence), a vector may be necessary, because many keyboard input characters are outside the range that will fit in a string.  @xref{Key Sequence Input}."
-msgstr "対照的に、(キーシーケンスのような)キーボード入力文字の配列では、多くのキーボード入力文字は、文字列に収まる範囲の外にあるので、ベクターが必要になるでしょう。@ref{Key Sequence Input}を参照してください。"
+msgstr "対照的に、(キーシーケンスのような)キーボード入力文字の配列では、多くのキーボード入力文字は文字列に収まる範囲の外にあるので、ベクターが必要になるでしょう。@ref{Key Sequence Input}を参照してください。"
 
 #. type: section
 #: original_texis/sequences.texi:1083
@@ -2154,7 +2065,7 @@ msgstr "Functions that Operate on Arrays"
 #. type: Plain text
 #: original_texis/sequences.texi:1087
 msgid "In this section, we describe the functions that accept all types of arrays."
-msgstr "このセクションでは、すべての型の配列に適用される関数を説明します。"
+msgstr "このセクションではすべての型の配列に適用される関数を説明します。"
 
 #. type: defun
 #: original_texis/sequences.texi:1088
@@ -2165,7 +2076,7 @@ msgstr "arrayp object"
 #. type: defun
 #: original_texis/sequences.texi:1091
 msgid "This function returns @code{t} if @var{object} is an array (i.e., a vector, a string, a bool-vector or a char-table)."
-msgstr "この関数は、@var{object}が配列(ベクター、文字列、ブールベクター、文字テーブル)の場合は、@code{t}をreturnします。"
+msgstr "この関数は@var{object}が配列(ベクター、文字列、ブールベクター、文字テーブル)なら@code{t}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:1100
@@ -2182,7 +2093,7 @@ msgstr ""
 "     @result{} t\n"
 "(arrayp \"asdf\")\n"
 "     @result{} t\n"
-"(arrayp (syntax-table))    ;; @r{文字テーブル。}\n"
+"(arrayp (syntax-table))    ;; @r{文字テーブル}\n"
 "     @result{} t\n"
 
 #. type: defun
@@ -2200,7 +2111,7 @@ msgstr "array elements"
 #. type: defun
 #: original_texis/sequences.texi:1108
 msgid "This function returns the @var{index}th element of @var{array}.  The first element is at index zero."
-msgstr "この関数は、@var{array}の@var{index}番目の要素をreturnします。1番目の要素のインデクスは0です。"
+msgstr "この関数は @var{array}の@var{index}番目の要素をリターンする。1番目の要素のインデクスは0。"
 
 #. type: group
 #: original_texis/sequences.texi:1115
@@ -2224,12 +2135,12 @@ msgid ""
 "     @result{} 98           ; @r{@samp{b} is @acronym{ASCII} code 98.}\n"
 msgstr ""
 "(aref \"abcdefg\" 1)\n"
-"     @result{} 98           ; @r{@samp{b}の@acronym{ASCII}コードは98。}\n"
+"     @result{} 98           ; @r{@samp{b}の@acronym{ASCII}コードは98}\n"
 
 #. type: defun
 #: original_texis/sequences.texi:1123
 msgid "See also the function @code{elt}, in @ref{Sequence Functions}."
-msgstr "@ref{Sequence Functions}の関数@code{elt}も参照してください。"
+msgstr "@ref{Sequence Functions}の関数@code{elt}も参照されたい。"
 
 #. type: defun
 #: original_texis/sequences.texi:1125
@@ -2240,7 +2151,7 @@ msgstr "aset array index object"
 #. type: defun
 #: original_texis/sequences.texi:1128
 msgid "This function sets the @var{index}th element of @var{array} to be @var{object}.  It returns @var{object}."
-msgstr "この関数は、@var{array}の@var{index}番目の要素を、@var{object}にセットします。この関数は@var{object}をeturnします。"
+msgstr "この関数は@var{array}の@var{index}番目の要素を@var{object}にセットする。この関数は@var{object}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:1137
@@ -2281,7 +2192,7 @@ msgstr ""
 #. type: defun
 #: original_texis/sequences.texi:1152
 msgid "If @var{array} is a string and @var{object} is not a character, a @code{wrong-type-argument} error results.  The function converts a unibyte string to multibyte if necessary to insert a character."
-msgstr "@var{array}が文字列で@var{object}が文字でない場合、結果は@code{wrong-type-argument}エラーになります。この関数は、文字列の挿入で必要な場合は、ユニバイト文字列をマルチバイト文字列に変換します。"
+msgstr "@var{array}が文字列で@var{object}が文字でなければ、結果は@code{wrong-type-argument}エラーとなる。この関数は文字列の挿入で必要なら、ユニバイト文字列をマルチバイト文字列に変換する。"
 
 #. type: defun
 #: original_texis/sequences.texi:1154
@@ -2292,7 +2203,7 @@ msgstr "fillarray array object"
 #. type: defun
 #: original_texis/sequences.texi:1157
 msgid "This function fills the array @var{array} with @var{object}, so that each element of @var{array} is @var{object}.  It returns @var{array}."
-msgstr "この関数は配列@var{array}を@var{object}で充填するので、@var{array}のすべての要素は@var{object}になります。この関数は@var{array}をreturnします。"
+msgstr "この関数は配列@var{array}を@var{object}で充填するので、@var{array}のすべての要素は@var{object}になる。この関数は@var{array}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:1166
@@ -2329,12 +2240,12 @@ msgstr ""
 #. type: defun
 #: original_texis/sequences.texi:1177
 msgid "If @var{array} is a string and @var{object} is not a character, a @code{wrong-type-argument} error results."
-msgstr "@var{array}が文字列で@var{object}が文字でない場合、結果は@code{wrong-type-argument}エラーになります。"
+msgstr "@var{array}が文字列で@var{object}が文字でなければ、結果は@code{wrong-type-argument}エラーとなる。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1181
 msgid "The general sequence functions @code{copy-sequence} and @code{length} are often useful for objects known to be arrays.  @xref{Sequence Functions}."
-msgstr "配列と判っているオブジェクトにたいしては、一般的なシーケンス関数@code{copy-sequence}および@code{length}が有用なときが多くあります。@ref{Sequence Functions}を参照してください。"
+msgstr "配列と判っているオブジェクトにたいしては、一般的なシーケンス関数@code{copy-sequence}と@code{length}が有用なときがよくあります。@ref{Sequence Functions}を参照してください。"
 
 #. type: cindex
 #: original_texis/sequences.texi:1184
@@ -2345,22 +2256,22 @@ msgstr "vector (type)"
 #. type: Plain text
 #: original_texis/sequences.texi:1193
 msgid "A @dfn{vector} is a general-purpose array whose elements can be any Lisp objects.  (By contrast, the elements of a string can only be characters.  @xref{Strings and Characters}.)  Vectors are used in Emacs for many purposes: as key sequences (@pxref{Key Sequences}), as symbol-lookup tables (@pxref{Creating Symbols}), as part of the representation of a byte-compiled function (@pxref{Byte Compilation}), and more."
-msgstr "@dfn{ベクター(vector)}とは、任意のLispオブジェクトを要素にもつことができる、一般用途のための配列です(対照的に、文字列の要素は文字だけです@ref{Strings and Characters}を参照してください)。Emacsではベクターは、キーシーケンス(@ref{Key Sequences}を参照してください)、シンボル検索用のテーブル(@ref{Creating Symbols}を参照してください)、バイトコンパイルされた関数表現の一部(@ref{Byte Compilation}を参照してください)など、多くの目的で使用されます。"
+msgstr "@dfn{ベクター(vector)}とは任意のLispオブジェクトを要素にもつことができる、一般用途のための配列です(対照的に文字列の要素は文字のみ。@ref{Strings and Characters}を参照)。Emacsではベクターはキーシーケンス(@ref{Key Sequences}を参照)、シンボル検索用のテーブル(@ref{Creating Symbols}を参照)、バイトコンパイルされた関数表現の一部(@ref{Byte Compilation}を参照)などの多くの目的で使用されます。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1196
 msgid "Like other arrays, vectors use zero-origin indexing: the first element has index 0."
-msgstr "他の配列と同様、ベクターは０基準のインデックスづけを使用し、1番目の要素はインデックス0になります。"
+msgstr "他の配列と同様、ベクターは0基準のインデックスづけを使用し、1番目の要素はインデックス0になります。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1201
 msgid "Vectors are printed with square brackets surrounding the elements.  Thus, a vector whose elements are the symbols @code{a}, @code{b} and @code{a} is printed as @code{[a b a]}.  You can write vectors in the same way in Lisp input."
-msgstr "ベクターは、角カッコ(square brackets)で囲まれた要素としてプリントされます。したがって、シンボル@code{a}、@code{b}、@code{a}を要素にもつベクターは、@code{[a b a]}とプリントされます。Lisp入力として、同じ方法でベクターを記述できます。"
+msgstr "ベクターは角カッコ(square brackets)で囲まれた要素としてプリントされます。したがってシンボル@code{a}、@code{b}、@code{a}を要素にもつベクターは、@code{[a b a]}とプリントされます。Lisp入力として同じ方法でベクターを記述できます。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1206
 msgid "A vector, like a string or a number, is considered a constant for evaluation: the result of evaluating it is the same vector.  This does not evaluate or even examine the elements of the vector.  @xref{Self-Evaluating Forms}."
-msgstr "文字列や数値と同様に、ベクターは定数として評価され、評価された結果は同じベクターになります。ベクターの要素は評価も確認もされません。@ref{Self-Evaluating Forms}を参照してください。"
+msgstr "文字列や数値と同様にベクターは定数として評価され、評価された結果は同じベクターになります。ベクターの要素は評価も確認もされません。@ref{Self-Evaluating Forms}を参照してください。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1208
@@ -2405,7 +2316,7 @@ msgstr "vectorp object"
 #. type: defun
 #: original_texis/sequences.texi:1227
 msgid "This function returns @code{t} if @var{object} is a vector."
-msgstr "この関数は、@var{object}がベクターの場合は、@code{t}をreturnします。"
+msgstr "この関数は@var{object}がベクターなら@code{t}をリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:1234
@@ -2430,7 +2341,7 @@ msgstr "vector &rest objects"
 #. type: defun
 #: original_texis/sequences.texi:1241
 msgid "This function creates and returns a vector whose elements are the arguments, @var{objects}."
-msgstr "この関数は、引数@var{objects}を要素にもつベクターを作成してreturnします。"
+msgstr "この関数は引数@var{objects}を要素にもつベクターを作成してリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:1248
@@ -2455,7 +2366,7 @@ msgstr "make-vector length object"
 #. type: defun
 #: original_texis/sequences.texi:1255
 msgid "This function returns a new vector consisting of @var{length} elements, each initialized to @var{object}."
-msgstr "この関数は、@var{object}に初期化された@var{length}個の要素からなる、新しいベクターをreturnします。"
+msgstr "この関数は各要素が@var{object}に初期化された、@var{length}個の要素からなる新しいベクターをリターンする。"
 
 #. type: group
 #: original_texis/sequences.texi:1260
@@ -2482,12 +2393,12 @@ msgstr "copying vectors"
 #. type: defun
 #: original_texis/sequences.texi:1270
 msgid "This function returns a new vector containing all the elements of @var{sequences}.  The arguments @var{sequences} may be true lists, vectors, strings or bool-vectors.  If no @var{sequences} are given, the empty vector is returned."
-msgstr "この関数は、@var{sequences}のすべての要素を含む、新しいベクターをreturnします。引数@var{sequences}は真リスト、ベクター、文字列、ブールベクターです。@var{sequences}が与えられない場合、空のベクターがreturnされます。"
+msgstr "この関数は@var{sequences}のすべての要素を含む新しいベクターをリターンする。引数@var{sequences}は真リスト、ベクター、文字列、ブールベクター。@var{sequences}が与えられければ空のベクターがリターンされる。"
 
 #. type: defun
 #: original_texis/sequences.texi:1273
 msgid "The value is either the empty vector, or is a newly constructed nonempty vector that is not @code{eq} to any existing vector."
-msgstr "値は空のベクター、または任意の既存のベクターと@code{eq}ではない、新しい空ではないベクターのどちらかです。"
+msgstr "値は空のベクター、またはすべての既存ベクターと@code{eq}ではないような空ではない新しいベクターのいずれか。"
 
 #. type: group
 #: original_texis/sequences.texi:1280
@@ -2520,17 +2431,17 @@ msgstr ""
 #. type: defun
 #: original_texis/sequences.texi:1292
 msgid "The @code{vconcat} function also allows byte-code function objects as arguments.  This is a special feature to make it easy to access the entire contents of a byte-code function object.  @xref{Byte-Code Objects}."
-msgstr "@code{vconcat}関数は、引数としてバイトコード関数オブジェクトもとることができます。これは、バイトコード関数オブジェクトの内容全体にアクセスするのを容易にするための、特別な機能です。@ref{Byte-Code Objects}を参照してください。"
+msgstr "@code{vconcat}関数は、引数としてバイトコード関数オブジェクトも受け取ることができる。これはバイトコード関数オブジェクトの内容全体にアクセスするのを容易にするための特別な機能である。@ref{Byte-Code Objects}を参照のこと。"
 
 #. type: defun
 #: original_texis/sequences.texi:1296
 msgid "For other concatenation functions, see @code{mapconcat} in @ref{Mapping Functions}, @code{concat} in @ref{Creating Strings}, and @code{append} in @ref{Building Lists}."
-msgstr "結合を行なう他の関数については、@ref{Mapping Functions}の@code{mapconcat}、@ref{Creating Strings}の@code{concat}、@ref{Building Lists}の@code{append}を参照してください。"
+msgstr "結合を行なう他の関数については@ref{Mapping Functions}の@code{mapconcat}、@ref{Creating Strings}の@code{concat}、@ref{Building Lists}の@code{append}を参照されたい。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1300
 msgid "The @code{append} function also provides a way to convert a vector into a list with the same elements:"
-msgstr "@code{append}関数は、ベクターを同じ要素をもつリストに変換する方法も提供します:"
+msgstr "@code{append}関数はベクターを同じ要素をもつリストに変換する方法も提供します:"
 
 #. type: group
 #: original_texis/sequences.texi:1307
@@ -2561,7 +2472,7 @@ msgstr "extra slots of char-table"
 #. type: Plain text
 #: original_texis/sequences.texi:1323
 msgid "A char-table is much like a vector, except that it is indexed by character codes.  Any valid character code, without modifiers, can be used as an index in a char-table.  You can access a char-table's elements with @code{aref} and @code{aset}, as with any array.  In addition, a char-table can have @dfn{extra slots} to hold additional data not associated with particular character codes.  Like vectors, char-tables are constants when evaluated, and can hold elements of any type."
-msgstr "文字テーブル(char-table)はベクターとよく似ていますが、文字テーブルは文字コードによりインデックスづけされます。文字テーブルのインデックスには、修飾キーをともなわない任意の有効な文字コードを使用できます。他の配列と同様に、@code{aref}と@code{aset}で、文字テーブルの要素にアクセスできます。加えて、文字テーブルは、追加のデータを保持するために、特定の文字コードに関連づけられていない、@dfn{エキストラスロット(extra slots)}をもつことができます。ベクターと同様、文字テーブルは、定数として評価され、任意の型の要素を保持できます。"
+msgstr "文字テーブル(char-table)はベクターとよく似ていますが、文字テーブルは文字コードによりインデックスづけされます。文字テーブルのインデックスには、修飾キーをともなわない任意の有効な文字コードを使用できます。他の配列と同様に、@code{aref}と@code{aset}で文字テーブルの要素にアクセスできます。加えて、文字テーブルは追加のデータを保持するために、特定の文字コードに関連づけられていない@dfn{エキストラスロット(extra slots)}をもつことができます。ベクターと同様、文字テーブルは定数として評価され、任意の型の要素を保持できます。"
 
 #. type: cindex
 #: original_texis/sequences.texi:1324
@@ -2572,17 +2483,17 @@ msgstr "subtype of char-table"
 #. type: Plain text
 #: original_texis/sequences.texi:1327
 msgid "Each char-table has a @dfn{subtype}, a symbol, which serves two purposes:"
-msgstr "文字テーブルはそれぞれ@dfn{サブタイプ(subtype)}をもち、これは2つの目的を担うシンボルです:"
+msgstr "文字テーブルはそれぞれ@dfn{サブタイプ(subtype)}をもち、これは2つの目的をもつシンボルです:"
 
 #. type: itemize
 #: original_texis/sequences.texi:1335
 msgid "The subtype provides an easy way to tell what the char-table is for.  For instance, display tables are char-tables with @code{display-table} as the subtype, and syntax tables are char-tables with @code{syntax-table} as the subtype.  The subtype can be queried using the function @code{char-table-subtype}, described below."
-msgstr "サブタイプは、それがなんのための文字テーブルなのか、簡単に表す方法を提供します。たとえば、ディスプレーテーブル(display tables)はサブタイプが@code{display-table}の文字テーブルであり、構文テーブル(syntax tables)は、サブタイプが@code{syntax-table}の文字テーブルです。以下で説明するように、関数@code{char-table-subtype}を使用して、サブタイプを問い合わせることができます。"
+msgstr "サブタイプはそれがなんのための文字テーブルなのかを簡単に表す方法を提供する。たとえばディスプレーテーブル(display tables)はサブタイプが@code{display-table}の文字テーブルであり、構文テーブル(syntax tables)はサブタイプが@code{syntax-table}の文字テーブル。以下で説明するように関数@code{char-table-subtype}を使用してサブタイプの問い合わせが可能。"
 
 #. type: itemize
 #: original_texis/sequences.texi:1343
 msgid "The subtype controls the number of @dfn{extra slots} in the char-table.  This number is specified by the subtype's @code{char-table-extra-slots} symbol property (@pxref{Symbol Properties}), whose value should be an integer between 0 and 10.  If the subtype has no such symbol property, the char-table has no extra slots."
-msgstr "サブタイプは文字テーブル内のいくつかの@dfn{エキストラスロット(extra slots)}を制御します。エキストラスロットの数は、そのサブタイプの@code{char-table-extra-slots}シンボルプロパティー(@ref{Symbol Properties}を参照してください)により指定され、値は0から10の整数です。サブタイプにそのようなシンボルプロパティーがない場合、その文字テーブルはエキストラスロットをもちません。"
+msgstr "サブタイプは文字テーブル内のいくつかの@dfn{エキストラスロット(extra slots)}を制御する。エキストラスロットの数は、そのサブタイプの@code{char-table-extra-slots}シンボルプロパティー(@ref{Symbol Properties}を参照)により指定され、値は0から10の整数。サブタイプにそのようなシンボルプロパティーがなければ、その文字テーブルはエキストラスロットをもたない。"
 
 #. type: cindex
 #: original_texis/sequences.texi:1345
@@ -2593,7 +2504,7 @@ msgstr "parent of char-table"
 #. type: Plain text
 #: original_texis/sequences.texi:1352
 msgid "A char-table can have a @dfn{parent}, which is another char-table.  If it does, then whenever the char-table specifies @code{nil} for a particular character @var{c}, it inherits the value specified in the parent.  In other words, @code{(aref @var{char-table} @var{c})} returns the value from the parent of @var{char-table} if @var{char-table} itself specifies @code{nil}."
-msgstr "文字テーブルは@dfn{親(parent)}をもつことができ、これは他の文字テーブルです。文字テーブルが親をもつ場合、その文字テーブルで特定の文字@var{c}にたいして@code{nil}が指定されているときは、親として指定された文字テーブルで指定された値を継承します。言い方を変えると、文字テーブル@var{char-table}で@var{c}に@code{nil}が指定されている場合、@code{(aref @var{char-table} @var{c})}は@var{char-table}の親の値をreturnします。"
+msgstr "文字テーブルは@dfn{親(parent)}をもつことができ、これは他の文字テーブルです。文字テーブルが親をもつ場合、その文字テーブルで特定の文字@var{c}にたいして@code{nil}が指定されていたら、親と指定された文字テーブルで指定された値を継承します。言い方を変えると、文字テーブル@var{char-table}で@var{c}に@code{nil}が指定されていたら、@code{(aref @var{char-table} @var{c})}は@var{char-table}の親の値をリターンします。"
 
 #. type: cindex
 #: original_texis/sequences.texi:1353
@@ -2604,7 +2515,7 @@ msgstr "default value of char-table"
 #. type: Plain text
 #: original_texis/sequences.texi:1357
 msgid "A char-table can also have a @dfn{default value}.  If so, then @code{(aref @var{char-table} @var{c})} returns the default value whenever the char-table does not specify any other non-@code{nil} value."
-msgstr "文字テーブルは@dfn{デフォルト値(default value)}をもつこともできます。デフォルト値をもつとき、文字テーブル@var{char-table}が@var{c}にたいして@code{nil}値を指定すると、@code{(aref @var{char-table} @var{c})}はデフォルト値をreturnします。"
+msgstr "文字テーブルは@dfn{デフォルト値(default value)}をもつこともできます。デフォルト値をもつとき、文字テーブル@var{char-table}が@var{c}にたいして@code{nil}値を指定すると、@code{(aref @var{char-table} @var{c})}はデフォルト値をリターンします。"
 
 #. type: defun
 #: original_texis/sequences.texi:1358
@@ -2615,17 +2526,17 @@ msgstr "make-char-table subtype &optional init"
 #. type: defun
 #: original_texis/sequences.texi:1363
 msgid "Return a newly-created char-table, with subtype @var{subtype} (a symbol).  Each element is initialized to @var{init}, which defaults to @code{nil}.  You cannot alter the subtype of a char-table after the char-table is created."
-msgstr "サブタイプ@var{subtype}(シンボル)をもつ、新たに作成された文字テーブルをreturnします。各要素は@var{init}に初期化され、デフォルトは@code{nil}です。文字テーブルが作成された後で、文字テーブルのサブタイプを変更することはできません。"
+msgstr "サブタイプ@var{subtype}(シンボル)をもつ、新たに作成された文字テーブルをリターンする。各要素は@var{init}に初期化され、デフォルトは@code{nil}。文字テーブルが作成された後で、文字テーブルのサブタイプを変更することはできない。"
 
 #. type: defun
 #: original_texis/sequences.texi:1366
 msgid "There is no argument to specify the length of the char-table, because all char-tables have room for any valid character code as an index."
-msgstr "すべての文字テーブルは、インデックスとなる任意の有効な文字テーブルのための空間をもつので、文字テーブルの長さを指定する引数はありません。"
+msgstr "すべての文字テーブルは、インデックスとなる任意の有効な文字テーブルのための空間をもつので、文字テーブルの長さを指定する引数はない。"
 
 #. type: defun
 #: original_texis/sequences.texi:1373
 msgid "If @var{subtype} has the @code{char-table-extra-slots} symbol property, that specifies the number of extra slots in the char-table.  This should be an integer between 0 and 10; otherwise, @code{make-char-table} raises an error.  If @var{subtype} has no @code{char-table-extra-slots} symbol property (@pxref{Property Lists}), the char-table has no extra slots."
-msgstr "@var{subtype}が@code{char-table-extra-slots}シンボルプロパティーをもつ場合、それはその文字列テーブル内のエキストラスロットの数を指定します。値には0から10の整数を指定し、これ以外の場合@code{make-char-table}はエラーとなります。@var{subtype}が@code{char-table-extra-slots}シンボルプロパティー(@ref{Property Lists}を参照してください)をもたない場合、その文字テーブルはエキストラスロットをもちません。"
+msgstr "@var{subtype}がシンボルプロパティー@code{char-table-extra-slots}をもつなら、それはその文字列テーブル内のエキストラスロットの数を指定する。値には0から10の整数を指定し、これ以外なら@code{make-char-table}はエラーとなる。@var{subtype}がシンボルプロパティー@code{char-table-extra-slots}(@ref{Property Lists}を参照)をもたなければ、その文字テーブルはエキストラスロットをもたない。"
 
 #. type: defun
 #: original_texis/sequences.texi:1375
@@ -2636,7 +2547,7 @@ msgstr "char-table-p object"
 #. type: defun
 #: original_texis/sequences.texi:1378
 msgid "This function returns @code{t} if @var{object} is a char-table, and @code{nil} otherwise."
-msgstr "この関数は、@var{object}が文字テーブルの場合は@code{t}、それ以外は@code{nil}をreturnします。"
+msgstr "この関数は@var{object}が文字テーブルなら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1380
@@ -2647,12 +2558,12 @@ msgstr "char-table-subtype char-table"
 #. type: defun
 #: original_texis/sequences.texi:1382
 msgid "This function returns the subtype symbol of @var{char-table}."
-msgstr "この関数は、@var{char-table}のサブタイプのシンボルをreturnします。"
+msgstr "この関数は@var{char-table}のサブタイプのシンボルをリターンする。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1386
 msgid "There is no special function to access default values in a char-table.  To do that, use @code{char-table-range} (see below)."
-msgstr "文字テーブルのデフォルト値にアクセスするための、特別な関数は存在しません。これを行なうには、@code{char-table-range}を使用します(以下参照)。"
+msgstr "文字テーブルのデフォルト値にアクセスするための特別な関数は存在しません。これを行なうには@code{char-table-range}を使用します(以下参照)。"
 
 #. type: defun
 #: original_texis/sequences.texi:1387
@@ -2663,7 +2574,7 @@ msgstr "char-table-parent char-table"
 #. type: defun
 #: original_texis/sequences.texi:1390
 msgid "This function returns the parent of @var{char-table}.  The parent is always either @code{nil} or another char-table."
-msgstr "この関数は、@var{char-table}の親をreturnします。親は常に、@code{nil}、または他の文字テーブルです。"
+msgstr "この関数は@var{char-table}の親をリターンする。親は常に@code{nil}か他の文字テーブルである。"
 
 #. type: defun
 #: original_texis/sequences.texi:1392
@@ -2674,7 +2585,7 @@ msgstr "set-char-table-parent char-table new-parent"
 #. type: defun
 #: original_texis/sequences.texi:1394
 msgid "This function sets the parent of @var{char-table} to @var{new-parent}."
-msgstr "この関数は、@var{char-table}の親を、@var{new-parent}にセットします。"
+msgstr "この関数は@var{char-table}の親を@var{new-parent}にセットする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1396
@@ -2684,10 +2595,8 @@ msgstr "char-table-extra-slot char-table n"
 
 #. type: defun
 #: original_texis/sequences.texi:1400
-#, fuzzy
-#| msgid "This function returns the contents of extra slot @var{n} of @var{char-table}.  The number of extra slots in a char-table is determined by its subtype."
 msgid "This function returns the contents of extra slot @var{n} (zero based)  of @var{char-table}.  The number of extra slots in a char-table is determined by its subtype."
-msgstr "このガン数は、@var{char-table}のエキストラスロット@var{n}の内容をreturnします。文字テーブルのエキストラスロットの数は、文字テーブルのサブタイプにより決定されます。"
+msgstr "この関数は@var{char-table}のエキストラスロット@var{n} (0基準)の内容をリターンする。文字テーブルのエキストラスロットの数は文字テーブルのサブタイプにより決定される。"
 
 #. type: defun
 #: original_texis/sequences.texi:1402
@@ -2697,15 +2606,13 @@ msgstr "set-char-table-extra-slot char-table n value"
 
 #. type: defun
 #: original_texis/sequences.texi:1405
-#, fuzzy
-#| msgid "This function stores @var{value} in extra slot @var{n} of @var{char-table}."
 msgid "This function stores @var{value} in extra slot @var{n} (zero based) of @var{char-table}."
-msgstr "この関数は、@var{char-table}のエキストラスロット@var{n}に、@var{value}を格納します。"
+msgstr "この関数は@var{char-table}のエキストラスロット@var{n} (0基準)に@var{value}を格納する。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1409
 msgid "A char-table can specify an element value for a single character code; it can also specify a value for an entire character set."
-msgstr "文字テーブルは、1つの文字コードにたいして、1つの要素値(element value)を指定できます。文字テーブルは文字セット全体にたいして値を指定することもできます。"
+msgstr "文字テーブルは1つの文字コードにたいして1つの要素値(element value)を指定できます。文字テーブルは文字セット全体にたいして値を指定することもできます。"
 
 #. type: defun
 #: original_texis/sequences.texi:1410
@@ -2716,7 +2623,7 @@ msgstr "char-table-range char-table range"
 #. type: defun
 #: original_texis/sequences.texi:1413
 msgid "This returns the value specified in @var{char-table} for a range of characters @var{range}.  Here are the possibilities for @var{range}:"
-msgstr "この関数は、文字範囲@var{range}にたいして、@var{char-table}で指定された値をreturnします。可能な@var{range}は以下のとおりです:"
+msgstr "この関数は文字範囲@var{range}にたいして@var{char-table}で指定された値をリターンする。可能な@var{range}は以下のとおり:"
 
 #. type: code{#1}
 #: original_texis/sequences.texi:1415 original_texis/sequences.texi:1433
@@ -2760,7 +2667,7 @@ msgstr "set-char-table-range char-table range value"
 #. type: defun
 #: original_texis/sequences.texi:1431
 msgid "This function sets the value in @var{char-table} for a range of characters @var{range}.  Here are the possibilities for @var{range}:"
-msgstr "この関数は、@var{char-table}内の文字範囲@var{range}にたいして値をセットします。可能な@var{range}は、以下のとおりです:"
+msgstr "この関数は@var{char-table}内の文字範囲@var{range}にたいして値をセットする。可能な@var{range}は以下のとおり:"
 
 #. type: code{#1}
 #: original_texis/sequences.texi:1436
@@ -2782,17 +2689,17 @@ msgstr "map-char-table function char-table"
 #. type: defun
 #: original_texis/sequences.texi:1457
 msgid "This function calls its argument @var{function} for each element of @var{char-table} that has a non-@code{nil} value.  The call to @var{function} is with two arguments, a key and a value.  The key is a possible @var{range} argument for @code{char-table-range}---either a valid character or a cons cell @code{(@var{from} . @var{to})}, specifying a range of characters that share the same value.  The value is what @code{(char-table-range @var{char-table} @var{key})} returns."
-msgstr "この関数は、@var{char-table}の非@code{nil}値ではない各要素にたいして、引数@var{function}を呼び出します。@var{function}の呼び出しでは、2つの引数(keyとvalue)が指定されます。keyは@code{char-table-range}にたいする可能な@var{range} --- 有効な文字か、同じ値を共有する文字範囲を指定するコンスセル@code{(@var{from} . @var{to})}です。valueは、@code{(char-table-range @var{char-table} @var{key})}がreturnする値です。"
+msgstr "この関数は@var{char-table}の非@code{nil}値ではない各要素にたいして引数@var{function}を呼び出す。@var{function}の呼び出しでは2つの引数(keyとvalue)が指定される。keyは@code{char-table-range}にたいする可能な@var{range} (有効な文字か、同じ値を共有する文字範囲を指定するコンスセル@code{(@var{from} . @var{to})})。valueは@code{(char-table-range @var{char-table} @var{key})}がリターンする値。"
 
 #. type: defun
 #: original_texis/sequences.texi:1460
 msgid "Overall, the key-value pairs passed to @var{function} describe all the values stored in @var{char-table}."
-msgstr "全体的に見て、@var{function}に渡されるkey-valueのペアは、@var{char-table}に格納されたすべての値を表します。"
+msgstr "全体として、@var{function}に渡されるkey-valueのペアは@var{char-table}に格納されたすべての値を表す。"
 
 #. type: defun
 #: original_texis/sequences.texi:1464
 msgid "The return value is always @code{nil}; to make calls to @code{map-char-table} useful, @var{function} should have side effects.  For example, here is how to examine the elements of the syntax table:"
-msgstr "return値はm常に@code{nil}です。@code{map-char-table}呼び出しを有用にするために、@var{function}は副作用をもつべきです。たとえば、以下は構文テーブルを調べる方法です:"
+msgstr "リターン値は常に@code{nil}である。@code{map-char-table}呼び出しを有用にするために@var{function}は副作用をもつこと。たとえば以下は構文テーブルを調べる方法:"
 
 #. type: example
 #: original_texis/sequences.texi:1482
@@ -2841,14 +2748,12 @@ msgstr "Bool-vectors"
 #. type: Plain text
 #: original_texis/sequences.texi:1495
 msgid "A bool-vector is much like a vector, except that it stores only the values @code{t} and @code{nil}.  If you try to store any non-@code{nil} value into an element of the bool-vector, the effect is to store @code{t} there.  As with all arrays, bool-vector indices start from 0, and the length cannot be changed once the bool-vector is created.  Bool-vectors are constants when evaluated."
-msgstr "ブールベクター(bool-vector)はベクターとよく似ていますが、値に@code{t}と@code{nil}しか格納できません。ブールベクターの要素に非@code{nil}値の格納を試みた場合、そこに@code{t}が格納されます。すべての配列と同様、ブールベクターのインデックスは0から開始され、1度ブールベクターが作成されたら、長さを変更することはできません。ブールベクターは定数として評価されます。"
+msgstr "ブールベクター(bool-vector)はベクターとよく似ていますが、値に@code{t}と@code{nil}しか格納できません。ブールベクターの要素に非@code{nil}値の格納を試みたると、そこには@code{t}が格納されます。すべての配列と同様、ブールベクターのインデックスは0から開始され、一度ブールベクターが作成されたら長さを変更することはできません。ブールベクターは定数として評価されます。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1499
-#, fuzzy
-#| msgid "There are two special functions for working with bool-vectors; aside from that, you manipulate them with same functions used for other kinds of arrays."
 msgid "Several functions work specifically with bool-vectors; aside from that, you manipulate them with same functions used for other kinds of arrays."
-msgstr "ブールベクターを処理する、特別な関数が2つあります。その関数意外にも、他の種類の配列に使用されるのと同じ関数で、ブールベクターを操作できます。"
+msgstr "ブールベクターを処理する特別な関数がいくつかあります。その関数以外にも、他の種類の配列に使用されるのと同じ関数でブールベクターを操作できます。"
 
 #. type: defun
 #: original_texis/sequences.texi:1500
@@ -2859,21 +2764,18 @@ msgstr "make-bool-vector length initial"
 #. type: defun
 #: original_texis/sequences.texi:1503
 msgid "Return a new bool-vector of @var{length} elements, each one initialized to @var{initial}."
-msgstr "@var{initial}に初期化された、@var{length}要素の新しいブールベクターをreturnします。"
+msgstr "@var{initial}に初期化された@var{length}要素の新しいブールベクターをリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1505
-#, fuzzy, no-wrap
-#| msgid "vector &rest objects"
+#, no-wrap
 msgid "bool-vector &rest objects"
-msgstr "vector &rest objects"
+msgstr "bool-vector &rest objects"
 
 #. type: defun
 #: original_texis/sequences.texi:1508
-#, fuzzy
-#| msgid "This function creates and returns a vector whose elements are the arguments, @var{objects}."
 msgid "This function creates and returns a bool-vector whose elements are the arguments, @var{objects}."
-msgstr "この関数は、引数@var{objects}を要素にもつベクターを作成してreturnします。"
+msgstr "この関数は引数@var{objects}を要素にもつブールベクターを作成してリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1510
@@ -2884,7 +2786,7 @@ msgstr "bool-vector-p object"
 #. type: defun
 #: original_texis/sequences.texi:1513
 msgid "This returns @code{t} if @var{object} is a bool-vector, and @code{nil} otherwise."
-msgstr "この関数は、@var{object}がブールベクターであれば@code{t}、それ以外は@code{nil}をreturnします。"
+msgstr "この関数は@var{object}がブールベクターであれば@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1516
@@ -2900,7 +2802,7 @@ msgstr "bool-vector-exclusive-or a b &optional c"
 #. type: defun
 #: original_texis/sequences.texi:1521
 msgid "Return @dfn{bitwise exclusive or} of bool vectors @var{a} and @var{b}.  If optional argument @var{c} is given, the result of this operation is stored into @var{c}.  All arguments should be bool vectors of the same length."
-msgstr "ブールベクター@var{a}と@var{b}の、@dfn{ビットごとの排他的論理和(bitwise exclusive or)}をreturnします。オプション引数@var{c}が与えられた場合、この処理の結果は@var{c}に格納されます。引数はすべて、同じ長さのブールベクターを指定します。"
+msgstr "ブールベクター@var{a}と@var{b}の@dfn{ビットごとの排他的論理和(bitwise exclusive or)}をリターンする。オプション引数@var{c}が与えられたら、この処理の結果は@var{c}に格納される。引数にはすべて同じ長さのブールベクターを指定すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:1523
@@ -2911,7 +2813,7 @@ msgstr "bool-vector-union a b &optional c"
 #. type: defun
 #: original_texis/sequences.texi:1527
 msgid "Return @dfn{bitwise or} of bool vectors @var{a} and @var{b}.  If optional argument @var{c} is given, the result of this operation is stored into @var{c}.  All arguments should be bool vectors of the same length."
-msgstr "ブールベクター@var{a}と@var{b}の、@dfn{ビットごとの論理和(bitwise or)}をreturnします。オプション引数@var{c}が与えられた場合、この処理の結果は@var{c}に格納されます。引数はすべて、同じ長さのブールベクターを指定します。"
+msgstr "ブールベクター@var{a}と@var{b}の@dfn{ビットごとの論理和(bitwise or)}をリターンする。オプション引数@var{c}が与えられたら、この処理の結果は@var{c}に格納される。引数にはすべて同じ長さのブールベクターを指定すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:1529
@@ -2922,7 +2824,7 @@ msgstr "bool-vector-intersection a b &optional c"
 #. type: defun
 #: original_texis/sequences.texi:1533
 msgid "Return @dfn{bitwise and} of bool vectors @var{a} and @var{b}.  If optional argument @var{c} is given, the result of this operation is stored into @var{c}.  All arguments should be bool vectors of the same length."
-msgstr "ブールベクター@var{a}と@var{b}の、@dfn{ビットごとの論理積(bitwise and)}をreturnします。オプション引数@var{c}が与えられた場合、この処理の結果は@var{c}に格納されます。引数はすべて、同じ長さのブールベクターを指定します。"
+msgstr "ブールベクター@var{a}と@var{b}の@dfn{ビットごとの論理積(bitwise and)}をリターンする。オプション引数@var{c}が与えられたら、この処理の結果は@var{c}に格納される。引数にはすべて同じ長さのブールベクターを指定すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:1535
@@ -2933,7 +2835,7 @@ msgstr "bool-vector-set-difference a b &optional c"
 #. type: defun
 #: original_texis/sequences.texi:1539
 msgid "Return @dfn{set difference} of bool vectors @var{a} and @var{b}.  If optional argument @var{c} is given, the result of this operation is stored into @var{c}.  All arguments should be bool vectors of the same length."
-msgstr "ブールベクター@var{a}と@var{b}の、@dfn{差集合(set difference)}をreturnします。オプション引数@var{c}が与えられた場合、この処理の結果は@var{c}に格納されます。引数はすべて、同じ長さのブールベクターを指定します。"
+msgstr "ブールベクター@var{a}と@var{b}の@dfn{差集合(set difference)}をリターンする。オプション引数@var{c}が与えられたら、この処理の結果は@var{c}に格納される。引数にはすべて同じ長さのブールベクターを指定すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:1541
@@ -2944,7 +2846,7 @@ msgstr "bool-vector-not a &optional b"
 #. type: defun
 #: original_texis/sequences.texi:1545
 msgid "Return @dfn{set complement} of bool vector @var{a}.  If optional argument @var{b} is given, the result of this operation is stored into @var{b}.  All arguments should be bool vectors of the same length."
-msgstr "ブールベクター@var{a}の、@dfn{補集合(set complement)}をreturnします。オプション引数@var{b}が与えられた場合、この処理の結果は@var{b}に格納されます。引数はすべて、同じ長さのブールベクターを指定します。"
+msgstr "ブールベクター@var{a}の@dfn{補集合(set complement)}をリターンする。オプション引数@var{b}が与えられたら、この処理の結果は@var{b}に格納される。引数にはすべて同じ長さのブールベクターを指定すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:1547
@@ -2955,7 +2857,7 @@ msgstr "bool-vector-subsetp a b"
 #. type: defun
 #: original_texis/sequences.texi:1551
 msgid "Return @code{t} if every @code{t} value in @var{a} is also t in @var{b}, @code{nil} otherwise.  All arguments should be bool vectors of the same length."
-msgstr "@var{a}内のすべての@code{t}値が、@var{b}でも@code{t}値の場合は@code{t}、それ以外は@code{nil}をreturnします。引数はすべて、同じ長さのブールベクターを指定します。"
+msgstr "@var{a}内のすべての@code{t}値が、@var{b}でも@code{t}値なら@code{t}、それ以外は@code{nil}をリターンする。引数にはすべて同じ長さのブールベクターを指定すること。"
 
 #. type: defun
 #: original_texis/sequences.texi:1553
@@ -2966,7 +2868,7 @@ msgstr "bool-vector-count-consecutive a b i"
 #. type: defun
 #: original_texis/sequences.texi:1557
 msgid "Return the number of consecutive elements in @var{a} equal @var{b} starting at @var{i}.  @code{a} is a bool vector, @var{b} is @code{t} or @code{nil}, and @var{i} is an index into @code{a}."
-msgstr "@var{i}から始まる@var{a}の、@var{b}と等しい連続する要素の数をreturnします。@code{a}はブールベクターで、@var{b}は@code{t}か@code{nil}、@var{i}は@code{a}のインデックスです。"
+msgstr "@var{i}から始まる@var{a}の、@var{b}と等しい連続する要素の数をリターンする。@code{a}はブールベクターで、@var{b}は@code{t}か@code{nil}、@var{i}は@code{a}のインデックス。"
 
 #. type: defun
 #: original_texis/sequences.texi:1559
@@ -2977,58 +2879,46 @@ msgstr "bool-vector-count-population a"
 #. type: defun
 #: original_texis/sequences.texi:1561
 msgid "Return the number of elements that are @code{t} in bool vector @var{a}."
-msgstr "ブールベクター@var{a}の、@code{t}の要素の数をreturnします。"
+msgstr "ブールベクター@var{a}から@code{t}であるような要素の数をリターンする。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1565
-#, fuzzy
-#| msgid "Here is an example of creating, examining, and updating a bool-vector.  Note that the printed form represents up to 8 boolean values as a single character."
 msgid "The printed form represents up to 8 boolean values as a single character:"
-msgstr "以下はブールベクターを作成、確認、更新する例です。長さ8以下のブール値のプリント表記は、1つの文字で表されることに注意してください。"
+msgstr "長さ8以下のブール値のプリント表記は1文字で表されます。"
 
 #. type: group
 #: original_texis/sequences.texi:1572
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(vectorp [a])\n"
-#| "     @result{} t\n"
-#| "(vectorp \"asdf\")\n"
-#| "     @result{} nil\n"
+#, no-wrap
 msgid ""
 "(bool-vector t nil t nil)\n"
 "     @result{} #&4\"^E\"\n"
 "(bool-vector)\n"
 "     @result{} #&0\"\"\n"
 msgstr ""
-"(vectorp [a])\n"
-"     @result{} t\n"
-"(vectorp \"asdf\")\n"
-"     @result{} nil\n"
+"(bool-vector t nil t nil)\n"
+"     @result{} #&4\"^E\"\n"
+"(bool-vector)\n"
+"     @result{} #&0\"\"\n"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1576
 msgid "You can use @code{vconcat} to print a bool-vector like other vectors:"
-msgstr ""
+msgstr "他のベクター同様、@code{vconcat}を使用してブールベクターをプリントできます:"
 
 #. type: group
 #: original_texis/sequences.texi:1581
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(length (make-bool-vector 5 nil))\n"
-#| "    @result{} 5\n"
+#, no-wrap
 msgid ""
 "(vconcat (bool-vector nil t nil t))\n"
 "     @result{} [nil t nil t]\n"
 msgstr ""
-"(length (make-bool-vector 5 nil))\n"
-"    @result{} 5\n"
+"(vconcat (bool-vector nil t nil t))\n"
+"     @result{} [nil t nil t]\n"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1586
-#, fuzzy
-#| msgid "Here is an example of creating, examining, and updating a bool-vector.  Note that the printed form represents up to 8 boolean values as a single character."
 msgid "Here is another example of creating, examining, and updating a bool-vector:"
-msgstr "以下はブールベクターを作成、確認、更新する例です。長さ8以下のブール値のプリント表記は、1つの文字で表されることに注意してください。"
+msgstr "以下はブールベクターを作成、確認、更新する別の例です:"
 
 #. type: example
 #: original_texis/sequences.texi:1596
@@ -3055,7 +2945,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/sequences.texi:1601
 msgid "These results make sense because the binary codes for control-_ and control-W are 11111 and 10111, respectively."
-msgstr "control-_の2進コードは11111、control-Wは10111なので、この結果は理解できるでしょう。"
+msgstr "control-_の2進コードは11111、control-Wは10111なので、この結果は理にかなっています。"
 
 #. type: section
 #: original_texis/sequences.texi:1603
@@ -3072,14 +2962,12 @@ msgstr "ring data structure"
 #. type: Plain text
 #: original_texis/sequences.texi:1610
 msgid "A @dfn{ring} is a fixed-size data structure that supports insertion, deletion, rotation, and modulo-indexed reference and traversal.  An efficient ring data structure is implemented by the @code{ring} package.  It provides the functions listed in this section."
-msgstr "@dfn{リング(ring)}は、挿入、削除、ローテーション、剰余(modulo)でインデックスづけされた参照と走査(traversal)をサポートする、固定長のデータ構造です。@code{ring}パッケージにより、効率的なリングデータ構造が実装されています。このパッケージは、このセクションにリストされた関数を提供します。"
+msgstr "@dfn{リング(ring)}は挿入、削除、ローテーション、剰余(modulo)でインデックスづけされた、参照と走査(traversal)をサポートする固定長のデータ構造です。@code{ring}パッケージにより効率的なリングデータ構造が実装されています。このパッケージは、このセクションにリストした関数を提供します。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1615
-#, fuzzy
-#| msgid "Note that several ``rings'' in Emacs, like the kill ring and the mark ring, are actually implemented as simple lists, @emph{not} using the @code{ring} package; thus the following functions won't work on them."
 msgid "Note that several rings in Emacs, like the kill ring and the mark ring, are actually implemented as simple lists, @emph{not} using the @code{ring} package; thus the following functions won't work on them."
-msgstr "killリングやマークリングのような、Emacsにあるいくつかの``リング''は、実際には単なるリストとして実装されていることに注意してください。したがって、これらのリングにたいしては、以下の関数は機能しないでしょう。"
+msgstr "Emacsにあるkillリングやマークリングのようないくつかのリングは、実際には単なるリストとして実装されていることに注意してください。したがってこれらのリングにたいしては、以下の関数は機能しないでしょう。"
 
 #. type: defun
 #: original_texis/sequences.texi:1616
@@ -3090,7 +2978,7 @@ msgstr "make-ring size"
 #. type: defun
 #: original_texis/sequences.texi:1619
 msgid "This returns a new ring capable of holding @var{size} objects.  @var{size} should be an integer."
-msgstr "この関数は、@var{size}オブジェクトを保持できる、新しいリングをreturnします。@var{size}は整数です。"
+msgstr "この関数は@var{size}オブジェクトを保持できる、新しいリングをリターンする。@var{size}は整数。"
 
 #. type: defun
 #: original_texis/sequences.texi:1621
@@ -3101,7 +2989,7 @@ msgstr "ring-p object"
 #. type: defun
 #: original_texis/sequences.texi:1623
 msgid "This returns @code{t} if @var{object} is a ring, @code{nil} otherwise."
-msgstr "この関数は、@var{object}がリングの場合は@code{t}、それ以外は@code{nil}をreturnします。"
+msgstr "この関数は@var{object}がリングなら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1625
@@ -3112,7 +3000,7 @@ msgstr "ring-size ring"
 #. type: defun
 #: original_texis/sequences.texi:1627
 msgid "This returns the maximum capacity of the @var{ring}."
-msgstr "この関数は、@var{ring}の最大の要素数をreturnします。"
+msgstr "この関数は@var{ring}の最大の要素数をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1629
@@ -3123,7 +3011,7 @@ msgstr "ring-length ring"
 #. type: defun
 #: original_texis/sequences.texi:1632
 msgid "This returns the number of objects that @var{ring} currently contains.  The value will never exceed that returned by @code{ring-size}."
-msgstr "この関数は、@var{ring}に現在含まれている、オブジェクトの数をreturnします。値は、@code{ring-size}でreturnされる値を超えることはありません。"
+msgstr "この関数は@var{ring}に現在含まれるオブジェクトの数をリターンする。値が@code{ring-size}のリターンする値を超えることはない。"
 
 #. type: defun
 #: original_texis/sequences.texi:1634
@@ -3134,7 +3022,7 @@ msgstr "ring-elements ring"
 #. type: defun
 #: original_texis/sequences.texi:1636
 msgid "This returns a list of the objects in @var{ring}, in order, newest first."
-msgstr "この関数は、@var{ring}内のオブジェクトのリストをreturnします。リストの順序は、新しいオブジェクトが先頭になります。"
+msgstr "この関数は@var{ring}内のオブジェクトのリストをリターンする。リストの順序は新しいオブジェクトが先頭になる。"
 
 #. type: defun
 #: original_texis/sequences.texi:1638
@@ -3145,7 +3033,7 @@ msgstr "ring-copy ring"
 #. type: defun
 #: original_texis/sequences.texi:1641
 msgid "This returns a new ring which is a copy of @var{ring}.  The new ring contains the same (@code{eq}) objects as @var{ring}."
-msgstr "個の関数は、@var{ring}のコピーを新しいリングとしてreturnします。新しいリングは、@var{ring}と同じ(@code{eq}な)オブジェクトを含みます。"
+msgstr "この関数は新しいリングとして@var{ring}のコピーをリターンする。新しいリングは@var{ring}と同じ(@code{eq}な)オブジェクトを含む。"
 
 #. type: defun
 #: original_texis/sequences.texi:1643
@@ -3156,12 +3044,12 @@ msgstr "ring-empty-p ring"
 #. type: defun
 #: original_texis/sequences.texi:1645
 msgid "This returns @code{t} if @var{ring} is empty, @code{nil} otherwise."
-msgstr "この関数は、@var{ring}が空の場合は@code{t}、それ以外は@code{nil}をreturnします。"
+msgstr "この関数は@var{ring}が空なら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: Plain text
 #: original_texis/sequences.texi:1651
 msgid "The newest element in the ring always has index 0.  Higher indices correspond to older elements.  Indices are computed modulo the ring length.  Index @minus{}1 corresponds to the oldest element, @minus{}2 to the next-oldest, and so forth."
-msgstr "リング内の1番新しい要素は、常にインデックス0をもちます。より大きいインデックスは、より古い要素に対応します。インデックスは、リング長のmoduloにより計算されます。インデックス@minus{}1は1番古い要素、@minus{}2は次に古い要素、...となります。"
+msgstr "リング内の1番新しい要素は常にインデックス0をもちます。より大きいインデックスは、より古い要素に対応します。インデックスはリング長のmoduloにより計算されます。インデックス@minus{}1は1番古い要素、@minus{}2は次に古い要素、...となります。"
 
 #. type: defun
 #: original_texis/sequences.texi:1652
@@ -3172,7 +3060,7 @@ msgstr "ring-ref ring index"
 #. type: defun
 #: original_texis/sequences.texi:1656
 msgid "This returns the object in @var{ring} found at index @var{index}.  @var{index} may be negative or greater than the ring length.  If @var{ring} is empty, @code{ring-ref} signals an error."
-msgstr "この関数はインデックス@var{index}にある@var{ring}内のオブジェクトをreturnします。@var{index}には負、またはリング長より大きい数を指定できます。@var{ring}がからの場合、@code{ring-ref}はエラーをシグナルします。"
+msgstr "この関数はインデックス@var{index}にある@var{ring}内のオブジェクトをリターンする。@var{index}には負やリング長より大きい数を指定できる。@var{ring}が空なら@code{ring-ref}はエラーをシグナルする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1658
@@ -3183,12 +3071,12 @@ msgstr "ring-insert ring object"
 #. type: defun
 #: original_texis/sequences.texi:1661
 msgid "This inserts @var{object} into @var{ring}, making it the newest element, and returns @var{object}."
-msgstr "この関数は、1番新しい要素として@var{object}を@var{ring}に挿入し、@var{object}をreturnします。"
+msgstr "この関数は1番新しい要素として@var{object}を@var{ring}に挿入して@var{object}をリターンする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1664
 msgid "If the ring is full, insertion removes the oldest element to make room for the new element."
-msgstr "リングが一杯の場合、新しい要素のための空きを作るため、挿入により1番古い要素が削除されます。"
+msgstr "リングが満杯なら新しい要素用の空きを作るために、挿入により1番古い要素が削除される。"
 
 #. type: defun
 #: original_texis/sequences.texi:1666
@@ -3199,7 +3087,7 @@ msgstr "ring-remove ring &optional index"
 #. type: defun
 #: original_texis/sequences.texi:1671
 msgid "Remove an object from @var{ring}, and return that object.  The argument @var{index} specifies which item to remove; if it is @code{nil}, that means to remove the oldest item.  If @var{ring} is empty, @code{ring-remove} signals an error."
-msgstr "@var{ring}からオブジェクトを削除して、そのオブジェクトをreturnします。引数@var{index}は、どのアイテムを削除するかを指定します。これが@code{nil}の場合、それは1番古いアイテムを削除することを意味します。@var{ring}が空の場合、@code{ring-remove}はエラーをシグナルします。"
+msgstr "@var{ring}からオブジェクトを削除してそのオブジェクトをリターンする。引数@var{index}はどのアイテムを削除するかを指定する。これが@code{nil}なら、それは1番古いアイテムを削除することを意味する。@var{ring}が空なら@code{ring-remove}はエラーをシグナルする。"
 
 #. type: defun
 #: original_texis/sequences.texi:1673
@@ -3210,12 +3098,12 @@ msgstr "ring-insert-at-beginning ring object"
 #. type: defun
 #: original_texis/sequences.texi:1676
 msgid "This inserts @var{object} into @var{ring}, treating it as the oldest element.  The return value is not significant."
-msgstr "この関数は、1番古い要素として、@var{object}を@var{ring}に挿入します。return値は、意味をもちません。"
+msgstr "この関数は1番古い要素として@var{object}を@var{ring}に挿入する。リターン値に意味はない。"
 
 #. type: defun
 #: original_texis/sequences.texi:1679
 msgid "If the ring is full, this function removes the newest element to make room for the inserted element."
-msgstr "リングが一杯の場合、この関数は挿入される要素のための空きを作るために、1番新しい要素を削除します。"
+msgstr "リングが満杯なら、この関数は挿入される要素のための空きを作るために1番新しい要素を削除する。"
 
 #. type: cindex
 #: original_texis/sequences.texi:1681
@@ -3226,7 +3114,7 @@ msgstr "fifo data structure"
 #. type: Plain text
 #: original_texis/sequences.texi:1684
 msgid "If you are careful not to exceed the ring size, you can use the ring as a first-in-first-out queue.  For example:"
-msgstr "リングサイズを超えることを気にしない場合、そのリングをFIFO(first-in-first-out: 先入れ先出し)のキューとして使用することができます。たとえば:"
+msgstr "リングサイズを超過しないよう注意すれば、そのリングをFIFO(first-in-first-out: 先入れ先出し)のキューとして使用することができます。たとえば:"
 
 #. type: lisp
 #: original_texis/sequences.texi:1693

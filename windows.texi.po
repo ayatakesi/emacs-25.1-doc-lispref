@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:50+0900\n"
-"PO-Revision-Date: 2018-10-11 06:29+0900\n"
+"PO-Revision-Date: 2019-10-19 00:49+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -369,7 +369,7 @@ msgstr "multiple windows"
 #. type: Plain text
 #: original_texis/windows.texi:66
 msgid "Windows are grouped into frames (@pxref{Frames}).  Each frame contains at least one window; the user can subdivide it into multiple, non-overlapping windows to view several buffers at once.  Lisp programs can use multiple windows for a variety of purposes.  In Rmail, for example, you can view a summary of message titles in one window, and the contents of the selected message in another window."
-msgstr "ウィンドウは、フレームへとグループ化されます(@ref{Frames}を参照)。それぞれのフレームは、最低でも1つのウィンドウを含みます。ユーザーは、複数のバッファーを1度に閲覧するために、それを複数のオーバーラップしないウィンドウに分割することができます。Lispプログラムは、さまざまな目的にたいして、複数のウィンドウを使用できます。たとえばRmailでは、1つのウィンドウでメッセージタイトル、もう一方のウィンドウで選択したメッセージのコンテンツを閲覧できます。"
+msgstr "ウィンドウは、フレームへとグループ化されます(@ref{Frames}を参照)。それぞれのフレームは、最低でも1つのウィンドウを含みます。ユーザーは、複数のバッファーを一度に閲覧するために、それを複数のオーバーラップしないウィンドウに分割することができます。Lispプログラムは、さまざまな目的にたいして、複数のウィンドウを使用できます。たとえばRmailでは、1つのウィンドウでメッセージタイトル、もう一方のウィンドウで選択したメッセージのコンテンツを閲覧できます。"
 
 #. type: cindex
 #: original_texis/windows.texi:67
