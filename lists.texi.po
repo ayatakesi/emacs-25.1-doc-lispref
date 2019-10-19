@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-18 18:00+0900\n"
+"PO-Revision-Date: 2019-10-19 15:17+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -1492,7 +1492,7 @@ msgstr "destructive list operations"
 #. type: Plain text
 #: original_texis/lists.texi:804
 msgid "You can modify the @sc{car} and @sc{cdr} contents of a cons cell with the primitives @code{setcar} and @code{setcdr}.  These are destructive operations because they change existing list structure."
-msgstr "基本関数@code{setcar}と@code{setcdr}により、コンスセルの@sc{car}および@sc{cdr}の内容を変更できます。わたしたちは、これらは既存のリスト構造を変更するので、これらを破壊的処理です。"
+msgstr "プリミティブ関数@code{setcar}と@code{setcdr}により、コンスセルの@sc{car}および@sc{cdr}の内容を変更できます。わたしたちは、これらは既存のリスト構造を変更するので、これらを破壊的処理です。"
 
 #. type: cindex
 #: original_texis/lists.texi:805
@@ -1764,7 +1764,7 @@ msgstr "replace part of list"
 #. type: Plain text
 #: original_texis/lists.texi:935
 msgid "The lowest-level primitive for modifying a @sc{cdr} is @code{setcdr}:"
-msgstr "@sc{cdr}を変更するもっとも低レベルの基本関数は@code{setcdr}です:"
+msgstr "@sc{cdr}を変更するもっとも低レベルのプリミティブ関数は@code{setcdr}です:"
 
 #. type: defun
 #: original_texis/lists.texi:936

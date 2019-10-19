@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:47+0900\n"
-"PO-Revision-Date: 2019-10-17 21:55+0900\n"
+"PO-Revision-Date: 2019-10-19 15:15+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -1751,9 +1751,8 @@ msgstr "エラーの@dfn{シグナリング(signaling)}とは、エラーの処�
 #. type: Plain text
 #: original_texis/control.texi:1069
 #, fuzzy
-#| msgid "Most errors are signaled ``automatically'' within Lisp primitives which you call for other purposes, such as if you try to take the @sc{car} of an integer or move forward a character at the end of the buffer.  You can also signal errors explicitly with the functions @code{error} and @code{signal}."
 msgid "Most errors are signaled automatically within Lisp primitives which you call for other purposes, such as if you try to take the @sc{car} of an integer or move forward a character at the end of the buffer.  You can also signal errors explicitly with the functions @code{error} and @code{signal}."
-msgstr "ほとんどのエラーは、たとえば、整数にたいして@sc{car}を求めたり、バッファーの最後で1文字前方に移動したときなどのように、他の目的のために呼び出したLisp基本関数の中で、``自動的''にシグナルされます。関数@code{error}と@code{signal}で、明示的にエラーをシグナルすることもできます。"
+msgstr "ほとんどのエラーは、たとえば、整数にたいして@sc{car}を求めたり、バッファーの最後で1文字前方に移動したときなどのように、他の目的のために呼び出したLispプリミティブ関数の中で、``自動的''にシグナルされます。関数@code{error}と@code{signal}で、明示的にエラーをシグナルすることもできます。"
 
 #. type: Plain text
 #: original_texis/control.texi:1073
@@ -1942,7 +1941,7 @@ msgstr "command-error-function"
 #. type: defvar
 #: original_texis/control.texi:1210
 msgid "This variable, if non-@code{nil}, specifies a function to use to handle errors that return control to the Emacs command loop.  The function should take three arguments: @var{data}, a list of the same form that @code{condition-case} would bind to its variable; @var{context}, a string describing the situation in which the error occurred, or (more often) @code{nil}; and @var{caller}, the Lisp function which called the primitive that signaled the error."
-msgstr "この変数は、もし非@code{nil}の場合はEmacsのコマンドループに制御をreturnしたエラーの処理に使用する関数を指定します。この関数は3つの引数をとります。1つ目は@var{data}で、@code{condition-case}が自身の変数にバインドするのと同じフォームです。2つ目は@var{context}で、これはエラーが発生した状況を記述する文字列、または@code{nil}（よくある）です。3つ目は@var{caller}で、これはエラーをシグナルした基本関数を呼び出したLisp関数です。"
+msgstr "この変数は、もし非@code{nil}の場合はEmacsのコマンドループに制御をreturnしたエラーの処理に使用する関数を指定します。この関数は3つの引数をとります。1つ目は@var{data}で、@code{condition-case}が自身の変数にバインドするのと同じフォームです。2つ目は@var{context}で、これはエラーが発生した状況を記述する文字列、または@code{nil}（よくある）です。3つ目は@var{caller}で、これはエラーをシグナルしたプリミティブ関数を呼び出したLisp関数です。"
 
 #. type: cindex
 #: original_texis/control.texi:1212
@@ -2003,7 +2002,7 @@ msgstr "@code{condition-case}構成は、@code{insert-file-contents}呼び出し
 #. type: Plain text
 #: original_texis/control.texi:1259
 msgid "The second argument of @code{condition-case} is called the @dfn{protected form}.  (In the example above, the protected form is a call to @code{delete-file}.)  The error handlers go into effect when this form begins execution and are deactivated when this form returns.  They remain in effect for all the intervening time.  In particular, they are in effect during the execution of functions called by this form, in their subroutines, and so on.  This is a good thing, since, strictly speaking, errors can be signaled only by Lisp primitives (including @code{signal} and @code{error}) called by the protected form, not by the protected form itself."
-msgstr "@code{condition-case}の2番目の引数は、@dfn{保護されたフォーム(protected form)}と呼ばれます(上記の例では、保護されたフォームは、@code{delete-file}の呼び出しです)。このフォームの実行が開始されると、エラーハンドラーは効果をもち、このフォームがreturnすると不活性になります。その間のすべてにおいて、エラーハンドラーは効果をもちます。特に、このフォームで呼び出された関数、およびそのサブルーチンなどを実行する間、エラーハンドラーは効果をもちます。厳密にいうと、保護されたフォーム自身ではなく、保護されたフォームにより呼び出されたLisp基本関数(@code{signal}と@code{error}を含む)だけがシグナルされるというのは、よいことです。"
+msgstr "@code{condition-case}の2番目の引数は、@dfn{保護されたフォーム(protected form)}と呼ばれます(上記の例では、保護されたフォームは、@code{delete-file}の呼び出しです)。このフォームの実行が開始されると、エラーハンドラーは効果をもち、このフォームがreturnすると不活性になります。その間のすべてにおいて、エラーハンドラーは効果をもちます。特に、このフォームで呼び出された関数、およびそのサブルーチンなどを実行する間、エラーハンドラーは効果をもちます。厳密にいうと、保護されたフォーム自身ではなく、保護されたフォームにより呼び出されたLispプリミティブ関数(@code{signal}と@code{error}を含む)だけがシグナルされるというのは、よいことです。"
 
 #. type: Plain text
 #: original_texis/control.texi:1267
