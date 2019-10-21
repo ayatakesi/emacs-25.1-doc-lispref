@@ -78,7 +78,7 @@ case ${1} in
 	perl -pe 's/\@section Numeric Conversions/\@section 数値の変換/' -i numbers-ja.texi;
 	perl -pe 's/\@section Arithmetic Operations/\@section 算術演算/' -i numbers-ja.texi;
 	perl -pe 's/\@section Rounding Operations/\@section 丸め処理/' -i numbers-ja.texi;
-	perl -pe 's/\@section Bitwise Operations on Integers/\@section 整数のビット演算/' -i numbers-ja.texi;
+	perl -pe 's/\@section Bitwise Operations/\@section ビット演算/' -i numbers-ja.texi;
 	perl -pe 's/\@section Standard Mathematical Functions/\@section 標準的な数学関数/' -i numbers-ja.texi;
 	perl -pe 's/\@section Random Numbers/\@section 乱数/' -i numbers-ja.texi;
 	;;
@@ -153,6 +153,28 @@ case ${1} in
 	perl -pe 's/\@section Quoting/\@section クォート/' -i eval-ja.texi;
 	perl -pe 's/\@section Backquote/\@section バッククォート/' -i eval-ja.texi;
 	perl -pe 's/\@section Eval/\@section eval/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Combining Conditions}/\@ref{Combining Conditions}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Catch and Throw}/\@ref{Catch and Throw}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Conditionals}/\@ref{Conditionals}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Handling Errors}/\@ref{Handling Errors}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Defining Variables}/\@ref{Defining Variables}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Defining Variables}/\@ref{Defining Variables}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Anonymous Functions}/\@ref{Anonymous Functions}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Conditionals}/\@ref{Conditionals}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Interactive Call}/\@ref{Interactive Call}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Lambda Expressions}/\@ref{Lambda Expressions}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Local Variables}/\@ref{Local Variables}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Combining Conditions}/\@ref{Combining Conditions}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Sequencing}/\@ref{Sequencing}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Quoting}/\@ref{Quoting}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Current Buffer}/\@ref{Current Buffer}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Excursions}/\@ref{Excursions}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Narrowing}/\@ref{Narrowing}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Setting Variables}/\@ref{Setting Variables}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Creating Buffer-Local}/\@ref{Creating Buffer-Local}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Mouse Tracking}/\@ref{Mouse Tracking}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Nonlocal Exits}/\@ref{Nonlocal Exits}を参照のこと。/' -i eval-ja.texi;
+	perl -pe 's/^\@pxref{Iteration}/\@ref{Iteration}を参照のこと。/' -i eval-ja.texi;
 	;;
     control-ja.texi)
 	perl -pe 's/\@chapter Control Structures/\@chapter 制御構造/' -i control-ja.texi;

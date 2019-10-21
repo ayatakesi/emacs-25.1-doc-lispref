@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-05 02:58+0900\n"
+"PO-Revision-Date: 2019-10-22 03:38+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -72,9 +72,8 @@ msgstr "checkdoc-minor-mode"
 #. type: Plain text
 #: original_texis/tips.texi:28
 #, fuzzy
-#| msgid "You can automatically check some of the conventions described below by running the command @kbd{M-x checkdoc RET} when visiting a Lisp file.  It cannot check all of the conventions, and not all the warnings it gives necessarily correspond to problems, but it is worth examining them all."
 msgid "You can automatically check some of the conventions described below by running the command @kbd{M-x checkdoc RET} when visiting a Lisp file.  It cannot check all of the conventions, and not all the warnings it gives necessarily correspond to problems, but it is worth examining them all.  Alternatively, use the command @kbd{M-x checkdoc-current-buffer RET} to check the conventions in the current buffer, or @code{checkdoc-file} when you want to check a file in batch mode, e.g., with a command run by @kbd{@w{M-x compile RET}}."
-msgstr "以降で説明する慣習のいくつかは、Lispファイルのvisit時にコマンド@kbd{M-x checkdoc RET}を実行することにより、自動的にチェックできます。これはすべての監修はチェックできませんし、与えられた警告すべてが必ずしも問題に対応する訳ではありませんが、それらすべてを検証することには価値があります。"
+msgstr "以降で説明する慣習のいくつかは、Lispファイルのvisit時にコマンド@kbd{M-x checkdoc RET}を実行することにより、自動的にチェックできます。これはすべての慣習はチェックできませんし、与えられた警告すべてが必ずしも問題に対応する訳ではありませんが、それらすべてを検証することには価値があります。"
 
 #. type: node
 #: original_texis/tips.texi:38 original_texis/tips.texi:40
