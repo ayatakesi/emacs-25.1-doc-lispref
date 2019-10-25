@@ -196,9 +196,9 @@ case ${1} in
     variables-ja.texi)
 	perl -pe 's/\@chapter Variables/\@chapter 変数/' -i variables-ja.texi;
 	perl -pe 's/\@section Global Variables/\@section グローバル変数/' -i variables-ja.texi;
-	perl -pe 's/\@section Variables that Never Change/\@section 変更不可な変数/' -i variables-ja.texi;
+	perl -pe 's/\@section Variables that never change/\@section 変更不可な変数/' -i variables-ja.texi;
 	perl -pe 's/\@section Local Variables/\@section ローカル変数/' -i variables-ja.texi;
-	perl -pe "s/\@section When a Variable is \`\`Void\'\'/\@section 変数が\`\`void\'\'のとき/" -i variables-ja.texi;
+	perl -pe "s/\@section When a Variable is Void/\@section 変数がvoidのとき/" -i variables-ja.texi;
 	perl -pe 's/\@section Defining Global Variables/\@section グローバル変数の定義/' -i variables-ja.texi;
 	perl -pe 's/\@section Tips for Defining Variables Robustly/\@section 堅牢な変数定義のためのヒント/' -i variables-ja.texi;
 	perl -pe 's/\@section Accessing Variable Values/\@section 変数の値へのアクセス/' -i variables-ja.texi;
@@ -238,7 +238,7 @@ case ${1} in
 	perl -pe 's/\@section Advising Emacs Lisp Functions/\@section Emacs Lisp関数にたいするアドバイス/' -i functions-ja.texi;
 	perl -pe 's/\@subsection Primitives to manipulate advices/\@subsection アドバイスを操作するためのプリミティブ/' -i functions-ja.texi;
 	perl -pe 's/\@subsection Advising Named Functions/\@subsection 名前つき関数にたいするアドバイス/' -i functions-ja.texi;
-	perl -pe 's/\@subsection Ways to compose advices/\@subsection アドバイスの構築方法/' -i functions-ja.texi;
+	perl -pe 's/\@subsection Ways to compose advice/\@subsection アドバイスの構築方法/' -i functions-ja.texi;
 	perl -pe 's/\@subsection Adapting code using the old defadvice/\@subsection 古いdefadviceを使用するコードの改良/' -i functions-ja.texi;
 	perl -pe 's/\@section Declaring Functions Obsolete/\@section 関数を陳腐と宣言する/' -i functions-ja.texi;
 	perl -pe 's/\@section Inline Functions/\@section インライン関数Inline Functions/' -i functions-ja.texi;

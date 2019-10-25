@@ -286,7 +286,7 @@ Properties}を参照)を挿入しようとした場合、挿入関数はエラ�
 Representations}を参照してください。
 
 @defun insert &rest args
-この関数は、文字列および/または1つ以上の文字@var{args}を、カレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。別の言い方をすると、ポイントの前にテキストを挿入する。すべての@var{args}が文字列が文字列と文字のいずれでもない場合は、エラーをシグナルする。値は@code{nil}。
+この関数は、文字列および/または1つ以上の文字@var{args}を、カレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。言い換えると、ポイントの前にテキストを挿入する。すべての@var{args}が文字列が文字列と文字のいずれでもない場合は、エラーをシグナルする。値は@code{nil}。
 @end defun
 
 @defun insert-before-markers &rest args
@@ -2014,7 +2014,7 @@ of text)を処理するほうが、より高速です。
   これらの関数はポイントを移動しません。そのかわりに位置(または@code{nil})をリターンします。ポイントは常に文字と文字の間にあることを思い出してください。これらの関数によりリターンされる位置は、異なるプロパティをもつ、2つの文字の間にあります。
 
 @defun next-property-change pos &optional object limit
-この関数は文字列またはバッファー@var{object}内の位置@var{pos}から、何らかのテキストプロパティの変化が見つかるまで、テキストを前方にスキャンして、変化のあった位置をリターンする。別の言い方をすると、@var{pos}の直後の文字とプロパティが等しくない、@var{pos}の先にある最初の文字の位置をリターンする。
+この関数は文字列またはバッファー@var{object}内の位置@var{pos}から、何らかのテキストプロパティの変化が見つかるまで、テキストを前方にスキャンして、変化のあった位置をリターンする。言い換えると、@var{pos}の直後の文字とプロパティが等しくない、@var{pos}の先にある最初の文字の位置をリターンする。
 
 @var{limit}が非@code{nil}なら、スキャンは位置@var{limit}で停止する。そのポイントより前にプロパティが変化しなければ、この関数は@var{limit}をリターンする。
 
@@ -2038,7 +2038,7 @@ of text)を処理するほうが、より高速です。
 @end defun
 
 @defun next-single-property-change pos prop &optional object limit
-この関数はプロパティ@var{prop}内の変化についてテキストをスキャンして、変化があった位置をリターンする。このスキャンは、文字列またはバッファー@var{object}内の位置@var{pos}から、前方に行われる。別の言い方をすると、@var{pos}の直後の文字とプロパティ@var{prop}が等しくない、@var{pos}の先にある最初の文字の位置をリターンする。
+この関数はプロパティ@var{prop}内の変化についてテキストをスキャンして、変化があった位置をリターンする。このスキャンは、文字列またはバッファー@var{object}内の位置@var{pos}から、前方に行われる。言い換えると、@var{pos}の直後の文字とプロパティ@var{prop}が等しくない、@var{pos}の先にある最初の文字の位置をリターンする。
 
 @var{limit}が非@code{nil}なら、スキャンは位置@var{limit}で終了する。そのポイントより前にプロパティの変化がなければ、@code{next-single-property-change}は@var{limit}をリターンする。
 
@@ -2243,7 +2243,7 @@ moved away of any position that has a non-@code{nil}
 カーソルは通常、カレントバッファー位置にあるオーバーレイ、およびテキストプロパティ文字列の先頭か終端に表示される。文字に非@code{nil}の@code{cursor}テキストプロパティを与えることにより、それら文字列内の、任意の望む文字にカーソルを置くことができる。加えて@code{cursor}プロパティの値が整数なら、それはカーソルがその文字上に表示されるように、オーバーレイまたは@code{display}プロパティが始まる位置から数えたバッファーの文字位置の数字を指定する。特に、ある文字の@code{cursor}プロパティの値が数字@var{n}なら、カーソルは範囲@code{[@var{ovpos}..@var{ovpos}+@var{n})}内の任意のバッファー位置にあるその文字上に表示されるだろう。ここで@var{ovpos}は@code{overlay-start}(@ref{Managing
 Overlays}を参照)により与えられるオーバーレイ開始位置、またはそのバッファー内で@code{display}プロパティが始まる位置である。
 
-他の言い方をすると、文字列の非@code{nil}値の@code{cursor}プロパティをもつ文字は、カーソルが表示される文字である。このプロパティの値は、カーソルを表示するバッファーの位置を告げる。値が整数なら、オーバーレイまたは@code{display}プロパティの始まりから@var{n}後ろの位置までの間にポイントがあるとき、カーソルはそこに表示される。値がそれ以外の非@code{nil}なら、ポイントが@code{display}プロパティの先頭、または@code{overlay-start}の位置だけに表示される。
+言い換えると、文字列の非@code{nil}値の@code{cursor}プロパティをもつ文字は、カーソルが表示される文字である。このプロパティの値は、カーソルを表示するバッファーの位置を告げる。値が整数なら、オーバーレイまたは@code{display}プロパティの始まりから@var{n}後ろの位置までの間にポイントがあるとき、カーソルはそこに表示される。値がそれ以外の非@code{nil}なら、ポイントが@code{display}プロパティの先頭、または@code{overlay-start}の位置だけに表示される。
 
 @cindex cursor position for @code{display} properties and overlays
 When the buffer has many overlay strings (e.g., @pxref{Overlay Properties,
