@@ -262,18 +262,18 @@ case ${1} in
 	perl -pe 's/\@section Indenting Macros/\@section マクロのインデント/' -i macros-ja.texi;
 	;;
     customize-ja.texi)
-	perl -pe 's/\@chapter Customization Settings/\@chapter カスタマイズ設定/' -i customize-ja.texi;
+	perl -pe 's/\@chapter Customization Settings/\@chapter カスタマイゼーション設定/' -i customize-ja.texi;
 	perl -pe 's/\@section Common Item Keywords/\@section 一般的なキーワードアイテム/' -i customize-ja.texi;
-	perl -pe 's/\@section Defining Customization Groups/\@section カスタマイズグループの定義/' -i customize-ja.texi;
-	perl -pe 's/\@section Defining Customization Variables/\@section カスタマイズ変数の定義/' -i customize-ja.texi;
-	perl -pe 's/\@section Customization Types/\@section カスタマイズ型/' -i customize-ja.texi;
+	perl -pe 's/\@section Defining Customization Groups/\@section カスタマイゼーショングループの定義/' -i customize-ja.texi;
+	perl -pe 's/\@section Defining Customization Variables/\@section カスタマイゼーション変数の定義/' -i customize-ja.texi;
+	perl -pe 's/\@section Customization Types/\@section カスタマイゼーション型/' -i customize-ja.texi;
 	perl -pe 's/\@subsection Simple Types/\@subsection 単純型/' -i customize-ja.texi;
 	perl -pe 's/\@subsection Composite Types/\@subsection 複合型/' -i customize-ja.texi;
 	perl -pe 's/\@subsection Splicing into Lists/\@subsection リストへのスプライス/' -i customize-ja.texi;
 	perl -pe 's/\@subsection Type Keywords/\@subsection 型キーワード/' -i customize-ja.texi;
 	perl -pe 's/\@subsection Defining New Types/\@subsection 新たな型の定義/' -i customize-ja.texi;
-	perl -pe 's/\@section Applying Customizations/\@section カスタマイズの適用/' -i customize-ja.texi;
-	perl -pe 's/\@section Custom Themes/\@section カスタムテーマ/' -i customize-ja.texi;
+	perl -pe 's/\@section Applying Customizations/\@section カスタマイゼーションの適用/' -i customize-ja.texi;
+	perl -pe 's/\@section Custom Themes/\@section Customテーマ/' -i customize-ja.texi;
 	;;
     loading-ja.texi)
 	perl -pe 's/\@chapter Loading/\@chapter ロード/' -i loading-ja.texi;

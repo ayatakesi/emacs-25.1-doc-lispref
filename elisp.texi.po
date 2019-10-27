@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-17 21:55+0900\n"
+"PO-Revision-Date: 2019-10-26 02:36+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2965,10 +2965,8 @@ msgstr "Unloading"
 
 #. type: menuentry
 #: original_texis/elisp.texi:619
-#, fuzzy
-#| msgid "How to \"unload\" a library that was loaded."
 msgid "How to unload a library that was loaded."
-msgstr "ロードされたライブラリーを\"unload\"する方法。"
+msgstr "ロードされたライブラリーをunloadする方法。"
 
 #. type: menuentry
 #: original_texis/elisp.texi:619
