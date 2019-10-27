@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 24.5\n"
 "POT-Creation-Date: 2019-10-14 22:47+0900\n"
-"PO-Revision-Date: 2019-02-11 11:29+0900\n"
+"PO-Revision-Date: 2019-10-28 01:01+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -42,17 +42,17 @@ msgstr "compilation (Emacs Lisp)"
 #. type: Plain text
 #: original_texis/compile.texi:16
 msgid "Emacs Lisp has a @dfn{compiler} that translates functions written in Lisp into a special representation called @dfn{byte-code} that can be executed more efficiently.  The compiler replaces Lisp function definitions with byte-code.  When a byte-code function is called, its definition is evaluated by the @dfn{byte-code interpreter}."
-msgstr "Emacs Lispには、Lispで記述された関数を、より効率的に実行できる@dfn{バイトコード(byte-code)}と呼ばれる特別な表現に翻訳する@dfn{コンパイラー(compiler)}があります。コンパイラーはLispの関数定義をバイトコードに置き換えます。バイトコード関数が呼び出されたとき、その定義は@dfn{バイトコードインタープリター(byte-code interpreter)}により評価されます。"
+msgstr "Emacs LispにはLispで記述された関数をより効率的に実行できる、@dfn{バイトコード(byte-code)}と呼ばれる特別な表現に翻訳する@dfn{コンパイラー(compiler)}があります。コンパイラーはLispの関数定義をバイトコードに置き換えます。バイトコード関数が呼び出されたとき、その定義は@dfn{バイトコードインタープリター(byte-code interpreter)}により評価されます。"
 
 #. type: Plain text
 #: original_texis/compile.texi:22
 msgid "Because the byte-compiled code is evaluated by the byte-code interpreter, instead of being executed directly by the machine's hardware (as true compiled code is), byte-code is completely transportable from machine to machine without recompilation.  It is not, however, as fast as true compiled code."
-msgstr "バイトコンパイルされたコードは、(本当のコンパイル済みコードのように)そのマシンのハードウェアにより直接実行されるのではなく、バイトコンパイラーにより評価されるため、バイトコードはリコンパイルしなくてもマシン間での完全な可搬性を有します。しかし、本当にコンパイルされたコードほど高速ではありません。"
+msgstr "バイトコンパイルされたコードは、(本当のコンパイル済みコードのように)そのマシンのハードウェアによって直接実行されるのではなく、バイトコンパイラーによって評価されるため、バイトコードはリコンパイルしなくてもマシン間での完全な可搬性を有します。しかし本当にコンパイルされたコードほど高速ではありません。"
 
 #. type: Plain text
 #: original_texis/compile.texi:25
 msgid "In general, any version of Emacs can run byte-compiled code produced by recent earlier versions of Emacs, but the reverse is not true."
-msgstr "一般的に、任意のバージョンのEmacsはそれ以前のバージョンのEmacsにより生成されたバイトコンパイル済みコードを実行できますが、逆は成り立ちません。"
+msgstr "一般的に任意のバージョンのEmacsはそれ以前のバージョンのEmacsにより生成されたバイトコンパイル済みコードを実行できますが、その逆は成り立ちません。"
 
 #. type: vindex
 #: original_texis/compile.texi:26
@@ -63,7 +63,7 @@ msgstr "no-byte-compile"
 #. type: Plain text
 #: original_texis/compile.texi:29
 msgid "If you do not want a Lisp file to be compiled, ever, put a file-local variable binding for @code{no-byte-compile} into it, like this:"
-msgstr "あるLispファイルを常にコンパイルせずに実行したい場合は、以下のように@code{no-byte-compile}にバインドするファイルローカル変数を配します:"
+msgstr "あるLispファイルを常にコンパイルせずに実行したい場合は、以下のように@code{no-byte-compile}をバインドするファイルローカル変数を配置します:"
 
 #. type: example
 #: original_texis/compile.texi:32
@@ -169,7 +169,7 @@ msgstr "Performance of Byte-Compiled Code"
 #. type: Plain text
 #: original_texis/compile.texi:51
 msgid "A byte-compiled function is not as efficient as a primitive function written in C, but runs much faster than the version written in Lisp.  Here is an example:"
-msgstr "バイトコンパイルされた関数はCで記述されたプリミティブ関数ほど効率的ではありませんがLispで記述されたバージョンよりは高速に実行されます。以下は例です:"
+msgstr "バイトコンパイルされた関数はCで記述されたプリミティブ関数ほど効率的ではありませんが、Lispで記述されたバージョンよりは高速に実行されます。以下は例です:"
 
 #. type: group
 #: original_texis/compile.texi:60
@@ -222,7 +222,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/compile.texi:81
 msgid "In this example, the interpreted code required 10 seconds to run, whereas the byte-compiled code required less than 4 seconds.  These results are representative, but actual results may vary."
-msgstr "この例では、インタープリターによる実行には10秒を要しますが、バイトコンパイルされたコードは4秒未満です。これは典型的な結果例ですが、実際の結果はさまざまでしょう。"
+msgstr "この例ではインタープリターによる実行には10秒を要しますが、バイトコンパイルされたコードは4秒未満です。これは典型的な結果例ですが、実際の結果はさまざまでしょう。"
 
 #. type: section
 #: original_texis/compile.texi:83
@@ -255,12 +255,12 @@ msgstr "macro compilation"
 #. type: Plain text
 #: original_texis/compile.texi:109
 msgid "Be careful when writing macro calls in files that you intend to byte-compile.  Since macro calls are expanded when they are compiled, the macros need to be loaded into Emacs or the byte compiler will not do the right thing.  The usual way to handle this is with @code{require} forms which specify the files containing the needed macro definitions (@pxref{Named Features}).  Normally, the byte compiler does not evaluate the code that it is compiling, but it handles @code{require} forms specially, by loading the specified libraries.  To avoid loading the macro definition files when someone @emph{runs} the compiled program, write @code{eval-when-compile} around the @code{require} calls (@pxref{Eval During Compile}).  For more details, @xref{Compiling Macros}."
-msgstr "バイトコンパイルを意図したファイル内にマクロ呼び出しを記述する際は、注意が必要です。マクロ呼び出しはコンパイル時に展開されるので、そのマクロはEmacsにロードされる必要があります(さもないとバイトコンパイラーは正しく処理しないでしょう)。これを処理する通常の方法は、必要なマクロ定義を含むファイルを@code{require}フォームで指定することです。バイトコンパイラーは通常、コンパイルするコードを評価しませんが、@code{require}フォームは指定されたライブラリーをロードすることにより特別に扱われます。誰かがコンパイルされたプログラムを@emph{実行}する際に、マクロ定義ファイルのロードを回避するには、@code{require}呼び出しの周囲に@code{eval-when-compile}を記述します(@ref{Eval During Compile}を参照)。詳細は@ref{Compiling Macros}を参照してください。"
+msgstr "バイトコンパイルを意図したファイル内にマクロ呼び出しを記述する際には注意が必要です。マクロ呼び出しはコンパイル時に展開されるので、そのマクロはEmacsにロードされる必要があります(さもないとバイトコンパイラーが正しく処理しないだろう)。これを処理する通常の方法は、必要なマクロ定義を含むファイルを@code{require}フォームで指定することです。バイトコンパイラーは通常はコンパイルするコードを評価しませんが、@code{require}フォームは指定されたライブラリーをロードすることにより特別に扱われます。誰かがコンパイルされたプログラムを@emph{実行}する際にマクロ定義ファイルのロードを回避するためには、@code{require}呼び出しの周囲に@code{eval-when-compile}を記述します(@ref{Eval During Compile}を参照)。詳細は@ref{Compiling Macros}を参照してください。"
 
 #. type: Plain text
 #: original_texis/compile.texi:113
 msgid "Inline (@code{defsubst}) functions are less troublesome; if you compile a call to such a function before its definition is known, the call will still work right, it will just run slower."
-msgstr "インライン(@code{defsubst})の関数は、これほど面倒ではありません。定義が判明する前にそのような関数呼び出しをコンパイルした場合でも、その呼び出しは低速になるだけで、正しく機能するでしょう。"
+msgstr "インライン関数(@code{defsubst})はこれほど面倒ではありません。定義が判明する前にそのような関数呼び出しをコンパイルした場合でも、その呼び出しは低速になるだけで正しく機能するでしょう。"
 
 #. type: defun
 #: original_texis/compile.texi:114
@@ -271,7 +271,7 @@ msgstr "byte-compile symbol"
 #. type: defun
 #: original_texis/compile.texi:121
 msgid "This function byte-compiles the function definition of @var{symbol}, replacing the previous definition with the compiled one.  The function definition of @var{symbol} must be the actual code for the function; @code{byte-compile} does not handle function indirection.  The return value is the byte-code function object which is the compiled definition of @var{symbol} (@pxref{Byte-Code Objects})."
-msgstr "この関数は@var{symbol}の関数定義をバイトコンパイルして、以前の定義をコンパイルされた定義に置き換えます。@var{symbol}の関数定義は、その関数にたいする実際のコードでなければなりません。@code{byte-compile}はインダイレクト関数を処理しません。リターン値は、@var{symbol}のコンパイルされた定義であるバイトコード関数ブジェクトです(@ref{Byte-Code Objects}を参照)。"
+msgstr "この関数は@var{symbol}の関数定義をバイトコンパイルして、以前の定義をコンパイルされた定義に置き換える。@var{symbol}の関数定義は、その関数にたいする実際のコードでなければならない。@code{byte-compile}はインダイレクト関数を処理しない。リターン値は、@var{symbol}のコンパイルされた定義であるようなバイトコード関数ブジェクト(@ref{Byte-Code Objects}を参照)。"
 
 #. type: group
 #: original_texis/compile.texi:129
@@ -309,15 +309,13 @@ msgstr ""
 
 #. type: defun
 #: original_texis/compile.texi:146
-#, fuzzy
-#| msgid "If @var{symbol}'s definition is a byte-code function object, @code{byte-compile} does nothing and returns @code{nil}.  It does not ``compile the symbol's definition again'', since the original (non-compiled) code has already been replaced in the symbol's function cell by the byte-compiled code."
 msgid "If @var{symbol}'s definition is a byte-code function object, @code{byte-compile} does nothing and returns @code{nil}.  It does not compile the symbol's definition again, since the original (non-compiled) code has already been replaced in the symbol's function cell by the byte-compiled code."
-msgstr "@var{symbol}の定義がバイトコード関数オブジェクトの場合、@code{byte-compile}は何も行わず@code{nil}をリターンします。そのシンボルの関数セル内の(コンパイルされていない)オリジナルのコードはすでにバイトコンパイルされたコードに置き換えられているので、``シンボルの定義の再コンパイル''はしません。"
+msgstr "@var{symbol}の定義がバイトコード関数オブジェクトなら、@code{byte-compile}は何も行わず@code{nil}をリターンする。そのシンボルの関数セル内の(コンパイルされていない)オリジナルのコードはすでにバイトコンパイルされたコードに置き換えられているので、シンボルの定義の再コンパイルはしない。"
 
 #. type: defun
 #: original_texis/compile.texi:150
 msgid "The argument to @code{byte-compile} can also be a @code{lambda} expression.  In that case, the function returns the corresponding compiled code but does not store it anywhere."
-msgstr "@code{byte-compile}の引数として@code{lambda}式も指定できます。この場合、関数は対応するコンパイル済みコードをリターンしますが、それはどこにも格納されません。"
+msgstr "@code{byte-compile}の引数として@code{lambda}式も指定できる。この場合、関数は対応するコンパイル済みコードをリターンするが、それはどこにも格納されない。"
 
 #. type: deffn
 #: original_texis/compile.texi:152
@@ -333,7 +331,7 @@ msgstr "このコマンドはポイントを含むdefunを読み取りそれを�
 #. type: deffn
 #: original_texis/compile.texi:161
 msgid "@code{compile-defun} normally displays the result of evaluation in the echo area, but if @var{arg} is non-@code{nil}, it inserts the result in the current buffer after the form it compiled."
-msgstr "@code{compile-defun}は通常、評価した結果をエコーエリアに表示しますが、@var{arg}が非@code{nil}の場合は、そのフォームをコンパイルした後にカレントバッファーに結果を挿入します。"
+msgstr "@code{compile-defun}は通常は評価した結果をエコーエリアに表示するが、@var{arg}が非@code{nil}なら、そのフォームをコンパイルした後にカレントバッファーに結果を挿入する。"
 
 #. type: deffn
 #: original_texis/compile.texi:163
@@ -344,22 +342,22 @@ msgstr "Command byte-compile-file filename &optional load"
 #. type: deffn
 #: original_texis/compile.texi:168
 msgid "This function compiles a file of Lisp code named @var{filename} into a file of byte-code.  The output file's name is made by changing the @samp{.el} suffix into @samp{.elc}; if @var{filename} does not end in @samp{.el}, it adds @samp{.elc} to the end of @var{filename}."
-msgstr "この関数は@var{filename}という名前のLispコードファイルを、バイトコードのファイルにコンパイルします。出力となるファイルの名前は、サフィックス@samp{.el}を@samp{.elc}に変更することにより作成されます。@var{filename}が@samp{.el}で終了しない場合は、@samp{.elc}を@var{filename}の最後に付け足します。"
+msgstr "この関数は@var{filename}という名前のLispコードファイルを、バイトコードのファイルにコンパイルする。出力となるファイルの名前は、サフィックス@samp{.el}を@samp{.elc}に変更することにより作成される。@var{filename}が@samp{.el}で終了しない場合には、@samp{.elc}を@var{filename}の最後に付け足す。"
 
 #. type: deffn
 #: original_texis/compile.texi:175
 msgid "Compilation works by reading the input file one form at a time.  If it is a definition of a function or macro, the compiled function or macro definition is written out.  Other forms are batched together, then each batch is compiled, and written so that its compiled code will be executed when the file is read.  All comments are discarded when the input file is read."
-msgstr "コンパイルは入力ファイルから1つのフォームを逐次読み取ることにより機能します。フォームが関数またはマクロの場合は、コンパイル済みの関数またはマクロが書き込まれます。それ以外のフォームはまとめられて、まとめられたものごとにコンパイルされ、そのファイルが読まれたとき実行されるようにコンパイルされたコードが書き込まれます。入力ファイルを読み取る際、すべてのコメントは無視されます。"
+msgstr "コンパイルは入力ファイルから1つのフォームを逐次読み取ることにより機能する。フォームが関数かマクロなら、コンパイル済みの関数かマクロが書き込まれる。それ以外のフォームはまとめられて、まとめられたものごとにコンパイルされて、そのファイルが読まれたとき実行されるようにコンパイルされたコードが書き込まれる。入力ファイルを読み取る際には、すべてのコメントは無視される。"
 
 #. type: deffn
 #: original_texis/compile.texi:178
 msgid "This command returns @code{t} if there were no errors and @code{nil} otherwise.  When called interactively, it prompts for the file name."
-msgstr "このコマンドはエラーのないときは@code{t}、それ以外は@code{nil}をリターンします。インタラクティブに呼び出されたときは、ファイル名の入力をもとめます。"
+msgstr "このコマンドはエラーがなければ@code{t}、それ以外は@code{nil}をリターンする。インタラクティブに呼び出されたときは、ファイル名の入力をもとめる。"
 
 #. type: deffn
 #: original_texis/compile.texi:181
 msgid "If @var{load} is non-@code{nil}, this command loads the compiled file after compiling it.  Interactively, @var{load} is the prefix argument."
-msgstr "@var{load}が非@code{nil}の場合、このコマンドはコンパイルした後にコンパイルされたファイルをロードします。インタラクティブに呼び出された場合、@var{load}はプレフィクス引数です。"
+msgstr "@var{load}が非@code{nil}なら、このコマンドはコンパイルした後にコンパイルしたファイルをロードする。インタラクティブに呼び出された場合、@var{load}はプレフィクス引数である。"
 
 #. type: group
 #: original_texis/compile.texi:186
@@ -408,27 +406,27 @@ msgstr "library compilation"
 #. type: deffn
 #: original_texis/compile.texi:207
 msgid "This command recompiles every @samp{.el} file in @var{directory} (or its subdirectories) that needs recompilation.  A file needs recompilation if a @samp{.elc} file exists but is older than the @samp{.el} file."
-msgstr "このコマンドは、@var{directory}(またはそのサブディレクトリー)内の、リコンパイルを要するすべての@samp{.el}ファイルをリコンパイルします。@samp{.elc}ファイルが存在し、それが@samp{.el}より古いファイルは、リコンパイルが必要です。"
+msgstr "このコマンドは@var{directory}(またはそのサブディレクトリー)内の、リコンパイルを要するすべての@samp{.el}ファイルをリコンパイルする。@samp{.elc}ファイルが存在して、それが@samp{.el}より古いファイルは、リコンパイルが必要となる。"
 
 #. type: deffn
 #: original_texis/compile.texi:213
 msgid "When a @samp{.el} file has no corresponding @samp{.elc} file, @var{flag} says what to do.  If it is @code{nil}, this command ignores these files.  If @var{flag} is 0, it compiles them.  If it is neither @code{nil} nor 0, it asks the user whether to compile each such file, and asks about each subdirectory as well."
-msgstr "@samp{.el}ファイルに対応する@samp{.elc}ファイルが存在しない場合、何を行うかを@var{flag}で指定します。@code{nil}の場合、このコマンドはこれらのファイルを無視します。@var{flag}が0のときは、それらをコンパイルします。@code{nil}と0以外の場合は、それらのファイルをコンパイルするかユーザーに尋ね、同様にそれぞれのサブディレクトリーについても尋ねます。"
+msgstr "@samp{.el}ファイルに対応する@samp{.elc}ファイルが存在しない場合に何を行うかを@var{flag}で指定する。@code{nil}なら、このコマンドはこれらのファイルを無視する。@var{flag}が0なら、それらをコンパイルする。@code{nil}と0以外なら、それらのファイルをコンパイルするかユーザーに尋ねて、同様にそれぞれのサブディレクトリーについても尋ねる。"
 
 #. type: deffn
 #: original_texis/compile.texi:216
 msgid "Interactively, @code{byte-recompile-directory} prompts for @var{directory} and @var{flag} is the prefix argument."
-msgstr "インタラクティブに呼び出された場合、@code{byte-recompile-directory}は@var{directory}の入力を求め、@var{flag}はプレフィクス引数になります。"
+msgstr "インタラクティブに呼び出されると、@code{byte-recompile-directory}は@var{directory}の入力を求めて、@var{flag}はプレフィクス引数となる。"
 
 #. type: deffn
 #: original_texis/compile.texi:219
 msgid "If @var{force} is non-@code{nil}, this command recompiles every @samp{.el} file that has a @samp{.elc} file."
-msgstr "@var{force}が非@code{nil}の場合、このコマンドは@samp{.elc}ファイルのあるすべての@samp{.el}ファイルをリコンパイルします。"
+msgstr "@var{force}が非@code{nil}なら、このコマンドは@samp{.elc}ファイルが存在するすべての@samp{.el}ファイルをリコンパイルする。"
 
 #. type: deffn
 #: original_texis/compile.texi:221
 msgid "The returned value is unpredictable."
-msgstr "リターン値は不定です。"
+msgstr "リターン値は不定。"
 
 #. type: defun
 #: original_texis/compile.texi:223
@@ -439,12 +437,12 @@ msgstr "batch-byte-compile &optional noforce"
 #. type: defun
 #: original_texis/compile.texi:230
 msgid "This function runs @code{byte-compile-file} on files specified on the command line.  This function must be used only in a batch execution of Emacs, as it kills Emacs on completion.  An error in one file does not prevent processing of subsequent files, but no output file will be generated for it, and the Emacs process will terminate with a nonzero status code."
-msgstr "この関数は、コマンドラインで指定されたファイルにたいして、@code{byte-compile-file}を実行します。この関数は処理が完了するとEmacsをkillするので、Emacsのバッチ実行だけで使用しなければなりません。1つのファイルでエラーが発生しても、それにより後続のファイルにたいする処理が妨げられることはありませんが、そのファイルにたいする出力ファイルは生成されず、Emacsプロセスは0以外のステータスコードで終了します。"
+msgstr "この関数はコマンドラインで指定されたファイルにたいして@code{byte-compile-file}を実行する。この関数は処理が完了するとEmacsをkillするので、Emacsのバッチ実行でのみ使用しなければならない。1つのファイルでエラーが発生しても、それによって後続のファイルにたいする処理が妨げられることはないが、そのファイルにたいする出力ファイルは生成されず、Emacsプロセスは0以外のステータスコードで終了する。"
 
 #. type: defun
 #: original_texis/compile.texi:233
 msgid "If @var{noforce} is non-@code{nil}, this function does not recompile files that have an up-to-date @samp{.elc} file."
-msgstr "@var{noforce}が非@code{nil}の場合、この関数は最新の@samp{.elc}ファイルがあるファイルをリコンパイルしません。"
+msgstr "@var{noforce}が非@code{nil}なら、この関数は最新の@samp{.elc}ファイルがあるファイルをリコンパイルしない。"
 
 #. type: example
 #: original_texis/compile.texi:236
@@ -466,20 +464,18 @@ msgstr "dynamic loading of documentation"
 
 #. type: Plain text
 #: original_texis/compile.texi:248
-#, fuzzy
-#| msgid "When Emacs loads functions and variables from a byte-compiled file, it normally does not load their documentation strings into memory.  Each documentation string is ``dynamically'' loaded from the byte-compiled file only when needed.  This saves memory, and speeds up loading by skipping the processing of the documentation strings."
 msgid "When Emacs loads functions and variables from a byte-compiled file, it normally does not load their documentation strings into memory.  Each documentation string is dynamically loaded from the byte-compiled file only when needed.  This saves memory, and speeds up loading by skipping the processing of the documentation strings."
-msgstr "Emacsがバイトコンパイルされたファイルから関数や変数をロードする際、通常はメモリー内にそれらのドキュメント文字列をロードしません。それぞれのドキュメント文字列は、必要なときだけバイトコンパイルされたファイルから``ダイナミック(dynamic: 動的)''にロードされます。ドキュメント文字列の処理をスキップすることにより、メモリーが節約され、ロードが高速になります。"
+msgstr "Emacsがバイトコンパイルされたファイルから関数や変数をロードする際、通常はメモリー内にそれらのドキュメント文字列をロードしません。それぞれのドキュメント文字列は、必要なときだけバイトコンパイルされたファイルからダイナミック(dynamic: 動的)にロードされます。ドキュメント文字列の処理をスキップすることにより、メモリーが節約されてロードが高速になります。"
 
 #. type: Plain text
 #: original_texis/compile.texi:255
 msgid "This feature has a drawback: if you delete, move, or alter the compiled file (such as by compiling a new version), Emacs may no longer be able to access the documentation string of previously-loaded functions or variables.  Such a problem normally only occurs if you build Emacs yourself, and happen to edit and/or recompile the Lisp source files.  To solve it, just reload each file after recompilation."
-msgstr "この機能には欠点があります。コンパイル済みのファイルを削除、移動、または(新しいバージョンのコンパイル等で)変更した場合、Emacsは前にロードされた関数や変数のドキュメント文字列にアクセスできなくなるでしょう。このような問題は通常、あなた自身がEmacsをビルドした場合に、そのLispファイルを編集、および/またはリコンパイルしたときだけ発生します。この問題は、リコンパイル後にそれぞれのファイルをリロードするだけで解決します。"
+msgstr "この機能には欠点があります。コンパイル済みのファイルを削除や移動、または(新しいバージョンのコンパイル等で)変更した場合、Emacsは以前にロードした関数や変数のドキュメント文字列にアクセスできなくなるでしょう。このような問題は通常なら、あなた自身がEmacsをビルドしたときに、そのLispファイルを編集および/またはリコンパイルしたときだけ発生します。この問題は、リコンパイル後にそれぞれのファイルをリロードするだけで解決します。"
 
 #. type: Plain text
 #: original_texis/compile.texi:259
 msgid "Dynamic loading of documentation strings from byte-compiled files is determined, at compile time, for each byte-compiled file.  It can be disabled via the option @code{byte-compile-dynamic-docstrings}."
-msgstr "バイトコンパイルされたファイルからのドキュメント文字列のダイナミックロードは、バイトコンパイルされたファイルごとに、コンパイル時に決定されます。これはオプション@code{byte-compile-dynamic-docstrings}により、無効にできます。"
+msgstr "バイトコンパイルされたファイルからのドキュメント文字列のダイナミックロードは、バイトコンパイルされたファイルごとにコンパイル時に解決されます。これはオプション@code{byte-compile-dynamic-docstrings}で無効にできます。"
 
 #. type: defopt
 #: original_texis/compile.texi:260
@@ -490,12 +486,12 @@ msgstr "byte-compile-dynamic-docstrings"
 #. type: defopt
 #: original_texis/compile.texi:263
 msgid "If this is non-@code{nil}, the byte compiler generates compiled files that are set up for dynamic loading of documentation strings."
-msgstr "これが非@code{nil}の場合、バイトコンパイラーはドキュメント文字列をダイナミックロードするようセットアップしたコンパイル済みファイルを生成します。"
+msgstr "これが非@code{nil}なら、バイトコンパイラーはドキュメント文字列をダイナミックロードするようにセットアップしたコンパイル済みファイルを生成する。"
 
 #. type: defopt
 #: original_texis/compile.texi:267
 msgid "To disable the dynamic loading feature for a specific file, set this option to @code{nil} in its header line (@pxref{File Variables, , Local Variables in Files, emacs, The GNU Emacs Manual}), like this:"
-msgstr "特定のファイルでダイナミックロード機能を無効にするには、以下のようにヘッダー行(@ref{File Variables, , Local Variables in Files, emacs, The GNU Emacs Manual}を参照)で、このオプションに@code{nil}をセットします。"
+msgstr "特定のファイルでダイナミックロード機能を無効にするには、以下のようにヘッダー行でこのオプションに@code{nil}をセットする(@ref{File Variables, , Local Variables in Files, emacs, The GNU Emacs Manual}を参照)。"
 
 #. type: smallexample
 #: original_texis/compile.texi:270
@@ -506,7 +502,7 @@ msgstr "-*-byte-compile-dynamic-docstrings: nil;-*-\n"
 #. type: defopt
 #: original_texis/compile.texi:275
 msgid "This is useful mainly if you expect to change the file, and you want Emacs sessions that have already loaded it to keep working when the file changes."
-msgstr "これは主に、あるファイルを変更しようとしていて、そのファイルをすでにロード済みのEmacsセッションがファイルを変更した際にも正しく機能し続けることを望む場合に有用です。"
+msgstr "これは主として、あるファイルを変更しようとしていて、そのファイルをすでにロード済みのEmacsセッションがファイルを変更した際にも正しく機能し続けることを望む場合に有用である。"
 
 #. type: samp{#1}
 #: original_texis/compile.texi:277
@@ -522,10 +518,8 @@ msgstr "#$"
 
 #. type: Plain text
 #: original_texis/compile.texi:286
-#, fuzzy
-#| msgid "Internally, the dynamic loading of documentation strings is accomplished by writing compiled files with a special Lisp reader construct, @samp{#@@@var{count}}.  This construct skips the next @var{count} characters.  It also uses the @samp{#$} construct, which stands for ``the name of this file, as a string''.  Do not use these constructs in Lisp source files; they are not designed to be clear to humans reading the file."
 msgid "Internally, the dynamic loading of documentation strings is accomplished by writing compiled files with a special Lisp reader construct, @samp{#@@@var{count}}.  This construct skips the next @var{count} characters.  It also uses the @samp{#$} construct, which stands for the name of this file, as a string.  Do not use these constructs in Lisp source files; they are not designed to be clear to humans reading the file."
-msgstr "内部的には、ドキュメント文字列のダイナミックロードは、特殊なLispリーダー構成@samp{#@@@var{count}}とともにコンパイル済みファイルに書き込むことにより達成されます。この構成は、次の@var{count}文字をスキップします。さらに@samp{#$}構成も使用され、これは``このファイルの名前(文字列)''を意味します。これらの構成をLispソースファイル内で使用しないでください。これらは人間がファイルを読む際に明確であるようデザインされていません。"
+msgstr "内部的にはドキュメント文字列のダイナミックロードは、特殊なLispリーダー構文@samp{#@@@var{count}}とともにコンパイル済みファイルに書き込むことによって達成される。この構文は次の@var{count}文字をスキップする。さらに@samp{#$}構文も使用され、これはこのファイルの名前(文字列)を意味する。これらの構文をLispソースファイル内で使用しないこと。これらは人間がファイルを読む際に明確であるようにデザインされていない。"
 
 #. type: section
 #: original_texis/compile.texi:288
@@ -548,37 +542,37 @@ msgstr "lazy loading"
 #. type: Plain text
 #: original_texis/compile.texi:299
 msgid "When you compile a file, you can optionally enable the @dfn{dynamic function loading} feature (also known as @dfn{lazy loading}).  With dynamic function loading, loading the file doesn't fully read the function definitions in the file.  Instead, each function definition contains a place-holder which refers to the file.  The first time each function is called, it reads the full definition from the file, to replace the place-holder."
-msgstr "ファイルをコンパイルするとき、オプションで@dfn{ダイナミック関数ロード(dynamic function loading)}機能(@dfn{laxyロード(lazy loading)とも呼ばれる})を有効にできます。ダイナミック関数ロードでは、ファイルのロードでファイル内の関数定義は完全には読み込まれません。かわりに、各関数定義にはそのファイルを参照するプレースホルダーが含まれます。それぞれ関数が最初に呼び出されるときに、そのプレースホルダーを置き換えるために、ファイルから完全な定義が読み込まれます。"
+msgstr "ファイルをコンパイルするとき、オプションで@dfn{ダイナミック関数ロード(dynamic function loading)}機能(@dfn{laxyロード(lazy loading)とも呼ばれる})を有効にできます。ダイナミック関数ロードでは、ファイルのロードでファイル内の関数定義は完全には読み込まれません。かわりに各関数定義にはそのファイルを参照するプレースホルダーが含まれます。それぞれ関数が最初に呼び出されるときにそのプレースホルダーを置き換えるために、ファイルから完全な定義が読み込まれます。"
 
 #. type: Plain text
 #: original_texis/compile.texi:306
 msgid "The advantage of dynamic function loading is that loading the file becomes much faster.  This is a good thing for a file which contains many separate user-callable functions, if using one of them does not imply you will probably also use the rest.  A specialized mode which provides many keyboard commands often has that usage pattern: a user may invoke the mode, but use only a few of the commands it provides."
-msgstr "ダイナミック関数ロードの利点は、ファイルのロードがより高速になることです。ユーザーが呼び出せる関数を多く含むファイルにとって、それらの関数のうち1つを使用したら、おそらく残りの関数も使用するというのでなければ、これは利点です。多くのキーボードコマンドを提供する特化したモードは、このパターンの使い方をする場合があります。ユーザーはそのモードを呼び出すかもしれませんが、使用するのはそのモードが提供するコマンドのわずか一部です。"
+msgstr "ダイナミック関数ロードの利点は、ファイルのロードがより高速になることです。ユーザーが呼び出せる関数を多く含むファイルにとって、それらの関数のうち1つを使用したら多分残りの関数も使用するというのでなければ、これは利点になります。多くのキーボードコマンドを提供する特化したモードは、このパターンの使い方をする場合があります。ユーザーはそのモードを呼び出すかもしれませんが、使用するのはそのモードが提供するコマンドのわずか一部です。"
 
 #. type: Plain text
 #: original_texis/compile.texi:308
 msgid "The dynamic loading feature has certain disadvantages:"
-msgstr "ダイナミックロード機能には、いくつか不利な点があります:"
+msgstr "ダイナミックロード機能には不利な点がいくつかあります:"
 
 #. type: itemize
 #: original_texis/compile.texi:313
 msgid "If you delete or move the compiled file after loading it, Emacs can no longer load the remaining function definitions not already loaded."
-msgstr "ロード後にコンパイル済みファイルを削除や移動した場合、Emacsはまだロードされていない残りの関数定義をロードできなくなる。"
+msgstr "ロード後にコンパイル済みファイルの削除や移動を行うと、Emacsはまだロードされていない残りの関数定義をロードできなくなる。"
 
 #. type: itemize
 #: original_texis/compile.texi:318
 msgid "If you alter the compiled file (such as by compiling a new version), then trying to load any function not already loaded will usually yield nonsense results."
-msgstr "(新しいバージョンのコンパイル等で)コンパイル済みファイルを変更した場合、まだロードされていない関数のロードを試みると、通常は無意味な結果となる。"
+msgstr "(新しいバージョンのコンパイル等で)コンパイル済みファイルを変更した場合に、まだロードされていない関数のロードを試みると通常は無意味な結果となる。"
 
 #. type: Plain text
 #: original_texis/compile.texi:324
 msgid "These problems will never happen in normal circumstances with installed Emacs files.  But they are quite likely to happen with Lisp files that you are changing.  The easiest way to prevent these problems is to reload the new compiled file immediately after each recompilation."
-msgstr "このような問題は、通常の状況でインストールされたEmacsファイルでは決して発生しません。しかし、あなたが変更したLispファイルでは発生し得ます。それぞれのファイルをリコンパイルしたらすぐに、新たなコンパイル済みファイルをリロードするのが、これらの問題を回避する一番簡単な方法です。"
+msgstr "このような問題は通常の状況でインストールされたEmacsファイルでは決して発生しません。しかしあなたが変更したLispファイルでは発生し得ます。それぞれのファイルをリコンパイルしたらすぐに新たなコンパイル済みファイルをリロードするのが、これらの問題を回避する一番簡単な方法です。"
 
 #. type: Plain text
 #: original_texis/compile.texi:331
 msgid "The byte compiler uses the dynamic function loading feature if the variable @code{byte-compile-dynamic} is non-@code{nil} at compilation time.  Do not set this variable globally, since dynamic loading is desirable only for certain files.  Instead, enable the feature for specific source files with file-local variable bindings.  For example, you could do it by writing this text in the source file's first line:"
-msgstr "コンパイル時に変数@code{byte-compile-dynamic}が非@code{nil}の場合、バイトコンパイラーはダイナミック関数ロード機能を使用します。ダイナミックロードが望ましいのは特定のファイルにたいしてだけなので、この変数をグローバルにセットしないでください。そのかわりに、特定のソースファイルのファイルローカル変数で、この機能を有効にしてください。たとえば、ソースファイルの最初の行に以下のテキストを記述することにより、これを行うことができます:"
+msgstr "コンパイル時に変数@code{byte-compile-dynamic}が非@code{nil}なら、バイトコンパイラーはダイナミック関数ロード機能を使用します。ダイナミックロードが望ましいのは特定のファイルにたいしてだけなので、この変数をグローバルにセットしないでください。そのかわりに、特定のソースファイルのファイルローカル変数でこの機能を有効にしてください。たとえばソースファイルの最初の行に以下のテキストを記述することにより、これを行うことができます:"
 
 #. type: example
 #: original_texis/compile.texi:334
@@ -595,7 +589,7 @@ msgstr "byte-compile-dynamic"
 #. type: defvar
 #: original_texis/compile.texi:339
 msgid "If this is non-@code{nil}, the byte compiler generates compiled files that are set up for dynamic function loading."
-msgstr "これが非@code{nil}の場合、バイトコンパイラーはダイナミック関数ロードのためにセットアップされたコンパイル済みファイルを生成します。"
+msgstr "これが非@code{nil}なら、バイトコンパイラーはダイナミック関数ロード用にセットアップされたコンパイル済みファイルを生成する。"
 
 #. type: defun
 #: original_texis/compile.texi:341
@@ -606,7 +600,7 @@ msgstr "fetch-bytecode function"
 #. type: defun
 #: original_texis/compile.texi:346
 msgid "If @var{function} is a byte-code function object, this immediately finishes loading the byte code of @var{function} from its byte-compiled file, if it is not fully loaded already.  Otherwise, it does nothing.  It always returns @var{function}."
-msgstr "@var{function}がバイトコード関数オブジェクトの場合、それがまだ完全にロードされていなければ、バイトコンパイル済みのファイルからの@var{function}のバイトコードのロードを完了させます。それ以外は、何も行いません。この関数は、常に@var{function}をリターンします。"
+msgstr "@var{function}がバイトコード関数オブジェクトなら、それがまだ完全にロードされていなければ、バイトコンパイル済みのファイルからの@var{function}のバイトコードのロードを完了させる。それ以外なら何も行わない。この関数は常に@var{function}をリターンする。"
 
 #. type: section
 #: original_texis/compile.texi:349
@@ -623,7 +617,7 @@ msgstr "eval during compilation"
 #. type: Plain text
 #: original_texis/compile.texi:354
 msgid "These features permit you to write code to be evaluated during compilation of a program."
-msgstr "これらの機能により、プログラムのコンパイル中に評価されるコードを記述できます。"
+msgstr "これらの機能によりプログラムのコンパイル中に評価されるコードを記述できます。"
 
 #. type: defspec
 #: original_texis/compile.texi:355
@@ -634,32 +628,32 @@ msgstr "eval-and-compile body@dots{}"
 #. type: defspec
 #: original_texis/compile.texi:358
 msgid "This form marks @var{body} to be evaluated both when you compile the containing code and when you run it (whether compiled or not)."
-msgstr "このフォームは、それを含むコードがコンパイルされるとき、および(コンパイルされているかいないかに関わらず)実行されるときの両方で、@var{body}が評価されるようにマークします。"
+msgstr "このフォームはそれを含むコードがコンパイルされるとき、および(コンパイルされているかいないかに関わらず)実行されるときの両方で@var{body}が評価されるようにマークする。"
 
 #. type: defspec
 #: original_texis/compile.texi:364
 msgid "You can get a similar result by putting @var{body} in a separate file and referring to that file with @code{require}.  That method is preferable when @var{body} is large.  Effectively @code{require} is automatically @code{eval-and-compile}, the package is loaded both when compiling and executing."
-msgstr "@var{body}を別のファイルに配し、そのファイルを@code{require}で参照すれば、同様の結果が得られます。これは@var{body}が大きいとき望ましい方法です。事実上、@code{require}は自動的に@code{eval-and-compile}され、そのパッケージはコンパイル時と実行時の両方でロードされます。"
+msgstr "@var{body}を別のファイルに配置して、そのファイルを@code{require}で参照すれば同様の結果が得られる。これは@var{body}が大きいときに望ましい方法である。事実上、@code{require}は自動的に@code{eval-and-compile}されて、そのパッケージはコンパイル時と実行時の両方でロードされる。"
 
 #. type: defspec
 #: original_texis/compile.texi:368
 msgid "@code{autoload} is also effectively @code{eval-and-compile} too.  It's recognized when compiling, so uses of such a function don't produce ``not known to be defined'' warnings."
-msgstr "@code{autoload}も実際は@code{eval-and-compile}されます。これはコンパイル時に認識されるので、そのような関数の使用により警告``not known to be defined''は生成されません。"
+msgstr "@code{autoload}も実際は@code{eval-and-compile}される。これはコンパイル時に認識されるので、そのような関数の使用により警告``not known to be defined''は生成されない。"
 
 #. type: defspec
 #: original_texis/compile.texi:370
 msgid "Most uses of @code{eval-and-compile} are fairly sophisticated."
-msgstr "ほとんどの@code{eval-and-compile}の使用は、完全に妥当であると言えます。"
+msgstr "ほとんどの@code{eval-and-compile}の使用は、完全に妥当であると言えよう。"
 
 #. type: defspec
 #: original_texis/compile.texi:375
 msgid "If a macro has a helper function to build its result, and that macro is used both locally and outside the package, then @code{eval-and-compile} should be used to get the helper both when compiling and then later when running."
-msgstr "あるマクロがマクロの結果を構築するためのヘルパー関数をもち、そのマクロがそのパッケージにたいしてローカルと外部の両方で使用される場合には、コンパイル時と後の実行時にそのヘルパー関数を取得するために、@code{eval-and-compile}を使用すべきです。"
+msgstr "あるマクロがマクロの結果を構築するためのヘルパー関数をもち、そのマクロがそのパッケージにたいしてローカルと外部の両方で使用される場合には、コンパイル時と後の実行時にそのヘルパー関数を取得するために@code{eval-and-compile}を使用すること。"
 
 #. type: defspec
 #: original_texis/compile.texi:380
 msgid "If functions are defined programmatically (with @code{fset} say), then @code{eval-and-compile} can be used to have that done at compile-time as well as run-time, so calls to those functions are checked (and warnings about ``not known to be defined'' suppressed)."
-msgstr "関数がプログラム的に(@code{fset}で)定義されている場合には、それがコンパイル時、同様に実行時に行われるように使用でき、それらの関数への呼び出しはチェックされます(``not known to be defined''の警告は抑えられます)。"
+msgstr "これは関数がプログラム的に(@code{fset}で)定義されている場合には、コンパイル時と実行時にプログラム的な定義を行わせてそれらの関数の呼び出しをチェックするためにも使用できる(``not known to be defined''の警告は抑制される)。"
 
 #. type: defspec
 #: original_texis/compile.texi:382
@@ -670,7 +664,7 @@ msgstr "eval-when-compile body@dots{}"
 #. type: defspec
 #: original_texis/compile.texi:388
 msgid "This form marks @var{body} to be evaluated at compile time but not when the compiled program is loaded.  The result of evaluation by the compiler becomes a constant which appears in the compiled program.  If you load the source file, rather than compiling it, @var{body} is evaluated normally."
-msgstr "このフォームは、@var{body}がコンパイル時に評価され、コンパイルされたプログラムがロードされるときは評価されないようにマークします。コンパイラーによる評価の結果は、コンパイル済みのプログラム内の定数となります。ソースファイルをコンパイルではなくロードした場合、@var{body}は通常どおり評価されます。"
+msgstr "このフォームは@var{body}がコンパイル時に評価され、コンパイルされたプログラムがロードされるときは評価されないようにマークする。コンパイラーによる評価の結果はコンパイル済みのプログラム内の定数となる。ソースファイルをコンパイルではなくロードすると、@var{body}は通常どおり評価される。"
 
 #. type: cindex
 #: original_texis/compile.texi:389
@@ -681,7 +675,7 @@ msgstr "compile-time constant"
 #. type: defspec
 #: original_texis/compile.texi:392
 msgid "If you have a constant that needs some calculation to produce, @code{eval-when-compile} can do that at compile-time.  For example,"
-msgstr "生成するために何らかの計算が必要な定数がある場合、@code{eval-when-compile}はコンパイル時にそれを行なうことができます。たとえば、"
+msgstr "生成するために何らかの計算が必要な定数があるなら、@code{eval-when-compile}はコンパイル時にそれを行なうことができる。たとえば、"
 
 #. type: lisp
 #: original_texis/compile.texi:396
@@ -702,7 +696,7 @@ msgstr "macros, at compile time"
 #. type: defspec
 #: original_texis/compile.texi:402
 msgid "If you're using another package, but only need macros from it (the byte compiler will expand those), then @code{eval-when-compile} can be used to load it for compiling, but not executing.  For example,"
-msgstr "他のパッケージを使用しているが、そのパッケージのマクロ(バイトコンパイラーはそれらを展開します)だけが必要な場合、それらを実行せずにコンパイル用にロードさせるために@code{eval-when-compile}を使用できます。たとえば、"
+msgstr "他のパッケージを使用しているが、そのパッケージのマクロ(バイトコンパイラーはそれらを展開します)だけが必要なら、それらを実行せずにコンパイル用にロードさせるために@code{eval-when-compile}を使用できる。たとえば、"
 
 #. type: lisp
 #: original_texis/compile.texi:406
@@ -717,7 +711,7 @@ msgstr ""
 #. type: defspec
 #: original_texis/compile.texi:412
 msgid "The same sort of thing goes for macros and @code{defsubst} functions defined locally and only for use within the file.  They are needed for compiling the file, but in most cases they are not needed for execution of the compiled file.  For example,"
-msgstr "これらの事項は、マクロおよび@code{defsubst}関数がローカルに定義され、そのファイル内だけで使用されることを要求します。これらは、そのファイルのコンパイルに必要ですが、コンパイル済みファイルの実行には、ほとんどの場合必要ありません。たとえば、"
+msgstr "これらの事項は、マクロと@code{defsubst}関数がローカルに定義されていて、そのファイル内だけで使用されることを要求する。これらはそのファイルのコンパイルに必要だが、コンパイル済みファイルの実行には、ほとんどの場合必要ない。たとえば、"
 
 #. type: lisp
 #: original_texis/compile.texi:418
@@ -736,12 +730,12 @@ msgstr ""
 #. type: defspec
 #: original_texis/compile.texi:423
 msgid "This is often good for code that's only a fallback for compatibility with other versions of Emacs."
-msgstr "これは大抵他のバージョンのEmacsとの互換性にたいする保証だけのためのコードにたいして有用です。"
+msgstr "これは大抵は他のバージョンのEmacsとの互換性の保証のためのコードにたいしてのみ有用である。"
 
 #. type: defspec
 #: original_texis/compile.texi:428
 msgid "@strong{Common Lisp Note:} At top level, @code{eval-when-compile} is analogous to the Common Lisp idiom @code{(eval-when (compile eval) @dots{})}.  Elsewhere, the Common Lisp @samp{#.} reader macro (but not when interpreting) is closer to what @code{eval-when-compile} does."
-msgstr "@strong{Common Lispに関する注意:} トップレベルでは、@code{eval-when-compile}はCommon Lispのイディオム@code{(eval-when (compile eval) @dots{})}に類似しています。トップレベル以外では、Common Lispのリーダーマクロ@samp{#.}(ただし解釈時を除く)が、@code{eval-when-compile}と近いことを行います。"
+msgstr "@strong{Common Lispに関する注意:} トップレベルでは、@code{eval-when-compile}はCommon Lispのイディオム@code{(eval-when (compile eval) @dots{})}に類似する。トップレベル以外では、Common Lispのリーダーマクロ@samp{#.}(ただし解釈時を除く)が、@code{eval-when-compile}と近いことを行う。"
 
 #. type: cindex
 #: original_texis/compile.texi:432
@@ -756,10 +750,8 @@ msgstr "バイトコンパイルのエラーメッセージと警告メッセー
 
 #. type: Plain text
 #: original_texis/compile.texi:448
-#, fuzzy
-#| msgid "When an error is due to invalid syntax in the program, the byte compiler might get confused about the errors' exact location.  One way to investigate is to switch to the buffer @w{@file{ *Compiler Input*}}.  (This buffer name starts with a space, so it does not show up in the Buffer Menu.)  This buffer contains the program being compiled, and point shows how far the byte compiler was able to read; the cause of the error might be nearby.  @xref{Syntax Errors}, for some tips for locating syntax errors."
 msgid "When an error is due to invalid syntax in the program, the byte compiler might get confused about the error's exact location.  One way to investigate is to switch to the buffer @w{@file{ *Compiler Input*}}.  (This buffer name starts with a space, so it does not show up in the Buffer Menu.)  This buffer contains the program being compiled, and point shows how far the byte compiler was able to read; the cause of the error might be nearby.  @xref{Syntax Errors}, for some tips for locating syntax errors."
-msgstr "あるエラーがプログラムのシンタックスに由来する場合、バイトコンパイラーはエラーの正確な位置の取得に際し混乱するかもしれません。バッファー@w{@file{ *Compiler Input*}}.にスイッチするのは、これを調べ1つの方法です。(このバッファー名はスペースで始まるので、Buffer Menuに表示されません。)このバッファーにはコンパイルされたプログラムと、バイトコンパイラーが読み取れた箇所からポイントがどれほど離れているかが含まれ、エラーの原因はその近傍にあるかもしれません。シンタックスエラーを見つけるヒントについては、@ref{Syntax Errors}を参照してください。"
+msgstr "あるエラーがプログラムのシンタックスに由来する場合、バイトコンパイラーはエラーの正確な位置の取得に際して混乱するかもしれません。バッファー@w{@file{ *Compiler Input*}}.にスイッチするのは、これを調べ1つの方法です(このバッファー名はスペースで始まるので、Buffer Menuに表示されない)。このバッファーにはコンパイルされたプログラムと、バイトコンパイラーが読み取った箇所からポイントがどれほど離れているかが含まれ、エラーの原因はその近傍の可能性があります。シンタックスエラーを見つけるヒントについては、@ref{Syntax Errors}を参照してください。"
 
 #. type: Plain text
 #: original_texis/compile.texi:454
@@ -774,7 +766,7 @@ msgstr "定義のない関数や変数の警告が間違いだと確信できる
 #. type: itemize
 #: original_texis/compile.texi:463
 msgid "You can suppress the warning for a specific call to a function @var{func} by conditionalizing it on an @code{fboundp} test, like this:"
-msgstr "関数@var{func}への特定の呼び出しにたいする警告は、それを条件式で@code{fboundp}によるテストを行なうことで抑制できます:"
+msgstr "関数@var{func}への特定の呼び出しにたいする警告は、それを条件式@code{fboundp}でテストすることで抑制できる:"
 
 #. type: example
 #: original_texis/compile.texi:466
@@ -785,12 +777,12 @@ msgstr "(if (fboundp '@var{func}) ...(@var{func} ...)...)\n"
 #. type: itemize
 #: original_texis/compile.texi:472
 msgid "The call to @var{func} must be in the @var{then-form} of the @code{if}, and @var{func} must appear quoted in the call to @code{fboundp}.  (This feature operates for @code{cond} as well.)"
-msgstr "@var{func}への呼び出しは@code{if}文の@var{then-form}内になければならず、@var{func}は@code{fboundp}呼び出し内でクォートされていなければなりません。(この機能は@code{cond}でも同様に機能します。)"
+msgstr "@var{func}への呼び出しは@code{if}文の@var{then-form}内になければならず、@var{func}は@code{fboundp}呼び出し内でクォートされていなければならない(この機能は@code{cond}でも同様に機能する)。"
 
 #. type: itemize
 #: original_texis/compile.texi:477
 msgid "Likewise, you can suppress the warning for a specific use of a variable @var{variable} by conditionalizing it on a @code{boundp} test:"
-msgstr "同じように、変数@var{variable}の特定の使用についの警告を、条件式内の@code{boundp}テストで抑制できます:"
+msgstr "同じように、変数@var{variable}の特定の使用についの警告を、条件式内の@code{boundp}テストで抑制できる:"
 
 #. type: example
 #: original_texis/compile.texi:480
@@ -801,22 +793,22 @@ msgstr "(if (boundp '@var{variable}) ...@var{variable}...)\n"
 #. type: itemize
 #: original_texis/compile.texi:486
 msgid "The reference to @var{variable} must be in the @var{then-form} of the @code{if}, and @var{variable} must appear quoted in the call to @code{boundp}."
-msgstr "@var{variable}への参照は@code{if}文の@var{then-form}内になければならず、@var{variable}は@code{boundp}呼び出し内でクォートされていなければなりません。"
+msgstr "@var{variable}への参照は@code{if}文の@var{then-form}内になければならず、@var{variable}は@code{boundp}呼び出し内でクォートされていなければならない。"
 
 #. type: itemize
 #: original_texis/compile.texi:490
 msgid "You can tell the compiler that a function is defined using @code{declare-function}. @xref{Declaring Functions}."
-msgstr "コンパイラーに関数が@code{declare-function}を使用して定義されていると告げることができます。@ref{Declaring Functions}を参照してください。"
+msgstr "コンパイラーに関数が@code{declare-function}を使用して定義されていると告げることができる。@ref{Declaring Functions}を参照のこと。"
 
 #. type: itemize
 #: original_texis/compile.texi:495
 msgid "Likewise, you can tell the compiler that a variable is defined using @code{defvar} with no initial value.  (Note that this marks the variable as special.)  @xref{Defining Variables}."
-msgstr "同じように、その変数が初期値なしの@code{defvar}を使用して定義されているとコンパイラーに告げることができます。(これはその変数を特別な変数としてマークすることに注意してください。@ref{Defining Variables}を参照してください。"
+msgstr "同じように、その変数が初期値なしの@code{defvar}を使用して定義されているとコンパイラーに告げることができる(これはその変数を特別な変数としてマークすることに注意。@ref{Defining Variables}を参照)。"
 
 #. type: Plain text
 #: original_texis/compile.texi:499
 msgid "You can also suppress any and all compiler warnings within a certain expression using the construct @code{with-no-warnings}:"
-msgstr "@code{with-no-warnings}構成を使用して特定の式にたいするコンパイラーのすべての任意の警告を抑制することもできます:"
+msgstr "@code{with-no-warnings}構文を使用して特定の式にたいするコンパイラーの任意の警告をすべて抑制することもできます:"
 
 #. type: defspec
 #: original_texis/compile.texi:503
@@ -827,17 +819,17 @@ msgstr "with-no-warnings body@dots{}"
 #. type: defspec
 #: original_texis/compile.texi:507
 msgid "In execution, this is equivalent to @code{(progn @var{body}...)}, but the compiler does not issue warnings for anything that occurs inside @var{body}."
-msgstr "実行時には〜これは@code{(progn @var{body}...)}と等価ですが、コンパイラーは@var{body}の中で起こるいかなる事項にたいしても警告を発しません。"
+msgstr "これは実行時には@code{(progn @var{body}...)}と等価だが、コンパイラーは@var{body}の中で起こるいかなる事項にたいしても警告を発しない。"
 
 #. type: defspec
 #: original_texis/compile.texi:511
 msgid "We recommend that you use this construct around the smallest possible piece of code, to avoid missing possible warnings other than one you intend to suppress."
-msgstr "わたしたちは、あなたが抑制したいと意図する警告以外の警告を失わないようにするために、可能な限り小さいコード断片にたいしてこの構成を使用することを推奨します。"
+msgstr "わたしたちは、あなたが抑制したいと意図する警告以外の警告を失わないようにするために、可能な限り小さいコード断片にたいしてこの構文を使用することを推奨する。"
 
 #. type: Plain text
 #: original_texis/compile.texi:516
 msgid "Byte compiler warnings can be controlled more precisely by setting the variable @code{byte-compile-warnings}.  See its documentation string for details."
-msgstr "変数@code{byte-compile-warnings}をセットすることにより、コンパイラーの警告をより詳細に制御できます。詳細は、変数のドキュメント文字列を参照してください。"
+msgstr "変数@code{byte-compile-warnings}をセットすることにより、コンパイラーの警告をより詳細に制御できます。詳細は変数のドキュメント文字列を参照してください。"
 
 #. type: section
 #: original_texis/compile.texi:518
@@ -866,28 +858,28 @@ msgstr "byte-code object"
 #. type: Plain text
 #: original_texis/compile.texi:527
 msgid "Byte-compiled functions have a special data type: they are @dfn{byte-code function objects}.  Whenever such an object appears as a function to be called, Emacs uses the byte-code interpreter to execute the byte-code."
-msgstr "バイトコンパイルされた関数は、特別なデータ型、@dfn{バイトコード関数オブジェクト(byte-code function objects)}をもちます。関数呼び出しとしてそのようなオブジェクトが出現したとき、Emacsはそのバイトコードを実行するために、常にバイトコードインタープリターを使用します。"
+msgstr "バイトコンパイルされた関数は、@dfn{バイトコード関数オブジェクト(byte-code function objects)}という特別なデータ型をもちます。関数呼び出しとしてそのようなオブジェクトが出現したとき、Emacsはそのバイトコードを実行するために、常にバイトコードインタープリターを使用します。"
 
 #. type: Plain text
 #: original_texis/compile.texi:534
 msgid "Internally, a byte-code function object is much like a vector; its elements can be accessed using @code{aref}.  Its printed representation is like that for a vector, with an additional @samp{#} before the opening @samp{[}.  It must have at least four elements; there is no maximum number, but only the first six elements have any normal use.  They are:"
-msgstr "内部的には、バイトコード関数オブジェクトはベクターによく似ています。バイトコード関数オブジェクトの要素には、@code{aref}を通じてアクセスできます。バイトコード関数オブジェクトのプリント表現(printed representation)はベクターに似ていて、開き@samp{[}の前に@samp{#}が追加されます。バイト関数オブジェクトは少なくとも4つの要素をもたねばならず、要素数に上限はありません。しかし通常使用されるのは、最初の6要素です。これらは:"
+msgstr "内部的にはバイトコード関数オブジェクトはベクターとよく似ています。バイトコード関数オブジェクトの要素には@code{aref}を通じてアクセスできます。バイトコード関数オブジェクトのプリント表現(printed representation)はベクターと似ていて、開き@samp{[}の前に@samp{#}が追加されます。バイト関数オブジェクトは少なくとも4つの要素をもたねばならず、その要素数に上限はありません。しかし通常使用されるのは最初の6要素です。これらは:"
 
 #. type: item
 #: original_texis/compile.texi:536
 #, no-wrap
 msgid "argdesc"
-msgstr ""
+msgstr "argdesc"
 
 #. type: table
 #: original_texis/compile.texi:544
 msgid "The descriptor of the arguments.  This can either be a list of arguments, as described in @ref{Argument List}, or an integer encoding the required number of arguments.  In the latter case, the value of the descriptor specifies the minimum number of arguments in the bits zero to 6, and the maximum number of arguments in bits 8 to 14.  If the argument list uses @code{&rest}, then bit 7 is set; otherwise it's cleared."
-msgstr ""
+msgstr "引数の記述子(descriptor)。これは@ref{Argument List}で説明されるような引数のリスト、または要求される引数の個数をエンコードする整数のいずれかである。後者の場合、その記述子の値は0ビットから6ビットで引数の最小個数、8ビットから14ビットで引数の最大個数を指定する。引数リストが@code{&rest}を使用するなら7ビットがセットされて、それい以外ならクリアーされる。"
 
 #. type: table
 #: original_texis/compile.texi:549
 msgid "If @var{argdesc} is a list, the arguments will be dynamically bound before executing the byte code.  If @var{argdesc} is an integer, the arguments will be instead pushed onto the stack of the byte-code interpreter, before executing the code."
-msgstr ""
+msgstr "@var{argdesc}がリストなら、そのバイトコード実行前に引数はダイナミックにバインドされる。@var{argdesc}が整数なら、引数リストはそのバイトコード実行前にバイトコーピンタープリンターのスタックにpushされる。"
 
 #. type: table
 #: original_texis/compile.texi:552
@@ -941,18 +933,11 @@ msgstr "(もしあれば)インタラクティブ仕様。文字列かLisp式。
 #. type: Plain text
 #: original_texis/compile.texi:574
 msgid "Here's an example of a byte-code function object, in printed representation.  It is the definition of the command @code{backward-sexp}."
-msgstr "以下は、バイトコード関数オブジェクトのプリント表現の例です。これはコマンド@code{backward-sexp}の定義です。"
+msgstr "以下はバイトコード関数オブジェクトのプリント表現の例です。これはコマンド@code{backward-sexp}の定義です。"
 
 #. type: example
 #: original_texis/compile.texi:582
-#, fuzzy, no-wrap
-#| msgid ""
-#| "#[(&optional arg)\n"
-#| "  \"^H\\204^F^@@\\301^P\\302^H[!\\207\"\n"
-#| "  [arg 1 forward-sexp]\n"
-#| "  2\n"
-#| "  254435\n"
-#| "  \"^p\"]\n"
+#, no-wrap
 msgid ""
 "#[256\n"
 "  \"\\211\\204^G^@@\\300\\262^A\\301^A[!\\207\"\n"
@@ -961,17 +946,17 @@ msgid ""
 "  1793299\n"
 "  \"^p\"]\n"
 msgstr ""
-"#[(&optional arg)\n"
-"  \"^H\\204^F^@@\\301^P\\302^H[!\\207\"\n"
-"  [arg 1 forward-sexp]\n"
-"  2\n"
-"  254435\n"
+"#[256\n"
+"  \"\\211\\204^G^@@\\300\\262^A\\301^A[!\\207\"\n"
+"  [1 forward-sexp]\n"
+"  3\n"
+"  1793299\n"
 "  \"^p\"]\n"
 
 #. type: Plain text
 #: original_texis/compile.texi:586
 msgid "The primitive way to create a byte-code object is with @code{make-byte-code}:"
-msgstr "バイトコードオブジェクトを作成する原始的な方法は、@code{make-byte-code}です:"
+msgstr "バイトコードオブジェクトを作成するプリミティブな方法は@code{make-byte-code}です:"
 
 #. type: defun
 #: original_texis/compile.texi:587
@@ -982,12 +967,12 @@ msgstr "make-byte-code &rest elements"
 #. type: defun
 #: original_texis/compile.texi:590
 msgid "This function constructs and returns a byte-code function object with @var{elements} as its elements."
-msgstr "この関数は@var{elements}を要素とするバイトコードオブジェクトを構築して、リターンします。"
+msgstr "この関数は@var{elements}を要素とするバイトコードオブジェクトを構築してリターンする。"
 
 #. type: Plain text
 #: original_texis/compile.texi:596
 msgid "You should not try to come up with the elements for a byte-code function yourself, because if they are inconsistent, Emacs may crash when you call the function.  Always leave it to the byte compiler to create these objects; it makes the elements consistent (we hope)."
-msgstr "あなた自身が要素を収集してバイトコード関数を構築しないでください。それらが矛盾する場合、その関数の呼び出しによりEmacsがクラッシュするかもしれません。これらのオブジェクトの作成は、常にバイトコンパイラーにまかせてください。バイトコンパイラーは、要素を矛盾なく構築します(願わくば)。"
+msgstr "あなた自身で要素を収集してバイトコード関数を構築しないでください。それらが矛盾する場合、その関数の呼び出しによりEmacsがクラッシュするかもしれません。これらのオブジェクトの作成は常にバイトコンパイラーにまかせてください。(願わくば)バイトコンパイラーは要素を矛盾なく構築します。"
 
 #. type: section
 #: original_texis/compile.texi:598
@@ -1004,17 +989,17 @@ msgstr "disassembled byte-code"
 #. type: Plain text
 #: original_texis/compile.texi:605
 msgid "People do not write byte-code; that job is left to the byte compiler.  But we provide a disassembler to satisfy a cat-like curiosity.  The disassembler converts the byte-compiled code into human-readable form."
-msgstr "人はバイトコードを記述しません。それはバイトコンパイラーの仕事です。しかし、好奇心を満たすために、わたしたちはディスアセンブラを提供しています。ディスアセンブラは、バイトコードを人間が読めるフォームに変換します。"
+msgstr "人はバイトコードを記述しません。それはバイトコンパイラーの仕事です。しかし好奇心を満たすために、わたしたちはディスアセンブラを提供しています。ディスアセンブラはバイトコードを人間が読めるフォームに変換します。"
 
 #. type: Plain text
 #: original_texis/compile.texi:611
 msgid "The byte-code interpreter is implemented as a simple stack machine.  It pushes values onto a stack of its own, then pops them off to use them in calculations whose results are themselves pushed back on the stack.  When a byte-code function returns, it pops a value off the stack and returns it as the value of the function."
-msgstr "バイトコードインタープリターは、シンプルなスタックマシンとして実装されています。これは値を自身のスタックにpushして、計算で使用するためにそれらをpopして取り出し、おの結果を再びそのスタックにpushして戻します。バイトコード関数がリターンするときは、スタックから値をpopして取り出し、その関数の値としてリターンします。"
+msgstr "バイトコードインタープリターは、シンプルなスタックマシンとして実装されています。これは値を自身のスタックにpushして、計算で使用するためにそれらをpopして取り出し、その結果を再びそのスタックにpushして戻します。バイトコード関数がリターンするときは、スタックから値をpopして取り出し、その関数の値としてリターンします。"
 
 #. type: Plain text
 #: original_texis/compile.texi:615
 msgid "In addition to the stack, byte-code functions can use, bind, and set ordinary Lisp variables, by transferring values between variables and the stack."
-msgstr "それに加えてスタックとバイトコード関数は、値を変数とスタックの間で転送することにより、普通のLisp変数を使用したり、バインドおよびセットすることができます。"
+msgstr "それに加えてスタックとバイトコード関数は、値を変数とスタック間で転送することにより、普通のLisp変数を使用したり、バインドやセットを行うことができます。"
 
 #. type: deffn
 #: original_texis/compile.texi:616
@@ -1025,17 +1010,17 @@ msgstr "Command disassemble object &optional buffer-or-name"
 #. type: deffn
 #: original_texis/compile.texi:623
 msgid "This command displays the disassembled code for @var{object}.  In interactive use, or if @var{buffer-or-name} is @code{nil} or omitted, the output goes in a buffer named @file{*Disassemble*}.  If @var{buffer-or-name} is non-@code{nil}, it must be a buffer or the name of an existing buffer.  Then the output goes there, at point, and point is left before the output."
-msgstr "このコマンドは、@var{object}にたいするディスアセンブルされたコードを表示します。インタラクティブに使用した場合、または@var{buffer-or-name}が@code{nil}か省略された場合は、@file{*Disassemble*}という名前のバッファーに出力します。@var{buffer-or-name}が非@code{nil}の場合は、バッファーもしくは既存のバッファーの名前でなければなりません。その場合は、そのバッファーのポイント位置に出力され、ポイントは出力の前に残りされます。"
+msgstr "このコマンドは@var{object}にたいするディスアセンブルされたコードを表示する。インタラクティブに使用した場合、または@var{buffer-or-name}が@code{nil}か省略された場合は、@file{*Disassemble*}という名前のバッファーに出力します。@var{buffer-or-name}が非@code{nil}なら、それはバッファーもしくは既存のバッファーの名前でなければならない。その場合は、そのバッファーのポイント位置に出力され、ポイントは出力の前に残りされる。"
 
 #. type: deffn
 #: original_texis/compile.texi:628
 msgid "The argument @var{object} can be a function name, a lambda expression (@pxref{Lambda Expressions}), or a byte-code object (@pxref{Byte-Code Objects}).  If it is a lambda expression, @code{disassemble} compiles it and disassembles the resulting compiled code."
-msgstr "引数@var{object}には関数名、ラムダ式(@ref{Lambda Expressions}を参照)、またはバイトコードオブジェクト(@ref{Byte-Code Objects}を参照)を指定できます。ラムダ式の場合、@code{disassemble}はそれをコンパイルしてから、そのコンパイル済みコードをディスアセンブルします。"
+msgstr "引数@var{object}には関数名、ラムダ式(@ref{Lambda Expressions}を参照)、またはバイトコードオブジェクト(@ref{Byte-Code Objects}を参照)を指定できる。ラムダ式なら@code{disassemble}はそれをコンパイルしてから、そのコンパイル済みコードをディスアセンブルする。"
 
 #. type: Plain text
 #: original_texis/compile.texi:633
 msgid "Here are two examples of using the @code{disassemble} function.  We have added explanatory comments to help you relate the byte-code to the Lisp source; these do not appear in the output of @code{disassemble}."
-msgstr "以下に@code{disassemble}関数を使用した例を2つ示します。バイトコードとLispソースを関連付ける助けとなるように、説明的なコメントを追加してあります。これらのコメントは、@code{disassemble}の出力にはありません。"
+msgstr "以下に@code{disassemble}関数を使用した例を2つ示します。バイトコードとLispソースを関連付ける助けとなるように、説明的なコメントを追加してあります。これらのコメントは@code{disassemble}の出力にはありません。"
 
 #. type: group
 #: original_texis/compile.texi:641
@@ -1086,8 +1071,8 @@ msgid ""
 "1   constant 1            ; @r{Push 1 onto stack.}\n"
 msgstr ""
 "0   varref   integer      ; @r{@code{integer}の値を取得して}\n"
-"                          ;   @r{それをスタック上にpushする。}\n"
-"1   constant 1            ; @r{スタック上に1をpushする。}\n"
+"                          ;   @r{それをスタック上にpushする}\n"
+"1   constant 1            ; @r{スタック上に1をpushする}\n"
 
 #. type: group
 #: original_texis/compile.texi:663
@@ -1097,7 +1082,7 @@ msgid ""
 "                          ;   @r{them, and push result onto stack.}\n"
 msgstr ""
 "2   eqlsign               ; @r{2つの値をスタックからpopして取り出し、}\n"
-"                          ;   @r{それらを比較して結果をスタック上にpushする。}\n"
+"                          ;   @r{それらを比較して結果をスタック上にpushする}\n"
 
 #. type: group
 #: original_texis/compile.texi:669
@@ -1108,10 +1093,10 @@ msgid ""
 "6   constant 1            ; @r{Push 1 onto top of stack.}\n"
 "7   return                ; @r{Return the top element of the stack.}\n"
 msgstr ""
-"3   goto-if-nil 1         ; @r{スタックのトップをpopしてテストする。}\n"
-"                          ;   @r{@code{nil}なら1へ、それ以外はcontinue。}\n"
-"6   constant 1            ; @r{スタックのトップに1をpushする。}\n"
-"7   return                ; @r{スタックのトップの要素をリターンする。}\n"
+"3   goto-if-nil 1         ; @r{スタックのトップをpopしてテストする}\n"
+"                          ;   @r{@code{nil}なら1へ、それ以外はcontinue}\n"
+"6   constant 1            ; @r{スタックのトップに1をpushする}\n"
+"7   return                ; @r{スタックのトップの要素をリターンする}\n"
 
 #. type: group
 #: original_texis/compile.texi:679
@@ -1126,14 +1111,14 @@ msgid ""
 "                          ;   @r{(i.e., top) stack element as argument;}\n"
 "                          ;   @r{push returned value onto stack.}\n"
 msgstr ""
-"8:1 varref   integer      ; @r{@code{integer}の値をスタック上にpushする。}\n"
-"9   constant factorial    ; @r{@code{factorial}をスタック上にpushする。}\n"
-"10  varref   integer      ; @r{@code{integer}の値をスタック上にpushする。}\n"
-"11  sub1                  ; @r{@code{integer}をpopして値をデクリメントする。}\n"
-"                          ;   @r{スタック上に新しい値をpushする。}\n"
+"8:1 varref   integer      ; @r{@code{integer}の値をスタック上にpushする}\n"
+"9   constant factorial    ; @r{@code{factorial}をスタック上にpushする}\n"
+"10  varref   integer      ; @r{@code{integer}の値をスタック上にpushする}\n"
+"11  sub1                  ; @r{@code{integer}をpopして値をデクリメントする}\n"
+"                          ;   @r{スタック上に新しい値をpushする}\n"
 "12  call     1            ; @r{スタックの最初(トップ)の要素を引数として}\n"
-"                          ;   @r{関数@code{factorial}を呼び出す。}\n"
-"                          ;   @r{リターン値をスタック上にpushする。}\n"
+"                          ;   @r{関数@code{factorial}を呼び出す}\n"
+"                          ;   @r{リターン値をスタック上にpushする}\n"
 
 #. type: group
 #: original_texis/compile.texi:684
@@ -1144,8 +1129,8 @@ msgid ""
 "14 return                 ; @r{Return the top element of the stack.}\n"
 msgstr ""
 "13 mult                   ; @r{スタックのトップ2要素をpopして取り出し乗じ}\n"
-"                          ;   @r{結果をスタック上にpushする。}\n"
-"14 return                 ; @r{スタックのトップ要素をリターンする。}\n"
+"                          ;   @r{結果をスタック上にpushする}\n"
+"14 return                 ; @r{スタックのトップ要素をリターンする}\n"
 
 #. type: Plain text
 #: original_texis/compile.texi:688
@@ -1194,7 +1179,7 @@ msgid ""
 "                                  ;   @r{onto top of stack.}\n"
 msgstr ""
 "0   constant current-time-string  ; @r{@code{current-time-string}を}\n"
-"                                  ;   @r{スタック上のトップにpushする。}\n"
+"                                  ;   @r{スタック上のトップにpushする}\n"
 
 #. type: group
 #: original_texis/compile.texi:714
@@ -1204,13 +1189,13 @@ msgid ""
 "                          ;   @r{argument, push result onto stack.}\n"
 msgstr ""
 "1   call     0            ; @r{引数なしで@code{current-time-string}を呼び出し}\n"
-"                          ;   @r{結果をスタック上にpushする。}\n"
+"                          ;   @r{結果をスタック上にpushする}\n"
 
 #. type: group
 #: original_texis/compile.texi:717
 #, no-wrap
 msgid "2   varbind  t1           ; @r{Pop stack and bind @code{t1} to popped value.}\n"
-msgstr "2   varbind  t1           ; @r{スタックをpopして@code{t1}にpopされた値をバインドする。}\n"
+msgstr "2   varbind  t1           ; @r{スタックをpopして@code{t1}にpopされた値をバインドする}\n"
 
 #. type: group
 #: original_texis/compile.texi:722
@@ -1221,8 +1206,8 @@ msgid ""
 "4   sub1                  ; @r{Subtract 1 from top of stack.}\n"
 msgstr ""
 "3:1 varref   n            ; @r{環境から@code{n}の値を取得して}\n"
-"                          ;   @r{その値をスタック上にpushする。}\n"
-"4   sub1                  ; @r{スタックのトップから1を減ずる。}\n"
+"                          ;   @r{その値をスタック上にpushする}\n"
+"4   sub1                  ; @r{スタックのトップから1を減ずる}\n"
 
 #. type: group
 #: original_texis/compile.texi:728
@@ -1234,10 +1219,10 @@ msgid ""
 "                          ;   @r{and bind @code{n} to the value.}\n"
 "\n"
 msgstr ""
-"5   dup                   ; @r{スタックのトップを複製する。}\n"
-"                          ;   @r{たとえばスタックのトップをコピーしてスタック上にpushする。}\n"
+"5   dup                   ; @r{スタックのトップを複製する}\n"
+"                          ;   @r{たとえばスタックのトップをコピーしてスタック上にpushする}\n"
 "6   varset   n            ; @r{スタックのトップをpopして}\n"
-"                          ;   @r{@code{n}をその値にバインドする。}\n"
+"                          ;   @r{@code{n}をその値にバインドする}\n"
 "\n"
 
 #. type: group
@@ -1248,7 +1233,7 @@ msgid ""
 ";; @r{into the value of @code{n} without popping it.)}\n"
 msgstr ""
 ";; @r{(要はシーケンス@code{dup varset}はpopせずに}\n"
-";; @r{ スタックのトップを@code{n}の値にコピーする。)}\n"
+";; @r{ スタックのトップを@code{n}の値にコピーする)}\n"
 
 #. type: group
 #: original_texis/compile.texi:738
@@ -1259,10 +1244,10 @@ msgid ""
 "                          ;   @r{test if @var{n} is greater than 0}\n"
 "                          ;   @r{and push result onto stack.}\n"
 msgstr ""
-"7   constant 0            ; @r{スタック上に0をpushする。}\n"
+"7   constant 0            ; @r{スタック上に0をpushする}\n"
 "8   gtr                   ; @r{スタックのトップ2値をpopして取り出し}\n"
 "                          ;   @r{@var{n}が0より大かテストし}\n"
-"                          ;   @r{結果をスタック上にpushする。}\n"
+"                          ;   @r{結果をスタック上にpushする}\n"
 
 #. type: group
 #: original_texis/compile.texi:743
@@ -1274,7 +1259,7 @@ msgid ""
 msgstr ""
 "9   goto-if-not-nil 1     ; @r{@code{n} > 0なら1へ}\n"
 "                          ;   @r{(これはwhile-loopを継続する)}\n"
-"                          ;   @r{それ以外はcontinue。}\n"
+"                          ;   @r{それ以外はcontinue}\n"
 
 #. type: group
 #: original_texis/compile.texi:749
@@ -1285,10 +1270,10 @@ msgid ""
 "                                  ;   @r{onto the top of the stack.}\n"
 "14  call     0            ; @r{Call @code{current-time-string} again.}\n"
 msgstr ""
-"12  varref   t1           ; @r{@code{t1}の値をスタック上にpushする。}\n"
+"12  varref   t1           ; @r{@code{t1}の値をスタック上にpushする}\n"
 "13  constant current-time-string  ; @r{@code{current-time-string}を}\n"
-"                                  ;   @r{スタックのトップにpushする。}\n"
-"14  call     0            ; @r{再度@code{current-time-string}を呼び出す。}\n"
+"                                  ;   @r{スタックのトップにpushする}\n"
+"14  call     0            ; @r{再度@code{current-time-string}を呼び出す}\n"
 
 #. type: group
 #: original_texis/compile.texi:755
@@ -1299,7 +1284,7 @@ msgid ""
 "                          ;   @r{list of them, and push it onto stack.}\n"
 "17  return                ; @r{Return value of the top of stack.}\n"
 msgstr ""
-"15  unbind   1            ; @r{ローカル環境の@code{t1}をアンバインドする。}\n"
+"15  unbind   1            ; @r{ローカル環境の@code{t1}をアンバインドする}\n"
 "16  list2                 ; @r{スタックのトップ2要素をpopして取り出し}\n"
-"                          ;   @r{それらのリストを作りスタック上にpushする。}\n"
-"17  return                ; @r{スタックのトップの値をリターンする。}\n"
+"                          ;   @r{それらのリストを作りスタック上にpushする}\n"
+"17  return                ; @r{スタックのトップの値をリターンする}\n"
