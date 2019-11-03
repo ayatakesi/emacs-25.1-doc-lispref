@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-24.5\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2018-02-08 00:35+0900\n"
+"PO-Revision-Date: 2019-11-03 20:27+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -30,12 +30,12 @@ msgstr "Reading and Printing Lisp Objects"
 #. type: Plain text
 #: original_texis/streams.texi:12
 msgid "@dfn{Printing} and @dfn{reading} are the operations of converting Lisp objects to textual form and vice versa.  They use the printed representations and read syntax described in @ref{Lisp Data Types}."
-msgstr "@dfn{プリント(print)}および@dfn{読み取り(read)}は、Lispオブジェクトからテキスト形式への変換、またはその逆の変換を行なう操作です。これらは@ref{Lisp Data Types}で説明したプリント表現(printed representation)と入力構文(read syntax)を使用します。"
+msgstr "@dfn{プリント(print)}と@dfn{読み取り(read)}はLispオブジェクトからテキスト形式への変換、またはその逆の変換を行なう操作です。これらは@ref{Lisp Data Types}で説明したプリント表現(printed representation)と入力構文(read syntax)を使用します。"
 
 #. type: Plain text
 #: original_texis/streams.texi:16
 msgid "This chapter describes the Lisp functions for reading and printing.  It also describes @dfn{streams}, which specify where to get the text (if reading) or where to put it (if printing)."
-msgstr "このチャプターでは、読み取りおよびプリントのためのLisp関数について説明します。このチャプターではさらに@dfn{ストリーム(stream)}についても説明します。ストリームとは、(読み取りにおいては)テキストがどこから取得されるか、(プリントにおいては)テキストをどこに出力するかを指定します。"
+msgstr "このチャプターでは読み取りとプリントのためのLisp関数について説明します。このチャプターではさらに@dfn{ストリーム(stream)}についても説明します。ストリームとは、(読み取りでは)テキストがどこから取得されるか、(プリントでは)テキストをどこに出力するかを指定します。"
 
 #. type: node
 #: original_texis/streams.texi:24 original_texis/streams.texi:26
@@ -134,17 +134,17 @@ msgstr "reading"
 #. type: Plain text
 #: original_texis/streams.texi:38
 msgid "@dfn{Reading} a Lisp object means parsing a Lisp expression in textual form and producing a corresponding Lisp object.  This is how Lisp programs get into Lisp from files of Lisp code.  We call the text the @dfn{read syntax} of the object.  For example, the text @samp{(a .@: 5)} is the read syntax for a cons cell whose @sc{car} is @code{a} and whose @sc{cdr} is the number 5."
-msgstr "Lispオブジェクトの@dfn{読み取り}とは、テキスト形式のLisp式をパース(parse: 構文解析)して、対応するLispオブジェクトを生成することを意味します。これは、LLispプログラムがLispコードファイルからLispに取得される方法でもあります。わたしたちは、そのテキストをそのオブジェクトの@dfn{入力構文(read syntax)}と呼んでいます。たとえばテキスト@samp{(a .@: 5)}は、@sc{car}が@code{a}で@sc{cdr}が数字の5であるようなコンスセルにたいする入力構文です。"
+msgstr "Lispオブジェクトの@dfn{読み取り}とは、テキスト形式のLisp式をパース(parse: 解析)して、対応するLispオブジェクトを生成することを意味します。これはLLispプログラムがLispコードファイルからLispに取得される方法でもあります。わたしたちはそのテキストのことを、そのオブジェクトの@dfn{入力構文(read syntax)}と呼んでいます。たとえばテキスト@samp{(a .@: 5)}は、@sc{car}が@code{a}で@sc{cdr}が数字の5であるようなコンスセルにたいする入力構文です。"
 
 #. type: Plain text
 #: original_texis/streams.texi:43
 msgid "@dfn{Printing} a Lisp object means producing text that represents that object---converting the object to its @dfn{printed representation} (@pxref{Printed Representation}).  Printing the cons cell described above produces the text @samp{(a .@: 5)}."
-msgstr "Lispオブジェクトの@dfn{プリント}とは、あるオブジェクトをそのオブジェクトの@dfn{プリント表現(printed representation)} (@ref{Printed Representation}を参照)に変換することにより、そのオブジェクトを表すテキストを生成することを意味します。上述のコンスセルをプリントすると、テキスト@samp{(a .@: 5)}が生成されます。"
+msgstr "Lispオブジェクトの@dfn{プリント}とは、あるオブジェクトをそのオブジェクトの@dfn{プリント表現(printed representation)}に変換することによって、そのオブジェクトを表すテキストを生成することを意味します(@ref{Printed Representation}を参照)。上述のコンスセルをプリントするとテキスト@samp{(a .@: 5)}が生成されます。"
 
 #. type: Plain text
 #: original_texis/streams.texi:53
 msgid "Reading and printing are more or less inverse operations: printing the object that results from reading a given piece of text often produces the same text, and reading the text that results from printing an object usually produces a similar-looking object.  For example, printing the symbol @code{foo} produces the text @samp{foo}, and reading that text returns the symbol @code{foo}.  Printing a list whose elements are @code{a} and @code{b} produces the text @samp{(a b)}, and reading that text produces a list (but not the same list) with elements @code{a} and @code{b}."
-msgstr "読み取りとプリントは、概ね逆の処理といえます。あるテキスト断片を読み取った結果生成されたオブジェクトをプリントすると、多くの場合は同じテキストが生成され、あるオブジェクトをプリントした結果のテキストを読み取ると、通常は同じようなオブジェクトが生成されます。たとえばシンボル@code{foo}をプリントするとテキスト@samp{foo}が生成され、そのテキストを読み取るとシンボル@code{foo}がリターンされます。要素が@code{a}と@code{b}のリストをプリントするとテキスト@samp{(a b)}が生成され、そのテキストを読み取ると、(同じリストではないが)要素が@code{a}と@code{b}のリストが生成されます。"
+msgstr "読み取りとプリントは概ね逆の処理といえます。あるテキスト断片を読み取った結果として生成されたオブジェクトをプリントすると、多くの場合は同じテキストが生成され、あるオブジェクトをプリントした結果のテキストを読み取ると、通常は同じようなオブジェクトが生成されます。たとえばシンボル@code{foo}をプリントするとテキスト@samp{foo}が生成されて、そのテキストを読み取るとシンボル@code{foo}がリターンされます。要素が@code{a}と@code{b}のリストをプリントするとテキスト@samp{(a b)}が生成されて、そのテキストを読み取ると、(同じリストではないが)要素が@code{a}と@code{b}のリストが生成されます。"
 
 #. type: Plain text
 #: original_texis/streams.texi:56
@@ -154,12 +154,12 @@ msgstr "しかし、これら2つの処理は互いにまったく逆の処理�
 #. type: itemize
 #: original_texis/streams.texi:63
 msgid "Printing can produce text that cannot be read.  For example, buffers, windows, frames, subprocesses and markers print as text that starts with @samp{#}; if you try to read this text, you get an error.  There is no way to read those data types."
-msgstr "プリントは読み取ることが不可能なテキストを生成できる。たとえば、バッファー、フレーム、サブプロセス、マーカーは@samp{#}で始まるテキストとしてプリントされる。このテキストの読み取りを試行すると、エラーとなる。これらのデータ型を読み取る方法は存在しない。"
+msgstr "プリントは読み取ることが不可能なテキストを生成できる。たとえばバッファー、フレーム、サブプロセス、マーカーは@samp{#}で始まるテキストとしてプリントされる。このテキストの読み取りを試みるとエラーとなる。これらのデータ型を読み取る方法は存在しない。"
 
 #. type: itemize
 #: original_texis/streams.texi:69
 msgid "One object can have multiple textual representations.  For example, @samp{1} and @samp{01} represent the same integer, and @samp{(a b)} and @samp{(a .@: (b))} represent the same list.  Reading will accept any of the alternatives, but printing must choose one of them."
-msgstr "1つのオブジェクトが、複数のテキスト的な表現をもつことができる。たとえば@samp{1}と@samp{01}は同じ整数を表し、@samp{(a b)}と@samp{(a .@: (b))}は同じリストを表す。読み取りは複数の候補を受容するかもしれないが、プリントはそのうちのただ1つを選択しなければならない。"
+msgstr "1つのオブジェクトが複数のテキスト的な表現をもつことができる。たとえば@samp{1}と@samp{01}は同じ整数を表し、@samp{(a b)}と@samp{(a .@: (b))}は同じリストを表す。読み取りは複数の候補を受容するかもしれないが、プリントはそのうちのただ1つを選択しなければならない。"
 
 #. type: itemize
 #: original_texis/streams.texi:73
@@ -181,7 +181,7 @@ msgstr "input stream"
 #. type: Plain text
 #: original_texis/streams.texi:84
 msgid "Most of the Lisp functions for reading text take an @dfn{input stream} as an argument.  The input stream specifies where or how to get the characters of the text to be read.  Here are the possible types of input stream:"
-msgstr "テキストを読み取るLisp関数の大部分は、引数として@dfn{入力ストリーム(input stream)}をとります。入力ストリームは、読み取られるテキストの文字をどこから、どのように取得するかを指定します。以下は可能な入力ストリーム型です:"
+msgstr "テキストを読み取るLisp関数の大部分は、引数として@dfn{入力ストリーム(input stream)}を受け取ります。入力ストリームは読み取られるテキストの文字をどこから、どのように取得するかを指定します。以下は利用できる入力ストリーム型です:"
 
 #. type: var{#1}
 #: original_texis/streams.texi:86 original_texis/streams.texi:371
@@ -198,7 +198,7 @@ msgstr "buffer input stream"
 #. type: table
 #: original_texis/streams.texi:90
 msgid "The input characters are read from @var{buffer}, starting with the character directly after point.  Point advances as characters are read."
-msgstr "入力文字は@var{buffer}のポイントの後の文字から直接読み取られる。文字の読み取りとともに、ポイントが進む。"
+msgstr "入力文字は@var{buffer}のポイントの後の文字から直接読み取られる。文字の読み取りとともにポイントが進む。"
 
 #. type: var{#1}
 #: original_texis/streams.texi:91 original_texis/streams.texi:376
@@ -215,7 +215,7 @@ msgstr "marker input stream"
 #. type: table
 #: original_texis/streams.texi:97
 msgid "The input characters are read from the buffer that @var{marker} is in, starting with the character directly after the marker.  The marker position advances as characters are read.  The value of point in the buffer has no effect when the stream is a marker."
-msgstr "入力文字は@var{marker}のあるバッファーの、マーカーの後の文字から直接読み取られる。文字の読み取りとともに、マーカーが進む。ストリームがマーカーのときは、バッファー内のポイント値に影響はない。"
+msgstr "入力文字は@var{marker}があるバッファーの、マーカーの後の文字から直接読み取られる。文字の読み取りとともにマーカーが進む。ストリームがマーカーならバッファー内のポイント値に影響はない。"
 
 #. type: var{#1}
 #: original_texis/streams.texi:98
@@ -254,14 +254,12 @@ msgstr "入力文字は@var{function}から生成され、その関数は2種類
 #. type: itemize
 #: original_texis/streams.texi:111
 msgid "When it is called with no arguments, it should return the next character."
-msgstr "引数なしで呼び出されたときは、次の文字をリターンする。"
+msgstr "引数なしで呼び出されたときは次の文字をリターンする。"
 
 #. type: itemize
 #: original_texis/streams.texi:119
-#, fuzzy
-#| msgid "When it is called with one argument (always a character), @var{function} should save the argument and arrange to return it on the next call.  This is called @dfn{unreading} the character; it happens when the Lisp reader reads one character too many and wants to ``put it back where it came from''.  In this case, it makes no difference what value @var{function} returns."
 msgid "When it is called with one argument (always a character), @var{function} should save the argument and arrange to return it on the next call.  This is called @dfn{unreading} the character; it happens when the Lisp reader reads one character too many and wants to put it back where it came from.  In this case, it makes no difference what value @var{function} returns."
-msgstr "1つの引数(常に文字)で呼び出されたとき、@var{function}は引数を保存して、次の呼び出しでリターンするよう用意する。これは文字の@dfn{読み戻し(unreading)}と呼ばれ、Lispリーダーが1文字多く読みとったとき、それを``読みとったところに戻したい''ときに発生する。この場合には、@var{function}のリターン値と同じこと。"
+msgstr "1つの引数(常に文字)で呼び出されたとき、@var{function}は引数を保存して次の呼び出しでリターンするように準備する。これは文字の@dfn{読み戻し(unreading)}と呼ばれ、Lispリーダーが1文字多く読みとったとき、それを`読みとった場所に戻したいときに発生する。この場合には@var{function}のリターン値と違いはない。"
 
 #. type: code{#1}
 #: original_texis/streams.texi:121 original_texis/streams.texi:393
@@ -278,7 +276,7 @@ msgstr "@code{t} input stream"
 #. type: table
 #: original_texis/streams.texi:128
 msgid "@code{t} used as a stream means that the input is read from the minibuffer.  In fact, the minibuffer is invoked once and the text given by the user is made into a string that is then used as the input stream.  If Emacs is running in batch mode, standard input is used instead of the minibuffer.  For example,"
-msgstr "@code{t}は、その入力がミニバッファーから読み取られるストリームであることを意味する。実際にはミニバッファーが1回呼び出されて、ユーザーから与えられたテキストが、その後に入力ストリームとして使用される文字列となる。Emacsがbatchモードで実行されている場合は、ミニバッファーのかわりに標準入力が使用される。たとえば、"
+msgstr "@code{t}はその入力がミニバッファーから読み取られるストリームであることを意味する。実際にはミニバッファーが1回呼び出されて、ユーザーから与えられたテキストが、その後に入力ストリームとして使用される文字列となる。Emacsがbatchモードで実行されている場合には、ミニバッファーのかわりに標準入力が使用される。たとえば、"
 
 #. type: example
 #: original_texis/streams.texi:130
@@ -289,7 +287,7 @@ msgstr "(message \"%s\" (read t))\n"
 #. type: table
 #: original_texis/streams.texi:133
 msgid "will read a Lisp expression from standard input and print the result to standard output."
-msgstr "このような場合は標準入力からLisp式が読み取られて、結果は標準出力にプリントされるだろう。"
+msgstr "このような場合には標準入力からLisp式が読み取られて、結果は標準出力にプリントされるだろう。"
 
 #. type: code{#1}
 #: original_texis/streams.texi:134 original_texis/streams.texi:397
@@ -322,7 +320,7 @@ msgstr "入力ストリームとしてのシンボルは、(もしあれば)そ�
 #. type: Plain text
 #: original_texis/streams.texi:147
 msgid "Here is an example of reading from a stream that is a buffer, showing where point is located before and after:"
-msgstr "以下の例では、バッファーストリームから読み込み、読み取りの前後におけるポイント位置を示しています:"
+msgstr "以下の例ではバッファーストリームから読み込んで、読み取りの前後におけるポイント位置を示しています:"
 
 #. type: group
 #: original_texis/streams.texi:153
@@ -371,12 +369,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:174
 msgid "Note that the first read skips a space.  Reading skips any amount of whitespace preceding the significant text."
-msgstr "最初の読み取りではスペースがスキップされていることに注意してください。読み取りにおいては、意味のあるテキストに先行する、任意のサイズの空白文字がスキップされます。"
+msgstr "最初の読み取りではスペースがスキップされていることに注意してください。読み取りでは意味のあるテキストに先行する、任意のサイズの空白文字がスキップされます。"
 
 #. type: Plain text
 #: original_texis/streams.texi:178
 msgid "Here is an example of reading from a stream that is a marker, initially positioned at the beginning of the buffer shown.  The value read is the symbol @code{This}."
-msgstr "以下は、マーカーストリームからの読み取りの例で、最初は表示されているバッファーの先頭にマーカーが配します。読み取られた値はシンボル@code{This}です。"
+msgstr "以下はマーカーストリームからの読み取りの例で、最初は表示されているバッファーの先頭にマーカーを配置されています。読み取られた値はシンボル@code{This}です。"
 
 #. type: group
 #: original_texis/streams.texi:185
@@ -418,12 +416,12 @@ msgid ""
 "     @result{} #<marker at 5 in foo>   ;; @r{Before the first space.}\n"
 msgstr ""
 "m\n"
-"     @result{} #<marker at 5 in foo>   ;; @r{最初のスペースの前。}\n"
+"     @result{} #<marker at 5 in foo>   ;; @r{最初のスペースの前}\n"
 
 #. type: Plain text
 #: original_texis/streams.texi:202
 msgid "Here we read from the contents of a string:"
-msgstr "以下では、文字列のコンテンツから読み取っています:"
+msgstr "以下では文字列のコンテンツから読み取っています:"
 
 #. type: group
 #: original_texis/streams.texi:207
@@ -438,7 +436,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:214
 msgid "The following example reads from the minibuffer.  The prompt is: @w{@samp{Lisp expression: }}.  (That is always the prompt used when you read from the stream @code{t}.)  The user's input is shown following the prompt."
-msgstr "以下はミニバッファーから読み取る例です。プロンプトは、@w{@samp{Lisp expression: }}です。(このプロンプトはストリーム@code{t}から読み取る際は常に使用されます。) ユーザーの入力はプロンプトの後に表示されます。"
+msgstr "以下はミニバッファーから読み取る例です。プロンプトは@w{@samp{Lisp expression: }}です(このプロンプトはストリーム@code{t}から読み取る際は常に使用される)。ユーザーの入力はプロンプトの後に表示されます。"
 
 #. type: group
 #: original_texis/streams.texi:222
@@ -459,7 +457,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:230
 msgid "Finally, here is an example of a stream that is a function, named @code{useless-stream}.  Before we use the stream, we initialize the variable @code{useless-list} to a list of characters.  Then each call to the function @code{useless-stream} obtains the next character in the list or unreads a character by adding it to the front of the list."
-msgstr "最後は、@code{useless-stream}という名前の関数ストリームから読み取る例です。ストリームを使用する前に、変数@code{useless-list}を文字のリストに初期化しています。その後は、リスト内の次の文字を取得するため、または文字をリストの先頭に追加することにより読み戻すために、関数@code{useless-stream}を呼び出します。"
+msgstr "最後は@code{useless-stream}という名前の関数ストリームから読み取る例です。ストリームを使用する前に変数@code{useless-list}を文字のリストで初期化しています。その後はリスト内の次の文字を取得するため、または文字をリストの先頭に追加することにより読み戻すために関数@code{useless-stream}を呼び出します。"
 
 #. type: group
 #: original_texis/streams.texi:235
@@ -492,7 +490,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:249
 msgid "Now we read using the stream thus constructed:"
-msgstr "このストリームを使って、以下のように読み取ります:"
+msgstr "このストリームを使って以下のように読み取ります:"
 
 #. type: group
 #: original_texis/streams.texi:254
@@ -517,7 +515,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:267
 msgid "Note that the open and close parentheses remain in the list.  The Lisp reader encountered the open parenthesis, decided that it ended the input, and unread it.  Another attempt to read from the stream at this point would read @samp{()} and return @code{nil}."
-msgstr "開カッコと閉カッコがリスト内に残ることに注意してください。Lispリーダーは開カッコに出会うと、それを入力の終わりと判断して、読み戻します。次にこのポイント位置からこのストリームを読み取ると、@samp{()}が読み取られて@code{nil}がリターンされます。"
+msgstr "開カッコと閉カッコがリスト内に残されることに注意してください。Lispリーダーは開カッコに出会うと、それを入力の終わりと判断して読み戻します。次にこのポイント位置からこのストリームを読み取ると、@samp{()}が読み取られて@code{nil}がリターンされます。"
 
 #. type: Plain text
 #: original_texis/streams.texi:273
@@ -527,7 +525,7 @@ msgstr "このセクションでは、読み取りに関係のあるLisp関数�
 #. type: Plain text
 #: original_texis/streams.texi:277
 msgid "In the functions below, @var{stream} stands for an input stream (see the previous section).  If @var{stream} is @code{nil} or omitted, it defaults to the value of @code{standard-input}."
-msgstr "以下の関数で、@var{stream}は入力ストリーム(前のセクションを参照)を意味します。@var{stream}が@code{nil}、または省略された場合のデフォルト値は@code{standard-input}です。"
+msgstr "以下の関数では@var{stream}は入力ストリーム(前のセクションを参照)を意味します。@var{stream}が@code{nil}または省略された場合のデフォルト値は@code{standard-input}です。"
 
 #. type: kindex
 #: original_texis/streams.texi:278
@@ -538,7 +536,7 @@ msgstr "end-of-file"
 #. type: Plain text
 #: original_texis/streams.texi:281
 msgid "An @code{end-of-file} error is signaled if reading encounters an unterminated list, vector, or string."
-msgstr "読み取りにおいて終端されていないリスト、ベクター、文字列に遭遇した場合は、@code{end-of-file}がシグナルされます。"
+msgstr "読み取りにおいて終端されていないリスト、ベクター、文字列に遭遇したら@code{end-of-file}がシグナルされます。"
 
 #. type: defun
 #: original_texis/streams.texi:282
@@ -549,7 +547,7 @@ msgstr "read &optional stream"
 #. type: defun
 #: original_texis/streams.texi:285
 msgid "This function reads one textual Lisp expression from @var{stream}, returning it as a Lisp object.  This is the basic Lisp input function."
-msgstr "この関数は@var{stream}からテキスト表現されたLisp式を1つ読み取り、Lispオブジェクトとしてリターンする。これは基本的なLisp入力関数である。"
+msgstr "この関数は@var{stream}からテキスト表現されたLisp式を1つ読み取ってLispオブジェクトとしてリターンする。これは基本的なLisp入力関数である。"
 
 #. type: defun
 #: original_texis/streams.texi:287
@@ -566,12 +564,12 @@ msgstr "string to object"
 #. type: defun
 #: original_texis/streams.texi:293
 msgid "This function reads the first textual Lisp expression from the text in @var{string}.  It returns a cons cell whose @sc{car} is that expression, and whose @sc{cdr} is an integer giving the position of the next remaining character in the string (i.e., the first one not read)."
-msgstr "この関数は@var{string}内のテキストから、最初のテキスト表現されたLisp式を読み取る。リターン値は@sc{car}がその式で、@sc{cdr}が次に読み取られるその文字列内の残りの文字(読み取られていない最初の文字)の位置を与える整数であるようなコンスセルである。"
+msgstr "この関数は@var{string}内のテキストからテキスト表現された最初のLisp式を読み取る。リターン値は@sc{car}がその式で、@sc{cdr}が次に読み取られるその文字列内の残りの文字(読み取られていない最初の文字)の位置を与える整数であるようなコンスセルである。"
 
 #. type: defun
 #: original_texis/streams.texi:298
 msgid "If @var{start} is supplied, then reading begins at index @var{start} in the string (where the first character is at index 0).  If you specify @var{end}, then reading is forced to stop just before that index, as if the rest of the string were not there."
-msgstr "@var{start}が与えられた場合は、文字列内のインデックス@var{start}(最初の文字はインデックス0)から読み取りが開始される。@var{end}を指定した場合は、残りの文字列が存在しないかのごとく、そのインデックスの直前で読み取りがストップされる。"
+msgstr "@var{start}が与えられると、文字列内のインデックス@var{start}(最初の文字はインデックス0)から読み取りが開始される。@var{end}を指定すると、残りの文字列が存在しないかのごとくそのインデックスの直前で読み取りがストップされる。"
 
 #. type: defun
 #: original_texis/streams.texi:300
@@ -606,7 +604,7 @@ msgid ""
 "(read-from-string \"(list 112)\" 0)\n"
 "     @result{} ((list 112) . 10)\n"
 msgstr ""
-";; @r{Read starting at the first character.}\n"
+";; @r{最初の文字から読み取りを開始}\n"
 "(read-from-string \"(list 112)\" 0)\n"
 "     @result{} ((list 112) . 10)\n"
 
@@ -618,7 +616,7 @@ msgid ""
 "(read-from-string \"(list 112)\" 1)\n"
 "     @result{} (list . 5)\n"
 msgstr ""
-";; @r{Read starting at the second character.}\n"
+";; @r{2つ目の文字から読み取りを開始}\n"
 "(read-from-string \"(list 112)\" 1)\n"
 "     @result{} (list . 5)\n"
 
@@ -631,8 +629,8 @@ msgid ""
 "(read-from-string \"(list 112)\" 6 8)\n"
 "     @result{} (11 . 8)\n"
 msgstr ""
-";; @r{Read starting at the seventh character,}\n"
-";;   @r{and stopping at the ninth.}\n"
+";; @r{7番目の文字から読み取りを開始}\n"
+";;   @r{して9番目の文字で停止}\n"
 "(read-from-string \"(list 112)\" 6 8)\n"
 "     @result{} (11 . 8)\n"
 
@@ -645,7 +643,7 @@ msgstr "standard-input"
 #. type: defvar
 #: original_texis/streams.texi:334
 msgid "This variable holds the default input stream---the stream that @code{read} uses when the @var{stream} argument is @code{nil}.  The default is @code{t}, meaning use the minibuffer."
-msgstr "この変数はデフォルト入力ストリーム(引数@var{stream}が@code{nil}のとき@code{read}が使用するストリーム)を保持する。デフォルトは@code{t}で、これはミニバッファーを使用することを意味する。"
+msgstr "この変数はデフォルト入力ストリーム(引数@var{stream}が@code{nil}のときに@code{read}が使用するストリーム)を保持する。デフォルトは@code{t}で、これはミニバッファーを使用することを意味する。"
 
 #. type: defvar
 #: original_texis/streams.texi:336
@@ -656,29 +654,29 @@ msgstr "read-circle"
 #. type: defvar
 #: original_texis/streams.texi:340
 msgid "If non-@code{nil}, this variable enables the reading of circular and shared structures.  @xref{Circular Objects}.  Its default value is @code{t}."
-msgstr "非@code{nil}の場合、この変数は循環構造(circular structure)および共有構造(shared structures)の読み取りを有効にする。@ref{Circular Objects}を参照。デフォルト値は@code{t}。"
+msgstr "非@code{nil}なら、この変数は循環構造(circular structure)と共有構造(shared structures)の読み取りを有効にする。@ref{Circular Objects}を参照のこと。デフォルト値は@code{t}。"
 
 #. type: cindex
 #: original_texis/streams.texi:342
 #, no-wrap
 msgid "binary I/O in batch mode"
-msgstr ""
+msgstr "binary I/O in batch mode"
 
 #. type: Plain text
 #: original_texis/streams.texi:350
 msgid "When reading or writing from the standard input/output streams of the Emacs process in batch mode, it is sometimes required to make sure any arbitrary binary data will be read/written verbatim, and/or that no translation of newlines to or from CR-LF pairs is performed.  This issue does not exist on Posix hosts, only on MS-Windows and MS-DOS@.  The following function allows you to control the I/O mode of any standard stream of the Emacs process."
-msgstr ""
+msgstr "batchモードでEmacsプロセスの標準入力ストリームや標準出力ストリームにたいして読み取りや書き込みを行う際には、任意のバイナリーデータにたいしてそのまま読み取りや書き込みを行ったり、改行とCRLFの変換を行わないことが要求されるときがあります。これはMS-WindowsとMS-DOSだけに存在し、Posixホストには存在しない問題です。以下の関数によってEmacsプロセスの標準ストリームすべての入出力モードを制御できます。"
 
 #. type: defun
 #: original_texis/streams.texi:351
 #, no-wrap
 msgid "set-binary-mode stream mode"
-msgstr ""
+msgstr "set-binary-mode stream mode"
 
 #. type: defun
 #: original_texis/streams.texi:359
 msgid "Switch @var{stream} into binary or text I/O mode.  If @var{mode} is non-@code{nil}, switch to binary mode, otherwise switch to text mode.  The value of @var{stream} can be one of @code{stdin}, @code{stdout}, or @code{stderr}.  This function flushes any pending output data of @var{stream} as a side effect, and returns the previous value of I/O mode for @var{stream}.  On Posix hosts, it always returns a non-@code{nil} value and does nothing except flushing pending output."
-msgstr ""
+msgstr "@var{stream}の入出力モードのテキストとバイナリーを切り替える。@var{mode}が非@code{nil}ならバイナリーモード、それ以外ならテキストモードに切り替える。@var{stream}の値は@code{stdin}、@code{stdout}、@code{stderr}のいずれか。この関数は副作用として保留されている@var{stream}の出力データをすべてフラッシュして、@var{stream}の以前の入出力モードをリターンする。Posixホストでは常に非@code{nil}値をリターンして、保留中の出力のフラッシュ以外は何も行わない。"
 
 #. type: cindex
 #: original_texis/streams.texi:363
@@ -695,7 +693,7 @@ msgstr "output stream"
 #. type: Plain text
 #: original_texis/streams.texi:369
 msgid "An output stream specifies what to do with the characters produced by printing.  Most print functions accept an output stream as an optional argument.  Here are the possible types of output stream:"
-msgstr "出力ストリームは、プリントにより生成された文字に何を行うかを指定します。ほとんどのプリント関数は、オプション引数として出力ストリームを受け入れます。以下は利用できる出力ストリーム型です:"
+msgstr "出力ストリームはプリントによって生成された文字に何を行うかを指定します。ほとんどのプリント関数は引数としてオプションで出力ストリームを受け取ります。以下は利用できる出力ストリーム型です:"
 
 #. type: cindex
 #: original_texis/streams.texi:372
@@ -706,7 +704,7 @@ msgstr "buffer output stream"
 #. type: table
 #: original_texis/streams.texi:375
 msgid "The output characters are inserted into @var{buffer} at point.  Point advances as characters are inserted."
-msgstr "出力文字は、@var{buffer}のポイント位置に挿入される。文字が挿入された分、ポイントが進む。"
+msgstr "出力文字は@var{buffer}のポイント位置に挿入される。文字が挿入された分だけポイントが進む。"
 
 #. type: cindex
 #: original_texis/streams.texi:377
@@ -717,7 +715,7 @@ msgstr "marker output stream"
 #. type: table
 #: original_texis/streams.texi:385
 msgid "The output characters are inserted into the buffer that @var{marker} points into, at the marker position.  The marker position advances as characters are inserted.  The value of point in the buffer has no effect on printing when the stream is a marker, and this kind of printing does not move point (except that if the marker points at or before the position of point, point advances with the surrounding text, as usual)."
-msgstr "出力文字は、@var{marker}のあるバッファーのマーカー位置に挿入される。文字が挿入された分、マーカー位置が進む。ストリームがマーカーのときは、そのバッファー内のポイント位置にプリントは影響せず、この種のプリントでポイントは移動しない(マーカー位置がポイント位置、またはポイント位置より前の場合は除外される。通常はテキストの周囲にポイントが進む)。"
+msgstr "出力文字は@var{marker}があるバッファーのマーカー位置に挿入される。文字が挿入された分だけマーカー位置が進む。ストリームがマーカーのときは、そのバッファー内のポイント位置にプリントは影響せず、この種のプリントでポイントは移動しない(マーカー位置がポイント位置かポイント位置より前の場合は除く。通常はテキストの周囲にポイントが進む)。"
 
 #. type: cindex
 #: original_texis/streams.texi:387
@@ -728,7 +726,7 @@ msgstr "function output stream"
 #. type: table
 #: original_texis/streams.texi:392
 msgid "The output characters are passed to @var{function}, which is responsible for storing them away.  It is called with a single character as argument, as many times as there are characters to be output, and is responsible for storing the characters wherever you want to put them."
-msgstr "出力文字は、文字を格納する役目をもつ@var{function}に渡される。この関数は１つの文字を引数に、出力される文字の回数呼び出され、その文字を格納したい場所に格納する役目をもつ。"
+msgstr "出力文字は文字を格納する役目をもつ@var{function}に渡される。この関数は1つの文字を引数に出力される文字の回数呼び出され、格納したい場所にその文字を格納する役目をもつ。"
 
 #. type: cindex
 #: original_texis/streams.texi:394
@@ -765,7 +763,7 @@ msgstr "有効な出力ストリームの多くは、入力ストリームとし
 #. type: Plain text
 #: original_texis/streams.texi:416
 msgid "Here is an example of a buffer used as an output stream.  Point is initially located as shown immediately before the @samp{h} in @samp{the}.  At the end, point is located directly before that same @samp{h}."
-msgstr "以下はバッファーを出力ストリームとして使用する例です。ポイントは最初は@samp{the}の中の@samp{h}の直前にあります。そして最後も、同じ@samp{h}の直前に配されます。"
+msgstr "以下はバッファーを出力ストリームとして使用する例です。ポイントは最初は@samp{the}の中の@samp{h}の直前にあります。そして最後も同じ@samp{h}の直前に配置されます。"
 
 #. type: cindex
 #: original_texis/streams.texi:417
@@ -816,7 +814,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:443
 msgid "Now we show a use of a marker as an output stream.  Initially, the marker is in buffer @code{foo}, between the @samp{t} and the @samp{h} in the word @samp{the}.  At the end, the marker has advanced over the inserted text so that it remains positioned before the same @samp{h}.  Note that the location of point, shown in the usual fashion, has no effect."
-msgstr "次はマーカーを出力ストリームとして使用する例です。マーカーは最初、バッファー@code{foo}内の単語@samp{the}の中の@samp{t}と@samp{h}の間にあります。最後には、挿入されたテキストによりマーカーが進み、同じ@samp{h}の前に留まります。通常の方法で見られるようなポイント位置への影響がないことに注意してください。"
+msgstr "次はマーカーを出力ストリームとして使用する例です。マーカーは最初はバッファー@code{foo}内の単語@samp{the}の中の@samp{t}と@samp{h}の間にあります。最後には挿入されたテキストによってマーカーが進んで、同じ@samp{h}の前に留まります。通常の方法で見られるようなポイント位置への影響がないことに注意してください。"
 
 #. type: group
 #: original_texis/streams.texi:449
@@ -900,7 +898,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:492
 msgid "Finally, we show the use of a function as an output stream.  The function @code{eat-output} takes each character that it is given and conses it onto the front of the list @code{last-output} (@pxref{Building Lists}).  At the end, the list contains all the characters output, but in reverse order."
-msgstr "最後は関数を出力ストリームとして使用する例です。関数@code{eat-output}は与えられたそれぞれの文字を@code{last-output}の先頭にconsします(@ref{Building Lists}を参照)。最後には、リストには出力されたすべての文字が逆順で含まれます。"
+msgstr "最後は関数を出力ストリームとして使用する例です。関数@code{eat-output}は与えられたそれぞれの文字を@code{last-output}の先頭にconsします(@ref{Building Lists}を参照)。最後にはリストには出力されたすべての文字が逆順で含まれます。"
 
 #. type: group
 #: original_texis/streams.texi:497
@@ -949,7 +947,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:519
 msgid "Now we can put the output in the proper order by reversing the list:"
-msgstr "このリストを逆転すれば、正しい順序で出力することができます:"
+msgstr "このリストを逆転すれば正しい順序で出力することができます:"
 
 #. type: group
 #: original_texis/streams.texi:526
@@ -973,7 +971,7 @@ msgstr "@code{concat}を呼び出してリストを文字列に変換すれば�
 #. type: Plain text
 #: original_texis/streams.texi:538
 msgid "This section describes the Lisp functions for printing Lisp objects---converting objects into their printed representation."
-msgstr "このセクションでは、オブジェクトをオブジェクトのプリント表現に変換してLispオブジェクトをプリントするLisp関数を説明します。"
+msgstr "このセクションではオブジェクトをオブジェクトのプリント表現に変換して、LispオブジェクトをプリントするLisp関数を説明します。"
 
 #. type: cindex
 #: original_texis/streams.texi:539
@@ -1002,17 +1000,17 @@ msgstr "escape characters in printing"
 #. type: Plain text
 #: original_texis/streams.texi:550
 msgid "Some of the Emacs printing functions add quoting characters to the output when necessary so that it can be read properly.  The quoting characters used are @samp{\"} and @samp{\\}; they distinguish strings from symbols, and prevent punctuation characters in strings and symbols from being taken as delimiters when reading.  @xref{Printed Representation}, for full details.  You specify quoting or no quoting by the choice of printing function."
-msgstr "Emacsプリント関数には、正しく読み取れるように必要なとき出力にクォート文字を追加するものがあります。使用されるクォート文字は@samp{\"}と@samp{\\}です。これらは文字列をシンボルと区別するとともに、文字列およびシンボル内の区切り文字が読み取り時に区切り文字として扱われることを防ぎます。完全な詳細は@ref{Printed Representation}を参照してください。クォートするかしないかは、プリント関数の選択により指定できます。"
+msgstr "Emacsプリント関数には、正しく読み取れるように必要なとき出力にクォート文字を追加するものがあります。使用されるクォート文字は@samp{\"}と@samp{\\}です。これらは文字列をシンボルと区別するとともに、文字列とシンボル内の区切り文字が読み取りの際に区切り文字として扱われることを防ぎます。完全な詳細は@ref{Printed Representation}を参照してください。クォートするかしないかはプリント関数の選択によって指定できます。"
 
 #. type: Plain text
 #: original_texis/streams.texi:556
 msgid "If the text is to be read back into Lisp, then you should print with quoting characters to avoid ambiguity.  Likewise, if the purpose is to describe a Lisp object clearly for a Lisp programmer.  However, if the purpose of the output is to look nice for humans, then it is usually better to print without quoting."
-msgstr "そのテキストがLispに読み戻す場合、同様にLispプログラマーにLispオブジェクトを明解に説明するのが目的の場合は、曖昧さを避けるためにクォート文字をプリントするべきです。しかし、プログラマー以外の人間にたいして出力の見栄えを良くするのが目的なら、通常はクォートなしでプリントしたほうがよいでしょう。"
+msgstr "そのテキストがLispに読み戻す場合、またはLispプログラマーにLispオブジェクトを明解に説明するのが目的の場合は、曖昧さを避けるためにクォート文字をプリントするべきです。しかしプログラマー以外の人間にたいして出力の見栄えを良くするのが目的なら、通常はクォートなしでプリントしたほうがよいでしょう。"
 
 #. type: Plain text
 #: original_texis/streams.texi:564
 msgid "Lisp objects can refer to themselves.  Printing a self-referential object in the normal way would require an infinite amount of text, and the attempt could cause infinite recursion.  Emacs detects such recursion and prints @samp{#@var{level}} instead of recursively printing an object already being printed.  For example, here @samp{#0} indicates a recursive reference to the object at level 0 of the current print operation:"
-msgstr "Lispオブジェクトは自己参照ができます。通常の方法で自己参照オブジェクトをプリントするにはテキストが無限に必要で、その試みにより無限再帰が発生する恐れがあります。Emacsはそのような再帰を検知して、すでにプリントされたオブジェクトを再帰的にプリントするかわりに、@samp{#@var{level}}をプリントします。たとえば以下は、カレントのプリント処理において、レベル0のオブジェクトを再帰的に参照することを示しています:"
+msgstr "Lispオブジェクトは自己参照ができます。通常の方法で自己参照オブジェクトをプリントするにはテキストが無限に必要であり、その試みにより無限再帰が発生する恐れがあります。Emacsはそのような再帰を検知して、すでにプリントされたオブジェクトを再帰的にプリントするかわりに、@samp{#@var{level}}をプリントします。たとえば以下はカレントのプリント処理において、レベル0のオブジェクトを再帰的に参照することを示しています:"
 
 #. type: example
 #: original_texis/streams.texi:570
@@ -1031,7 +1029,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/streams.texi:576
 msgid "In the functions below, @var{stream} stands for an output stream.  (See the previous section for a description of output streams.)  If @var{stream} is @code{nil} or omitted, it defaults to the value of @code{standard-output}."
-msgstr "以下の関数では、@var{stream}は出力ストリームを意味します。(出力ストリームの説明は、前のセクションを参照してください。) @var{stream}が@code{nil}、または省略された場合のデフォルトは、@code{standard-output}の値になります。"
+msgstr "以下の関数では@var{stream}は出力ストリームを意味します(出力ストリームの説明は前のセクションを参照)。@var{stream}が@code{nil}または省略された場合のデフォルトは@code{standard-output}の値になります。"
 
 #. type: defun
 #: original_texis/streams.texi:577
@@ -1048,7 +1046,7 @@ msgstr "Lisp printer"
 #. type: defun
 #: original_texis/streams.texi:583
 msgid "The @code{print} function is a convenient way of printing.  It outputs the printed representation of @var{object} to @var{stream}, printing in addition one newline before @var{object} and another after it.  Quoting characters are used.  @code{print} returns @var{object}.  For example:"
-msgstr "@code{print}関数は、プリントを行うための便利な方法である。この関数は@var{object}の前後に改行を付与して、@var{object}のプリント表現を@var{stream}にプリントする。クォート文字が使用される。@code{print}は@var{object}をリターンする。たとえば:"
+msgstr "@code{print}関数はプリントを行うための便利な手段である。この関数は@var{object}の前後に改行を付与して@var{object}のプリント表現を@var{stream}にプリントする。クォート文字が使用される。@code{print}は@var{object}をリターンする。たとえば:"
 
 #. type: group
 #: original_texis/streams.texi:596
@@ -1117,7 +1115,7 @@ msgstr "この関数は@var{object}のプリント表現を@var{stream}に出力
 #. type: defun
 #: original_texis/streams.texi:625
 msgid "This function is intended to produce output that is readable by people, not by @code{read}, so it doesn't insert quoting characters and doesn't put double-quotes around the contents of strings.  It does not add any spacing between calls."
-msgstr "この関数は@code{read}ではなく人間が読める出力を生成することを意図しているので、クォート文字を挿入せず、文字列のコンテンツの前後にダブルクォート文字を配さない。呼び出しの間に間隔を何も出力しない。"
+msgstr "この関数は@code{read}ではなく人間が読める出力を生成することを意図しているので、クォート文字を挿入せず文字列のコンテンツの前後にダブルクォート文字を配置しない。各呼び出しの間にスペースを何も出力しない。"
 
 #. type: group
 #: original_texis/streams.texi:633
@@ -1137,10 +1135,9 @@ msgstr ""
 
 #. type: defun
 #: original_texis/streams.texi:637
-#, fuzzy, no-wrap
-#| msgid "terpri &optional stream"
+#, no-wrap
 msgid "terpri &optional stream ensure"
-msgstr "terpri &optional stream"
+msgstr "terpri &optional stream ensure"
 
 #. type: cindex
 #: original_texis/streams.texi:638
@@ -1151,7 +1148,7 @@ msgstr "newline in print"
 #. type: defun
 #: original_texis/streams.texi:644
 msgid "This function outputs a newline to @var{stream}.  The name stands for ``terminate print''.  If @var{ensure} is non-@code{nil} no newline is printed if @var{stream} is already at the beginning of a line.  Note in this case @var{stream} can not be a function and an error is signalled if it is.  This function returns @code{t} if a newline is printed."
-msgstr ""
+msgstr "この関数は@var{stream}に改行を出力する。関数名は``terminate print''に由来する。@var{ensure}が非@code{nil}の場合は、もし@var{stream}がすでに行頭にあれば何も改行をプリントしない。この場合は@var{stream}は関数であってはならず、もし関数ならエラーがシグナルされることに注意。この関数は改行をプリントしたら@code{t}をリターンする。"
 
 #. type: defun
 #: original_texis/streams.texi:646
@@ -1179,7 +1176,7 @@ msgstr "object to string"
 #. type: defun
 #: original_texis/streams.texi:655
 msgid "This function returns a string containing the text that @code{prin1} would have printed for the same argument."
-msgstr "この関数は、同じ引数で@code{prin1}がプリントするテキストを含む文字列をリターンする。"
+msgstr "この関数は同じ引数で@code{prin1}がプリントするテキストを含む文字列をリターンする。"
 
 #. type: group
 #: original_texis/streams.texi:660
@@ -1204,7 +1201,7 @@ msgstr ""
 #. type: defun
 #: original_texis/streams.texi:670
 msgid "If @var{noescape} is non-@code{nil}, that inhibits use of quoting characters in the output.  (This argument is supported in Emacs versions 19 and later.)"
-msgstr "@var{noescape}が非@code{nil}の場合は、出力中のクォート文字の使用を抑制する。(この引数は、Emacsバージョン19以降でサポートされた。)"
+msgstr "@var{noescape}が非@code{nil}なら出力中のクォート文字の使用を抑制する(この引数はEmacsバージョン19以降でサポートされた)。"
 
 #. type: group
 #: original_texis/streams.texi:675
@@ -1240,12 +1237,12 @@ msgstr "with-output-to-string body@dots{}"
 #. type: defmac
 #: original_texis/streams.texi:689
 msgid "This macro executes the @var{body} forms with @code{standard-output} set up to feed output into a string.  Then it returns that string."
-msgstr "このマクロは出力を文字列に送るよう@code{standard-output}をセットアップして、フォーム@var{body}を実行する。その文字列がリターンされる。"
+msgstr "このマクロは出力を文字列に送るよう@code{standard-output}をセットアップしてフォーム@var{body}を実行する。その文字列をリターンする。"
 
 #. type: defmac
 #: original_texis/streams.texi:691
 msgid "For example, if the current buffer name is @samp{foo},"
-msgstr "たとえばカレントバッファー名が@samp{foo}の場合、"
+msgstr "たとえばカレントバッファー名が@samp{foo}なら、"
 
 #. type: example
 #: original_texis/streams.texi:696
@@ -1272,15 +1269,13 @@ msgstr "pp object &optional stream"
 
 #. type: defun
 #: original_texis/streams.texi:706
-#, fuzzy
-#| msgid "This function outputs @var{object} to @var{stream}, just like @code{prin1}, but does it in a more ``pretty'' way.  That is, it'll indent and fill the object to make it more readable for humans."
 msgid "This function outputs @var{object} to @var{stream}, just like @code{prin1}, but does it in a prettier way.  That is, it'll indent and fill the object to make it more readable for humans."
-msgstr "この関数は@code{prin1}と同じように@var{object}を@var{stream}に出力するが、より``優雅(pretty)''な方法でこれを行う。すなわち、この関数は人間がより読みやすいようにオブジェクトのインデントとパディングを行う。"
+msgstr "この関数は@code{prin1}と同じように@var{object}を@var{stream}に出力するが、より優雅(pretty)な方法でこれを行う。すなわちこの関数は人間がより読みやすいようにオブジェクトのインデントとパディングを行う。"
 
 #. type: Plain text
 #: original_texis/streams.texi:712
 msgid "If you need to use binary I/O in batch mode, e.g., use the functions described in this section to write out arbitrary binary data or avoid conversion of newlines on non-Posix hosts, see @ref{Input Functions, set-binary-mode}."
-msgstr ""
+msgstr "batchモードでバイナリー入出力を使用する必要がある場合(このセクションで説明した非Posixホスト上で任意のバイナリーデータの書き込みや改行変換の回避するために関数を使用する場合)には、@ref{Input Functions, set-binary-mode}を参照してください。"
 
 #. type: section
 #: original_texis/streams.texi:714
@@ -1303,7 +1298,7 @@ msgstr "standard-output"
 #. type: defvar
 #: original_texis/streams.texi:721
 msgid "The value of this variable is the default output stream---the stream that print functions use when the @var{stream} argument is @code{nil}.  The default is @code{t}, meaning display in the echo area."
-msgstr "この変数の値はデフォルト出力ストリーム(@var{stream}引数が@code{nil}のときプリント関数が使用するストリーム)である。デフォルトは@code{t}で、エコーエリアに表示することを意味する。"
+msgstr "この変数の値はデフォルト出力ストリーム(@var{stream}引数が@code{nil}のときプリント関数が使用するストリーム)である。デフォルトは@code{t}で、これはエコーエリアに表示することを意味する。"
 
 #. type: defvar
 #: original_texis/streams.texi:723
@@ -1314,7 +1309,7 @@ msgstr "print-quoted"
 #. type: defvar
 #: original_texis/streams.texi:727
 msgid "If this is non-@code{nil}, that means to print quoted forms using abbreviated reader syntax, e.g., @code{(quote foo)} prints as @code{'foo}, and @code{(function foo)} as @code{#'foo}."
-msgstr "これが非@code{nil}の場合は、省略されたリーダー構文(たとえば@code{(quote foo)}を@code{'foo}、@code{(function foo)}を@code{#'foo}のように)を使用してクォートされたフォームをプリントすることを意味する。"
+msgstr "これが非@code{nil}なら、省略されたリーダー構文(たとえば@code{(quote foo)}を@code{'foo}、@code{(function foo)}を@code{#'foo}のように)を使用してクォートされたフォームをプリントすることを意味する。"
 
 #. type: defvar
 #: original_texis/streams.texi:729
@@ -1337,12 +1332,12 @@ msgstr "escape characters"
 #. type: defvar
 #: original_texis/streams.texi:735
 msgid "If this variable is non-@code{nil}, then newline characters in strings are printed as @samp{\\n} and formfeeds are printed as @samp{\\f}.  Normally these characters are printed as actual newlines and formfeeds."
-msgstr "この変数が非@code{nil}の場合、文字列内の改行は@samp{\\n}、改ページは@samp{\\f}でプリントされる。これらの文字は、通常は実際の改行および改ページとしてプリントされる。"
+msgstr "この変数が非@code{nil}なら、文字列内の改行は@samp{\\n}、改ページは@samp{\\f}でプリントされる。これらの文字は通常は実際の改行と改ページとしてプリントされる。"
 
 #. type: defvar
 #: original_texis/streams.texi:739
 msgid "This variable affects the print functions @code{prin1} and @code{print} that print with quoting.  It does not affect @code{princ}.  Here is an example using @code{prin1}:"
-msgstr "この変数はクォートつきのプリントを行うプリント関数@code{prin1}および@code{print}に影響を与える。@code{princ}に影響はない。以下は@code{prin1}を使用した場合の例である:"
+msgstr "この変数はクォートつきのプリントを行うプリント関数@code{prin1}と@code{print}に影響を与える。@code{princ}に影響はない。以下は@code{prin1}を使用した場合の例である:"
 
 #. type: group
 #: original_texis/streams.texi:747
@@ -1379,7 +1374,7 @@ msgstr ""
 #. type: defvar
 #: original_texis/streams.texi:762
 msgid "In the second expression, the local binding of @code{print-escape-newlines} is in effect during the call to @code{prin1}, but not during the printing of the result."
-msgstr "2つ目の式では、@code{prin1}を呼び出す間は@code{print-escape-newlines}のローカルバインドが効果をもつが、結果をプリントするときには効果がない。"
+msgstr "2つ目の式では@code{prin1}を呼び出す間は@code{print-escape-newlines}のローカルバインドが効果をもつが、結果をプリントするときには効果がない。"
 
 #. type: defvar
 #: original_texis/streams.texi:764
@@ -1390,12 +1385,12 @@ msgstr "print-escape-nonascii"
 #. type: defvar
 #: original_texis/streams.texi:769
 msgid "If this variable is non-@code{nil}, then unibyte non-@acronym{ASCII} characters in strings are unconditionally printed as backslash sequences by the print functions @code{prin1} and @code{print} that print with quoting."
-msgstr "この変数が非@code{nil}の場合、クォートつきでプリントするプリント関数@code{prin1}および@code{print}は、文字列内のユニバイトの非@acronym{ASCII}文字を無条件でバックスラッシュシーケンスとしてプリントする。"
+msgstr "この変数が非@code{nil}なら、クォートつきでプリントするプリント関数@code{prin1}と@code{print}は文字列内のユニバイトの非@acronym{ASCII}文字を無条件でバックスラッシュシーケンスとしてプリントする。"
 
 #. type: defvar
 #: original_texis/streams.texi:773
 msgid "Those functions also use backslash sequences for unibyte non-@acronym{ASCII} characters, regardless of the value of this variable, when the output stream is a multibyte buffer or a marker pointing into one."
-msgstr "これらの関数は、出力ストリームがマルチバイトバッファー、あるいはマーカーがマルチバイトバッファーをポイントするときは、この変数の値に関わらずユニバイト非@acronym{ASCII}文字にたいしてバックスラッシュシーケンスを使用する。"
+msgstr "これらの関数は出力ストリームがマルチバイトバッファー、あるいはマーカーがマルチバイトバッファーをポイントするときは、この変数の値に関わらずユニバイト非@acronym{ASCII}文字にたいしてバックスラッシュシーケンスを使用する。"
 
 #. type: defvar
 #: original_texis/streams.texi:775
@@ -1406,12 +1401,12 @@ msgstr "print-escape-multibyte"
 #. type: defvar
 #: original_texis/streams.texi:780
 msgid "If this variable is non-@code{nil}, then multibyte non-@acronym{ASCII} characters in strings are unconditionally printed as backslash sequences by the print functions @code{prin1} and @code{print} that print with quoting."
-msgstr "この変数が非@code{nil}の場合、クォートつきでプリントするプリント関数@code{prin1}および@code{print}は、文字列内のマルチバイトの非@acronym{ASCII}文字を無条件でバックスラッシュシーケンスとしてプリントする。"
+msgstr "この変数が非@code{nil}なら、クォートつきでプリントするプリント関数@code{prin1}と@code{print}は、文字列内のマルチバイトの非@acronym{ASCII}文字を無条件でバックスラッシュシーケンスとしてプリントする。"
 
 #. type: defvar
 #: original_texis/streams.texi:785
 msgid "Those functions also use backslash sequences for multibyte non-@acronym{ASCII} characters, regardless of the value of this variable, when the output stream is a unibyte buffer or a marker pointing into one."
-msgstr "これらの関数は、出力ストリームがユニバイトバッファー、あるいはマーカーがユニバイトバッファーをポイントするときは、この変数の値に関わらずマルチバイト非@acronym{ASCII}文字にたいしてバックスラッシュシーケンスを使用する。"
+msgstr "これらの関数は出力ストリームがユニバイトバッファー、あるいはマーカーがユニバイトバッファーをポイントするときは、この変数の値に関わらずマルチバイト非@acronym{ASCII}文字にたいしてバックスラッシュシーケンスを使用する。"
 
 #. type: defvar
 #: original_texis/streams.texi:787
@@ -1433,7 +1428,7 @@ msgstr "この変数の値は任意のリスト、ベクター、ブールベク
 #. type: defvar
 #: original_texis/streams.texi:794
 msgid "If the value is @code{nil} (the default), then there is no limit."
-msgstr "値が@code{nil}(デフォルト)の場合は、無制限である。"
+msgstr "値が@code{nil}(デフォルト)の場合は無制限。"
 
 #. type: group
 #: original_texis/streams.texi:799
@@ -1466,7 +1461,7 @@ msgstr "print-level"
 #. type: defvar
 #: original_texis/streams.texi:813
 msgid "The value of this variable is the maximum depth of nesting of parentheses and brackets when printed.  Any list or vector at a depth exceeding this limit is abbreviated with an ellipsis.  A value of @code{nil} (which is the default) means no limit."
-msgstr "この変数の値はプリント時の丸カッコ(parentheses: ``()'')と角カッコ(brackets: ``[]\"')のネスト最大深さである。この制限を超える任意のリストまたはベクターは省略記号(``...'')で省略される。値@code{nil}(デフォルト)は無制限を意味する。"
+msgstr "この変数の値はプリント時の丸カッコ(parentheses: ``()'')と角カッコ(brackets: ``[]\"')のネスト最大深さである。この制限を超える任意のリストとベクターは省略記号(``...'')で省略される。値@code{nil}(デフォルト)は無制限を意味する。"
 
 #. type: defopt
 #: original_texis/streams.texi:815
@@ -1483,7 +1478,7 @@ msgstr "eval-expression-print-level"
 #. type: defopt
 #: original_texis/streams.texi:821
 msgid "These are the values for @code{print-length} and @code{print-level} used by @code{eval-expression}, and thus, indirectly, by many interactive evaluation commands (@pxref{Lisp Eval,, Evaluating Emacs-Lisp Expressions, emacs, The GNU Emacs Manual})."
-msgstr "これらは@code{eval-expression}により使用される@code{print-length}および@code{print-level}の値であり、したがって間接的に多くのインタラクティブな評価コマンドにより使用される(@ref{Lisp Eval,, Evaluating Emacs-Lisp Expressions, emacs, The GNU Emacs Manual}を参照)。"
+msgstr "これらは@code{eval-expression}によって使用される@code{print-length}と@code{print-level}の値であり、したがって間接的に多くのインタラクティブな評価コマンドにより使用される(@ref{Lisp Eval,, Evaluating Emacs-Lisp Expressions, emacs, The GNU Emacs Manual}を参照)。"
 
 #. type: Plain text
 #: original_texis/streams.texi:825
@@ -1499,7 +1494,7 @@ msgstr "print-circle"
 #. type: defvar
 #: original_texis/streams.texi:829
 msgid "If non-@code{nil}, this variable enables detection of circular and shared structure in printing.  @xref{Circular Objects}."
-msgstr "非@code{nil}の場合、この変数はプリント時の循環構造と共有構造の検出を有効にする。@ref{Circular Objects}を参照のこと。"
+msgstr "非@code{nil}なら、この変数はプリント時の循環構造と共有構造の検出を有効にする。@ref{Circular Objects}を参照のこと。"
 
 #. type: defvar
 #: original_texis/streams.texi:831
@@ -1510,7 +1505,7 @@ msgstr "print-gensym"
 #. type: defvar
 #: original_texis/streams.texi:836
 msgid "If non-@code{nil}, this variable enables detection of uninterned symbols (@pxref{Creating Symbols}) in printing.  When this is enabled, uninterned symbols print with the prefix @samp{#:}, which tells the Lisp reader to produce an uninterned symbol."
-msgstr "非@code{nil}の場合、この変数はプリント時のインターンされていないシンボル(@ref{Creating Symbols}を参照)の検出を有効にする。これが有効な場合、インターンされていないシンボルはプレフィックス@samp{#:}とともにプリントされる。このプレフィックスは、Lispリーダーにたいしてインターンされていないシンボルを生成するよう告げる。"
+msgstr "非@code{nil}なら、この変数はプリント時のインターンされていないシンボル(@ref{Creating Symbols}を参照)の検出を有効にする。これが有効なら、インターンされていないシンボルはプレフィックス@samp{#:}とともにプリントされる。このプレフィックスは、Lispリーダーにたいしてインターンされていないシンボルを生成するよう告げる。"
 
 #. type: defvar
 #: original_texis/streams.texi:838
@@ -1521,7 +1516,7 @@ msgstr "print-continuous-numbering"
 #. type: defvar
 #: original_texis/streams.texi:845
 msgid "If non-@code{nil}, that means number continuously across print calls.  This affects the numbers printed for @samp{#@var{n}=} labels and @samp{#@var{m}#} references.  Don't set this variable with @code{setq}; you should only bind it temporarily to @code{t} with @code{let}.  When you do that, you should also bind @code{print-number-table} to @code{nil}."
-msgstr "非@code{nil}の場合は、複数のプリント呼び出しを通じて通番が振られることを意味する。これは@samp{#@var{n}=}ラベルおよび@samp{#@var{m}#}参照にたいしてプリントされる数字に影響する。この変数を@code{setq}でセットしてはならない。@code{let}を使用して一時的に@code{t}にバインドするべきである。これを行う場合は、@code{print-number-table}も@code{nil}にバインドするべきである。"
+msgstr "非@code{nil}なら、複数のプリント呼び出しを通じて通番が振られることを意味する。これは@samp{#@var{n}=}ラベルと@samp{#@var{m}#}参照にたいしてプリントされる数字に影響する。この変数を@code{setq}でセットしてはならない。@code{let}を使用して一時的に@code{t}にバインドすること。これを行う場合は@code{print-number-table}も@code{nil}にバインドすること。"
 
 #. type: defvar
 #: original_texis/streams.texi:847
