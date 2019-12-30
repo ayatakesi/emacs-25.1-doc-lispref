@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:50+0900\n"
-"PO-Revision-Date: 2019-10-19 00:49+0900\n"
+"PO-Revision-Date: 2019-12-30 17:15+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -24,7 +24,7 @@ msgstr "Windows"
 #. type: Plain text
 #: original_texis/windows.texi:13
 msgid "This chapter describes the functions and variables related to Emacs windows.  @xref{Frames}, for how windows are assigned an area of screen available for Emacs to use.  @xref{Display}, for information on how text is displayed in windows."
-msgstr "このチャプターでは、Emacsのウィンドウに関連する関数と変数について説明します。Emacsが利用可能なスクリーン領域にウィンドウが割り当てられる方法については、@ref{Frames}を参照してください。ウィンドウ内にテキストが表示される方法についての情報は、@ref{Display}を参照してください。"
+msgstr "このチャプターではEmacsのウィンドウに関連する関数と変数について説明します。Emacsが利用可能なスクリーン領域にウィンドウが割り当てられる方法については@ref{Frames}を参照してください。ウィンドウ内にテキストが表示される方法についての情報は@ref{Display}を参照してください。"
 
 #. type: node
 #: original_texis/windows.texi:48 original_texis/windows.texi:51
@@ -76,17 +76,14 @@ msgstr "ウィンドウのサイズの変更。"
 #. type: section
 #: original_texis/windows.texi:48 original_texis/windows.texi:997
 #: original_texis/windows.texi:998
-#, fuzzy, no-wrap
-#| msgid "Window Sizes"
+#, no-wrap
 msgid "Preserving Window Sizes"
-msgstr "Window Sizes"
+msgstr "Preserving Window Sizes"
 
 #. type: menuentry
 #: original_texis/windows.texi:48
-#, fuzzy
-#| msgid "Changing the sizes of windows."
 msgid "Preserving the size of windows."
-msgstr "ウィンドウのサイズの変更。"
+msgstr "ウィンドウのサイズの保存。"
 
 #. type: section
 #: original_texis/windows.texi:48 original_texis/windows.texi:1089
@@ -134,7 +131,7 @@ msgstr "Selecting Windows"
 #. type: menuentry
 #: original_texis/windows.texi:48
 msgid "The selected window is the one that you edit in."
-msgstr "選択されたウィンドウとは、編集を行っているウィンドウである。"
+msgstr "選択されたウィンドウとは編集を行っているウィンドウである。"
 
 #. type: node
 #: original_texis/windows.texi:48 original_texis/windows.texi:1791
@@ -157,7 +154,7 @@ msgstr "Buffers and Windows"
 #. type: menuentry
 #: original_texis/windows.texi:48
 msgid "Each window displays the contents of a buffer."
-msgstr "それぞれのウィンドウは、バッファーのコンテンツを表示する。"
+msgstr "それぞれのウィンドウはバッファーのコンテンツを表示する。"
 
 #. type: node
 #: original_texis/windows.texi:48 original_texis/windows.texi:2083
@@ -168,7 +165,7 @@ msgstr "Switching Buffers"
 #. type: menuentry
 #: original_texis/windows.texi:48
 msgid "Higher-level functions for switching to a buffer."
-msgstr "バッファー切り替えのための、より高レベルな関数。"
+msgstr "バッファー切り替えのためのより高レベルな関数。"
 
 #. type: node
 #: original_texis/windows.texi:48 original_texis/windows.texi:2244
@@ -213,7 +210,7 @@ msgstr "Window History"
 #. type: menuentry
 #: original_texis/windows.texi:48
 msgid "Each window remembers the buffers displayed in it."
-msgstr "それぞれのウィンドウは、表示されていたバッファーを記憶する。"
+msgstr "それぞれのウィンドウは表示されていたバッファーを記憶する。"
 
 #. type: section
 #: original_texis/windows.texi:48 original_texis/windows.texi:2865
@@ -248,7 +245,7 @@ msgstr "Window Point"
 #. type: menuentry
 #: original_texis/windows.texi:48
 msgid "Each window has its own location of point."
-msgstr "それぞれのウィンドウは、自身の位置とポイントをもつ。"
+msgstr "それぞれのウィンドウは自身の位置とポイントをもつ。"
 
 #. type: node
 #: original_texis/windows.texi:48 original_texis/windows.texi:3095
@@ -358,7 +355,7 @@ msgstr "window"
 #. type: Plain text
 #: original_texis/windows.texi:58
 msgid "A @dfn{window} is an area of the screen that is used to display a buffer (@pxref{Buffers}).  In Emacs Lisp, windows are represented by a special Lisp object type."
-msgstr "@dfn{ウィンドウ(window)}とは、任意のバッファーを表示するために使用される、スクリーンの領域です。Emacs Lispでは、ウィンドウはスペシャルLispオブジェクトとして表現されます。"
+msgstr "@dfn{ウィンドウ(window)}とは任意のバッファーを表示するために使用されるスクリーン領域です。Emacs LispではウィンドウはスペシャルLispオブジェクトとして表現されます。"
 
 #. type: cindex
 #: original_texis/windows.texi:59
@@ -369,7 +366,7 @@ msgstr "multiple windows"
 #. type: Plain text
 #: original_texis/windows.texi:66
 msgid "Windows are grouped into frames (@pxref{Frames}).  Each frame contains at least one window; the user can subdivide it into multiple, non-overlapping windows to view several buffers at once.  Lisp programs can use multiple windows for a variety of purposes.  In Rmail, for example, you can view a summary of message titles in one window, and the contents of the selected message in another window."
-msgstr "ウィンドウは、フレームへとグループ化されます(@ref{Frames}を参照)。それぞれのフレームは、最低でも1つのウィンドウを含みます。ユーザーは、複数のバッファーを一度に閲覧するために、それを複数のオーバーラップしないウィンドウに分割することができます。Lispプログラムは、さまざまな目的にたいして、複数のウィンドウを使用できます。たとえばRmailでは、1つのウィンドウでメッセージタイトル、もう一方のウィンドウで選択したメッセージのコンテンツを閲覧できます。"
+msgstr "ウィンドウはフレームへとグループ化されます(@ref{Frames}を参照)。それぞれのフレームは最低でも1つのウィンドウを含みます。ユーザーは複数のバッファーを一度に閲覧するために、それを複数のオーバーラップしないウィンドウに分割することができます。Lispプログラムはさまざまな目的にたいして複数のウィンドウを使用できます。たとえばRmailでは1つのウィンドウでメッセージタイトル、もう一方のウィンドウで選択したメッセージのコンテンツを閲覧できます。"
 
 #. type: cindex
 #: original_texis/windows.texi:67
@@ -386,7 +383,7 @@ msgstr "screen of terminal"
 #. type: Plain text
 #: original_texis/windows.texi:75
 msgid "Emacs uses the word ``window'' with a different meaning than in graphical desktop environments and window systems, such as the X Window System.  When Emacs is run on X, each of its graphical X windows is an Emacs frame (containing one or more Emacs windows).  When Emacs is run on a text terminal, the frame fills the entire terminal screen."
-msgstr "Emacsは、グラフィカルなデスクトップ環境や、X Window Systemのようなウィンドウシステムとは異なる意味で、``ウィンドウ(window)''という単語を使用します。EmacsがX上で実行されているときは、XのグラフィカルなXウィンドウは、Emacsでの(1つ以上のEmacsウィンドウを含んだ)フレームになります。Emacsがテキスト端末上で実行されているときは、フレームが端末スクリーン全体を占有します。"
+msgstr "Emacsはグラフィカルなデスクトップ環境やX Window Systemのようなウィンドウシステムとは異なる意味で``ウィンドウ(window)''という単語を使用します。EmacsがX上で実行されているときはXのグラフィカルなXウィンドウは、Emacsでの(1つ以上のEmacsウィンドウを含んだ)フレームになります。Emacsがテキスト端末上で実行されているときはフレームが端末スクリーン全体を占有します。"
 
 #. type: cindex
 #: original_texis/windows.texi:76
@@ -397,7 +394,7 @@ msgstr "tiled windows"
 #. type: Plain text
 #: original_texis/windows.texi:81
 msgid "Unlike X windows, Emacs windows are @dfn{tiled}; they never overlap within the area of the frame.  When a window is created, resized, or deleted, the change in window space is taken from or given to the adjacent windows, so that the total area of the frame is unchanged."
-msgstr "Xのウィンドウとは異なり、Emacsのウィンドウは@dfn{タイル表示(tiled)}され、フレームの領域内でオーバーラップされることは決してありません。あるウィンドウが作成、リサイズ、削除されるとき、変更されたウィンドウスペースの変更は各ウィンドウの調整により取得・譲与されるので、そのフレームの総領域に変化はありません。"
+msgstr "Xのウィンドウとは異なり、Emacsのウィンドウは@dfn{タイル表示(tiled)}されるので、フレームの領域内でオーバーラップされることは決してありません。あるウィンドウが作成、リサイズ、削除されるとき変更されたウィンドウスペースの変更は各ウィンドウの調整により取得・譲与されるので、そのフレームの総領域に変化はありません。"
 
 #. type: defun
 #: original_texis/windows.texi:82
@@ -408,7 +405,7 @@ msgstr "windowp object"
 #. type: defun
 #: original_texis/windows.texi:85
 msgid "This function returns @code{t} if @var{object} is a window (whether or not it displays a buffer).  Otherwise, it returns @code{nil}."
-msgstr "この関数は、@var{object}がウィンドウ(バッファーの表示有無に関わらず)なら@code{t}、それ以外は@code{nil}をリターンする。"
+msgstr "この関数は@var{object}がウィンドウ(バッファーの表示有無に関わらず)なら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/windows.texi:87
@@ -430,7 +427,7 @@ msgstr "window-live-p object"
 #. type: defun
 #: original_texis/windows.texi:94
 msgid "This function returns @code{t} if @var{object} is a live window and @code{nil} otherwise.  A live window is one that displays a buffer."
-msgstr "この関数は、@var{object}が生きたウィンドウなら@code{t}、それ以外は@code{nil}をリターンする。生きたウィンドウとは、バッファーを表示するウィンドウのこと。"
+msgstr "この関数は@var{object}が生きたウィンドウなら@code{t}、それ以外は@code{nil}をリターンする。生きたウィンドウとはバッファーを表示するウィンドウのこと。"
 
 #. type: cindex
 #: original_texis/windows.texi:96
@@ -441,7 +438,7 @@ msgstr "internal windows"
 #. type: Plain text
 #: original_texis/windows.texi:101
 msgid "The windows in each frame are organized into a @dfn{window tree}.  @xref{Windows and Frames}.  The leaf nodes of each window tree are live windows---the ones actually displaying buffers.  The internal nodes of the window tree are @dfn{internal windows}, which are not live."
-msgstr "各フレーム内のウィンドウは、@dfn{ウィンドウツリー(window tree)}内へと組織化されます。@ref{Windows and Frames}を参照してください。それぞれのウィンドウツリーのリーフノード(leaf nodes)は、実際にバッファーを表示している生きたウィンドウです。ウィンドウツリーの内部ノード(internal node)は@dfn{内部ウィンドウ(internal windows)}と呼ばれ、これらは生きたウィンドウではありません。"
+msgstr "各フレーム内のウィンドウは@dfn{ウィンドウツリー(window tree)}内へと組織化されます。@ref{Windows and Frames}を参照してください。それぞれのウィンドウツリーのリーフノード(leaf nodes)は、実際にバッファーを表示している生きたウィンドウです。ウィンドウツリーの内部ノード(internal node)は@dfn{内部ウィンドウ(internal windows)}と呼ばれ、これらは生きたウィンドウではありません。"
 
 #. type: cindex
 #: original_texis/windows.texi:102
@@ -452,7 +449,7 @@ msgstr "valid windows"
 #. type: Plain text
 #: original_texis/windows.texi:109
 msgid "A @dfn{valid window} is one that is either live or internal.  A valid window can be @dfn{deleted}, i.e., removed from its frame (@pxref{Deleting Windows}); then it is no longer valid, but the Lisp object representing it might be still referenced from other Lisp objects.  A deleted window may be made valid again by restoring a saved window configuration (@pxref{Window Configurations})."
-msgstr "@dfn{有効なウィンドウ(valid window)}とは、生きたウィンドウか、内部ウィンドウのいずれかです。有効なウィンドウにたいしては、それを@dfn{削除(delete)}、すなわちそのウィンドウのフレームから削除することができます(@ref{Deleting Windows}を参照)。その場合、それは有効なウィンドウではなくなりますが、それを表すLispオブジェクトは依然として他のLispオブジェクトから参照されたままかもしれません。削除されたウィンドウは、保存されたウィンドウ設定(window configuration)をリストアすることにより、再び有効になるかもしれません(@ref{Window Configurations}を参照)。"
+msgstr "@dfn{有効なウィンドウ(valid window)}とは、生きたウィンドウか内部ウィンドウのいずれかです。有効なウィンドウにたいしては、それを@dfn{削除(delete)}、すなわちそのウィンドウのフレームから削除することができます(@ref{Deleting Windows}を参照)。その場合、それは有効なウィンドウではなくなりますが、それを表すLispオブジェクトは依然として他のLispオブジェクトから参照されたままかもしれません。削除されたウィンドウは保存されたウィンドウ設定(window configuration)をリストアすることにより再び有効にすることができます(@ref{Window Configurations}を参照)。"
 
 #. type: Plain text
 #: original_texis/windows.texi:112
@@ -468,7 +465,7 @@ msgstr "window-valid-p object"
 #. type: defun
 #: original_texis/windows.texi:117
 msgid "This function returns @code{t} if @var{object} is a live window, or an internal window in a window tree.  Otherwise, it returns @code{nil}, including for the case where @var{object} is a deleted window."
-msgstr "この関数は、@var{object}が生きたウィンドウ、またはウィンドウツリー内の内部ウィンドウの場合は、@code{t}をリターンする。それ以外(@var{object}が削除されたウィンドウの場合も含む)は、@code{nil}をリターンする。"
+msgstr "この関数は@var{object}が生きたウィンドウかウィンドウツリー内の内部ウィンドウなら@code{t}をリターンする。それ以外(@var{object}が削除されたウィンドウの場合も含む)は@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/windows.texi:119
@@ -485,7 +482,7 @@ msgstr "window selected within a frame"
 #. type: Plain text
 #: original_texis/windows.texi:130
 msgid "In each frame, at any time, exactly one Emacs window is designated as @dfn{selected within the frame}.  For the selected frame, that window is called the @dfn{selected window}---the one in which most editing takes place, and in which the cursor for selected windows appears (@pxref{Cursor Parameters}).  The selected window's buffer is usually also the current buffer, except when @code{set-buffer} has been used (@pxref{Current Buffer}).  As for non-selected frames, the window selected within the frame becomes the selected window if the frame is ever selected.  @xref{Selecting Windows}."
-msgstr "それぞれのフレーム内において、常にただ1つのEmacsウィンドウが@dfn{そのフレームで選択されている(selected within the frame)}もとして指定されます。選択されたフレームにたいしては、そのウィンドウは@dfn{選択されたウィンドウ(selected window)}と呼ばれます。選択されたウィンドウは、編集のほとんどが行われるウィンドウであり、選択されたウィンドウに表示されるカーソルがあるウィンドウです(@ref{Cursor Parameters}を参照)。選択されたウィンドウのバッファーは通常は、@code{set-buffer}が使用された場合を除き、カレントバッファーでもあります(@ref{Current Buffer}を参照)。選択されていないフレームでは、そのフレームが選択されたときは、そのフレームで選択されていたウィンドウが選択されたウィンドウになります。@ref{Selecting Windows}を参照してください。"
+msgstr "それぞれのフレーム内において、常にただ1つのEmacsウィンドウが@dfn{そのフレームで選択されている(selected within the frame)}ウィンドウとして指定されます。選択されたフレームにたいして、そのウィンドウは@dfn{選択されたウィンドウ(selected window)}と呼ばれます。選択されたウィンドウは編集のほとんどが行われるウィンドウであり、カーソルはその選択されたウィンドウに表示されます(@ref{Cursor Parameters}を参照)。選択されたウィンドウのバッファーは、通常は@code{set-buffer}が使用された場合を除きカレントバッファーでもあります(@ref{Current Buffer}を参照)。選択されていないフレームでは、そのフレームが選択されたときはそのフレームで選択されていたウィンドウが選択されたウィンドウになります。@ref{Selecting Windows}を参照してください。"
 
 #. type: defun
 #: original_texis/windows.texi:131
@@ -496,47 +493,44 @@ msgstr "selected-window"
 #. type: defun
 #: original_texis/windows.texi:134
 msgid "This function returns the selected window (which is always a live window)."
-msgstr "この関数は、選択されたウィンドウをリターンする(これは常に生きたウィンドウである)。"
+msgstr "この関数は選択されたウィンドウをリターンする(これは常に生きたウィンドウ)。"
 
 #. type: anchor{#1}
 #: original_texis/windows.texi:144
-#, fuzzy
-#| msgid "Window Point"
 msgid "Window Group"
-msgstr "Window Point"
+msgstr "Window Group"
 
 #. type: Plain text
 #: original_texis/windows.texi:144
 msgid "Sometimes several windows collectively and cooperatively display a buffer, for example, under the management of Follow Mode (@pxref{Follow Mode,,, emacs}), where the windows together display a bigger portion of the buffer than one window could alone.  It is often useful to consider such a @dfn{window group} as a single entity.  Several functions such as @code{window-group-start} (@pxref{Window Start and End}) allow you to do this by supplying, as an argument, one of the windows as a stand in for the whole group."
-msgstr ""
+msgstr "たとえばFollowモード(@ref{Follow Mode,,, emacs}を参照)の管理下では、あるウィンドウが単独で表示可能な部分より大きい部分をそのウィンドウにまとめて表示するように、複数のウィンドウが集合かつ協調してバッファーを表示することがあります。そのような@dfn{ウィンドウグループ(window group)}を1つのエンティティーとしてとらえると便利なことがよくあります。@code{window-group-start} (@ref{Window Start and End}を参照)のようないくつかの関数では、グループ全体としてウィンドウの1つを引数に与えることにより、これを行うことができます。"
 
 #. type: defun
 #: original_texis/windows.texi:145
-#, fuzzy, no-wrap
-#| msgid "selected-window"
+#, no-wrap
 msgid "selected-window-group"
-msgstr "selected-window"
+msgstr "selected-window-group"
 
 #. type: vindex
 #: original_texis/windows.texi:146
 #, no-wrap
 msgid "selected-window-group-function"
-msgstr ""
+msgstr "selected-window-group-function"
 
 #. type: defun
 #: original_texis/windows.texi:152
 msgid "When the selected window is a member of a group of windows, this function returns a list of the windows in the group, ordered such that the first window in the list is displaying the earliest part of the buffer, and so on.  Otherwise the function returns a list containing just the selected window."
-msgstr ""
+msgstr "選択されたウィンドウがウィンドウグループのメンバーなら、この関数はそのバッファーの最前箇所を表示するウィンドウが先頭になる順序で、グループ内のウィンドウのリストをリターンする。それ以外なら、この関数は選択されたウィンドウだけを含むリストをリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:158
 msgid "The selected window is considered part of a group when the buffer local variable @code{selected-window-group-function} is set to a function.  In this case, @code{selected-window-group} calls it with no arguments and returns its result (which should be the list of windows in the group)."
-msgstr ""
+msgstr "バッファーローカル変数@code{selected-window-group-function}が関数にセットされているときは、選択されたウィンドウはグループの一部とみなされる。この場合には、@code{selected-window-group}はその関数を引数なしで呼び出し、その結果をリターンする(これはそのグループ内のウィンドウのリストであること)。"
 
 #. type: Plain text
 #: original_texis/windows.texi:164
 msgid "Each window belongs to exactly one frame (@pxref{Frames})."
-msgstr "ウィンドウはそれぞれ、正確に1つのフレームに属します(@ref{Frames}を参照)。"
+msgstr "ウィンドウはそれぞれ厳密に1つのフレームに属します(@ref{Frames}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:165
@@ -547,7 +541,7 @@ msgstr "window-frame &optional window"
 #. type: defun
 #: original_texis/windows.texi:169
 msgid "This function returns the frame that the window @var{window} belongs to.  If @var{window} is @code{nil}, it defaults to the selected window."
-msgstr "この関数は、ウィンドウ@var{window}が属するフレームをリターンする。@var{window}が@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数はウィンドウ@var{window}が属するフレームをリターンする。@var{window}が@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:171
@@ -558,17 +552,17 @@ msgstr "window-list &optional frame minibuffer window"
 #. type: defun
 #: original_texis/windows.texi:175
 msgid "This function returns a list of live windows belonging to the frame @var{frame}.  If @var{frame} is omitted or @code{nil}, it defaults to the selected frame."
-msgstr "この関数は、フレーム@var{frame}に属する、生きたウィンドウのリストをリターンする。@var{frame}が省略、または@code{nil}の場合のデフォルトは、選択されたフレームである。"
+msgstr "この関数はフレーム@var{frame}に属する生きたウィンドウのリストをリターンする。@var{frame}が省略または@code{nil}の場合のデフォルトは選択されたフレーム。"
 
 #. type: defun
 #: original_texis/windows.texi:182
 msgid "The optional argument @var{minibuffer} specifies whether to include the minibuffer window in the returned list.  If @var{minibuffer} is @code{t}, the minibuffer window is included.  If @var{minibuffer} is @code{nil} or omitted, the minibuffer window is included only if it is active.  If @var{minibuffer} is neither @code{nil} nor @code{t}, the minibuffer window is never included."
-msgstr "オプション引数@var{minibuffer}は、リターンされるリストにミニバッファーウィンドウを含めるべきかどうかを指定する。@var{minibuffer}が@code{t}の場合は、ミニバッファーウィンドウが含まれる。@var{minibuffer}が@code{nil}、または省略された場合は、ミニバッファーウィンドウがアクティブのときだけ含まれる。@var{minibuffer}が@code{nil}と@code{t}以外の場合、ミニバッファーウィンドウは含まれない。"
+msgstr "オプション引数@var{minibuffer}はリターンされるリストにミニバッファーウィンドウを含めるべきかどうかを指定する。@var{minibuffer}が@code{t}ならミニバッファーウィンドウが含まれ、@var{minibuffer}が@code{nil}または省略された場合にはミニバッファーウィンドウがアクティブのときだけ含まれる。@var{minibuffer}が@code{nil}と@code{t}以外ならミニバッファーウィンドウは含まれない。"
 
 #. type: defun
 #: original_texis/windows.texi:187
 msgid "The optional argument @var{window}, if non-@code{nil}, should be a live window on the specified frame; then @var{window} will be the first element in the returned list.  If @var{window} is omitted or @code{nil}, the window selected within the frame is the first element."
-msgstr "オプション引数@var{window}が非@code{nil}の場合、それは指定されたフレーム上の生きたウィンドウであること。その場合は、@var{window}がリターンされるリストの最初の要素になる。@var{window}が省略、または@code{nil}の場合は、そのフレームの選択されたウィンドウが最初の要素になる。"
+msgstr "オプション引数@var{window}が非@code{nil}なら、それは指定されたフレーム上の生きたウィンドウであること。その場合には@var{window}がリターンされるリストの最初の要素になる。@var{window}が省略または@code{nil}なら、そのフレームの選択されたウィンドウが最初の要素になる。"
 
 #. type: cindex
 #: original_texis/windows.texi:189
@@ -585,12 +579,12 @@ msgstr "root window"
 #. type: Plain text
 #: original_texis/windows.texi:197
 msgid "Windows in the same frame are organized into a @dfn{window tree}, whose leaf nodes are the live windows.  The internal nodes of a window tree are not live; they exist for the purpose of organizing the relationships between live windows.  The root node of a window tree is called the @dfn{root window}.  It can be either a live window (if the frame has just one window), or an internal window."
-msgstr "同一フレーム内のウィンドウは、リーフノード(leaf nodes)が生きたウィンドウであるような、@dfn{ウィンドウツリー(window tree)}内に組織化されます。ウィンドウツリーの内部ノード(internal nodes)は生きたウィンドウではありません。これらのウィンドウは、生きたウィンドウ間の関係を組織化するという目的のために存在します。ウィンドウツリーのルートノード(root node)は、@dfn{ルートウィンドウ(root window)}と呼ばれます。ルートノードは生きたウィンドウ(そのフレームにウィンドウが1つだけの場合)、または内部ウィンドウのいずれかです。"
+msgstr "同一フレーム内のウィンドウは、リーフノード(leaf nodes)が生きたウィンドウであるような@dfn{ウィンドウツリー(window tree)}内に組織化されます。ウィンドウツリーの内部ノード(internal nodes)は生きたウィンドウではありません。これらのウィンドウは生きたウィンドウ間の関係を組織化するという目的のために存在します。ウィンドウツリーのルートノード(root node)は@dfn{ルートウィンドウ(root window)}と呼ばれます。ルートノードは生きたウィンドウ(そのフレームにウィンドウが1つだけの場合)、または内部ウィンドウのいずれかです。"
 
 #. type: Plain text
 #: original_texis/windows.texi:204
 msgid "A minibuffer window (@pxref{Minibuffer Windows}) is not part of its frame's window tree unless the frame is a minibuffer-only frame.  Nonetheless, most of the functions in this section accept the minibuffer window as an argument.  Also, the function @code{window-tree} described at the end of this section lists the minibuffer window alongside the actual window tree."
-msgstr "ミニバッファーウィンドウ(@ref{Minibuffer Windows}を参照)は、そのフレームがミニバッファーだけのフレームでない限り、そのフレームのウィンドウツリーの一部にはなりません。にもかかわらず、このセクションのほとんどの関数は、引数としてミニバッファーウィンドウを受け付けます。さらにこのセクションの最後に説明する関数@code{window-tree}は、実際のウィンドウツリーと並列してミニバッファーウィンドウをリストします。"
+msgstr "ミニバッファーウィンドウ(@ref{Minibuffer Windows}を参照)は、そのフレームがミニバッファーだけのフレームでない限り、そのフレームのウィンドウツリーの一部にはなりません。にもかかわらず、このセクションのほとんどの関数は引数としてミニバッファーウィンドウを許容します。さらにこのセクションの最後に説明する関数@code{window-tree}は、実際のウィンドウツリーと並べてミニバッファーウィンドウをリストします。"
 
 #. type: defun
 #: original_texis/windows.texi:205
@@ -601,7 +595,7 @@ msgstr "frame-root-window &optional frame-or-window"
 #. type: defun
 #: original_texis/windows.texi:211
 msgid "This function returns the root window for @var{frame-or-window}.  The argument @var{frame-or-window} should be either a window or a frame; if omitted or @code{nil}, it defaults to the selected frame.  If @var{frame-or-window} is a window, the return value is the root window of that window's frame."
-msgstr "この関数は、@var{frame-or-window}にたいするルートウィンドウをリターンする。引数@var{frame-or-window}は、ウィンドウかフレームのいずれかであること。これが省略、または@code{nil}の場合のデフォルトは、選択されたフレームである。@var{frame-or-window}がウィンドウの場合、リターン値はそのウィンドウのフレームのルートウィンドウである。"
+msgstr "この関数は@var{frame-or-window}にたいするルートウィンドウをリターンする。引数@var{frame-or-window}はウィンドウかフレームのいずれかであること。これが省略または@code{nil}の場合のデフォルトは選択されたフレーム。@var{frame-or-window}がウィンドウなら、リターン値はそのウィンドウのフレームのルートウィンドウ。"
 
 #. type: cindex
 #: original_texis/windows.texi:213 original_texis/windows.texi:226
@@ -624,7 +618,7 @@ msgstr "sibling window"
 #. type: Plain text
 #: original_texis/windows.texi:225
 msgid "When a window is split, there are two live windows where previously there was one.  One of these is represented by the same Lisp window object as the original window, and the other is represented by a newly-created Lisp window object.  Both of these live windows become leaf nodes of the window tree, as @dfn{child windows} of a single internal window.  If necessary, Emacs automatically creates this internal window, which is also called the @dfn{parent window}, and assigns it to the appropriate position in the window tree.  A set of windows that share the same parent are called @dfn{siblings}."
-msgstr "ウィンドウが分割(split)されているときは、以前は1つだった2つの生きたウィンドウが存在します。これらのうちの一方は、元のウィンドウと同じLispウィンドウオブジェクトとして表され、もう一方は新たに作成されたLispウィンドウオブジェクトとして表されます。これらの生きたウィンドウは両方とも、単一の内部ウィンドウの@dfn{子ウィンドウ(child windows)}として、ウィンドウツリーのリーフノードになります。もし必要なら、Emacsはこの内部ウィンドウを自動的に作成します。この内部ウィンドウは@dfn{親ウィンドウ(parent window)}とも呼ばれ、ウィンドウツリー内の適切な位置に配置されます。同じ親を共有するウィンドウセットは、@dfn{兄弟(sibling)}と呼ばれます。"
+msgstr "ウィンドウが分割(split)されているときは、以前は1つだった2つの生きたウィンドウが存在します。これらのうちの一方は、元のウィンドウと同じLispウィンドウオブジェクトとして表され、もう一方は新たに作成されたLispウィンドウオブジェクトとして表されます。これらの生きたウィンドウはいずれも単一の内部ウィンドウの@dfn{子ウィンドウ(child windows)}として、ウィンドウツリーのリーフノードになります。もし必要ならEmacsはこの内部ウィンドウを自動的に作成します。この内部ウィンドウは@dfn{親ウィンドウ(parent window)}とも呼ばれ、ウィンドウツリー内の適切な位置に配置されます。同じ親を共有するウィンドウセットは@dfn{兄弟(sibling)}と呼ばれます。"
 
 #. type: defun
 #: original_texis/windows.texi:227
@@ -635,17 +629,17 @@ msgstr "window-parent &optional window"
 #. type: defun
 #: original_texis/windows.texi:232
 msgid "This function returns the parent window of @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  The return value is @code{nil} if @var{window} has no parent (i.e., it is a minibuffer window or the root window of its frame)."
-msgstr "この関数は、@var{window}の親ウィンドウ(parent window)をリターンする。@var{window}が省略、または@code{nil}の場合のデフォルトは、選択されたウィンドウである。@var{window}が親をもたない(ミニバッファーウィンドウやそのフレームのルートウィンドウ)場合、リターン値は@code{nil}である。"
+msgstr "この関数は@var{window}の親ウィンドウ(parent window)をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。@var{window}が親をもたない場合(ミニバッファーウィンドウやそのフレームのルートウィンドウ)にはリターン値は@code{nil}。"
 
 #. type: Plain text
 #: original_texis/windows.texi:238
 msgid "Each internal window always has at least two child windows.  If this number falls to one as a result of window deletion, Emacs automatically deletes the internal window, and its sole remaining child window takes its place in the window tree."
-msgstr "内部ウィンドウはそれぞれ、常に最低でも2つの子ウィンドウをもちます。ウィンドウ削除によりこの数値が1になった場合、Emacsは自動的に内部ウィンドウを削除して、その残った単一の子ウィンドウがウィンドウツリー内のその位置に配置されます。"
+msgstr "内部ウィンドウはそれぞれ、常に最低でも2つの子ウィンドウをもちます。ウィンドウ削除によりこの数値が1になるとEmacsは自動的に内部ウィンドウを削除して、その残った単一の子ウィンドウがウィンドウツリー内のその位置に配置されます。"
 
 #. type: Plain text
 #: original_texis/windows.texi:244
 msgid "Each child window can be either a live window, or an internal window (which in turn would have its own child windows).  Therefore, each internal window can be thought of as occupying a certain rectangular @dfn{screen area}---the union of the areas occupied by the live windows that are ultimately descended from it."
-msgstr "子ウィンドウはそれぞれ生きたウィンドウ、または(次に自身の子ウィンドウをもつであろう)内部ウィンドウのいずれかです。したがって、各内部ウィンドウは、最終的にはその内部ウィンドウの子孫であるような生きたウィンドウにより占有される領域を結合した、特定の矩形@dfn{スクリーン領域(screen area)}を占有すると考えることができます。"
+msgstr "子ウィンドウはそれぞれ生きたウィンドウ、または(次に自身の子ウィンドウをもつであろう)内部ウィンドウのいずれかです。したがって各内部ウィンドウは、最終的にはその内部ウィンドウの子孫であるような生きたウィンドウにより占有される領域を結合した、特定の矩形@dfn{スクリーン領域(screen area)}を占有すると考えることができます。"
 
 #. type: cindex
 #: original_texis/windows.texi:245
@@ -668,7 +662,7 @@ msgstr "horizontal combination"
 #. type: Plain text
 #: original_texis/windows.texi:254
 msgid "For each internal window, the screen areas of the immediate children are arranged either vertically or horizontally (never both).  If the child windows are arranged one above the other, they are said to form a @dfn{vertical combination}; if they are arranged side by side, they are said to form a @dfn{horizontal combination}.  Consider the following example:"
-msgstr "内部ウィンドウそれぞれにたいして、近接する子たちのスクリーン領域は、垂直(vertically)または水平(horizontally)のいずれかにより整列されます(両方で整列されることはない)。子ウィンドウが他の子ウィンドウと上下に整列される場合、それらは@dfn{垂直コンビネーション(vertical combination)}、左右に整列される場合は@dfn{水平コンビネーション(horizontal combination)}を形成すると表現されます。以下の例で考えてみましょう:"
+msgstr "内部ウィンドウそれぞれにたいして、近接する子たちのスクリーン領域は垂直(vertically)か水平(horizontally)のいずれかにより整列されます(両方で整列されることはない)。子ウィンドウが他の子ウィンドウと上下に整列される場合、それらは@dfn{垂直コンビネーション(vertical combination)}、左右に整列される場合は@dfn{水平コンビネーション(horizontal combination)}を形成すると表現されます。以下の例で考えてみましょう:"
 
 #. type: group
 #: original_texis/windows.texi:270
@@ -707,12 +701,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:281
 msgid "The root window of this frame is an internal window, @var{W1}.  Its child windows form a horizontal combination, consisting of the live window @var{W2} and the internal window @var{W3}.  The child windows of @var{W3} form a vertical combination, consisting of the live windows @var{W4} and @var{W5}.  Hence, the live windows in this window tree are @var{W2}, @var{W4}, and @var{W5}."
-msgstr "このフレームのルートウィンドウは、内部ウィンドウ@var{W1}です。これの子ウィンドウは、生きたウィンドウ@var{W2}と内部ウィンドウ@var{W3}からなる水平コンビネーションを形成します。@var{W3}の子ウィンドウは、生きたウィンドウ@var{W4}と@var{W5}からなる垂直コンビネーションを形成します。したがって、このウィンドウツリー内の生きたウィンドウは@var{W2}、@var{W4}、および@var{W5}です。"
+msgstr "このフレームのルートウィンドウは内部ウィンドウ@var{W1}です。これの子ウィンドウは、生きたウィンドウ@var{W2}と内部ウィンドウ@var{W3}からなる水平コンビネーションを形成します。@var{W3}の子ウィンドウは、生きたウィンドウ@var{W4}と@var{W5}からなる垂直コンビネーションを形成します。したがって、このウィンドウツリー内の生きたウィンドウは@var{W2}、@var{W4}、および@var{W5}です。"
 
 #. type: Plain text
 #: original_texis/windows.texi:284
 msgid "The following functions can be used to retrieve a child window of an internal window, and the siblings of a child window."
-msgstr "以下の関数は、内部ウィンドウの子ウィンドウ、および子ウィンドウの兄弟を取得するのに使用できます。"
+msgstr "以下の関数は内部ウィンドウの子ウィンドウ、および子ウィンドウの兄弟を取得するために使用できます。"
 
 #. type: defun
 #: original_texis/windows.texi:285
@@ -723,7 +717,7 @@ msgstr "window-top-child &optional window"
 #. type: defun
 #: original_texis/windows.texi:290
 msgid "This function returns the topmost child window of @var{window}, if @var{window} is an internal window whose children form a vertical combination.  For any other type of window, the return value is @code{nil}."
-msgstr "この関数は、内部ウィンドウ@var{window}の子ウィンドウが垂直コンビネーションを形成する場合は、@var{window}の一番上の子ウィンドウをリターンする。他のタイプのウィンドウにたいするリターン値は@code{nil}である。"
+msgstr "この関数は内部ウィンドウ@var{window}の子ウィンドウが垂直コンビネーションを形成する場合には、@var{window}の一番上の子ウィンドウをリターンする。他のタイプのウィンドウにたいするリターン値は@code{nil}。"
 
 #. type: defun
 #: original_texis/windows.texi:292
@@ -734,7 +728,7 @@ msgstr "window-left-child &optional window"
 #. type: defun
 #: original_texis/windows.texi:297
 msgid "This function returns the leftmost child window of @var{window}, if @var{window} is an internal window whose children form a horizontal combination.  For any other type of window, the return value is @code{nil}."
-msgstr "この関数は、内部ウィンドウ@var{window}の子ウィンドウが水平コンビネーションを形成する場合は、@var{window}の一番左の子ウィンドウをリターンする。他のタイプのウィンドウにたいするリターン値は@code{nil}である。"
+msgstr "この関数は内部ウィンドウ@var{window}の子ウィンドウが水平コンビネーションを形成する場合には、@var{window}の一番左の子ウィンドウをリターンする。他のタイプのウィンドウにたいするリターン値は@code{nil}。"
 
 #. type: defun
 #: original_texis/windows.texi:299
@@ -745,7 +739,7 @@ msgstr "window-child window"
 #. type: defun
 #: original_texis/windows.texi:304
 msgid "This function returns the first child window of the internal window @var{window}---the topmost child window for a vertical combination, or the leftmost child window for a horizontal combination.  If @var{window} is a live window, the return value is @code{nil}."
-msgstr "この関数は、内部ウィンドウ@var{window}の最初の子ウィンドウをリターンする。これは、垂直コンビネーションにたいしては一番上、水平コンビネーションにたいしては一番左の子ウィンドウである。@var{window}が生きたウィンドウの場合、リターン値は@code{nil}である。"
+msgstr "この関数は内部ウィンドウ@var{window}の最初の子ウィンドウをリターンする。これは垂直コンビネーションにたいしては一番上、水平コンビネーションにたいしては一番左の子ウィンドウ。@var{window}が生きたウィンドウならリターン値は@code{nil}。"
 
 #. type: defun
 #: original_texis/windows.texi:306
@@ -756,12 +750,12 @@ msgstr "window-combined-p &optional window horizontal"
 #. type: defun
 #: original_texis/windows.texi:310
 msgid "This function returns a non-@code{nil} value if and only if @var{window} is part of a vertical combination.  If @var{window} is omitted or @code{nil}, it defaults to the selected one."
-msgstr "この関数は、@var{window}が垂直コンビネーションの一部である場合のみ、非@code{nil}をリターンする。@var{window}が省略、または@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数は@var{window}が垂直コンビネーションの一部である場合のみ非@code{nil}をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:314
 msgid "If the optional argument @var{horizontal} is non-@code{nil}, this means to return non-@code{nil} if and only if @var{window} is part of a horizontal combination."
-msgstr "オプション引数@var{horizontal}が非@code{nil}ならば、@var{window}が水平コンビネーションの一部である場合のみ非@code{nil}をリターンすることを意味する。"
+msgstr "オプション引数@var{horizontal}が非@code{nil}なら、@var{window}が水平コンビネーションの一部である場合のみ非@code{nil}をリターンすることを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:316
@@ -772,7 +766,7 @@ msgstr "window-next-sibling &optional window"
 #. type: defun
 #: original_texis/windows.texi:321
 msgid "This function returns the next sibling of the window @var{window}.  If omitted or @code{nil}, @var{window} defaults to the selected window.  The return value is @code{nil} if @var{window} is the last child of its parent."
-msgstr "この関数は、ウィンドウ@var{window}の次の兄弟をリターンする。省略または@code{nil}の場合、@var{window}のデフォルトは選択されたウィンドウになる。@var{window}が、その親の最後の子の場合、リターン値は@code{nil}である。"
+msgstr "この関数はウィンドウ@var{window}の次の兄弟をリターンする。省略または@code{nil}なら、@var{window}のデフォルトは選択されたウィンドウ。@var{window}がその親の最後の子ならリターン値は@code{nil}。"
 
 #. type: defun
 #: original_texis/windows.texi:323
@@ -783,17 +777,17 @@ msgstr "window-prev-sibling &optional window"
 #. type: defun
 #: original_texis/windows.texi:328
 msgid "This function returns the previous sibling of the window @var{window}.  If omitted or @code{nil}, @var{window} defaults to the selected window.  The return value is @code{nil} if @var{window} is the first child of its parent."
-msgstr "この関数は、ウィンドウ@var{window}の前の兄弟をリターンする。省略または@code{nil}の場合、@var{window}のデフォルトは選択されたウィンドウになる。@var{window}が、その親の最初の子の場合、リターン値は@code{nil}である。"
+msgstr "この関数はウィンドウ@var{window}の前の兄弟をリターンする。省略または@code{nil}なら、@var{window}のデフォルトは選択されたウィンドウ。@var{window}がその親の最初の子ならリターン値は@code{nil}。"
 
 #. type: Plain text
 #: original_texis/windows.texi:335
 msgid "The functions @code{window-next-sibling} and @code{window-prev-sibling} should not be confused with the functions @code{next-window} and @code{previous-window}, which return the next and previous window, respectively, in the cyclic ordering of windows (@pxref{Cyclic Window Ordering})."
-msgstr "関数@code{window-next-sibling}および@code{window-prev-sibling}を、ウィンドウのサイクル順(@ref{Cyclic Window Ordering}を参照)において次、または前のウィンドウをリターンする関数@code{next-window}および@code{previous-window}と混同しないでください。"
+msgstr "関数@code{window-next-sibling}と@code{window-prev-sibling}を、ウィンドウのサイクル順(@ref{Cyclic Window Ordering}を参照)で次や前のウィンドウをリターンする関数@code{next-window}と@code{previous-window}と混同しないでください。"
 
 #. type: Plain text
 #: original_texis/windows.texi:338
 msgid "You can use the following functions to find the first live window on a frame and the window nearest to a given window."
-msgstr "任意のフレーム上の最初の生きたウィンドウや、与えられたウィンドウにもっとも近いウィンドウを探すために、以下の関数を使用できます。"
+msgstr "任意のフレーム上の最初の生きたウィンドウや与えられたウィンドウにもっとも近いウィンドウを探すために以下の関数を使用できます。"
 
 #. type: defun
 #: original_texis/windows.texi:339
@@ -804,7 +798,7 @@ msgstr "frame-first-window &optional frame-or-window"
 #. type: defun
 #: original_texis/windows.texi:347
 msgid "This function returns the live window at the upper left corner of the frame specified by @var{frame-or-window}.  The argument @var{frame-or-window} must denote a window or a live frame and defaults to the selected frame.  If @var{frame-or-window} specifies a window, this function returns the first window on that window's frame.  Under the assumption that the frame from our canonical example is selected @code{(frame-first-window)} returns @var{W2}."
-msgstr "この関数は、@var{frame-or-window}により指定されたフレームの、左上隅の生きたウィンドウをリターンする。引数@var{frame-or-window}では、ウィンドウか生きたフレームを示さなければならず、デフォルトは選択されたフレームである。@var{frame-or-window}がウィンドウを指定する場合、この関数はそのウィンドウのフレームの最初のウィンドウをリターンする。前の例のフレームが@code{(frame-first-window)}に指定されたとするならば、@var{W2}がリターンされる。"
+msgstr "この関数は@var{frame-or-window}により指定されたフレームの左上隅の生きたウィンドウをリターンする。引数@var{frame-or-window}はウィンドウか生きたフレームを指定しなければならず、デフォルトは選択されたフレーム。@var{frame-or-window}がウィンドウを指定する場合には、この関数はそのウィンドウのフレームの最初のウィンドウをリターンする。前の例のフレームが@code{(frame-first-window)}で選択されたとすると@var{W2}がリターンされる。"
 
 #. type: cindex
 #: original_texis/windows.texi:349
@@ -821,43 +815,37 @@ msgstr "window-in-direction direction &optional window ignore sign wrap mini"
 #. type: defun
 #: original_texis/windows.texi:357
 msgid "This function returns the nearest live window in direction @var{direction} as seen from the position of @code{window-point} in window @var{window}.  The argument @var{direction} must be one of @code{above}, @code{below}, @code{left} or @code{right}.  The optional argument @var{window} must denote a live window and defaults to the selected one."
-msgstr "この関数は、ウィンドウ@var{window}内の位置@code{window-point}から、方向@var{direction}にあるもっとも近い生きたウィンドウをリターンする。引数@var{direction}は@code{above}、@code{below}、@code{left}、@code{right}のいずれかでなければならない。オプション引数@var{window}は生きたウィンドウを示さなければならず、デフォルトは選択されたウィンドウである。"
+msgstr "この関数はウィンドウ@var{window}内の位置@code{window-point}から、方向@var{direction}にあるもっとも近い生きたウィンドウをリターンする。引数@var{direction}は@code{above}、@code{below}、@code{left}、@code{right}のいずれかでなければならない。オプション引数@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:365
 msgid "This function does not return a window whose @code{no-other-window} parameter is non-@code{nil} (@pxref{Window Parameters}).  If the nearest window's @code{no-other-window} parameter is non-@code{nil}, this function tries to find another window in the indicated direction whose @code{no-other-window} parameter is @code{nil}.  If the optional argument @var{ignore} is non-@code{nil}, a window may be returned even if its @code{no-other-window} parameter is non-@code{nil}."
-msgstr "この関数は、パラメーター@code{no-other-window}が非@code{nil}のウィンドウをリターンしない(@ref{Window Parameters}を参照)。もっとも近いウィンドウの@code{no-other-window}パラメーターが非@code{nil}の場合、この関数は指定された方向で@code{no-other-window}パラメーターが@code{nil}の、他のウィンドウを探す。オプション引数@var{ignore}が非@code{nil}の場合は、たとえ@code{no-other-window}パラメーターが非@code{nil}のウィンドウでも、リターンされ得る。"
+msgstr "この関数はパラメーター@code{no-other-window}が非@code{nil}のウィンドウをリターンしない(@ref{Window Parameters}を参照)。もっとも近いウィンドウの@code{no-other-window}パラメーターが非@code{nil}なら、この関数は指定された方向で@code{no-other-window}パラメーターが@code{nil}であるような他のウィンドウを探す。オプション引数@var{ignore}が非@code{nil}なら、たとえ@code{no-other-window}パラメーターが非@code{nil}のウィンドウでもリターンされるだろう。"
 
 #. type: defun
 #: original_texis/windows.texi:370
 msgid "If the optional argument @var{sign} is a negative number, it means to use the right or bottom edge of @var{window} as reference position instead of @code{window-point}.  If @var{sign} is a positive number, it means to use the left or top edge of @var{window} as reference position."
-msgstr "オプション引数@var{sign}が負の数値の場合、それは参照位置として@code{window-point}のかわりに、@var{window}の右端、または下端を使用することを意味する。@var{sign}が正の数値の場合、それは参照位置として@var{window}の左端、または上端を使用することを意味する。"
+msgstr "オプション引数@var{sign}が負の数値なら、それは参照位置として@code{window-point}のかわりに@var{window}の右端、または下端を使用することを意味する。@var{sign}が正の数値なら、それは参照位置として@var{window}の左端か上端を使用することを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:376
-#, fuzzy
-#| msgid "If the optional argument @var{wrap} is non-@code{nil}, this means to wrap @var{direction} around frame borders.  For example, if @var{window} is at the top of the frame and @var{direction} is @code{above}, then return the minibuffer window provided the frame has one, and a window at the bottom of the frame otherwise."
 msgid "If the optional argument @var{wrap} is non-@code{nil}, this means to wrap @var{direction} around frame borders.  For example, if @var{window} is at the top of the frame and @var{direction} is @code{above}, then this function usually returns the frame's minibuffer window if it's active and a window at the bottom of the frame otherwise."
-msgstr "オプション引数@var{wrap}が非@code{nil}の場合、それはフレームのボーダー(borders: 枠線)を@var{direction}がラップアラウンド(wrap around: 最後に達したら最初に戻る)することを意味する。たとえば、@var{window}はフレームの最上にあり、@var{direction}が@code{above}の場合、フレームにミニバッファーがあればミニバッファーウィンドウ、それ以外はフレーム最下のウィンドウウィンドウリターンする。"
+msgstr "オプション引数@var{wrap}が非@code{nil}なら、それはフレームのボーダー(borders: 枠線)を@var{direction}がラップアラウンド(wrap around: 最後に達したら最初に戻る)することを意味する。たとえば@var{window}はフレームの最上にあり@var{direction}が@code{above}なら、そのフレームのミニバッファーウィンドウがアクティブでそれがフレームの他のウィンドウの最下にある場合には、この関数は通常はミニバッファーウィンドウをリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:382
-#, fuzzy
-#| msgid "If the optional argument @var{mini} is @code{nil}, this means to return the minibuffer window if and only if it is currently active.  If @var{mini} is non-@code{nil}, it returns the minibuffer window even when it's not active.  However, if @var{wrap} non-@code{nil}, it always acts as if @var{mini} were @code{nil}."
 msgid "If the optional argument @var{mini} is @code{nil}, this means to return the minibuffer window if and only if it is currently active.  If @var{mini} is non-@code{nil}, this function may return the minibuffer window even when it's not active.  However, if @var{wrap} is non-@code{nil}, it always acts as if @var{mini} were @code{nil}."
-msgstr "オプション引数@var{mini}が@code{nil}の場合、それはミニバッファーがカレントでアクティブな場合のみ、ミニバッファーウィンドウをリターンすることを意味する。@var{mini}が非@code{nil}ならば、たとえ非アクティブなときでもミニバッファーウィンドウをリターンする。しかし、@var{wrap}が非@code{nil}の場合は、常に@var{mini}が@code{nil}であるかのように動作する。"
+msgstr "オプション引数@var{mini}が@code{nil}なら、それはミニバッファーがカレントでアクティブな場合のみミニバッファーウィンドウをリターンすることを意味する。@var{mini}が非@code{nil}なら、たとえ非アクティブなときでも、この関数はミニバッファーウィンドウをリターンする。しかし@var{wrap}が非@code{nil}なら、常に@var{mini}が@code{nil}であるかのように振る舞う。"
 
 #. type: defun
 #: original_texis/windows.texi:384
 msgid "If it doesn't find a suitable window, this function returns @code{nil}."
-msgstr "適切なウィンドウが見つからない場合、この関数は@code{nil}をリターンする。"
+msgstr "適切なウィンドウが見つからなければ、この関数は@code{nil}をリターンする。"
 
 #. type: Plain text
 #: original_texis/windows.texi:388
-#, fuzzy
-#| msgid "The following function allows to retrieve the entire window tree of a frame:"
 msgid "The following function allows the entire window tree of a frame to be retrieved:"
-msgstr "以下の関数により、任意のフレームのウィンドウツリー全体を取得できます:"
+msgstr "以下の関数によりフレームのウィンドウツリー全体を取得できます:"
 
 #. type: defun
 #: original_texis/windows.texi:389
@@ -868,17 +856,17 @@ msgstr "window-tree &optional frame"
 #. type: defun
 #: original_texis/windows.texi:393
 msgid "This function returns a list representing the window tree for frame @var{frame}.  If @var{frame} is omitted or @code{nil}, it defaults to the selected frame."
-msgstr "この関数は、フレーム@var{frame}にたいするウィンドウツリーを表すリストをリターンする。@var{frame}が省略、または@code{nil}の場合のデフォルトは、選択されたフレームである。"
+msgstr "この関数はフレーム@var{frame}にたいするウィンドウツリーを表すリストをリターンする。@var{frame}が省略@code{nil}の場合のデフォルトは選択されたフレーム。"
 
 #. type: defun
 #: original_texis/windows.texi:397
 msgid "The return value is a list of the form @code{(@var{root} @var{mini})}, where @var{root} represents the window tree of the frame's root window, and @var{mini} is the frame's minibuffer window."
-msgstr "リターン値は、@code{(@var{root} @var{mini})}という形式のリストである。ここで@var{root}はそのフレームのウィンドウツリーのルートウィンドウ、@var{mini}はそのフレームのミニバッファーウィンドウを表す。"
+msgstr "リターン値は@code{(@var{root} @var{mini})}という形式のリスト。ここで@var{root}はそのフレームのウィンドウツリーのルートウィンドウ、@var{mini}はそのフレームのミニバッファーウィンドウを表す。"
 
 #. type: defun
 #: original_texis/windows.texi:408
 msgid "If the root window is live, @var{root} is that window itself.  Otherwise, @var{root} is a list @code{(@var{dir} @var{edges} @var{w1} @var{w2} ...)} where @var{dir} is @code{nil} for a horizontal combination and @code{t} for a vertical combination, @var{edges} gives the size and position of the combination, and the remaining elements are the child windows.  Each child window may again be a window object (for a live window) or a list with the same format as above (for an internal window).  The @var{edges} element is a list @code{(@var{left} @var{top} @var{right} @var{bottom})}, similar to the value returned by @code{window-edges} (@pxref{Coordinates and Windows})."
-msgstr "ルートウィンドウが生きている場合、@var{root}はそのウィンドウ自身である。それ以外では、@var{root}はリスト@code{(@var{dir} @var{edges} @var{w1} @var{w2} ...)}である。ここで@var{dir}は水平コンビネーションなら@code{nil}、垂直コンビネーションなら@code{t}となり、@var{edges}はそのコンビネーションのサイズと位置を与え、残りの要素は子ウィンドウである。子ウィンドウはそれぞれ、同じようにウィンドウオブジェクト(生きたウィンドウにたいして)、または上記フォーマットと同じ形式のリスト(内部ウィンドウにたいして)かもしれない。@var{edges}要素は@code{window-edges}がリターンする値のような、リスト@code{(@var{left} @var{top} @var{right} @var{bottom})}である(@ref{Coordinates and Windows}を参照)。"
+msgstr "ルートウィンドウが生きていれば@var{root}はそのウィンドウ自身、それ以外なら@var{root}はリスト@code{(@var{dir} @var{edges} @var{w1} @var{w2} ...)}。ここで@var{dir}は水平コンビネーションなら@code{nil}、垂直コンビネーションなら@code{t}となり、@var{edges}はそのコンビネーションのサイズと位置を与え、残りの要素は子ウィンドウである。子ウィンドウはそれぞれ、同じようにウィンドウオブジェクト(生きたウィンドウにたいして)、または上記フォーマットと同じ形式のリスト(内部ウィンドウにたいして)かもしれない。@var{edges}要素は@code{window-edges}がリターンする値のようなリスト@code{(@var{left} @var{top} @var{right} @var{bottom})} (@ref{Coordinates and Windows}を参照)。"
 
 #. type: cindex
 #: original_texis/windows.texi:413
@@ -895,25 +883,11 @@ msgstr "size of window"
 #. type: Plain text
 #: original_texis/windows.texi:417
 msgid "The following schematic shows the structure of a live window:"
-msgstr "以下の図は、生きたウィンドウの構造を示しています:"
+msgstr "以下の図は生きたウィンドウの構造を示しています:"
 
 #. type: group
 #: original_texis/windows.texi:433
-#, fuzzy, no-wrap
-#| msgid ""
-#| "        ____________________________________________\n"
-#| "       |______________ Header Line ______________|RD| ^\n"
-#| "     ^ |LS|LF|LM|                       |RM|RF|RS|  | |\n"
-#| "     | |  |  |  |                       |  |  |  |  | |\n"
-#| "Window |  |  |  |       Text Area       |  |  |  |  | Window\n"
-#| "Body | |  |  |  |     (Window Body)     |  |  |  |  | Total\n"
-#| "Height |  |  |  |                       |  |  |  |  | Height\n"
-#| "     | |  |  |  |<- Window Body Width ->|  |  |  |  | |\n"
-#| "     v |__|__|__|_______________________|__|__|__|  | |\n"
-#| "       |_______________ Mode Line _______________|__| |\n"
-#| "       |_____________ Bottom Divider _______________| v\n"
-#| "        <---------- Window Total Width ------------>\n"
-#| "\n"
+#, no-wrap
 msgid ""
 "        ____________________________________________\n"
 "       |______________ Header Line ______________|RD| ^\n"
@@ -932,13 +906,14 @@ msgid ""
 msgstr ""
 "        ____________________________________________\n"
 "       |______________ Header Line ______________|RD| ^\n"
-"     ^ |LS|LF|LM|                       |RM|RF|RS|  | |\n"
+"     ^ |LS|LM|LF|                       |RF|RM|RS|  | |\n"
 "     | |  |  |  |                       |  |  |  |  | |\n"
 "Window |  |  |  |       Text Area       |  |  |  |  | Window\n"
 "Body | |  |  |  |     (Window Body)     |  |  |  |  | Total\n"
 "Height |  |  |  |                       |  |  |  |  | Height\n"
 "     | |  |  |  |<- Window Body Width ->|  |  |  |  | |\n"
 "     v |__|__|__|_______________________|__|__|__|  | |\n"
+"       |_________ Horizontal Scroll Bar _________|  | |\n"
 "       |_______________ Mode Line _______________|__| |\n"
 "       |_____________ Bottom Divider _______________| v\n"
 "        <---------- Window Total Width ------------>\n"
@@ -964,17 +939,13 @@ msgstr "body of a window"
 
 #. type: Plain text
 #: original_texis/windows.texi:452
-#, fuzzy
-#| msgid "At the center of the window is the @dfn{text area}, or @dfn{body}, where the buffer text is displayed.  The text area can be surrounded by a series of optional areas.  On the left and right, from innermost to outermost, these are the left and right margins, denoted by LM and RM in the schematic (@pxref{Display Margins}); the left and right fringes, denoted by LF and RF (@pxref{Fringes}); the left or right scroll bar, only one of which is present at any time, denoted by LS and RS (@pxref{Scroll Bars}); and the right divider, denoted by RD (@pxref{Window Dividers}).  At the top of the window is the header line (@pxref{Header Lines}); at the bottom of the window is the mode line (@pxref{Mode Line Format}) followed by the bottom divider (@pxref{Window Dividers})."
 msgid "At the center of the window is the @dfn{text area}, or @dfn{body}, where the buffer text is displayed.  The text area can be surrounded by a series of optional areas.  On the left and right, from innermost to outermost, these are the left and right fringes, denoted by LF and RF (@pxref{Fringes}); the left and right margins, denoted by LM and RM in the schematic (@pxref{Display Margins}); the left or right vertical scroll bar, only one of which is present at any time, denoted by LS and RS (@pxref{Scroll Bars}); and the right divider, denoted by RD (@pxref{Window Dividers}).  At the top of the window is the header line (@pxref{Header Lines}).  At the bottom of the window are the horizontal scroll bar (@pxref{Scroll Bars}); the mode line (@pxref{Mode Line Format}); and the bottom divider (@pxref{Window Dividers})."
-msgstr "ウィンドウの中央は@dfn{テキストエリア(text area: テキスト領域)}、または@dfn{ボディー(body: 本体、本文)}と呼ばれる、バッファーテキストが表示される場所です。テキストエリアは、一連のオプションエリアで囲まれている可能性があります。左右には、内側から外側に向かって、図中にLMとRMで示される左右のマージン(@ref{Display Margins}を参照)、LFとRFで示される左右のフリンジ(@ref{Fringes}を参照)、そしてLSとRSはスクロールバー(@ref{Scroll Bars}を参照)で、常に表示されるのはいずれか一方だけです。そしてRDはディバイダー(@ref{Window Dividers}を参照)を示しています。ウィンドウの上端はヘッダーライン(@ref{Header Lines}を参照)、下端にはモードライン(@ref{Mode Line Format}を参照)と、その下に下端ディバイダー(@ref{Window Dividers}を参照)があります。"
+msgstr "ウィンドウの中央は@dfn{テキストエリア(text area: テキスト領域)}、または@dfn{ボディー(body: 本体、本文)}と呼ばれるバッファーテキストが表示される場所です。テキストエリアは一連のオプションエリアで囲まれている可能性があります。左右には内側から外側に向かって図中にLFとRFで示される左右のフリンジ(@ref{Fringes}を参照)、LMとRMで示される左右のマージン(@ref{Display Margins}を参照)、そしてLSとRSはスクロールバー(@ref{Scroll Bars}を参照)で、これは常に表示されるのはいずれか一方だけです。さらにRDで示されるのが右ディバイダー(@ref{Window Dividers}を参照)です。ウィンドウ上端にはヘッダーライン(@ref{Header Lines}を参照)、ウィンドウ下端には水平スクロールバー(@ref{Scroll Bars}を参照)、モードライン(@ref{Mode Line Format}を参照)、下端ディバイダー(@ref{Window Dividers}を参照)があります。"
 
 #. type: Plain text
 #: original_texis/windows.texi:463
-#, fuzzy
-#| msgid "Emacs provides miscellaneous functions for finding the height and width of a window.  The return value of many of these functions can be specified either in units of pixels or in units of lines and columns.  On a graphical display, the latter actually correspond to the height and width of a ``default'' character specified by the frame's default font as returned by @code{frame-char-height} and @code{frame-char-width} (@pxref{Size and Position}).  Thus, if a window is displaying text with a different font or size, the reported line height and column width for that window may differ from the actual number of text lines or columns displayed within it."
 msgid "Emacs provides miscellaneous functions for finding the height and width of a window.  The return value of many of these functions can be specified either in units of pixels or in units of lines and columns.  On a graphical display, the latter actually correspond to the height and width of a default character specified by the frame's default font as returned by @code{frame-char-height} and @code{frame-char-width} (@pxref{Frame Font}).  Thus, if a window is displaying text with a different font or size, the reported line height and column width for that window may differ from the actual number of text lines or columns displayed within it."
-msgstr "Emacsは、ウィンドウの高さと幅を求めるために、さまざまな関数を提供します。これらの関数がリターンする値の多くは、ピクセル単位か、行単位と列単位のいずれかにより指定できます。グラフィカルなディスプレイでは、後者は実際には@code{frame-char-height}および@code{frame-char-width}によりリターンされる、そのフレームのデフォルトフォントが指定する、``デフォルト文字''の高さと幅に対応します。したがって、あるウィンドウが異なるフォントやサイズでテキストを表示していると、そのウィンドウにたいして報告される行高さと列幅は、実際にウィンドウ内で表示されるテキスト行数と列数とは、異なるかもしれません。"
+msgstr "Emacsはウィンドウの高さと幅を求めるためのさまざまな関数を提供します。これらの関数がリターンする値の多くはピクセル単位、または行単位と列単位のいずれかにより指定できます。グラフィカルなディスプレイでは後者は実際には@code{frame-char-height}と@code{frame-char-width} (@ref{Frame Font}を参照)によりリターンされる、そのフレームのデフォルトフォントが指定するデフォルト文字の高さと幅に対応します。したがってあるウィンドウが異なるフォントやサイズでテキストを表示していると、そのウィンドウにたいして報告される行高さと列幅は、実際にウィンドウ内で表示されるテキスト行数と列数とは異なるかもしれません。"
 
 #. type: cindex
 #: original_texis/windows.texi:464
@@ -996,10 +967,8 @@ msgstr "total height of a window"
 
 #. type: Plain text
 #: original_texis/windows.texi:470
-#, fuzzy
-#| msgid "The @dfn{total width} of a window is the number of lines comprising the window's body, its margins, fringes, scroll bars and a right divider (if any)."
 msgid "The @dfn{total height} of a window is the number of lines comprising the window's body, the header line, the horizontal scroll bar, the mode line and the bottom divider (if any)."
-msgstr "@dfn{トータル幅(total width)}とは、そのウィンドウのボディーを構成する列数、マージン、フリンジ、スクロールバー、(もしあれば)右ディバイダーです。"
+msgstr "@dfn{トータル高さ(total height)}とは、そのウィンドウのボディーを構成する行数、ヘッダーライン、水平スクロールバー、モードライン、(もしあれば)下端ディバイダーです。"
 
 #. type: defun
 #: original_texis/windows.texi:471
@@ -1010,19 +979,17 @@ msgstr "window-total-height &optional window round"
 #. type: defun
 #: original_texis/windows.texi:476
 msgid "This function returns the total height, in lines, of the window @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  If @var{window} is an internal window, the return value is the total height occupied by its descendant windows."
-msgstr "この関数は、ウィンドウ@var{window}のトータル高さを、行でリターンする。@var{window}が省略、または@code{nil}の場合のデフォルトは、選択されたウィンドウである。@var{window}が内部ウィンドウの場合、リターン値はそのウィンドウの子孫となるウィンドウにより占有されるトータル高さになる。"
+msgstr "この関数はウィンドウ@var{window}のトータル高さを行数でリターンする。@var{window}が省略@code{nil}の場合のデフォルトは選択されたウィンドウ。@var{window}が内部ウィンドウなら、リターン値はそのウィンドウの子孫となるウィンドウにより占有されるトータル高さになる。"
 
 #. type: defun
 #: original_texis/windows.texi:487
-#, fuzzy
-#| msgid "If a window's pixel height is not an integral multiple of its frame's default character height, the number of lines occupied by the window is rounded internally.  This is done in a way such that, if the window is a parent window, the sum of the total heights of all its child windows internally equals the total height of their parent.  This means that although two windows have the same pixel height, their internal total heights may differ by one line.  This means also, that if this window is vertically combined and has a right sibling, the topmost row of that sibling can be calculated as the sum of this window's topmost row and total height (@pxref{Coordinates and Windows})"
 msgid "If a window's pixel height is not an integral multiple of its frame's default character height, the number of lines occupied by the window is rounded internally.  This is done in a way such that, if the window is a parent window, the sum of the total heights of all its child windows internally equals the total height of their parent.  This means that although two windows have the same pixel height, their internal total heights may differ by one line.  This means also, that if window is vertically combined and has a next sibling, the topmost row of that sibling can be calculated as the sum of this window's topmost row and total height (@pxref{Coordinates and Windows})"
-msgstr "ウィンドウのピクセル高さが、そのウィンドウがあるフレームのデフォルト文字高さの整数倍でない場合は、そのウィンドウが占有する行数が内部で丸められる。これは、そのウィンドウが親ウィンドウの場合は、すべての子ウィンドウのトータル高さの合計が、親ウィンドウのトータル高さと内部的に等しくなるような方法により行われる。これは、たとえ2つのウィンドウのピクセル高さが等しくでも、内部的なトータル高さは1行分異なるかもしれないことを意味する。さらにこれは、そのウィンドウが垂直コンビネーションされていて、かつ右の兄弟をもつ場合、その兄弟の上端行は、このウィンドウの上端行とトータル高さから計算されるかもしれないことも意味する(@ref{Coordinates and Windows}を参照)。"
+msgstr "ウィンドウのピクセル高さがそのウィンドウがあるフレームのデフォルト文字高さの整数倍でなければ、そのウィンドウが占有する行数が内部で丸められる。これはそのウィンドウが親ウィンドウの場合には、すべての子ウィンドウのトータル高さの合計が、親ウィンドウのトータル高さと内部的に等しくなるような方法により行われる。これはたとえ2つのウィンドウのピクセル高さが等しくでも、内部的なトータル高さは1行分異なるかもしれないことを意味する。さらにこれはそのウィンドウが垂直コンビネーションされていて、かつ次の兄弟をもつ場合には、その兄弟の上端行は、このウィンドウの上端行とトータル高さから計算されるかもしれないことも意味する(@ref{Coordinates and Windows}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:494
 msgid "If the optional argument @var{round} is @code{ceiling}, this function returns the smallest integer larger than @var{window}'s pixel height divided by the character height of its frame; if it is @code{floor}, it returns the largest integer smaller than said value; with any other @var{round} it returns the internal value of @var{windows}'s total height."
-msgstr "オプション引数@var{round}が@code{ceiling}の場合、この関数は@var{window}のピクセル高さを、そのフレームの文字高さで除した数より大であるような最小の整数、@code{floor}の場合は除した数より小であるような最大の整数、それ以外の@var{round}にたいしては、@var{windows}のトータル高さの内部値をリターンする。"
+msgstr "オプション引数@var{round}が@code{ceiling}なら、この関数は@var{window}のピクセル高さをそのフレームの文字高さで除した数より大であるような最小の整数、@code{floor}なら除した数より小であるような最大の整数、それ以外の@var{round}にたいしては@var{windows}のトータル高さの内部値をリターンする。"
 
 #. type: cindex
 #: original_texis/windows.texi:496
@@ -1045,7 +1012,7 @@ msgstr "total width of a window"
 #. type: Plain text
 #: original_texis/windows.texi:502
 msgid "The @dfn{total width} of a window is the number of lines comprising the window's body, its margins, fringes, scroll bars and a right divider (if any)."
-msgstr "@dfn{トータル幅(total width)}とは、そのウィンドウのボディーを構成する列数、マージン、フリンジ、スクロールバー、(もしあれば)右ディバイダーです。"
+msgstr "@dfn{トータル幅(total width)}とはそのウィンドウのボディーを構成する列数、マージン、フリンジ、スクロールバー、(もしあれば)右ディバイダーです。"
 
 #. type: defun
 #: original_texis/windows.texi:503
@@ -1056,14 +1023,12 @@ msgstr "window-total-width &optional window round"
 #. type: defun
 #: original_texis/windows.texi:508
 msgid "This function returns the total width, in columns, of the window @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  If @var{window} is internal, the return value is the total width occupied by its descendant windows."
-msgstr "この関数は、ウィンドウ@var{window}のトータル幅を列でリターンする。@var{window}が省略、または@code{nil}の場合のデフォルトは、選択されたウィンドウである。@var{window}が内部ウィンドウの場合、リターン値はその子孫のウィンドウが占有するトータル幅になる。"
+msgstr "この関数はウィンドウ@var{window}のトータル幅を列でリターンする。@var{window}が省略@code{nil}の場合のデフォルトは選択されたウィンドウ。@var{window}が内部ウィンドウならリターン値はその子孫のウィンドウが占有するトータル幅になる。"
 
 #. type: defun
 #: original_texis/windows.texi:520
-#, fuzzy
-#| msgid "If a window's pixel width is not an integral multiple of its frame's character width, the number of lines occupied by the window is rounded internally.  This is done in a way such that, if the window is a parent window, the sum of the total widths of all its children internally equals the total width of their parent.  This means that although two windows have the same pixel width, their internal total widths may differ by one column.  This means also, that if this window is horizontally combined and has a right sibling, the leftmost column of that sibling can be calculated as the sum of this window's leftmost column and total width (@pxref{Coordinates and Windows}).  The optional argument @var{round} behaves as it does for @code{window-total-height}."
 msgid "If a window's pixel width is not an integral multiple of its frame's character width, the number of lines occupied by the window is rounded internally.  This is done in a way such that, if the window is a parent window, the sum of the total widths of all its children internally equals the total width of their parent.  This means that although two windows have the same pixel width, their internal total widths may differ by one column.  This means also, that if this window is horizontally combined and has a next sibling, the leftmost column of that sibling can be calculated as the sum of this window's leftmost column and total width (@pxref{Coordinates and Windows}).  The optional argument @var{round} behaves as it does for @code{window-total-height}."
-msgstr "ウィンドウのピクセル幅が、そのウィンドウがあるフレームのデフォルト文字幅の整数倍でない場合は、そのウィンドウが占有する列数が内部で丸められる。これは、そのウィンドウが親ウィンドウの場合は、すべての子ウィンドウのトータル幅の合計が、親ウィンドウのトータル幅と内部的に等しくなるような方法により行われる。これは、たとえ2つのウィンドウのピクセル幅が等しくでも、内部的なトータル幅は1列分異なるかもしれないことを意味する。さらにこれは、そのウィンドウが水平コンビネーションされていて、かつ右の兄弟をもつ場合、その兄弟の左端行は、このウィンドウの左端行とトータル幅から計算されるかもしれないことも意味する(@ref{Coordinates and Windows}を参照)。オプション引数@var{round}は、@code{window-total-height}の場合と同様に振る舞う。"
+msgstr "ウィンドウのピクセル幅がそのウィンドウがあるフレームのデフォルト文字幅の整数倍でなければ、そのウィンドウが占有する列数が内部で丸められる。これはそのウィンドウが親ウィンドウの場合には、すべての子ウィンドウのトータル幅の合計が親ウィンドウのトータル幅と内部的に等しくなるような方法により行われる。これはたとえ2つのウィンドウのピクセル幅が等しくでも、内部的なトータル幅は1列分異なるかもしれないことを意味する。さらにこれはそのウィンドウが水平コンビネーションされていて、かつ次の兄弟をもつ場合、その兄弟の左端行はこのウィンドウの左端行とトータル幅から計算されるかもしれないことも意味する(@ref{Coordinates and Windows}を参照)。オプション引数@var{round}は@code{window-total-height}の場合と同様に振る舞う。"
 
 #. type: defun
 #: original_texis/windows.texi:522
@@ -1074,12 +1039,12 @@ msgstr "window-total-size &optional window horizontal round"
 #. type: defun
 #: original_texis/windows.texi:529
 msgid "This function returns either the total height in lines or the total width in columns of the window @var{window}.  If @var{horizontal} is omitted or @code{nil}, this is equivalent to calling @code{window-total-height} for @var{window}; otherwise it is equivalent to calling @code{window-total-width} for @var{window}.  The optional argument @var{round} behaves as it does for @code{window-total-height}."
-msgstr "この関数は、ウィンドウ@var{window}のトータル高さを行で、またはトータル幅を列でリターンする。@var{horizontal}が省略、または@code{nil}の場合は@var{window}にたいして@code{window-total-height}を呼び出すのと等価であり、それ以外では@var{window}にたいして@code{window-total-width}を呼び出すのと等価である。オプション引数@var{round}は、@code{window-total-height}の場合と同様に振る舞う。"
+msgstr "この関数はウィンドウ@var{window}のトータル高さを行数、またはトータル幅を列数でリターンする。@var{horizontal}が省略または@code{nil}なら@var{window}にたいして@code{window-total-height}を呼び出すのと等価、それ以外では@var{window}にたいして@code{window-total-width}を呼び出すのと等価である。オプション引数@var{round}は@code{window-total-height}の場合と同様に振る舞う。"
 
 #. type: Plain text
 #: original_texis/windows.texi:533
 msgid "The following two functions can be used to return the total size of a window in units of pixels."
-msgstr "以下の2つの関数は、ウィンドウのトータルサイズをピクセル単位でリターンさせるために使用できます。"
+msgstr "以下の2つの関数はウィンドウのトータルサイズをピクセル単位で取得するために使用できます。"
 
 #. type: cindex
 #: original_texis/windows.texi:534
@@ -1108,35 +1073,30 @@ msgstr "window-pixel-height &optional window"
 #. type: defun
 #: original_texis/windows.texi:541
 msgid "This function returns the total height of window @var{window} in pixels.  @var{window} must be a valid window and defaults to the selected one."
-msgstr "この関数は、ウィンドウ@var{window}のトータル高さを、ピクセルでリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウである。"
+msgstr "この関数はウィンドウ@var{window}のトータル高さをピクセル単位でリターンする。@var{window}は有効なウィンドウでなければならずデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:546
-#, fuzzy
-#| msgid "The return value includes mode and header line and a bottom divider, if any.  If @var{window} is an internal window, its pixel height is the pixel height of the screen areas spanned by its children."
 msgid "The return value includes mode and header line, a horizontal scroll bar and a bottom divider, if any.  If @var{window} is an internal window, its pixel height is the pixel height of the screen areas spanned by its children."
-msgstr "リターン値には、(もしあれば)モードライン、ヘッダーライン、下端ディバイダーが含まれる。@var{window}が内部ウィンドウの場合、そのピクセル高さは子ウィンドウたちによりスパンされるスクリーン領域のピクセル高さになる。"
+msgstr "リターン値には、(もしあれば)モードライン、ヘッダーライン、水平スクロールバー、下端ディバイダーが含まれる。@var{window}が内部ウィンドウなら、そのピクセル高さは子ウィンドウたちによりスパンされるスクリーン領域のピクセル高さになる。"
 
 #. type: cindex
 #: original_texis/windows.texi:548
-#, fuzzy, no-wrap
-#| msgid "window pixel height"
+#, no-wrap
 msgid "window pixel width"
-msgstr "window pixel height"
+msgstr "window pixel width"
 
 #. type: cindex
 #: original_texis/windows.texi:549
-#, fuzzy, no-wrap
-#| msgid "pixel height of a window"
+#, no-wrap
 msgid "pixel width of a window"
-msgstr "pixel height of a window"
+msgstr "pixel width of a window"
 
 #. type: cindex
 #: original_texis/windows.texi:550
-#, fuzzy, no-wrap
-#| msgid "total width of a window"
+#, no-wrap
 msgid "total pixel width of a window"
-msgstr "total width of a window"
+msgstr "total pixel width of a window"
 
 #. type: defun
 #: original_texis/windows.texi:552
@@ -1147,12 +1107,12 @@ msgstr "window-pixel-width &optional Lisp_Object &optional window"
 #. type: defun
 #: original_texis/windows.texi:555
 msgid "This function returns the width of window @var{window} in pixels.  @var{window} must be a valid window and defaults to the selected one."
-msgstr "この関数は、ウィンドウ@var{window}の幅をピクセルでリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウである。"
+msgstr "この関数はウィンドウ@var{window}の幅をピクセル単位でリターンする。@var{window}は有効なウィンドウでなければならずデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:560
 msgid "The return value includes the fringes and margins of @var{window} as well as any vertical dividers or scroll bars belonging to @var{window}.  If @var{window} is an internal window, its pixel width is the width of the screen areas spanned by its children."
-msgstr "リターン値には、フリンジ、@var{window}のマージン、同様に@var{window}に属する垂直ディバイダーとスクロールバーが含まれる。@var{window}が内部ウィンドウの場合、そのピクセル幅は子ウィンドウたちによりスパンされるスクリーン領域の幅になる。"
+msgstr "リターン値にはフリンジ、@var{window}のマージン、同様に@var{window}に属する垂直ディバイダーとスクロールバーが含まれる。@var{window}が内部ウィンドウなら、そのピクセル幅は子ウィンドウたちにより占有されるスクリーン領域の幅になる。"
 
 #. type: cindex
 #: original_texis/windows.texi:562
@@ -1169,7 +1129,7 @@ msgstr "full-height window"
 #. type: Plain text
 #: original_texis/windows.texi:566
 msgid "The following functions can be used to determine whether a given window has any adjacent windows."
-msgstr "以下の関数は、与えられたウィンドウに隣接するウィンドウがあるかどうかを判断するために使用できます。"
+msgstr "以下の関数は与えられたウィンドウに隣接するウィンドウがあるかどうかを判断するために使用できます。"
 
 #. type: defun
 #: original_texis/windows.texi:567
@@ -1179,10 +1139,8 @@ msgstr "window-full-height-p &optional window"
 
 #. type: defun
 #: original_texis/windows.texi:574
-#, fuzzy
-#| msgid "This function returns non-@code{nil} if @var{window} has no other window above or below it in its frame, i.e., its total height equals the total height of the root window on that frame.  If @var{window} is omitted or @code{nil}, it defaults to the selected window."
 msgid "This function returns non-@code{nil} if @var{window} has no other window above or below it in its frame.  More precisely, this means that the total height of @var{window} equals the total height of the root window on that frame.  The minibuffer window does not count in this regard.  If @var{window} is omitted or @code{nil}, it defaults to the selected window."
-msgstr "この関数は、フレーム内で@var{window}の上下に他のウィンドウがなければ非@code{nil}をリターンする(トータル高さがそのフレーム上のルートウィンドウと等しい)。@var{window}が省略、または@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数はフレーム内で@var{window}の上下に他のウィンドウがなければ非@code{nil}をリターンする。より正確には、@var{window}のトータル高さがそのフレームのルートウィンドウの高さに等しいことを意味する。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:576
@@ -1193,7 +1151,7 @@ msgstr "window-full-width-p &optional window"
 #. type: defun
 #: original_texis/windows.texi:581
 msgid "This function returns non-@code{nil} if @var{window} has no other window to the left or right in its frame, i.e., its total width equals that of the root window on that frame.  If @var{window} is omitted or @code{nil}, it defaults to the selected window."
-msgstr "この関数は、フレーム内で@var{window}の左右に他のウィンドウがなければ非@code{nil}をリターンする(トータル幅がそのフレーム上のルートウィンドウと等しい)。@var{window}が省略、または@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数はフレーム内で@var{window}の左右に他のウィンドウがなければ非@code{nil}をリターンする(トータル幅がそのフレーム上のルートウィンドウと等しい)。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: cindex
 #: original_texis/windows.texi:583
@@ -1209,10 +1167,8 @@ msgstr "body height of a window"
 
 #. type: Plain text
 #: original_texis/windows.texi:588
-#, fuzzy
-#| msgid "The @dfn{body height} of a window is the height of its text area, which does not include a mode or header line or a bottom divider."
 msgid "The @dfn{body height} of a window is the height of its text area, which does not include a mode or header line, a horizontal scroll bar, or a bottom divider."
-msgstr "ウィンドウの@dfn{ボディー高さ(body height)}とは、モードライン、ヘッダーライン、下端ディバイダーを含まないテキスト領域の高さです。"
+msgstr "ウィンドウの@dfn{ボディー高さ(body height)}とはモードライン、ヘッダーライン、水平スクロールバー、下端ディバイダーを含まないテキスト領域の高さです。"
 
 #. type: defun
 #: original_texis/windows.texi:589
@@ -1223,17 +1179,17 @@ msgstr "window-body-height &optional window pixelwise"
 #. type: defun
 #: original_texis/windows.texi:593
 msgid "This function returns the height, in lines, of the body of window @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window; otherwise it must be a live window."
-msgstr "この関数は、ウィンドウ@var{window}のボディーの高さを、行でリターンする。@var{window}が省略、または@code{nil}の場合のデフォルトは選択されたウィンドウで、それ以外では生きたウィンドウでなければならない。"
+msgstr "この関数はウィンドウ@var{window}のボディーの高さを行数でリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ、それ以外なら生きたウィンドウでなければならない。"
 
 #. type: defun
 #: original_texis/windows.texi:596
 msgid "If the optional argument @var{pixelwise} is non-@code{nil}, this function returns the body height of @var{window} counted in pixels."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合、この関数はピクセルで計算@var{window}のボディー高さをリターンする。"
+msgstr "オプション引数@var{pixelwise}が非@code{nil}なら、この関数はピクセルで計算@var{window}のボディー高さをリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:602
 msgid "If @var{pixelwise} is @code{nil}, the return value is rounded down to the nearest integer, if necessary.  This means that if a line at the bottom of the text area is only partially visible, that line is not counted.  It also means that the height of a window's body can never exceed its total height as returned by @code{window-total-height}."
-msgstr "@var{pixelwise}が@code{nil}の場合は、必要ならリターン値はもっとも近い整数に切り下げられる。これは、テキスト領域の下端行が部分的に可視の場合、その行は計数されないこと、さらに任意のウィンドウのボディー高さは、@code{window-total-height}によりリターンされるそのウィンドウのトータル高さ決して超過し得ないことをも意味する。"
+msgstr "@var{pixelwise}が@code{nil}の場合には、必要ならリターン値はもっとも近い整数に切り下げられる。これはテキスト領域の下端行が部分的に可視の場合にその行は計数されないこと、さらに任意のウィンドウのボディー高さは@code{window-total-height}によりリターンされるそのウィンドウのトータル高さ決して超過し得ないことも意味する。"
 
 #. type: cindex
 #: original_texis/windows.texi:604
@@ -1250,7 +1206,7 @@ msgstr "body width of a window"
 #. type: Plain text
 #: original_texis/windows.texi:614
 msgid "The @dfn{body width} of a window is the width of its text area, which does not include the scroll bar, fringes, margins or a right divider.  Note that when one or both fringes are removed (by setting their width to zero), the display engine reserves two character cells, one on each side of the window, for displaying the continuation and truncation glyphs, which leaves 2 columns less for text display.  (The function @code{window-max-chars-per-line}, described below, takes this peculiarity into account.)"
-msgstr ""
+msgstr "ウィンドウの@dfn{ボディー幅(body width)}とはスクロールバー、フリンジ、マージン、右ディバイダーを含まないテキスト領域の幅です。(幅を0にセットすることにより)一方または両方のフリンジが削除されたときには、継続と切り詰めのグリフを表示するためにディスプレーエンジンが文字セル2つを予約するので、テキスト表示にたいして2列少なくなることに注意してください(以下で説明する@code{window-max-chars-per-line}はこの特性を考慮する)。"
 
 #. type: defun
 #: original_texis/windows.texi:615
@@ -1261,17 +1217,17 @@ msgstr "window-body-width &optional window pixelwise"
 #. type: defun
 #: original_texis/windows.texi:619
 msgid "This function returns the width, in columns, of the body of window @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window; otherwise it must be a live window."
-msgstr "この関数は、ウィンドウ@var{window}のボディーの幅を、列でリターンする。@var{window}が省略、または@code{nil}の場合のデフォルトは選択されたウィンドウであり、それ以外では生きたウィンドウでなければならない"
+msgstr "この関数はウィンドウ@var{window}のボディーの幅を列数でリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ、それ以外なら生きたウィンドウでなければならない。"
 
 #. type: defun
 #: original_texis/windows.texi:622
 msgid "If the optional argument @var{pixelwise} is non-@code{nil}, this function returns the body width of @var{window} in units of pixels."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合、この関数は@var{window}のボディーの幅をピクセル単位でリターンする。"
+msgstr "オプション引数@var{pixelwise}が非@code{nil}なら、この関数は@var{window}のボディーの幅をピクセル単位でリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:628
 msgid "If @var{pixelwise} is @code{nil}, the return value is rounded down to the nearest integer, if necessary.  This means that if a column on the right of the text area is only partially visible, that column is not counted.  It also means that the width of a window's body can never exceed its total width as returned by @code{window-total-width}."
-msgstr "@var{pixelwise}が@code{nil}の場合、リターン値は必要ならもっとも近い整数に切り下げられる。これはテキスト領域の右端の列が部分的に可視な場合は、その列は計数されないことを意味する。さらにこれは、ウィンドウのボディーの幅が、@code{window-total-width}によりリターンされるウィンドウのトータル幅を決して超過し得ないことをも意味する。"
+msgstr "@var{pixelwise}が@code{nil}なら、リターン値は必要に応じてもっとも近い整数に切り下げられる。これはテキスト領域の右端の列が部分的に可視な場合にその列が計数されないことを意味する。さらにこれはウィンドウのボディーの幅が@code{window-total-width}によりリターンされるウィンドウのトータル幅を決して超過し得ないことをも意味する。"
 
 #. type: cindex
 #: original_texis/windows.texi:630
@@ -1294,17 +1250,17 @@ msgstr "window-body-size &optional window horizontal pixelwise"
 #. type: defun
 #: original_texis/windows.texi:638
 msgid "This function returns the body height or body width of @var{window}.  If @var{horizontal} is omitted or @code{nil}, it is equivalent to calling @code{window-body-height} for @var{window}; otherwise it is equivalent to calling @code{window-body-width}.  In either case, the optional argument @var{pixelwise} is passed to the function called."
-msgstr "この関数は、@var{window}のボディーの高さ、または幅をリターンする。@var{horizontal}が省略、または@code{nil}の場合は、@var{window}にたいして@code{window-body-height}、それ以外の場合は、@code{window-body-width}を呼び出すのと同じである。いずれの場合も、オプション引数@var{pixelwise}は、呼び出された関数に渡される。"
+msgstr "この関数は@var{window}のボディーの高さか幅をリターンする。@var{horizontal}が省略または@code{nil}なら@var{window}にたいして@code{window-body-height}、それ以外なら@code{window-body-width}を呼び出すのと同じ。いずれの場合もオプション引数@var{pixelwise}は呼び出された関数に渡される。"
 
 #. type: Plain text
 #: original_texis/windows.texi:644
 msgid "For compatibility with previous versions of Emacs, @code{window-height} is an alias for @code{window-total-height}, and @code{window-width} is an alias for @code{window-body-width}.  These aliases are considered obsolete and will be removed in the future."
-msgstr "以前のバージョンのEmacsとの互換性のため、@code{window-height}は@code{window-total-height}、@code{window-width}は@code{window-body-width}にたいするエイリアスです。これらのエイリアス時代遅れと考えられております、将来的には削除されるでしょう。"
+msgstr "以前のバージョンのEmacsとの互換性のために@code{window-height}は@code{window-total-height}、@code{window-width}は@code{window-body-width}にたいするエイリアスです。これらのエイリアス時代遅れと考えられていて将来は削除されるでしょう。"
 
 #. type: Plain text
 #: original_texis/windows.texi:650
 msgid "The pixel heights of a window's mode and header line can be retrieved with the functions given below.  Their return value is usually accurate unless the window has not been displayed before: In that case, the return value is based on an estimate of the font used for the window's frame."
-msgstr "ウィンドウのモードラインとヘッダーラインのピクセル高さは、以下の関数により取得できる。それらのリターン値は、そのウィンドウが以前に表示されていない場合を除き、通常は加算される。その場合、リターン値はそのウィンドウのフレームにたいして使用を予想されるフォントが元になる。"
+msgstr "ウィンドウのモードラインとヘッダーラインのピクセル高さは以下の関数により取得できます。それらのリターン値は、そのウィンドウが以前に表示されていない場合を除いて通常は加算されます。その場合のリターン値はそのウィンドウのフレームにたいして使用を予想されるフォントが元になります。"
 
 #. type: defun
 #: original_texis/windows.texi:651
@@ -1315,7 +1271,7 @@ msgstr "window-mode-line-height &optional window"
 #. type: defun
 #: original_texis/windows.texi:655
 msgid "This function returns the height in pixels of @var{window}'s mode line.  @var{window} must be a live window and defaults to the selected one.  If @var{window} has no mode line, the return value is zero."
-msgstr "この関数は、@var{window}モードラインの高さをピクセルでリターンする。@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウである。@var{window}にモードラインがない場合、リターン値は0である。"
+msgstr "この関数は@var{window}モードラインの高さをピクセルでリターンする。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。@var{window}にモードラインがなければリターン値は0。"
 
 #. type: defun
 #: original_texis/windows.texi:657
@@ -1326,34 +1282,33 @@ msgstr "window-header-line-height &optional window"
 #. type: defun
 #: original_texis/windows.texi:661
 msgid "This function returns the height in pixels of @var{window}'s header line.  @var{window} must be a live window and defaults to the selected one.  If @var{window} has no header line, the return value is zero."
-msgstr "この関数は、@var{window}のヘッダーラインの高さをピクセルでリターンする。@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウである。@var{window}にヘッダーラインがない場合のリターン値は0である。"
+msgstr "この関数は@var{window}のヘッダーラインの高さをピクセル単位でリターンする。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。@var{window}にヘッダーラインがない場合のリターン値は0。"
 
 #. type: Plain text
 #: original_texis/windows.texi:667
 msgid "Functions for retrieving the height and/or width of window dividers (@pxref{Window Dividers}), fringes (@pxref{Fringes}), scroll bars (@pxref{Scroll Bars}), and display margins (@pxref{Display Margins}) are described in the corresponding sections."
-msgstr "ウィンドウディバイダー(@ref{Window Dividers}を参照)、フリンジ(@ref{Fringes}を参照)、スクロールバー(@ref{Scroll Bars}を参照)、ディスプレイマージン(@ref{Display Margins}を参照)を取得する関数については、対応するセクションで説明されています。"
+msgstr "ウィンドウディバイダー(@ref{Window Dividers}を参照)、フリンジ(@ref{Fringes}を参照)、スクロールバー(@ref{Scroll Bars}を参照)、ディスプレイマージン(@ref{Display Margins}を参照)を取得する関数については、それぞれ対応するセクションで説明されています。"
 
 #. type: Plain text
 #: original_texis/windows.texi:670
 msgid "If your Lisp program needs to make layout decisions, you will find the following function useful:"
-msgstr ""
+msgstr "Lispプログラムでレイアウト上の判断を要する場合には、以下の関数を有用と思うでしょう:"
 
 #. type: defun
 #: original_texis/windows.texi:671
-#, fuzzy, no-wrap
-#| msgid "window-top-line &optional window"
+#, no-wrap
 msgid "window-max-chars-per-line &optional window face"
-msgstr "window-top-line &optional window"
+msgstr "window-max-chars-per-line &optional window face"
 
 #. type: defun
 #: original_texis/windows.texi:678
 msgid "This function returns the number of characters displayed in the specified face @var{face} in the specified window @var{window} (which must be a live window).  If @var{face} was remapped (@pxref{Face Remapping}), the information is returned for the remapped face.  If omitted or @code{nil}, @var{face} defaults to the default face, and @var{window} defaults to the selected window."
-msgstr ""
+msgstr "この関数は指定されたウィンドウ@var{window} (生きたウィンドウであること)内で、指定されたフェイス@var{face}で表示される文字数をリターンする。@var{face}がリマップ(@ref{Face Remapping}を参照)されていたらリマップされたフェイスの情報がリターンされる。省略または@code{nil}の場合、@var{face}のデフォルトはデフォルトフェイス、@var{window}のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:684
 msgid "Unlike @code{window-body-width}, this function accounts for the actual size of @var{face}'s font, instead of working in units of the canonical character width of @var{window}'s frame (@pxref{Frame Font}).  It also accounts for space used by the continuation glyph, if @var{window} lacks one or both of its fringes."
-msgstr ""
+msgstr "この関数は@code{window-body-width}と異なり、@var{window}のフレームの正準文字幅(canonical character width)の単位ではなく、@var{face}のフォントの実サイズを考慮する。また@var{window}の一方または両方のフリンジがなければ、継続グリフに使用されるスペースも考慮する。"
 
 #. type: cindex
 #: original_texis/windows.texi:686
@@ -1375,29 +1330,23 @@ msgstr "window-min-width"
 
 #. type: Plain text
 #: original_texis/windows.texi:695
-#, fuzzy
-#| msgid "Commands that change the size of windows (@pxref{Resizing Windows}), or split them (@pxref{Splitting Windows}), obey the variables @code{window-min-height} and @code{window-min-width}, which specify the smallest allowable window height and width.  They also obey the variable @code{window-size-fixed}, with which a window can be @dfn{fixed} in size:"
 msgid "Commands that change the size of windows (@pxref{Resizing Windows}), or split them (@pxref{Splitting Windows}), obey the variables @code{window-min-height} and @code{window-min-width}, which specify the smallest allowable window height and width.  They also obey the variable @code{window-size-fixed}, with which a window can be @dfn{fixed} in size (@pxref{Preserving Window Sizes})."
-msgstr "ウィンドウのサイズを変更(@ref{Resizing Windows}を参照)したり、ウィンドウを分割(split)するコマンド(@ref{Splitting Windows}を参照)は、指定できるウィンドウの最小の高さと幅を指定する変数@code{window-min-height}および@code{window-min-width}にしたがう。これらのコマンドは、ウィンドウのサイズが@dfn{fixed(固定)}になる変数@code{window-size-fixed}にもしたがう。"
+msgstr "ウィンドウのサイズを変更(@ref{Resizing Windows}を参照)したりウィンドウを分割(split)するコマンド(@ref{Splitting Windows}を参照)は、指定できるウィンドウの最小の高さと幅を指定する変数@code{window-min-height}と@code{window-min-width}にしたがう。これらのコマンドはウィンドウのサイズが@dfn{fixed(固定)}になる変数@code{window-size-fixed}にもしたがう(@ref{Preserving Window Sizes}を参照)。"
 
 #. type: defopt
 #: original_texis/windows.texi:701
-#, fuzzy
-#| msgid "This option specifies the minimum total height, in lines, of any window.  Its value has to accommodate at least one text line as well as a mode and header line and a bottom divider, if present."
 msgid "This option specifies the minimum total height, in lines, of any window.  Its value has to accommodate at least one text line as well as a mode and header line, a horizontal scroll bar and a bottom divider, if present."
-msgstr "このオプションは、任意のウィンドウの最小のトータル高さを行で指定する。この値は最低でも1つのテキスト行、同様にモードライン、ヘッダーライン、(もしあれば)下端ディバイダーに対応する必要がある。"
+msgstr "このオプションは任意のウィンドウの最小のトータル高さを行で指定する。この値は最低でも1つのテキスト行、同様に(もしあれば)モードライン、ヘッダーライン、水平スクロールバー、下端ディバイダーに対応する必要がある。"
 
 #. type: defopt
 #: original_texis/windows.texi:707
 msgid "This option specifies the minimum total width, in columns, of any window.  Its value has to accommodate two text columns as well as margins, fringes, a scroll bar and a right divider, if present."
-msgstr "このオプションは、すべてのウィンドウの最小のトータル幅を列で指定する。この値は、2つのテキスト列、同様に(もしあれば)マージン、フリンジ、スクロールバー、右ディバイダーに対応する必要がある。"
+msgstr "このオプションはすべてのウィンドウの最小のトータル幅を列で指定する。この値は2つのテキスト列、同様に(もしあれば)マージン、フリンジ、スクロールバー、右ディバイダーに対応する必要がある。"
 
 #. type: Plain text
 #: original_texis/windows.texi:713
-#, fuzzy
-#| msgid "The following function tells how small a specific window can get taking into account the sizes of its areas and the values of @code{window-min-height}, @code{window-min-width} and @code{window-size-fixed}."
 msgid "The following function tells how small a specific window can get taking into account the sizes of its areas and the values of @code{window-min-height}, @code{window-min-width} and @code{window-size-fixed} (@pxref{Preserving Window Sizes})."
-msgstr "以降の関数は、ある特定の大きさのウィンドウにたいして、それの@code{window-min-height}と@code{window-min-width}と@code{window-size-fixed}の値と、領域のサイズを示す。"
+msgstr "以下の関数は、ある特定の大きさのウィンドウにたいして、それの@code{window-min-height}と@code{window-min-width}、および@code{window-size-fixed} (@ref{Preserving Window Sizes}を参照)の値と領域のサイズを示す。"
 
 #. type: defun
 #: original_texis/windows.texi:714
@@ -1408,24 +1357,22 @@ msgstr "window-min-size &optional window horizontal ignore pixelwise"
 #. type: defun
 #: original_texis/windows.texi:720
 msgid "This function returns the minimum size of @var{window}.  @var{window} must be a valid window and defaults to the selected one.  The optional argument @var{horizontal} non-@code{nil} means to return the minimum number of columns of @var{window}; otherwise return the minimum number of @var{window}'s lines."
-msgstr "この関数は、@var{window}の最小のサイズをリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウ。オプション引数@var{horizontal}が非@code{nil}の場合は、@var{window}の最小の列数、それ以外は@var{window}の最小の行数をリターンすることを意味する。"
+msgstr "この関数は@var{window}の最小のサイズをリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウ。オプション引数@var{horizontal}が非@code{nil}なら@var{window}の最小の列数、それ以外は@var{window}の最小の行数をリターンすることを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:727
-#, fuzzy
-#| msgid "The return value makes sure that all components of @var{window} remain fully visible if @var{window}'s size were actually set to it.  With @var{horizontal} @code{nil} it includes the mode and header line and the bottom divider.  With @var{horizontal} non-@code{nil} it includes the fringes, a scroll bar, and a right divider, if present.  It does not, however, include the space reserved for the margins."
 msgid "The return value makes sure that all components of @var{window} remain fully visible if @var{window}'s size were actually set to it.  With @var{horizontal} @code{nil} it includes the mode and header line, the horizontal scroll bar and the bottom divider, if present.  With @var{horizontal} non-@code{nil} it includes the margins and fringes, the vertical scroll bar and the right divider, if present."
-msgstr "このリターン値により、@var{window}のサイズが実際にその値にセットされた場合に、@var{window}のすべてのコンポーネントが完全に可視にとどまることが保証される。@var{horizontal}が@code{nil}の場合は、モードライン、ヘッダーライン、および下端ディバイダーが含まれる。@var{horizontal}が非@code{nil}の場合は、もしあればフリンジ、スクロールバー、右ディバイダーが含まれる。しかしこれには、マージン用に予約済みのスペースは含まれない。"
+msgstr "このリターン値によって@var{window}のサイズが実際にその値にセットされた場合に@var{window}のすべてのコンポーネントが完全に可視にとどまることが保証される。@var{horizontal}が@code{nil}なら、(もしあれば)モードライン、ヘッダーライン、水平スクロールバー、下端ディバイダーが含まれる。@var{horizontal}が非@code{nil}なら、(もしあれば)マージン、フリンジ、垂直スクロールバー、右ディバイダーが含まれる。"
 
 #. type: defun
 #: original_texis/windows.texi:735
 msgid "The optional argument @var{ignore}, if non-@code{nil}, means ignore restrictions imposed by fixed size windows, @code{window-min-height} or @code{window-min-width} settings.  If @var{ignore} equals @code{safe}, live windows may get as small as @code{window-safe-min-height} lines and @code{window-safe-min-width} columns.  If @var{ignore} is a window, ignore restrictions for that window only.  Any other non-@code{nil} value means ignore all of the above restrictions for all windows."
-msgstr "オプション引数@var{ignore}が非@code{nil}の場合は、@code{window-min-height}または@code{window-min-width}によりセットされる固定サイズのウィンドウに強いられる制限を無視することを意味する。@var{ignore}が@code{safe}の場合は、生きたウィンドウは可能な限り小さな@code{window-safe-min-height}の行と、@code{window-safe-min-width}の列を得る。@var{ignore}にウィンドウが指定された場合は、そのウィンドウにたいする制限だけを無視する。その他の非@code{nil}値では、すべてのウィンドウにたいする上記制限のすべてが無視されることを意味する。"
+msgstr "オプション引数@var{ignore}が非@code{nil}なら、@code{window-min-height}や@code{window-min-width}によりセットされる固定サイズのウィンドウに強いられる制限を無視することを意味する。@var{ignore}が@code{safe}なら、生きたウィンドウは可能な限り小さな@code{window-safe-min-height}の行、および@code{window-safe-min-width}の列を得る。@var{ignore}にウィンドウが指定されると、そのウィンドウにたいする制限だけを無視する。その他の非@code{nil}値では、すべてのウィンドウにたいする上記制限のすべてが無視されることを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:738
 msgid "The optional argument @var{pixelwise} non-@code{nil} means to return the minimum size of @var{window} counted in pixels."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合は、@var{window}の最小サイズがピクセルで計数されてリターンされることを意味する。"
+msgstr "オプション引数@var{pixelwise}が非@code{nil}なら、@var{window}の最小サイズがピクセルで計数されてリターンされることを意味する。"
 
 #. type: cindex
 #: original_texis/windows.texi:742
@@ -1454,12 +1401,12 @@ msgstr "window size, changing"
 #. type: Plain text
 #: original_texis/windows.texi:753
 msgid "This section describes functions for resizing a window without changing the size of its frame.  Because live windows do not overlap, these functions are meaningful only on frames that contain two or more windows: resizing a window also changes the size of a neighboring window.  If there is just one window on a frame, its size cannot be changed except by resizing the frame (@pxref{Size and Position})."
-msgstr "このセクションでは、フレームのサイズを変更せずにウィンドウのサイズを変更する関数について説明します。生きたウィンドウはオーバーラップしないので、これらの関数は2つ以上のウィンドウを含む関数上でのみ意味があります(ウィンドウのリサイズにより隣接するウィンドウのサイズも変更される)。フレーム上に単一のウィンドウしか存在しない場合には、フレームの変更以外によりウィンドウのサイズ変更はできません(@ref{Size and Position}を参照)。"
+msgstr "このセクションでは、フレームのサイズを変更せずにウィンドウのサイズを変更する関数について説明します。生きたウィンドウはオーバーラップしないので、これらの関数は2つ以上のウィンドウを含む関数上でのみ意味があります(ウィンドウのリサイズにより隣接するウィンドウのサイズも変更される)。フレーム上に単一のウィンドウしか存在しなければ、フレームの変更以外にウィンドウのサイズ変更はできません(@ref{Size and Position}を参照)。"
 
 #. type: Plain text
 #: original_texis/windows.texi:757
 msgid "Except where noted, these functions also accept internal windows as arguments.  Resizing an internal window causes its child windows to be resized to fit the same space."
-msgstr "注記した場合を除き、これらの関数は引数として内部ウィンドウも受け付けます。内部ウィンドウのリサイズにより、同じスペースにフィットするよう、子ウィンドウもリサイズされます。"
+msgstr "注記した場合を除き、これらの関数は引数として内部ウィンドウも許容します。内部ウィンドウのリサイズにより、同じスペースにフィットするように子ウィンドウもリサイズされます。"
 
 #. type: defun
 #: original_texis/windows.texi:758
@@ -1470,7 +1417,7 @@ msgstr "window-resizable window delta &optional horizontal ignore pixelwise"
 #. type: defun
 #: original_texis/windows.texi:764
 msgid "This function returns @var{delta} if the size of @var{window} can be changed vertically by @var{delta} lines.  If the optional argument @var{horizontal} is non-@code{nil}, it instead returns @var{delta} if @var{window} can be resized horizontally by @var{delta} columns.  It does not actually change the window size."
-msgstr "この関数は、@var{window}のサイズが@var{delta}行により垂直に変更され得る場合は、@var{delta}をリターンする。オプション引数@var{horizontal}が非@code{nil}の場合は、@var{window}が@var{delta}列単位に水平方向にリサイズ可能ならば、かわりに@var{delta}をリターンする。これは、実際にはウィンドウのサイズを変更しない。"
+msgstr "この関数は@var{window}のサイズが@var{delta}行により垂直に変更され得る場合には@var{delta}をリターンする。オプション引数@var{horizontal}が非@code{nil}の場合には、@var{window}が@var{delta}列単位に水平方向にリサイズ可能ならかわりに@var{delta}をリターンする。これは実際にはウィンドウのサイズを変更しない。"
 
 #. type: defun
 #: original_texis/windows.texi:766
@@ -1480,19 +1427,17 @@ msgstr "@var{window}が@code{nil}の場合のデフォルトは選択された�
 #. type: defun
 #: original_texis/windows.texi:772
 msgid "A positive value of @var{delta} means to check whether the window can be enlarged by that number of lines or columns; a negative value of @var{delta} means to check whether the window can be shrunk by that many lines or columns.  If @var{delta} is non-zero, a return value of 0 means that the window cannot be resized."
-msgstr "@var{delta}が正の値の場合は、そのウィンドウが行または列の単位で拡張可能かどうかをチェックすることを意味し、@var{delta}が負の値の場合は、そのウィンドウが行または列の単位で縮小可能かどうかをチェックすることを意味する。@var{delta}が非0の場合のリターン値0は、そのウィンドウがリサイズ可能であることを意味する。"
+msgstr "@var{delta}が正の値ならそのウィンドウが行または列の単位で拡張可能かどうかをチェックすることを意味し、@var{delta}が負の値ならそのウィンドウが行または列の単位で縮小可能かどうかをチェックすることを意味する。@var{delta}が非0の場合のリターン値0は、そのウィンドウがリサイズ可能であることを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:783
-#, fuzzy
-#| msgid "Normally, the variables @code{window-min-height} and @code{window-min-width} specify the smallest allowable window size (@pxref{Window Sizes}).  However, if the optional argument @var{ignore} is non-@code{nil}, this function ignores @code{window-min-height} and @code{window-min-width}, as well as @code{window-size-fixed}.  Instead, it considers the minimum-height window to be one consisting of a header, a mode line and a bottom divider (if any), plus a text area one line tall; and a minimum-width window as one consisting of fringes, margins, a scroll bar and a right divider (if any), plus a text area two columns wide."
 msgid "Normally, the variables @code{window-min-height} and @code{window-min-width} specify the smallest allowable window size (@pxref{Window Sizes}).  However, if the optional argument @var{ignore} is non-@code{nil}, this function ignores @code{window-min-height} and @code{window-min-width}, as well as @code{window-size-fixed}.  Instead, it considers the minimum-height window to be one consisting of a header and a mode line, a horizontal scrollbar and a bottom divider (if any), plus a text area one line tall; and a minimum-width window as one consisting of fringes, margins, a scroll bar and a right divider (if any), plus a text area two columns wide."
-msgstr "通常、変数@code{window-min-height}と@code{window-min-width}は許容される最小のウィンドウサイズを指定する(@ref{Window Sizes}を参照)。しかし、オプション引数@var{ignore}が非@code{nil}の場合、この関数は@code{window-size-fixed}と同様に@code{window-min-height}と@code{window-min-width}を無視する。そのかわりに、ヘッダーライン、モードライン、(もしあれば)下端ディバイダーに加えて1行分の高さのテキストエリアから構成されるウィンドウを、最小高さのウィンドウとし、フリンジ、マージン、スクロールバー、(もしあれば)右ディバイダーに加えて1列分の幅のテキストエリアから構成されるウィンドウを、最小幅のウィンドウと判断する。"
+msgstr "変数@code{window-min-height}と@code{window-min-width}には通常は許容される最小のウィンドウサイズを指定する(@ref{Window Sizes}を参照)。しかしオプション引数@var{ignore}が非@code{nil}なら、この関数は@code{window-size-fixed}と同様に@code{window-min-height}と@code{window-min-width}を無視する。そのかわりに(もしあれば)ヘッダーライン、モードライン、水平スクロールバー、下端ディバイダーに加えて1行分の高さのテキストエリアから構成されるウィンドウを最小高さのウィンドウとし、(もしあれば)フリンジ、マージン、スクロールバー、右ディバイダーに加えて1列分の幅のテキストエリアから構成されるウィンドウを最小幅のウィンドウと判断する。"
 
 #. type: defun
 #: original_texis/windows.texi:786 original_texis/windows.texi:824
 msgid "If the optional argument @var{pixelwise} is non-@code{nil}, @var{delta} is interpreted as pixels."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合、@var{delta}はピクセル単位として解釈される。"
+msgstr "オプション引数@var{pixelwise}が非@code{nil}なら@var{delta}はピクセル単位として解釈される。"
 
 #. type: defun
 #: original_texis/windows.texi:788
@@ -1503,27 +1448,27 @@ msgstr "window-resize window delta &optional horizontal ignore pixelwise"
 #. type: defun
 #: original_texis/windows.texi:794
 msgid "This function resizes @var{window} by @var{delta} increments.  If @var{horizontal} is @code{nil}, it changes the height by @var{delta} lines; otherwise, it changes the width by @var{delta} columns.  A positive @var{delta} means to enlarge the window, and a negative @var{delta} means to shrink it."
-msgstr "この関数は、@var{window}を@var{delta}増加することによりリサイズする。@var{horizontal}が@code{nil}の場合は高さを@var{delta}行、それ以外は幅を@var{delta}行変更する。正の@var{delta}はウィンドウの拡大、負の@var{delta}は縮小を意味する。"
+msgstr "この関数は@var{window}を@var{delta}増加することによりリサイズを行う。@var{horizontal}が@code{nil}なら高さを@var{delta}行、それ以外は幅を@var{delta}行変更する。正の@var{delta}はウィンドウの拡大、負の@var{delta}は縮小を意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:797
 msgid "If @var{window} is @code{nil}, it defaults to the selected window.  If the window cannot be resized as demanded, an error is signaled."
-msgstr "@var{window}が@code{nil}の場合のデフォルトは、選択されたウィンドウである。要求されたようにウィンドウをリサイズできない場合は、エラーをシグナルする。"
+msgstr "@var{window}が@code{nil}の場合のデフォルトは選択されたウィンドウ。要求されたようにウィンドウをリサイズできなければエラーをシグナルする。"
 
 #. type: defun
 #: original_texis/windows.texi:800
 msgid "The optional argument @var{ignore} has the same meaning as for the function @code{window-resizable} above."
-msgstr "オプション引数@var{ignore}は、上述の関数@code{window-resizable}の場合と同じ意味をもつ。"
+msgstr "オプション引数@var{ignore}は上述の関数@code{window-resizable}の場合と同じ意味をもつ。"
 
 #. type: defun
 #: original_texis/windows.texi:803
 msgid "If the optional argument @var{pixelwise} is non-@code{nil}, @var{delta} will be interpreted as pixels."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合、@var{delta}はピクセル単位として解釈される。 "
+msgstr "オプション引数@var{pixelwise}が非@code{nil}なら@var{delta}はピクセル単位として解釈される。 "
 
 #. type: defun
 #: original_texis/windows.texi:810
 msgid "The choice of which window edges this function alters depends on the values of the option @code{window-combination-resize} and the combination limits of the involved windows; in some cases, it may alter both edges.  @xref{Recombining Windows}.  To resize by moving only the bottom or right edge of a window, use the function @code{adjust-window-trailing-edge}."
-msgstr "この関数はどのウィンドウのエッジを変更するかの選択は、オプション@code{window-combination-resize}の値と、関連するウィンドウのコンビネーションリミット(combination limits: 組み合わせ制限)に依存し、両方のエッジを変更するような場合もいくつかある。@ref{Recombining Windows}を参照のこと。ウィンドウの下端または右端のエッジを移動することだけでリサイズするには、関数@code{adjust-window-trailing-edge}を使用すること。"
+msgstr "この関数がどのウィンドウのエッジを変更するかの選択はオプション@code{window-combination-resize}の値、および関連するウィンドウのコンビネーションリミット(combination limits: 組み合わせ制限)に依存し、両方のエッジを変更するような場合もいくつかある。@ref{Recombining Windows}を参照のこと。ウィンドウの下端か右端のエッジを移動することだけでリサイズするには関数@code{adjust-window-trailing-edge}を使用すること。"
 
 #. type: defun
 #: original_texis/windows.texi:816
@@ -1534,17 +1479,17 @@ msgstr "adjust-window-trailing-edge window delta &optional horizontal pixelwise"
 #. type: defun
 #: original_texis/windows.texi:821
 msgid "This function moves @var{window}'s bottom edge by @var{delta} lines.  If optional argument @var{horizontal} is non-@code{nil}, it instead moves the right edge by @var{delta} columns.  If @var{window} is @code{nil}, it defaults to the selected window."
-msgstr "この関数は、@var{window}の下端エッジを@var{delta}行分移動する。オプション引数@var{horizontal}が非@code{nil}の場合は、かわりに右端エッジを@var{delta}列分移動する。@var{window}が@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数は@var{window}の下端エッジを@var{delta}行分移動する。オプション引数@var{horizontal}が非@code{nil}なら、かわりに右端エッジを@var{delta}列分移動する。@var{window}が@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:829
 msgid "A positive @var{delta} moves the edge downwards or to the right; a negative @var{delta} moves it upwards or to the left.  If the edge cannot be moved as far as specified by @var{delta}, this function moves it as far as possible but does not signal a error."
-msgstr "正の@var{delta}はエッジを下方もしくは右方へ移動し、負の@var{delta}はエッジを上方もしくは左方へ移動する。@var{delta}で指定された範囲までエッジを移動できない場合、この関数はエラーをシグナルすることなく、可能な限りエッジを移動する。"
+msgstr "正の@var{delta}はエッジを下方か右方へ移動し、負の@var{delta}はエッジを上方か左方へ移動する。@var{delta}で指定された範囲までエッジを移動できなければ、この関数はエラーをシグナルすることなく可能な限りエッジを移動する。"
 
 #. type: defun
 #: original_texis/windows.texi:833
 msgid "This function tries to resize windows adjacent to the edge that is moved.  If this is not possible for some reason (e.g., if that adjacent window is fixed-size), it may resize other windows."
-msgstr "この関数は、移動されたエッジに隣接するウィンドウのリサイズを試みる。何らかの理由(隣接するウィンドウが固定サイズの場合等)により、それが不可能な場合は、他のウィンドウをリサイズするかもしれない。"
+msgstr "この関数は移動されたエッジに隣接するウィンドウのリサイズを試みる。何らかの理由(隣接するウィンドウが固定サイズの場合等)によりそれが不可能なら、他のウィンドウをリサイズするかもしれない。"
 
 #. type: cindex
 #: original_texis/windows.texi:835
@@ -1560,56 +1505,49 @@ msgstr "window-resize-pixelwise"
 
 #. type: defopt
 #: original_texis/windows.texi:843
-#, fuzzy
-#| msgid "If the value of this option is non-@code{nil}, Emacs resizes windows in units of pixels.  This currently affects functions like @code{split-window} (@pxref{Splitting Windows}), @code{maximize-window}, @code{minimize-window}, @code{fit-window-to-buffer}, @code{shrink-window-if-larger-than-buffer} (all listed below) and @code{fit-frame-to-buffer} (@pxref{Size and Position})."
 msgid "If the value of this option is non-@code{nil}, Emacs resizes windows in units of pixels.  This currently affects functions like @code{split-window} (@pxref{Splitting Windows}), @code{maximize-window}, @code{minimize-window}, @code{fit-window-to-buffer}, @code{fit-frame-to-buffer} and @code{shrink-window-if-larger-than-buffer} (all listed below)."
-msgstr "このオプションの値が非@code{nil}の場合、Emacsはウィンドウをピクセル単位でリサイズする。現在のところ、これは@code{split-window}(@ref{Splitting Windows}を参照)、@code{maximize-window}、@code{minimize-window}、@code{fit-window-to-buffer}、@code{shrink-window-if-larger-than-buffer}(すべて以下に記述)、および@code{fit-frame-to-buffer}(@ref{Size and Position}を参照)のような関数に影響を与える。"
+msgstr "このオプションの値が非@code{nil}ならEmacsはウィンドウをピクセル単位でリサイズする。これは現在のところ@code{split-window} (@ref{Splitting Windows}を参照)、@code{maximize-window}、@code{minimize-window}、@code{fit-window-to-buffer}、@code{fit-frame-to-buffer}、@code{shrink-window-if-larger-than-buffer} (すべて以下に記述)のような関数に影響を与える。"
 
 #. type: defopt
 #: original_texis/windows.texi:847
 msgid "Note that when a frame's pixel size is not a multiple of its character size, at least one window may get resized pixelwise even if this option is @code{nil}.  The default value is @code{nil}."
-msgstr "あるフレームのピクセルサイズがそのフレームの文字サイズの整数倍でないときは、たとえこのオプションが@code{nil}であっても、少なくとも1つのウィンドウがピクセル単位でリサイズされるであろうことに注意されたい。デフォルト値は@code{nil}である。"
+msgstr "あるフレームのピクセルサイズがそのフレームの文字サイズの整数倍でないときは、たとえこのオプションが@code{nil}であっても少なくとも1つのウィンドウがピクセル単位でリサイズされるであろうことに注意。デフォルト値は@code{nil}。"
 
 #. type: Plain text
 #: original_texis/windows.texi:851
 msgid "The following commands resize windows in more specific ways.  When called interactively, they act on the selected window."
-msgstr "以下のコマンドは、より具体的な方法でウィンドウをリサイズします。これらがインタラクティブに呼び出されたときは、選択されたウィンドウにたいして作用します。"
+msgstr "以下のコマンドは、より具体的な方法でウィンドウをリサイズします。これらがインタラクティブに呼び出されたときは選択されたウィンドウにたいして作用します。"
 
 #. type: deffn
 #: original_texis/windows.texi:852
-#, fuzzy, no-wrap
-#| msgid "Command fit-window-to-buffer &optional window max-height min-height max-width min-width"
+#, no-wrap
 msgid "Command fit-window-to-buffer &optional window max-height min-height max-width min-width preserve-size"
-msgstr "Command fit-window-to-buffer &optional window max-height min-height max-width min-width"
+msgstr "Command fit-window-to-buffer &optional window max-height min-height max-width min-width preserve-size"
 
 #. type: deffn
 #: original_texis/windows.texi:857
 msgid "This command adjusts the height or width of @var{window} to fit the text in it.  It returns non-@code{nil} if it was able to resize @var{window}, and @code{nil} otherwise.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  Otherwise, it should be a live window."
-msgstr "このコマンドは、@var{window}の高さまたは幅を、ウィンドウ内のテキストにフィットするように調整する。@var{window}がリサイズできた場合は非@code{nil}、それ以外は@code{nil}をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ、それ以外の場合は生きたウィンドウであること。"
+msgstr "このコマンドは@var{window}の高さか幅をウィンドウ内のテキストにフィットするように調整する。@var{window}がリサイズできたら非@code{nil}、それ以外は@code{nil}をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ、それ以外の場合には生きたウィンドウであること。"
 
 #. type: deffn
 #: original_texis/windows.texi:867
 msgid "If @var{window} is part of a vertical combination, this function adjusts @var{window}'s height.  The new height is calculated from the actual height of the accessible portion of its buffer.  The optional argument @var{max-height}, if non-@code{nil}, specifies the maximum total height that this function can give @var{window}.  The optional argument @var{min-height}, if non-@code{nil}, specifies the minimum total height that it can give, which overrides the variable @code{window-min-height}.  Both @var{max-height} and @var{min-height} are specified in lines and include mode and header line and a bottom divider, if any."
-msgstr "@var{window}が垂直コンビネーションの一部の場合、この関数は@var{window}の高さを調整する。新たな高さは、そのウィンドウのバッファーのアクセス可能な範囲の実際の高さから計算される。オプション引数@var{max-height}が非@code{nil}の場合、それはこの関数が@var{window}に与えることができる、最大のトータル高さを指定する。オプション引数@var{min-height}が非@code{nil}の場合、それは与えることができる最小のトータル高さを指定し、それは変数@code{window-min-height}をオーバーライドする。@var{max-height}と@var{min-height}はどちらも、(もしあれば)モードライン、ヘッダーライン、下端ディバイダーを含む行数で指定する。"
+msgstr "@var{window}が垂直コンビネーションの一部なら、この関数は@var{window}の高さを調整する。新たな高さはそのウィンドウのバッファーのアクセス可能な範囲の実際の高さから計算される。オプション引数@var{max-height}が非@code{nil}なら、それはこの関数が@var{window}に与えることができる最大のトータル高さを指定する。オプション引数@var{min-height}が非@code{nil}なら、それは与えることができる最小のトータル高さを指定して、それは変数@code{window-min-height}をオーバーライドする。@var{max-height}と@var{min-height}はいずれも、(もしあれば)モードライン、ヘッダーライン、下端ディバイダーを含む行数で指定する。"
 
 #. type: deffn
 #: original_texis/windows.texi:879
 msgid "If @var{window} is part of a horizontal combination and the value of the option @code{fit-window-to-buffer-horizontally} (see below) is non-@code{nil}, this function adjusts @var{window}'s height.  The new width of @var{window} is calculated from the maximum length of its buffer's lines that follow the current start position of @var{window}.  The optional argument @var{max-width} specifies a maximum width and defaults to the width of @var{window}'s frame.  The optional argument @var{min-width} specifies a minimum width and defaults to @code{window-min-width}.  Both @var{max-width} and @var{min-width} are specified in columns and include fringes, margins and scrollbars, if any."
-msgstr "@var{window}が水平コンビネーションの一部で、かつオプション@code{fit-window-to-buffer-horizontally}(以下参照)の値が非@code{nil}の場合、この関数は@var{window}の幅を調整する。新たな幅は、@var{window}のカレントのスタート位置以降の、バッファーの最長の行から計算される。オプション引数@var{max-width}は最大幅を指定し、デフォルトは@var{window}のフレーム幅である。オプション引数@var{min-width}は最小幅を指定し、デフォルトは@code{window-min-width}である。@var{max-width}と@var{min-width}はどちらも、(もしあれば)フリンジ、マージン、スクロールバーを含む列数で指定する。"
+msgstr "@var{window}が水平コンビネーションの一部で、かつオプション@code{fit-window-to-buffer-horizontally} (以下参照)の値が非@code{nil}なら、この関数は@var{window}の幅を調整する。新たな幅は@var{window}のカレントのスタート位置以降のバッファーの最長の行から計算される。オプション引数@var{max-width}は最大幅を指定し、デフォルトは@var{window}のフレーム幅。オプション引数@var{min-width}は最小幅を指定し、デフォルトは@code{window-min-width}。@var{max-width}と@var{min-width}はいずれも、(もしあれば)フリンジ、マージン、スクロールバーを含む列数で指定する。"
 
 #. type: deffn
 #: original_texis/windows.texi:883
-#, fuzzy
-#| msgid "The optional argument @var{pixelwise} non-@code{nil} means to return the minimum size of @var{window} counted in pixels."
 msgid "The optional argument @var{preserve-size}, if non-@code{nil}, will install a parameter to preserve the size of @var{window} during future resize operations (@pxref{Preserving Window Sizes})."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合は、@var{window}の最小サイズがピクセルで計数されてリターンされることを意味する。"
+msgstr "オプション引数@var{preserve-size}が非@code{nil}なら、将来のリサイズ操作の間の@var{window}のサイズを予約するパラメーターをインストールする(@ref{Preserving Window Sizes}を参照)。"
 
 #. type: deffn
 #: original_texis/windows.texi:887
-#, fuzzy
-#| msgid "If the option @code{fit-frame-to-buffer} (see below) is non-@code{nil}, this function will try to resize the frame of @var{window} to fit its contents by calling @code{fit-frame-to-buffer} (@pxref{Size and Position})."
 msgid "If the option @code{fit-frame-to-buffer} (see below) is non-@code{nil}, this function will try to resize the frame of @var{window} to fit its contents by calling @code{fit-frame-to-buffer} (see below)."
-msgstr "オプション@code{fit-frame-to-buffer}(以下参照)が非@code{nil}の場合、この関数は@code{fit-frame-to-buffer}(@pxref{Size and Position})を呼び出すことにより、@var{window}のコンテンツにフィットするように、@var{window}のフレームのリサイズを試みるだろう。"
+msgstr "オプション@code{fit-frame-to-buffer} (以下参照)が非@code{nil}なら、この関数は@code{fit-frame-to-buffer} (以下参照)を呼び出すことにより、@var{window}のコンテンツにフィットするように@var{window}のフレームのリサイズを試みるだろう。"
 
 #. type: defopt
 #: original_texis/windows.texi:889
@@ -1620,7 +1558,7 @@ msgstr "fit-window-to-buffer-horizontally"
 #. type: defopt
 #: original_texis/windows.texi:896
 msgid "If this is non-@code{nil}, @code{fit-window-to-buffer} can resize windows horizontally.  If this is @code{nil} (the default)  @code{fit-window-to-buffer} never resizes windows horizontally.  If this is @code{only}, it can resize windows horizontally only.  Any other value means @code{fit-window-to-buffer} can resize windows in both dimensions."
-msgstr "これが非@code{nil}の場合、@code{fit-window-to-buffer}はウィンドウを水平方向にリサイズできる。これが@code{nil}(デフォルト)の場合、@code{fit-window-to-buffer}はウィンドウウィンドウ決して水平方向にリサイズしない。これが@code{only}の場合は、ウィンドウを水平方向だけにリサイズできる。その他の値では、@code{fit-window-to-buffer}がウィンドウをどちらの方向にもリサイズできることを意味する。"
+msgstr "これが非@code{nil}なら、@code{fit-window-to-buffer}はウィンドウを水平方向にリサイズできる。これが@code{nil} (デフォルト)なら@code{fit-window-to-buffer}はウィンドウ決して水平方向にリサイズしない。これが@code{only}ならウィンドウを水平方向だけにリサイズできる。その他の値では@code{fit-window-to-buffer}がウィンドウをどちらの方向にもリサイズできることを意味する。"
 
 #. type: defopt
 #: original_texis/windows.texi:898
@@ -1631,65 +1569,60 @@ msgstr "fit-frame-to-buffer"
 #. type: defopt
 #: original_texis/windows.texi:905
 msgid "If this option is non-@code{nil}, @code{fit-window-to-buffer} can fit a frame to its buffer.  A frame is fit if and only if its root window is a live window and this option is non-@code{nil}.  If this is @code{horizontally}, frames are fit horizontally only.  If this is @code{vertically}, frames are fit vertically only.  Any other non-@code{nil} value means frames can be resized in both dimensions."
-msgstr "このオプションが非@code{nil}の場合、@code{fit-window-to-buffer}はフレームをフレームのコンテンツにフィットさせることができる。フレームは、フレームのルートウィンドウが生きたウィンドウで、かつこのオプションが非@code{nil}の場合のみ、フィットされる。これが@code{horizontally}の場合、フレームは水平方向にのみフィットされる。これが@code{vertically}の場合、フレームは垂直方向にのみフィットされる。その他の非@code{nil}値は、フレームがどちらの方向にもフィットできることを意味する。"
+msgstr "このオプションが非@code{nil}なら、@code{fit-window-to-buffer}はフレームをフレームのコンテンツにフィットさせることができる。フレームは、フレームのルートウィンドウが生きたウィンドウで、かつこのオプションが非@code{nil}の場合のみフィットされる。@code{horizontally}ならフレームは水平方向にのみフィットされる。@code{vertically}ならフレームは垂直方向にのみフィットされる。その他の非@code{nil}値はフレームがどちらの方向にもフィットできることを意味する。"
 
 #. type: Plain text
 #: original_texis/windows.texi:909
 msgid "If you have a frame that displays only one window, you can fit that frame to its buffer using the command @code{fit-frame-to-buffer}."
-msgstr ""
+msgstr "単一のウィンドウだけを表示するフレームではコマンド@code{fit-frame-to-buffer}を使用してそのバッファーにフレームをフィットできます。"
 
 #. type: deffn
 #: original_texis/windows.texi:910
-#, fuzzy, no-wrap
-#| msgid "Command fit-window-to-buffer &optional window max-height min-height max-width min-width"
+#, no-wrap
 msgid "Command fit-frame-to-buffer &optional frame max-height min-height max-width min-width only"
-msgstr "Command fit-window-to-buffer &optional window max-height min-height max-width min-width"
+msgstr "Command fit-frame-to-buffer &optional frame max-height min-height max-width min-width only"
 
 #. type: deffn
 #: original_texis/windows.texi:919
 msgid "This command adjusts the size of @var{frame} to display the contents of its buffer exactly.  @var{frame} can be any live frame and defaults to the selected one.  Fitting is done only if @var{frame}'s root window is live.  The arguments @var{max-height}, @var{min-height}, @var{max-width} and @var{min-width} specify bounds on the new total size of @var{frame}'s root window.  @var{min-height} and @var{min-width} default to the values of @code{window-min-height} and @code{window-min-width} respectively."
-msgstr ""
+msgstr "このコマンドは@var{frame}のサイズを、表示しているバッファーのコテンツに正確に調整する。@var{frame}には任意の生きたフレームを指定できデフォルトは選択されたフレーム。@var{frame}のルートウィンドウが生きている場合のみフィットが行われる。引数@var{max-height}、@var{min-height}、@var{max-width}、@var{min-width}は@var{frame}のルートウィンドウの新たなトータルサイズの境界を指定する。@var{min-height}と@var{min-width}のデフォルトはそれぞれ@code{window-min-height}と@code{window-min-width}。"
 
 #. type: deffn
 #: original_texis/windows.texi:923
-#, fuzzy
-#| msgid "If the optional argument @var{horizontal} is non-@code{nil}, this means to return non-@code{nil} if and only if @var{window} is part of a horizontal combination."
 msgid "If the optional argument @var{only} is @code{vertically}, this function may resize the frame vertically only.  If @var{only} is @code{horizontally}, it may resize the frame horizontally only."
-msgstr "オプション引数@var{horizontal}が非@code{nil}ならば、@var{window}が水平コンビネーションの一部である場合のみ非@code{nil}をリターンすることを意味する。"
+msgstr "この関数はオプション引数@var{only}が@code{vertically}なら垂直方向のみ、@var{only}が@code{horizontally}なら水平方向のみフレームをリサイズする。"
 
 #. type: Plain text
 #: original_texis/windows.texi:927
 msgid "The behavior of @code{fit-frame-to-buffer} can be controlled with the help of the two options listed next."
-msgstr ""
+msgstr "@code{fit-frame-to-buffer}の振る舞いは次にリストする2つのオプションで制御可能です。"
 
 #. type: defopt
 #: original_texis/windows.texi:928
-#, fuzzy, no-wrap
-#| msgid "fit-frame-to-buffer"
+#, no-wrap
 msgid "fit-frame-to-buffer-margins"
-msgstr "fit-frame-to-buffer"
+msgstr "fit-frame-to-buffer-margins"
 
 #. type: defopt
 #: original_texis/windows.texi:932
 msgid "This option can be used to specify margins around frames to be fit by @code{fit-frame-to-buffer}.  Such margins can be useful to avoid, for example, that such frames overlap the taskbar."
-msgstr ""
+msgstr "このオプションは@code{fit-frame-to-buffer}によりフィットされるフレーム周囲のマージンの指定に使用できる。このようなマージンは、たとえばフレームとタスクバーが重なることを回避するために有用。"
 
 #. type: defopt
 #: original_texis/windows.texi:938
 msgid "It specifies the numbers of pixels to be left free on the left, above, the right, and below a frame that shall be fit.  The default specifies @code{nil} for each which means to use no margins.  The value specified here can be overridden for a specific frame by that frame's @code{fit-frame-to-buffer-margins} parameter, if present."
-msgstr ""
+msgstr "これはフィットされるフレームの左右上下にフリーとして残されるピクセル数を指定する。デフォルトの@code{nil}はそれぞれにたいしてマージンを使用しないことを指定する。ここで指定した値は、特定のフレームにたいしてもしそのフレームの@code{fit-frame-to-buffer-margins}が与えられればオーバーライドされ得る。"
 
 #. type: defopt
 #: original_texis/windows.texi:940
-#, fuzzy, no-wrap
-#| msgid "fit-frame-to-buffer"
+#, no-wrap
 msgid "fit-frame-to-buffer-sizes"
-msgstr "fit-frame-to-buffer"
+msgstr "fit-frame-to-buffer-sizes"
 
 #. type: defopt
 #: original_texis/windows.texi:946
 msgid "This option specifies size boundaries for @code{fit-frame-to-buffer}.  It specifies the total maximum and minimum lines and maximum and minimum columns of the root window of any frame that shall be fit to its buffer.  If any of these values is non-@code{nil}, it overrides the corresponding argument of @code{fit-frame-to-buffer}."
-msgstr ""
+msgstr "このオプションは@code{fit-frame-to-buffer}にたいしてサイズ境界を指定する。これは自身のバッファーにフィットされる任意のフレームのルートウィンドウの最大行と最小行、最大列と最小列のトータルを指定する。これらの値のいずれかが非@code{nil}なら、@code{fit-frame-to-buffer}の対応する引数をオーバーライドする。"
 
 #. type: deffn
 #: original_texis/windows.texi:948
@@ -1700,17 +1633,17 @@ msgstr "Command shrink-window-if-larger-than-buffer &optional window"
 #. type: deffn
 #: original_texis/windows.texi:955
 msgid "This command attempts to reduce @var{window}'s height as much as possible while still showing its full buffer, but no less than @code{window-min-height} lines.  The return value is non-@code{nil} if the window was resized, and @code{nil} otherwise.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  Otherwise, it should be a live window."
-msgstr "このコマンドは、@var{window}にたいしてそのバッファーを完全に表示できるが、@code{window-min-height}以上の行を表示できるまで、可能な限り@var{window}の高さを縮小する。リターン値は、そのウィンドウがリサイズされれば非@code{nil}、それ以外は非@code{nil}。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。それ以外では、生きたウィンドウであること。"
+msgstr "このコマンドは@var{window}にたいしてそのバッファーを完全に表示できるが、@code{window-min-height}以上の行を表示できるまで可能な限り@var{window}の高さを縮小する。リターン値はそのウィンドウがリサイズされれば非@code{nil}、それ以外なら非@code{nil}。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。それ以外では生きたウィンドウであること。"
 
 #. type: deffn
 #: original_texis/windows.texi:959
 msgid "This command does nothing if the window is already too short to display all of its buffer, or if any of the buffer is scrolled off-screen, or if the window is the only live window in its frame."
-msgstr "このコマンドは、そのウィンドウがバッファーのすべてを表示するにはすでに高さが低すぎる場合、バッファーのどこかがスクリーンからスクロールオフされている場合、またはそのウィンドウがフレーム内で唯一の生きたウィンドウの場合は何も行わない。"
+msgstr "このコマンドはそのウィンドウがバッファーのすべてを表示するにはすでに高さが低すぎる場合、バッファーのどこかがスクリーンからスクロールオフされている場合、またはそのウィンドウがフレーム内で唯一の生きたウィンドウの場合は何も行わない。"
 
 #. type: deffn
 #: original_texis/windows.texi:962
 msgid "This command calls @code{fit-window-to-buffer} (see above) to do its work."
-msgstr "このコマンドは、自身の処理を行うために、@code{fit-window-to-buffer}(上記参照)を呼び出す。"
+msgstr "このコマンドは自身の処理を行うために@code{fit-window-to-buffer} (上記参照)を呼び出す。"
 
 #. type: cindex
 #: original_texis/windows.texi:965
@@ -1727,7 +1660,7 @@ msgstr "Command balance-windows &optional window-or-frame"
 #. type: deffn
 #: original_texis/windows.texi:972
 msgid "This function balances windows in a way that gives more space to full-width and/or full-height windows.  If @var{window-or-frame} specifies a frame, it balances all windows on that frame.  If @var{window-or-frame} specifies a window, it balances only that window and its siblings (@pxref{Windows and Frames})."
-msgstr "この関数は、各ウィンドウにたいして完全な幅、および/または完全な高さを与えるような方法により、各ウィンドウのバランスをとる。@var{window-or-frame}にフレームを指定した場合は、そのフレーム上のすべてのウィンドウのバランスをとる。@var{window-or-frame}にウィンドウを指定した場合は、そのウィンドウとウィンドウのsiblings(兄弟)にたいしてのみのバランスをとる(@ref{Windows and Frames}を参照)。"
+msgstr "この関数は各ウィンドウにたいして完全な幅、および/または完全な高さを与えるような方法によって各ウィンドウのバランスをとる。@var{window-or-frame}にフレームを指定すると、そのフレーム上のすべてのウィンドウのバランスをとる。@var{window-or-frame}にウィンドウを指定すると、そのウィンドウとウィンドウのsiblings(兄弟)にたいしてのみのバランスをとる(@ref{Windows and Frames}を参照)。"
 
 #. type: deffn
 #: original_texis/windows.texi:974
@@ -1738,7 +1671,7 @@ msgstr "Command balance-windows-area"
 #. type: deffn
 #: original_texis/windows.texi:978
 msgid "This function attempts to give all windows on the selected frame approximately the same share of the screen area.  Full-width or full-height windows are not given more space than other windows."
-msgstr "この関数は、選択されたフレーム上のすべてのウィンドウにたいして、おおよそ同じスクリーンエリアを与えようと試みる。完全な幅、または高さをもつウィンドウにたいしては、他のウィンドウと比較して、より多くのスペースは与えられない。"
+msgstr "この関数は選択されたフレーム上のすべてのウィンドウにたいして、おおよそ同じスクリーンエリアを与えようと試みる。完全な幅か高さをもつウィンドウにたいしては、他のウィンドウと比較してより多くのスペースは与えられない。"
 
 #. type: cindex
 #: original_texis/windows.texi:980
@@ -1755,7 +1688,7 @@ msgstr "Command maximize-window &optional window"
 #. type: deffn
 #: original_texis/windows.texi:986
 msgid "This function attempts to make @var{window} as large as possible, in both dimensions, without resizing its frame or deleting other windows.  If @var{window} is omitted or @code{nil}, it defaults to the selected window."
-msgstr "この関数は、@var{window}にたいして、そのフレームをリサイズしたり、他のウィンドウを削除することなく、水平垂直の両方向において、可能な限り大きくなるように試みる。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数は、@var{window}にたいして、そのフレームをリサイズしたり他のウィンドウを削除することなく、水平垂直の両方向で可能な限り大きくなるように試みる。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: cindex
 #: original_texis/windows.texi:988
@@ -1772,24 +1705,23 @@ msgstr "Command minimize-window &optional window"
 #. type: deffn
 #: original_texis/windows.texi:994
 msgid "This function attempts to make @var{window} as small as possible, in both dimensions, without deleting it or resizing its frame.  If @var{window} is omitted or @code{nil}, it defaults to the selected window."
-msgstr "この関数は、@var{window}にたいして、そのフレームをリサイズしたり、そのウィンドウを削除することなく、水平垂直の両方向において、可能な限り小さくなるように試みる。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数は@var{window}にたいして、そのフレームをリサイズしたりそのウィンドウを削除することなく、水平垂直の両方向で可能な限り小さくなるように試みる。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: cindex
 #: original_texis/windows.texi:999
-#, fuzzy, no-wrap
-#| msgid "balancing window sizes"
+#, no-wrap
 msgid "preserving window sizes"
-msgstr "balancing window sizes"
+msgstr "preserving window sizes"
 
 #. type: Plain text
 #: original_texis/windows.texi:1006
 msgid "A window can get resized explicitly by using one of the functions from the preceding section or implicitly, for example, when resizing an adjacent window, when splitting or deleting a window (@pxref{Splitting Windows}, @pxref{Deleting Windows}) or when resizing the window's frame (@pxref{Size and Position})."
-msgstr ""
+msgstr "ウィンドウは前セクションのいずれかの関数を使用して明示的にリサイズされたり、たとえばウィンドウの調整、ウィンドウの分割(@ref{Splitting Windows}を参照)や削除(@ref{Deleting Windows}を参照)、またはウィンドウのフレームのリサイズ(@ref{Size and Position}を参照)の際に暗黙にリサイズされるかもしれません。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1011
 msgid "It is possible to avoid implicit resizing of a specific window when there are one or more other resizable windows on the same frame.  For this purpose, Emacs must be advised to @dfn{preserve} the size of that window.  There are two basic ways to do that."
-msgstr ""
+msgstr "同一フレーム上に1つ以上のリサイズ可能なウィンドウが他に存在する際には、特定のウィンドウにたいして暗黙のリサイズを避けることが可能です。この目的にたいして、Emacsにそのウィンドウのサイズの@dfn{予約(preserve)}をアドバイスしなければなりません。これを行うための基本的な方法が2つあります。"
 
 #. type: defvar
 #: original_texis/windows.texi:1012
@@ -1799,66 +1731,60 @@ msgstr "window-size-fixed"
 
 #. type: defvar
 #: original_texis/windows.texi:1017
-#, fuzzy
-#| msgid "If this buffer-local variable is non-@code{nil}, the size of any window displaying the buffer cannot normally be changed.  Deleting a window or changing the frame's size may still change its size, if there is no choice."
 msgid "If this buffer-local variable is non-@code{nil}, the size of any window displaying the buffer cannot normally be changed.  Deleting a window or changing the frame's size may still change the window's size, if there is no choice."
-msgstr "このバッファーローカル変数が非@code{nil}の場合、そのバッファーを表示するすべてのウィンドウのサイズが、通常は変更できなくなる。ウィンドウ削除やそのフレームのサイズ変更により、それ以外に方法がなければ、依然としてウィンドウのサイズは変更されるかもしれない。"
+msgstr "このバッファーローカル変数が非@code{nil}なら、通常はそのバッファーを表示するすべてのウィンドウのサイズが変更できなくなる。ウィンドウ削除やそのフレームのサイズ変更により、それ以外に方法がなければ依然としてウィンドウのサイズは変更され得る。"
 
 #. type: defvar
 #: original_texis/windows.texi:1021
 msgid "If the value is @code{height}, then only the window's height is fixed; if the value is @code{width}, then only the window's width is fixed.  Any other non-@code{nil} value fixes both the width and the height."
-msgstr "値が@code{height}の場合は、そのウィンドウの高さだけが固定される。値が@code{width}の場合は、そのウィンドウの幅だけが固定される。その他の非@code{nil}値では、幅と高さの両方が固定される。"
+msgstr "値が@code{height}ならそのウィンドウの高さのみ、値が@code{width}ならそのウィンドウの幅のみが固定される。その他の非@code{nil}値では幅と高さの両方が固定される。"
 
 #. type: defvar
 #: original_texis/windows.texi:1026
 msgid "If this variable is @code{nil}, this does not necessarily mean that any window showing the buffer can be resized in the desired direction.  To determine that, use the function @code{window-resizable}.  @xref{Resizing Windows}."
-msgstr "この変数が@code{nil}場合でも、そのバッファーを表示している任意のウィンドウを任意の方向にリサイズできるとはいえない。これを決定するには、関数@code{window-resizable}を使用する。@ref{Resizing Windows}を参照のこと。"
+msgstr "この変数が@code{nil}でも、そのバッファーを表示している任意のウィンドウを任意の方向にリサイズできるとはいえない。これを判断するには関数@code{window-resizable}を使用する。@ref{Resizing Windows}を参照のこと。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1034
 msgid "Often @code{window-size-fixed} is overly aggressive because it inhibits any attempt to explicitly resize or split an affected window as well.  This may even happen after the window has been resized implicitly, for example, when deleting an adjacent window or resizing the window's frame.  The following function tries hard to never disallow resizing such a window explicitly:"
-msgstr ""
+msgstr "影響を受けるウィンドウにたいする明示的なリサイズや分割の試みも同様に抑制するので、@code{window-size-fixed}の積極性が過度な場合が多々あります。これはたとえそのウィンドウが暗黙にリサイズされた後にも、たとえば隣接するウィンドウの削除やウィンドウのフレームのリサイズの際に発生するかもしれません。以下の関数では、そのようなウィンドウのリサイズを絶対禁止としないよう試みます:"
 
 #. type: defun
 #: original_texis/windows.texi:1035
-#, fuzzy, no-wrap
-#| msgid "window-body-size &optional window horizontal pixelwise"
+#, no-wrap
 msgid "window-preserve-size &optional window horizontal preserve"
-msgstr "window-body-size &optional window horizontal pixelwise"
+msgstr "window-preserve-size &optional window horizontal preserve"
 
 #. type: defun
 #: original_texis/windows.texi:1040
-#, fuzzy
-#| msgid "This function returns the minimum size of @var{window}.  @var{window} must be a valid window and defaults to the selected one.  The optional argument @var{horizontal} non-@code{nil} means to return the minimum number of columns of @var{window}; otherwise return the minimum number of @var{window}'s lines."
 msgid "This function (un-)marks the height of window @var{window} as preserved for future resize operations.  @var{window} must be a live window and defaults to the selected one.  If the optional argument @var{horizontal} is non-@code{nil}, it (un-)marks the width of @var{window} as preserved."
-msgstr "この関数は、@var{window}の最小のサイズをリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウ。オプション引数@var{horizontal}が非@code{nil}の場合は、@var{window}の最小の列数、それ以外は@var{window}の最小の行数をリターンすることを意味する。"
+msgstr "この関数は将来のリサイズ操作用にウィンドウ@var{window}の高さを予約済み(preserved)としてマーク(または非マーク)する。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。オプション引数@var{horizontal}が非@code{nil}なら@var{window}の幅を予約済みとしてマーク(または非マーク)する。"
 
 #. type: defun
 #: original_texis/windows.texi:1046
 msgid "If the optional argument @var{preserve} is @code{t}, this means to preserve the current height/width of @var{window}'s body.  The height/width of @var{window} will change only if Emacs has no better choice.  Resizing a window whose height/width is preserved by this function never throws an error."
-msgstr ""
+msgstr "オプション引数@var{preserve}が@code{t}なら@var{window}ボディーのカレントの高さまたは幅を予約することを意味する。@var{window}の高さまたは幅はEmacsが他によい選択をもたないときのみ変更される。この関数により予約されたウィンドウにたいする高さや幅のリサイズは決してエラーをthrowしない。"
 
 #. type: defun
 #: original_texis/windows.texi:1053
 msgid "If @var{preserve} is @code{nil}, this means to stop preserving the height/width of @var{window}, lifting any respective restraint induced by a previous call of this function for @var{window}.  Calling @code{enlarge-window}, @code{shrink-window} or @code{fit-window-to-buffer} with @var{window} as argument may also remove the respective restraint."
-msgstr ""
+msgstr "@var{preserve}が@code{nil}なら、この関数の以前の呼び出しにより誘発された@var{window}にたいする任意の拘束を解除して、@var{window}の高さまたは幅の予約を停止することを意味する。引数に@var{window}を与えて@code{enlarge-window}、@code{shrink-window}、@code{fit-window-to-buffer}を呼び出すことによっても対応する高速を削除できる。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1057
 msgid "@code{window-preserve-size} is currently invoked by the following functions:"
-msgstr ""
+msgstr "現在のことろ@code{window-preserve-size}は以下の関数から呼び出されています:"
 
 #. type: item
 #: original_texis/windows.texi:1059
-#, fuzzy, no-wrap
-#| msgid "fit-window-to-buffer-horizontally"
+#, no-wrap
 msgid "fit-window-to-buffer"
-msgstr "fit-window-to-buffer-horizontally"
+msgstr "fit-window-to-buffer"
 
 #. type: table
 #: original_texis/windows.texi:1063
 msgid "If the optional argument @var{preserve-size} of that function (@pxref{Resizing Windows}) is non-@code{nil}, the size established by that function is preserved."
-msgstr ""
+msgstr "この関数のオプション引数@var{preserve-size}が非@code{nil}なら、この関数により確保されたサイズは予約される(@ref{Resizing Windows}を参照)。"
 
 #. type: item
 #: original_texis/windows.texi:1064 original_texis/windows.texi:1508
@@ -1869,33 +1795,28 @@ msgstr "display-buffer"
 #. type: table
 #: original_texis/windows.texi:1068
 msgid "If the @var{alist} argument of that function (@pxref{Choosing Window})  contains a @code{preserve-size} entry, the size of the window produced by that function is preserved."
-msgstr ""
+msgstr "この関数の@var{alist}引数に@code{preserve-size}エントリーがあれば、この関数により生成されるウィンドウサイズは予約される(@ref{Choosing Window}を参照)。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1076
 msgid "@code{window-preserve-size} installs a window parameter (@pxref{Window Parameters}) called @code{preserved-size} which is consulted by the window resizing functions.  This parameter will not prevent resizing the window when the window shows another buffer than the one when @code{window-preserve-size} was invoked or if its size has changed since then."
-msgstr ""
+msgstr "@code{window-preserve-size}はウィンドウリサイズ関数に参照される、@code{preserved-size}と呼ばれるウィンドウパラメーター(@ref{Window Parameters}を参照)をインストールする。ウィンドウが@code{window-preserve-size}呼び出し時に表示していたバッファーと異なるバッファーを表示していたり、呼び出し後にサイズが変更されていたら、このパラメーターはウィンドウのリサイズを妨げない。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1079
-#, fuzzy
-#| msgid "The following two functions can be used to return the total size of a window in units of pixels."
 msgid "The following function can be used to check whether the height of a particular window is preserved:"
-msgstr "以下の2つの関数は、ウィンドウのトータルサイズをピクセル単位でリターンさせるために使用できます。"
+msgstr "以下の関数は特定のウィンドウの高さが予約済みかどうかチェックするために使用できます:"
 
 #. type: defun
 #: original_texis/windows.texi:1080
-#, fuzzy, no-wrap
-#| msgid "window-combined-p &optional window horizontal"
+#, no-wrap
 msgid "window-preserved-size &optional window horizontal"
-msgstr "window-combined-p &optional window horizontal"
+msgstr "window-preserved-size &optional window horizontal"
 
 #. type: defun
 #: original_texis/windows.texi:1086
-#, fuzzy
-#| msgid "This function returns the minimum size of @var{window}.  @var{window} must be a valid window and defaults to the selected one.  The optional argument @var{horizontal} non-@code{nil} means to return the minimum number of columns of @var{window}; otherwise return the minimum number of @var{window}'s lines."
 msgid "This function returns the preserved height of window @var{window} in pixels.  @var{window} must be a live window and defaults to the selected one.  If the optional argument @var{horizontal} is non-@code{nil}, it returns the preserved width of @var{window}.  It returns @code{nil} if the size of @var{window} is not preserved."
-msgstr "この関数は、@var{window}の最小のサイズをリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウ。オプション引数@var{horizontal}が非@code{nil}の場合は、@var{window}の最小の列数、それ以外は@var{window}の最小の行数をリターンすることを意味する。"
+msgstr "この関数はウィンドウ@var{window}の予約済み高さをピクセル単位でリターンする。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。オプション引数@var{horizontal}が非@code{nil}なら@var{window}の予約済み幅をリターンする。@var{window}のサイズが予約されていなければ@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/windows.texi:1091
@@ -1912,7 +1833,7 @@ msgstr "window splitting"
 #. type: Plain text
 #: original_texis/windows.texi:1096
 msgid "This section describes functions for creating a new window by @dfn{splitting} an existing one."
-msgstr "このセクションでは、既存のウィンドウを@dfn{分割(split: スプリット}することにより、新たにウィンドウを作成する関数について説明します。"
+msgstr "このセクションでは既存のウィンドウを@dfn{分割(split: スプリット}することによって新たにウィンドウを作成する関数について説明します。"
 
 #. type: defun
 #: original_texis/windows.texi:1097
@@ -1922,57 +1843,53 @@ msgstr "split-window &optional window size side pixelwise"
 
 #. type: defun
 #: original_texis/windows.texi:1102
-#, fuzzy
-#| msgid "This function creates a new live window next to the window @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  That window is ``split'', and reduced in size.  The space is taken up by the new window, which is returned."
 msgid "This function creates a new live window next to the window @var{window}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  That window is split, and reduced in size.  The space is taken up by the new window, which is returned."
-msgstr "この関数は、ウィンドウ@var{window}の隣に、新たに生きたウィンドウを作成する。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。そのウィンドウは``分割(split)''されて、サイズは縮小される。そのスペースは、リターンされる新たなウィンドウにより吸収される。"
+msgstr "この関数はウィンドウ@var{window}の隣に生きたウィンドウを新たに作成する。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。そのウィンドウは分割(split)されてサイズは縮小される。そのスペースはリターンされる新たなウィンドウによって吸収される。"
 
 #. type: defun
 #: original_texis/windows.texi:1110
 msgid "The optional second argument @var{size} determines the sizes of @var{window} and/or the new window.  If it is omitted or @code{nil}, both windows are given equal sizes; if there is an odd line, it is allocated to the new window.  If @var{size} is a positive number, @var{window} is given @var{size} lines (or columns, depending on the value of @var{side}).  If @var{size} is a negative number, the new window is given @minus{}@var{size} lines (or columns)."
-msgstr "オプションの第2引数@var{size}は、@var{window}および/または新たなウィンドウのサイズを決定する。これが省略または@code{nil}の場合は、両方のウィンドウに同じサイズが割り当てられる。行数が奇数の場合、余りの1行は新たなウィンドウに割り当てられる。@var{size}が正の数値の場合、@var{window}に@var{size}の行数(@var{side}の値によっては列数)が与えられる。@var{size}が負の数値の場合、新たなウィンドウに@minus{}@var{size}の行数(または列数)が与えられる。"
+msgstr "オプションの第2引数@var{size}は、@var{window}および/または新たなウィンドウのサイズを決定する。これが省略または@code{nil}なら、両方のウィンドウに同じサイズが割り当てられる。行数が奇数なら、余りの1行は新たなウィンドウに割り当てられる。@var{size}が正の数値なら、@var{window}に@var{size}の行数(@var{side}の値によっては列数)が与えられる。@var{size}が負の数値なら、新たなウィンドウに@minus{}@var{size}の行数(または列数)が与えられる。"
 
 #. type: defun
 #: original_texis/windows.texi:1119
 msgid "If @var{size} is @code{nil}, this function obeys the variables @code{window-min-height} and @code{window-min-width} (@pxref{Window Sizes}).  Thus, it signals an error if splitting would result in making a window smaller than those variables specify.  However, a non-@code{nil} value for @var{size} causes those variables to be ignored; in that case, the smallest allowable window is considered to be one that has space for a text area one line tall and/or two columns wide."
-msgstr "@var{size}が@code{nil}の場合、この関数は変数@code{window-min-height}と@code{window-min-width}にしたがう(@ref{Window Sizes}を参照)。つまり、分割によりこれらの変数の指定より小さいウィンドウが作成されるようなときは、エラーをシグナルする。しかし、@var{size}にたいして非@code{nil}値を指定すれば、これらの変数は無視される。その場合、許容される最小のウィンドウは、テキストエリアの高さが1行、および/または幅が2列のウィンドウであるとされる。"
+msgstr "@var{size}が@code{nil}なら、この関数は変数@code{window-min-height}と@code{window-min-width}にしたがう(@ref{Window Sizes}を参照)。つまり分割によりこれらの変数の指定より小さいウィンドウが作成されるようならエラーをシグナルする。しかし@var{size}にたいして非@code{nil}値を指定すると、これらの変数は無視される。その場合には許容される最小のウィンドウはテキストエリアの高さが1行、および/または幅が2列のウィンドウとみなされる。"
 
 #. type: defun
 #: original_texis/windows.texi:1130
-#, fuzzy
-#| msgid "Hence, if @var{size} is specified, it's the caller's responsibility to check whether the emanating windows are large enough to encompass all areas like a mode line or a scroll bar.  The function @code{window-min-size} (@pxref{Window Sizes}) can be used to determine the minimum requirements of @var{window} in this regard.  Since the new window usually ``inherits'' areas like the mode line or the scroll bar from @var{window}, that function is also a good guess for the minimum size of the new window.  The caller should specify a smaller size only if it correspondingly removes an inherited area before the next redisplay."
 msgid "Hence, if @var{size} is specified, it's the caller's responsibility to check whether the emanating windows are large enough to encompass all areas like a mode line or a scroll bar.  The function @code{window-min-size} (@pxref{Window Sizes}) can be used to determine the minimum requirements of @var{window} in this regard.  Since the new window usually inherits areas like the mode line or the scroll bar from @var{window}, that function is also a good guess for the minimum size of the new window.  The caller should specify a smaller size only if it correspondingly removes an inherited area before the next redisplay."
-msgstr "したがって、@var{size}が指定された場合、生成されるウィンドウがモードラインやスクロールバー等すべてのエリアを含むのに十分な大きさがあるかどうかチェックするのは、呼び出し側の責任である。これに関して、必要最小限の@var{window}を決定するために、関数@code{window-min-size}(@ref{Window Sizes}を参照)を使用できる。新たなウィンドウは通常、モードラインやスクロールバー等のエリアを@var{window}から``継承''するので、この関数は新たなウィンドウの最小サイズも良好に推定する。呼び出し側は、次回の再表示前にこれに応じて継承されたエリアを削除する場合のみ、より小さなサイズを指定すること。"
+msgstr "したがって@var{size}が指定された場合には、生成されるウィンドウがモードラインやスクロールバー等すべてのエリアを含むのに十分な大きさがあるかどうかチェックするのは呼び出し側の責任である。これに関して必要最小限の@var{window}を決定するために関数@code{window-min-size} (@ref{Window Sizes}を参照)を使用できる。新たなウィンドウは通常はモードラインやスクロールバー等のエリアを@var{window}から継承するので、この関数は新たなウィンドウの最小サイズも良好に推定する。呼び出し側は、次回の再表示前にこれに応じて継承されたエリアを削除する場合のみ、より小さなサイズを指定すること。"
 
 #. type: defun
 #: original_texis/windows.texi:1136
 msgid "The optional third argument @var{side} determines the position of the new window relative to @var{window}.  If it is @code{nil} or @code{below}, the new window is placed below @var{window}.  If it is @code{above}, the new window is placed above @var{window}.  In both these cases, @var{size} specifies a total window height, in lines."
-msgstr "オプションの第3引数@var{side}は、新たなウィンドウの位置を@var{window}から相対的に指定する。@code{nil}または@code{below}の場合、新たなウィンドウは@var{window}の下に、@code{above}の場合は@var{window}の上に配される。どちらの場合も、@var{size}はウィンドウのトータル高さを行数で指定する。"
+msgstr "オプションの第3引数@var{side}は新たなウィンドウの位置を@var{window}から相対的に指定する。@code{nil}または@code{below}なら新たなウィンドウは@var{window}の下、@code{above}なら@var{window}の上に配置される。どちらの場合でも@var{size}はウィンドウのトータル高さを行数で指定する。"
 
 #. type: defun
 #: original_texis/windows.texi:1141
 msgid "If @var{side} is @code{t} or @code{right}, the new window is placed on the right of @var{window}.  If @var{side} is @code{left}, the new window is placed on the left of @var{window}.  In both these cases, @var{size} specifies a total window width, in columns."
-msgstr "@var{side}が@code{t}または@code{right}の場合、新たなウィンドウは@var{window}の右に、@var{side}が@code{left}の場合は@var{window}の左に配される。どちらの場合も、@var{size}はウィンドウのトータル幅を列数で指定する。"
+msgstr "@var{side}が@code{t}か@code{right}なら新たなウィンドウは@var{window}の右、@var{side}が@code{left}なら@var{window}の左に配置される。どちらの場合でも@var{size}はウィンドウのトータル幅を列数で指定する。"
 
 #. type: defun
 #: original_texis/windows.texi:1145
 msgid "The optional fourth argument @var{pixelwise}, if non-@code{nil}, means to interpret @var{size} in units of pixels, instead of lines and columns."
-msgstr "オプションの第4引数@var{pixelwise}が非@code{nil}の場合は、@var{size}を行や列ではなくピクセル単位で解釈することを意味する。"
+msgstr "オプションの第4引数@var{pixelwise}が非@code{nil}なら、@var{size}を行や列ではなくピクセル単位で解釈することを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:1150
 msgid "If @var{window} is a live window, the new window inherits various properties from it, including margins and scroll bars.  If @var{window} is an internal window, the new window inherits the properties of the window selected within @var{window}'s frame."
-msgstr "@var{window}が生きたウィンドウの場合、新たなウィンドウはマージンやスクロールバーを含む、さまざまなプロパティを継承する。@var{window}が内部ウィンドウ(internal window)の場合、新たなウィンドウは@var{window}のフレームのプロパティを継承する。"
+msgstr "@var{window}が生きたウィンドウの場合には、新たなウィンドウはマージンやスクロールバーを含むさまざまなプロパティを継承する。@var{window}が内部ウィンドウ(internal window)の場合には、新たなウィンドウは@var{window}のフレームのプロパティを継承する。"
 
 #. type: defun
 #: original_texis/windows.texi:1161
 msgid "The behavior of this function may be altered by the window parameters of @var{window}, so long as the variable @code{ignore-window-parameters} is @code{nil}.  If the value of the @code{split-window} window parameter is @code{t}, this function ignores all other window parameters.  Otherwise, if the value of the @code{split-window} window parameter is a function, that function is called with the arguments @var{window}, @var{size}, and @var{side}, in lieu of the usual action of @code{split-window}.  Otherwise, this function obeys the @code{window-atom} or @code{window-side} window parameter, if any.  @xref{Window Parameters}."
-msgstr "変数@code{ignore-window-parameters}が@code{nil}の場合に限り、この関数の挙動は@var{window}なパラメーターにより変更されるかもしれない。ウィンドウパラメーター@code{split-window}の値が@code{t}の場合、この関数はその他すべてのウィンドウパラメーターを無視する。それ以外では、ウィンドウパラメーター@code{split-window}の値が関数の場合は、@code{split-window}の通常アクションのかわりに、引数@var{window}、@var{size}、@var{side}でその関数が呼び出される。値が関数以外の場合、この関数は(もしあれば)ウィンドウパラメーター@code{window-atom}または@code{window-side}にしたがう。@ref{Window Parameters}を参照のこと。"
+msgstr "変数@code{ignore-window-parameters}が@code{nil}の場合に限り、この関数の挙動は@var{window}なパラメーターにより変更されるかもしれない。ウィンドウパラメーター@code{split-window}の値が@code{t}なら、この関数はその他すべてのウィンドウパラメーターを無視する。それ以外ではウィンドウパラメーター@code{split-window}の値が関数の場合には、@code{split-window}の通常アクションのかわりに引数@var{window}、@var{size}、@var{side}でその関数が呼び出される。値が関数以外なら、この関数は(もしあれば)ウィンドウパラメーター@code{window-atom}または@code{window-side}にしたがう。@ref{Window Parameters}を参照のこと。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1169
 msgid "As an example, here is a sequence of @code{split-window} calls that yields the window configuration discussed in @ref{Windows and Frames}.  This example demonstrates splitting a live window as well as splitting an internal window.  We begin with a frame containing a single window (a live root window), which we denote by @var{W4}.  Calling @code{(split-window W4)} yields this window configuration:"
-msgstr "例として、@ref{Windows and Frames}で議論したウィンドウ構成(window configuration)を得るための、一連の@code{split-window}呼び出しを以下に挙げます。この例では、生きたウィンドウの分割と、内部ウィンドウの分割も示します。最初は@var{W4}で表される、単一のウィンドウ(生きたルートウィンドウ)を含むフレームから開始します。@code{(split-window W4)}を呼び出すことにより、以下のウィンドウ構成が得られます。"
+msgstr "例として@ref{Windows and Frames}で議論したウィンドウ構成(window configuration)を得るための、一連の@code{split-window}呼び出しを以下に示します。この例では生きたウィンドウの分割と、内部ウィンドウの分割も示しています。最初は@var{W4}で表される単一のウィンドウ(生きたルートウィンドウ)を含むフレームから開始します。@code{(split-window W4)}を呼び出すことにより以下のウィンドウ構成が得られます。"
 
 #. type: group
 #: original_texis/windows.texi:1184
@@ -2009,12 +1926,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1193
 msgid "The @code{split-window} call has created a new live window, denoted by @var{W5}.  It has also created a new internal window, denoted by @var{W3}, which becomes the root window and the parent of both @var{W4} and @var{W5}."
-msgstr "@code{split-window}呼び出しにより、@var{W5}で示す生きたウィンドウが新たに作成されました。@var{W3}で示される内部ウィンドウも新たに作成され、これはルートウィンドウかつ@var{W4}と@var{W5}の親ウィンドウになります。"
+msgstr "@code{split-window}呼び出しにより@var{W5}で示す生きたウィンドウが新たに作成されました。@var{W3}で示される内部ウィンドウも新たに作成され、これはルートウィンドウかつ@var{W4}と@var{W5}の親ウィンドウになります。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1196
 msgid "Next, we call @code{(split-window W3 nil 'left)}, passing the internal window @var{W3} as the argument.  The result:"
-msgstr "次は、引数として内部ウィンドウ@var{W3}を渡して、@code{(split-window W3 nil 'left)}を呼び出します。"
+msgstr "次は引数として内部ウィンドウ@var{W3}を渡して@code{(split-window W3 nil 'left)}を呼び出します。"
 
 #. type: group
 #: original_texis/windows.texi:1212
@@ -2051,12 +1968,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1219
 msgid "A new live window @var{W2} is created, to the left of the internal window @var{W3}.  A new internal window @var{W1} is created, becoming the new root window."
-msgstr "内部ウィンドウ@var{W3}の左に、生きたウィンドウ@var{W2}が新たに作成されました。そして、内部ウィンドウ@var{W1}が新たに作成され、これが新たにルートウィンドウになります。"
+msgstr "内部ウィンドウ@var{W3}の左に生きたウィンドウ@var{W2}が新たに作成されました。そして内部ウィンドウ@var{W1}が新たに作成され、これが新たにルートウィンドウになります。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1222
 msgid "For interactive use, Emacs provides two commands which always split the selected window.  These call @code{split-window} internally."
-msgstr "インタラクティブな使用にたいして、Emacsは選択されたウィンドウを常に分割するコマンドを2つ提供します。これらは内部で@code{split-window}を呼び出します。"
+msgstr "インタラクティブな使用にたいして、Emacsは選択されたウィンドウを常に分割するコマンドを2つ提供します。これらは内部で@code{split-window}を呼び出しています。"
 
 #. type: deffn
 #: original_texis/windows.texi:1223
@@ -2067,7 +1984,7 @@ msgstr "Command split-window-right &optional size"
 #. type: deffn
 #: original_texis/windows.texi:1228
 msgid "This function splits the selected window into two side-by-side windows, putting the selected window on the left.  If @var{size} is positive, the left window gets @var{size} columns; if @var{size} is negative, the right window gets @minus{}@var{size} columns."
-msgstr "この関数は、選択されたウィンドウが左となるような、横並びの2つのウィンドウに分割する。@var{size}が正ならば左のウィンドウが@var{size}列、負ならば右のウィンドウが@minus{}@var{size}列を与えられる。"
+msgstr "この関数は選択されたウィンドウが左となるように、横並びの2つのウィンドウに分割する。@var{size}が正ならば左のウィンドウが@var{size}列、負ならば右のウィンドウが@minus{}@var{size}列を与えられる。"
 
 #. type: deffn
 #: original_texis/windows.texi:1230
@@ -2078,7 +1995,7 @@ msgstr "Command split-window-below &optional size"
 #. type: deffn
 #: original_texis/windows.texi:1235
 msgid "This function splits the selected window into two windows, one above the other, leaving the upper window selected.  If @var{size} is positive, the upper window gets @var{size} lines; if @var{size} is negative, the lower window gets @minus{}@var{size} lines."
-msgstr "この関数は、選択されたウィンドウが上となるような、縦並びの2つのウィンドウに分割する。@var{size}が正ならば上のウィンドウが@var{size}行、負ならば下のウィンドウが@minus{}@var{size}行を与えられる。"
+msgstr "この関数は選択されたウィンドウが上となるような、縦並びの2つのウィンドウに分割する。@var{size}が正ならば上のウィンドウが@var{size}行、負ならば下のウィンドウが@minus{}@var{size}行を与えられる。"
 
 #. type: defopt
 #: original_texis/windows.texi:1237
@@ -2089,12 +2006,12 @@ msgstr "split-window-keep-point"
 #. type: defopt
 #: original_texis/windows.texi:1240
 msgid "If the value of this variable is non-@code{nil} (the default), @code{split-window-below} behaves as described above."
-msgstr "この変数の値が非@code{nil}(デフォルト)なら、 @code{split-window-below}は上述のように振る舞う。"
+msgstr "この変数の値が非@code{nil} (デフォルト)なら@code{split-window-below}は上述のように振る舞う。"
 
 #. type: defopt
 #: original_texis/windows.texi:1247
 msgid "If it is @code{nil}, @code{split-window-below} adjusts point in each of the two windows to minimize redisplay.  (This is useful on slow terminals.)  It selects whichever window contains the screen line that point was previously on.  Note that this only affects @code{split-window-below}, not the lower-level @code{split-window} function."
-msgstr "@code{nil}の場合、@code{split-window-below}は再表示が最小となるように、2つのウィンドウの各ポイントを調節する(これは低速な端末で有用である)。これは何であれ、以前ポイントがあったスクリーン行(screen line)を含むウィンドウを選択する。これは低レベル@code{split-window}関数ではなく、@code{split-window-below}だけに影響することに注意。"
+msgstr "@code{nil}なら@code{split-window-below}は再表示が最小となるように、2つのウィンドウの各ポイントを調節する(これは低速な端末で有用)。これは何であれ、以前ポイントがあったスクリーン行(screen line)を含むウィンドウを選択する。これは低レベル@code{split-window}関数ではなく@code{split-window-below}だけに影響することに注意。"
 
 #. type: cindex
 #: original_texis/windows.texi:1252
@@ -2105,12 +2022,12 @@ msgstr "deleting windows"
 #. type: Plain text
 #: original_texis/windows.texi:1257
 msgid "@dfn{Deleting} a window removes it from the frame's window tree.  If the window is a live window, it disappears from the screen.  If the window is an internal window, its child windows are deleted too."
-msgstr "ウィンドウを@dfn{削除(delete)}することにより、フレームのウィンドウツリーからウィンドウが取り除かれます。それが生きたウィンドウの場合は、スクリーンに表示されなくなります。内部ウィンドウの場合は、その子ウィンドウも削除されます。"
+msgstr "ウィンドウを@dfn{削除(delete)}することにより、フレームのウィンドウツリーからウィンドウが取り除かれます。それが生きたウィンドウならスクリーンに表示されなくなります。内部ウィンドウならその子ウィンドウも削除されます。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1262
 msgid "Even after a window is deleted, it continues to exist as a Lisp object, until there are no more references to it.  Window deletion can be reversed, by restoring a saved window configuration (@pxref{Window Configurations})."
-msgstr "ウィンドウを削除した後でも、それへの参照が残っている限り、Lispオブジェクトとして存在し続けます。ウィンドウ構成(window configuration)をリストアすることにより、ウィンドウの削除は取り消すことができます(@ref{Window Configurations}を参照)。"
+msgstr "ウィンドウを削除した後であっても、それへの参照が残っている限りはLispオブジェクトとして存在し続けます。ウィンドウ構成(window configuration)をリストアすることにより、ウィンドウの削除は取り消すことができます(@ref{Window Configurations}を参照)。"
 
 #. type: deffn
 #: original_texis/windows.texi:1263
@@ -2121,19 +2038,17 @@ msgstr "Command delete-window &optional window"
 #. type: deffn
 #: original_texis/windows.texi:1269
 msgid "This function removes @var{window} from display and returns @code{nil}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  If deleting the window would leave no more windows in the window tree (e.g., if it is the only live window in the frame), an error is signaled."
-msgstr "この関数は、表示から@var{window}を削除して、@code{nil}をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。そのウィンドウを削除するとウィンドウツリーにウィンドウが存在しなくなるような場合(それがフレーム内で唯一の生きたウィンドウである場合等)は、エラーをシグナルする。"
+msgstr "この関数は表示から@var{window}を削除して@code{nil}をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。そのウィンドウを削除するとウィンドウツリーにウィンドウが存在しなくなるような場合(それがフレーム内で唯一の生きたウィンドウである場合等)はエラーをシグナルする。"
 
 #. type: deffn
 #: original_texis/windows.texi:1275
-#, fuzzy
-#| msgid "By default, the space taken up by @var{window} is given to one of its adjacent sibling windows, if any.  However, if the variable @code{window-combination-resize} is non-@code{nil}, the space is proportionally distributed among any remaining windows in the window combination.  @xref{Recombining Windows}."
 msgid "By default, the space taken up by @var{window} is given to one of its adjacent sibling windows, if any.  However, if the variable @code{window-combination-resize} is non-@code{nil}, the space is proportionally distributed among any remaining windows in the same window combination.  @xref{Recombining Windows}."
-msgstr "デフォルトでは、@var{window}が占めていたスペースは、(もしあれば)隣接する兄弟ウィンドウのうちの1つに与えられる。しかし、変数@code{window-combination-resize}が非@code{nil}の場合、そのスペースはウィンドウコンビネーション内の残りのすべてのウィンドウに比例的に分配される。@xref{Recombining Windows}を参照のこと。"
+msgstr "デフォルトでは@var{window}が占めていたスペースは、(もしあれば)隣接する兄弟ウィンドウのうちの1つに与えられる。しかし変数@code{window-combination-resize}が非@code{nil}なら、そのスペースは同一ウィンドウコンビネーション内の残りのすべてのウィンドウに比例的に分配される。@xref{Recombining Windows}を参照のこと。"
 
 #. type: deffn
 #: original_texis/windows.texi:1286
 msgid "The behavior of this function may be altered by the window parameters of @var{window}, so long as the variable @code{ignore-window-parameters} is @code{nil}.  If the value of the @code{delete-window} window parameter is @code{t}, this function ignores all other window parameters.  Otherwise, if the value of the @code{delete-window} window parameter is a function, that function is called with the argument @var{window}, in lieu of the usual action of @code{delete-window}.  Otherwise, this function obeys the @code{window-atom} or @code{window-side} window parameter, if any.  @xref{Window Parameters}."
-msgstr "変数@code{ignore-window-parameters}が@code{nil}の場合に限り、この関数の振る舞いは@var{window}のウィンドウパラメーターにより変更される可能性がある。ウィンドウパラメーター@code{delete-window}の値が@code{t}の場合、この関数はその他すべてのウィンドウパラメーターを無視する。ウィンドウパラメーター@code{delete-window}が関数の場合は、通常の@code{delete-window}のかわりに、引数@var{window}でその関数が呼び出される。それ以外では、この関数は(もしあれば)ウィンドウパラメーター@code{window-atom}または@code{window-side}にしたがう。@ref{Window Parameters}を参照のこと。"
+msgstr "変数@code{ignore-window-parameters}が@code{nil}の場合に限り、この関数の振る舞いは@var{window}のウィンドウパラメーターにより変更される可能性がある。ウィンドウパラメーター@code{delete-window}の値が@code{t}なら、この関数はその他すべてのウィンドウパラメーターを無視する。ウィンドウパラメーター@code{delete-window}が関数なら、通常の@code{delete-window}のかわりに引数@var{window}でその関数が呼び出される。それ以外では、この関数は(もしあれば)ウィンドウパラメーター@code{window-atom}または@code{window-side}にしたがう。@ref{Window Parameters}を参照のこと。"
 
 #. type: deffn
 #: original_texis/windows.texi:1288
@@ -2144,12 +2059,12 @@ msgstr "Command delete-other-windows &optional window"
 #. type: deffn
 #: original_texis/windows.texi:1292
 msgid "This function makes @var{window} fill its frame, by deleting other windows as necessary.  If @var{window} is omitted or @code{nil}, it defaults to the selected window.  The return value is @code{nil}."
-msgstr "この関数は、必要に応じて他のウィンドウを削除することにより、@var{window}でフレームを充填する。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。リターン値は@code{nil}。"
+msgstr "この関数は必要に応じて他のウィンドウを削除することにより@var{window}でフレームを充填する。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/windows.texi:1303
 msgid "The behavior of this function may be altered by the window parameters of @var{window}, so long as the variable @code{ignore-window-parameters} is @code{nil}.  If the value of the @code{delete-other-windows} window parameter is @code{t}, this function ignores all other window parameters.  Otherwise, if the value of the @code{delete-other-windows} window parameter is a function, that function is called with the argument @var{window}, in lieu of the usual action of @code{delete-other-windows}.  Otherwise, this function obeys the @code{window-atom} or @code{window-side} window parameter, if any.  @xref{Window Parameters}."
-msgstr "変数@code{ignore-window-parameters}が@code{nil}の場合に限り、この関数の振る舞いは変更される可能性がある。ウィンドウパラメーター@code{delete-other-windows}の値が@code{t}の場合、この関数は他のすべてのウィンドウパラメーターを無視する。ウィンドウパラメーター@code{delete-other-windows}の値が関数の場合は、@code{delete-other-windows}の通常の動作のかわりに、引数@var{window}でその関数が呼び出される。それ以外では、この関数は(もしあれば)ウィンドウパラメーター@code{window-atom}または@code{window-side}にしたがう。@ref{Window Parameters}を参照のこと。"
+msgstr "変数@code{ignore-window-parameters}が@code{nil}の場合に限り、この関数の振る舞いは変更される可能性がある。ウィンドウパラメーター@code{delete-other-windows}の値が@code{t}なら、この関数は他のすべてのウィンドウパラメーターを無視する。ウィンドウパラメーター@code{delete-other-windows}の値が関数なら、@code{delete-other-windows}の通常の動作のかわりに引数@var{window}でその関数が呼び出される。それ以外では、この関数は(もしあれば)ウィンドウパラメーター@code{window-atom}または@code{window-side}にしたがう。@ref{Window Parameters}を参照のこと。"
 
 #. type: deffn
 #: original_texis/windows.texi:1305
@@ -2160,17 +2075,17 @@ msgstr "Command delete-windows-on &optional buffer-or-name frame"
 #. type: deffn
 #: original_texis/windows.texi:1312
 msgid "This function deletes all windows showing @var{buffer-or-name}, by calling @code{delete-window} on those windows.  @var{buffer-or-name} should be a buffer, or the name of a buffer; if omitted or @code{nil}, it defaults to the current buffer.  If there are no windows showing the specified buffer, this function does nothing.  If the specified buffer is a minibuffer, an error is signaled."
-msgstr "この関数は、@var{buffer-or-name}を表示しているすべてのウィンドウにたいして@code{delete-window}を呼び出すことにより、それらを削除する。@var{buffer-or-name}はバッファー、またはバッファー名であること。省略または@code{nil}の場合のデフォルトはカレントバッファーである。指定されたバッファーを表示するウィンドウが存在しない場合、この関数は何も行わない。ミニバッファーが指定された場合は、エラーをシグナルする。"
+msgstr "この関数は@var{buffer-or-name}を表示しているすべてのウィンドウにたいして@code{delete-window}を呼び出すことによってそれらを削除する。@var{buffer-or-name}はバッファー、またはバッファー名であること。省略または@code{nil}の場合のデフォルトはカレントバッファー。指定されたバッファーを表示するウィンドウが存在しなければ、この関数は何も行わない。ミニバッファーが指定されるとエラーをシグナルする。"
 
 #. type: deffn
 #: original_texis/windows.texi:1316
 msgid "If there is a dedicated window showing the buffer, and that window is the only one on its frame, this function also deletes that frame if it is not the only frame on the terminal."
-msgstr "そのバッファーの表示に専用(dedicated)のウィンドウがあり、フレーム上でそれが唯一のウィンドウの場合、それが端末上で唯一のフレームでなければ、この関数はそのフレームも削除する。"
+msgstr "そのバッファーの表示に専用(dedicated)のウィンドウがあり、フレーム上でそれが唯一のウィンドウの場合には、それが端末上で唯一のフレームでなければこの関数はそのフレームも削除する。"
 
 #. type: deffn
 #: original_texis/windows.texi:1319
 msgid "The optional argument @var{frame} specifies which frames to operate on:"
-msgstr "オプション引数@var{frame}は、操作を行うフレームがどれかを指定する:"
+msgstr "オプション引数@var{frame}は操作を行うフレームがどれかを指定する:"
 
 #. type: code{#1}
 #: original_texis/windows.texi:1321 original_texis/windows.texi:1493
@@ -2235,7 +2150,7 @@ msgstr "そのフレームを処理することを意味する。"
 #. type: deffn
 #: original_texis/windows.texi:1337
 msgid "Note that this argument does not have the same meaning as in other functions which scan all live windows (@pxref{Cyclic Window Ordering}).  Specifically, the meanings of @code{t} and @code{nil} here are the opposite of what they are in those other functions."
-msgstr "この引数の意味は、すべての生きたウィンドウを走査する他の関数(@ref{Cyclic Window Ordering}を参照)における場合とは異なることに注意。特に、ここでの@code{t}と@code{nil}のもつ意味は、これら他の関数の場合とは逆である。"
+msgstr "この引数の意味は、すべての生きたウィンドウを走査する他の関数(@ref{Cyclic Window Ordering}を参照)の場合とは異なることに注意。特にここでの@code{t}と@code{nil}のもつ意味は、これら他の関数の場合とは逆になる。"
 
 #. type: cindex
 #: original_texis/windows.texi:1342
@@ -2252,7 +2167,7 @@ msgstr "windows, recombining"
 #. type: Plain text
 #: original_texis/windows.texi:1351
 msgid "When deleting the last sibling of a window @var{W}, its parent window is deleted too, with @var{W} replacing it in the window tree.  This means that @var{W} must be recombined with its parent's siblings to form a new window combination (@pxref{Windows and Frames}).  In some occasions, deleting a live window may even entail the deletion of two internal windows."
-msgstr "ウィンドウ@var{W}の最後の兄弟を削除したときは、ウィンドウツリー内の親ウィンドウを@var{W}を置き換えることにより、その親ウィンドウも削除されます。これは、新たなウィンドウコンビネーションを形成するために、@var{W}がその親の兄弟たちと再結合されなければならないことを意味します。生きたウィンドウを削除することにより、必然的に2つの内部ウィンドウが削除されるかもしれない場合もあります。"
+msgstr "ウィンドウ@var{W}の最後の兄弟を削除したときは、ウィンドウツリー内の親ウィンドウを@var{W}を置き換えることにより、その親ウィンドウも削除されます。これは新たなウィンドウコンビネーションを形成するために、@var{W}がその親の兄弟たちと再結合されなければならないことを意味します。生きたウィンドウを削除することにより、必然的に2つの内部ウィンドウが削除されるかもしれない場合もあります。"
 
 #. type: group
 #: original_texis/windows.texi:1367
@@ -2291,17 +2206,17 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1376
 msgid "Deleting @var{W5} in this configuration normally causes the deletion of @var{W3} and @var{W4}.  The remaining live windows @var{W2}, @var{W6} and @var{W7} are recombined to form a new horizontal combination with parent @var{W1}."
-msgstr "この構成における@var{W5}の削除は、通常は@var{W3}と@var{W4}の削除を引き起こします。残りの生きたウィンドウ@var{W2}、@var{W6}、@var{W7}は親を@var{W7}とする水平コンビネーションを形成するために再結合されます。"
+msgstr "この構成における@var{W5}の削除は、通常は@var{W3}と@var{W4}の削除を誘発します。残りの生きたウィンドウ@var{W2}、@var{W6}、@var{W7}は親を@var{W7}とする水平コンビネーションを形成するために再結合されます。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1383
 msgid "Sometimes, however, it makes sense to not delete a parent window like @var{W4}.  In particular, a parent window should not be removed when it was used to preserve a combination embedded in a combination of the same type.  Such embeddings make sense to assure that when you split a window and subsequently delete the new window, Emacs reestablishes the layout of the associated frame as it existed before the splitting."
-msgstr "しかし、ときには@var{W4}のような親ウィンドウを削除しないほうが合理的な場合もあります。特に、親ウィンドウが同じタイプのコンビネーション内に埋め込まれるコンビネーションを保護するために使用されるときは、それを削除するべきではありません。そのような埋め込みは、あるウィンドウを分割した後に続けて新たなウィンドウを削除する際、Emacsが関連するフレームで分割前にあったレイアウトを確実に再確立するために意味があります。"
+msgstr "しかし、ときには@var{W4}のような親ウィンドウを削除しないほうが合理的な場合もあります。特に親ウィンドウが同じタイプのコンビネーション内に埋め込まれるコンビネーションを保護するために使用されるときは、それを削除するべきではありません。そのような埋め込みは、あるウィンドウを分割した後に続けて新たなウィンドウを削除する際、Emacsが関連するフレームで分割前にあったレイアウトを確実に再構築するために意味があります。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1386
 msgid "Consider a scenario starting with two live windows @var{W2} and @var{W3} and their parent @var{W1}."
-msgstr "親が@var{W1}であるような2つの生きたウィンドウ@var{W2}と@var{W3}を開始点とするシナリオを考えてみましょう。"
+msgstr "親が@var{W1}であるような2つの生きたウィンドウ@var{W2}と@var{W3}を出発点とするシナリオを考えてみましょう。"
 
 #. type: group
 #: original_texis/windows.texi:1403
@@ -2342,7 +2257,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1409
 msgid "Split @var{W2} to make a new window @var{W4} as follows."
-msgstr "@var{W2}を分割すると、以下のようにウィンドウ@var{W4}が新たに作成されます。"
+msgstr "@var{W2}を分割すると以下のようにウィンドウ@var{W4}が新たに作成されます。"
 
 #. type: group
 #: original_texis/windows.texi:1426
@@ -2383,7 +2298,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1435
 msgid "Now, when enlarging a window vertically, Emacs tries to obtain the corresponding space from its lower sibling, provided such a window exists.  In our scenario, enlarging @var{W4} will steal space from @var{W3}."
-msgstr "ここでウィンドウを垂直方向に拡大すると、Emacsはもしそのようなウィンドウがあれば、下位の兄弟ウィンドウから対応するスペースを得ようと試みます。このシナリオでふぁ@var{W4}の拡大により、@var{W3}からスペースが奪われます。"
+msgstr "ここでウィンドウを垂直方向に拡大すると、Emacsはもしそのようなウィンドウがあれば下位の兄弟ウィンドウから対応するスペースを得ようと試みます。このシナリオでは@var{W4}の拡大により、@var{W3}からスペースが奪われます。"
 
 #. type: group
 #: original_texis/windows.texi:1452
@@ -2424,7 +2339,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1459
 msgid "Deleting @var{W4} will now give its entire space to @var{W2}, including the space earlier stolen from @var{W3}."
-msgstr "@var{W4}を削除すると、前に@var{W3}から奪ったスペースを含む、スペース全体が@var{W2}に与えられるでしょう。"
+msgstr "@var{W4}を削除すると、前に@var{W3}から奪ったスペースを含むスペース全体が@var{W2}に与えられるでしょう。"
 
 #. type: group
 #: original_texis/windows.texi:1476
@@ -2465,14 +2380,13 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1484
 msgid "This can be counterintuitive, in particular if @var{W4} were used for displaying a buffer only temporarily (@pxref{Temporary Displays}), and you want to continue working with the initial layout."
-msgstr "これは特に@var{W4}が一時的にバッファーを表示するために使用されていて(@ref{Temporary Displays}を参照)、かつ初期のレイアウトで作業を継続したい場合は直感に反するかもしれません。"
+msgstr "これは特に@var{W4}が一時的にバッファーを表示するために使用されていて(@ref{Temporary Displays}を参照)、かつ初期のレイアウトで作業を継続したい場合には直感に反するかもしれません。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1487
 #, fuzzy
-#| msgid "The behavior can be fixed by making a new parent window when splitting @var{W2}.  The variable described next allows to do that."
 msgid "The behavior can be fixed by making a new parent window when splitting @var{W2}.  The variable described next allows that to be done."
-msgstr "この振る舞いは、@var{W2}を分割する際に、新たな親ウィンドウを作成することにより解決できます。"
+msgstr "この振る舞いは@var{W2}を分割する際に新たな親ウィンドウを作成することにより解決できます。"
 
 #. type: defopt
 #: original_texis/windows.texi:1488
@@ -2483,12 +2397,12 @@ msgstr "window-combination-limit"
 #. type: defopt
 #: original_texis/windows.texi:1491
 msgid "This variable controls whether splitting a window shall make a new parent window.  The following values are recognized:"
-msgstr "この変数は、ウィンドウ分割により新たに親ウィンドウを作成させるかどうかを制御する。以下の値が認識される:"
+msgstr "この変数はウィンドウ分割により新たに親ウィンドウを作成させるかどうかを制御する。以下の値が認識される:"
 
 #. type: table
 #: original_texis/windows.texi:1498
 msgid "This means that the new live window is allowed to share the existing parent window, if one exists, provided the split occurs in the same direction as the existing window combination (otherwise, a new internal window is created anyway)."
-msgstr "これは、既存のウィンドウコンビネーションと同じ方向で分割が発生した場合(これ以外の場合は、いずれにせよ内部ウィンドウが新たに作成される)は、既存の親ウィンドウが存在するならば、新たな生きたウィンドウがそれを共有できることを意味する。"
+msgstr "これは既存のウィンドウコンビネーションと同じ方向で分割が発生した場合(これ以外の場合には、いずれにせよ内部ウィンドウが新たに作成される)は、既存の親ウィンドウが存在するなら新たな生きたウィンドウがそれを共有できることを意味する。"
 
 #. type: item
 #: original_texis/windows.texi:1499
@@ -2499,7 +2413,7 @@ msgstr "window-size"
 #. type: table
 #: original_texis/windows.texi:1503
 msgid "In this case @code{display-buffer} makes a new parent window if it is passed a @code{window-height} or @code{window-width} entry in the @var{alist} argument (@pxref{Display Action Functions})."
-msgstr "この場合、@code{display-buffer}は@var{alist}引数内のエントリー@code{window-height}または@code{window-width}に親ウィンドウが渡されるなら、新たに親ウィンドウを作成する(@ref{Display Action Functions}を参照)。"
+msgstr "この場合には、@code{display-buffer}は@var{alist}引数内のエントリー@code{window-height}または@code{window-width}に親ウィンドウが渡されれば、新たに親ウィンドウを作成する(@ref{Display Action Functions}を参照)。"
 
 #. type: item
 #: original_texis/windows.texi:1504
@@ -2510,32 +2424,32 @@ msgstr "temp-buffer"
 #. type: table
 #: original_texis/windows.texi:1507
 msgid "This value causes the creation of a new parent window when a window is split for showing a temporary buffer (@pxref{Temporary Displays}) only."
-msgstr "この値は、一時的なバッファーを表示するウィンドウの分割に際し、新たに親ウィンドウを作成する。"
+msgstr "この値は一時的なバッファーを表示するウィンドウの分割に際し新たに親ウィンドウを作成する。"
 
 #. type: table
 #: original_texis/windows.texi:1511
 msgid "This means that when @code{display-buffer} (@pxref{Choosing Window})  splits a window it always makes a new parent window."
-msgstr "これは、@code{display-buffer}(@ref{Choosing Window}を参照)がウィンドウを分割する際に、常に親ウィンドウを新たに作成することを意味する。"
+msgstr "これは@code{display-buffer} (@ref{Choosing Window}を参照)がウィンドウを分割する際に常に親ウィンドウを新たに作成することを意味する。"
 
 #. type: table
 #: original_texis/windows.texi:1517
 msgid "In this case a new parent window is always created when splitting a window.  Thus, if the value of this variable is at all times @code{t}, then at all times every window tree is a binary tree (a tree where each window except the root window has exactly one sibling)."
-msgstr "この場合は、ウィンドウを分割する際、常に親ウィンドウが新たに作成される。したがって、この変数の値が常に@code{t}の場合は、すべてのウィンドウツリーｍ常に2分木(ルートウィンドウ以外のすべてのウィンドウが正確に1つの兄弟をもつようなツリー)になる。"
+msgstr "この場合にはウィンドウを分割する際、常に親ウィンドウが新たに作成される。したがってこの変数の値が常に@code{t}なら、すべてのウィンドウツリーは常に2分木(ルートウィンドウ以外のすべてのウィンドウが正確に1つの兄弟をもつようなツリー)になる。"
 
 #. type: defopt
 #: original_texis/windows.texi:1520
 msgid "The default is @code{nil}.  Other values are reserved for future use."
-msgstr "デフォルトは@code{nil}で、これら以外の値は将来のために予約済みである。"
+msgstr "デフォルトは@code{nil}で、これら以外の値は将来のために予約済み。"
 
 #. type: defopt
 #: original_texis/windows.texi:1526
 msgid "If, as a consequence of this variable's setting, @code{split-window} makes a new parent window, it also calls @code{set-window-combination-limit} (see below) on the newly-created internal window.  This affects how the window tree is rearranged when the child windows are deleted (see below)."
-msgstr "この返信のセッティングの結果として@code{split-window}が新たに親ウィンドウを作成した場合は、新たに作成された内部ウィンドウにたいして@code{set-window-combination-limit}(以下参照)も呼び出す。これは、子ウィンドウが削除された際の、ウィンドウツリーの再配置に影響する(以下参照)。"
+msgstr "この変数のセッティングの結果として@code{split-window}が新たに親ウィンドウを作成したら、新たに作成された内部ウィンドウにたいして@code{set-window-combination-limit} (以下参照)も呼び出す。これは子ウィンドウが削除された際のウィンドウツリーの再配置に影響する(以下参照)。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1530
 msgid "If @code{window-combination-limit} is @code{t}, splitting @var{W2} in the initial configuration of our scenario would have produced this:"
-msgstr "@code{window-combination-limit}が@code{t}の場合、このシナリオの初期構成では以下のようになるでしょう:"
+msgstr "@code{window-combination-limit}が@code{t}なら、このシナリオの初期構成では以下のようになるでしょう:"
 
 #. type: group
 #: original_texis/windows.texi:1547
@@ -2576,7 +2490,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1558
 msgid "A new internal window @var{W5} has been created; its children are @var{W2} and the new live window @var{W4}.  Now, @var{W2} is the only sibling of @var{W4}, so enlarging @var{W4} will try to shrink @var{W2}, leaving @var{W3} unaffected.  Observe that @var{W5} represents a vertical combination of two windows embedded in the vertical combination @var{W1}."
-msgstr "子として@var{W2}および新たな生きたウィンドウをもつ内部ウィンドウ@var{W5}が新たに作成されます。ここで@var{W2}は@var{W4}の唯一の兄弟なので、@var{W4}を拡大すると@var{W3}は変更せずに、@var{W2}を縮小しようと試みるでしょう。@var{W5}は垂直コンビネーション@var{W1}に埋め込まれた、2つのウィンドウからなる垂直コンビネーションを表すことに注意してください。"
+msgstr "子として@var{W2}と新たな生きたウィンドウをもつ内部ウィンドウ@var{W5}が新たに作成されます。ここで@var{W2}は@var{W4}の唯一の兄弟なので、@var{W4}を拡大すると@var{W3}は変更せずに@var{W2}の縮小を試みるでしょう。@var{W5}は垂直コンビネーション@var{W1}に埋め込まれた2つのウィンドウからなる垂直コンビネーションを表すことに注意してください。"
 
 #. type: cindex
 #: original_texis/windows.texi:1559
@@ -2593,7 +2507,7 @@ msgstr "set-window-combination-limit window limit"
 #. type: defun
 #: original_texis/windows.texi:1568
 msgid "This function sets the @dfn{combination limit} of the window @var{window} to @var{limit}.  This value can be retrieved via the function @code{window-combination-limit}.  See below for its effects; note that it is only meaningful for internal windows.  The @code{split-window} function automatically calls this function, passing it @code{t} as @var{limit}, provided the value of the variable @code{window-combination-limit} is @code{t} when it is called."
-msgstr "この関数は、ウィンドウ@var{window}の@dfn{コンビネーションリミット(combination limit: 結合限界}を@var{limit}にセットする。この値は、関数@code{window-combination-limit}を通じて取得できる。効果については以下を参照のこと。これは内部ウィンドウにたいしてのみ意味をもつことに注意されたい。@code{split-window}は、呼び出された際に変数@code{window-combination-limit}が@code{t}ならば、@code{t}を@var{limit}として、この関数を呼び出す。"
+msgstr "この関数はウィンドウ@var{window}の@dfn{コンビネーションリミット(combination limit: 結合限界)}を@var{limit}にセットする。この値は関数@code{window-combination-limit}を通じて取得できる。効果については以下を参照のこと。これは内部ウィンドウにたいしてのみ意味をもつことに注意。@code{split-window}は呼び出された際に変数@code{window-combination-limit}が@code{t}なら、@code{t}を@var{limit}としてこの関数を呼び出す。"
 
 #. type: defun
 #: original_texis/windows.texi:1570
@@ -2604,24 +2518,22 @@ msgstr "window-combination-limit window"
 #. type: defun
 #: original_texis/windows.texi:1572
 msgid "This function returns the combination limit for @var{window}."
-msgstr "この関数は、@var{window}にたいするコンビネーションリミットをリターンする。"
+msgstr "この関数は@var{window}にたいするコンビネーションリミットをリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:1580
 msgid "The combination limit is meaningful only for an internal window.  If it is @code{nil}, then Emacs is allowed to automatically delete @var{window}, in response to a window deletion, in order to group the child windows of @var{window} with its sibling windows to form a new window combination.  If the combination limit is @code{t}, the child windows of @var{window} are never automatically recombined with its siblings."
-msgstr "コンビネーションリミットは、内部ウィンドウにたいしてのみ意味をもつ。これが@code{nil}の場合は、Emacsはウィンドウ削除に応じて、兄弟同士で新たなウィンドウコンビネーションを形成することにより、@var{window}の子ウィンドウをグループ化するために、@var{window}の自動的な削除を許す。コンビネーションリミットが@code{t}の場合、@var{window}の子ウィンドウは、その兄弟と自動的に再結合されることは決してない。"
+msgstr "コンビネーションリミットは内部ウィンドウにたいしてのみ意味をもつ。これが@code{nil}ならEmacsはウィンドウ削除に応じて、兄弟同士で新たなウィンドウコンビネーションを形成することにより@var{window}の子ウィンドウをグループ化するために、@var{window}の自動的な削除を許す。コンビネーションリミットが@code{t}なら@var{window}の子ウィンドウがその兄弟と自動的に再結合されることは決してない。"
 
 #. type: defun
 #: original_texis/windows.texi:1585
 msgid "If, in the configuration shown at the beginning of this section, the combination limit of @var{W4} (the parent window of @var{W6} and @var{W7}) is @code{t}, deleting @var{W5} will not implicitly delete @var{W4} too."
-msgstr "このセクションの冒頭で示した構成の場合、@var{W4}(@var{W6}と@var{W7}の親ウィンドウ)のコンビネーションリミットは@code{t}なので、@code{t}を削除しても暗黙で@var{W4}も削除されることはない。"
+msgstr "このセクションの冒頭で示した構成の場合は、@var{W4} (@var{W6}と@var{W7}の親ウィンドウ)のコンビネーションリミットは@code{t}なので@code{t}を削除しても暗黙で@var{W4}も削除されることはない。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1591
-#, fuzzy
-#| msgid "Alternatively, the problems sketched above can be avoided by always resizing all windows in the same combination whenever one of its windows is split or deleted.  This also permits to split windows that would be otherwise too small for such an operation."
 msgid "Alternatively, the problems sketched above can be avoided by always resizing all windows in the same combination whenever one of its windows is split or deleted.  This also permits splitting windows that would be otherwise too small for such an operation."
-msgstr "かわりに、同じ構成内の中の1つのウィンドウが分割または削除されたときは常に構成内のすべてのウィンドウをリサイズすることにより、上記で示した問題を避けることができます。これは、そのような操作にたいして、この方法以外では小さすぎるようなウィンドウの分割も可能にします。"
+msgstr "かわりに同じ構成内の中の1つのウィンドウが分割や削除されたときは、常に構成内のすべてのウィンドウをリサイズすることにより上記で示した問題を避けることができます。これはそのような操作にたいして、この方法以外では小さすぎるようなウィンドウの分割も可能にします。"
 
 #. type: defopt
 #: original_texis/windows.texi:1592
@@ -2632,22 +2544,22 @@ msgstr "window-combination-resize"
 #. type: defopt
 #: original_texis/windows.texi:1596
 msgid "If this variable is @code{nil}, @code{split-window} can only split a window (denoted by @var{window}) if @var{window}'s screen area is large enough to accommodate both itself and the new window."
-msgstr "この変数が@code{nil}の場合、@code{split-window}はウィンドウ(以下@var{window})自身と新たなウィンドウの両方にたいして、@var{window}のスクリーンエリアが十分大きい場合のみ、@var{window}を分割できる。"
+msgstr "この変数が@code{nil}なら、@code{split-window}はウィンドウ(以下@var{window})自身と新たなウィンドウの両方にたいして、@var{window}のスクリーンエリアが十分大きい場合のみ@var{window}を分割できる。"
 
 #. type: defopt
 #: original_texis/windows.texi:1604
 msgid "If this variable is @code{t}, @code{split-window} tries to resize all windows that are part of the same combination as @var{window}, in order to accommodate the new window.  In particular, this may allow @code{split-window} to succeed even if @var{window} is a fixed-size window or too small to ordinarily split.  Furthermore, subsequently resizing or deleting @var{window} may resize all other windows in its combination."
-msgstr "この変数が@code{t}の場合、@code{split-window}は新たなウィンドウに対応するため、@var{window}と同じコンビネーション内の、すべてのウィンドウのリサイズを試みる。これは特に、@var{window}が固定サイズウィンドウのときや、通常の分割には小さすぎるときも、@code{split-window}をが成功することを許す。さらに、続けて@var{window}をリサイズ、または削除すると、そのコンビネーション内のその他すべてのウィンドウをリサイズする。"
+msgstr "この変数が@code{t}なら、@code{split-window}は新たなウィンドウに対応するために@var{window}と同一コンビネーション内のすべてのウィンドウのリサイズを試みる。これは特に@var{window}が固定サイズウィンドウのときや、通常の分割には小さすぎるときも@code{split-window}をが成功することを許す。さらに続けて@var{window}のリサイズや削除を行うと、そのコンビネーション内のその他すべてのウィンドウをリサイズする。"
 
 #. type: defopt
 #: original_texis/windows.texi:1608
 msgid "The default is @code{nil}.  Other values are reserved for future use.  The value of this variable is ignored when @code{window-combination-limit} is non-@code{nil}."
-msgstr "デフォルトは@code{nil}で、それ以外の値は、将来の使用のため予約済みである。この変数の値は、@code{window-combination-limit}が非@code{nil}の場合は無視される。"
+msgstr "デフォルトは@code{nil}で、それ以外の値は将来の使用のため予約済み。この変数の値は@code{window-combination-limit}が非@code{nil}なら無視される。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1612
 msgid "To illustrate the effect of @code{window-combination-resize}, consider the following frame layout."
-msgstr "@code{window-combination-resize}の効果を説明するために、以下のフレームレイアウトを考えてください。"
+msgstr "@code{window-combination-resize}の効果を説明するために以下のフレームレイアウトを考えてください。"
 
 #. type: group
 #: original_texis/windows.texi:1629
@@ -2688,7 +2600,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1636
 msgid "If @code{window-combination-resize} is @code{nil}, splitting window @var{W3} leaves the size of @var{W2} unchanged:"
-msgstr "@code{window-combination-resize}が@code{nil}の場合、ウィンドウ@var{W3}を分割しても、@var{W2}のサイズは変更されません:"
+msgstr "@code{window-combination-resize}が@code{nil}なら、ウィンドウ@var{W3}を分割しても@var{W2}のサイズは変更されません:"
 
 #. type: group
 #: original_texis/windows.texi:1653
@@ -2729,7 +2641,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1661
 msgid "If @code{window-combination-resize} is @code{t}, splitting @var{W3} instead leaves all three live windows with approximately the same height:"
-msgstr "@code{window-combination-resize}が@code{t}の場合は、@var{W3}を分割すると3つの生きたウィンドウすべてを、おおよそ同じ高さにします:"
+msgstr "@code{window-combination-resize}が@code{t}なら、@var{W3}を分割すると3つの生きたウィンドウすべてをおおよそ同じ高さにします:"
 
 #. type: group
 #: original_texis/windows.texi:1678
@@ -2770,7 +2682,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:1686
 msgid "Deleting any of the live windows @var{W2}, @var{W3} or @var{W4} will distribute its space proportionally among the two remaining live windows."
-msgstr "生きたウィンドウ@var{W2}、@var{W3}、@var{W4}のいずれを削除しても、削除されたウィンドウのスペースは、残りの2つの生きたウィンドウに相対的に分配されます。"
+msgstr "生きたウィンドウ@var{W2}、@var{W3}、@var{W4}のいずれを削除しても、削除されたウィンドウのスペースは残りの2つの生きたウィンドウに相対的に分配されます。"
 
 #. type: cindex
 #: original_texis/windows.texi:1690
