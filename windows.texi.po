@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:50+0900\n"
-"PO-Revision-Date: 2019-12-30 17:15+0900\n"
+"PO-Revision-Date: 2020-01-01 10:48+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2699,19 +2699,17 @@ msgstr "select-window window &optional norecord"
 #. type: defun
 #: original_texis/windows.texi:1699
 msgid "This function makes @var{window} the selected window and the window selected within its frame (@pxref{Basic Windows}) and selects that frame.  It also makes @var{window}'s buffer (@pxref{Buffers and Windows}) current and sets that buffer's value of @code{point} to the value of @code{window-point} (@pxref{Window Point}) in @var{window}.  @var{window} must be a live window.  The return value is @var{window}."
-msgstr "この関数は、@var{window}を選択されたウィンドウにして、そのフレーム内で選択されたウィンドウとし(@ref{Basic Windows}を参照)、そのフレームを選択する。また、@var{window}のバッファー(@ref{Buffers and Windows}を参照)をカレントにして、そのバッファーの@code{point}の値(@ref{Window Point}を参照)を、@var{window}の@code{window-point}の値にセットする。@var{window}は生きたウィンドウでなければならない。リターン値は@var{window}である。"
+msgstr "この関数は@var{window}を選択されたウィンドウにして、そのフレーム内で選択されたウィンドウ(@ref{Basic Windows}を参照)にしてそのフレームを選択する。また@var{window}のバッファー(@ref{Buffers and Windows}を参照)をカレントにして、そのバッファーの@code{point}の値(@ref{Window Point}を参照)を@var{window}の@code{window-point}の値にセットする。@var{window}は生きたウィンドウでなければならない。リターン値は@var{window}。"
 
 #. type: defun
 #: original_texis/windows.texi:1704
 msgid "By default, this function also moves @var{window}'s buffer to the front of the buffer list (@pxref{Buffer List}), and makes @var{window} the most recently selected window.  However, if the optional argument @var{norecord} is non-@code{nil}, these additional actions are omitted."
-msgstr "デフォルトでは、この関数は@var{window}のバッファーをバッファーリストの先頭(@ref{Buffer List}を参照)に移動して、@var{window}をもっとも最近選択されたウィンドウにする。しかし、オプション引数@var{norecord}が非@code{nil}の場合は、これらの追加処理は省略される。"
+msgstr "この関数はデフォルトでは@var{window}のバッファーをバッファーリストの先頭(@ref{Buffer List}を参照)に移動して、@var{window}をもっとも最近選択されたウィンドウにする。しかしオプション引数@var{norecord}が非@code{nil}ならこれらの追加処理は省略される。"
 
 #. type: defun
 #: original_texis/windows.texi:1716
-#, fuzzy
-#| msgid "This function runs @code{buffer-list-update-hook} (@pxref{Buffer List})  unless @var{norecord} is non-@code{nil}.  Note that applications and internal routines often temporarily select a window in order to simplify coding.  As a rule, such selections (including those made by the macros @code{save-selected-window} and @code{with-selected-window} below) are not recorded thus avoiding to pollute @code{buffer-list-update-hook}.  Selections that ``really count'' are those causing a visible change in the next redisplay of @var{window}'s frame and should be always recorded.  This also means that to run a function each time a window gets selected, putting it on @code{buffer-list-update-hook} should be the right choice."
 msgid "This function runs @code{buffer-list-update-hook} (@pxref{Buffer List})  unless @var{norecord} is non-@code{nil}.  Note that applications and internal routines often temporarily select a window in order to simplify coding.  As a rule, such selections (including those made by the macros @code{save-selected-window} and @code{with-selected-window} below) are not recorded thus avoiding to pollute @code{buffer-list-update-hook}.  Selections that really count are those causing a visible change in the next redisplay of @var{window}'s frame and should be always recorded.  This also means that to run a function each time a window gets selected, putting it on @code{buffer-list-update-hook} should be the right choice."
-msgstr "この関数は、@var{norecord}が@code{nil}ならば、@code{buffer-list-update-hook}(@ref{Buffer List})を実行する。コーディングを単純にするために、アプリケーションや内部ルーチンは、しばしばウィンドウを一時的に選択することがあることに注意。一般的には、そのような選択(以下のマクロ@code{save-selected-window}と@code{with-selected-window}による選択も含む)は記録されないので、@code{buffer-list-update-hook}の汚染は避けられる。選択を``実際にカウント''するのは、@var{window}のフレームの次回表示時に可視の変更が発生したときで、それらは常に記録されるべきである。これは、あるウィンドウが選択されるたびに関数を実行するためには、それを@code{buffer-list-update-hook}に配するのが良い選択であることも意味している。"
+msgstr "この関数は@var{norecord}が@code{nil}なら@code{buffer-list-update-hook} (@ref{Buffer List})を実行する。コーディングを単純化するためにアプリケーションや内部ルーチンは、しばしばウィンドウを一時的に選択することがあることに注意。一般的にはそのような選択(以下のマクロ@code{save-selected-window}と@code{with-selected-window}による選択も含む)は記録されないので、@code{buffer-list-update-hook}の汚染は避けられる。選択を実際にカウントするのは@var{window}のフレームの次回表示時に可視の変更が発生したときで、それらは常に記録されるべきである。これは、あるウィンドウが選択されるたびに関数を実行するためには、それを@code{buffer-list-update-hook}に配置するのが良い選択であることも意味している。"
 
 #. type: cindex
 #: original_texis/windows.texi:1718
@@ -2733,17 +2731,17 @@ msgstr "save-selected-window forms@dots{}"
 #. type: defmac
 #: original_texis/windows.texi:1730
 msgid "This macro records the selected frame, as well as the selected window of each frame, executes @var{forms} in sequence, then restores the earlier selected frame and windows.  It also saves and restores the current buffer.  It returns the value of the last form in @var{forms}."
-msgstr "このマクロは、選択されたフレーム、同様に各フレームの選択されたウィンドウを記録し、@var{forms}を順に実行してから、以前に選択されていたフレームとウィンドウをリストアする。これはカレントバッファーの保存とリストアも行う。リターン値は@var{forms}内の最後のフォームの値である。"
+msgstr "このマクロは選択されたフレーム、同様に各フレームの選択されたウィンドウを記録して、@var{forms}を順に実行してから以前に選択されていたフレームとウィンドウをリストアする。これはカレントバッファーの保存とリストアも行う。リターン値は@var{forms}内の最後のフォームの値。"
 
 #. type: defmac
 #: original_texis/windows.texi:1739
 msgid "This macro does not save or restore anything about the sizes, arrangement or contents of windows; therefore, if @var{forms} change them, the change persists.  If the previously selected window of some frame is no longer live at the time of exit from @var{forms}, that frame's selected window is left alone.  If the previously selected window is no longer live, then whatever window is selected at the end of @var{forms} remains selected.  The current buffer is restored if and only if it is still live when exiting @var{forms}."
-msgstr "このマクロは、ウィンドウのサイズ、コンテンツ、配置についての保存やリストアは何も行わない。したがって、@var{forms}がそれらを変更した場合、その変更は永続化される。あるフレームにおいて以前に選択されていたウィンドウが@var{forms}のexit時にもはや生きていない場合、そのフレームの選択されたウィンドウはそのまま放置される。以前に選択されていたウィンドウがもはや生きていない場合は@var{forms}の最後に選択されていたウィンドウが何であれ、それが選択されたままになる。カレントバッファー@var{forms}のexit時にそれが生きている場合のみリストアされる。"
+msgstr "このマクロはウィンドウのサイズ、コンテンツ、配置についての保存やリストアは何も行わない。したがって@var{forms}がそれらを変更すると、その変更は永続化される。あるフレームにおいて以前に選択されていたウィンドウが@var{forms}のexit時にすでに生きていなければ、そのフレームの選択されたウィンドウはそのまま放置される。以前に選択されていたウィンドウがすでに生きていなければ@var{forms}の最後に選択されていたウィンドウが何であれ、それが選択されたままになる。カレントバッファー@var{forms}のexit時にそれが生きている場合のみリストアされる。"
 
 #. type: defmac
 #: original_texis/windows.texi:1742
 msgid "This macro changes neither the ordering of recently selected windows nor the buffer list."
-msgstr "このマクロは、もっとも最近に選択されたウィンドウとバッファーリストの順番を、どちらも変更しない。"
+msgstr "このマクロは、もっとも最近に選択されたウィンドウとバッファーリストの順番をいずれも変更しない。"
 
 #. type: defmac
 #: original_texis/windows.texi:1744
@@ -2754,7 +2752,7 @@ msgstr "with-selected-window window forms@dots{}"
 #. type: defmac
 #: original_texis/windows.texi:1750
 msgid "This macro selects @var{window}, executes @var{forms} in sequence, then restores the previously selected window and current buffer.  The ordering of recently selected windows and the buffer list remain unchanged unless you deliberately change them within @var{forms}; for example, by calling @code{select-window} with argument @var{norecord} @code{nil}."
-msgstr "このマクロは@var{window}を選択して、@var{forms}を順に実行してから、以前に選択されていたウィンドウとカレントバッファーをリストアする。たとえば、引数@var{norecord}を@code{nil}で@code{select-window}を呼び出す等、@var{forms}内で故意に変更しない限り、もっとも最近に選択されたウィンドウとバッファーリストの順番は変更されない。"
+msgstr "このマクロは@var{window}を選択して、@var{forms}を順に実行してから以前に選択されていたウィンドウとカレントバッファーをリストアする。たとえば引数@var{norecord}を@code{nil}で@code{select-window}を呼び出す等、@var{forms}内で故意に変更しない限り、もっとも最近に選択されたウィンドウとバッファーリストの順番は変更されない。"
 
 #. type: defmac
 #: original_texis/windows.texi:1753
@@ -2770,7 +2768,7 @@ msgstr "frame-selected-window &optional frame"
 #. type: defun
 #: original_texis/windows.texi:1759
 msgid "This function returns the window on @var{frame} that is selected within that frame.  @var{frame} should be a live frame; if omitted or @code{nil}, it defaults to the selected frame."
-msgstr "この関数は、フレーム@var{frame}内で選択されているウィンドウをリターンする。@var{frame}は生きたフレームであること。省略または@code{nil}の場合のデフォルトは、選択されたフレームである。"
+msgstr "この関数はフレーム@var{frame}内で選択されているウィンドウをリターンする。@var{frame}は生きたフレームであること。省略または@code{nil}の場合のデフォルトは選択されたフレーム。"
 
 #. type: defun
 #: original_texis/windows.texi:1761
@@ -2781,55 +2779,51 @@ msgstr "set-frame-selected-window frame window &optional norecord"
 #. type: defun
 #: original_texis/windows.texi:1766
 msgid "This function makes @var{window} the window selected within the frame @var{frame}.  @var{frame} should be a live frame; if @code{nil}, it defaults to the selected frame.  @var{window} should be a live window; if @code{nil}, it defaults to the selected window."
-msgstr "この関数は、@var{window}をフレーム@var{frame}内で選択されたウィンドウにする。@var{frame}は生きたフレームであること。省略または@code{nil}の場合のデフォルトは、選択されたフレームである。@var{window}は生きたウィンドウであること。省略または@code{nil}の場合のデフォルトは選択されたウィンドウである。"
+msgstr "この関数は@var{window}をフレーム@var{frame}内で選択されたウィンドウにする。@var{frame}は生きたフレームであること。省略または@code{nil}の場合のデフォルトは選択されたフレーム。@var{window}は生きたウィンドウであること。省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:1769
 msgid "If @var{frame} is the selected frame, this makes @var{window} the selected window."
-msgstr "@var{frame}が選択されたフレームの場合は、@var{window}を選択されたウィンドウにする。"
+msgstr "@var{frame}が選択されたフレームなら、@var{window}を選択されたウィンドウにする。"
 
 #. type: defun
 #: original_texis/windows.texi:1773
 msgid "If the optional argument @var{norecord} is non-@code{nil}, this function does not alter the list of most recently selected windows, nor the buffer list."
-msgstr "オプション引数@var{norecord}が非@code{nil}の場合、この関数はもっとも最近に選択されたウィンドウのリストとバッファーリストを、どちらも変更しない。"
+msgstr "オプション引数@var{norecord}が非@code{nil}なら、この関数はもっとも最近に選択されたウィンドウのリストとバッファーリストをいずれも変更しない。"
 
 #. type: cindex
 #: original_texis/windows.texi:1775
 #, no-wrap
 msgid "window use time"
-msgstr ""
+msgstr "window use time"
 
 #. type: cindex
 #: original_texis/windows.texi:1776
-#, fuzzy, no-wrap
-#| msgid "size of window"
+#, no-wrap
 msgid "use time of window"
-msgstr "size of window"
+msgstr "use time of window"
 
 #. type: cindex
 #: original_texis/windows.texi:1777
 #, no-wrap
 msgid "window order by time of last use"
-msgstr ""
+msgstr "window order by time of last use"
 
 #. type: defun
 #: original_texis/windows.texi:1778
-#, fuzzy, no-wrap
-#| msgid "window-frame &optional window"
+#, no-wrap
 msgid "window-use-time &optional window"
-msgstr "window-frame &optional window"
+msgstr "window-use-time &optional window"
 
 #. type: defun
 #: original_texis/windows.texi:1781
-#, fuzzy
-#| msgid "This function returns the left pixel edge of window @var{window}.  @var{window} must be a valid window and defaults to the selected one."
 msgid "This functions returns the use time of window @var{window}.  @var{window} must be a live window and defaults to the selected one."
-msgstr "この関数は、ウィンドウ@var{window}の左端のピクセルをリターンする。@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたウィンドウである。"
+msgstr "この関数はウィンドウ@var{window}の使用回数をリターンする。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:1788
 msgid "The @dfn{use time} of a window is not really a time value, but an integer that does increase monotonically with each call of @code{select-window} with a @code{nil} @var{norecord} argument.  The window with the lowest use time is usually called the least recently used window while the window with the highest use time is called the most recently used one (@pxref{Cyclic Window Ordering})."
-msgstr ""
+msgstr "ウィンドウの@dfn{使用回数(use time)}は実際にはtime値ではなく、@code{nil}の@var{norecord}引数による@code{select-window}の呼び出しごとに毎回単調に増加する整数。通常は最小の使用回数をもつウィンドウはもっとも最近使用されていないウィンドウ(the least recently used window)、最大の使用回数をもつウィンドウはもっとも最近使用されたウィンドウ(the most recently used window)と呼ばれる(@ref{Cyclic Window Ordering}を参照)。"
 
 #. type: section
 #: original_texis/windows.texi:1792
@@ -2858,14 +2852,12 @@ msgstr "window ordering, cyclic"
 #. type: Plain text
 #: original_texis/windows.texi:1801
 msgid "When you use the command @kbd{C-x o} (@code{other-window}) to select some other window, it moves through live windows in a specific order.  For any given configuration of windows, this order never varies.  It is called the @dfn{cyclic ordering of windows}."
-msgstr "他のウィンドウを選択するためにコマンド@kbd{C-x o}(@code{other-window})を使う際には、特定の順番で生きたウィンドウを巡回します。与えられた任意のウィンドウ構成にたいして、この順序は決して変更されません。これは、@dfn{ウィンドウのサイクル順序(cyclic ordering of windows)}と呼ばれます。"
+msgstr "他のウィンドウを選択するためにコマンド@kbd{C-x o} (@code{other-window})を使う際には、特定の順番で生きたウィンドウを巡回します。与えられた任意のウィンドウ構成にたいして、この順序は決して変更されません。これは@dfn{ウィンドウのサイクル順序(cyclic ordering of windows)}と呼ばれます。"
 
 #. type: Plain text
 #: original_texis/windows.texi:1807
-#, fuzzy
-#| msgid "The ordering is determined by a depth-first traversal of the frame's window tree, retrieving the live windows which are the leaf nodes of the tree (@pxref{Windows and Frames}).  If the minibuffer is active, the minibuffer window is included too.  The ordering is cyclic, so the last window in the sequence is followed by the first one."
 msgid "The ordering is determined by a depth-first traversal of each frame's window tree, retrieving the live windows which are the leaf nodes of the tree (@pxref{Windows and Frames}).  If the minibuffer is active, the minibuffer window is included too.  The ordering is cyclic, so the last window in the sequence is followed by the first one."
-msgstr "この順序は、そのフレームのリーフノードである生きたウィンドウを取得するために、ツリーを深さ優先で走査することにより決定されます(@ref{Windows and Frames}を参照)。ミニバッファーがアクティブな場合は、ミニバッファーウィンドウも含まれます。この順序は巡回的(cyclic)なので、この順序の最後のウィンドウの次には最初のウィンドウが配されます。"
+msgstr "この順序は各フレームのリーフノードである生きたウィンドウを取得するために、ツリーを深さ優先で走査することにより決定されます(@ref{Windows and Frames}を参照)。ミニバッファーがアクティブならミニバッファーウィンドウも含まれます。この順序は巡回的(cyclic)なので、この順序の最後のウィンドウの次には最初のウィンドウが配置されます。"
 
 #. type: defun
 #: original_texis/windows.texi:1808
@@ -2882,49 +2874,47 @@ msgstr "minibuffer window, and @code{next-window}"
 #. type: defun
 #: original_texis/windows.texi:1813
 msgid "This function returns a live window, the one following @var{window} in the cyclic ordering of windows.  @var{window} should be a live window; if omitted or @code{nil}, it defaults to the selected window."
-msgstr "この関数は、ウィンドウのサイクル順で@var{window}の次の生きたウィンドウをリターンする。@var{window}は生きたウィンドウであること。省略または@code{nil}の場合のデフォルトは選択されたウィンドウである。"
+msgstr "この関数はウィンドウのサイクル順で@var{window}の次の生きたウィンドウをリターンする。@var{window}は生きたウィンドウであること。省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:1820
-#, fuzzy
-#| msgid "The optional argument @var{minibuf} specifies whether minibuffer windows should be included in the cyclic ordering.  Normally, when @var{minibuf} is @code{nil}, a minibuffer window is included only if it is currently ``active''; this matches the behavior of @kbd{C-x o}.  (Note that a minibuffer window is active as long as its minibuffer is in use; see @ref{Minibuffers})."
 msgid "The optional argument @var{minibuf} specifies whether minibuffer windows should be included in the cyclic ordering.  Normally, when @var{minibuf} is @code{nil}, a minibuffer window is included only if it is currently active; this matches the behavior of @kbd{C-x o}.  (Note that a minibuffer window is active as long as its minibuffer is in use; see @ref{Minibuffers})."
-msgstr "オプション引数@var{minibuf}は、サイクル順にミニバッファーウィンドウを含めるべきかどうかを指定する。通常は、@var{minibuf}が@code{nil}のときは、ミニバッファーウィンドウがカレントで``アクティブ''な場合のみミニバッファーウィンドウが含まれる。これは、@kbd{C-x o}の振る舞うと合致する(ミニバッファーが使用されている限りミニバッファーウィンドウはアクティブであることに注意。@ref{Minibuffers}を参照のこと)。"
+msgstr "オプション引数@var{minibuf}は、サイクル順にミニバッファーウィンドウを含めるべきかどうかを指定する。@var{minibuf}が@code{nil}のときは、通常はミニバッファーウィンドウがカレントでアクティブな場合のみミニバッファーウィンドウが含まれる。これは@kbd{C-x o}の振る舞いと合致する(ミニバッファーが使用されている限りミニバッファーウィンドウはアクティブであることに注意。@ref{Minibuffers}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:1824
 msgid "If @var{minibuf} is @code{t}, the cyclic ordering includes all minibuffer windows.  If @var{minibuf} is neither @code{t} nor @code{nil}, minibuffer windows are not included even if they are active."
-msgstr "@var{minibuf}が@code{t}の場合、サイクル順にはすべてのミニバッファーウィンドウが含まれる。@var{minibuf}が@code{t}と@code{nil}のいずれとも異なる場合は、たとえアクティブであってもミニバッファーウィンドウは含まれない。"
+msgstr "@var{minibuf}が@code{t}なら、サイクル順にはすべてのミニバッファーウィンドウが含まれる。@var{minibuf}が@code{t}と@code{nil}のいずれとも異なる場合には、たとえアクティブであってもミニバッファーウィンドウは含まれない。"
 
 #. type: defun
 #: original_texis/windows.texi:1827
 msgid "The optional argument @var{all-frames} specifies which frames to consider:"
-msgstr "オプション引数@var{all-frames}は、考慮に入れるフレームを指定する:"
+msgstr "オプション引数@var{all-frames}は考慮にするフレームを指定する:"
 
 #. type: itemize
 #: original_texis/windows.texi:1833
 msgid "means to consider windows on @var{window}'s frame.  If the minibuffer window is considered (as specified by the @var{minibuf} argument), then frames that share the minibuffer window are considered too."
-msgstr "を指定した場合は、@var{window}のフレーム上にあるウィンドウを考慮することを意味する。。(@var{minibuf}引数で指定されたことにより)ミニバッファーウィンドウが考慮される場合は、ミニバッファーウィンドウを共有するフレームも考慮される。"
+msgstr "は@var{window}のフレーム上にあるウィンドウを考慮することを意味する。(@var{minibuf}引数で指定されたことにより)ミニバッファーウィンドウが考慮される場合には、ミニバッファーウィンドウを共有するフレームも考慮される。"
 
 #. type: itemize
 #: original_texis/windows.texi:1836
 msgid "means to consider windows on all existing frames."
-msgstr "を指定した場合は、すべての既存フレーム上のウィンドウを考慮することを意味する。"
+msgstr "はすべての既存フレーム上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:1839
 msgid "means to consider windows on all visible frames."
-msgstr "を指定した場合は、すべての可視フレーム上のウィンドウを考慮することを意味する。"
+msgstr "はすべての可視フレーム上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:1842
 msgid "means to consider windows on all visible or iconified frames."
-msgstr "を指定した場合は、可視またはアイコン化されたすべてのフレーム上のウィンドウを考慮することを意味する。"
+msgstr "は可視またはアイコン化されたすべてのフレーム上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:1845
 msgid "means to consider windows on that specific frame."
-msgstr "を指定した場合は、指定されたフレーム上のウィンドウを考慮することを意味する。"
+msgstr "は指定されたフレーム上のウィンドウを考慮することを意味する。"
 
 #. type: item
 #: original_texis/windows.texi:1846
@@ -2935,12 +2925,12 @@ msgstr "その他"
 #. type: itemize
 #: original_texis/windows.texi:1848
 msgid "means to consider windows on @var{window}'s frame, and no others."
-msgstr "を指定した場合は、@var{window}のあるフレーム上のウィンドウを考慮し、それ以外は考慮しないことを意味する。"
+msgstr "は@var{window}のあるフレーム上のウィンドウを考慮して、それ以外は考慮しないことを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:1853
 msgid "If more than one frame is considered, the cyclic ordering is obtained by appending the orderings for those frames, in the same order as the list of all live frames (@pxref{Finding All Frames})."
-msgstr "複数のフレームが考慮される場合は、すべての生きたフレームのリストの順にしたがってそれらのフレームを順に追加することにより、サイクル順を取得する(@ref{Finding All Frames}を参照)。"
+msgstr "複数のフレームが考慮される場合は、すべての生きたフレームのリストの順にしたがってそれらのフレームを順に追加することによりサイクル順を取得する(@ref{Finding All Frames}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:1855
@@ -2951,7 +2941,7 @@ msgstr "previous-window &optional window minibuf all-frames"
 #. type: defun
 #: original_texis/windows.texi:1859
 msgid "This function returns a live window, the one preceding @var{window} in the cyclic ordering of windows.  The other arguments are handled like in @code{next-window}."
-msgstr "この関数は、ウィンドウのサイクル順において@var{window}の前に位置する、生きたウィンドウをリターンする。その他の引数は、@code{next-window}の場合と同様に処理される。"
+msgstr "この関数はウィンドウのサイクル順において@var{window}の前に位置する生きたウィンドウをリターンする。その他の引数は@code{next-window}の場合と同様に処理される。"
 
 #. type: deffn
 #: original_texis/windows.texi:1861
@@ -2962,17 +2952,17 @@ msgstr "Command other-window count &optional all-frames"
 #. type: deffn
 #: original_texis/windows.texi:1869
 msgid "This function selects a live window, one @var{count} places from the selected window in the cyclic ordering of windows.  If @var{count} is a positive number, it skips @var{count} windows forwards; if @var{count} is negative, it skips @minus{}@var{count} windows backwards; if @var{count} is zero, that simply re-selects the selected window.  When called interactively, @var{count} is the numeric prefix argument."
-msgstr "この関数は、ウィンドウのサイクル順において、選択されたウィンドウから@var{count}番目に位置する、生きたウィンドウをリターンする。@var{count}が正の数なら@var{count}個のウィンドウを前方にスキップし、負の数なら@minus{}@var{count}個のウィンドウを後方にスキップする。@var{count}が0の場合は、選択されたウィンドウを単に再選択する．インタラクティブに呼び出された場合、@var{count}はプレフィックス数引数である。"
+msgstr "この関数はウィンドウのサイクル順において、選択されたウィンドウから@var{count}番目に位置する生きたウィンドウをリターンする。@var{count}が正の数なら@var{count}個のウィンドウを前方にスキップし、負の数なら@minus{}@var{count}個のウィンドウを後方にスキップする。@var{count}が0なら選択されたウィンドウを単に再選択する．インタラクティブに呼び出された場合には、@var{count}はプレフィックス数引数。"
 
 #. type: deffn
 #: original_texis/windows.texi:1873
 msgid "The optional argument @var{all-frames} has the same meaning as in @code{next-window}, like a @code{nil} @var{minibuf} argument to @code{next-window}."
-msgstr "オプション引数@var{all-frames}は、@code{next-window}に@code{nil}の@var{minibuf}引数を指定したときの@code{next-window}の場合と同じ意味をもつ。"
+msgstr "オプション引数@var{all-frames}は、@code{nil}の@var{minibuf}引数を指定したときの@code{next-window}の場合と同じ意味をもつ。"
 
 #. type: deffn
 #: original_texis/windows.texi:1876
 msgid "This function does not select a window that has a non-@code{nil} @code{no-other-window} window parameter (@pxref{Window Parameters})."
-msgstr "この関数は、非@code{nil}のウィンドウパラメーター@code{no-other-window}をもつウィンドウを選択しない。"
+msgstr "この関数は非@code{nil}のウィンドウパラメーター@code{no-other-window}をもつウィンドウを選択しない。"
 
 #. type: defun
 #: original_texis/windows.texi:1878
@@ -2983,17 +2973,17 @@ msgstr "walk-windows fun &optional minibuf all-frames"
 #. type: defun
 #: original_texis/windows.texi:1881
 msgid "This function calls the function @var{fun} once for each live window, with the window as the argument."
-msgstr "この関数は、生きたウィンドウそれぞれにたいして、ウィンドウを引数に関数@var{fun}を呼び出す。"
+msgstr "この関数は生きたウィンドウそれぞれにたいしてウィンドウを引数に関数@var{fun}を呼び出す。"
 
 #. type: defun
 #: original_texis/windows.texi:1888
 msgid "It follows the cyclic ordering of windows.  The optional arguments @var{minibuf} and @var{all-frames} specify the set of windows included; these have the same arguments as in @code{next-window}.  If @var{all-frames} specifies a frame, the first window walked is the first window on that frame (the one returned by @code{frame-first-window}), not necessarily the selected window."
-msgstr "これはウィンドウのサイクル順にしたがう。オプション引数@var{minibuf}と@var{all-frames}は、含まれるウィンドウセットを指定する。これらは、@code{next-window}の引数の場合と同じ意味をもつ。@var{all-frames}がフレームを指定する場合、最初に処理されるのはそのフレームの最初のウィンドウ(@code{frame-first-window}がリターンするウィンドウ)であり、選択されたウィンドウである必要はない。"
+msgstr "これはウィンドウのサイクル順にしたがう。オプション引数@var{minibuf}と@var{all-frames}には、含まれるウィンドウセットを指定する。これらは@code{next-window}の引数の場合と同じ意味をもつ。@var{all-frames}がフレームを指定する場合には、最初に処理されるのはそのフレームの最初のウィンドウ(@code{frame-first-window}がリターンするウィンドウ)であり、選択されたウィンドウである必要はない。"
 
 #. type: defun
 #: original_texis/windows.texi:1892
 msgid "If @var{fun} changes the window configuration by splitting or deleting windows, that does not alter the set of windows walked, which is determined prior to calling @var{fun} for the first time."
-msgstr "@var{fun}がウィンドウの分割や削除によりウィンドウ構成を変更する場合でも、処理するウィンドウセットは初回の@var{fun}呼び出しに先立ち決定されるため、変更されない。"
+msgstr "@var{fun}がウィンドウの分割や削除によりウィンドウ構成を変更する場合でも、処理するウィンドウセットは初回の@var{fun}呼び出しに先立ち決定されるため変更されない。"
 
 #. type: defun
 #: original_texis/windows.texi:1894
@@ -3004,12 +2994,12 @@ msgstr "one-window-p &optional no-mini all-frames"
 #. type: defun
 #: original_texis/windows.texi:1897
 msgid "This function returns @code{t} if the selected window is the only live window, and @code{nil} otherwise."
-msgstr "この関数は、選択されたウィンドウが唯一の生きたウィンドウの場合は@code{t}、それ以外は@code{nil}をリターンする。"
+msgstr "この関数は選択されたウィンドウが唯一の生きたウィンドウなら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:1903
 msgid "If the minibuffer window is active, it is normally considered (so that this function returns @code{nil}).  However, if the optional argument @var{no-mini} is non-@code{nil}, the minibuffer window is ignored even if active.  The optional argument @var{all-frames} has the same meaning as for @code{next-window}."
-msgstr "ミニバッファーウィンドウがアクティブな場合、ミニバッファーウィンドウは通常は考慮される(そのため、この関数は@code{nil}をリターンする)。しかし、オプション引数@var{no-mini}が非@code{nil}の場合は、たとえアクティブであっても、ミニバッファーウィンドウは無視される。オプション引数@var{all-frames}は、@code{next-window}の場合と同じ意味をもつ。"
+msgstr "ミニバッファーウィンドウがアクティブなら、ミニバッファーウィンドウは通常は考慮される(そのためこの関数は@code{nil}をリターンする)。しかしオプション引数@var{no-mini}が非@code{nil}なら、たとえアクティブであってもミニバッファーウィンドウは無視される。オプション引数@var{all-frames}は@code{next-window}の場合と同じ意味をもつ。"
 
 #. type: cindex
 #: original_texis/windows.texi:1905
@@ -3020,7 +3010,7 @@ msgstr "finding windows"
 #. type: Plain text
 #: original_texis/windows.texi:1908
 msgid "The following functions return a window which satisfies some criterion, without selecting it:"
-msgstr "以下は、何らかの条件を満足するウィンドウを、それらを選択することなくリターンする関数です:"
+msgstr "以下は何らかの条件を満足するウィンドウを、それらを選択することなくリターンする関数です:"
 
 #. type: cindex
 #: original_texis/windows.texi:1909
@@ -3036,36 +3026,30 @@ msgstr "get-lru-window &optional all-frames dedicated not-selected"
 
 #. type: defun
 #: original_texis/windows.texi:1914
-#, fuzzy
-#| msgid "This function returns a live window which is heuristically the ``least recently used'' window.  The optional argument @var{all-frames} has the same meaning as in @code{next-window}."
 msgid "This function returns a live window which is heuristically the least recently used.  The optional argument @var{all-frames} has the same meaning as in @code{next-window}."
-msgstr "この関数は、発見的には``もっとも最近に使用された''ウィンドウであるような、生きたウィンドウをリターンする。オプション引数@var{all-frames}は、@code{next-window}の場合と同じ意味をもつ。"
+msgstr "この関数は発見的に最近もっとも使用されていない生きたウィンドウをリターンする。オプション引数@var{all-frames}は@code{next-window}の場合と同じ意味をもつ。"
 
 #. type: defun
 #: original_texis/windows.texi:1922
 msgid "If any full-width windows are present, only those windows are considered.  A minibuffer window is never a candidate.  A dedicated window (@pxref{Dedicated Windows}) is never a candidate unless the optional argument @var{dedicated} is non-@code{nil}.  The selected window is never returned, unless it is the only candidate.  However, if the optional argument @var{not-selected} is non-@code{nil}, this function returns @code{nil} in that case."
-msgstr "フル幅のウィンドウが存在する場合は、それらのウィンドウだけが考慮される。ミニバッファーが候補になることは、決してない。オプション引数@var{dedicated}が@code{nil}の場合は、専用のバッファー(@ref{Dedicated Windows}を参照)が候補になることは、決してない。唯一の候補が選択されたウィンドウである場合以外は、決して選択されたウィンドウをリターンしない。しかし、オプション引数@var{not-selected}が非@code{nil}ならば、そのような場合でもこの関数は@code{nil}をリターンする。"
+msgstr "フル幅のウィンドウが存在する場合にはは、それらのウィンドウだけが考慮される。ミニバッファーが候補になることは決してない。オプション引数@var{dedicated}が@code{nil}なら、専用バッファー(@ref{Dedicated Windows}を参照)が候補になることは決してない。唯一の候補が選択されたウィンドウである場合以外は選択されたウィンドウを決してリターンしない。しかしオプション引数@var{not-selected}が非@code{nil}なら、そのような場合でもこの関数は@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/windows.texi:1924
-#, fuzzy, no-wrap
-#| msgid "least recently used window"
+#, no-wrap
 msgid "most recently used window"
-msgstr "least recently used window"
+msgstr "most recently used window"
 
 #. type: defun
 #: original_texis/windows.texi:1925
-#, fuzzy, no-wrap
-#| msgid "get-lru-window &optional all-frames dedicated not-selected"
+#, no-wrap
 msgid "get-mru-window &optional all-frames dedicated not-selected"
-msgstr "get-lru-window &optional all-frames dedicated not-selected"
+msgstr "get-mru-window &optional all-frames dedicated not-selected"
 
 #. type: defun
 #: original_texis/windows.texi:1929
-#, fuzzy
-#| msgid "This function returns a live window which is heuristically the ``least recently used'' window.  The optional argument @var{all-frames} has the same meaning as in @code{next-window}."
 msgid "This function is like @code{get-lru-window}, but it returns the most recently used window instead.  The meaning of the arguments is the same as described for @code{get-lru-window}."
-msgstr "この関数は、発見的には``もっとも最近に使用された''ウィンドウであるような、生きたウィンドウをリターンする。オプション引数@var{all-frames}は、@code{next-window}の場合と同じ意味をもつ。"
+msgstr "この関数は@code{get-lru-window}と同様だが、かわりにもっとも最近使用されたウィンドウをリターンする。引数の意味は@code{get-lru-window}で説明と同様。"
 
 #. type: cindex
 #: original_texis/windows.texi:1931
@@ -3082,17 +3066,17 @@ msgstr "get-largest-window &optional all-frames dedicated not-selected"
 #. type: defun
 #: original_texis/windows.texi:1936
 msgid "This function returns the window with the largest area (height times width).  The optional argument @var{all-frames} specifies the windows to search, and has the same meaning as in @code{next-window}."
-msgstr "この関数は、もっとも大きいエリア(高さ掛ける幅)をもつウィンドウをリターンする。オプション引数@var{all-frames}は検索するウィンドウを指定し、意味は@code{next-window}の場合と同様。"
+msgstr "この関数は、もっとも大きいエリア(高さと幅の乗)をもつウィンドウをリターンする。オプション引数@var{all-frames}は検索するウィンドウを指定する。意味は@code{next-window}の場合と同様。"
 
 #. type: defun
 #: original_texis/windows.texi:1944
 msgid "A minibuffer window is never a candidate.  A dedicated window (@pxref{Dedicated Windows}) is never a candidate unless the optional argument @var{dedicated} is non-@code{nil}.  The selected window is not a candidate if the optional argument @var{not-selected} is non-@code{nil}.  If the optional argument @var{not-selected} is non-@code{nil} and the selected window is the only candidate, this function returns @code{nil}."
-msgstr "ミニバッファーウィンドウは決して候補とならない。オプション引数@var{dedicated}が@code{nil}の場合、専用ウィンドウ(@ref{Dedicated Windows}ウィンドウを参照)は決して候補にならない。オプション引数@var{not-selected}が非@code{nil}の場合、選択されたウィンドウは決して候補にならない。オプション引数@var{not-selected}が非@code{nil}、かつ唯一の候補が選択されたウィンドウの場合、この関数は@code{nil}をリターンする。"
+msgstr "ミニバッファーウィンドウは決して候補とならない。オプション引数@var{dedicated}が@code{nil}なら、専用ウィンドウ(@ref{Dedicated Windows}ウィンドウを参照)は決して候補とならない。オプション引数@var{not-selected}が非@code{nil}なら、選択されたウィンドウは決して候補にならない。オプション引数@var{not-selected}が非@code{nil}、かつ唯一の候補が選択されたウィンドウなら、この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:1948
 msgid "If there are two candidate windows of the same size, this function prefers the one that comes first in the cyclic ordering of windows, starting from the selected window."
-msgstr "同サイズの候補ウィンドウが2つある場合、この関数はウィンドウのサイクル順で、選択されたウィンドウから数えて最初にあるウィンドウを優先する。"
+msgstr "同サイズの候補ウィンドウが2つある場合には、この関数はウィンドウのサイクル順で選択されたウィンドウから数えて最初にあるウィンドウを優先する。"
 
 #. type: cindex
 #: original_texis/windows.texi:1950
@@ -3115,12 +3099,12 @@ msgstr "get-window-with-predicate predicate &optional minibuf all-frames default
 #. type: defun
 #: original_texis/windows.texi:1959
 msgid "This function calls the function @var{predicate} for each of the windows in the cyclic order of windows in turn, passing it the window as an argument.  If the predicate returns non-@code{nil} for any window, this function stops and returns that window.  If no such window is found, the return value is @var{default} (which defaults to @code{nil})."
-msgstr "この関数は、ウィンドウのサイクル順内の各ウィンドウにたいして、そのウィンドウを引数に、関数@var{predicate}を順に呼び出す。いずれかのウィンドウにたいして@var{predicate}が非@code{nil}をリターンした場合、この関数は処理を停止して、そのウィンドウをリターンする。そのようなうｌが見つからなければ、リターン値は@var{default}(これのデフォルトは@code{nil})となる。"
+msgstr "この関数はウィンドウのサイクル順内の各ウィンドウにたいして、そのウィンドウを引数として関数@var{predicate}を順に呼び出す。いずれかのウィンドウにたいして@var{predicate}が非@code{nil}をリターンすると、この関数は処理を停止してそのウィンドウをリターンする。そのようなウィンドウが見つからなければリターン値は@var{default} (これのデフォルトは@code{nil})。"
 
 #. type: defun
 #: original_texis/windows.texi:1963
 msgid "The optional arguments @var{minibuf} and @var{all-frames} specify the windows to search, and have the same meanings as in @code{next-window}."
-msgstr "オプション引数 @var{minibuf}と@var{all-frames}は検索するウィンドウを指定し、意味は@code{next-window}の場合と同様である。"
+msgstr "オプション引数 @var{minibuf}と@var{all-frames}は検索するウィンドウを指定する。意味は@code{next-window}の場合と同様。"
 
 #. type: cindex
 #: original_texis/windows.texi:1968
@@ -3143,7 +3127,7 @@ msgstr "buffers, controlled in windows"
 #. type: Plain text
 #: original_texis/windows.texi:1975
 msgid "This section describes low-level functions for examining and setting the contents of windows.  @xref{Switching Buffers}, for higher-level functions for displaying a specific buffer in a window."
-msgstr "このセクションでは、ウィンドウのコンテンツを調べたりセットするための、低レベルな関数を説明します。ウィンドウ内に特定のバッファーを表示するための高レベルな関数については、@ref{Switching Buffers}を参照してください。"
+msgstr "このセクションではウィンドウのコンテンツを調べたりセットするための低レベルな関数を説明します。ウィンドウ内に特定のバッファーを表示するための高レベルな関数については@ref{Switching Buffers}を参照してください。"
 
 #. type: defun
 #: original_texis/windows.texi:1976
@@ -3154,7 +3138,7 @@ msgstr "window-buffer &optional window"
 #. type: defun
 #: original_texis/windows.texi:1981
 msgid "This function returns the buffer that @var{window} is displaying.  If @var{window} is omitted or @code{nil} it defaults to the selected window.  If @var{window} is an internal window, this function returns @code{nil}."
-msgstr "この関数は、@var{window}が表示しているバッファーをリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは、選択されたウィンドウである。@var{window}が内部ウィンドウの場合、この関数は@code{nil}をリターンする。"
+msgstr "この関数は@var{window}が表示しているバッファーをリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。@var{window}が内部ウィンドウならこの関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:1983
@@ -3165,27 +3149,27 @@ msgstr "set-window-buffer window buffer-or-name &optional keep-margins"
 #. type: defun
 #: original_texis/windows.texi:1990
 msgid "This function makes @var{window} display @var{buffer-or-name}.  @var{window} should be a live window; if @code{nil}, it defaults to the selected window.  @var{buffer-or-name} should be a buffer, or the name of an existing buffer.  This function does not change which window is selected, nor does it directly change which buffer is current (@pxref{Current Buffer}).  Its return value is @code{nil}."
-msgstr "この関数は、  @var{window}に@var{buffer-or-name}ウィンドウ表示させる。@var{window}は生きたウィンドウであること。@code{nil}の場合のデフォルトは、選択されたウィンドウである。@var{buffer-or-name}は、バッファー、あるいは既存のバッファー名であること。この関数は、選択されていたウィンドウを変更せず、カレントバッファーも直接は変更しない(@ref{Current Buffer}を参照)。リターン値は@code{nil}である。"
+msgstr "この関数は@var{window}に@var{buffer-or-name}を表示させる。@var{window}は生きたウィンドウであること。@code{nil}の場合のデフォルトは選択されたウィンドウ。@var{buffer-or-name}はバッファー、あるいは既存のバッファー名であること。この関数は選択されていたウィンドウを変更せず、カレントバッファーも直接変更しない(@ref{Current Buffer}を参照)。リターン値は@code{nil}。"
 
 #. type: defun
 #: original_texis/windows.texi:1994
 msgid "If @var{window} is @dfn{strongly dedicated} to a buffer and @var{buffer-or-name} does not specify that buffer, this function signals an error.  @xref{Dedicated Windows}."
-msgstr "@var{window}が、あるバッファーにたいして@dfn{特に専用}で、かつ@var{buffer-or-name}がそのバッファーを指定しない場合、この関数はエラーをシグナルする。@ref{Dedicated Windows}を参照のこと。"
+msgstr "@var{window}があるバッファーにたいして@dfn{特に専用(strongly dedicated)}であり、かつ@var{buffer-or-name}がそのバッファーを指定しなければ、この関数はエラーをシグナルする。@ref{Dedicated Windows}を参照のこと。"
 
 #. type: defun
 #: original_texis/windows.texi:2000
 msgid "By default, this function resets @var{window}'s position, display margins, fringe widths, and scroll bar settings, based on the local variables in the specified buffer.  However, if the optional argument @var{keep-margins} is non-@code{nil}, it leaves the display margins and fringe widths unchanged."
-msgstr "デフォルトでは、この関数は指定されたバッファーのローカル変数にもとづいて、@var{window}の位置、ディスプレイマージン、フリンジ幅、スクロールバーのセッティングをリセットする。しかし、オプション引数@var{keep-margins}が非@code{nil}の場合は、ディスプレイマージンとフリンジ幅は未変更のままにする。"
+msgstr "デフォルトでは、この関数は指定されたバッファーのローカル変数にもとづいて@var{window}の位置、ディスプレイマージン、フリンジ幅、スクロールバーのセッティングをリセットする。しかしオプション引数@var{keep-margins}が非@code{nil}ならディスプレイマージンとフリンジ幅は未変更のままにする。"
 
 #. type: defun
 #: original_texis/windows.texi:2004
 msgid "When writing an application, you should normally use the higher-level functions described in @ref{Switching Buffers}, instead of calling @code{set-window-buffer} directly."
-msgstr "アプリケーションを記述する際は、直接@code{set-window-buffer}を呼び出すのではなく、通常は@ref{Switching Buffers}で説明する高レベルの関数を使用するべきである。"
+msgstr "アプリケーションを記述する際には直接@code{set-window-buffer}を呼び出さずに、通常は@ref{Switching Buffers}で説明する高レベルの関数を使用すること。"
 
 #. type: defun
 #: original_texis/windows.texi:2007
 msgid "This runs @code{window-scroll-functions}, followed by @code{window-configuration-change-hook}.  @xref{Window Hooks}."
-msgstr "これは、@code{window-scroll-functions}の後に@code{window-configuration-change-hook}を実行する。@ref{Window Hooks}を参照のこと。"
+msgstr "これは@code{window-scroll-functions}の後に@code{window-configuration-change-hook}を実行する。@ref{Window Hooks}を参照のこと。"
 
 #. type: defvar
 #: original_texis/windows.texi:2009
@@ -3196,7 +3180,7 @@ msgstr "buffer-display-count"
 #. type: defvar
 #: original_texis/windows.texi:2013
 msgid "This buffer-local variable records the number of times a buffer has been displayed in a window.  It is incremented each time @code{set-window-buffer} is called for the buffer."
-msgstr "このバッファーローカル変数は、ウィンドウ内にバッファーが表示された回数を記録する。。これは、そのバッファーにたいして@code{set-window-buffer}が呼び出されるたびに増分される"
+msgstr "このバッファーローカル変数はウィンドウ内にバッファーが表示された回数を記録する。。これはそのバッファーにたいして@code{set-window-buffer}が呼び出されるたびに増分される"
 
 #. type: defvar
 #: original_texis/windows.texi:2015
@@ -3207,7 +3191,7 @@ msgstr "buffer-display-time"
 #. type: defvar
 #: original_texis/windows.texi:2021
 msgid "This buffer-local variable records the time at which a buffer was last displayed in a window.  The value is @code{nil} if the buffer has never been displayed.  It is updated each time @code{set-window-buffer} is called for the buffer, with the value returned by @code{current-time} (@pxref{Time of Day})."
-msgstr "このバッファーローカル変数は、バッファーがウィンドウに最後に表示された時刻を記録する。バッファーが表示されたことがない場合は、@code{nil}をリターンする。これは、そのバッファーにたいして@code{set-window-buffer}が呼び出されるたびに、@code{current-time}がリターンする値により更新される(@ref{Time of Day}を参照)。"
+msgstr "このバッファーローカル変数はバッファーがウィンドウに最後に表示された時刻を記録する。バッファーが表示されたことがなければ@code{nil}をリターンする。これはそのバッファーにたいして@code{set-window-buffer}が呼び出されるたびに@code{current-time}がリターンする値により更新される(@ref{Time of Day}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:2023
@@ -3218,42 +3202,42 @@ msgstr "get-buffer-window &optional buffer-or-name all-frames"
 #. type: defun
 #: original_texis/windows.texi:2028
 msgid "This function returns the first window displaying @var{buffer-or-name} in the cyclic ordering of windows, starting from the selected window (@pxref{Cyclic Window Ordering}).  If no such window exists, the return value is @code{nil}."
-msgstr "この関数は、ウィンドウのサイクル順内で、選択されたウィンドウを起点に、@var{buffer-or-name}を表示する最初のウィンドウをリターンする.<(@ref{Cyclic Window Ordering}を参照)。そのようなウィンドウが存在しない場合、リターン値は@code{nil}となる。"
+msgstr "この関数はウィンドウのサイクル順内で選択されたウィンドウを起点に、@var{buffer-or-name}を表示する最初のウィンドウをリターンする(@ref{Cyclic Window Ordering}を参照)。そのようなウィンドウが存在しなければリターン値は@code{nil}。"
 
 #. type: defun
 #: original_texis/windows.texi:2033
 msgid "@var{buffer-or-name} should be a buffer or the name of a buffer; if omitted or @code{nil}, it defaults to the current buffer.  The optional argument @var{all-frames} specifies which windows to consider:"
-msgstr "@var{buffer-or-name}はバッファーか、バッファーの名前であること。省略または@code{nil}の場合のデフォルトは、カレントバッファーである。オプション引数@var{all-frames}は、考慮するウィンドウを指定する。"
+msgstr "@var{buffer-or-name}はバッファーかバッファーの名前であること。省略または@code{nil}の場合のデフォルトはカレントバッファー。オプション引数@var{all-frames}には考慮するウィンドウを指定する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2037
 msgid "@code{t} means consider windows on all existing frames."
-msgstr "@code{t}は、すべての既存フレーム上のウィンドウを考慮することを意味する。"
+msgstr "@code{t}はすべての既存フレーム上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2039 original_texis/windows.texi:2386
 msgid "@code{visible} means consider windows on all visible frames."
-msgstr "@code{visible}は、すべての可視フレーム上のウィンドウを考慮することを意味する。"
+msgstr "@code{visible}はすべての可視フレーム上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2041 original_texis/windows.texi:2388
 msgid "0 means consider windows on all visible or iconified frames."
-msgstr "0は、すべての可視またはアイコン化されたフレーム上のウィンドウを考慮することを意味する。"
+msgstr "0はすべての可視またはアイコン化されたフレーム上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2043 original_texis/windows.texi:2390
 msgid "A frame means consider windows on that frame only."
-msgstr "フレームを指定した場合は、そのフレーム上のウィンドウだけを考慮することを意味する。"
+msgstr "フレームを指定すると、そのフレーム上のウィンドウだけを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2045
 msgid "Any other value means consider windows on the selected frame."
-msgstr "その他の値は、選択されたフレーム上のウィンドウを考慮することを意味する。"
+msgstr "その他の値は選択されたフレーム上のウィンドウを考慮することを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:2051
 msgid "Note that these meanings differ slightly from those of the @var{all-frames} argument to @code{next-window} (@pxref{Cyclic Window Ordering}).  This function may be changed in a future version of Emacs to eliminate this discrepancy."
-msgstr "これらの意味は、@code{next-window}の@var{all-frames}引数の場合とは若干異なることに注意されたい(@ref{Cyclic Window Ordering}を参照)。この不一致の解消のために、EEmacsの将来のバージョンにおいて、この関数は変更されるかもしれない。"
+msgstr "これらの意味は@code{next-window}の@var{all-frames}引数の場合とは若干異なることに注意(@ref{Cyclic Window Ordering}を参照)。この不一致の解消のためにEmacsの将来のバージョンにおいて、この関数は変更されるかもしれない。"
 
 #. type: defun
 #: original_texis/windows.texi:2053
@@ -3263,15 +3247,13 @@ msgstr "get-buffer-window-list &optional buffer-or-name minibuf all-frames"
 
 #. type: defun
 #: original_texis/windows.texi:2060
-#, fuzzy
-#| msgid "This function returns a list of all windows currently displaying @var{buffer-or-name}.  @var{buffer-or-name} should be a buffer or the name of an existing buffer.  If omitted or @code{nil}, it defaults to the current buffer."
 msgid "This function returns a list of all windows currently displaying @var{buffer-or-name}.  @var{buffer-or-name} should be a buffer or the name of an existing buffer.  If omitted or @code{nil}, it defaults to the current buffer.  If the currently selected window displays @var{buffer-or-name}, it will be the first in the list returned by this function."
-msgstr "この関数は、その時点で@var{buffer-or-name}を表示する、すべてのウィンドウのリストをリターンする。@var{buffer-or-name}はバッファー、または既存バッファーの名前であること。省略または@code{nil}の場合のデフォルトは、カレントバッファーである。"
+msgstr "この関数はその時点で@var{buffer-or-name}を表示している、すべてのウィンドウのリストをリターンする。@var{buffer-or-name}はバッファーまたは既存バッファーの名前であること。省略または@code{nil}の場合のデフォルトはカレントバッファー。カレントで選択されたウィンドウが@var{buffer-or-name}を表示していれば、それはこの関数がリターンするリストの先頭となる。"
 
 #. type: defun
 #: original_texis/windows.texi:2065
 msgid "The arguments @var{minibuf} and @var{all-frames} have the same meanings as in the function @code{next-window} (@pxref{Cyclic Window Ordering}).  Note that the @var{all-frames} argument does @emph{not} behave exactly like in @code{get-buffer-window}."
-msgstr "引数@var{minibuf}と@var{all-frames}は、関数@code{next-window}の場合と同じ意味をもつ(@ref{Cyclic Window Ordering}を参照)。@var{all-frames}引数は、@code{get-buffer-window}の場合と正確に同じようには@emph{振る舞わない}ことに注意すること。"
+msgstr "引数@var{minibuf}と@var{all-frames}は、関数@code{next-window}の場合と同じ意味をもつ(@ref{Cyclic Window Ordering}を参照)。@var{all-frames}引数は、@code{get-buffer-window}の場合と正確に同じようには@emph{振る舞わない}ことに注意。"
 
 #. type: deffn
 #: original_texis/windows.texi:2067
@@ -3282,12 +3264,12 @@ msgstr "Command replace-buffer-in-windows &optional buffer-or-name"
 #. type: deffn
 #: original_texis/windows.texi:2072
 msgid "This command replaces @var{buffer-or-name} with some other buffer, in all windows displaying it.  @var{buffer-or-name} should be a buffer, or the name of an existing buffer; if omitted or @code{nil}, it defaults to the current buffer."
-msgstr "このコマンドは、@var{buffer-or-name}を表示しているすべてのウィンドウで、それを他の何らかのバッファーに置き換える。@var{buffer-or-name}はバッファー、または既存のバッファーの名前であること。省略または@code{nil}の場合のデフォルトは、カレントバッファーである。"
+msgstr "このコマンドは@var{buffer-or-name}を表示しているすべてのウィンドウで、それを他の何らかのバッファーに置き換える。@var{buffer-or-name}はバッファーまたは既存のバッファーの名前であること。省略または@code{nil}の場合のデフォルトはカレントバッファー。"
 
 #. type: deffn
 #: original_texis/windows.texi:2080
 msgid "The replacement buffer in each window is chosen via @code{switch-to-prev-buffer} (@pxref{Window History}).  Any dedicated window displaying @var{buffer-or-name} is deleted if possible (@pxref{Dedicated Windows}).  If such a window is the only window on its frame and there are other frames on the same terminal, the frame is deleted as well.  If the dedicated window is the only window on the only frame on its terminal, the buffer is replaced anyway."
-msgstr "各ウィンドウで置き換えられるバッファーは、@code{switch-to-prev-buffer}を通じて選択される(@ref{Window History}を参照)。@var{buffer-or-name}を表示している専用ウィンドウはすべて、可能なら削除される(@ref{Dedicated Windows}を参照)。そのようなウィンドウがそのフレームで唯一のウィンドウで、かつ同一端末上に他のフレームが存在する場合は、そのフレームも同様に削除される。その端末上の唯一のフレームの唯一のウィンドウの場合は、いずれにせよそのバッファーは置き換えられる。"
+msgstr "各ウィンドウで置き換えられるバッファーは@code{switch-to-prev-buffer}を通じて選択される(@ref{Window History}を参照)。@var{buffer-or-name}を表示している専用ウィンドウは可能ならすべて削除される(@ref{Dedicated Windows}を参照)。そのようなウィンドウがそのフレームで唯一のウィンドウで、かつ同一端末上に他のフレームが存在する場合には、そのフレームも同様に削除される。その端末上の唯一のフレームの唯一のウィンドウの場合は、いずれにせよそのバッファーは置き換えられる。"
 
 #. type: section
 #: original_texis/windows.texi:2084
@@ -3310,12 +3292,12 @@ msgstr "displaying a buffer"
 #. type: Plain text
 #: original_texis/windows.texi:2093
 msgid "This section describes high-level functions for switching to a specified buffer in some window.  In general, ``switching to a buffer'' means to (1) show the buffer in some window, (2) make that window the selected window (and its frame the selected frame), and (3) make the buffer the current buffer."
-msgstr "このセクションでは、あるウィンドウ内で特定のバッファーにスイッチするための、高レベルな関数について説明します。``バッファーをスイッチする''とは一般的に、(1)そのバッファーをあるウィンドウに表示して、(2)そのウィンドウを選択されたウィンドウとし(かつそのフレームを選択されたフレームとし、(3)そのバッファーウィンドウカレントバッファーにすることを意味します。"
+msgstr "このセクションでは、あるウィンドウ内で特定のバッファーにスイッチするための高レベルな関数について説明します。``バッファーをスイッチする''とは一般的に、(1)そのバッファーをあるウィンドウに表示して、(2)そのウィンドウを選択されたウィンドウとし(かつそのフレームを選択されたフレームとし)、(3)そのバッファーウィンドウカレントバッファーにすることを意味します。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2101
 msgid "Do @emph{not} use these functions to make a buffer temporarily current just so a Lisp program can access or modify it.  They have side-effects, such as changing window histories (@pxref{Window History}), which will surprise the user if used that way.  If you want to make a buffer current to modify it in Lisp, use @code{with-current-buffer}, @code{save-current-buffer}, or @code{set-buffer}.  @xref{Current Buffer}."
-msgstr "Lispプログラムがアクセスや変更できるように、バッファーを一時的にカレントにするのにこれらの関数を@emph{使用しないでください}。これらはウィンドウヒストリー(@ref{Window History}を参照)の変更のような副作用をもつので、そのような方法での使用はユーザーを驚かせることになるでしょう。バッファーをLispで変更するためにカレントにしたい場合は@code{with-current-buffer}、@code{save-current-buffer}、@code{set-buffer}を使用します。@ref{Current Buffer}を参照してください。"
+msgstr "Lispプログラムがアクセスや変更できるように、バッファーを一時的にカレントにするためにこれらの関数を@emph{使用しないでください}。これらはウィンドウヒストリー(@ref{Window History}を参照)の変更のような副作用をもつので、そのような方法での使用はユーザーを驚かせることになるでしょう。バッファーをLispで変更するためにカレントにしたければ@code{with-current-buffer}、@code{save-current-buffer}、@code{set-buffer}を使用してください。@ref{Current Buffer}を参照してください。"
 
 #. type: deffn
 #: original_texis/windows.texi:2102
@@ -3326,88 +3308,85 @@ msgstr "Command switch-to-buffer buffer-or-name &optional norecord force-same-wi
 #. type: deffn
 #: original_texis/windows.texi:2107
 msgid "This command attempts to display @var{buffer-or-name} in the selected window and make it the current buffer.  It is often used interactively (as the binding of @kbd{C-x b}), as well as in Lisp programs.  The return value is the buffer switched to."
-msgstr "このコマンドは、選択されたウィンドウ内で@var{buffer-or-name}を表示して、それをカレントバッファーにしようと試みる。これはよくインタラクティブ(@kbd{C-x b}のバインディングで)に使用され、同様にLispプログラムでも使用される。リターン値はスイッチしたバッファーである。"
+msgstr "このコマンドは選択されたウィンドウ内で@var{buffer-or-name}を表示して、それをカレントバッファーにしようと試みる。これはよくインタラクティブ(@kbd{C-x b}のバインディングで)に使用され、同様にLispプログラムでも使用される。リターン値はスイッチしたバッファー。"
 
 #. type: deffn
 #: original_texis/windows.texi:2114 original_texis/windows.texi:2232
 msgid "If @var{buffer-or-name} is @code{nil}, it defaults to the buffer returned by @code{other-buffer} (@pxref{Buffer List}).  If @var{buffer-or-name} is a string that is not the name of any existing buffer, this function creates a new buffer with that name; the new buffer's major mode is determined by the variable @code{major-mode} (@pxref{Major Modes})."
-msgstr "@var{buffer-or-name}が@code{nil}の場合のデフォルトは、@code{other-buffer}によりリターンされるバッファーになる(@ref{Buffer List}を参照)。@var{buffer-or-name}が既存のバッファーの名前でない文字列の場合、この関数はその名前で新たにバッファーを作成する。新たなバッファーのメジャーモードは、変数@code{major-mode}により決定される(@ref{Major Modes}を参照)。"
+msgstr "@var{buffer-or-name}が@code{nil}の場合のデフォルトは@code{other-buffer}によりリターンされるバッファー(@ref{Buffer List}を参照)。@var{buffer-or-name}が既存のバッファーの名前でない文字列なら、この関数はその名前で新たにバッファーを作成する。新たなバッファーのメジャーモードは変数@code{major-mode}により決定される(@ref{Major Modes}を参照)。"
 
 #. type: deffn
 #: original_texis/windows.texi:2119
 msgid "Normally, the specified buffer is put at the front of the buffer list---both the global buffer list and the selected frame's buffer list (@pxref{Buffer List}).  However, this is not done if the optional argument @var{norecord} is non-@code{nil}."
-msgstr "通常は、指定されたバッファーはバッファーリスト --- グローバルバッファーリストと選択されたフレームのバッファーリストの両方の先頭に置かれる(@ref{Buffer List}を参照)。しかし、オプション引数@var{norecord}が非@code{nil}なら、これは行われない。"
+msgstr "通常は指定されたバッファーはバッファーリスト --- グローバルバッファーリストと選択されたフレームのバッファーリストの両方の先頭に置かれる(@ref{Buffer List}を参照)。しかしオプション引数@var{norecord}が非@code{nil}なら、これは行われない。"
 
 #. type: deffn
 #: original_texis/windows.texi:2126
-#, fuzzy
-#| msgid "Sometimes, @code{switch-to-buffer} may be unable to display the buffer in the selected window.  This happens if the selected window is a minibuffer window, or if the selected window is strongly dedicated to its buffer (@pxref{Dedicated Windows}).  In that case, the command normally tries to display the buffer in some other window, by invoking @code{pop-to-buffer} (see below).  However, if the optional argument @var{force-same-window} is non-@code{nil}, it signals an error instead."
 msgid "Sometimes, the selected window may not be suitable for displaying the buffer.  This happens if the selected window is a minibuffer window, or if the selected window is strongly dedicated to its buffer (@pxref{Dedicated Windows}).  In such cases, the command normally tries to display the buffer in some other window, by invoking @code{pop-to-buffer} (see below)."
-msgstr "@code{switch-to-buffer}が、選択されたウィンドウ内にバッファーを表示するのが不可能なことが時折ある。これは、選択されたウィンドウがミニバッファーウィンドウの場合や、選択されたウィンドウがそのバッファーにたいして特に専用(strongly dedicated)な場合に発生する(@ref{Dedicated Windows}を参照)。この場合、このコマンドは@code{pop-to-buffer}(以下参照)を呼び出すことにより、通常は何か他のウィンドウにそのバッファーの表示を試みる。しかし、オプション引数が非@code{nil}なら、かわりにエラーをシグナルする。"
+msgstr "選択されたウィンドウにそのバッファーを表示することが不適切なこともあるだろう。これは選択されたウィンドウがミニバッファーウィンドウの場合、および選択されたウィンドウがそのバッファーに特に専用(@ref{Dedicated Windows}を参照)な場合に発生する。そのようなケースでは、このコマンドは@code{pop-to-buffer} (以下参照)を呼び出すことにより、通常は別のウィンドウにバッファーの表示を試みる。"
 
 #. type: deffn
 #: original_texis/windows.texi:2135
 msgid "If the optional argument @var{force-same-window} is non-@code{nil} and the selected window is not suitable for displaying the buffer, this function always signals an error when called non-interactively.  In interactive use, if the selected window is a minibuffer window, this function will try to use some other window instead.  If the selected window is strongly dedicated to its buffer, the option @code{switch-to-buffer-in-dedicated-window} described next can be used to proceed."
-msgstr ""
+msgstr "オプション引数@var{force-same-window}が非@code{nil}、かつ選択されたウィンドウがそのバッファーの表示に不適切なら、非インタラクティブに呼び出された際にはこの関数は常にエラーをシグナルする。インタクラクティブな使用においては、もし選択されたウィンドウがミニバッファーウィンドウなら、この関数はかわりに別のウィンドウの使用を試みる。選択されたウィンドウがそのバッファーにたいして特に専用なら、次に説明するオプション@code{switch-to-buffer-in-dedicated-window}が使用される。"
 
 #. type: defopt
 #: original_texis/windows.texi:2137
-#, fuzzy, no-wrap
-#| msgid "switch-to-buffer-preserve-window-point"
+#, no-wrap
 msgid "switch-to-buffer-in-dedicated-window"
-msgstr "switch-to-buffer-preserve-window-point"
+msgstr "switch-to-buffer-in-dedicated-window"
 
 #. type: defopt
 #: original_texis/windows.texi:2141
 msgid "This option, if non-@code{nil}, allows @code{switch-to-buffer} to proceed when called interactively and the selected window is strongly dedicated to its buffer."
-msgstr ""
+msgstr "このオプションが非@code{nil}なら、@code{switch-to-buffer}がインタラクティブに呼び出されて、かつ選択されたウィンドウがそのバッファーに特に専用な際に、処理を先に進めることが許される、"
 
 #. type: defopt
 #: original_texis/windows.texi:2143
 msgid "The following values are respected:"
-msgstr ""
+msgstr "以下の値が許される:"
 
 #. type: table
 #: original_texis/windows.texi:2147
 msgid "Disallows switching and signals an error as in non-interactive use."
-msgstr ""
+msgstr "切り替えを許さず非インタラクティブな使用ではエラーをシグナルする。"
 
 #. type: item
 #: original_texis/windows.texi:2148
 #, no-wrap
 msgid "prompt"
-msgstr ""
+msgstr "prompt"
 
 #. type: table
 #: original_texis/windows.texi:2150
 msgid "Prompts the user whether to allow switching."
-msgstr ""
+msgstr "切り替えを許すかどうかユーザーに確認を求める。"
 
 #. type: item
 #: original_texis/windows.texi:2151
 #, no-wrap
 msgid "pop"
-msgstr ""
+msgstr "pop"
 
 #. type: table
 #: original_texis/windows.texi:2153
 msgid "Invokes @code{pop-to-buffer} to proceed."
-msgstr ""
+msgstr "処理を行うために@code{pop-to-buffer}を呼び出す。"
 
 #. type: table
 #: original_texis/windows.texi:2156
 msgid "Marks the selected window as non-dedicated and proceeds."
-msgstr ""
+msgstr "選択されたウィンドウを非専用としてマークして処理を進める。"
 
 #. type: defopt
 #: original_texis/windows.texi:2160
 msgid "This option does not affect non-interactive calls of @code{switch-to-buffer}."
-msgstr ""
+msgstr "このオプションは非インタラクティブな@code{switch-to-buffer}の呼び出しには影響しない。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2164
 msgid "By default, @code{switch-to-buffer} shows the buffer at its position of @code{point}.  This behavior can be tuned using the following option."
-msgstr "デフォルトでは、@code{switch-to-buffer}はバッファーの@code{point}位置でバッファーを表示します。この振る舞いは、以下のオプションを使用して調整できます。"
+msgstr "デフォルトでは@code{switch-to-buffer}はバッファーの@code{point}位置でバッファーを表示します。この振る舞いは以下のオプションを使用して調整可能です。"
 
 #. type: defopt
 #: original_texis/windows.texi:2165
@@ -3418,12 +3397,12 @@ msgstr "switch-to-buffer-preserve-window-point"
 #. type: defopt
 #: original_texis/windows.texi:2174
 msgid "If this variable is @code{nil}, @code{switch-to-buffer} displays the buffer specified by @var{buffer-or-name} at the position of that buffer's @code{point}.  If this variable is @code{already-displayed}, it tries to display the buffer at its previous position in the selected window, provided the buffer is currently displayed in some other window on any visible or iconified frame.  If this variable is @code{t}, @code{switch-to-buffer} unconditionally tries to display the buffer at its previous position in the selected window."
-msgstr "この変数が@code{nil}の場合、@code{switch-to-buffer}は@var{buffer-or-name}により指定されたバッファーを、そのバッファーの@code{point}位置で表示する。この変数が@code{already-displayed}なら、そのバッファーが任意の可視またはアイコン化されたフレーム上の他のウィンドウで表示されている場合は、選択されたウィンドウ内の以前の位置でのバッファーの表示を試みる。この変数が@code{t}なら、@code{switch-to-buffer}は選択されたウィンドウ内の以前の位置でそのバッファーを表示しようと試みる。"
+msgstr "この変数が@code{nil}なら、@code{switch-to-buffer}は@var{buffer-or-name}により指定されたバッファーを、そのバッファーの@code{point}位置で表示する。この変数が@code{already-displayed}なら、そのバッファーが任意の可視またはアイコン化されたフレーム上の他のウィンドウで表示されていれば、選択されたウィンドウ内の以前の位置でバッファーの表示を試みる。この変数が@code{t}なら、@code{switch-to-buffer}は選択されたウィンドウ内の以前の位置でそのバッファーを表示しようと試みる。"
 
 #. type: defopt
 #: original_texis/windows.texi:2179
 msgid "This variable is ignored if the buffer is already displayed in the selected window or never appeared in it before, or if @code{switch-to-buffer} calls @code{pop-to-buffer} to display the buffer."
-msgstr "この変数は、バッファーがすでに選択されたウィンドウに表示されているか、これまで表示されたことがない、またはバッファーを表示するために@code{switch-to-buffer}が@code{pop-to-buffer}を呼び出した場合は無視される。"
+msgstr "この変数はバッファーがすでに選択されたウィンドウに表示されている、これまで表示されたことがない、またはバッファーを表示するために@code{switch-to-buffer}が@code{pop-to-buffer}を呼び出した場合には無視される。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2183
@@ -3439,17 +3418,17 @@ msgstr "Command switch-to-buffer-other-window buffer-or-name &optional norecord"
 #. type: deffn
 #: original_texis/windows.texi:2188
 msgid "This function displays the buffer specified by @var{buffer-or-name} in some window other than the selected window.  It uses the function @code{pop-to-buffer} internally (see below)."
-msgstr "この関数は、@var{buffer-or-name}で指定されたバッファーを、選択されたウィンドウ以外の、別のウィンドウに表示する。これは関数@code{pop-to-buffer}(以下参照)を内部で使用する。"
+msgstr "この関数は@var{buffer-or-name}で指定されたバッファーを、選択されたウィンドウ以外の別のウィンドウに表示する。これは関数@code{pop-to-buffer}(以下参照)を内部で使用する。"
 
 #. type: deffn
 #: original_texis/windows.texi:2192
 msgid "If the selected window already displays the specified buffer, it continues to do so, but another window is nonetheless found to display it as well."
-msgstr "選択されたウィンドウが指定されたバッファーをすでに表示している場合は表示を続けるが、見つかった他のウィンドウも同様にそのバッファーを表示する。"
+msgstr "選択されたウィンドウが指定されたバッファーをすでに表示していれば表示を続けるが、見つかった他のウィンドウも同様にそのバッファーを表示する。"
 
 #. type: deffn
 #: original_texis/windows.texi:2195 original_texis/windows.texi:2209
 msgid "The @var{buffer-or-name} and @var{norecord} arguments have the same meanings as in @code{switch-to-buffer}."
-msgstr "引数@var{buffer-or-name}と@var{norecord}は、@code{switch-to-buffer}の場合と同じ意味をもつ。"
+msgstr "引数@var{buffer-or-name}と@var{norecord}は@code{switch-to-buffer}の場合と同じ意味をもつ。"
 
 #. type: deffn
 #: original_texis/windows.texi:2197
@@ -3460,17 +3439,17 @@ msgstr "Command switch-to-buffer-other-frame buffer-or-name &optional norecord"
 #. type: deffn
 #: original_texis/windows.texi:2201
 msgid "This function displays the buffer specified by @var{buffer-or-name} in a new frame.  It uses the function @code{pop-to-buffer} internally (see below)."
-msgstr "この関数は、@var{buffer-or-name}で指定されたバッファーを、新たなフレームに表示する。これは関数@code{pop-to-buffer}(以下参照)を内部で使用する。"
+msgstr "この関数は@var{buffer-or-name}で指定されたバッファーを新たなフレームに表示する。これは関数@code{pop-to-buffer} (以下参照)を内部で使用する。"
 
 #. type: deffn
 #: original_texis/windows.texi:2206
 msgid "If the specified buffer is already displayed in another window, in any frame on the current terminal, this switches to that window instead of creating a new frame.  However, the selected window is never used for this."
-msgstr "指定されたバッファーがすでにカレント端末上の任意のフレームの他のウィンドウに表示されている場合、これはフレームを新たに作成せずにそのウィンドウに切り替える。しかし、これを行うために選択されたウィンドウを使用することは決してない。"
+msgstr "指定されたバッファーがすでにカレント端末上の任意のフレームの他のウィンドウに表示されている場合には、フレームを新たに作成せずにそのウィンドウに切り替える。しかしこれを行うために選択されたウィンドウを使用することは決してない。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2217
 msgid "The above commands use the function @code{pop-to-buffer}, which flexibly displays a buffer in some window and selects that window for editing.  In turn, @code{pop-to-buffer} uses @code{display-buffer} for displaying the buffer.  Hence, all the variables affecting @code{display-buffer} will affect it as well.  @xref{Choosing Window}, for the documentation of @code{display-buffer}."
-msgstr "上述したコマンドは、任意のウィンドウにバッファーを柔軟に表示して、編集用にそのウィンドウを選択する関数@code{pop-to-buffer}を使用しています。次に、@code{pop-to-buffer}はバッファーの表示に@code{display-buffer}を使用します。したがって、@code{display-buffer}に影響する変数も、同様に影響します。@code{display-buffer}のドキュメントについては、@ref{Choosing Window}を参照してください。"
+msgstr "上述したコマンドは任意のウィンドウにバッファーを柔軟に表示して、編集用にそのウィンドウを選択する関数@code{pop-to-buffer}を使用しています。次に@code{pop-to-buffer}はバッファーの表示に@code{display-buffer}を使用します。したがって@code{display-buffer}に影響する変数も同様に影響します。@code{display-buffer}のドキュメントについては@ref{Choosing Window}を参照してください。"
 
 #. type: deffn
 #: original_texis/windows.texi:2218
@@ -3480,20 +3459,18 @@ msgstr "Command pop-to-buffer buffer-or-name &optional action norecord"
 
 #. type: deffn
 #: original_texis/windows.texi:2225
-#, fuzzy
-#| msgid "This function makes @var{buffer-or-name} the current buffer and displays it in some window, preferably not the window previously selected.  It then selects the displaying window.  If that window is on a different graphical frame, that frame is given input focus if possible (@pxref{Input Focus}).  The return value is the buffer that was switched to."
 msgid "This function makes @var{buffer-or-name} the current buffer and displays it in some window, preferably not the window currently selected.  It then selects the displaying window.  If that window is on a different graphical frame, that frame is given input focus if possible (@pxref{Input Focus}).  The return value is the buffer that was switched to."
-msgstr "この関数は、@var{buffer-or-name}をカレントバッファーにして、なるべく前に選択されていたウィンドウではないウィンドウにそれを表示する。そしてその後に、表示しているウィンドウを選択する。そのウィンドウが別のグラフィカルなフレーム上にある場合は、可能ならそのフレームが入力フォーカスを与えられる(@ref{Input Focus}を参照)。リターン値は、切り替えたバッファーである。"
+msgstr "この関数は@var{buffer-or-name}をカレントバッファーにして、なるべくカレントで選択されていたウィンドウではないウィンドウにそれを表示する。そしてその後に表示しているウィンドウを選択する。そのウィンドウが別のグラフィカルなフレーム上にある場合には、可能ならそのフレームが入力フォーカスを与えられる(@ref{Input Focus}を参照)。リターン値は切り替えたバッファー。"
 
 #. type: deffn
 #: original_texis/windows.texi:2238
 msgid "If @var{action} is non-@code{nil}, it should be a display action to pass to @code{display-buffer} (@pxref{Choosing Window}).  Alternatively, a non-@code{nil}, non-list value means to pop to a window other than the selected one---even if the buffer is already displayed in the selected window."
-msgstr "@var{action}が非@code{nil}の場合、それは@code{display-buffer}に渡すディスプレイアクション(display action)であること(@ref{Choosing Window}を参照)。非@code{nil}、非リスト値の場合は、たとえそのバッファーがすでに選択されたウィンドウに表示されていたとしても、選択されたウィンドウではなく、ウィンドウをポップ(pop)することを意味する。"
+msgstr "@var{action}が非@code{nil}なら、それは@code{display-buffer}に渡すディスプレイアクション(display action)であること(@ref{Choosing Window}を参照)。非@code{nil}か非リスト値なら、たとえそのバッファーがすでに選択されたウィンドウに表示されていたとしても、選択されたウィンドウではなく別のウィンドウをポップ(pop)することを意味する。"
 
 #. type: deffn
 #: original_texis/windows.texi:2241
 msgid "Like @code{switch-to-buffer}, this function updates the buffer list unless @var{norecord} is non-@code{nil}."
-msgstr "@code{switch-to-buffer}と同様、@var{norecord}が@code{nil}なら、この関数はバッファーリストを更新する。"
+msgstr "この関数は@code{switch-to-buffer}と同じように、@var{norecord}が@code{nil}ならバッファーリストを更新する。"
 
 #. type: section
 #: original_texis/windows.texi:2245
@@ -3504,7 +3481,7 @@ msgstr "Choosing a Window for Display"
 #. type: Plain text
 #: original_texis/windows.texi:2253
 msgid "The command @code{display-buffer} flexibly chooses a window for display, and displays a specified buffer in that window.  It can be called interactively, via the key binding @kbd{C-x 4 C-o}.  It is also used as a subroutine by many functions and commands, including @code{switch-to-buffer} and @code{pop-to-buffer} (@pxref{Switching Buffers})."
-msgstr "コマンド@code{display-buffer}は、表示のために柔軟にウィンドウを選択して、そのウィンドウ内に指定されたバッファーを表示します。これは、キーバインディング@kbd{C-x 4 C-o}を通じて、インタラクティブに呼び出すことができます。また、@code{switch-to-buffer}や@code{pop-to-buffer}を含む、多くの関数およびコマンドにより、サブルーチンとしても使用されます(@ref{Switching Buffers}を参照)。"
+msgstr "コマンド@code{display-buffer}は表示のために柔軟にウィンドウを選択して、そのウィンドウ内に指定されたバッファーを表示します。これはキーバインディング@kbd{C-x 4 C-o}を通じてインタラクティブに呼び出すことができます。また@code{switch-to-buffer}や@code{pop-to-buffer}を含む多くの関数やコマンドにからサブルーチンとしても使用されます(@ref{Switching Buffers}を参照)。"
 
 #. type: cindex
 #: original_texis/windows.texi:2254
@@ -3526,20 +3503,18 @@ msgstr "action alist, for @code{display-buffer}"
 
 #. type: Plain text
 #: original_texis/windows.texi:2263
-#, fuzzy
-#| msgid "This command performs several complex steps to find a window to display in.  These steps are described by means of @dfn{display actions}, which have the form @code{(@var{function} . @var{alist})}.  Here, @var{function} is either a function or a list of functions, which we refer to as @dfn{action functions}; @var{alist} is an association list, which we refer to as @dfn{action alists}."
 msgid "This command performs several complex steps to find a window to display in.  These steps are described by means of @dfn{display actions}, which have the form @code{(@var{function} . @var{alist})}.  Here, @var{function} is either a function or a list of functions, which we refer to as @dfn{action functions}; @var{alist} is an association list, which we refer to as an @dfn{action alist}."
-msgstr "このコマンドは、ウィンドウ内に表示するウィンドウを探すために、いくつかの複雑なステップを実行します。これらのステップは@dfn{ディスプレイアクション(display actions)}を用いて記述されます。ディスプレイアクションは、@code{(@var{function} . @var{alist})}という形式をもちます。ここで、@var{function}は関数、または関数リストで、わたしたちはこれを@dfn{アクション関数(action functions)}として参照します。@var{alist}は連想リスト(association list)で、わたしたちはこれを@dfn{アクションalist(action alists)}として参照します。"
+msgstr "このコマンドはウィンドウ内に表示するウィンドウを探すために、いくつかの複雑なステップを実行します。これらのステップは@dfn{ディスプレイアクション(display actions)}を用いて記述されます。ディスプレイアクションは@code{(@var{function} . @var{alist})}という形式をもちます。ここで、@var{function}は関数か関数リストであり、わたしたちはこれを@dfn{アクション関数(action functions)}として参照します。@var{alist}は連想リスト(association list)で、わたしたちはこれを@dfn{アクションalist(action alist)}として参照します。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2270
 msgid "An action function accepts two arguments: the buffer to display and an action alist.  It attempts to display the buffer in some window, picking or creating a window according to its own criteria.  If successful, it returns the window; otherwise, it returns @code{nil}.  @xref{Display Action Functions}, for a list of predefined action functions."
-msgstr "アクション関数は、表示するバッファーと、アクションalistという、2つの引数を受け取ります。これは、自身の条件にしたがってウィンドウウィンドウ選択、または作成して、バッファーをウィンドウ内に表示します。成功した場合はそのウィンドウ、それ以外は@code{nil}をリターンします。事前定義されたアクション関数については、@ref{Display Action Functions}を参照してください。"
+msgstr "アクション関数は表示するバッファーとアクションalistという、2つの引数を受け取ります。これは自身の条件にしたがってウィンドウウィンドウ選択または作成して、バッファーをウィンドウ内に表示します。成功した場合はそのウィンドウ、それ以外は@code{nil}をリターンします。事前定義されたアクション関数については@ref{Display Action Functions}を参照してください。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2275
 msgid "@code{display-buffer} works by combining display actions from several sources, and calling the action functions in turn, until one of them manages to display the buffer and returns a non-@code{nil} value."
-msgstr "@code{display-buffer}は、複数ソースからのディスプレイアクションを組み合わせて、アクション関数のいずれか1つがバッファーの表示を管理して非@code{nil}値をリターンするまで、アクション関数を順に呼び出します。"
+msgstr "@code{display-buffer}は複数ソースからのディスプレイアクションを組み合わせて、アクション関数のいずれか1つがバッファーの表示を管理して非@code{nil}値をリターンするまでアクション関数を順に呼び出します。"
 
 #. type: deffn
 #: original_texis/windows.texi:2276
@@ -3550,12 +3525,12 @@ msgstr "Command display-buffer buffer-or-name &optional action frame"
 #. type: deffn
 #: original_texis/windows.texi:2281
 msgid "This command makes @var{buffer-or-name} appear in some window, without selecting the window or making the buffer current.  The argument @var{buffer-or-name} must be a buffer or the name of an existing buffer.  The return value is the window chosen to display the buffer."
-msgstr "このコマンドは、ウィンドウウィンドウ選択したり、そのバッファーをカレントにすることなく、@var{buffer-or-name}をウィンドウに表示させる。引数@var{buffer-or-name}はバッファー、または既存のバッファーの名前でなければならない。リターン値は、そのバッファーを表示するために選ばれたウィンドウである。"
+msgstr "このコマンドは、ウィンドウウィンドウ選択したり、そのバッファーをカレントにすることなく、@var{buffer-or-name}をウィンドウに表示させる。引数@var{buffer-or-name}はバッファー既存のバッファーの名前でなければならない。リターン値はそのバッファーを表示するために選ばれたウィンドウ。"
 
 #. type: deffn
 #: original_texis/windows.texi:2286
 msgid "The optional argument @var{action}, if non-@code{nil}, should normally be a display action (described above).  @code{display-buffer} builds a list of action functions and an action alist, by consolidating display actions from the following sources (in order):"
-msgstr "オプション引数@var{action}が非@code{nil}の場合、それは通常はディスプレイアクション(上述)であること。@code{display-buffer}は、以下のソース(記載順)からディスプレイアクションを集約して、アクション関数リストとアクションalistを構築する:"
+msgstr "オプション引数@var{action}が非@code{nil}なら、それは通常はディスプレイアクション(上述)であること。@code{display-buffer}は以下のソース(記載順)からディスプレイアクションを集約して、アクション関数リストとアクションalistを構築する:"
 
 #. type: itemize
 #: original_texis/windows.texi:2290
@@ -3585,17 +3560,17 @@ msgstr "定数@code{display-buffer-fallback-action}。"
 #. type: deffn
 #: original_texis/windows.texi:2311
 msgid "Each action function is called in turn, passing the buffer as the first argument and the combined action alist as the second argument, until one of the functions returns non-@code{nil}.  The caller can pass @code{(allow-no-window . t)} as an element of the action alist to indicate its readiness to handle the case of not displaying the buffer in a window."
-msgstr "各アクション関数は、いずれかが非@code{nil}をリターンするまで、第1引数にバッファー、第2引数に組み合わせられたアクションalistで、順番に呼び出される。呼び出し側は、ウィンドウ内にバッファーを表示しない場合を処理する用意があることを示すために、アクションalistの要素として@code{(allow-no-window . t)}を渡すことができる。"
+msgstr "各アクション関数は、いずれかが非@code{nil}をリターンするまで第1引数にバッファー、第2引数に組み合わせられたアクションalistで順番に呼び出される。呼び出し側はウィンドウ内にバッファーを表示しない場合を処理する用意があることを示すために、アクションalistの要素として@code{(allow-no-window . t)}を渡すことができる。"
 
 #. type: deffn
 #: original_texis/windows.texi:2317
 msgid "The argument @var{action} can also have a non-@code{nil}, non-list value.  This has the special meaning that the buffer should be displayed in a window other than the selected one, even if the selected window is already displaying it.  If called interactively with a prefix argument, @var{action} is @code{t}."
-msgstr "引数@var{action}には非@code{nil}の非list値も指定できる。これは、たとえ選択されたウィンドウがすでにそのバッファーを表示していても、選択されたウィンドウではない別のウィンドウにバッファーが表示されるべきだという、特別な意味をもつ。プレフィックス引数とともにインタラクティブに呼び出された場合、@var{action}は@code{t}である。"
+msgstr "引数@var{action}には非@code{nil}の非list値も指定できる。これはたとえ選択されたウィンドウがすでにそのバッファーを表示していても、選択されたウィンドウではない別のウィンドウにバッファーが表示されるべきだという特別な意味をもつ。プレフィックス引数とともにインタラクティブに呼び出された場合には、@var{action}は@code{t}である。"
 
 #. type: deffn
 #: original_texis/windows.texi:2323
 msgid "The optional argument @var{frame}, if non-@code{nil}, specifies which frames to check when deciding whether the buffer is already displayed.  It is equivalent to adding an element @code{(reusable-frames . @var{frame})} to the action alist of @var{action}.  @xref{Display Action Functions}."
-msgstr "オプション引数@var{frame}が非@code{nil}の場合は、そのバッファーがすでに表示されているか判断する際、どのフレームをチェックするかを指定する。これは@var{action}のアクションalistに、要素@code{(reusable-frames . @var{frame})}を追加するのと等価である。@ref{Display Action Functions}を参照のこと。"
+msgstr "オプション引数@var{frame}が非@code{nil}なら、そのバッファーがすでに表示されているか判断する際に、どのフレームをチェックするかを指定する。これは@var{action}のアクションalistに要素@code{(reusable-frames . @var{frame})}を追加するのと等価。@ref{Display Action Functions}を参照のこと。"
 
 #. type: defvar
 #: original_texis/windows.texi:2325
@@ -3606,7 +3581,7 @@ msgstr "display-buffer-overriding-action"
 #. type: defvar
 #: original_texis/windows.texi:2329
 msgid "The value of this variable should be a display action, which is treated with the highest priority by @code{display-buffer}.  The default value is empty, i.e., @code{(nil . nil)}."
-msgstr "この変数の値は、@code{display-buffer}により最高の優先順で扱われるディスプレイアクションであること。デフォルト値は空(つまり@code{(nil . nil)})である。"
+msgstr "この変数の値は、@code{display-buffer}により最高の優先順で扱われるディスプレイアクションであること。デフォルト値は空(つまり@code{(nil . nil)})。"
 
 #. type: defopt
 #: original_texis/windows.texi:2331
@@ -3617,7 +3592,7 @@ msgstr "display-buffer-alist"
 #. type: defopt
 #: original_texis/windows.texi:2340
 msgid "The value of this option is an alist mapping conditions to display actions.  Each condition may be either a regular expression matching a buffer name or a function that takes two arguments: a buffer name and the @var{action} argument passed to @code{display-buffer}.  If the name of the buffer passed to @code{display-buffer} either matches a regular expression in this alist or the function specified by a condition returns non-@code{nil}, then @code{display-buffer} uses the corresponding display action to display the buffer."
-msgstr "このオプションの値は、ディスプレイアクションにコンディション(condition: 状態)をマップするalistである。コンディションはそれぞれ、バッファー名にマッチする正規表現か、2つの引数をとる関数で、引数はバッファー名と@code{display-buffer}に渡す@var{action}引数である。@code{display-buffer}に渡されたバッファー名がこのalist内の正規表現にマッチするか、コンディションで指定された関数が非@code{nil}をリターンした場合、@code{display-buffer}はバッファーを表示すために、対応するディスプレイアクションを使用する。"
+msgstr "このオプションの値はディスプレイアクションにコンディション(condition: 状態)をマップするalist。コンディションはそれぞれバッファー名にマッチする正規表現か2つの引数をとる関数であり、引数はバッファー名と@code{display-buffer}に渡す@var{action}引数である。@code{display-buffer}に渡されたバッファー名がこのalist内の正規表現にマッチするか、コンディションで指定された関数が非@code{nil}をリターンした場合、@code{display-buffer}はバッファーを表示すために対応するディスプレイアクションを使用する。"
 
 #. type: defopt
 #: original_texis/windows.texi:2342
@@ -3627,10 +3602,8 @@ msgstr "display-buffer-base-action"
 
 #. type: defopt
 #: original_texis/windows.texi:2346
-#, fuzzy
-#| msgid "The value of this option should be a display action.  This option can be used to define a ``standard'' display action for calls to @code{display-buffer}."
 msgid "The value of this option should be a display action.  This option can be used to define a standard display action for calls to @code{display-buffer}."
-msgstr "このオプションの値は、ディスプレイアクションであること。このオプションは、@code{display-buffer}呼び出しにたいする、``標準''のディスプレイアクションを定義するために使用できる。"
+msgstr "このオプションの値はディスプレイアクションであること。このオプションは@code{display-buffer}呼び出しにたいする標準のディスプレイアクションを定義するために使用できる。"
 
 #. type: defvr
 #: original_texis/windows.texi:2348
@@ -3641,7 +3614,7 @@ msgstr "Constant display-buffer-fallback-action"
 #. type: defvr
 #: original_texis/windows.texi:2351
 msgid "This display action specifies the fallback behavior for @code{display-buffer} if no other display actions are given."
-msgstr "このディスプレイアクションは、@code{display-buffer}にたいして、他のディスプレイアクションが与えられなかった場合の代替え処理を指定する。"
+msgstr "このディスプレイアクションは@code{display-buffer}にたいして、他のディスプレイアクションが与えられなかった場合の代替え処理を指定する。"
 
 #. type: section
 #: original_texis/windows.texi:2355
@@ -3652,7 +3625,7 @@ msgstr "Action Functions for @code{display-buffer}"
 #. type: Plain text
 #: original_texis/windows.texi:2361
 msgid "The following basic action functions are defined in Emacs.  Each of these functions takes two arguments: @var{buffer}, the buffer to display, and @var{alist}, an action alist.  Each action function returns the window if it succeeds, and @code{nil} if it fails."
-msgstr "以下の基本的なアクション関数がEmacs内で定義されています。これらの関数はそれぞれ表示するバッファー@var{buffer}と、アクションalistという、2つの引数をとります。それぞれのアクション関数は、成功した場合はウィンドウ、失敗したら@code{nil}をリターンします。"
+msgstr "以下の基本的なアクション関数がEmacs内で定義されています。これらの関数はそれぞれ表示するバッファー@var{buffer}とアクションalistという2つの引数をとります。それぞれのアクション関数は成功したらウィンドウ、失敗したら@code{nil}をリターンします。"
 
 #. type: defun
 #: original_texis/windows.texi:2362
@@ -3663,7 +3636,7 @@ msgstr "display-buffer-same-window buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2367
 msgid "This function tries to display @var{buffer} in the selected window.  It fails if the selected window is a minibuffer window or is dedicated to another buffer (@pxref{Dedicated Windows}).  It also fails if @var{alist} has a non-@code{nil} @code{inhibit-same-window} entry."
-msgstr "この関数は、選択されたウィンドウ内に、@var{buffer}の表示を試みる。選択されたウィンドウがミニバッファーウィンドウや、他のバッファー専用(@ref{Dedicated Windows}を参照)の場合は失敗する。@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合も失敗する。"
+msgstr "この関数は選択されたウィンドウ内に@var{buffer}の表示を試みる。選択されたウィンドウがミニバッファーウィンドウや他のバッファー専用(@ref{Dedicated Windows}を参照)の場合には失敗する。@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合にも失敗する。"
 
 #. type: defun
 #: original_texis/windows.texi:2369
@@ -3673,40 +3646,38 @@ msgstr "display-buffer-reuse-window buffer alist"
 
 #. type: defun
 #: original_texis/windows.texi:2372
-#, fuzzy
-#| msgid "This function tries to ``display'' @var{buffer} by finding a window that is already displaying it."
 msgid "This function tries to display @var{buffer} by finding a window that is already displaying it."
-msgstr "この関数は、すでに@var{buffer}を表示しているウィンドウを探すことにより、バッファーの``表示''を試みる。"
+msgstr "この関数はすでに@var{buffer}を表示しているウィンドウを探すことによりバッファーの表示を試みる。"
 
 #. type: defun
 #: original_texis/windows.texi:2377
 msgid "If @var{alist} has a non-@code{nil} @code{inhibit-same-window} entry, the selected window is not eligible for reuse.  If @var{alist} contains a @code{reusable-frames} entry, its value determines which frames to search for a reusable window:"
-msgstr "@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合、選択されたウィンドウは再利用に適さない。@var{alist}に@code{reusable-frames}エントリーが含まれる場合、その値により再利用可能なウィンドウをどのフレームで検索するか決定される:"
+msgstr "@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合には、選択されたウィンドウは再利用に適さない。@var{alist}に@code{reusable-frames}エントリーが含まれる場合には、その値により再利用可能なウィンドウをどのフレームで検索するか決定される:"
 
 #. type: itemize
 #: original_texis/windows.texi:2382
 msgid "@code{nil} means consider windows on the selected frame.  (Actually, the last non-minibuffer frame.)"
-msgstr "@code{nil}は、選択されたフレーム(実際には最後の非ミニバッファーフレーム)上のウィンドウを考慮することを意味する。"
+msgstr "@code{nil}は選択されたフレーム(実際には最後の非ミニバッファーフレーム)上のウィンドウを考慮することを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2384
 msgid "@code{t} means consider windows on all frames."
-msgstr "@code{t}は、すべてのフレーム上のウィンドウを考慮することを意味する。"
+msgstr "@code{t}はすべてのフレーム上のウィンドウを考慮することを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:2395
 msgid "Note that these meanings differ slightly from those of the @var{all-frames} argument to @code{next-window} (@pxref{Cyclic Window Ordering})."
-msgstr "これらは、@code{next-window}にたいする@var{all-frames}引数の場合とは若干異なることに注意(@ref{Cyclic Window Ordering}を参照)。"
+msgstr "これらは@code{next-window}にたいする@var{all-frames}引数の場合とは若干異なることに注意(@ref{Cyclic Window Ordering}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:2400
 msgid "If @var{alist} contains no @code{reusable-frames} entry, this function normally searches just the selected frame; however, if the variable @code{pop-up-frames} is non-@code{nil}, it searches all frames on the current terminal.  @xref{Choosing Window Options}."
-msgstr "@var{alist}に@code{reusable-frames}エントリーが含まれない場合、通常この関数は選択されたフレームだけを検索する。しかし、変数@code{pop-up-frames}が非@code{nil}なら、カレント端末上のすべてのフレームを検索する。@ref{Choosing Window Options}を参照。"
+msgstr "@var{alist}に@code{reusable-frames}エントリーが含まれなければ、この関数は通常は選択されたフレームだけを検索する。しかし変数@code{pop-up-frames}が非@code{nil}ならカレント端末上のすべてのフレームを検索する。@ref{Choosing Window Options}を参照。"
 
 #. type: defun
 #: original_texis/windows.texi:2404 original_texis/windows.texi:2423
 msgid "If this function chooses a window on another frame, it makes that frame visible and, unless @var{alist} contains an @code{inhibit-switch-frame} entry (@pxref{Choosing Window Options}), raises that frame if necessary."
-msgstr "この関数が他のフレーム上のウィンドウを選択した場合は、そのフレームを可視にするとともに、@var{alist}が@code{inhibit-switch-frame}エントリー(@ref{Choosing Window Options}を参照)を含んでいなければ、必要ならそのフレームを最前面に移動(raise)する。"
+msgstr "この関数が他のフレーム上のウィンドウを選択した場合には、そのフレームを可視にするとともに、@var{alist}が@code{inhibit-switch-frame}エントリー(@ref{Choosing Window Options}を参照)を含んでいなければ必要ならそのフレームを最前面に移動(raise)する。"
 
 #. type: defun
 #: original_texis/windows.texi:2406
@@ -3717,33 +3688,28 @@ msgstr "display-buffer-pop-up-frame buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2413
 msgid "This function creates a new frame, and displays the buffer in that frame's window.  It actually performs the frame creation by calling the function specified in @code{pop-up-frame-function} (@pxref{Choosing Window Options}).  If @var{alist} contains a @code{pop-up-frame-parameters} entry, the associated value is added to the newly created frame's parameters."
-msgstr "この関数は、新たにフレームを作成して、そのフレームのウィンドウ内にバッファーを表示する。これは実際には、@code{pop-up-frame-function}(@ref{Choosing Window Options}を参照)内で指定された関数を呼び出すことにより、フレーム作成を行う。@var{alist}が@code{pop-up-frame-parameters}エントリーを含む場合は、その連想値(associated value)が新たに作成されたフレームのパラメーターに追加される。"
+msgstr "この関数は新たにフレームを作成して、そのフレームのウィンドウ内にバッファーを表示する。これは実際には@code{pop-up-frame-function} (@ref{Choosing Window Options}を参照)内で指定された関数を呼び出すことによりフレーム作成の処理を行う。@var{alist}が@code{pop-up-frame-parameters}エントリーを含む場合には、その連想値(associated value)が新たに作成されたフレームのパラメーターに追加される。"
 
 #. type: defun
 #: original_texis/windows.texi:2415
-#, fuzzy, no-wrap
-#| msgid "display-buffer-use-some-window buffer alist"
+#, no-wrap
 msgid "display-buffer-use-some-frame buffer alist"
-msgstr "display-buffer-use-some-window buffer alist"
+msgstr "display-buffer-use-some-frame buffer alist"
 
 #. type: defun
 #: original_texis/windows.texi:2419
-#, fuzzy
-#| msgid "This function tries to display @var{buffer} in a window at the bottom of the selected frame."
 msgid "This function tries to display @var{buffer} by trying to find a frame that meets a predicate (by default any frame other than the current frame)."
-msgstr "この関数は、選択されたフレームの最下にあるウィンドウ内に@var{buffer}の表示を試みる。"
+msgstr "この関数は述語(デフォルトではカレント以外のすべてのフレーム)に合致するフレームを探すことにより@var{buffer}の表示を試みる。"
 
 #. type: defun
 #: original_texis/windows.texi:2428
 msgid "If @var{alist} has a non-@code{nil} @code{frame-predicate} entry, its value is a function taking one argument (a frame), returning non-@code{nil} if the frame is a candidate; this function replaces the default predicate."
-msgstr ""
+msgstr "@var{alist}に非@code{nil}の@code{frame-predicate}エントリーがあれば、その値は1つの引数(フレーム)を受け取ってそのフレームが候補なら非@code{nil}をリターンする、デフォルトの述語を置き換える関数。"
 
 #. type: defun
 #: original_texis/windows.texi:2432
-#, fuzzy
-#| msgid "If @var{alist} has a non-@code{nil} @code{inhibit-same-window} entry, the selected window is not eligible for reuse.  If @var{alist} contains a @code{reusable-frames} entry, its value determines which frames to search for a reusable window:"
 msgid "If @var{alist} has a non-@code{nil} @code{inhibit-same-window} entry, the selected window is used; thus if the selected frame has a single window, it is not used."
-msgstr "@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合、選択されたウィンドウは再利用に適さない。@var{alist}に@code{reusable-frames}エントリーが含まれる場合、その値により再利用可能なウィンドウをどのフレームで検索するか決定される:"
+msgstr "@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがあれば、選択されたウィンドウが使用される。つまり選択されたフレームにウィンドウが1つしかなければ、それは使用しない。"
 
 #. type: defun
 #: original_texis/windows.texi:2434
@@ -3754,57 +3720,57 @@ msgstr "display-buffer-pop-up-window buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2440
 msgid "This function tries to display @var{buffer} by splitting the largest or least recently-used window (typically one on the selected frame).  It actually performs the split by calling the function specified in @code{split-window-preferred-function} (@pxref{Choosing Window Options})."
-msgstr "この関数は、最大もしくはもっとも長い間参照されていない(LRU: least recently-used)ウィンドウを分割することにより、@var{buffer}の表示を試みる。これは実際には、@code{split-window-preferred-function}(@ref{Choosing Window Options}を参照)内で指定された関数を呼び出すことにより分割を行う。"
+msgstr "この関数は、最大のウィンドウ、もしくはもっとも長い間参照されていない(LRU: least recently-used)ウィンドウを分割することにより@var{buffer}の表示を試みる。これは実際には@code{split-window-preferred-function} (@ref{Choosing Window Options}を参照)内で指定された関数を呼び出すことによって分割を行う。"
 
 #. type: defun
 #: original_texis/windows.texi:2445
 msgid "The size of the new window can be adjusted by supplying @code{window-height} and @code{window-width} entries in @var{alist}.  To adjust the window's height, use an entry whose @sc{car} is @code{window-height} and whose @sc{cdr} is one of:"
-msgstr "新たなウィンドウのサイズは、@var{alist}にエントリー@code{window-height}と@code{window-width}を与えることにより調整できる。ウィンドウの高さを調整するには、@sc{car}が@code{window-height}で@sc{cdr}が以下のいずれかであるようなエントリーを使用する:"
+msgstr "新たなウィンドウのサイズは@var{alist}にエントリー@code{window-height}と@code{window-width}を与えることにより調整できる。ウィンドウの高さを調整するには@sc{car}が@code{window-height}、@sc{cdr}が以下のいずれかであるようなエントリーを使用する:"
 
 #. type: itemize
 #: original_texis/windows.texi:2449
 msgid "@code{nil} means to leave the height of the new window alone."
-msgstr "@code{nil}は、新たなウィンドウの高さを変更しないことを意味する。"
+msgstr "@code{nil}は新たなウィンドウの高さを変更しないことを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2455
 msgid "A number specifies the desired height of the new window.  An integer specifies the number of lines of the window.  A floating-point number gives the fraction of the window's height with respect to the height of the frame's root window."
-msgstr "数字は、新たなウィンドウの高さを指定する。整数は、ウィンドウの行数を指定する。浮動小数点数は、そのフレームのルートウィンドウにたいするウィンドウの高さの割合を与える。"
+msgstr "数字は新たなウィンドウの高さを指定する。整数はウィンドウの行数、浮動小数点数はそのフレームのルートウィンドウにたいするウィンドウの高さの割合を与える。"
 
 #. type: itemize
 #: original_texis/windows.texi:2462
 msgid "If the @sc{cdr} specifies a function, that function is called with one argument: the new window.  The function is supposed to adjust the height of the window; its return value is ignored.  Suitable functions are @code{shrink-window-if-larger-than-buffer} and @code{fit-window-to-buffer}, see @ref{Resizing Windows}."
-msgstr "@sc{cdr}が関数を指定する場合、その関数は新たなウィンドウを引数として呼び出される関数である。この関数は、そのウィンドウの高さを調整することを期待されており、リターン値は無視される。これに適した関数は@code{shrink-window-if-larger-than-buffer}および@code{fit-window-to-buffer}である。@ref{Resizing Windows}を参照のこと。"
+msgstr "@sc{cdr}が関数を指定する場合、その関数は新たなウィンドウを引数として呼び出される関数である。この関数はそのウィンドウの高さを調整することを期待されておりリターン値は無視される。これに適した関数は@code{shrink-window-if-larger-than-buffer}と@code{fit-window-to-buffer}。@ref{Resizing Windows}を参照のこと。"
 
 #. type: defun
 #: original_texis/windows.texi:2466
 msgid "To adjust the window's width, use an entry whose @sc{car} is @code{window-width} and whose @sc{cdr} is one of:"
-msgstr "ウィンドウの幅を調整するには、@sc{car}が@code{window-width}で@sc{cdr}が以下のいずれかであるようなエントリーを使用する:"
+msgstr "ウィンドウの幅を調整するには@sc{car}が@code{window-width}、@sc{cdr}が以下のいずれかであるようなエントリーを使用する:"
 
 #. type: itemize
 #: original_texis/windows.texi:2470
 msgid "@code{nil} means to leave the width of the new window alone."
-msgstr "@code{nil}は、新たなウィンドウの幅を変更しないことを意味する。"
+msgstr "@code{nil}は新たなウィンドウの幅を変更しないことを意味する。"
 
 #. type: itemize
 #: original_texis/windows.texi:2476
 msgid "A number specifies the desired width of the new window.  An integer specifies the number of columns of the window.  A floating-point number gives the fraction of the window's width with respect to the width of the frame's root window."
-msgstr "数字は、新たなウィンドウの幅を指定する。整数は、ウィンドウの列数を指定する。浮動小数点数は、そのフレームのルートウィンドウにたいするウィンドウの幅の割合を与える。"
+msgstr "数字は新たなウィンドウの幅を指定する。整数はウィンドウの列数、浮動小数点数はそのフレームのルートウィンドウにたいするウィンドウの幅の割合を与える。"
 
 #. type: itemize
 #: original_texis/windows.texi:2481
 msgid "If the @sc{cdr} specifies a function, that function is called with one argument: the new window.  The function is supposed to adjust the width of the window; its return value is ignored."
-msgstr "@sc{cdr}が関数を指定する場合、その関数は新たなウィンドウを引数として呼び出される関数である。この関数は、そのウィンドウの幅を調整することを期待されており、リターン値は無視される。"
+msgstr "@sc{cdr}が関数を指定する場合、その関数は新たなウィンドウを引数として呼び出される関数である。この関数はそのウィンドウの幅を調整することを期待されておりリターン値は無視される。"
 
 #. type: defun
 #: original_texis/windows.texi:2489
 msgid "If @var{alist} contains a @code{preserve-size} entry, Emacs will try to preserve the size of the new window during future resize operations (@pxref{Preserving Window Sizes}).  The @sc{cdr} of that entry must be a cons cell whose @sc{car}, if non-@code{nil}, means to preserve the width of the window and whose @sc{cdr}, if non-@code{nil}, means to preserve the height of the window."
-msgstr ""
+msgstr "@var{alist}に@code{preserve-size}エントリーが含まれるなら、Emacsは将来のリサイズ操作における、新たなウィンドウのサイズの予約を試みる(@ref{Preserving Window Sizes}を参照)。このエントリーの@sc{cdr}はコンスセルでなければならない。このコンスセルの@sc{car}が非@code{nil}ならウィンドウの幅を予約し、@sc{cdr}が非@code{nil}ならウィンドウの高さを予約することを意味する。"
 
 #. type: defun
 #: original_texis/windows.texi:2493
 msgid "This function can fail if no window splitting can be performed for some reason (e.g., if the selected frame has an @code{unsplittable} frame parameter; @pxref{Buffer Parameters})."
-msgstr "この関数は、何らかの理由により分割を行えるウィンドウが存在しない場合は、失敗する可能性がある(選択されたフレームがフレームパラメーター@code{unsplittable}をもつ場合等。@ref{Buffer Parameters}を参照のこと)。"
+msgstr "この関数は何らかの理由により分割を行えるウィンドウが存在しなければ失敗する可能性がある(選択されたフレームがフレームパラメーター@code{unsplittable}をもつ場合等。@ref{Buffer Parameters}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:2495
@@ -3815,7 +3781,7 @@ msgstr "display-buffer-below-selected buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2501
 msgid "This function tries to display @var{buffer} in a window below the selected window.  This means to either split the selected window or use the window below the selected one.  If it does create a new window, it will also adjust its size provided @var{alist} contains a suitable @code{window-height} or @code{window-width} entry, see above."
-msgstr "この関数は、選択されたウィンドウの下のウィンドウ内に@var{buffer}の表示を試みる。これは選択されたウィンドウの分割、または選択されたウィンドウの下のウィンドウの使用を意味する。新たにウィンドウを作成した場合は、@var{alist}に適切な@code{window-height}または@code{window-width}エントリーが含まれていれば、サイズの調整も行うだろう。上記を参照のこと。"
+msgstr "この関数は選択されたウィンドウの下のウィンドウ内に@var{buffer}の表示を試みる。これは選択されたウィンドウの分割、または選択されたウィンドウの下のウィンドウの使用を意味する。新たにウィンドウを作成した場合には、@var{alist}に適切な@code{window-height}または@code{window-width}エントリーが含まれていればサイズの調整も行うだろう。上記を参照のこと。"
 
 #. type: defun
 #: original_texis/windows.texi:2503
@@ -3826,12 +3792,12 @@ msgstr "display-buffer-in-previous-window buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2510
 msgid "This function tries to display @var{buffer} in a window previously showing it.  If @var{alist} has a non-@code{nil} @code{inhibit-same-window} entry, the selected window is not eligible for reuse.  If @var{alist} contains a @code{reusable-frames} entry, its value determines which frames to search for a suitable window as with @code{display-buffer-reuse-window}."
-msgstr "この関数は、以前に@var{buffer}を表示していたウィンドウ内に、そのバッファーの表示を試みる。@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合、選択されたウィンドウは再利用に適さない。@var{alist}に@code{reusable-frames}エントリーが含まれる場合、その値は@code{display-buffer-reuse-window}と同様、適正なウィンドウをどのフレームから検索するかを決定する。"
+msgstr "この関数は以前に@var{buffer}を表示していたウィンドウ内にそのバッファーの表示を試みる。@var{alist}に非@code{nil}の@code{inhibit-same-window}エントリーがある場合には、選択されたウィンドウは再利用に適さない。@var{alist}に@code{reusable-frames}エントリーが含まれる場合には、@code{display-buffer-reuse-window}と同様に、その値は適正なウィンドウをどのフレームから検索するかを決定する。"
 
 #. type: defun
 #: original_texis/windows.texi:2514
 msgid "If @var{alist} has a @code{previous-window} entry, the window specified by that entry will override any other window found by the methods above, even if that window never showed @var{buffer} before."
-msgstr "@var{alist}に@code{previous-window}エントリーがある場合は、そのエントリーにより指定されたウィンドウは、たとえそのウィンドウが以前に@var{buffer}を表示したことが一度もなくても、上記メソッドが見つけた他のすべてのウィンドウをオーバーライドするだろう。"
+msgstr "@var{alist}に@code{previous-window}エントリーがある場合には、そのエントリーにより指定されたウィンドウは、たとえそのウィンドウが以前に@var{buffer}を表示したことが一度もなくても、上記メソッドが見つけた他のすべてのウィンドウをオーバーライドするだろう。"
 
 #. type: defun
 #: original_texis/windows.texi:2516
@@ -3842,12 +3808,12 @@ msgstr "display-buffer-at-bottom buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2519
 msgid "This function tries to display @var{buffer} in a window at the bottom of the selected frame."
-msgstr "この関数は、選択されたフレームの最下にあるウィンドウ内に@var{buffer}の表示を試みる。"
+msgstr "この関数は選択されたフレームの最下にあるウィンドウ内に@var{buffer}の表示を試みる。"
 
 #. type: defun
 #: original_texis/windows.texi:2523
 msgid "This either splits the window at the bottom of the frame or the frame's root window, or reuses an existing window at the bottom of the selected frame."
-msgstr "これは、フレーム最下のウィンドウまたはフレームのルートウィンドウを分割するか、選択されたフレーム最下の既存ウィンドウを再利用する。"
+msgstr "これはフレーム最下のウィンドウまたはフレームのルートウィンドウを分割するか、選択されたフレーム最下の既存ウィンドウを再利用する。"
 
 #. type: defun
 #: original_texis/windows.texi:2525
@@ -3858,7 +3824,7 @@ msgstr "display-buffer-use-some-window buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2529
 msgid "This function tries to display @var{buffer} by choosing an existing window and displaying the buffer in that window.  It can fail if all windows are dedicated to another buffer (@pxref{Dedicated Windows})."
-msgstr "この関数は、既存のウィンドウを選択して、そのウィンドウ内に@var{buffer}を表示することにより、バッファーの表示を試みる。すべてのウィンドウが他のバッファー専用の場合、この関数は失敗する可能性がある(@ref{Dedicated Windows}を参照)。"
+msgstr "この関数は既存のウィンドウを選択して、そのウィンドウ内に@var{buffer}を表示することによりバッファーの表示を試みる。すべてのウィンドウが他のバッファー専用なら、この関数は失敗する可能性がある(@ref{Dedicated Windows}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:2531
@@ -3869,14 +3835,13 @@ msgstr "display-buffer-no-window buffer alist"
 #. type: defun
 #: original_texis/windows.texi:2538
 #, fuzzy
-#| msgid "If @var{alist} has a non-@code{nil} @code{allow-no-window} entry, then this function does not display @code{buffer}.  This allows to override the default action and avoid displaying the buffer.  It is assumed that when the caller specifies a non-@code{nil} @code{allow-no-window} value it can handle a @code{nil} value returned from @code{display-buffer} in this case."
 msgid "If @var{alist} has a non-@code{nil} @code{allow-no-window} entry, then this function does not display @code{buffer}.  This allows you to override the default action and avoid displaying the buffer.  It is assumed that when the caller specifies a non-@code{nil} @code{allow-no-window} value it can handle a @code{nil} value returned from @code{display-buffer} in this case."
-msgstr "@var{alist}に非@code{nil}の@code{allow-no-window}エントリーがある場合、この関数は@code{buffer}を表示しない。これにより、デフォルトの動作をオーバーライドして、バッファーの表示を避けることができる。これは、呼び出し側が@code{allow-no-window}に非@code{nil}値を指定して、@code{display-buffer}からリターンされた@code{nil}値を処理できるようなケースを想定している。"
+msgstr "この関数は@var{alist}に非@code{nil}の@code{allow-no-window}エントリーがある場合には@code{buffer}を表示しない。これによりデフォルトの動作をオーバーライドしてバッファーの表示を避けることができる。これは呼び出し側が@code{allow-no-window}に非@code{nil}値を指定して@code{display-buffer}からリターンされた@code{nil}値を処理するようなケースを想定している。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2542
 msgid "To illustrate the use of action functions, consider the following example."
-msgstr "アクション関数を説明するために、以下の例を考えてみましょう。"
+msgstr "アクション関数を説明するために以下の例を考えてみましょう。"
 
 #. type: group
 #: original_texis/windows.texi:2552
@@ -3901,21 +3866,17 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:2563
 msgid "Evaluating the form above will cause @code{display-buffer} to proceed as follows: If a buffer called *foo* already appears on a visible or iconified frame, it will reuse its window.  Otherwise, it will try to pop up a new window or, if that is impossible, a new frame and show the buffer there.  If all these steps fail, it will proceed using whatever @code{display-buffer-base-action} and @code{display-buffer-fallback-action} prescribe."
-msgstr "上記のフォームを評価することにより、以下のように@code{display-buffer}が実行されます: (1)*foo*と呼ばれるバッファーが、すでに可視またはアイコン化されたフレームに表示されている場合は、そのウィンドウを再利用する。 (2)それ以外の場合は、新たなウィンドウをポップアップするか、それが不可能なら新たなフレームでバッファーを表示する。(3) すべてのステップが失敗した場合は、それが何であれ@code{display-buffer-base-action}および@code{display-buffer-fallback-action}が指示するものを使用して処理を行う。"
+msgstr "上記のフォームを評価することにより、以下のように@code{display-buffer}が実行されます: (1)*foo*と呼ばれるバッファーがすでに可視またはアイコン化されたフレームに表示されていればそのウィンドウを再利用する。 (2)それ以外なら新たなウィンドウをポップアップ、それが不可能なら新たなフレームでバッファーを表示する。(3) すべてのステップが失敗すると、それが何であれ@code{display-buffer-base-action}と@code{display-buffer-fallback-action}が指示するものを使用して処理を行う。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2576
-#, fuzzy
-#| msgid "Furthermore, @code{display-buffer} will try to adjust a reused window (provided *foo* was put by @code{display-buffer} there before) or a popped-up window as follows: If the window is part of a vertical combination, it will set its height to ten lines.  Note that if, instead of the number ``10'', we specified the function @code{fit-window-to-buffer}, @code{display-buffer} would come up with a one-line window to fit the empty buffer.  If the window is part of a horizontal combination, it sets its width to 40 columns.  Whether a new window is vertically or horizontally combined depends on the shape of the window split and the values of @code{split-window-preferred-function}, @code{split-height-threshold} and @code{split-width-threshold} (@pxref{Choosing Window Options})."
 msgid "Furthermore, @code{display-buffer} will try to adjust a reused window (provided *foo* was put by @code{display-buffer} there before) or a popped-up window as follows: If the window is part of a vertical combination, it will set its height to ten lines.  Note that if, instead of the number 10, we specified the function @code{fit-window-to-buffer}, @code{display-buffer} would come up with a one-line window to fit the empty buffer.  If the window is part of a horizontal combination, it sets its width to 40 columns.  Whether a new window is vertically or horizontally combined depends on the shape of the window split and the values of @code{split-window-preferred-function}, @code{split-height-threshold} and @code{split-width-threshold} (@pxref{Choosing Window Options})."
-msgstr "さらに@code{display-buffer}は、(@code{display-buffer}により*foo*が前からそこに配置されていた場合は)再使用されるウィンドウ、およびポップアップされたウィンドウにたいして調整を試みます。そのウィンドウが垂直コンビネーションの一部なら、高さはその行数にセットされるでしょう。数字``10''のかわりに関数@code{fit-window-to-buffer}を指定した場合、@code{display-buffer}は空のバッファーにフィットするようにウィンドウを1行にセットするでしょう。ウィンドウが水平コンビネーションの一部なら、列数を40にセットします。新たなウィンドウが垂直または水平に組み合わせられるかは、ウィンドウの分割方向と@code{split-window-preferred-function}、@code{split-height-threshold}、@code{split-width-threshold}の値に依存します(@ref{Choosing Window Options}を参照)。"
+msgstr "さらに@code{display-buffer}は、(@code{display-buffer}により*foo*が前からそこに配置されていたら)再使用されるウィンドウ、およびポップアップされたウィンドウにたいして調整を試みます。そのウィンドウが垂直コンビネーションの一部なら高さはその行数にセットされるでしょう。数字10のかわりに関数@code{fit-window-to-buffer}を指定すると、@code{display-buffer}は空のバッファーにフィットするようにウィンドウを1行にセットするでしょう。ウィンドウが水平コンビネーションの一部なら列数を40にセットします。新たなウィンドウが垂直または水平のどちらに組み合わせられるかは、ウィンドウの分割方向と@code{split-window-preferred-function}、@code{split-height-threshold}、@code{split-width-threshold}の値に依存します(@ref{Choosing Window Options}を参照)。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2579
-#, fuzzy
-#| msgid "Now suppose we combine this call with a preexisting setup for `display-buffer-alist' as follows."
 msgid "Now suppose we combine this call with a preexisting setup for @code{display-buffer-alist} as follows."
-msgstr "ここで、事前に以下のような`display-buffer-alist'にたいするセットアップが存在していて、この呼び出しを組み合わせたとしましょう。"
+msgstr "事前に以下のような@code{display-buffer-alist}にたいするセットアップがあり、この呼び出しを組み合わせたとしましょう。"
 
 #. type: group
 #: original_texis/windows.texi:2596
@@ -3954,14 +3915,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/windows.texi:2604
 msgid "This form will have @code{display-buffer} first try reusing a window that shows *foo* on the selected frame.  If there's no such window, it will try to split the selected window or, if that is impossible, use the window below the selected window."
-msgstr "このフォームは、まず選択されたフレーム上で*foo*を表示しているウィンドウを再利用するよう、@code{display-buffer}に試みさせます。そのようなウィンドウが存在しなければ、選択されたウィンドウの分割を試み、またはそれが不可能なら選択されたウィンドウの下のウィンドウを使用します。"
+msgstr "このフォームはまず選択されたフレーム上で*foo*を表示しているウィンドウを再利用するように@code{display-buffer}に試行させます。そのようなウィンドウが存在しなければ、選択されたウィンドウの分割を試みるか、それが不可能なら選択されたウィンドウの下のウィンドウを使用します。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2612
-#, fuzzy
-#| msgid "If there's no window below the selected one, or the window below the selected one is dedicated to its buffer, @code{display-buffer} will proceed as described in the previous example.  Note, however, that when it tries to adjust the height of any reused or popped-up window, it will in any case try to set its number of lines to ``5'' since that value overrides the corresponding specification in the @var{action} argument of @code{display-buffer}."
 msgid "If there's no window below the selected one, or the window below the selected one is dedicated to its buffer, @code{display-buffer} will proceed as described in the previous example.  Note, however, that when it tries to adjust the height of any reused or popped-up window, it will in any case try to set its number of lines to 5 since that value overrides the corresponding specification in the @var{action} argument of @code{display-buffer}."
-msgstr "選択されたウィンドウの下にウィンドウがない、あるいは下のウィンドウがそれのバッファーに専用の場合、@code{display-buffer}は前の例で説明したように処理を行うでしょう。しかし、再利用されたウィンドウやポップアップされたウィンドウの高さ調整を試みる場合は、@code{display-buffer}の@var{action}引数内の行数に対応する指定をオーバーライドする、行数``5''へのセットを試みることに注意してください。"
+msgstr "選択されたウィンドウの下にウィンドウがないか、下のウィンドウがそれのバッファーに専用なら、@code{display-buffer}は前の例で説明したように処理を行うでしょう。しかし再利用されたウィンドウやポップアップされたウィンドウの高さ調整を試みる場合には、@code{display-buffer}の@var{action}引数内の行数に対応する指定をオーバーライドする行数5へのセットを試みることに注意してください。"
 
 #. type: section
 #: original_texis/windows.texi:2615
@@ -3972,7 +3931,7 @@ msgstr "Additional Options for Displaying Buffers"
 #. type: Plain text
 #: original_texis/windows.texi:2620
 msgid "The behavior of the standard display actions of @code{display-buffer} (@pxref{Choosing Window}) can be modified by a variety of user options."
-msgstr "@code{display-buffer}の標準のディスプレイアクション(@pxref{Choosing Window})は、さまざまなユーザーオプションにより変更が可能です。"
+msgstr "さまざまなユーザーオプションにより@code{display-buffer}の標準のディスプレイアクション(@ref{Choosing Window}を参照)を変更できます。"
 
 #. type: defopt
 #: original_texis/windows.texi:2621
@@ -3983,12 +3942,12 @@ msgstr "pop-up-windows"
 #. type: defopt
 #: original_texis/windows.texi:2625
 msgid "If the value of this variable is non-@code{nil}, @code{display-buffer} is allowed to split an existing window to make a new window for displaying in.  This is the default."
-msgstr "この変数の値が非@code{nil}の場合、@code{display-buffer}は表示のために既存のバッファーを分割して新たなウィンドウの作成を許される。"
+msgstr "この変数の値が非@code{nil}なら、@code{display-buffer}は表示のために既存のバッファーを分割して新たなウィンドウを作成できる。"
 
 #. type: defopt
 #: original_texis/windows.texi:2633
 msgid "This variable is provided mainly for backward compatibility.  It is obeyed by @code{display-buffer} via a special mechanism in @code{display-buffer-fallback-action}, which only calls the action function @code{display-buffer-pop-up-window} (@pxref{Display Action Functions}) when the value is @code{nil}.  It is not consulted by @code{display-buffer-pop-up-window} itself, which the user may specify directly in @code{display-buffer-alist} etc."
-msgstr "この変数は、主に後方互換のために提供される。値が@code{nil}のときは、アクション関数@code{display-buffer-pop-up-window}(@ref{Display Action Functions}を参照)を呼び出すだけの@code{display-buffer-fallback-action}内の特別なメカニズムを経由して、@code{display-buffer}にしたがう。この変数は、@code{display-buffer-alist}等により直接指定できる、@code{display-buffer-pop-up-window}自体からは参照されない。"
+msgstr "この変数は主に後方互換のために提供される。値が@code{nil}のときはアクション関数@code{display-buffer-pop-up-window} (@ref{Display Action Functions}を参照)を呼び出すだけの@code{display-buffer-fallback-action}内の特別なメカニズムを経由して@code{display-buffer}にしたがう。この変数は@code{display-buffer-alist}等により直接指定できる、@code{display-buffer-pop-up-window}自体からは参照されない。"
 
 #. type: defopt
 #: original_texis/windows.texi:2635
@@ -3999,31 +3958,28 @@ msgstr "split-window-preferred-function"
 #. type: defopt
 #: original_texis/windows.texi:2640
 msgid "This variable specifies a function for splitting a window, in order to make a new window for displaying a buffer.  It is used by the @code{display-buffer-pop-up-window} action function to actually split the window (@pxref{Display Action Functions})."
-msgstr "この変数は、バッファーを表示する新たなウィンドウを作成するための、ウィンドウを分割する関数を指定する。これは、実際にウィンドウを分割するために、アクション関数@code{display-buffer-pop-up-window}により使用される(@ref{Display Action Functions}を参照)。"
+msgstr "この変数はバッファーを表示する新たなウィンドウを作成するためにウィンドウを分割する関数を指定する。これは実際にウィンドウを分割するためにアクション関数@code{display-buffer-pop-up-window}により使用される(@ref{Display Action Functions}を参照)。"
 
 #. type: defopt
 #: original_texis/windows.texi:2645
 msgid "The default value is @code{split-window-sensibly}, which is documented below.  The value must be a function that takes one argument, a window, and return either a new window (which will be used to display the desired buffer) or @code{nil} (which means the splitting failed)."
-msgstr "デフォルト値は@code{split-window-sensibly}で、これは以下で記述する。値は、ウィンドウを引数とする関数でなければならず、(要求されたバッファーを表示するために使用されるであろう)新たなウィンドウ、または@code{nil}(分割の失敗を意味する)をリターンしなければならない。"
+msgstr "デフォルト値@code{split-window-sensibly}は以下で説明する。値はウィンドウを引数とする関数でなければならず、(要求されたバッファーを表示するために使用されるであろう)新たなウィンドウ、または@code{nil} (分割の失敗を意味する)をリターンしなければならない。"
 
 #. type: defun
 #: original_texis/windows.texi:2647
-#, fuzzy, no-wrap
-#| msgid "split-window-sensibly window"
+#, no-wrap
 msgid "split-window-sensibly &optional window"
-msgstr "split-window-sensibly window"
+msgstr "split-window-sensibly &optional window"
 
 #. type: defun
 #: original_texis/windows.texi:2652
-#, fuzzy
-#| msgid "This function tries to split @var{window}, and return the newly created window.  If @var{window} cannot be split, it returns @code{nil}."
 msgid "This function tries to split @var{window}, and return the newly created window.  If @var{window} cannot be split, it returns @code{nil}.  If @var{window} is omitted or @code{nil}, it defaults to the selected window."
-msgstr "この関数は、@var{window}を分割して、新たに作成したウィンドウをリターンする。@var{window}を分割できなければ、@code{nil}をリターンする。"
+msgstr "この関数は@var{window}を分割して新たに作成したウィンドウをリターンする。@var{window}を分割できなければ@code{nil}をリターンする。@var{window}が省略または@code{nil}の場合のデフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:2663
 msgid "This function obeys the usual rules that determine when a window may be split (@pxref{Splitting Windows}).  It first tries to split by placing the new window below, subject to the restriction imposed by @code{split-height-threshold} (see below), in addition to any other restrictions.  If that fails, it tries to split by placing the new window to the right, subject to @code{split-width-threshold} (see below).  If that fails, and the window is the only window on its frame, this function again tries to split and place the new window below, disregarding @code{split-height-threshold}.  If this fails as well, this function gives up and returns @code{nil}."
-msgstr "この関数は、ウィンドウが分割できるかどうか判断する際の、通常のルールにしたがう(@ref{Splitting Windows}を参照)。最初にまず、@code{split-height-threshold}(以下参照)、およびその他が課す制約の元、新たなウィンドウが下になるように分割を試みる。これが失敗したら、@code{split-width-threshold}(以下参照)が課す制約の元、新たなウィンドウが右になるように分割を試みる。これが失敗して、かつそのウィンドウがそのフレームの唯一のウィンドウの場合、この関数は@code{split-height-threshold}を無視して、新たなウィンドウが下になるよう、再度分割を試みる。これも同様に失敗したら、この関数は諦めて@code{nil}をリターンする。"
+msgstr "この関数はウィンドウが分割できるかどうか判断する際の通常のルールにしたがう(@ref{Splitting Windows}を参照)。最初にまず@code{split-height-threshold} (以下参照)とその他が課す制約の下に新たなウィンドウが下になるように分割を試みる。これが失敗したら@code{split-width-threshold} (以下参照)が課す制約の下に新たなウィンドウが右になるように分割を試みる。これが失敗かつそのウィンドウがそのフレームの唯一のウィンドウなら、この関数は@code{split-height-threshold}を無視して新たなウィンドウが下になるように再度分割を試みる。これも同様に失敗したら、この関数は諦めて@code{nil}をリターンする。"
 
 #. type: defopt
 #: original_texis/windows.texi:2665
@@ -4034,7 +3990,7 @@ msgstr "split-height-threshold"
 #. type: defopt
 #: original_texis/windows.texi:2671
 msgid "This variable, used by @code{split-window-sensibly}, specifies whether to split the window placing the new window below.  If it is an integer, that means to split only if the original window has at least that many lines.  If it is @code{nil}, that means not to split this way."
-msgstr "これは@code{split-window-sensibly}により使用される変数であり、ウィンドウを分割して新たなウィンドウを下に配置するかどうかを指定する。整数の場合は、元のウィンドウが最低でもその行数なければ分割しないことを意味する。@code{nil}の場合は、この方法では分割しないことを意味する。"
+msgstr "これは@code{split-window-sensibly}により使用される変数であり、ウィンドウを分割して新たなウィンドウを下に配置するかどうかを指定する。整数なら元のウィンドウが最低でもその行数なければ分割せず、@code{nil}ならこの方法では分割しないことを意味する。"
 
 #. type: defopt
 #: original_texis/windows.texi:2673
@@ -4045,26 +4001,23 @@ msgstr "split-width-threshold"
 #. type: defopt
 #: original_texis/windows.texi:2679
 msgid "This variable, used by @code{split-window-sensibly}, specifies whether to split the window placing the new window to the right.  If the value is an integer, that means to split only if the original window has at least that many columns.  If the value is @code{nil}, that means not to split this way."
-msgstr "これは@code{split-window-sensibly}により使用される変数であり、ウィンドウを分割して新たなウィンドウを右に配置するかどうかを指定する。整数の場合は、元のウィンドウが最低でもその列数なければ分割しないことを意味する。@code{nil}の場合は、この方法では分割しないことを意味する。"
+msgstr "これは@code{split-window-sensibly}により使用される変数であり、ウィンドウを分割して新たなウィンドウを右に配置するかどうかを指定する。整数なら元のウィンドウが最低でもその列数なければ分割せず、@code{nil}ならこの方法では分割しないことを意味する。"
 
 #. type: defopt
 #: original_texis/windows.texi:2681
-#, fuzzy, no-wrap
-#| msgid "window-size"
+#, no-wrap
 msgid "even-window-sizes"
-msgstr "window-size"
+msgstr "even-window-sizes"
 
 #. type: defopt
 #: original_texis/windows.texi:2685
-#, fuzzy
-#| msgid "If the value of this variable is non-@code{nil}, @code{display-buffer} is allowed to split an existing window to make a new window for displaying in.  This is the default."
 msgid "This variable, if non-@code{nil}, causes @code{display-buffer} to even window sizes whenever it reuses an existing window and that window is adjacent to the selected one."
-msgstr "この変数の値が非@code{nil}の場合、@code{display-buffer}は表示のために既存のバッファーを分割して新たなウィンドウの作成を許される。"
+msgstr "この変数が非@code{nil}なら、@code{display-buffer}が既存ウィンドウを再利用する際は常にウィンドウサイズを選択されたウィンドウを均等にして、そのウィンドウを選択されたウィンドウに隣接させる。"
 
 #. type: defopt
 #: original_texis/windows.texi:2694
 msgid "If its value is @code{width-only}, sizes are evened only if the reused window is on the left or right of the selected one and the selected window is wider than the reused one.  If its value is @code{height-only} sizes are evened only if the reused window is above or beneath the selected window and the selected window is higher than the reused one.  Any other non-@code{nil} value means to even sizes in any of these cases provided the selected window is larger than the reused one in the sense of their combination."
-msgstr ""
+msgstr "値が@code{width-only}なら再利用されるウィンドウが選択されたウィンドウの左か右にあり、かつ選択されたウィンドウが再利用されるウィンドウより広い場合のみサイズは均等になる。値が@code{height-only}なら再利用されるウィンドウが選択されたウィンドウの上か下にあり、かつ選択されたウィンドウが再利用されるウィンドウより高い場合のみサイズは均等になる。その他の非@code{nil}値は、選択されたウィンドウと再利用されるウィンドウをコンビネーション的に比較して選択されたウィンドウの方が大ならサイズを均等にすることを意味する。"
 
 #. type: defopt
 #: original_texis/windows.texi:2696
@@ -4075,17 +4028,17 @@ msgstr "pop-up-frames"
 #. type: defopt
 #: original_texis/windows.texi:2700
 msgid "If the value of this variable is non-@code{nil}, that means @code{display-buffer} may display buffers by making new frames.  The default is @code{nil}."
-msgstr "この変数の値が非@code{nil}の場合、新たにフレームを作成することにより@code{display-buffer}がバッファーを表示できることを意味する。デフォルトは@code{nil}。"
+msgstr "この変数の値が非@code{nil}なら、新たにフレームを作成することにより@code{display-buffer}がバッファーを表示できることを意味する。デフォルトは@code{nil}。"
 
 #. type: defopt
 #: original_texis/windows.texi:2704
 msgid "A non-@code{nil} value also means that when @code{display-buffer} is looking for a window already displaying @var{buffer-or-name}, it can search any visible or iconified frame, not just the selected frame."
-msgstr "非@code{nil}値は、@code{display-buffer}がすでに@var{buffer-or-name}を表示しているウィンドウを探す際に、選択されたフレームだけでなく、可視およびアイコン化されたフレームを検索できることも意味する。"
+msgstr "非@code{nil}値は@code{display-buffer}がすでに@var{buffer-or-name}を表示しているウィンドウを探す際に、選択されたフレームだけでなく可視およびアイコン化されたフレームを検索できることも意味する。"
 
 #. type: defopt
 #: original_texis/windows.texi:2713
 msgid "This variable is provided mainly for backward compatibility.  It is obeyed by @code{display-buffer} via a special mechanism in @code{display-buffer-fallback-action}, which calls the action function @code{display-buffer-pop-up-frame} (@pxref{Display Action Functions})  if the value is non-@code{nil}.  (This is done before attempting to split a window.)  This variable is not consulted by @code{display-buffer-pop-up-frame} itself, which the user may specify directly in @code{display-buffer-alist} etc."
-msgstr "この変数は主に、後方互換のために提供されている。値が非@code{nil}のときは、アクション関数@code{display-buffer-pop-up-frame}(@ref{Display Action Functions}を参照)を呼び出すだけの@code{display-buffer-fallback-action}内の特別なメカニズムを経由して、@code{display-buffer}にしたがう。この変数は、@code{display-buffer-alist}等により直接指定できる、@code{display-buffer-pop-up-window}自体からは参照されない(これはウィンドウの分割前に行われる)。この変数は、@code{display-buffer-alist}等により直接指定できる、@code{display-buffer-pop-up-frame}自体からは参照されない。"
+msgstr "この変数は主に後方互換のために提供されている。値が非@code{nil}のときはアクション関数@code{display-buffer-pop-up-frame} (@ref{Display Action Functions}を参照)を呼び出すだけの@code{display-buffer-fallback-action}内の特別なメカニズムを経由して@code{display-buffer}にしたがう。この変数は@code{display-buffer-alist}等により直接指定できる、@code{display-buffer-pop-up-window}自体からは参照されない(これはウィンドウの分割前に行われる)。この変数は@code{display-buffer-alist}等により直接指定できる@code{display-buffer-pop-up-frame}自体からは参照されない。"
 
 #. type: defopt
 #: original_texis/windows.texi:2715
@@ -4096,12 +4049,12 @@ msgstr "pop-up-frame-function"
 #. type: defopt
 #: original_texis/windows.texi:2720
 msgid "This variable specifies a function for creating a new frame, in order to make a new window for displaying a buffer.  It is used by the @code{display-buffer-pop-up-frame} action function (@pxref{Display Action Functions})."
-msgstr "この変数は、バッファーを表示する新たなウィンドウを作成するための、フレームを作成する関数を指定する。これは、アクション関数@code{display-buffer-pop-up-frame}により使用される(@ref{Display Action Functions}を参照)。"
+msgstr "この変数はバッファーを表示する新たなウィンドウを作成するためにフレームを作成する関数を指定する。これはアクション関数@code{display-buffer-pop-up-frame}により使用される(@ref{Display Action Functions}を参照)。"
 
 #. type: defopt
 #: original_texis/windows.texi:2725
 msgid "The value should be a function that takes no arguments and returns a frame, or @code{nil} if no frame could be created.  The default value is a function that creates a frame using the parameters specified by @code{pop-up-frame-alist} (see below)."
-msgstr "値は、フレームまたはフレームを作成できなかった場合は@code{nil}をリターンする、引数をとらない関数であること。デフォルト値は、@code{pop-up-frame-alist}(以下参照)により指定されるパラメーターを使用してフレームを作成する関数である。"
+msgstr "値はフレーム、またはフレームを作成できなかったら@code{nil}をリターンする引数をとらない関数であること。デフォルト値は@code{pop-up-frame-alist} (以下参照)により指定されるパラメーターを使用してフレームを作成する関数。"
 
 #. type: defopt
 #: original_texis/windows.texi:2727
@@ -4112,7 +4065,7 @@ msgstr "pop-up-frame-alist"
 #. type: defopt
 #: original_texis/windows.texi:2732
 msgid "This variable holds an alist of frame parameters (@pxref{Frame Parameters}), which is used by the default function in @code{pop-up-frame-function} to make a new frame.  The default is @code{nil}."
-msgstr "この変数は、フレームを新たに作成するための@code{pop-up-frame-function}のデフォルト関数により使用される、フレームパラメーター(@ref{Frame Parameters}を参照)のalistを保持する。デフォルトは@code{nil}。"
+msgstr "この変数はフレームを新たに作成するための@code{pop-up-frame-function}のデフォルト関数により使用されるフレームパラメーター(@ref{Frame Parameters}を参照)のalistを保持する。デフォルトは@code{nil}。"
 
 #. type: defopt
 #: original_texis/windows.texi:2734
@@ -4123,7 +4076,7 @@ msgstr "same-window-buffer-names"
 #. type: defopt
 #: original_texis/windows.texi:2739
 msgid "A list of buffer names for buffers that should be displayed in the selected window.  If a buffer's name is in this list, @code{display-buffer} handles the buffer by showing it in the selected window."
-msgstr "選択されたウィンドウ内に表示されるべきバッファー名のリスト。このリスト内にバッファーの名前がある場合、@code{display-buffer}は選択されたウィンドウ内にそのバッファーを表示することにより、そのバッファーを処理する。"
+msgstr "選択されたウィンドウ内に表示されるべきバッファー名のリスト。このリスト内にバッファーの名前があれば、@code{display-buffer}は選択されたウィンドウ内にそのバッファーを表示することによりそのバッファーを処理する。"
 
 #. type: defopt
 #: original_texis/windows.texi:2741
@@ -4134,7 +4087,7 @@ msgstr "same-window-regexps"
 #. type: defopt
 #: original_texis/windows.texi:2746
 msgid "A list of regular expressions that specify buffers that should be displayed in the selected window.  If the buffer's name matches any of the regular expressions in this list, @code{display-buffer} handles the buffer by showing it in the selected window."
-msgstr "選択されたウィンドウ内に表示されるバッファーを指定する、正規表現のリスト。バッファー名がこのリスト内の正規表現のいずれかにマッチする場合、@code{display-buffer}は選択されたウィンドウ内にそのバッファーを表示することにより、そのバッファーを処理する。"
+msgstr "選択されたウィンドウ内に表示されるバッファーを指定する正規表現のリスト。バッファー名がこのリスト内の正規表現のいずれかにマッチする場合には、@code{display-buffer}は選択されたウィンドウ内にそのバッファーを表示することによりそのバッファーを処理する。"
 
 #. type: defun
 #: original_texis/windows.texi:2748
@@ -4145,7 +4098,7 @@ msgstr "same-window-p buffer-name"
 #. type: defun
 #: original_texis/windows.texi:2752
 msgid "This function returns @code{t} if displaying a buffer named @var{buffer-name} with @code{display-buffer} would put it in the selected window."
-msgstr "この関数は、@var{buffer-name}という名前のバッファーを@code{display-buffer}で表示する場合、それが選択されたウィンドウ内に表示されるバッファーなら@code{t}をリターンする。"
+msgstr "この関数は@var{buffer-name}という名前のバッファーを@code{display-buffer}で表示する場合に、それが選択されたウィンドウ内に表示されるバッファーなら@code{t}をリターンする。"
 
 #. type: cindex
 #: original_texis/windows.texi:2756
@@ -4156,7 +4109,7 @@ msgstr "window history"
 #. type: Plain text
 #: original_texis/windows.texi:2764
 msgid "Each window remembers in a list the buffers it has previously displayed, and the order in which these buffers were removed from it.  This history is used, for example, by @code{replace-buffer-in-windows} (@pxref{Buffers and Windows}).  The list is automatically maintained by Emacs, but you can use the following functions to explicitly inspect or alter it:"
-msgstr "ウィンドウはそれぞれ、リスト内に以前表示されていたバッファーと、それらのバッファーがウィンドウから削除された順序を記憶しています。このヒストリーが、たとえば@code{replace-buffer-in-windows}(@ref{Buffers and Windows}を参照)により使用されます。このリストはEmacsにより自動的に保守されますが、これを明示的に調べたり変更するために、以下の関数を使用できます:"
+msgstr "ウィンドウはそれぞれリスト内に以前表示されていたバッファーと、それらのバッファーがウィンドウから削除された順序を記憶しています。このヒストリーが、たとえば@code{replace-buffer-in-windows} (@ref{Buffers and Windows}を参照)により使用されます。このリストはEmacsにより自動的に保守されますが、これを明示的に調べたり変更するために以下の関数を使用できます:"
 
 #. type: defun
 #: original_texis/windows.texi:2765
@@ -4167,17 +4120,17 @@ msgstr "window-prev-buffers &optional window"
 #. type: defun
 #: original_texis/windows.texi:2769
 msgid "This function returns a list specifying the previous contents of @var{window}.  The optional argument @var{window} should be a live window and defaults to the selected one."
-msgstr "この関数は、@var{window}の前のコンテンツを指定するリストをリターンする。オプション引数@var{window}には生きたウィンドウを指定すべきであり、デフォルトは選択されたウィンドウである。"
+msgstr "この関数は@var{window}の前のコンテンツを指定するリストをリターンする。オプション引数@var{window}には生きたウィンドウを指定すること。デフォルトは選択されたウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:2776
 msgid "Each list element has the form @code{(@var{buffer} @var{window-start} @var{window-pos})}, where @var{buffer} is a buffer previously shown in the window, @var{window-start} is the window start position (@pxref{Window Start and End}) when that buffer was last shown, and @var{window-pos} is the point position (@pxref{Window Point}) when that buffer was last shown in @var{window}."
-msgstr "リスト要素はそれぞれ、@code{(@var{buffer} @var{window-start} @var{window-pos})}という形式をもつ。ここで@var{buffer}は、そのウィンドウで前に表示されていたウィンドウ、@var{window-start}はそのバッファーが最後に表示されていたときのウィンドウのスタート位置(@ref{Window Start and End}を参照)、@var{window-pos}は@var{window}内にそのバッファーが最後に表示されていたときのポイント位置(@ref{Window Point}を参照)である。"
+msgstr "リスト要素はそれぞれ@code{(@var{buffer} @var{window-start} @var{window-pos})}という形式をもつ。ここで@var{buffer}はそのウィンドウで前に表示されていたウィンドウ、@var{window-start}はそのバッファーが最後に表示されていたときのウィンドウのスタート位置(@ref{Window Start and End}を参照)、@var{window-pos}は@var{window}内にそのバッファーが最後に表示されていたときのポイント位置(@ref{Window Point}を参照)。"
 
 #. type: defun
 #: original_texis/windows.texi:2780
 msgid "The list is ordered so that earlier elements correspond to more recently-shown buffers, and the first element usually corresponds to the buffer most recently removed from the window."
-msgstr "このリストは順序付きで、より前の要素がより最近に表示されたバッファーに対応しており、通常は最初の要素がそのウィンドウからもっとも最近削除されたバッファーに対応する。"
+msgstr "このリストは順序付きであり、より前の要素がより最近に表示されたバッファーに対応してして、通常は最初の要素がそのウィンドウからもっとも最近削除されたバッファーに対応する。"
 
 #. type: defun
 #: original_texis/windows.texi:2782
@@ -4188,12 +4141,12 @@ msgstr "set-window-prev-buffers window prev-buffers"
 #. type: defun
 #: original_texis/windows.texi:2788
 msgid "This function sets @var{window}'s previous buffers to the value of @var{prev-buffers}.  The argument @var{window} must be a live window and defaults to the selected one.  The argument @var{prev-buffers} should be a list of the same form as that returned by @code{window-prev-buffers}."
-msgstr "この関数は、@var{window}の前のバッファーを、@var{prev-buffers}の値にセットする。引数@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウである。引数@var{prev-buffers}は、@code{window-prev-buffers}によりリターンされるリストと同じ形式であること。"
+msgstr "この関数は@var{window}の前のバッファーを@var{prev-buffers}の値にセットする。引数@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウ。引数@var{prev-buffers}は@code{window-prev-buffers}によりリターンされるリストと同じ形式であること。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2794
 msgid "In addition, each buffer maintains a list of @dfn{next buffers}, which is a list of buffers re-shown by @code{switch-to-prev-buffer} (see below).  This list is mainly used by @code{switch-to-prev-buffer} and @code{switch-to-next-buffer} for choosing buffers to switch to."
-msgstr "これらに加えて、それぞれのバッファーは@dfn{次バッファー(next buffers)}のリストを保守します。これは@code{switch-to-prev-buffer}(以下参照)により再表示されたバッファーのリストです。このリストは主に、切り替えるバッファーを選択するために、@code{switch-to-prev-buffer}と@code{switch-to-next-buffer}により使用されます。"
+msgstr "これらに加えて、それぞれのバッファーは@dfn{次バッファー(next buffers)}のリストを保守します。これは@code{switch-to-prev-buffer} (以下参照)により再表示されたバッファーのリストです。このリストは主に切り替えるバッファーを選択するために、@code{switch-to-prev-buffer}と@code{switch-to-next-buffer}により使用されます。"
 
 #. type: defun
 #: original_texis/windows.texi:2795
@@ -4204,7 +4157,7 @@ msgstr "window-next-buffers &optional window"
 #. type: defun
 #: original_texis/windows.texi:2800
 msgid "This function returns the list of buffers recently re-shown in @var{window} via @code{switch-to-prev-buffer}.  The @var{window} argument must denote a live window or @code{nil} (meaning the selected window)."
-msgstr "この関数は、@code{switch-to-prev-buffer}を通じて@var{window}内に最近表示されたバッファーのリストをリターンする。@var{window}引数は、生きたウィンドウか@code{nil}(選択されたウィンドウの意)でなければならない。"
+msgstr "この関数は@code{switch-to-prev-buffer}を通じて@var{window}内に最近表示されたバッファーのリストをリターンする。@var{window}引数は生きたウィンドウか@code{nil} (選択されたウィンドウの意)でなければならない。"
 
 #. type: defun
 #: original_texis/windows.texi:2802
@@ -4215,12 +4168,12 @@ msgstr "set-window-next-buffers window next-buffers"
 #. type: defun
 #: original_texis/windows.texi:2807
 msgid "This function sets the next buffer list of @var{window} to @var{next-buffers}.  The @var{window} argument should be a live window or @code{nil} (meaning the selected window).  The argument @var{next-buffers} should be a list of buffers."
-msgstr "この関数は、@var{window}の次バッファーリストを、@var{next-buffers}にセットする。@var{window}引数は、生きたウィンドウか@code{nil}(選択されたウィンドウの意)であること。引数@var{next-buffers}は、バッファーのリストであること。"
+msgstr "この関数は@var{window}の次バッファーリストを@var{next-buffers}にセットする。@var{window}引数は生きたウィンドウか@code{nil} (選択されたウィンドウの意)、引数@var{next-buffers}はバッファーのリストであること。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2818
 msgid "The following commands can be used to cycle through the global buffer list, much like @code{bury-buffer} and @code{unbury-buffer}.  However, they cycle according to the specified window's history list, rather than the global buffer list.  In addition, they restore window-specific window start and point positions, and may show a buffer even if it is already shown in another window.  The @code{switch-to-prev-buffer} command, in particular, is used by @code{replace-buffer-in-windows}, @code{bury-buffer} and @code{quit-window} to find a replacement buffer for a window."
-msgstr "以下のコマンドは、@code{bury-buffer}や@code{unbury-buffer}のように、グローバルバッファーリストを巡回するために使用できます。ただし、これらはグローバルバッファーリストではなく、指定されたウィンドウのヒストリーリストのしたがって巡回します。それに加えて、これらはウィンドウ固有なウィンドウのスタート位置とポイント位置をリストアし、すでに他のウィンドウに表示されているバッファーをも表示できます。特に@code{switch-to-prev-buffer}コマンドは、ウィンドウにたいする置き換えバッファーを探すために@code{replace-buffer-in-windows}、@code{bury-buffer}、@code{quit-window}により使用されます。"
+msgstr "以下のコマンドは@code{bury-buffer}や@code{unbury-buffer}のように、グローバルバッファーリストを巡回するために使用できます。ただしこれらはグローバルバッファーリストではなく、指定されたウィンドウのヒストリーリストのしたがって巡回します。それに加えてこれらはウィンドウ固有なウィンドウのスタート位置とポイント位置をリストアして、すでに他のウィンドウに表示されているバッファーをも表示できます。特に@code{switch-to-prev-buffer}コマンドは、ウィンドウにたいする置き換えバッファーを探すために@code{replace-buffer-in-windows}、@code{bury-buffer}、@code{quit-window}により使用されます。"
 
 #. type: deffn
 #: original_texis/windows.texi:2819
@@ -4231,17 +4184,17 @@ msgstr "Command switch-to-prev-buffer &optional window bury-or-kill"
 #. type: deffn
 #: original_texis/windows.texi:2826
 msgid "This command displays the previous buffer in @var{window}.  The argument @var{window} should be a live window or @code{nil} (meaning the selected window).  If the optional argument @var{bury-or-kill} is non-@code{nil}, this means that the buffer currently shown in @var{window} is about to be buried or killed and consequently should not be switched to in future invocations of this command."
-msgstr "このコマンドは、@var{window}内に前のバッファーを表示する。引数@var{window}は生きたウィンドウ、または@code{nil}(選択されたウィンドウの意)であること。オプション引数@var{bury-or-kill}が非@code{nil}、それは@var{window}内にカレントで表示されているバッファーは今まさにバリーもしくはkillされるバッファーであり、したがって将来におけるこのコマンドの呼び出しで、このバッファーに切り替えるべきではないことを意味する。"
+msgstr "このコマンドは@var{window}内に前のバッファーを表示する。引数@var{window}は生きたウィンドウか@code{nil} (選択されたウィンドウの意)であること。オプション引数@var{bury-or-kill}が非@code{nil}なら、それは@var{window}内にカレントで表示されているバッファーは今まさにバリーもしくはkillされるバッファーであり、したがって将来におけるこのコマンドの呼び出しでこのバッファーに切り替えるべきではないことを意味する。"
 
 #. type: deffn
 #: original_texis/windows.texi:2831
 msgid "The previous buffer is usually the buffer shown before the buffer currently shown in @var{window}.  However, a buffer that has been buried or killed, or has been already shown by a recent invocation of @code{switch-to-prev-buffer}, does not qualify as previous buffer."
-msgstr "前のバッファーは通常、@var{window}内にカレントで表示されているバッファーの前に表示されていたバッファーである。しかし、バリーまたはkillされたバッファー、または直近の@code{switch-to-prev-buffer}呼び出しですでに表示されたバッファーは、前のバッファーとして適格とはならない。"
+msgstr "前のバッファーとは、通常は@var{window}内にカレントで表示されているバッファーの前に表示されていたバッファーである。しかしバリーやkillされたバッファー、または直近の@code{switch-to-prev-buffer}呼び出しですでに表示されたバッファーは前のバッファーとしては不適格となる。"
 
 #. type: deffn
 #: original_texis/windows.texi:2837
 msgid "If repeated invocations of this command have already shown all buffers previously shown in @var{window}, further invocations will show buffers from the buffer list of the frame @var{window} appears on (@pxref{Buffer List}), trying to skip buffers that are already shown in another window on that frame."
-msgstr "このコマンドを繰り返して呼び出すことにより、@var{window}内で前に表示されたすべてのバッファーが表示されてしまった場合、将来の呼び出しにおいては、@var{window}が表示されているフレームのバッファーリスト(@ref{Buffer List}を参照)から、そのフレームの他のウィンドウで表示済みのバッファーをスキップするようにして、バッファーを表示するだろう。"
+msgstr "このコマンドを繰り返して呼び出すことにより@var{window}内で前に表示されたすべてのバッファーが表示されてしまったら、将来の呼び出しでは@var{window}が表示されているフレームのバッファーリスト(@ref{Buffer List}を参照)から、そのフレームの他のウィンドウで表示済みのバッファーをスキップしてバッファーの表示を試みる。"
 
 #. type: deffn
 #: original_texis/windows.texi:2839
@@ -4252,17 +4205,17 @@ msgstr "Command switch-to-next-buffer &optional window"
 #. type: deffn
 #: original_texis/windows.texi:2844
 msgid "This command switches to the next buffer in @var{window}, thus undoing the effect of the last @code{switch-to-prev-buffer} command in @var{window}.  The argument @var{window} must be a live window and defaults to the selected one."
-msgstr "このコマンドは、@var{window}内の次バッファーに切り替える。つまり、@var{window}内での最後の@code{switch-to-prev-buffer}コマンドの効果をアンドゥする。引数@var{window}は生きたウィンドウであること。デフォルトは選択されたウィンドウである。"
+msgstr "このコマンドは@var{window}内の次バッファーに切り替える。つまり@var{window}内での最後の@code{switch-to-prev-buffer}コマンドの効果をアンドゥする。引数@var{window}は生きたウィンドウであること。デフォルトは選択されたウィンドウ。"
 
 #. type: deffn
 #: original_texis/windows.texi:2848
 msgid "If there is no recent invocation of @code{switch-to-prev-buffer} that can be undone, this function tries to show a buffer from the buffer list of the frame @var{window} appears on (@pxref{Buffer List})."
-msgstr "アンドゥ可能な@code{switch-to-prev-buffer}の直近の呼び出しが存在しない場合、この関数は@var{window}が表示されているフレームのバッファーリスト(@ref{Buffer List}を参照)からバッファーの表示を試みる。"
+msgstr "アンドゥ可能な@code{switch-to-prev-buffer}の直近の呼び出しが存在しなければ、この関数は@var{window}が表示されているフレームのバッファーリスト(@ref{Buffer List}を参照)からバッファーの表示を試みる。"
 
 #. type: Plain text
 #: original_texis/windows.texi:2853
 msgid "By default @code{switch-to-prev-buffer} and @code{switch-to-next-buffer} can switch to a buffer that is already shown in another window on the same frame.  The following option can be used to override this behavior."
-msgstr "デフォルトでは、@code{switch-to-prev-buffer}と@code{switch-to-next-buffer}は、同一フレーム上の他のウィンドウで表示済みのバッファーに切り替えることができます。以下のオプションは、この挙動をオーバーライドするために使用できます。"
+msgstr "デフォルトでは、@code{switch-to-prev-buffer}と@code{switch-to-next-buffer}は同一フレーム上の他のウィンドウで表示済みのバッファーに切り替えることができます。この挙動をオーバーライドするために以下のオプションを使用できます。"
 
 #. type: defopt
 #: original_texis/windows.texi:2854
@@ -4273,7 +4226,7 @@ msgstr "switch-to-visible-buffer"
 #. type: defopt
 #: original_texis/windows.texi:2862
 msgid "If this variable is non-@code{nil}, @code{switch-to-prev-buffer} and @code{switch-to-next-buffer} may switch to a buffer that is already visible on the same frame, provided the buffer was shown in the relevant window before.  If it is @code{nil}, @code{switch-to-prev-buffer} and @code{switch-to-next-buffer} always try to avoid switching to a buffer that is already visible in another window on the same frame.  The default is @code{t}."
-msgstr "この変数が非@code{nil}の場合、@code{switch-to-prev-buffer}および@code{switch-to-next-buffer}は、そのバッファーが当該ウィンドウで過去に表示されていれば、同一フレーム上ですでに可視のバッファーに切り替えることができる。@code{nil}の場合、@code{switch-to-prev-buffer}および@code{switch-to-next-buffer}は、同一フレーム上ですでに可視なバッファーへの切り替えを常に避けるよう試みる。デフォルトは@code{t}。"
+msgstr "この変数が非@code{nil}なら、そのバッファーが当該ウィンドウで過去に表示されていれば、@code{switch-to-prev-buffer}と@code{switch-to-next-buffer}は同一フレーム上ですでに可視のバッファーに切り替えることができる。@code{nil}なら、@code{switch-to-prev-buffer}と@code{switch-to-next-buffer}は同一フレーム上ですでに可視なバッファーへの切り替えを常に避けるよう試みる。デフォルトは@code{t}。"
 
 #. type: cindex
 #: original_texis/windows.texi:2867
