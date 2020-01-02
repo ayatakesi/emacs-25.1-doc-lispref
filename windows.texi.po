@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:50+0900\n"
-"PO-Revision-Date: 2020-01-02 19:49+0900\n"
+"PO-Revision-Date: 2020-01-02 22:11+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -4808,7 +4808,6 @@ msgstr "pos-visible-in-window-group-p &optional position window partially"
 
 #. type: defun
 #: original_texis/windows.texi:3313
-#, fuzzy
 msgid "This function is like @code{pos-visible-in-window-p}, except that when @var{window} is a part of a group of windows (@pxref{Window Group}), @code{pos-visible-in-window-group-p} tests the visibility of @var{pos} in the entire group, not just in the single @var{window}.  This condition holds when the buffer local variable @code{pos-visible-in-window-group-p-function} is set to a function.  In this case @code{pos-visible-in-window-group-p} calls the function with the three arguments @var{position}, @var{window}, and @var{partially}, then returns its result.  The arguments @var{position} and @var{partially} have the same meaning as in @code{pos-visible-in-window-p}."
 msgstr "この関数は@code{pos-visible-in-window-p}と同様だが、@var{window}がウィンドウグループ(@ref{Window Group}を参照)の一部なら、@code{pos-visible-in-window-group-p}は@var{window}単独ではなく、グループ全体で@var{pos}の可視性をテストする点が異なる。この条件はバッファーローカル変数@code{pos-visible-in-window-group-p-function}に関数がセットされている際に保持される。この場合には、@code{pos-visible-in-window-group-p}はその関数を3つの引数@var{position}、@var{window}、@var{partially}で呼び出して結果をリターンする。この関数の引数@var{position}と@var{partially}は@code{pos-visible-in-window-p}の場合と同じ意味をもつ。"
 
@@ -5895,15 +5894,13 @@ msgstr "saving window information"
 
 #. type: Plain text
 #: original_texis/windows.texi:4074
-#, fuzzy
-#| msgid "A @dfn{window configuration} records the entire layout of one frame---all windows, their sizes, which buffers they contain, how those buffers are scrolled, and their values of point and the mark; also their fringes, margins, and scroll bar settings.  It also includes the value of @code{minibuffer-scroll-window}.  As a special exception, the window configuration does not record the value of point in the selected window for the current buffer."
 msgid "A @dfn{window configuration} records the entire layout of one frame---all windows, their sizes, which buffers they contain, how those buffers are scrolled, and their value of point; also their fringes, margins, and scroll bar settings.  It also includes the value of @code{minibuffer-scroll-window}.  As a special exception, the window configuration does not record the value of point in the selected window for the current buffer."
-msgstr "@dfn{ウィンドウ構成(window configuration)}とは1つのフレーム上全体のレイアウト --- すべてのウィンドウ、およびそれらのサイズ、どんなバッファーを含んでいるか、それらのバッファーがスクロールされる方法、ポイント値とマーク値を記録し、フリンジ、マージン、スクロールバーのセッティングも記録します。これには@code{minibuffer-scroll-window}の値も含まれます。特別な例外として、ウィンドウ構成には選択されたウィンドウのカレントバッファーのポイント値は記録されません。"
+msgstr "@dfn{ウィンドウ構成(window configuration)}とは1つのフレーム上全体のレイアウト --- すべてのウィンドウとサイズ、どんなバッファーを含んでいるか、それらのバッファーがスクロールされる方法、およびポイント値を記録して、更にフリンジ、マージン、スクロールバーのセッティングも記録します。これには@code{minibuffer-scroll-window}の値も含まれます。特別な例外としてウィンドウ構成には選択されたウィンドウのカレントバッファーのポイント値は記録されません。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4079
 msgid "You can bring back an entire frame layout by restoring a previously saved window configuration.  If you want to record the layout of all frames instead of just one, use a frame configuration instead of a window configuration.  @xref{Frame Configurations}."
-msgstr "以前に保存されたウィンドウ構成をリストアすることにより、フレーム全体のレイアウトを取り戻すことができます。1つだけではなくすべてのフレームのレイアウトを記録したい場合は、ウィンドウ構成のかわりに、フレーム構成(frame configuration)を使用します。@ref{Frame Configurations}を参照してください。"
+msgstr "以前に保存されたウィンドウ構成をリストアすることにより、フレーム全体のレイアウトをリストアすることができます。1つだけではなくすべてのフレームのレイアウトを記録したければ、ウィンドウ構成のかわりにフレーム構成(frame configuration)を使用します。@ref{Frame Configurations}を参照してください。"
 
 #. type: defun
 #: original_texis/windows.texi:4080
@@ -5914,7 +5911,7 @@ msgstr "current-window-configuration &optional frame"
 #. type: defun
 #: original_texis/windows.texi:4086
 msgid "This function returns a new object representing @var{frame}'s current window configuration.  The default for @var{frame} is the selected frame.  The variable @code{window-persistent-parameters} specifies which window parameters (if any) are saved by this function.  @xref{Window Parameters}."
-msgstr "この関数は、@var{frame}のカレントのウィンドウ構成を表す新たなオブジェクトをリターンする。@var{frame}のデフォルトは選択されたフレームである。変数@code{window-persistent-parameters}は、この関数により保存されるウィンドウパラメーター(もしあれば)を指定する。@ref{Window Parameters}を参照のこと。"
+msgstr "この関数は@var{frame}のカレントのウィンドウ構成を表す新たなオブジェクトをリターンする。@var{frame}のデフォルトは選択されたフレーム。変数@code{window-persistent-parameters}はこの関数により保存されるウィンドウパラメーター(もしあれば)を指定する。@ref{Window Parameters}を参照のこと。"
 
 #. type: defun
 #: original_texis/windows.texi:4088
@@ -5925,22 +5922,22 @@ msgstr "set-window-configuration configuration"
 #. type: defun
 #: original_texis/windows.texi:4092
 msgid "This function restores the configuration of windows and buffers as specified by @var{configuration}, for the frame that @var{configuration} was created for."
-msgstr "この関数は、@var{configuration}が作成されたフレームにたいして、ウィンドウとバッファーの構成を@var{configuration}で指定された構成にリストアする。"
+msgstr "この関数は@var{configuration}が作成されたフレームにたいして、ウィンドウとバッファーの構成を@var{configuration}で指定された構成にリストアする。"
 
 #. type: defun
 #: original_texis/windows.texi:4101
 msgid "The argument @var{configuration} must be a value that was previously returned by @code{current-window-configuration}.  The configuration is restored in the frame from which @var{configuration} was made, whether that frame is selected or not.  This always counts as a window size change and triggers execution of the @code{window-size-change-functions} (@pxref{Window Hooks}), because @code{set-window-configuration} doesn't know how to tell whether the new configuration actually differs from the old one."
-msgstr "引数@var{configuration}は、以前に@code{current-window-configuration}がリターンした値でなければならない。この構成は、そのフレームが選択されているか否かに関わらず、@var{configuration}が作成時のフレームから、当該フレームにリストアされる。これは常にウィンドウのサイズ変更とみなされ、@code{window-size-change-functions}(@ref{Window Hooks}を参照)の実行をトリガーする。なぜなら、@code{set-window-configuration}は、新たな構成が古い構成と実際に異なるかを示す方法を知らないからである。"
+msgstr "引数@var{configuration}は以前に@code{current-window-configuration}がリターンした値でなければならない。この構成はそのフレームが選択されているか否かに関わらず、@var{configuration}が作成時のフレームから当該フレームにリストアされる。これは常にウィンドウのサイズ変更とみなされて、@code{window-size-change-functions} (@ref{Window Hooks}を参照)の実行をトリガーする。なぜなら@code{set-window-configuration}は新たな構成が古い構成と実際に異なるかを示す方法を知らないからである。"
 
 #. type: defun
 #: original_texis/windows.texi:4106
 msgid "If the frame from which @var{configuration} was saved is dead, all this function does is restore the three variables @code{window-min-height}, @code{window-min-width} and @code{minibuffer-scroll-window}.  In this case, the function returns @code{nil}.  Otherwise, it returns @code{t}."
-msgstr "@var{configuration}が保存されたフレームが死んでいる(生きていない)場合、この関数が行うのは3つの変数@code{window-min-height}、@code{window-min-width}、@code{minibuffer-scroll-window}のリストアだけである。この場合、関数は@code{nil}をリターンし、それ以外は@code{t}をリターンする。"
+msgstr "@var{configuration}が保存されたフレームが死んでいる(生きていない)場合には、この関数が行うのは3つの変数@code{window-min-height}、@code{window-min-width}、@code{minibuffer-scroll-window}のリストアのみ。この場合には関数は@code{nil}、それ以外は@code{t}をリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:4109
 msgid "Here is a way of using this function to get the same effect as @code{save-window-excursion}:"
-msgstr "以下は、@code{save-window-excursion}と同様な効果を得るためにこの関数を使用する例である:"
+msgstr "以下は@code{save-window-excursion}と同様な効果を得るためにこの関数を使用する例:"
 
 #. type: group
 #: original_texis/windows.texi:4117
@@ -5967,17 +5964,17 @@ msgstr "save-window-excursion forms@dots{}"
 #. type: defmac
 #: original_texis/windows.texi:4126
 msgid "This macro records the window configuration of the selected frame, executes @var{forms} in sequence, then restores the earlier window configuration.  The return value is the value of the final form in @var{forms}."
-msgstr "このマクロは、選択されたフレームのウィンドウ構成を記録して、@var{forms}を順に実行してから、以前のウィンドウ構成をリストアする。リターン値は、@var{forms}内の最後のフォームの値である。"
+msgstr "このマクロは選択されたフレームのウィンドウ構成を記録して、@var{forms}を順に実行してから以前のウィンドウ構成をリストアする。リターン値は@var{forms}内の最後のフォームの値。"
 
 #. type: defmac
 #: original_texis/windows.texi:4133
 msgid "Most Lisp code should not use this macro; @code{save-selected-window} is typically sufficient.  In particular, this macro cannot reliably prevent the code in @var{forms} from opening new windows, because new windows might be opened in other frames (@pxref{Choosing Window}), and @code{save-window-excursion} only saves and restores the window configuration on the current frame."
-msgstr "Lispコードのほとんどは、このマクロを使用すべきではない。大抵は@code{save-selected-window}で十分である。特に、このマクロは@var{forms}内で新たなウィンドウをオープンするコードを確実に防ぐことができず、新たなウィンドウは別のフレーム内でオープンされるかもしれないが(@ref{Choosing Window}を参照)、@code{save-window-excursion}が保存およびリストアするのは、カレントフレーム上のウィンドウ構成だけだからである。"
+msgstr "Lispコードのほとんどはこのマクロを使用するべきではない。大抵は@code{save-selected-window}で十分であろう。特にこのマクロは@var{forms}内で新たなウィンドウをオープンするコードを確実に防ぐことができず、新たなウィンドウは別のフレーム内でオープンされるかもしれないが(@ref{Choosing Window}を参照)、@code{save-window-excursion}が保存とリストアするのはカレントフレーム上のウィンドウ構成だけだからである。"
 
 #. type: defmac
 #: original_texis/windows.texi:4137
 msgid "Do not use this macro in @code{window-size-change-functions}; exiting the macro triggers execution of @code{window-size-change-functions}, leading to an endless loop."
-msgstr "このマクロを@code{window-size-change-functions}内で使用してはならない。このマクロをexitすることにより@code{window-size-change-functions}の実行がトリガーされるが、これは無限ループを引き起こす。"
+msgstr "このマクロを@code{window-size-change-functions}内で使用してはならない。このマクロをexitすることにより@code{window-size-change-functions}の実行がトリガーされるが無限ループを引き起こす。"
 
 #. type: defun
 #: original_texis/windows.texi:4139
@@ -5988,7 +5985,7 @@ msgstr "window-configuration-p object"
 #. type: defun
 #: original_texis/windows.texi:4141
 msgid "This function returns @code{t} if @var{object} is a window configuration."
-msgstr "この関数は、@var{object}がウィンドウ構成なら@code{t}をリターンする。"
+msgstr "この関数は@var{object}がウィンドウ構成なら@code{t}をリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:4143
@@ -5998,17 +5995,13 @@ msgstr "compare-window-configurations config1 config2"
 
 #. type: defun
 #: original_texis/windows.texi:4148
-#, fuzzy
-#| msgid "This function compares two window configurations as regards the structure of windows, but ignores the values of point and mark and the saved scrolling positions---it can return @code{t} even if those aspects differ."
 msgid "This function compares two window configurations as regards the structure of windows, but ignores the values of point and the saved scrolling positions---it can return @code{t} even if those aspects differ."
-msgstr "この関数は、ポイント値、マーク値、保存されたスクロール位置を無視して(これらの観点が異なっても@code{t}をリターンし得る)、ウィンドウ構造の観点から2つのウィンドウ構成を比較する。"
+msgstr "この関数はポイント値、保存されたスクロール位置を無視して(つまりこれらの観点が異なっても@code{t}をリターンし得る)、ウィンドウ構造の観点から2つのウィンドウ構成を比較する。"
 
 #. type: defun
 #: original_texis/windows.texi:4152
-#, fuzzy
-#| msgid "The function @code{equal} can also compare two window configurations; it regards configurations as unequal if they differ in any respect, even a saved point or mark."
 msgid "The function @code{equal} can also compare two window configurations; it regards configurations as unequal if they differ in any respect, even a saved point."
-msgstr "関数@code{equal}も2つのウィンドウ構成を比較できる。これはすべての点から、たとえ1つでも異なるものがあれば等しい構成とはみなさず、たとえ保存されたポイント値やマーク値が異なるだけでも、等しくないとみなす。"
+msgstr "関数@code{equal}も2つのウィンドウ構成を比較できる。これはすべての点からたとえ1つでも異なるものがあれば等しい構成とはみなさず、たとえ保存されたポイント値が異なるだけでも等しくないとみなす。"
 
 #. type: defun
 #: original_texis/windows.texi:4154
@@ -6019,17 +6012,17 @@ msgstr "window-configuration-frame config"
 #. type: defun
 #: original_texis/windows.texi:4157
 msgid "This function returns the frame for which the window configuration @var{config} was made."
-msgstr "この関数は、ウィンドウ構成@var{config}が作成されたフレームをリターンする。"
+msgstr "この関数はウィンドウ構成@var{config}が作成されたフレームをリターンする。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4163
 msgid "Other primitives to look inside of window configurations would make sense, but are not implemented because we did not need them.  See the file @file{winner.el} for some more operations on windows configurations."
-msgstr "ウィンドウ構成の内部を調べる他のプリミティブも有用かもしれませんが、わたしたちはこれらを必要としないので実装されていません。ウィンドウ構成にたいしてより多くの操作を知りたい場合は、ファイル@file{winner.el}を参照してください。"
+msgstr "ウィンドウ構成の内部を調べる他のプリミティブも有用かもしれませんが、わたしたちはこれらを必要としないので実装されていません。ウィンドウ構成にたいしてより多くの操作を知りたければ、ファイル@file{winner.el}を参照してください。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4171
 msgid "The objects returned by @code{current-window-configuration} die together with the Emacs process.  In order to store a window configuration on disk and read it back in another Emacs session, you can use the functions described next.  These functions are also useful to clone the state of a frame into an arbitrary live window (@code{set-window-configuration} effectively clones the windows of a frame into the root window of that very frame only)."
-msgstr "@code{current-window-configuration}がリターンするオブジェクトは、Emacsプロセスとともに終焉します。ウィンドウ構成をディスク上に格納して、それを別のEmacsセッションに読み戻すために、次に説明する関数を使用できます。これらの関数は、フレームの状態を任意の生きたウィンドウにクローンする場合も有用です(@code{set-window-configuration}はフレームのウィンドウを、そのフレームのルートウィンドウだけに効果的にクローンする)。"
+msgstr "@code{current-window-configuration}がリターンするオブジェクトはEmacsプロセスとともに死滅します。ウィンドウ構成をディスク上に格納してそれを別のEmacsセッションに読み戻すために、次に説明する関数を使用できます。これらの関数はフレームの状態を任意の生きたウィンドウにクローンする場合にも有用です(@code{set-window-configuration}はフレームのウィンドウをそのフレームのルートウィンドウだけに効果的にクローンする)。"
 
 #. type: cindex
 #: original_texis/windows.texi:4172
@@ -6046,22 +6039,22 @@ msgstr "window-state-get &optional window writable"
 #. type: defun
 #: original_texis/windows.texi:4177
 msgid "This function returns the state of @var{window} as a Lisp object.  The argument @var{window} must be a valid window and defaults to the root window of the selected frame."
-msgstr "この関数は、@var{window}の状態をLispオブジェクトとしてリターンする。引数@var{window}は有効なウィンドウでなければならず、デフォルトは選択されたフレームのルートウィンドウである。"
+msgstr "この関数は@var{window}の状態をLispオブジェクトとしてリターンする。引数@var{window}は有効なウィンドウでなければならずデフォルトは選択されたフレームのルートウィンドウ。"
 
 #. type: defun
 #: original_texis/windows.texi:4182
 msgid "If the optional argument @var{writable} is non-@code{nil}, this means to not use markers for sampling positions like @code{window-point} or @code{window-start}.  This argument should be non-@code{nil} when the state will be written to disk and read back in another session."
-msgstr "オプション引数@var{writable}が非@code{nil}の場合、それは@code{window-point}や@code{window-start}のようなサンプリング位置にたいするマーカーを使用しないことを意味する。この状態をディスクに書き込んで別のセッションに読み戻す場合は、この引数は非@code{nil}であること。"
+msgstr "オプション引数@var{writable}が非@code{nil}なら、それは@code{window-point}や@code{window-start}のようなサンプリング位置にたいするマーカーを使用しないことを意味する。この状態をディスクに書き込んで別のセッションに読み戻すなら、この引数は非@code{nil}であること。"
 
 #. type: defun
 #: original_texis/windows.texi:4186
 msgid "Together, the argument @var{writable} and the variable @code{window-persistent-parameters} specify which window parameters are saved by this function.  @xref{Window Parameters}."
-msgstr "引数@var{writable}と変数@code{window-persistent-parameters}の両方で、この関数によりどのウィンドウパラメーターが保存されるかを指定する。@ref{Window Parameters}を参照のこと。"
+msgstr "この関数によりどのウィンドウパラメーターが保存されるかは、引数@var{writable}と変数@code{window-persistent-parameters}の両方で指定する。@ref{Window Parameters}を参照のこと。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4192
 msgid "The value returned by @code{window-state-get} can be used in the same session to make a clone of a window in another window.  It can be also written to disk and read back in another session.  In either case, use the following function to restore the state of the window."
-msgstr "@code{window-state-get}によりリターンされる値は、同一セッション内の他のウィンドウ内にあるウィンドウのクローンを作成するために使用できます。これはディスクに書き込んで、別のセッションに読み戻すこともできます。どちらの場合でも、ウィンドウの状態をリストアするためには以下の関数を使用します。"
+msgstr "@code{window-state-get}によりリターンされる値は、同一セッション内の他のウィンドウ内にあるウィンドウのクローンを作成するために使用できます。これはディスクに書き込んで別のセッションに読み戻すこともできます。いずれの場合にもウィンドウの状態をリストアするためには以下の関数を使用します。"
 
 #. type: defun
 #: original_texis/windows.texi:4193
@@ -6072,12 +6065,12 @@ msgstr "window-state-put state &optional window ignore"
 #. type: defun
 #: original_texis/windows.texi:4201
 msgid "This function puts the window state @var{state} into @var{window}.  The argument @var{state} should be the state of a window returned by an earlier invocation of @code{window-state-get}, see above.  The optional argument @var{window} can be either a live window or an internal window (@pxref{Windows and Frames}) and defaults to the selected one.  If @var{window} is not live, it is replaced by a live window before putting @var{state} into it."
-msgstr "この関数は、ウィンドウ状態@var{state}を@var{window}内にputする。引数@var{state}は以前に呼び出した@code{window-state-get}がリターンしたウィンドウ状態であること。オプション引数@var{window}には生きたウィンドウ、または内部ウィンドウ(@ref{Windows and Frames}を参照)のいずれかを指定でき、デフォルトは選択されたウィンドウである。@var{window}が生きていない場合は、@var{state}をputする前に生きたウィンドウに置き換える。"
+msgstr "この関数はウィンドウ状態@var{state}を@var{window}内にputする。引数@var{state}は以前に呼び出した@code{window-state-get}がリターンしたウィンドウ状態であること。オプション引数@var{window}には生きたウィンドウか内部ウィンドウ(@ref{Windows and Frames}を参照)のいずれかを指定でき、デフォルトは選択されたウィンドウ。@var{window}が生きていなければ、@var{state}をputする前に生きたウィンドウに置き換える。"
 
 #. type: defun
 #: original_texis/windows.texi:4206
 msgid "If the optional argument @var{ignore} is non-@code{nil}, it means to ignore minimum window sizes and fixed-size restrictions.  If @var{ignore} is @code{safe}, this means windows can get as small as one line and/or two columns."
-msgstr "オプション引数@var{ignore}が非@code{nil}の場合、それは最小ウィンドウサイズと固定サイズの制限を無視することを意味する。@var{ignore}が@code{safe}なら、それは1行および/または2列まで、できる限り小さくできることを意味する。"
+msgstr "オプション引数@var{ignore}が非@code{nil}なら、それは最小ウィンドウサイズと固定サイズの制限を無視することを意味する。@var{ignore}が@code{safe}なら、それは1行および/または2列までできる限り小さくできることを意味する。"
 
 #. type: cindex
 #: original_texis/windows.texi:4211
@@ -6088,7 +6081,7 @@ msgstr "window parameters"
 #. type: Plain text
 #: original_texis/windows.texi:4215
 msgid "This section describes how window parameters can be used to associate additional information with windows."
-msgstr "このセクションでは、ウィンドウに追加の情報を関連付けるためにウィンドウパラメーターを使用する方法を説明します。"
+msgstr "このセクションではウィンドウに追加の情報を関連付けるためにウィンドウパラメーターを使用する方法を説明します。"
 
 #. type: defun
 #: original_texis/windows.texi:4216
@@ -6099,7 +6092,7 @@ msgstr "window-parameter window parameter"
 #. type: defun
 #: original_texis/windows.texi:4220
 msgid "This function returns @var{window}'s value for @var{parameter}.  The default for @var{window} is the selected window.  If @var{window} has no setting for @var{parameter}, this function returns @code{nil}."
-msgstr "この関数は、@var{window}の@var{parameter}の値をリターンする。@var{window}のデフォルトは、選択されたウィンドウである。@var{window}に@var{parameter}にたいするセッティングがない場合、この関数は@code{nil}をリターンする。"
+msgstr "この関数は@var{window}の@var{parameter}の値をリターンする。@var{window}のデフォルトは選択されたウィンドウ。@var{window}に@var{parameter}にたいするセッティングがなければ、この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/windows.texi:4222
@@ -6110,7 +6103,7 @@ msgstr "window-parameters &optional window"
 #. type: defun
 #: original_texis/windows.texi:4227
 msgid "This function returns all parameters of @var{window} and their values.  The default for @var{window} is the selected window.  The return value is either @code{nil}, or an association list whose elements have the form @code{(@var{parameter} . @var{value})}."
-msgstr "この関数は、@var{window}のすべてのパラメーターと、その値をリターンする。@var{window}のデフォルトは、選択されたウィンドウである。リターン値は@code{nil}、または@code{(@var{parameter} . @var{value})}という形式をもつ要素からなる連想リストである。"
+msgstr "この関数は@var{window}のすべてのパラメーターと値をリターンする。@var{window}のデフォルトは選択されたウィンドウ。リターン値は@code{nil}、または@code{(@var{parameter} . @var{value})}という形式をもつ要素からなる連想リスト。"
 
 #. type: defun
 #: original_texis/windows.texi:4229
@@ -6121,12 +6114,12 @@ msgstr "set-window-parameter window parameter value"
 #. type: defun
 #: original_texis/windows.texi:4233
 msgid "This function sets @var{window}'s value of @var{parameter} to @var{value} and returns @var{value}.  The default for @var{window} is the selected window."
-msgstr "この関数は、@var{window}の@var{parameter}の値に@var{value}をセットして、@var{value}をリターンする。@var{window}のデフォルトは、選択されたウィンドウである。"
+msgstr "この関数は@var{window}の@var{parameter}の値に@var{value}をセットして@var{value}をリターンする。@var{window}のデフォルトは選択されたウィンドウ。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4244
 msgid "By default, the functions that save and restore window configurations or the states of windows (@pxref{Window Configurations}) do not care about window parameters.  This means that when you change the value of a parameter within the body of a @code{save-window-excursion}, the previous value is not restored when that macro exits.  It also means that when you restore via @code{window-state-put} a window state saved earlier by @code{window-state-get}, all cloned windows have their parameters reset to @code{nil}.  The following variable allows you to override the standard behavior:"
-msgstr "デフォルトでは、ウィンドウ構成(window configuration)やウィンドウ状態(states of windows)の保存とリストアを行う関数は、ウィンドウパラメーターについては関知しません(@ref{Window Configurations}を参照)。これは、@code{save-window-excursion}のbody内でパラメーターの値を変更したときは、そのマクロのexit時に以前の値がリストアされないことを意味します。これはまた、以前に@code{window-state-get}で保存されたウィンドウ状態を@code{window-state-put}でリストアしたときは、クローンされたすべてのウィンドウのパラメーターが@code{nil}にリセットされることも意味します。以下の変数により、この標準の挙動をオーバーライドできます:"
+msgstr "デフォルトではウィンドウ構成(window configuration)やウィンドウ状態(states of windows)の保存とリストアを行う関数は、ウィンドウパラメーターについては関知しません(@ref{Window Configurations}を参照)。これは@code{save-window-excursion}のbody内でパラメーターの値を変更したときは、そのマクロのexit時に以前の値がリストアされないことを意味します。これはまた以前に@code{window-state-get}で保存されたウィンドウ状態を@code{window-state-put}でリストアしたときは、クローンされたすべてのウィンドウのパラメーターが@code{nil}にリセットされることも意味します。以下の変数によってこの標準の挙動をオーバーライドできます:"
 
 #. type: defvar
 #: original_texis/windows.texi:4245
@@ -6137,22 +6130,22 @@ msgstr "window-persistent-parameters"
 #. type: defvar
 #: original_texis/windows.texi:4250
 msgid "This variable is an alist specifying which parameters get saved by @code{current-window-configuration} and @code{window-state-get}, and subsequently restored by @code{set-window-configuration} and @code{window-state-put}.  @xref{Window Configurations}."
-msgstr "この変数は、@code{current-window-configuration}と@code{window-state-get}により保存され、@code{set-window-configuration}と@code{window-state-put}によりリストアされるパラメーターを指定するalistである。@ref{Window Configurations}を参照のこと。"
+msgstr "この変数は@code{current-window-configuration}と@code{window-state-get}により保存、@code{set-window-configuration}と@code{window-state-put}によりリストアされるパラメーターを指定するalistである。@ref{Window Configurations}を参照のこと。"
 
 #. type: defvar
 #: original_texis/windows.texi:4253
 msgid "The @sc{car} of each entry of this alist is a symbol specifying the parameter.  The @sc{cdr} should be one of the following:"
-msgstr "このalistの各エントリーの@sc{car}はパラメーターを指定するシンボルである。@sc{cdr}は以下のいずれかであること:"
+msgstr "このalistの各エントリーの@sc{car}はパラメーターを指定するシンボル。@sc{cdr}は以下のいずれかであること:"
 
 #. type: table
 #: original_texis/windows.texi:4258
 msgid "This value means the parameter is saved neither by @code{window-state-get} nor by @code{current-window-configuration}."
-msgstr "この値は、そのパラメーターが@code{window-state-get}と@code{current-window-configuration}のいずれによっても保存されていないことを意味する。"
+msgstr "この値はそのパラメーターが@code{window-state-get}と@code{current-window-configuration}のいずれによっても保存されていないことを意味する。"
 
 #. type: table
 #: original_texis/windows.texi:4263
 msgid "This value specifies that the parameter is saved by @code{current-window-configuration} and (provided its @var{writable} argument is @code{nil}) by @code{window-state-get}."
-msgstr "この値は、そのパラメーターが@code{current-window-configuration}、および(@var{writable}引数が@code{nil}の場合は)@code{window-state-get}により保存されたことを意味する。"
+msgstr "この値はそのパラメーターが@code{current-window-configuration}、および(@var{writable}引数が@code{nil}なら)@code{window-state-get}により保存されたことを意味する。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4264
@@ -6163,12 +6156,12 @@ msgstr "writable"
 #. type: table
 #: original_texis/windows.texi:4270
 msgid "This means that the parameter is saved unconditionally by both @code{current-window-configuration} and @code{window-state-get}.  This value should not be used for parameters whose values do not have a read syntax.  Otherwise, invoking @code{window-state-put} in another session may fail with an @code{invalid-read-syntax} error."
-msgstr "これは、そのパラメーターが無条件で@code{current-window-configuration}と@code{window-state-get}の両方により保存されたことを意味する。この値は、入力構文(read syntax)をもたないパラメーターに使用するべきではない。使用した場合、別のセッションで@code{window-state-put}を呼び出すと、@code{invalid-read-syntax}エラーで失敗するだろう。"
+msgstr "これはそのパラメーターが無条件で@code{current-window-configuration}と@code{window-state-get}の両方により保存されたことを意味する。この値は入力構文(read syntax)をもたないパラメーターに使用するべきではない。使用した場合には、別のセッションで@code{window-state-put}を呼び出すと@code{invalid-read-syntax}エラーで失敗するだろう。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4278
 msgid "Some functions (notably @code{delete-window}, @code{delete-other-windows} and @code{split-window}), may behave specially when their @var{window} argument has a parameter set.  You can override such special behavior by binding the following variable to a non-@code{nil} value:"
-msgstr "いくつかの関数(特に@code{delete-window}、@code{delete-other-windows}、@code{split-window})は、@var{window}引数にパラメーターセットをもつ場合は特別な挙動を示すかもしれません。以下の変数を非@code{nil}値にバインドすることにより、そのような特別な挙動をオーバーライドできます:"
+msgstr "いくつかの関数(特に@code{delete-window}、@code{delete-other-windows}、@code{split-window})は、@var{window}引数にパラメーターセットをもつ場合には特別な挙動を示すかもしれません。以下の変数を非@code{nil}値にバインドすることにより、そのような特別な挙動をオーバーライドできます:"
 
 #. type: defvar
 #: original_texis/windows.texi:4279
@@ -6179,17 +6172,17 @@ msgstr "ignore-window-parameters"
 #. type: defvar
 #: original_texis/windows.texi:4284
 msgid "If this variable is non-@code{nil}, some standard functions do not process window parameters.  The functions currently affected by this are @code{split-window}, @code{delete-window}, @code{delete-other-windows}, and @code{other-window}."
-msgstr "この変数が非@code{nil}の場合、いくつかの標準関数はウィンドウパラメーターを処理しない。現在のところ影響を受ける関数は@code{split-window}、@code{delete-window}、@code{delete-other-windows}、@code{other-window}である。"
+msgstr "この変数が非@code{nil}なら、いくつかの標準関数はウィンドウパラメーターを処理しない。現在のところ影響を受ける関数は@code{split-window}、@code{delete-window}、@code{delete-other-windows}、@code{other-window}。"
 
 #. type: defvar
 #: original_texis/windows.texi:4289
 msgid "An application can bind this variable to a non-@code{nil} value around calls to these functions.  If it does so, the application is fully responsible for correctly assigning the parameters of all involved windows when exiting that function."
-msgstr "アプリケーションは、これらの関数の呼び出し周辺で、この変数を非@code{nil}にバインドできる。これを行った場合、そのアプリケーションはその関数のexit時に、関連するすべてのウィンドウのパラメーターを正しく割り当てる責任をもつ。"
+msgstr "これらの関数の呼び出し周辺でアプリケーションはこの変数を非@code{nil}にバインドできる。これを行うと、そのアプリケーションはその関数のexit時に関連するすべてのウィンドウのパラメーターを正しく割り当てる責任をもつ。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4293
 msgid "The following parameters are currently used by the window management code:"
-msgstr "以下のパラメーターは現在のところ、ウィンドウ管理コードにより使用されています:"
+msgstr "以下のパラメーターは現在のところウィンドウ管理コードにより使用されています:"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4295
@@ -6200,7 +6193,7 @@ msgstr "delete-window"
 #. type: table
 #: original_texis/windows.texi:4298
 msgid "This parameter affects the execution of @code{delete-window} (@pxref{Deleting Windows})."
-msgstr "このパラメーターは、@code{delete-window}の実行に影響する(@ref{Deleting Windows}を参照)。"
+msgstr "このパラメーターは@code{delete-window}の実行に影響する(@ref{Deleting Windows}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4299
@@ -6211,7 +6204,7 @@ msgstr "delete-other-windows"
 #. type: table
 #: original_texis/windows.texi:4302
 msgid "This parameter affects the execution of @code{delete-other-windows} (@pxref{Deleting Windows})."
-msgstr "このパラメーターは、@code{delete-other-windows}の実行に影響する(@ref{Deleting Windows}を参照)。"
+msgstr "このパラメーターは@code{delete-other-windows}の実行に影響する(@ref{Deleting Windows}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4303
@@ -6222,7 +6215,7 @@ msgstr "split-window"
 #. type: table
 #: original_texis/windows.texi:4306
 msgid "This parameter affects the execution of @code{split-window} (@pxref{Splitting Windows})."
-msgstr "このパラメーターは、@code{split-window}の実行に影響する(@ref{Splitting Windows}を参照)。"
+msgstr "このパラメーターは@code{split-window}の実行に影響する(@ref{Splitting Windows}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4307
@@ -6233,7 +6226,7 @@ msgstr "other-window"
 #. type: table
 #: original_texis/windows.texi:4310
 msgid "This parameter affects the execution of @code{other-window} (@pxref{Cyclic Window Ordering})."
-msgstr "このパラメーターは、@code{other-window}の実行に影響する(@ref{Cyclic Window Ordering}を参照)。"
+msgstr "このパラメーターは@code{other-window}の実行に影響する(@ref{Cyclic Window Ordering}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4311
@@ -6244,7 +6237,7 @@ msgstr "no-other-window"
 #. type: table
 #: original_texis/windows.texi:4314
 msgid "This parameter marks the window as not selectable by @code{other-window} (@pxref{Cyclic Window Ordering})."
-msgstr "このパラメーターは、そのウィンドウを@code{other-window}により選択不可とマークする(@ref{Cyclic Window Ordering}を参照)。"
+msgstr "このパラメーターはそのウィンドウを@code{other-window}による選択が不可だとマークする(@ref{Cyclic Window Ordering}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4315
@@ -6255,18 +6248,18 @@ msgstr "clone-of"
 #. type: table
 #: original_texis/windows.texi:4319
 msgid "This parameter specifies the window that this one has been cloned from.  It is installed by @code{window-state-get} (@pxref{Window Configurations})."
-msgstr "このパラメーターは、そのウィンドウがクローンされたことを指定する。これは@code{window-state-get}によりインストールされる(@ref{Window Configurations}を参照)。"
+msgstr "このパラメーターはそのウィンドウがクローンされたことを指定する。これは@code{window-state-get}によりインストールされる(@ref{Window Configurations}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4320
 #, no-wrap
 msgid "preserved-size"
-msgstr ""
+msgstr "preserved-size"
 
 #. type: table
 #: original_texis/windows.texi:4328
 msgid "This parameter specifies a buffer, a direction where @code{nil} means vertical and @code{t} horizontal, and a size in pixels.  If this window displays the specified buffer and its size in the indicated direction equals the size specified by this parameter, then Emacs will try to preserve the size of this window in the indicated direction.  This parameter is installed and updated by the function @code{window-preserve-size} (@pxref{Preserving Window Sizes})."
-msgstr ""
+msgstr "このパラメーターはバッファー、方向(@code{nil}は垂直で@code{t}は水平)、ピクセル単位のサイズを指定する。そのウィンドウが指定されたバッファーを表示していて、かつ指示された方向のサイズがこのパラメーターで指定されたサイズと等しければ、Emacsはそのウィンドウの指示された方向のサイズを予約する。関数@code{window-preserve-size}によりこのパラメーターのインストールと更新が行われる(@ref{Preserving Window Sizes}を参照)。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4329
@@ -6277,54 +6270,53 @@ msgstr "quit-restore"
 #. type: table
 #: original_texis/windows.texi:4333
 msgid "This parameter is installed by the buffer display functions (@pxref{Choosing Window}) and consulted by @code{quit-restore-window} (@pxref{Quitting Windows}).  It contains four elements:"
-msgstr "このパラメーターは、バッファー表示関数によりインストールされ、@code{quit-restore-window}により参照される(@ref{Quitting Windows}を参照)。これは4つの要素を含む:"
+msgstr "このパラメーターはバッファー表示関数によりインストールされて、@code{quit-restore-window}により参照される(@ref{Quitting Windows}を参照)。これは4つの要素を含む:"
 
 #. type: table
 #: original_texis/windows.texi:4339
 msgid "The first element is one of the symbols @code{window}, meaning that the window has been specially created by @code{display-buffer}; @code{frame}, a separate frame has been created; @code{same}, the window has displayed the same buffer before; or @code{other}, the window showed another buffer before."
-msgstr "1つ目の要素は@code{window}(ウィンドウは@code{display-buffer}により特別に作られた)、@code{frame}(別のフレームが作られた)、@code{same}(ウィンドウは前と同じバッファーを表示する)、@code{other}(ウィンドウは前と異なるバッファーを表示する)のシンボルのいずれかである。"
+msgstr "1つ目の要素は@code{window} (ウィンドウは@code{display-buffer}により特別に作成される)、@code{frame} (別フレームを作成する)、@code{same} (ウィンドウは前と同じバッファーを表示する)、@code{other} (ウィンドウは前と異なるバッファーを表示する)のシンボルのいずれかである。"
 
 #. type: table
 #: original_texis/windows.texi:4344
 msgid "The second element is either one of the symbols @code{window} or @code{frame}, or a list whose elements are the buffer shown in the window before, that buffer's window start and window point positions, and the window's height at that time."
-msgstr "2つ目の要素はシンボル@code{window}、@code{frame}、または要素がそのウィンドウに前に表示されていたバッファー、そのときのウィンドウstart位置、ウィンドウポイント位置、ウィンドウの高さであるようなリストの、いずれかである。"
+msgstr "2つ目の要素はシンボル@code{window}、@code{frame}、または要素がそのウィンドウに前に表示されていたバッファー、そのときのウィンドウstart位置、ウィンドウポイント位置、ウィンドウの高さであるようなリストのいずれか。"
 
 #. type: table
 #: original_texis/windows.texi:4348
 msgid "The third element is the window selected at the time the parameter was created.  The function @code{quit-restore-window} tries to reselect that window when it deletes the window passed to it as argument."
-msgstr "3つ目の要素は、そのパラメーター作成時点に選択されていたウィンドウである。関数@code{quit-restore-window}は、その引数としてこのウィンドウが渡された際は、そのウィンドウの再選択を試みる。"
+msgstr "3つ目の要素はそのパラメーター作成時点に選択されていたウィンドウ。関数@code{quit-restore-window}は、その引数としてこのウィンドウが渡された際にはそのウィンドウの再選択を試みる。"
 
 #. type: table
 #: original_texis/windows.texi:4352
 msgid "The fourth element is the buffer whose display caused the creation of this parameter.  @code{quit-restore-window} deletes the specified window only if it still shows that buffer."
-msgstr "4つ目の要素は、その表示がこのパラメーターの生成を引き起こしたバッファーである。@code{quit-restore-window}は、指定されたウィンドウがまだそのバッファーを表示している場合のみ、それを削除する。"
+msgstr "4つ目の要素はその表示がこのパラメーターの生成を引き起こしたバッファー。@code{quit-restore-window}は指定されたウィンドウがまだそのバッファーを表示している場合のみそれを削除する。"
 
 #. type: code{#1}
 #: original_texis/windows.texi:4353
-#, fuzzy, no-wrap
-#| msgid "right-margin"
+#, no-wrap
 msgid "min-margins"
-msgstr "right-margin"
+msgstr "min-margins"
 
 #. type: table
 #: original_texis/windows.texi:4359
 msgid "The value of this parameter is a cons cell whose @sc{car} and @sc{cdr}, if non-@code{nil}, specify the minimum values (in columns) for the left and right margin of this window.  When present, Emacs will use these values instead of the actual margin widths for determining whether a window can be split or shrunk horizontally."
-msgstr ""
+msgstr "このパラメーターの値は、(非@code{nil}なら) @sc{car}と@sc{cdr}がそのウィンドウの左右のマージンの最小値(列数)を指定するようなコンスセル。与えられた際には、Emacsはウィンドウを水平方向に分割または縮小できるかを決定するために、実際のマージン幅のかわりにこれらの値を使用するだろう。"
 
 #. type: table
 #: original_texis/windows.texi:4367
 msgid "Emacs never auto-adjusts the margins of any window after splitting or resizing it.  It is the sole responsibility of any application setting this parameter to adjust the margins of this window as well as those of any new window that inherits this window's margins due to a split.  Both @code{window-configuration-change-hook} and @code{window-size-change-functions} (@pxref{Window Hooks}) should be employed for this purpose."
-msgstr ""
+msgstr "すべてのウィンドウにたいして、分割やリサイズ後にEmacsがマージンの自動調整をすることは決してない。これはそのウィンドウト分割のためにこのウィンドウのマージンを継承する新たなウィンドウニタイシテ、マージンを調整するためにこのパラメーターをセットするすべてのアプリケーション単独の責任である。@code{window-configuration-change-hook}と@code{window-size-change-functions}はいずれもこの用途に使用すること(@ref{Window Hooks}を参照)。"
 
 #. type: table
 #: original_texis/windows.texi:4373
 msgid "This parameter was introduced in Emacs version 25.1 to support applications that use large margins to center buffer text within a window and should be used, with due care, exclusively by those applications.  It might be replaced by an improved solution in future versions of Emacs."
-msgstr ""
+msgstr "これはウィンドウ内でバッファーをセンタリングするために大きなマージンを使用するアプリケーションのサポート用にEmacsのバージョン25.1から導入されたパラメーターであり、それらのアプリケーションと排他となるよう留意して使用すること。Emacsの将来のバージョンで改善策により置換され得る。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4377
 msgid "There are additional parameters @code{window-atom} and @code{window-side}; these are reserved and should not be used by applications."
-msgstr "追加のパラメーターとして、@code{window-atom}と@code{window-side}があります。これらは予約されており、アプリケーションが使用するべきではありません。"
+msgstr "追加のパラメーターとして@code{window-atom}と@code{window-side}があります。これらは予約済みでアプリケーションが使用するべきではありません。"
 
 #. type: section
 #: original_texis/windows.texi:4380
@@ -6352,22 +6344,22 @@ msgstr "window-scroll-functions"
 #. type: defvar
 #: original_texis/windows.texi:4394
 msgid "This variable holds a list of functions that Emacs should call before redisplaying a window with scrolling.  Displaying a different buffer in the window also runs these functions."
-msgstr "この変数は、ウィンドウのスクロールによりEmacsが再表示前に呼び出すべき関数のリストを保持する。そのウィンドウ内に異なるバッファーを表示したときも、これらの関数が実行される。"
+msgstr "この変数はウィンドウのスクロールによりEmacsが再表示前に呼び出すべき関数のリストを保持する。そのウィンドウ内に異なるバッファーを表示したときもこれらの関数が実行される。"
 
 #. type: defvar
 #: original_texis/windows.texi:4397
 msgid "This variable is not a normal hook, because each function is called with two arguments: the window, and its new display-start position."
-msgstr "この変数は、それぞれの関数が2つの引数、ウィンドウとウィンドウの新たなdisplay-start位置で呼び出されるので、ノーマルフックではない。"
+msgstr "この変数はそれぞれの関数が2つの引数、ウィンドウとウィンドウの新たなdisplay-start位置で呼び出されるのでノーマルフックではない。"
 
 #. type: defvar
 #: original_texis/windows.texi:4401
 msgid "These functions must take care when using @code{window-end} (@pxref{Window Start and End}); if you need an up-to-date value, you must use the @var{update} argument to ensure you get it."
-msgstr "これらの関数は、@code{window-end}(@ref{Window Start and End}を参照)を使用する際には気をつけなければならない。最新の値が必要な場合は、それを確実に入力するために@var{update}引数を使用しなければならない。"
+msgstr "これらの関数は@code{window-end} (@ref{Window Start and End}を参照)を使用する際には気をつけなければならない。最新の値が必要なら、それを確実に入力するために@var{update}引数を使用しなければならない。"
 
 #. type: defvar
 #: original_texis/windows.texi:4405
 msgid "@strong{Warning:} don't use this feature to alter the way the window is scrolled.  It's not designed for that, and such use probably won't work."
-msgstr "@strong{警告:} ウィンドウのスクロール方法を変更するためにこの機能を使用してはならない。これは、そのような用途のためにデザインされておらず、そのような使用は機能しないだろう。"
+msgstr "@strong{警告:} ウィンドウのスクロール方法を変更するためにこの機能を使用してはならない。これはそのような用途のためにデザインされておらず、そのような使用では機能しないだろう。"
 
 #. type: defvar
 #: original_texis/windows.texi:4407
@@ -6377,25 +6369,23 @@ msgstr "window-size-change-functions"
 
 #. type: defvar
 #: original_texis/windows.texi:4412
-#, fuzzy
-#| msgid "This variable holds a list of functions to be called if the size of any window changes for any reason.  The functions are called just once per redisplay, and just once for each frame on which size changes have occurred."
 msgid "This variable holds a list of functions to be called if the size of any window changes for any reason.  The functions are called at the beginning of a redisplay cycle, and just once for each frame on which size changes have occurred."
-msgstr "この変数は、理由は何であれ、任意のウィンドウのサイズが変更された場合に呼び出される関数のリストを保持する。これらの関数は、再表示ごとに1回、サイズ変更が発生したフレーム上で1回呼び出される。"
+msgstr "この変数は、理由は何であれ任意のウィンドウのサイズが変更された場合に呼び出される関数のリストを保持する。これらの関数は、再表示サイクルの先頭、およびサイズ変更が発生したフレーム上で1回呼び出される。"
 
 #. type: defvar
 #: original_texis/windows.texi:4418
 msgid "Each function receives the frame as its sole argument.  There is no direct way to find out which windows on that frame have changed size, or precisely how.  However, if a size-change function records, at each call, the existing windows and their sizes, it can also compare the present sizes and the previous sizes."
-msgstr "それぞれの関数は、フレームを唯一の引数として呼び出される。そのフレーム上のどのウィンドウのサイズが変更されたか、および変更された正確な方法を直接探す方法はない。とはいえ、各呼び出しにおいてsize-change関数が既存のウィンドウと、それらのサイズを記録すれば、現在のサイズと以前のサイズを比較することも可能である。"
+msgstr "それぞれの関数はフレームを唯一の引数として呼び出される。そのフレーム上のどのウィンドウのサイズが変更されたか、および変更された正確な方法を直接探す方法はない。とはいえ各呼び出しにおいてsize-change関数が既存のウィンドウとサイズを記録すれば、現在のサイズと以前のサイズを比較することも可能である。"
 
 #. type: defvar
 #: original_texis/windows.texi:4422
 msgid "Creating or deleting windows counts as a size change, and therefore causes these functions to be called.  Changing the frame size also counts, because it changes the sizes of the existing windows."
-msgstr "ウィンドウの作成と削除はサイズの変更とみなされるので、これらの関数の呼び出しを引き起こす。フレームのサイズ変更は、既存のウィンドウのサイズを変更するので、これも変更とみなされる。"
+msgstr "ウィンドウの作成と削除はサイズの変更とみなされるので、これらの関数の呼び出しを引き起こす。フレームのサイズ変更は既存のウィンドウのサイズを変更するので、これも変更とみなされる。"
 
 #. type: defvar
 #: original_texis/windows.texi:4428
 msgid "You may use @code{save-selected-window} in these functions (@pxref{Selecting Windows}).  However, do not use @code{save-window-excursion} (@pxref{Window Configurations}); exiting that macro counts as a size change, which would cause these functions to be called over and over."
-msgstr "これらの関数内で、@code{save-selected-window}を使用できる(@ref{Selecting Windows}を参照)。しかし、@code{save-window-excursion}(@ref{Window Configurations}を参照)を使用してはならない。このマクロのexitはサイズ変更とみなされ、それはこれらの関数の際限ない呼び出しを引き起こすだろう。"
+msgstr "これらの関数内で@code{save-selected-window}を使用できる(@ref{Selecting Windows}を参照)。しかし@code{save-window-excursion} (@ref{Window Configurations}を参照)を使用してはならない。このマクロのexitはサイズ変更とみなされ、それはこれらの関数の際限ない呼び出しを引き起こすだろう。"
 
 #. type: defvar
 #: original_texis/windows.texi:4430
@@ -6406,14 +6396,14 @@ msgstr "window-configuration-change-hook"
 #. type: defvar
 #: original_texis/windows.texi:4435
 msgid "A normal hook that is run every time you change the window configuration of an existing frame.  This includes splitting or deleting windows, changing the sizes of windows, or displaying a different buffer in a window."
-msgstr "既存フレームのウィンドウ構成を変更するたびに毎回実行される、ノーマルフックである。これにはウィンドウの分割と削除、ウィンドウのサイズ変更、ウィンドウ内への異なるバッファーの表示が含まれる。"
+msgstr "既存フレームのウィンドウ構成を変更するたびに毎回実行されるノーマルフック。これにはウィンドウの分割と削除、ウィンドウのサイズ変更、ウィンドウ内への異なるバッファーの表示が含まれる。"
 
 #. type: defvar
 #: original_texis/windows.texi:4440
 msgid "The buffer-local part of this hook is run once for each window on the affected frame, with the relevant window selected and its buffer current.  The global part is run once for the modified frame, with that frame selected."
-msgstr "このフックのバッファーローカルな部分は、影響を受けるフレーム上の各ウィンドウにたいして、関係するウィンドウを選択、およびそのバッファーをカレントにして1回実行される。グローバルな部分は、変更されたフレームにたいして、そのフレームを選択して1回実行される。"
+msgstr "このフックのバッファーローカルな部分は影響を受けるフレーム上の各ウィンドウにたいして、関係するウィンドウを選択およびそのバッファーをカレントにして1回実行される。グローバルな部分は変更されたフレームにたいして、そのフレームを選択して1回実行される。"
 
 #. type: Plain text
 #: original_texis/windows.texi:4445
 msgid "In addition, you can use @code{jit-lock-register} to register a Font Lock fontification function, which will be called whenever parts of a buffer are (re)fontified because a window was scrolled or its size changed.  @xref{Other Font Lock Variables}."
-msgstr "加えて、Font Lockフォント表示関数(Font Lock fontification function)を登録するために、@code{jit-lock-register}を使用できる。バッファーの一部が(再)フォント表示されたときは、ウィンドウがスクロール、またはサイズ変更されたという理由で、これが常に呼び出されるだろう。@ref{Other Font Lock Variables}を参照のこと。"
+msgstr "加えてFont Lockフォント表示関数(Font Lock fontification function)を登録するために@code{jit-lock-register}を使用できる。バッファーの一部が(再)フォント表示されたときは、ウィンドウがスクロールまたはサイズ変更されたという理由で、これが常に呼び出されるだろう。@ref{Other Font Lock Variables}を参照のこと。"
