@@ -91,3 +91,14 @@ calendrical information		暦情報
 データタイプ or データ型
 コンテンツ or 内容
 カレント or 現在、そのとき、その時点、...
+
+2020-01-03
+lispref-25.1のフレームレイアウトの詳細説明が追加された
+→用語/訳語を整理する必要あり(emacs/lispref)
+→emacsマニュアルに既訳あり
+
+outer/inner	外枠/内枠
+external/internal/	外部/内部
+
+
+
