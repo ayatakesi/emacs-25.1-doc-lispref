@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-01-05 00:17+0900\n"
+"PO-Revision-Date: 2020-01-05 02:27+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1862,12 +1862,12 @@ msgstr "frame parameters"
 #. type: Plain text
 #: original_texis/frames.texi:969
 msgid "A frame has many parameters that control its appearance and behavior.  Just what parameters a frame has depends on what display mechanism it uses."
-msgstr "フレームはに、その外見と挙動を制御する、多くのパラメーターがあります。フレームがどのようなパラメーターをもつかは、そのフレームが使用するディスプレイのメカニズムに依存します。"
+msgstr "フレームにはその外見と挙動を制御する多くのパラメーターがあります。フレームがどのようなパラメーターをもつかは、そのフレームが使用するディスプレイのメカニズムに依存します。"
 
 #. type: Plain text
 #: original_texis/frames.texi:979
 msgid "Frame parameters exist mostly for the sake of graphical displays.  Most frame parameters have no effect when applied to a frame on a text terminal; only the @code{height}, @code{width}, @code{name}, @code{title}, @code{menu-bar-lines}, @code{buffer-list} and @code{buffer-predicate} parameters do something special.  If the terminal supports colors, the parameters @code{foreground-color}, @code{background-color}, @code{background-mode} and @code{display-type} are also meaningful.  If the terminal supports frame transparency, the parameter @code{alpha} is also meaningful."
-msgstr "フレームパラメーターは主に、グラフィカルディスプレイのために存在します。ほとんどのフレームパラメーターは、テキスト端末上のフレームに適用時は効果がありません。テキスト端末上のフレームでは、何か特別なことを行うパラメーターは@code{height}、@code{width}、@code{name}、@code{title}、@code{menu-bar-lines}、@code{buffer-list}、@code{buffer-predicate}だけです。その端末がカラーをサポートには@code{foreground-color}、@code{background-color}、@code{background-mode}、@code{display-type}などのパラメーターも意味をもちます。その端末が透過フレーム(frame transparency)をサポートする場合には、パラメーター@code{alpha}も意味をもちます。"
+msgstr "フレームパラメーターは主にグラフィカルディスプレイのために存在します。ほとんどのフレームパラメーターはテキスト端末上のフレームへの適用時には効果がありません。テキスト端末上のフレームで何か特別なことを行うパラメーターは@code{height}、@code{width}、@code{name}、@code{title}、@code{menu-bar-lines}、@code{buffer-list}、@code{buffer-predicate}だけです。その端末がカラーをサポートする場合には@code{foreground-color}、@code{background-color}、@code{background-mode}、@code{display-type}などのパラメーターも意味をもちます。その端末が透過フレーム(frame transparency)をサポートする場合には、パラメーター@code{alpha}にも意味があります。"
 
 #. type: node
 #: original_texis/frames.texi:985 original_texis/frames.texi:987
@@ -1924,7 +1924,7 @@ msgstr "Access to Frame Parameters"
 #. type: Plain text
 #: original_texis/frames.texi:992
 msgid "These functions let you read and change the parameter values of a frame."
-msgstr "以下の関数により、フレームのパラメーター値の読み取りと変更ができます。"
+msgstr "以下の関数でフレームのパラメーター値の読み取りと変更ができます。"
 
 #. type: defun
 #: original_texis/frames.texi:993
@@ -1935,7 +1935,7 @@ msgstr "frame-parameter frame parameter"
 #. type: defun
 #: original_texis/frames.texi:998
 msgid "This function returns the value of the parameter @var{parameter} (a symbol) of @var{frame}.  If @var{frame} is @code{nil}, it returns the selected frame's parameter.  If @var{frame} has no setting for @var{parameter}, this function returns @code{nil}."
-msgstr "この関数は、@var{frame}のパラメーター@var{parameter}(シンボル)の値をリターンする。@var{frame}が@code{nil}なら、選択されたフレームのパラメーターをリターンする。@var{frame}が@var{parameter}にたいするセッティングをもたない場合、この関数は@code{nil}をリターンする。"
+msgstr "この関数は@var{frame}のパラメーター@var{parameter} (シンボル)の値をリターンする。@var{frame}が@code{nil}なら選択されたフレームのパラメーターをリターンする。@var{frame}が@var{parameter}にたいするセッティングをもたなければ、この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:1000
@@ -1946,7 +1946,7 @@ msgstr "frame-parameters &optional frame"
 #. type: defun
 #: original_texis/frames.texi:1004
 msgid "The function @code{frame-parameters} returns an alist listing all the parameters of @var{frame} and their values.  If @var{frame} is @code{nil} or omitted, this returns the selected frame's parameters"
-msgstr "関数@code{frame-parameters}は、@var{frame}のすべてのパラメーターとその値をリストするalistをリターンする。@var{frame}が省略または@code{nil}の場合は、選択されたフレームのパラメーターをリターンする。"
+msgstr "関数@code{frame-parameters}は@var{frame}のすべてのパラメーターとその値をリストするalistをリターンする。@var{frame}が省略または@code{nil}なら選択されたフレームのパラメーターをリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:1006
@@ -1956,25 +1956,23 @@ msgstr "modify-frame-parameters frame alist"
 
 #. type: defun
 #: original_texis/frames.texi:1013
-#, fuzzy
-#| msgid "This function alters the parameters of frame @var{frame} based on the elements of @var{alist}.  Each element of @var{alist} has the form @code{(@var{parm} . @var{value})}, where @var{parm} is a symbol naming a parameter.  If you don't mention a parameter in @var{alist}, its value doesn't change.  If @var{frame} is @code{nil}, it defaults to the selected frame."
 msgid "This function alters the frame @var{frame} based on the elements of @var{alist}.  Each element of @var{alist} has the form @code{(@var{parm} . @var{value})}, where @var{parm} is a symbol naming a parameter.  If you don't mention a parameter in @var{alist}, its value doesn't change.  If @var{frame} is @code{nil}, it defaults to the selected frame."
-msgstr "この関数は、@var{alist}の要素にもとづきフレーム@var{frame}のパラメーターを変更する。@var{alist}内の要素はそれぞれ@code{(@var{parm} . @var{value})}という形式をもち、ここで@var{parm}はパラメーターを名付けるシンボルである。 @var{alist}内に指定されないパラメーターの値は変更されない。@var{frame}が@code{nil}の場合のデフォルトは、選択されたフレームである。"
+msgstr "この関数は@var{alist}の要素にもとづきフレーム@var{frame}を変更する。@var{alist}内の要素はそれぞれ@code{(@var{parm} . @var{value})}という形式をもつ。ここで@var{parm}はパラメーターを名付けるシンボルである。 @var{alist}内に指定されないパラメーターの値は変更されない。@var{frame}が@code{nil}の場合のデフォルトは選択されたフレーム。"
 
 #. type: defun
 #: original_texis/frames.texi:1019
 msgid "Some parameters are only meaningful for frames on certain kinds of display (@pxref{Frames}).  If @var{alist} includes parameters that are not meaningful for the @var{frame}'s display, this function will change its value in the frame's parameter list, but will otherwise ignore it."
-msgstr ""
+msgstr "いくつかのパラメーターは特定の種類のディスプレー上のフレーム(@ref{Frames}を参照)でのみ意味がある。@var{frame}のディスプレーで意味をもたないパラメーターが@var{alist}に含まれているようなら、この関数はそのフレームのパラメーターリスト内の値を変更するが、その他の値を変更しないパラメーターは無視するだろう。"
 
 #. type: defun
 #: original_texis/frames.texi:1030
 msgid "When @var{alist} specifies more than one parameter whose value can affect the new size of @var{frame}, the final size of the frame may differ according to the toolkit used.  For example, specifying that a frame should from now on have a menu and/or tool bar instead of none and simultaneously specifying the new height of the frame will inevitably lead to a recalculation of the frame's height.  Conceptually, in such case, this function will try to have the explicit height specification prevail.  It cannot be excluded, however, that the addition (or removal)  of the menu or tool bar, when eventually performed by the toolkit, will defeat this intention."
-msgstr ""
+msgstr "@var{frame}の新たなサイズに影響し得る値をもつようなパラメーターが@var{alist}で複数指定されている際には、フレームの最終的なサイズは使用しているツールキットに応じて異なるかもしれない。たとえばあるフレームにたいしてメニューバーおよび/またはツールバーをもたない状態から保有するように指定して、同時に新たなフレーム高さを指定すると、必然的にフレームの高さの再計算を招くだろう。そのようなケースでは、概念的にはこの関数は明示的な高さ指定を優先するよう試みる。しかしツールキットによりその後に処理されるメニューバーやツールバーの追加(や削除)を除外することはできないので、高さ指定を優先するという意図は打ち消されてしまうだろう。"
 
 #. type: defun
 #: original_texis/frames.texi:1035
 msgid "Sometimes, binding @code{frame-inhibit-implied-resize} (@pxref{Implied Frame Resizing}) to a non-@code{nil} value around calls to this function may fix the problem sketched here.  Sometimes, however, exactly such binding may be hit by the problem."
-msgstr ""
+msgstr "ここで概略した問題は、この関数の呼び出し前後に@code{frame-inhibit-implied-resize} (@ref{Implied Frame Resizing}を参照)を非@code{nil}値にバインドすることで訂正できる場合がある。しかしそのようなバインディングが正に問題を引き起こす場合もある。"
 
 #. type: defun
 #: original_texis/frames.texi:1037
@@ -1985,7 +1983,7 @@ msgstr "set-frame-parameter frame parm value"
 #. type: defun
 #: original_texis/frames.texi:1041
 msgid "This function sets the frame parameter @var{parm} to the specified @var{value}.  If @var{frame} is @code{nil}, it defaults to the selected frame."
-msgstr "この関数は、フレームパラメーター@var{parm}に、指定された@var{value}をセットする。@var{frame}が@code{nil}の場合のデフォルトは、選択されたフレームである。"
+msgstr "この関数はフレームパラメーター@var{parm}に指定された@var{value}をセットする。@var{frame}が@code{nil}の場合のデフォルトは選択されたフレーム。"
 
 #. type: defun
 #: original_texis/frames.texi:1043
@@ -1996,7 +1994,7 @@ msgstr "modify-all-frames-parameters alist"
 #. type: defun
 #: original_texis/frames.texi:1048
 msgid "This function alters the frame parameters of all existing frames according to @var{alist}, then modifies @code{default-frame-alist} (and, if necessary, @code{initial-frame-alist}) to apply the same parameter values to frames that will be created henceforth."
-msgstr "この関数は、 @var{alist}に応じて既存のフレームすべてのフレームパラメーターを変更してから、今後に作成されるフレームに同じパラメーター値を適用するために、@code{default-frame-alist}(と必要なら@code{initial-frame-alist})を変更する。"
+msgstr "この関数は @var{alist}に応じて既存のフレームすべてのフレームパラメーターを変更してから、今後に作成されるフレームに同じパラメーター値を適用するために、@code{default-frame-alist} (必要なら@code{initial-frame-alist}も)を変更する。"
 
 #. type: subsection
 #: original_texis/frames.texi:1051
