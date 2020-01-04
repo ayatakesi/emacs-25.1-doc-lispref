@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2018-10-26 01:00+0900\n"
+"PO-Revision-Date: 2020-01-05 00:17+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -30,12 +30,12 @@ msgstr "frame"
 #. type: Plain text
 #: original_texis/frames.texi:16
 msgid "A @dfn{frame} is a screen object that contains one or more Emacs windows (@pxref{Windows}).  It is the kind of object called a ``window'' in the terminology of graphical environments; but we can't call it a ``window'' here, because Emacs uses that word in a different way.  In Emacs Lisp, a @dfn{frame object} is a Lisp object that represents a frame on the screen.  @xref{Frame Type}."
-msgstr "@dfn{フレーム(frame)}とは、1つ以上のEmacsウィンドウを含むスクリーンオブジェクトです(@ref{Windows}を参照)。これは、グラフィカル環境では``ウィンドウ''と呼ばれる類のオブジェクトです。しかし、Emacsはこの単語を異なる方法で使用しているので、ここではそれを``ウィンドウ''と呼ぶことはできません。Emacs Lispにおいて@dfn{フレームオブジェクト(frame object)}とは、スクリーン上のフレームを表すLispオブジェクトです。@ref{Frame Type}を参照してください。"
+msgstr "@dfn{フレーム(frame)}とは、1つ以上のEmacsウィンドウを含むスクリーンオブジェクトです(@ref{Windows}を参照)。これはグラフィカル環境では``ウィンドウ''と呼ばれる類のオブジェクトです。しかしEmacsはこの単語を異なる方法で使用しているので、ここではそれを``ウィンドウ''と呼ぶことはできません。Emacs Lispにおいて@dfn{フレームオブジェクト(frame object)}とは、スクリーン上のフレームを表すLispオブジェクトです。@ref{Frame Type}を参照してください。"
 
 #. type: Plain text
 #: original_texis/frames.texi:20
 msgid "A frame initially contains a single main window and/or a minibuffer window; you can subdivide the main window vertically or horizontally into smaller windows.  @xref{Splitting Windows}."
-msgstr "フレームには最初、1つのメインウィンドウおよび/またはミニバッファーウィンドウが含まれます。メインウィンドウは、より小さいウィンドウに垂直、または水平に分割することができます。@ref{Splitting Windows}を参照してください。"
+msgstr "フレームには最初は1つのメインウィンドウおよび/またはミニバッファーウィンドウが含まれます。メインウィンドウは、より小さいウィンドウに垂直か水平に分割することができます。@ref{Splitting Windows}を参照してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:21
@@ -46,7 +46,7 @@ msgstr "terminal"
 #. type: Plain text
 #: original_texis/frames.texi:25
 msgid "A @dfn{terminal} is a display device capable of displaying one or more Emacs frames.  In Emacs Lisp, a @dfn{terminal object} is a Lisp object that represents a terminal.  @xref{Terminal Type}."
-msgstr "@dfn{端末(terminal)}とは、1つ以上のEmacsフレームを表示する能力のあるデバイスのことです。Emacs Lispにおいて、@dfn{端末オブジェクト(terminal object)}とは端末を表すLispオブジェクトです。@ref{Terminal Type}を参照してください。"
+msgstr "@dfn{端末(terminal)}とは1つ以上のEmacsフレームを表示する能力のあるデバイスのことです。Emacs Lispにおいて@dfn{端末オブジェクト(terminal object)}とは端末を表すLispオブジェクトです。@ref{Terminal Type}を参照してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:26
@@ -69,12 +69,12 @@ msgstr "graphical display"
 #. type: Plain text
 #: original_texis/frames.texi:38
 msgid "There are two classes of terminals: @dfn{text terminals} and @dfn{graphical terminals}.  Text terminals are non-graphics-capable displays, including @command{xterm} and other terminal emulators.  On a text terminal, each Emacs frame occupies the terminal's entire screen; although you can create additional frames and switch between them, the terminal only shows one frame at a time.  Graphical terminals, on the other hand, are managed by graphical display systems such as the X Window System, which allow Emacs to show multiple frames simultaneously on the same display."
-msgstr "端末には@dfn{テキスト端末(text terminals)}と@dfn{グラフィカル端末(graphical terminals)}という、2つのクラスがあります。テキスト端末はグラフィック能力をもたないディスプレイで、@command{xterm}やその他の端末エミュレーターが含まれます。テキスト端末上では、それぞれのEmacsフレームは、その端末のスクリーン全体を占有します。たとえ追加のフレームを作成してそれらを切り替えることができたとしても、端末が表示するのは一度に1つのフレームだけです。一方でグラフィカル端末は、X Window Systemのようなグラフィカルディスプレイシステムにより管理されています。これにより、Emacsは同一ディスプレイ上に複数のフレームを同時に表示することができます。"
+msgstr "端末には@dfn{テキスト端末(text terminals)}と@dfn{グラフィカル端末(graphical terminals)}という2つのクラスがあります。テキスト端末はグラフィック能力をもたないディスプレイであり、@command{xterm}やその他の端末エミュレーターが含まれます。テキスト端末上ではそれぞれのEmacsフレームはその端末のスクリーン全体を占有します。たとえ追加のフレームを作成してそれらを切り替えることができたとしても、端末が表示するのは一度に1つのフレームだけです。一方でグラフィカル端末はXウィンドウシステムのようなグラフィカルディスプレイシステムにより管理されています。これによりEmacsは同一ディスプレイ上に複数のフレームを同時に表示することができます。"
 
 #. type: Plain text
 #: original_texis/frames.texi:45
 msgid "On GNU and Unix systems, you can create additional frames on any available terminal, within a single Emacs session, regardless of whether Emacs was started on a text or graphical terminal.  Emacs can display on both graphical and text terminals simultaneously.  This comes in handy, for instance, when you connect to the same session from several remote locations.  @xref{Multiple Terminals}."
-msgstr "GNUおよびUnix systemsシステムでは、単一のEmacsセッション内で、そのEmacsがテキスト端末とグラフィカル端末のいずれで開始されたかに関わらず、任意の利用可能な端末上で、追加のフレームを作成することができます。Emacsは、グラフィカル端末とテキスト端末の両方を、同時に表示することができます。 これはたとえば、リモート地から同じセッションに接続する際などに便利でしょう。@ref{Multiple Terminals}を参照してください。"
+msgstr "GNUおよびUnix systemsシステムでは、単一のEmacsセッション内でそのEmacsがテキスト端末とグラフィカル端末のいずれで開始されたかに関わらず、任意の利用可能な端末上で追加のフレームを作成することができます。Emacsは、グラフィカル端末とテキスト端末の両方を同時に表示することができます。 これはたとえばリモートから同じセッションに接続する際などに便利でしょう。@ref{Multiple Terminals}を参照してください。"
 
 #. type: defun
 #: original_texis/frames.texi:46
@@ -85,7 +85,7 @@ msgstr "framep object"
 #. type: defun
 #: original_texis/frames.texi:50
 msgid "This predicate returns a non-@code{nil} value if @var{object} is a frame, and @code{nil} otherwise.  For a frame, the value indicates which kind of display the frame uses:"
-msgstr "この述語(predicate)は、@var{object}がフレームなら非@code{nil}、それ以外は@code{nil}をリターンする。フレームにたいしては、フレームが使用するディスプレイの種類の値となる:"
+msgstr "この述語(predicate)は@var{object}がフレームなら非@code{nil}、それ以外は@code{nil}をリターンする。フレームにたいしてはフレームが使用するディスプレイの種類が値:"
 
 #. type: item
 #: original_texis/frames.texi:52
@@ -129,7 +129,7 @@ msgstr "ns"
 #. type: table
 #: original_texis/frames.texi:61
 msgid "The frame is displayed on a GNUstep or Macintosh Cocoa graphical terminal."
-msgstr "そのフレームはGNUStepまたはMacintosh Cocoaグラフィカル端末上で表示されている。"
+msgstr "そのフレームはGNUstepかMacintosh Cocoaグラフィカル端末上で表示されている。"
 
 #. type: item
 #: original_texis/frames.texi:61
@@ -151,7 +151,7 @@ msgstr "frame-terminal &optional frame"
 #. type: defun
 #: original_texis/frames.texi:70
 msgid "This function returns the terminal object that displays @var{frame}.  If @var{frame} is @code{nil} or unspecified, it defaults to the selected frame."
-msgstr "この関数は、@var{frame}を表示する端末オブジェクトをリターンする。@var{frame}が@code{nil}または未指定の場合のデフォルトは、選択されたフレームである。"
+msgstr "この関数は@var{frame}を表示する端末オブジェクトをリターンする。@var{frame}が@code{nil}または未指定の場合のデフォルトは選択されたフレーム。"
 
 #. type: defun
 #: original_texis/frames.texi:72
@@ -162,7 +162,7 @@ msgstr "terminal-live-p object"
 #. type: defun
 #: original_texis/frames.texi:78
 msgid "This predicate returns a non-@code{nil} value if @var{object} is a terminal that is live (i.e., not deleted), and @code{nil} otherwise.  For live terminals, the return value indicates what kind of frames are displayed on that terminal; the list of possible values is the same as for @code{framep} above."
-msgstr "この述語は、@var{object}が生きた(削除されていない)端末なら非@code{nil}、それ以外は@code{nil}をリターンする。生きた端末にたいしては、リターン値はその端末上で表示されているフレームの種類を示す。可能な値は、上述の@code{framep}と同様。"
+msgstr "この述語は@var{object}が生きた(削除されていない)端末なら非@code{nil}、それ以外は@code{nil}をリターンする。生きた端末にたいしては、リターン値はその端末上で表示されているフレームの種類を示す。可能な値は上述の@code{framep}と同様。"
 
 #. type: section
 #: original_texis/frames.texi:106 original_texis/frames.texi:108
@@ -191,17 +191,14 @@ msgstr "異なる複数デバイス上での表示。"
 #. type: section
 #: original_texis/frames.texi:106 original_texis/frames.texi:421
 #: original_texis/frames.texi:422
-#, fuzzy, no-wrap
-#| msgid "Geometry"
+#, no-wrap
 msgid "Frame Geometry"
-msgstr "Geometry"
+msgstr "Frame Geometry"
 
 #. type: menuentry
 #: original_texis/frames.texi:106
-#, fuzzy
-#| msgid "layout parameters of frames"
 msgid "Geometric properties of frames."
-msgstr "layout parameters of frames"
+msgstr "Geometric properties of frames."
 
 #. type: section
 #: original_texis/frames.texi:106 original_texis/frames.texi:962
@@ -213,7 +210,7 @@ msgstr "Frame Parameters"
 #. type: menuentry
 #: original_texis/frames.texi:106
 msgid "Controlling frame size, position, font, etc."
-msgstr "フレームのサイズ、位置、フォント等の制御。"
+msgstr "フレームのサイズと位置、フォント等の制御。"
 
 #. type: section
 #: original_texis/frames.texi:106 original_texis/frames.texi:1797
@@ -297,7 +294,7 @@ msgstr "Visibility of Frames"
 #. type: menuentry
 #: original_texis/frames.texi:106
 msgid "Frames may be visible or invisible, or icons."
-msgstr "フレームは可視、不可視、またはアイコン化されているかもしれない。"
+msgstr "フレームは可視や不可視、またはアイコン化されているかもしれない。"
 
 #. type: node
 #: original_texis/frames.texi:106 original_texis/frames.texi:2203
@@ -462,7 +459,7 @@ msgstr "frame creation"
 #. type: Plain text
 #: original_texis/frames.texi:113
 msgid "To create a new frame, call the function @code{make-frame}."
-msgstr "新たにフレームを作成するためには、関数@code{make-frame}を呼び出します。"
+msgstr "新たにフレームを作成するためには関数@code{make-frame}を呼び出します。"
 
 #. type: deffn
 #: original_texis/frames.texi:114
@@ -473,27 +470,27 @@ msgstr "Command make-frame &optional alist"
 #. type: deffn
 #: original_texis/frames.texi:117
 msgid "This function creates and returns a new frame, displaying the current buffer."
-msgstr "この関数は、カレントバッファーを表示するフレームを作成して、それをリターンする。"
+msgstr "この関数はカレントバッファーを表示するフレームを作成してそれをリターンする。"
 
 #. type: deffn
 #: original_texis/frames.texi:126
 msgid "The @var{alist} argument is an alist that specifies frame parameters for the new frame.  @xref{Frame Parameters}.  If you specify the @code{terminal} parameter in @var{alist}, the new frame is created on that terminal.  Otherwise, if you specify the @code{window-system} frame parameter in @var{alist}, that determines whether the frame should be displayed on a text terminal or a graphical terminal.  @xref{Window Systems}.  If neither is specified, the new frame is created in the same terminal as the selected frame."
-msgstr "@var{alist}引数は、新たなフレームのフレームパラメーターを指定するalistである。@ref{Frame Parameters}を参照のこと。@var{alist}内で@code{terminal}パラメーターを指定した場合、新たなフレームはその端末上で作成される。それ以外の場合、@var{alist}内で@code{window-system}フレームパラメーターを指定した場合、それはフレームがテキスト端末とグラフィカル端末のどちらで表示されるべきかを決定する。@ref{Window Systems}を参照のこと。どちらも指定されない場合、新たなフレームは選択されたフレームと同じ端末上に作成される。"
+msgstr "@var{alist}引数は新たなフレームのフレームパラメーターを指定するalist。@ref{Frame Parameters}を参照のこと。@var{alist}内で@code{terminal}パラメーターを指定すると新たなフレームはその端末上で作成される。それ以外なら@var{alist}内で@code{window-system}フレームパラメーターを指定した場合には、それはフレームがテキスト端末とグラフィカル端末のどちらで表示されるべきかを決定する。@ref{Window Systems}を参照のこと。どちらも指定されなければ新たなフレームは選択されたフレームと同じ端末上に作成される。"
 
 #. type: deffn
 #: original_texis/frames.texi:135
 msgid "Any parameters not mentioned in @var{alist} default to the values in the alist @code{default-frame-alist} (@pxref{Initial Parameters}); parameters not specified there default from the X resources or its equivalent on your operating system (@pxref{X Resources,, X Resources, emacs, The GNU Emacs Manual}).  After the frame is created, Emacs applies any parameters listed in @code{frame-inherited-parameters} (see below) and not present in the argument, taking the values from the frame that was selected when @code{make-frame} was called."
-msgstr "@var{alist}で指定されなかったパラメーターのデフォルトは、alist @code{default-frame-alist}内の値となる。そこでも指定されないパラメーターのデフォルトは、Xリソース、またはそのオペレーティングシステムで同等のものの値となる(@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照)。フレームが作成された後、Emacsは @code{frame-inherited-parameters}(以下参照)内にリストされたすべてのパラメーターを適用して、引数にないものは@code{make-frame}呼び出し時に選択されていたフレームから値を取得する。"
+msgstr "@var{alist}で指定されなかったパラメーターのデフォルトは、@code{default-frame-alist}というalist内の値。そこでも指定されないパラメーターのデフォルトはXリソース、またはそのオペレーティングシステムで同等のものの値となる(@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照)。フレームが作成された後にEmacsは@code{frame-inherited-parameters} (以下参照)内にリストされたすべてのパラメーターを適用して、引数にないものは@code{make-frame}呼び出し時に選択されていたフレームから値を取得する。"
 
 #. type: deffn
 #: original_texis/frames.texi:142
 msgid "Note that on multi-monitor displays (@pxref{Multiple Terminals}), the window manager might position the frame differently than specified by the positional parameters in @var{alist} (@pxref{Position Parameters}).  For example, some window managers have a policy of displaying the frame on the monitor that contains the largest part of the window (a.k.a.@: the @dfn{dominating} monitor)."
-msgstr "マルチモニターディスプレイ(@ref{Multiple Terminals}を参照)では、ウィンドウマネージャーが@var{alist}内の位置パラメーター(@ref{Position Parameters}を参照)の指定とは異なる位置にフレームを配置するかもしれないことに注意。たとえば、ウィンドウの大きな部分、いわゆる@dfn{支配モニター(dominating monitor)}上のフレームを表示するポリシーをもつウィンドウマネージャーがいくつかあります。"
+msgstr "マルチモニターディスプレイ(@ref{Multiple Terminals}を参照)では、ウィンドウマネージャーが@var{alist}内の位置パラメーター(@ref{Position Parameters}を参照)の指定とは異なる位置にフレームを配置するかもしれないことに注意。たとえばウィンドウの大きな部分、いわゆる@dfn{支配モニター(dominating monitor)}上のフレームを表示するポリシーをもつウィンドウマネージャーがいくつかあります。"
 
 #. type: deffn
 #: original_texis/frames.texi:147
 msgid "This function itself does not make the new frame the selected frame.  @xref{Input Focus}.  The previously selected frame remains selected.  On graphical terminals, however, the windowing system may select the new frame for its own reasons."
-msgstr "この関数自体はーが、新たなフレームを選択されたフレームにする訳ではない。@xref{Input Focus}を参照のこと。以前に選択されていたフレームは、選択されたままである。しかしグラフィカル端末上では、ウィンドウシステム自身の理由により、新たなフレームが選択されるかもしれない。"
+msgstr "この関数自体が新たなフレームを選択されたフレームにする訳ではない。@ref{Input Focus}を参照のこと。以前に選択されていたフレームは選択されたままである。しかしグラフィカル端末上ではウィンドウシステム自身の理由によって新たなフレームが選択されるかもしれない。"
 
 #. type: defvar
 #: original_texis/frames.texi:149
@@ -515,7 +512,7 @@ msgstr "after-make-frame-functions"
 #. type: defvar
 #: original_texis/frames.texi:157
 msgid "An abnormal hook run by @code{make-frame} after it creates the frame.  Each function in @code{after-make-frame-functions} receives one argument, the frame just created."
-msgstr "@code{make-frame}がフレームを作成した後に、それにより実行されるアブノーマルフック。@code{after-make-frame-functions}内の各関数は、作成された直後のフレームを単一の引数として受け取る。"
+msgstr "@code{make-frame}がフレームを作成した後に、それにより実行されるアブノーマルフック。@code{after-make-frame-functions}内の各関数は作成された直後のフレームを単一の引数として受け取る。"
 
 #. type: defvar
 #: original_texis/frames.texi:159
@@ -526,7 +523,7 @@ msgstr "frame-inherited-parameters"
 #. type: defvar
 #: original_texis/frames.texi:166
 msgid "This variable specifies the list of frame parameters that a newly created frame inherits from the currently selected frame.  For each parameter (a symbol) that is an element in the list and is not present in the argument to @code{make-frame}, the function sets the value of that parameter in the created frame to its value in the selected frame."
-msgstr "この変数は、カレントで選択されているフレームから継承して新たに作成されたフレームのフレームパラメーターのリストを指定する。リスト内の各要素は@code{make-frame}の引数として与えられなかったパラメーター(シンボル)であり、@code{make-frame}は新たに作成されたフレームのそのパラメーターに、選択されたフレームの値をセットする。"
+msgstr "この変数はカレントで選択されているフレームから継承して新たに作成されたフレームのフレームパラメーターのリストを指定する。リスト内の各要素は@code{make-frame}の引数として与えられなかったパラメーター(シンボル)であり、@code{make-frame}は新たに作成されたフレームのそのパラメーターに選択されたフレームのパラメーターの値をセットする。"
 
 #. type: cindex
 #: original_texis/frames.texi:170
@@ -555,12 +552,12 @@ msgstr "displays, multiple"
 #. type: Plain text
 #: original_texis/frames.texi:180
 msgid "Emacs represents each terminal as a @dfn{terminal object} data type (@pxref{Terminal Type}).  On GNU and Unix systems, Emacs can use multiple terminals simultaneously in each session.  On other systems, it can only use a single terminal.  Each terminal object has the following attributes:"
-msgstr "Emacsは、それぞれの端末を@dfn{端末オブジェクト(terminal object)}というデータ型で表します(@ref{Terminal Type}を参照)。GNUおよびUnixシステムでは、Emacsはそれぞれのセッション内で複数の端末を同時に実行できます。その他のシステムでは、単一の端末だけが使用できます。端末オブジェクトはそれぞれ、以下の属性をもちます:"
+msgstr "Emacsはそれぞれの端末を@dfn{端末オブジェクト(terminal object)}というデータ型で表します(@ref{Terminal Type}を参照)。GNUおよびUnixシステムではEmacsはそれぞれのセッション内で複数の端末を同時に実行できます。その他のシステムでは単一の端末だけが使用できます。端末オブジェクトはそれぞれ以下の属性をもちます:"
 
 #. type: itemize
 #: original_texis/frames.texi:185
 msgid "The name of the device used by the terminal (e.g., @samp{:0.0} or @file{/dev/tty})."
-msgstr "その端末により使用されるデバイスの名前(たとえば@samp{:0.0}や@file{/dev/tty})。"
+msgstr "その端末により使用されるデバイスの名前(たとえば@samp{:0.0}や@file{/dev/tty} )。"
 
 #. type: itemize
 #: original_texis/frames.texi:189
@@ -570,7 +567,7 @@ msgstr "その端末により使用される端末とキーボードのコーデ
 #. type: itemize
 #: original_texis/frames.texi:194
 msgid "The kind of display associated with the terminal.  This is the symbol returned by the function @code{terminal-live-p} (i.e., @code{x}, @code{t}, @code{w32}, @code{ns}, or @code{pc}).  @xref{Frames}."
-msgstr "その端末に関連付けられたディスプレイの種類。これは、関数@code{terminal-live-p}によりリターンされるシンボル(たとえば@code{x}、@code{t}、@code{w32}、@code{ns}、@code{pc})である。@ref{Frames}を参照のこと。"
+msgstr "その端末に関連付けられたディスプレイの種類。これは関数@code{terminal-live-p}によりリターンされるシンボル(たとえば@code{x}、@code{t}、@code{w32}、@code{ns}、@code{pc} )。@ref{Frames}を参照のこと。"
 
 #. type: itemize
 #: original_texis/frames.texi:197
@@ -580,7 +577,7 @@ msgstr "端末パラメーターのリスト。@ref{Terminal Parameters}を参�
 #. type: Plain text
 #: original_texis/frames.texi:202
 msgid "There is no primitive for creating terminal objects.  Emacs creates them as needed, such as when you call @code{make-frame-on-display} (described below)."
-msgstr "端末オブジェクトを作成するプリミティブはありません。@code{make-frame-on-display}(以下参照)を呼び出したときなど、Emacsは必要に応じてそれらを作成します。"
+msgstr "端末オブジェクトを作成するプリミティブはありません。@code{make-frame-on-display} (以下参照)を呼び出したときなどに、Emacsが必要に応じてそれらを作成します。"
 
 #. type: defun
 #: original_texis/frames.texi:203
@@ -591,7 +588,7 @@ msgstr "terminal-name &optional terminal"
 #. type: defun
 #: original_texis/frames.texi:208
 msgid "This function returns the file name of the device used by @var{terminal}.  If @var{terminal} is omitted or @code{nil}, it defaults to the selected frame's terminal.  @var{terminal} can also be a frame, meaning that frame's terminal."
-msgstr "この関数は、@var{terminal}により使用されるデバイスのファイル名をリターンする。@var{terminal}が省略または@code{nil}の場合のデフォルトは、選択されたフレームの端末である。@var{terminal}はフレームでもよく、その場合はそのフレームの端末となる。"
+msgstr "この関数は@var{terminal}により使用されるデバイスのファイル名をリターンする。@var{terminal}が省略または@code{nil}の場合のデフォルトは選択されたフレームの端末。@var{terminal}はフレームでもよく、その場合はそのフレームの端末。"
 
 #. type: defun
 #: original_texis/frames.texi:210
@@ -602,7 +599,7 @@ msgstr "terminal-list"
 #. type: defun
 #: original_texis/frames.texi:212
 msgid "This function returns a list of all live terminal objects."
-msgstr "この関数は、すべての生きた端末オブジェクトのリストをリターンする。"
+msgstr "この関数はすべての生きた端末オブジェクトのリストをリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:214
@@ -613,7 +610,7 @@ msgstr "get-device-terminal device"
 #. type: defun
 #: original_texis/frames.texi:223
 msgid "This function returns a terminal whose device name is given by @var{device}.  If @var{device} is a string, it can be either the file name of a terminal device, or the name of an X display of the form @samp{@var{host}:@var{server}.@var{screen}}.  If @var{device} is a frame, this function returns that frame's terminal; @code{nil} means the selected frame.  Finally, if @var{device} is a terminal object that represents a live terminal, that terminal is returned.  The function signals an error if its argument is none of the above."
-msgstr "この関数は、@var{device}により与えられたデバイス名の端末をリターンする。@var{device}が文字列の場合は端末デバイス名、または@samp{@var{host}:@var{server}.@var{screen}}という形式のXディスプレイ名のいずれかを指定できる。@var{device}の場合、この関数はそのフレームの端末をリターンする。@code{nil}は選択されたフレームを意味する。最後に、もし@var{device}が生きた端末を表す端末オブジェクトなら、その端末がリターンされる。引数がこれらのいずれとも異なる場合、この関数はエラーをシグナルする。"
+msgstr "この関数は@var{device}により与えられたデバイス名の端末をリターンする。@var{device}が文字列なら端末デバイス名、または@samp{@var{host}:@var{server}.@var{screen}}という形式のXディスプレイのいずれかを指定できる。@var{device}ならこの関数はそのフレームの端末をリターンする。@code{nil}は選択されたフレームを意味する。最後にもし@var{device}が生きた端末を表す端末オブジェクトなら、その端末がリターンされる。引数がこれらのいずれとも異なれば、この関数はエラーをシグナルする。"
 
 #. type: defun
 #: original_texis/frames.texi:225
@@ -624,17 +621,17 @@ msgstr "delete-terminal &optional terminal force"
 #. type: defun
 #: original_texis/frames.texi:230
 msgid "This function deletes all frames on @var{terminal} and frees the resources used by it.  It runs the abnormal hook @code{delete-terminal-functions}, passing @var{terminal} as the argument to each function."
-msgstr "この関数は、@var{terminal}上のすべてのフレームを削除して、それらが使用していたリソースを解放する。これらはアブノーマルフック@code{delete-terminal-functions}を実行し、各関数の引数として@var{terminal}を渡す。"
+msgstr "この関数は@var{terminal}上のすべてのフレームを削除して、それらが使用していたリソースを解放する。これらはアブノーマルフック@code{delete-terminal-functions}を実行して、各関数の引数として@var{terminal}を渡す。"
 
 #. type: defun
 #: original_texis/frames.texi:234
 msgid "If @var{terminal} is omitted or @code{nil}, it defaults to the selected frame's terminal.  @var{terminal} can also be a frame, meaning that frame's terminal."
-msgstr "@var{terminal}が省略または@code{nil}の場合のデフォルトは、選択されたフレームの端末である。@var{terminal}はフレームでもよく、その場合はそのフレームの端末を意味する。"
+msgstr "@var{terminal}が省略または@code{nil}の場合のデフォルトは選択されたフレームの端末。@var{terminal}はフレームでもよく、その場合はそのフレームの端末を意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:239
 msgid "Normally, this function signals an error if you attempt to delete the sole active terminal, but if @var{force} is non-@code{nil}, you are allowed to do so.  Emacs automatically calls this function when the last frame on a terminal is deleted (@pxref{Deleting Frames})."
-msgstr "この関数は通常、唯一アクティブな端末の削除を試みるとエラーをシグナルするが、@var{force}が非@code{nil}なら、これを行うことができる。端末上で最後のフレームを削除した際、Emacsは自動的にこの関数を呼び出す(@ref{Deleting Frames}を参照)。"
+msgstr "この関数は通常は唯一アクティブな端末の削除を試みるとエラーをシグナルするが、@var{force}が非@code{nil}ならこれを行うことができる。端末上で最後のフレームを削除した際には、Emacsは自動的にこの関数を呼び出す(@ref{Deleting Frames}を参照)。"
 
 #. type: defvar
 #: original_texis/frames.texi:241
@@ -645,7 +642,7 @@ msgstr "delete-terminal-functions"
 #. type: defvar
 #: original_texis/frames.texi:247
 msgid "An abnormal hook run by @code{delete-terminal}.  Each function receives one argument, the @var{terminal} argument passed to @code{delete-terminal}.  Due to technical details, the functions may be called either just before the terminal is deleted, or just afterwards."
-msgstr "@code{delete-terminal}により実行されるアブノーマルフック。各関数は、@code{delete-terminal}に渡された@var{terminal}を、唯一の引数として受け取る。技術的な詳細により、この関数は端末の削除の直前、または直後のいずれかに呼び出される。"
+msgstr "@code{delete-terminal}により実行されるアブノーマルフック。各関数は@code{delete-terminal}に渡された@var{terminal}を唯一の引数として受け取る。技術的な詳細により、この関数は端末の削除の直前または直後のいずれかに呼び出される。"
 
 #. type: cindex
 #: original_texis/frames.texi:249
@@ -656,14 +653,12 @@ msgstr "terminal-local variables"
 #. type: Plain text
 #: original_texis/frames.texi:257
 msgid "A few Lisp variables are @dfn{terminal-local}; that is, they have a separate binding for each terminal.  The binding in effect at any time is the one for the terminal that the currently selected frame belongs to.  These variables include @code{default-minibuffer-frame}, @code{defining-kbd-macro}, @code{last-kbd-macro}, and @code{system-key-alist}.  They are always terminal-local, and can never be buffer-local (@pxref{Buffer-Local Variables})."
-msgstr "数は多くありませんが、いくつかのLisp変数は@dfn{端末ローカル(terminal-local)}です。つまり、それらは端末それぞれにたいして、個別にバインディングをもちます。いかなるときも、実際に効果をもつバインディングは、カレントで選択されたフレームに属する端末にたいして1つだけです。これらの変数には@code{default-minibuffer-frame}、@code{defining-kbd-macro}、@code{last-kbd-macro}、@code{system-key-alist}が含まれます。これらは常に端末ローカルであり、決してバッファーローカル(@ref{Buffer-Local Variables}を参照)にはできません。"
+msgstr "数は多くありませんが、Lisp変数のいくつかは@dfn{端末ローカル(terminal-local)}です。つまりそれらは端末それぞれにたいして個別にバインディングをもちます。いかなるときも実際に効果をもつバインディングはカレントで選択されたフレームに属する端末にたいして1つだけです。これらの変数には@code{default-minibuffer-frame}、@code{defining-kbd-macro}、@code{last-kbd-macro}、@code{system-key-alist}が含まれます。これらは常に端末ローカルであり、決してバッファーローカル(@ref{Buffer-Local Variables}を参照)にはできません。"
 
 #. type: Plain text
 #: original_texis/frames.texi:269
-#, fuzzy
-#| msgid "On GNU and Unix systems, each X display is a separate graphical terminal.  When Emacs is started from within the X window system, it uses the X display specified by the @env{DISPLAY} environment variable, or by the @samp{--display} option (@pxref{Initial Options,,, emacs, The GNU Emacs Manual}).  Emacs can connect to other X displays via the command @code{make-frame-on-display}.  Each X display has its own selected frame and its own minibuffer windows; however, only one of those frames is ``@emph{the} selected frame'' at any given moment (@pxref{Input Focus}).  Emacs can even connect to other text terminals, by interacting with the @command{emacsclient} program.  @xref{Emacs Server,,, emacs, The GNU Emacs Manual}."
 msgid "On GNU and Unix systems, each X display is a separate graphical terminal.  When Emacs is started from within the X window system, it uses the X display specified by the @env{DISPLAY} environment variable, or by the @samp{--display} option (@pxref{Initial Options,,, emacs, The GNU Emacs Manual}).  Emacs can connect to other X displays via the command @code{make-frame-on-display}.  Each X display has its own selected frame and its own minibuffer windows; however, only one of those frames is @emph{the} selected frame at any given moment (@pxref{Input Focus}).  Emacs can even connect to other text terminals, by interacting with the @command{emacsclient} program.  @xref{Emacs Server,,, emacs, The GNU Emacs Manual}."
-msgstr "GNUおよびUnixシステムでは、Xディスプレイはそれぞれ別のグラフィカル端末になります。Xウィンドウシステム内でEmacsが開始された際は環境変数@env{DISPLAY}、または@samp{--display}オプション(@ref{Initial Options,,, emacs, The GNU Emacs Manual}を参照)により指定されたXディスプレイを使用します。Emacsはコマンド@code{make-frame-on-display}を通じて、別のXディスプレイに接続できます。それぞれのXディスプレイは各自、選択されたフレームとミニバッファーをもちます。しかしあらゆる瞬間(@ref{Input Focus}を参照)において、それらのフレームのうちの1つだけが、``@emph{いわゆる}選択されたフレーム''になります。@command{emacsclient}との対話することにより、Emacsが別のテキスト端末と接続することさえ可能です。@ref{Emacs Server,,, emacs, The GNU Emacs Manual}を参照してください。"
+msgstr "GNUおよびUnixシステムでは、Xディスプレイはそれぞれ別のグラフィカル端末になります。Xウィンドウシステム内でEmacsが開始された際は環境変数@env{DISPLAY}、または@samp{--display}オプション(@ref{Initial Options,,, emacs, The GNU Emacs Manual}を参照)により指定されたXディスプレイを使用します。Emacsはコマンド@code{make-frame-on-display}を通じて別のXディスプレイに接続できます。それぞれのXディスプレイは、それぞれが選択されたフレームとミニバッファーをもちます。しかしあらゆる瞬間(@ref{Input Focus}を参照)において、それらのフレームのうちの1つだけが、@emph{いわゆる}選択されたフレームになります。@command{emacsclient}との対話により、Emacsが別のテキスト端末と接続することさえ可能です。@ref{Emacs Server,,, emacs, The GNU Emacs Manual}を参照してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:270
@@ -680,12 +675,12 @@ msgstr "display name on X"
 #. type: Plain text
 #: original_texis/frames.texi:284
 msgid "A single X server can handle more than one display.  Each X display has a three-part name, @samp{@var{hostname}:@var{displaynumber}.@var{screennumber}}.  The first part, @var{hostname}, specifies the name of the machine to which the display is physically connected.  The second part, @var{displaynumber}, is a zero-based number that identifies one or more monitors connected to that machine that share a common keyboard and pointing device (mouse, tablet, etc.).  The third part, @var{screennumber}, identifies a zero-based screen number (a separate monitor) that is part of a single monitor collection on that X server.  When you use two or more screens belonging to one server, Emacs knows by the similarity in their names that they share a single keyboard."
-msgstr "1つのXサーバーが、1つ以上のディスプレイを処理できます。各Xディスプレイには、@samp{@var{hostname}:@var{displaynumber}.@var{screennumber}}という3つの部分からなる名前があります。1つ目の部分の@var{hostname}は、その端末が物理的に接続されるマシン名です。2つ目の部分の@var{displaynumber}は、同じキーボードとポインティングデバイス(マウスやタブレット等)を共有するマシンに接続された、1つ以上のモニターを識別するための、0基準の番号です。3つ目の部分の@var{screennumber}は、そのXサーバー上の単一のモニターコレクション(a single monitor collection)の一部である、0基準のスクリーン番号(個別のモニター)です。1つのサーバー配下にある2つ以上のスクリーンを使用する際、Emacsはそれらの名前の同一部分から、それらが単一のキーボードを共有することを知ることができるのです。"
+msgstr "1つのXサーバーが1つ以上のディスプレイを処理できます。各Xディスプレイには@samp{@var{hostname}:@var{displaynumber}.@var{screennumber}}という3つの部分からなる名前があります。1つ目の部分の@var{hostname}はその端末が物理的に接続されるマシン名です。2つ目の部分の@var{displaynumber}は同じキーボードとポインティングデバイス(マウスやタブレット等)を共有するマシンに接続された1つ以上のモニターを識別するための0基準の番号です。3つ目の部分の@var{screennumber}は、そのXサーバー上の単一のモニターコレクション(a single monitor collection)の一部である0基準のスクリーン番号(個別のモニター)です。1つのサーバー配下にある2つ以上のスクリーンを使用する際には、Emacsはそれらの名前の同一部分から、それらが単一のキーボードを共有することを知ることができるのです。"
 
 #. type: Plain text
 #: original_texis/frames.texi:291
 msgid "Systems that don't use the X window system, such as MS-Windows, don't support the notion of X displays, and have only one display on each host.  The display name on these systems doesn't follow the above 3-part format; for example, the display name on MS-Windows systems is a constant string @samp{w32}, and exists for compatibility, so that you could pass it to functions that expect a display name."
-msgstr "MS-WindowsのようにXウィンドウシステムを使用しないシステムは、Xディスプレイの概念をサポートせず、各ホスト上には1つのディスプレイだけがあります。これらのシステム上のディスプレイ名は、上述したような3つの部分からなる名前にしたがいません。たとえば、MS-Windowsシステム上のディスプレイ名は文字列定数@samp{w32}です。これは互換性のために存在するものであり、ディスプレイ名を期待する関数にこれを渡すことができます。"
+msgstr "MS-WindowsのようにXウィンドウシステムを使用しないシステムはXディスプレイの概念をサポートせず、各ホスト上には1つのディスプレイだけがあります。これらのシステム上のディスプレイ名は上述したような3つの部分からなる名前にしたがいません。たとえばMS-Windowsシステム上のディスプレイ名は文字列定数@samp{w32}です。これは互換性のために存在するものであり、ディスプレイ名を期待する関数にこれを渡すことができます。"
 
 #. type: deffn
 #: original_texis/frames.texi:292
@@ -696,14 +691,12 @@ msgstr "Command make-frame-on-display display &optional parameters"
 #. type: deffn
 #: original_texis/frames.texi:296
 msgid "This function creates and returns a new frame on @var{display}, taking the other frame parameters from the alist @var{parameters}.  @var{display} should be the name of an X display (a string)."
-msgstr "この関数は、@var{display}上に新たにフレームを作成して、それをリターンする。その他のフレームパラメーターは、alist @var{parameters}から取得する。@var{display}はXディスプレイの名前(文字列)であること。"
+msgstr "この関数は@var{display}上に新たにフレームを作成してそれをリターンする。その他のフレームパラメーターは、@var{parameters}というalistから取得する。@var{display}はXディスプレイの名前(文字列)であること。"
 
 #. type: deffn
 #: original_texis/frames.texi:302
-#, fuzzy
-#| msgid "Before creating the frame, this function ensures that Emacs is ``set up'' to display graphics.  For instance, if Emacs has not processed X resources (e.g., if it was started on a text terminal), it does so at this time.  In all other respects, this function behaves like @code{make-frame} (@pxref{Creating Frames})."
 msgid "Before creating the frame, this function ensures that Emacs is set up to display graphics.  For instance, if Emacs has not processed X resources (e.g., if it was started on a text terminal), it does so at this time.  In all other respects, this function behaves like @code{make-frame} (@pxref{Creating Frames})."
-msgstr "この関数は、フレーム作成前にEmacsがグラフィックを表示するために``セットアップ''されることを保証する。たとえば、Emacsが(テキスト端末上で開始された等で)Xリソースを未処理なら、この時点で処理を行う。他のすべての点においては、この関数は@code{make-frame}(@ref{Creating Frames}を参照)と同様に振る舞う。"
+msgstr "この関数はフレーム作成前にEmacsがグラフィックを表示するためにセットアップされることを保証する。(テキスト端末上で開始された等で)たとえばEmacsがXリソースを未処理ならこの時点で処理を行う。他のすべての点においては、この関数は@code{make-frame}(@ref{Creating Frames}を参照)と同様に振る舞う。"
 
 #. type: defun
 #: original_texis/frames.texi:304
@@ -714,7 +707,7 @@ msgstr "x-display-list"
 #. type: defun
 #: original_texis/frames.texi:308
 msgid "This function returns a list that indicates which X displays Emacs has a connection to.  The elements of the list are strings, and each one is a display name."
-msgstr "この関数は、EmacsがどのXディスプレイに接続したかを識別するリストをリターンする。このリストの要素は文字列で、それぞれがディスプレイ名を表す。"
+msgstr "この関数はEmacsがどのXディスプレイに接続したかを識別するリストをリターンする。このリストの要素は文字列で、それぞれがディスプレイ名を表す。"
 
 #. type: defun
 #: original_texis/frames.texi:310
@@ -725,12 +718,12 @@ msgstr "x-open-connection display &optional xrm-string must-succeed"
 #. type: defun
 #: original_texis/frames.texi:316
 msgid "This function opens a connection to the X display @var{display}, without creating a frame on that display.  Normally, Emacs Lisp programs need not call this function, as @code{make-frame-on-display} calls it automatically.  The only reason for calling it is to check whether communication can be established with a given X display."
-msgstr "この関数は、ディスプレイ上にフレームを作成することなく、Xディスプレイ@var{display}への接続をオープンする。通常は、@code{make-frame-on-display}が自動的に呼び出すので、Emacs Lispプログラムがこの関数を呼び出す必要はない。これを呼び出す唯一の理由は、与えられたXディスプレイにたいして通信を確立できるかどうかチェックするためである。"
+msgstr "この関数はディスプレイ上にフレームを作成することなく、Xディスプレイ@var{display}への接続をオープンする。通常は@code{make-frame-on-display}が自動的に呼び出すので、Emacs Lispプログラムがこの関数を呼び出す必要はない。これを呼び出す唯一の理由は、与えられたXディスプレイにたいして通信を確立できるかどうかチェックするためである。"
 
 #. type: defun
 #: original_texis/frames.texi:323
 msgid "The optional argument @var{xrm-string}, if not @code{nil}, is a string of resource names and values, in the same format used in the @file{.Xresources} file.  @xref{X Resources,, X Resources, emacs, The GNU Emacs Manual}.  These values apply to all Emacs frames created on this display, overriding the resource values recorded in the X server.  Here's an example of what this string might look like:"
-msgstr "オプション引数@var{xrm-string}が非@code{nil}なら、それは@file{.Xresources}ファイル内で使用されるフォーマットと同一な、リソース名とリソース値である。@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照のこと。これらの値はそのXサーバー上で記録されたリソース値をオーバーライドして、このディスプレイ上で作成されるすべてのEmacsフレームにたいして適用される。以下は、この文字列がどのようなものかを示す例である:"
+msgstr "オプション引数@var{xrm-string}が非@code{nil}なら、それは@file{.Xresources}ファイル内で使用されるフォーマットと同一なリソース名とリソース値。@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照のこと。これらの値はそのXサーバー上で記録されたリソース値をオーバーライドして、このディスプレイ上で作成されるすべてのEmacsフレームにたいして適用される。以下はこの文字列がどのようなものかを示す例:"
 
 #. type: example
 #: original_texis/frames.texi:326
@@ -741,7 +734,7 @@ msgstr "\"*BorderWidth: 3\\n*InternalBorder: 2\\n\"\n"
 #. type: defun
 #: original_texis/frames.texi:330
 msgid "If @var{must-succeed} is non-@code{nil}, failure to open the connection terminates Emacs.  Otherwise, it is an ordinary Lisp error."
-msgstr "@var{must-succeed}が非@code{nil}なら、接続オープンの失敗によりEmacsが終了させられる。それ以外の場合は、通常のLispエラーとなる。"
+msgstr "@var{must-succeed}が非@code{nil}なら、接続オープンの失敗によりEmacsが終了させられる。それ以外なら通常のLispエラーとなる。"
 
 #. type: defun
 #: original_texis/frames.texi:332
@@ -752,7 +745,7 @@ msgstr "x-close-connection display"
 #. type: defun
 #: original_texis/frames.texi:336
 msgid "This function closes the connection to display @var{display}.  Before you can do this, you must first delete all the frames that were open on that display (@pxref{Deleting Frames})."
-msgstr "この関数は、ディスプレイ@var{display}への接続をクローズする。これを行う前にまず、そのディスプレイ上でオープンしたすべてのフレームを削除しなければならない(@ref{Deleting Frames}を参照)。"
+msgstr "この関数はディスプレイ@var{display}への接続をクローズする。これを行う前には、まずそのディスプレイ上でオープンしたすべてのフレームを削除しなければならない(@ref{Deleting Frames}を参照)。"
 
 #. type: cindex
 #: original_texis/frames.texi:338
@@ -762,10 +755,8 @@ msgstr "multi-monitor"
 
 #. type: Plain text
 #: original_texis/frames.texi:343
-#, fuzzy
-#| msgid "On some ``multi-monitor'' setups, a single X display outputs to more than one physical monitor.  You can use the functions @code{display-monitor-attributes-list} and @code{frame-monitor-attributes} to obtain information about such setups."
 msgid "On some multi-monitor setups, a single X display outputs to more than one physical monitor.  You can use the functions @code{display-monitor-attributes-list} and @code{frame-monitor-attributes} to obtain information about such setups."
-msgstr "``マルチモニター''のセットアップにおいて、単一のXディスプレイが複数の物理モニターに出力される場合があります。そのようなセットアップを取得するために、関数@code{display-monitor-attributes-list}と@code{frame-monitor-attributes}を使用できます。"
+msgstr "マルチモニターのセットアップにおいて、単一のXディスプレイが複数の物理モニターに出力される場合があります。そのようなセットアップを取得するために関数@code{display-monitor-attributes-list}と@code{frame-monitor-attributes}を使用できます。"
 
 #. type: defun
 #: original_texis/frames.texi:344
@@ -776,7 +767,7 @@ msgstr "display-monitor-attributes-list &optional display"
 #. type: defun
 #: original_texis/frames.texi:352
 msgid "This function returns a list of physical monitor attributes on @var{display}, which can be a display name (a string), a terminal, or a frame; if omitted or @code{nil}, it defaults to the selected frame's display.  Each element of the list is an association list, representing the attributes of a physical monitor.  The first element corresponds to the primary monitor.  The attribute keys and values are:"
-msgstr "この関数は、@var{display}上の物理モニターの属性のリストをリターンする。@var{display}にはディスプレイ名(文字列)、端末、フレームを指定でき、省略または@code{nil}の場合のデフォルトは、選択されたフレームのディスプレイである。このリストの各要素は、物理モニターの属性を表す連想リストである。1つ目の要素はプライマリーモニターである。以下は属性のキーと値である:"
+msgstr "この関数は@var{display}上の物理モニターの属性のリストをリターンする。@var{display}にはディスプレイ名(文字列)、端末、フレームを指定でき、省略または@code{nil}の場合のデフォルトは選択されたフレームのディスプレイ。このリストの各要素は物理モニターの属性を表す連想リスト。1つ目の要素はプライマリーモニターである。以下は属性のキーと値:"
 
 #. type: item
 #: original_texis/frames.texi:354
@@ -787,7 +778,7 @@ msgstr "geometry"
 #. type: table
 #: original_texis/frames.texi:359
 msgid "Position of the top-left corner of the monitor's screen and its size, in pixels, as @samp{(@var{x} @var{y} @var{width} @var{height})}.  Note that, if the monitor is not the primary monitor, some of the coordinates might be negative."
-msgstr "@samp{(@var{x} @var{y} @var{width} @var{height})}のような、ピクセル単位でのそのモニターのスクリーンの左上隅の位置、そのサイズ。そのモニターがプライマリーモニターでない場合は、いくつかの座標が負になり得る。"
+msgstr "@samp{(@var{x} @var{y} @var{width} @var{height})}のようなピクセル単位でのそのモニターのスクリーンの左上隅の位置とサイズ。そのモニターがプライマリーモニターでなければ、いくつかの座標が負になり得る。"
 
 #. type: item
 #: original_texis/frames.texi:360
@@ -797,10 +788,8 @@ msgstr "workarea"
 
 #. type: table
 #: original_texis/frames.texi:369
-#, fuzzy
-#| msgid "Position of the top-left corner and size of the work area (``usable'' space) in pixels as @samp{(@var{x} @var{y} @var{width} @var{height})}.  This may be different from @samp{geometry} in that space occupied by various window manager features (docks, taskbars, etc.) may be excluded from the work area.  Whether or not such features actually subtract from the work area depends on the platform and environment.  Again, if the monitor is not the primary monitor, some of the coordinates might be negative."
 msgid "Position of the top-left corner and size of the work area (usable space) in pixels as @samp{(@var{x} @var{y} @var{width} @var{height})}.  This may be different from @samp{geometry} in that space occupied by various window manager features (docks, taskbars, etc.)@: may be excluded from the work area.  Whether or not such features actually subtract from the work area depends on the platform and environment.  Again, if the monitor is not the primary monitor, some of the coordinates might be negative."
-msgstr "@samp{(@var{x} @var{y} @var{width} @var{height})}のような、ピクセル単位でのワークエリア(``使用可能''なスペース)の左上隅の位置と、そのサイズ。これはワークエリアから除外され得る、ウィンドウマネージャーのさまざまな機能(dock、taskbar等)が占めるスペースの分、@samp{geometry}とは異なるかもしれない。そのような機能が実際にワークエリアから差し引かれるかどうかは、そのプラットフォームと環境に依存する。繰り返しになるが、そのモニターがプライマリーモニターでない場合、いくつかの座標は負になり得る。"
+msgstr "@samp{(@var{x} @var{y} @var{width} @var{height})}のようなピクセル単位でのワークエリア(使用可能なスペース)の左上隅の位置とサイズ。ウィンドウマネージャーのさまざまな機能(dock、taskbar等)によりそのスペースが占有される@samp{geometry}とは異なり、これはワークエリアから除外され得る。そのような機能が実際にワークエリアから差し引かれるかどうかは、そのプラットフォームと環境に依存する。繰り返しになるが、そのモニターがプライマリーモニターでなければ、いくつかの座標は負になり得る。"
 
 #. type: item
 #: original_texis/frames.texi:370
@@ -811,7 +800,7 @@ msgstr "mm-size"
 #. type: table
 #: original_texis/frames.texi:372
 msgid "Width and height in millimeters as @samp{(@var{width} @var{height})}"
-msgstr "@samp{(@var{width} @var{height})}<のような、ミリメートル単位での幅と高さ。"
+msgstr "@samp{(@var{width} @var{height})}<のようなミリメートル単位での幅と高さ。"
 
 #. type: item
 #: original_texis/frames.texi:373
@@ -833,7 +822,7 @@ msgstr "name"
 #. type: table
 #: original_texis/frames.texi:378
 msgid "Name of the physical monitor as @var{string}."
-msgstr "@var{string}のような、その物理モニターの名前。"
+msgstr "@var{string}のようなその物理モニターの名前。"
 
 #. type: item
 #: original_texis/frames.texi:379
@@ -844,7 +833,7 @@ msgstr "source"
 #. type: table
 #: original_texis/frames.texi:382
 msgid "Source of the multi-monitor information as @var{string}; e.g., @samp{XRandr} or @samp{Xinerama}."
-msgstr "@var{string}のような、マルチモニターの情報ソース(例: @samp{XRandr}、@samp{Xinerama}等)。"
+msgstr "@var{string}のようなマルチモニターの情報ソース(例: @samp{XRandr}、@samp{Xinerama}等)。"
 
 #. type: defun
 #: original_texis/frames.texi:386
@@ -854,12 +843,12 @@ msgstr "@var{x}、@var{y}、@var{width}、@var{height}は整数。@samp{name}と
 #. type: defun
 #: original_texis/frames.texi:393
 msgid "A frame is @dfn{dominated} by a physical monitor when either the largest area of the frame resides in that monitor, or (if the frame does not intersect any physical monitors) that monitor is the closest to the frame.  Every (non-tooltip) frame (whether visible or not) in a graphical display is dominated by exactly one physical monitor at a time, though the frame can span multiple (or no) physical monitors."
-msgstr "あるモニター内にフレームの最大領域がある、または(フレームがどの物理モニターに跨がらないなら)そのモニターがフレームに最も近いとき、フレームは物理モニターにより@dfn{支配(dominate)}される。グラフィカルなディスプレイ内の(ツールチップではない)すべてのフレームは、たとえそのフレームが複数の物理モニターに跨がる(または物理モニター上にない)としても、(可視か否かによらず)正確に1つの物理モニターにより支配される。"
+msgstr "あるモニター内にフレームの最大領域がある、または(フレームがどの物理モニターにも跨がらないなら)そのモニターがフレームに最も近いとき、フレームは物理モニターにより@dfn{支配(dominate)}される。グラフィカルなディスプレイ内の(ツールチップではない)すべてのフレームは、たとえそのフレームが複数の物理モニターに跨がる(または物理モニター上にない)としても、(可視か否かによらず)正確に1つの物理モニターにより支配される。"
 
 #. type: defun
 #: original_texis/frames.texi:396
 msgid "Here's an example of the data produced by this function on a 2-monitor display:"
-msgstr "以下は、2つのモニターディスプレイ上でこの関数により生成されたデータの例である:"
+msgstr "以下は2つのモニターディスプレイ上でこの関数により生成されたデータの例:"
 
 #. type: lisp
 #: original_texis/frames.texi:411
@@ -902,14 +891,13 @@ msgstr "frame-monitor-attributes &optional frame"
 #. type: defun
 #: original_texis/frames.texi:418
 msgid "This function returns the attributes of the physical monitor dominating (see above) @var{frame}, which defaults to the selected frame."
-msgstr "この関数は、 @var{frame}を支配(上記参照)する物理モニターの属性をリターンする。 @var{frame}のデフォルトは選択されたフレームである。"
+msgstr "この関数は@var{frame}を支配(上記参照)する物理モニターの属性をリターンする。 @var{frame}のデフォルトは選択されたフレーム。"
 
 #. type: cindex
 #: original_texis/frames.texi:423
-#, fuzzy, no-wrap
-#| msgid "geometry"
+#, no-wrap
 msgid "frame geometry"
-msgstr "geometry"
+msgstr "frame geometry"
 
 #. type: cindex
 #: original_texis/frames.texi:424 original_texis/frames.texi:757
@@ -920,10 +908,9 @@ msgstr "frame position"
 
 #. type: cindex
 #: original_texis/frames.texi:425 original_texis/frames.texi:758
-#, fuzzy, no-wrap
-#| msgid "position of mouse"
+#, no-wrap
 msgid "position of frame"
-msgstr "position of mouse"
+msgstr "position of frame"
 
 #. type: cindex
 #: original_texis/frames.texi:426 original_texis/frames.texi:756
@@ -940,34 +927,31 @@ msgstr "size of frame"
 #. type: Plain text
 #: original_texis/frames.texi:435
 msgid "The geometry of a frame depends on the toolkit that was used to build this instance of Emacs and the terminal that displays the frame.  This chapter describes these dependencies and some of the functions to deal with them.  Note that the @var{frame} argument of all of these functions has to specify a live frame (@pxref{Deleting Frames}).  If omitted or @code{nil}, it specifies the selected frame (@pxref{Input Focus})."
-msgstr ""
+msgstr "フレームのジオメトリー(geometry)は、そのEmacsインスタンスのビルドに使用されたツールキット、およびそのフレームを表示する端末に依存します。このチャプターではこれらの依存関係とそれらを処理するいくつかの関数を説明します。これらの関数すべてにたいして、@var{frame}引数には生きたフレームを指定する必要があることに注意してください(@ref{Deleting Frames}を参照)。省略または@code{nil}なら選択されたフレーム(@ref{Input Focus}を参照)が指定されます。"
 
 #. type: subsection
 #: original_texis/frames.texi:441 original_texis/frames.texi:444
 #: original_texis/frames.texi:445
 #, no-wrap
 msgid "Frame Layout"
-msgstr ""
+msgstr "Frame Layout"
 
 #. type: menuentry
 #: original_texis/frames.texi:441
-#, fuzzy
-#| msgid "layout parameters of frames"
 msgid "Basic layout of frames."
-msgstr "layout parameters of frames"
+msgstr "フレームの基本的なレイアウト。"
 
 #. type: subsection
 #: original_texis/frames.texi:441 original_texis/frames.texi:701
 #: original_texis/frames.texi:702
-#, fuzzy, no-wrap
-#| msgid "Frame Titles"
+#, no-wrap
 msgid "Frame Font"
-msgstr "Frame Titles"
+msgstr "Frame Font"
 
 #. type: menuentry
 #: original_texis/frames.texi:441
 msgid "The default font of a frame and how to set it."
-msgstr ""
+msgstr "フレームのデフォルトフォントとセット方法。"
 
 #. type: subsection
 #: original_texis/frames.texi:441 original_texis/frames.texi:754
@@ -986,33 +970,29 @@ msgstr "フレームのサイズと位置の変更。"
 #: original_texis/frames.texi:906
 #, no-wrap
 msgid "Implied Frame Resizing"
-msgstr ""
+msgstr "Implied Frame Resizing"
 
 #. type: menuentry
 #: original_texis/frames.texi:441
 msgid "Implied resizing of frames and how to prevent it."
-msgstr ""
+msgstr "フレームの暗黙なリサイズと予約方法。"
 
 #. type: cindex
 #: original_texis/frames.texi:446
-#, fuzzy, no-wrap
-#| msgid "frame layout parameters"
+#, no-wrap
 msgid "frame layout"
-msgstr "frame layout parameters"
+msgstr "frame layout"
 
 #. type: cindex
 #: original_texis/frames.texi:447
-#, fuzzy, no-wrap
-#| msgid "layout parameters of frames"
+#, no-wrap
 msgid "layout of frame"
-msgstr "layout parameters of frames"
+msgstr "layout of frame"
 
 #. type: Plain text
 #: original_texis/frames.texi:451
-#, fuzzy
-#| msgid "The frame is displayed on an X graphical terminal."
 msgid "The drawing below sketches the layout of a frame on a graphical terminal:"
-msgstr "そのフレームはXグラフィカル端末上で表示されている。"
+msgstr "以下にグラフィカル端末上のフレームレイアウトを図示します:"
 
 #. type: group
 #: original_texis/frames.texi:473
@@ -1039,285 +1019,294 @@ msgid ""
 "           <-------- Native Frame Width -------->\n"
 "\n"
 msgstr ""
+"        <------------ Outer Frame Width ----------->\n"
+"        ___________________________________________\n"
+"     ^(0)  ___________ External Border __________   |\n"
+"     | |  |_____________ Title Bar ______________|  |\n"
+"     | | (1)_____________ Menu Bar ______________|  | ^\n"
+"     | | (2)_____________ Tool Bar ______________|  | ^\n"
+"     | | (3) _________ Internal Border ________  |  | ^\n"
+"     | |  | |   ^                              | |  | |\n"
+"     | |  | |   |                              | |  | |\n"
+"Outer  |  | | Inner                            | |  | Native\n"
+"Frame  |  | | Frame                            | |  | Frame\n"
+"Height |  | | Height                           | |  | Height\n"
+"     | |  | |   |                              | |  | |\n"
+"     | |  | |<--+--- Inner Frame Width ------->| |  | |\n"
+"     | |  | |   |                              | |  | |\n"
+"     | |  | |___v______________________________| |  | |\n"
+"     | |  |___________ Internal Border __________|  | v\n"
+"     v |______________ External Border _____________|\n"
+"           <-------- Native Frame Width -------->\n"
+"\n"
 
 #. type: Plain text
 #: original_texis/frames.texi:479
 msgid "In practice not all of the areas shown in the drawing will or may be present.  The meaning of these areas is:"
-msgstr ""
+msgstr "図示したすべての領域が実際に存在するわけではありません。これらの領域はそれぞれ以下を意味しています:"
 
 #. type: item
 #: original_texis/frames.texi:481
 #, no-wrap
 msgid "Outer Frame"
-msgstr ""
+msgstr "アウターフレーム(Outer Frame)"
 
 #. type: cindex
 #: original_texis/frames.texi:482
 #, no-wrap
 msgid "outer frame"
-msgstr ""
+msgstr "outer frame"
 
 #. type: cindex
 #: original_texis/frames.texi:483
 #, no-wrap
 msgid "outer edges"
-msgstr ""
+msgstr "outer edges"
 
 #. type: cindex
 #: original_texis/frames.texi:484
 #, no-wrap
 msgid "outer width"
-msgstr ""
+msgstr "outer width"
 
 #. type: cindex
 #: original_texis/frames.texi:485
-#, fuzzy, no-wrap
-#| msgid "height"
+#, no-wrap
 msgid "outer height"
-msgstr "height"
+msgstr "outer height"
 
 #. type: table
 #: original_texis/frames.texi:490
 msgid "The @dfn{outer frame} is a rectangle comprising all areas shown in the drawing.  The edges of that rectangle are called the @dfn{outer edges} of the frame.  The @dfn{outer width} and @dfn{outer height} of the frame specify the size of that rectangle."
-msgstr ""
+msgstr "@dfn{アウターフレーム(outer frame)}とは上図で示すすべての領域を網羅する矩形。この矩形の端はそのフレームの@dfn{アウターエッジ(outer edges)}と呼ばれる。フレームの@dfn{アウター幅(outer width)}と@dfn{アウター高さ(outer height)}はこの矩形のサイズを指定する。"
 
 #. type: cindex
 #: original_texis/frames.texi:491
-#, fuzzy, no-wrap
-#| msgid "frame position"
+#, no-wrap
 msgid "outer position"
-msgstr "frame position"
+msgstr "outer position"
 
 #. type: table
 #: original_texis/frames.texi:498
 msgid "The upper left corner of the outer frame (indicated by @samp{(0)} in the drawing above) is the @dfn{outer position} or the frame.  It is specified by and settable via the @code{left} and @code{top} frame parameters (@pxref{Position Parameters}) as well as the functions @code{frame-position} and @code{set-frame-position} (@pxref{Size and Position})."
-msgstr ""
+msgstr "(上図@samp{(0)}で示される)アウターフレームの左上隅はフレームの@dfn{アウター位置(outer position)}。これはフレームパラメーター@code{left}と@code{top}による指定(@ref{Position Parameters}を参照)、同様に関数@code{frame-position}と@code{set-frame-position} (@ref{Size and Position}を参照)を通じてセットできる。"
 
 #. type: item
 #: original_texis/frames.texi:499
-#, fuzzy, no-wrap
-#| msgid "internal-border-width"
+#, no-wrap
 msgid "External Border"
-msgstr "internal-border-width"
+msgstr "エクスターナルボーダー(External Border)"
 
 #. type: cindex
 #: original_texis/frames.texi:500
-#, fuzzy, no-wrap
-#| msgid "internal-border-width"
+#, no-wrap
 msgid "external border"
-msgstr "internal-border-width"
+msgstr "external border"
 
 #. type: table
 #: original_texis/frames.texi:506
 msgid "The @dfn{external border} is part of the decorations supplied by the window manager.  It's typically used for resizing the frame with the mouse.  The external border is normally not shown on ``fullboth'' and maximized frames (@pxref{Size Parameters}) and doesn't exist for text terminal frames."
-msgstr ""
+msgstr "@dfn{エクスターナルボーダー(external border)}はウィンドウマネージャーにより供給される装飾の一部。マウスによるフレームのリサイズで典型的に使用される。エクスターナルボーダーは、通常は``全画面化(fullboth)''および最大化されたフレームでは表示されず(@ref{Size Parameters}を参照)、テキスト端末のフレームには存在しない。"
 
 #. type: table
 #: original_texis/frames.texi:511
 msgid "The external border should not be confused with the @dfn{outer border} specified by the @code{border-width} frame parameter (@pxref{Layout Parameters}).  Since the outer border is usually ignored on most platforms it is not covered here."
-msgstr ""
+msgstr "フレームパラメーター@code{border-width} (@ref{Layout Parameters}を参照)で指定される@dfn{アウターボーダー(outer border)}とエクスターナルボーダーを混同しないこと。アウターボーダーはほとんどのプラットフォームで通常は無視されるので、ここでは説明しない。"
 
 #. type: item
 #: original_texis/frames.texi:512
 #, no-wrap
 msgid "Title Bar"
-msgstr ""
+msgstr "タイトルバー(Title Bar)"
 
 #. type: cindex
 #: original_texis/frames.texi:513
-#, fuzzy, no-wrap
-#| msgid "title"
+#, no-wrap
 msgid "title bar"
-msgstr "title"
+msgstr "title bar"
 
 #. type: table
 #: original_texis/frames.texi:519
 msgid "The @dfn{title bar} is also part of the window manager's decorations and typically displays the title of the frame (@pxref{Frame Titles}) as well as buttons for minimizing, maximizing and deleting the frame.  The title bar is usually not displayed on fullboth (@pxref{Size Parameters})  or tooltip frames.  Title bars don't exist for text terminal frames."
-msgstr ""
+msgstr "@dfn{タイトルバー(title bar)}もウィンドウマネージャーによる装飾の一部であり、典型的にはフレームタイトルの表示(@ref{Frame Titles}を参照)、フレームの最小化や最大化、削除のためのボタン表示に使用される。タイトルバーは全画面表示(@ref{Size Parameters}を参照やツールチップフレームでは通常は表示されない。テキスト端末フレームではタイトルバーは存在しない。"
 
 #. type: item
 #: original_texis/frames.texi:520
 #, no-wrap
 msgid "Menu Bar"
-msgstr ""
+msgstr "メニューバー(Menu Bar)"
 
 #. type: cindex
 #: original_texis/frames.texi:521
 #, no-wrap
 msgid "internal menu bar"
-msgstr ""
+msgstr "internal menu bar"
 
 #. type: cindex
 #: original_texis/frames.texi:522
 #, no-wrap
 msgid "external menu bar"
-msgstr ""
+msgstr "external menu bar"
 
 #. type: table
 #: original_texis/frames.texi:530
 msgid "The menu bar (@pxref{Menu Bar}) can be either internal (drawn by Emacs itself) or external (drawn by a toolkit).  Most builds (GTK+, Lucid, Motif and Windows) rely on an external menu bar.  NS also uses an external menu bar which, however, is not part of the outer frame.  Non-toolkit builds can provide an internal menu bar.  On text terminal frames, the menu bar is part of the frame's root window (@pxref{Windows and Frames})."
-msgstr ""
+msgstr "メニューバー(@ref{Menu Bar}を参照)にはインターナル(Emacs自身が描画)とエクスターナル(ツールキットが描画)がある。ほとんどのビルド(GTK+、Lucid、Motif、Windows)にはエクスターナルメニューバーが存在する。NSでもエクスターナルメニューバーを使用するがアウターフレームの一部ではない。非ツールキットのビルドではインターナルメニューバーが提供可能。テキスト端末のフレームでは、メニューバーはフレームのルートウィンドウの(@ref{Windows and Frames}を参照)一部である。"
 
 #. type: item
 #: original_texis/frames.texi:531
 #, no-wrap
 msgid "Tool Bar"
-msgstr ""
+msgstr "ツールバー(Tool Bar)"
 
 #. type: cindex
 #: original_texis/frames.texi:532
 #, no-wrap
 msgid "internal tool bar"
-msgstr ""
+msgstr "internal tool bar"
 
 #. type: cindex
 #: original_texis/frames.texi:533
 #, no-wrap
 msgid "external tool bar"
-msgstr ""
+msgstr "external tool bar"
 
 #. type: table
 #: original_texis/frames.texi:540
 msgid "Like the menu bar, the tool bar (@pxref{Tool Bar}) can be either internal (drawn by Emacs itself) or external (drawn by a toolkit).  The GTK+ and NS builds have the tool bar drawn by the toolkit.  The remaining builds use internal tool bars.  With GTK+ the tool bar can be located on either side of the frame, immediately outside the internal border, see below."
-msgstr ""
+msgstr "メニューバーのように、ツールバー(@ref{Tool Bar}を参照)にもインターナル(Emacs自身が描画)とエクスターナル(ツールキットが描画)がある。GTK+とNSのビルドには、そのツールキットが描画するツールバーがある。その他のビルドはインターナルツールバーを使用する。GTK+ではツールバーはフレーム側面かインターナルボーダー(以下参照)の外側にのいずれかに配置され得る。"
 
 #. type: item
 #: original_texis/frames.texi:541
-#, fuzzy, no-wrap
-#| msgid "Creating Frames"
+#, no-wrap
 msgid "Native Frame"
-msgstr "Creating Frames"
+msgstr "Native Frame"
 
 #. type: cindex
 #: original_texis/frames.texi:542
 #, no-wrap
 msgid "native frame"
-msgstr ""
+msgstr "native frame"
 
 #. type: cindex
 #: original_texis/frames.texi:543
 #, no-wrap
 msgid "native edges"
-msgstr ""
+msgstr "native edges"
 
 #. type: cindex
 #: original_texis/frames.texi:544
 #, no-wrap
 msgid "native width"
-msgstr ""
+msgstr "native width"
 
 #. type: cindex
 #: original_texis/frames.texi:545
 #, no-wrap
 msgid "native height"
-msgstr ""
+msgstr "native height"
 
 #. type: cindex
 #: original_texis/frames.texi:546
-#, fuzzy, no-wrap
-#| msgid "X display names"
+#, no-wrap
 msgid "display area"
-msgstr "X display names"
+msgstr "display area"
 
 #. type: table
 #: original_texis/frames.texi:554
 msgid "The @dfn{native frame} is a rectangle located entirely within the outer frame.  It excludes the areas occupied by the external border, the title bar and any external menu or external tool bar.  The area enclosed by the native frame is sometimes also referred to as the @dfn{display area} of the frame.  The edges of the native frame are called the @dfn{native edges} of the frame.  The @dfn{native width} and @dfn{native height} of the frame specify the size of the rectangle."
-msgstr ""
+msgstr "@dfn{ネイティブフレーム(native frame)}はアウターフレーム内全体に配置される矩形。エクスターナルボーダーとタイトルバー、およびエクスターナルメニューとエクスターナルツールバーが占有する領域は除外される。ネイティブフレームで囲まれた領域は、そのフレームの@dfn{ディスプレー領域(display area)}として参照されることもある。ネイティブフレームのエッジは、そのフレームの@dfn{ネイティブエッジ(native edges)}と呼ばれる。フレームの@dfn{ネイティブ幅(native width)}と@dfn{ネイティブ高さ(native height)}は、この矩形のサイズを指定する。"
 
 #. type: cindex
 #: original_texis/frames.texi:555
-#, fuzzy, no-wrap
-#| msgid "frame position"
+#, no-wrap
 msgid "native position"
-msgstr "frame position"
+msgstr "native position"
 
 #. type: table
 #: original_texis/frames.texi:559
 msgid "The top left corner of the native frame specifies the @dfn{native position} of the frame.  (1)--(3) in the drawing above indicate that position for the various builds:"
-msgstr ""
+msgstr "ネイティブフレームの左上隅は、そのフレームの@dfn{ネイティブ位置(native position)}を指定する。上図(1)から(3)では種々ビルドにたいする位置を示す:"
 
 #. type: item
 #: original_texis/frames.texi:561
 #, no-wrap
 msgid "(1) non-toolkit and terminal frames"
-msgstr ""
+msgstr "(1) 非ツールキットと端末フレーム"
 
 #. type: item
 #: original_texis/frames.texi:563
 #, no-wrap
 msgid "(2) Lucid, Motif and Windows frames"
-msgstr ""
+msgstr "(2) Lucid、Motif、Windowsのフレーム"
 
 #. type: item
 #: original_texis/frames.texi:565
 #, no-wrap
 msgid "(3) GTK+ and NS frames"
-msgstr ""
+msgstr "(3) GTK+とNSのフレーム"
 
 #. type: table
 #: original_texis/frames.texi:571
 msgid "Accordingly, the native height of a frame includes the height of the tool bar but not that of the menu bar (Lucid, Motif, Windows) or those of the menu bar and the tool bar (non-toolkit and text terminal frames)."
-msgstr ""
+msgstr "これに応じてフレームのネイティブ高さにはツールバーの高さが含まれるがメニューバーの高さ(Lucid、Motif、Windows)や、メニューバーとツールバーの高さ(非ツールキットとテキスト端末のフレーム)は含まれない。"
 
 #. type: table
 #: original_texis/frames.texi:577
 msgid "The native position of a frame is the reference position of functions that set or return the current position of the mouse (@pxref{Mouse Position}) and for functions dealing with the position of windows like @code{window-edges}, @code{window-at} or @code{coordinates-in-window-p} (@pxref{Coordinates and Windows})."
-msgstr ""
+msgstr "フレームのネイティブ位置はマウスのカレント位置のセットやリターンを行う関数(@ref{Mouse Position}を参照)、および@code{window-edges}、@code{window-at}、@code{coordinates-in-window-p}のようなウィンドウの位置を扱う関数(@ref{Coordinates and Windows}を参照)にたいして基準となる位置である。"
 
 #. type: item
 #: original_texis/frames.texi:578
-#, fuzzy, no-wrap
-#| msgid "internal-border-width"
+#, no-wrap
 msgid "Internal Border"
-msgstr "internal-border-width"
+msgstr "インターナルボーダー(Internal Border)"
 
 #. type: table
 #: original_texis/frames.texi:581
 msgid "The internal border (@pxref{Layout Parameters}) is a border drawn by Emacs around the inner frame (see below)."
-msgstr ""
+msgstr "インターナルボーダー(@ref{Layout Parameters}を参照)はEmacsがインナーフレーム(以下参照)周囲に描画するボーダー。"
 
 #. type: item
 #: original_texis/frames.texi:582
 #, no-wrap
 msgid "Inner Frame"
-msgstr ""
+msgstr "インナーフレーム(Inner Frame)"
 
 #. type: cindex
 #: original_texis/frames.texi:583
 #, no-wrap
 msgid "inner frame"
-msgstr ""
+msgstr "inner frame"
 
 #. type: cindex
 #: original_texis/frames.texi:584
 #, no-wrap
 msgid "inner edges"
-msgstr ""
+msgstr "inner edges"
 
 #. type: cindex
 #: original_texis/frames.texi:585
 #, no-wrap
 msgid "inner width"
-msgstr ""
+msgstr "inner width"
 
 #. type: cindex
 #: original_texis/frames.texi:586
-#, fuzzy, no-wrap
-#| msgid "height"
+#, no-wrap
 msgid "inner height"
-msgstr "height"
+msgstr "inner height"
 
 #. type: table
 #: original_texis/frames.texi:592
 msgid "The @dfn{inner frame} is the rectangle reserved for the frame's windows.  It's enclosed by the internal border which, however, is not part of the inner frame.  Its edges are called the @dfn{inner edges} of the frame.  The @dfn{inner width} and @dfn{inner height} specify the size of the rectangle."
-msgstr ""
+msgstr "@dfn{インナーフレーム(inner frame)}はフレームのウィンドウが確保する矩形。インターナルボーダーに囲まれているが、それはインナーフレームの一部ではない。それのエッジはフレームの@dfn{インナーエッジ(inner edges)}と呼ばれる。@dfn{インナー幅(inner width)}と@dfn{インナー高さ(inner height)}は、その矩形のサイズを指定する。"
 
 #. type: cindex
 #: original_texis/frames.texi:593
-#, fuzzy, no-wrap
-#| msgid "minibuffer-only frame"
+#, no-wrap
 msgid "minibuffer-less frame"
-msgstr "minibuffer-only frame"
+msgstr "minibuffer-less frame"
 
 #. type: cindex
 #: original_texis/frames.texi:594 original_texis/frames.texi:1088
@@ -1328,138 +1317,128 @@ msgstr "minibuffer-only frame"
 #. type: table
 #: original_texis/frames.texi:603
 msgid "As a rule, the inner frame is subdivided into the frame's root window (@pxref{Windows and Frames}) and the frame's minibuffer window (@pxref{Minibuffer Windows}).  There are two notable exceptions to this rule: A @dfn{minibuffer-less frame} contains a root window only and does not contain a minibuffer window.  A @dfn{minibuffer-only frame} contains only a minibuffer window which also serves as that frame's root window.  See @ref{Initial Parameters} for how to create such frame configurations."
-msgstr ""
+msgstr "ルールとしてインナーフレームはフレームのルートウィンドウ(@ref{Windows and Frames}を参照)とミニバッファーウィンドウ(@ref{Minibuffer Windows}を参照)に細分される。この2つには注目すべき2つの例外がある。それはミニバッファーウィンドウをもたないルートウィンドウのみの@dfn{ミニバッファーlessフレーム(minibuffer-less frame)}と、ミニバッファーウィンドウだけをもち、それがフレームのルートウィンドウの役目も果たす@dfn{ミニバッファーonlyウィンドウ(minibuffer-only frame)}である。そのようなフレーム構成を作成する方法は@ref{Initial Parameters}を参照のこと。"
 
 #. type: item
 #: original_texis/frames.texi:604
 #, no-wrap
 msgid "Text Area"
-msgstr ""
+msgstr "テキストエリア(Text Area)"
 
 #. type: cindex
 #: original_texis/frames.texi:605
-#, fuzzy, no-wrap
-#| msgid "text terminal"
+#, no-wrap
 msgid "text area"
-msgstr "text terminal"
+msgstr "text area"
 
 #. type: table
 #: original_texis/frames.texi:611
 msgid "The @dfn{text area} of a frame is a somewhat fictitious area located entirely within the native frame.  It can be obtained by removing from the native frame any internal borders, one vertical and one horizontal scroll bar, and one left and one right fringe as specified for this frame, see @ref{Layout Parameters}."
-msgstr ""
+msgstr "フレームの@dfn{テキストエリア(text area)}とは、ネイティブフレーム内に全体が配置される架空な類のエリアである。このエリアはネイティブフレームからすべてのインターナルボーダー、垂直スクロールバーと水平スクロールバー、およびそのフレームにたいして指定された左右のフリンジを取り除くことにより取得できる。@ref{Layout Parameters}を参照のこと。"
 
 #. type: cindex
 #: original_texis/frames.texi:613
-#, fuzzy, no-wrap
-#| msgid "mouse position"
+#, no-wrap
 msgid "absolute position"
-msgstr "mouse position"
+msgstr "absolute position"
 
 #. type: Plain text
 #: original_texis/frames.texi:622
 msgid "The @dfn{absolute position} of a frame or its edges is usually given in terms of pixels counted from an origin at position (0, 0) of the frame's display.  Note that with multiple monitors the origin does not necessarily coincide with the top left corner of the entire usable display area.  Hence the absolute outer position of a frame or the absolute positions of the edges of the outer, native or inner frame can be negative in such an environment even when that frame is completely visible."
-msgstr ""
+msgstr "フレームやフレームのエッジの@dfn{絶対位置(absolute position)}とは、通常はそのフレームのディスプレーの位置(0, 0)にある原点から計測したピクセル単位で与えられます。複数モニターの原点は、使用可能なディスプレーエリア全体の左上隅と一致する必要はないことに注意してください。そのため、そのような環境ではフレームの絶対アウター位置やアウターフレーム、ネイティブフレーム、インナーフレームのエッジの絶対位置は、たとえそのフレームが完全に可視であっても負になり得ます。"
 
 #. type: Plain text
 #: original_texis/frames.texi:625
 msgid "For a frame on a graphical terminal the following function returns the sizes of the areas described above:"
-msgstr ""
+msgstr "以下の関数はグラフィカル端末上のフレームにたいして上述したエリアのサイズをリターンします:"
 
 #. type: defun
 #: original_texis/frames.texi:626
-#, fuzzy, no-wrap
-#| msgid "frame-parameters &optional frame"
+#, no-wrap
 msgid "frame-geometry &optional frame"
-msgstr "frame-parameters &optional frame"
+msgstr "frame-geometry &optional frame"
 
 #. type: defun
 #: original_texis/frames.texi:630
 msgid "This function returns geometric attributes of @var{frame}.  The return value is an association list of the attributes listed below.  All coordinate, height and width values are integers counting pixels."
-msgstr ""
+msgstr "この関数は@var{frame}のジオメトリーに関する属性をリターンする。リターン値は属性の連想配列。すべての座標、高さ、幅はピクセル単位の整数。"
 
 #. type: item
 #: original_texis/frames.texi:632
-#, fuzzy, no-wrap
-#| msgid "user-position"
+#, no-wrap
 msgid "outer-position"
-msgstr "user-position"
+msgstr "outer-position"
 
 #. type: table
 #: original_texis/frames.texi:636
 msgid "A cons of the absolute X- and Y-coordinates of the outer position of @var{frame}, relative to the origin at position (0, 0) of @var{frame}'s display."
-msgstr ""
+msgstr "@var{frame}のディスプレー位置(0, 0)にある原点から相対的な@var{frame}のアウター位置を表す、絶対X座標と絶対Y座標によるコンス。"
 
 #. type: item
 #: original_texis/frames.texi:637
-#, fuzzy, no-wrap
-#| msgid "user-size"
+#, no-wrap
 msgid "outer-size"
-msgstr "user-size"
+msgstr "outer-size"
 
 #. type: table
 #: original_texis/frames.texi:639
 msgid "A cons of the outer width and height of @var{frame}."
-msgstr ""
+msgstr "@var{frame}のアウター幅とアウター高さを表すコンス。"
 
 #. type: item
 #: original_texis/frames.texi:640
-#, fuzzy, no-wrap
-#| msgid "internal-border-width"
+#, no-wrap
 msgid "external-border-size"
-msgstr "internal-border-width"
+msgstr "external-border-size"
 
 #. type: table
 #: original_texis/frames.texi:645
 msgid "A cons of the horizontal and vertical width of @var{frame}'s external borders as supplied by the window manager.  If the window manager doesn't supply these values, Emacs will try to guess them from the coordinates of the outer and inner frame."
-msgstr ""
+msgstr "ウィンドウマネージャーにより与えられる、@var{frame}エクスターナルボーダーの水平幅と垂直幅を表すコンス。ウィンドウマネージャーによりこれらの値が提供されなければ、Emacsはアウターフレームとインナーフレームの座標からそれらの推測を試みる。"
 
 #. type: item
 #: original_texis/frames.texi:646
-#, fuzzy, no-wrap
-#| msgid "tool-bar-lines"
+#, no-wrap
 msgid "title-bar-size"
-msgstr "tool-bar-lines"
+msgstr "title-bar-size"
 
 #. type: table
 #: original_texis/frames.texi:651
 msgid "A cons of the width and height of the title bar of @var{frame} as supplied by the window manager or operating system.  If both of them are zero, the frame has no title bar.  If only the width is zero, Emacs was not able to retrieve the width information."
-msgstr ""
+msgstr "ウィンドウマネージャーまたはオペレーティングシステムが与える、@var{frame}のタイトルバーの幅と高さを表すコンス。いずれも0なら、そのフレームにタイトルバーはない。幅だけが0なら、Emacsが幅の情報を取得できなかったことを意味する。"
 
 #. type: item
 #: original_texis/frames.texi:652
-#, fuzzy, no-wrap
-#| msgid "menu-bar-lines"
+#, no-wrap
 msgid "menu-bar-external"
-msgstr "menu-bar-lines"
+msgstr "menu-bar-external"
 
 #. type: table
 #: original_texis/frames.texi:655
 msgid "If non-@code{nil}, this means the menu bar is external (not part of the native frame of @var{frame})."
-msgstr ""
+msgstr "非@code{nil}なら、それはメニューバーがエクスターナルである(@var{frame}のネイティブフレームの一部ではない)ことを意味する。"
 
 #. type: item
 #: original_texis/frames.texi:656
-#, fuzzy, no-wrap
-#| msgid "menu-bar-lines"
+#, no-wrap
 msgid "menu-bar-size"
-msgstr "menu-bar-lines"
+msgstr "menu-bar-size"
 
 #. type: table
 #: original_texis/frames.texi:658
 msgid "A cons of the width and height of the menu bar of @var{frame}."
-msgstr ""
+msgstr "@var{frame}のメニューバーの幅と高さを表すコンス。"
 
 #. type: item
 #: original_texis/frames.texi:659
-#, fuzzy, no-wrap
-#| msgid "tool-bar-position"
+#, no-wrap
 msgid "tool-bar-external"
-msgstr "tool-bar-position"
+msgstr "tool-bar-external"
 
 #. type: table
 #: original_texis/frames.texi:662
 msgid "If non-@code{nil}, this means the tool bar is external (not part of the native frame of @var{frame})."
-msgstr ""
+msgstr "非@code{nil}なら、それはツールバーがエクスターナルである(@var{frame}のネイティブフレームの一部ではない)ことを意味する。"
 
 #. type: item
 #: original_texis/frames.texi:663 original_texis/frames.texi:1432
@@ -1470,19 +1449,18 @@ msgstr "tool-bar-position"
 #. type: table
 #: original_texis/frames.texi:667
 msgid "This tells on which side the tool bar on @var{frame} is and can be one of @code{left}, @code{top}, @code{right} or @code{bottom}.  The only toolkit that currently supports a value other than @code{top} is GTK+."
-msgstr ""
+msgstr "これはツールバーが@var{frame}のどの端に配置されているかを示し@code{left}、@code{top}、@code{right}、@code{bottom}のいずれか。現在のところ@code{top}以外の値をサポートするツールキットはGTK+のみ。"
 
 #. type: item
 #: original_texis/frames.texi:668
-#, fuzzy, no-wrap
-#| msgid "tool-bar-lines"
+#, no-wrap
 msgid "tool-bar-size"
-msgstr "tool-bar-lines"
+msgstr "tool-bar-size"
 
 #. type: table
 #: original_texis/frames.texi:670
 msgid "A cons of the width and height of the tool bar of @var{frame}."
-msgstr ""
+msgstr "@var{frame}のツールバーの幅と高さを表すコンス。"
 
 #. type: item
 #: original_texis/frames.texi:671 original_texis/frames.texi:1370
@@ -1492,108 +1470,104 @@ msgstr "internal-border-width"
 
 #. type: table
 #: original_texis/frames.texi:673
-#, fuzzy
-#| msgid "The width in pixels of the frame's border."
 msgid "The width of the internal border of @var{frame}."
-msgstr "ピクセル単位でのフレームのボーダー幅。"
+msgstr "@var{frame}のインターナルボーダーの幅。"
 
 #. type: Plain text
 #: original_texis/frames.texi:678
 msgid "The following function can be used to retrieve the edges of the outer, native and inner frame."
-msgstr ""
+msgstr "以下の関数はフレームにたいするアウター、ネイティブ、インナーのエッジの取得に使用できます。"
 
 #. type: defun
 #: original_texis/frames.texi:679
-#, fuzzy, no-wrap
-#| msgid "frame-height &optional frame"
+#, no-wrap
 msgid "frame-edges &optional frame type"
-msgstr "frame-height &optional frame"
+msgstr "frame-edges &optional frame type"
 
 #. type: defun
 #: original_texis/frames.texi:686
 msgid "This function returns the edges of the outer, native or inner frame of @var{frame}.  @var{frame} must be a live frame and defaults to the selected one.  The list returned has the form (@var{left} @var{top} @var{right} @var{bottom}) where all values are in pixels relative to the position (0, 0) of @var{frame}'s display.  For terminal frames @var{left} and @var{top} are both zero."
-msgstr ""
+msgstr "この関数は@var{frame}のアウターフレーム、ネイティブフレーム、インナーフレームのエッジをリターンする。@var{frame}は生きたフレームでなければならずデフォルトは選択されたフレーム。リターンされるリストは(@var{left} @var{top} @var{right} @var{bottom})という形式をもち、すべての値は@var{frame}のディスプレーの位置(0, 0)から相対的なピクセル値。端末フレームでは@var{left}と@var{top}はいずれも0。"
 
 #. type: defun
 #: original_texis/frames.texi:691
 msgid "Optional argument @var{type} specifies the type of the edges to return: @var{type} @code{outer-edges} means to return the outer edges of @var{frame}, @code{native-edges} (or @code{nil}) means to return its native edges and @code{inner-edges} means to return its inner edges."
-msgstr ""
+msgstr "オプション引数@var{type}はリターンするエッジのタイプを指定する。@code{outer-edges}は@var{frame}のアウターエッジ、@code{native-edges} (または@code{nil} )はネイティブエッジ、@code{inner-edges}はインナーエッジをリターンすることを意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:698
 msgid "Notice that the pixels at the positions @var{bottom} and @var{right} lie immediately outside the corresponding frame.  This means that if you have, for example, two side-by-side frames positioned such that the right outer edge of the frame on the left equals the left outer edge of the frame on the right, the pixels representing that edge are part of the frame on the right."
-msgstr ""
+msgstr "@var{bottom}および@var{right}の位置のピクセルは、対応するフレームのすぐ外側になることに注目。これはたとえば、左フレームの右アウターエッジが右フレームの左アウターエッジと等しいような横並びの2つのフレームがあるような場合には、そのエッジを表すピクセルは右フレームの一部であることを意味する。"
 
 #. type: cindex
 #: original_texis/frames.texi:703
 #, no-wrap
 msgid "default font"
-msgstr ""
+msgstr "default font"
 
 #. type: cindex
 #: original_texis/frames.texi:704
 #, no-wrap
 msgid "default character size"
-msgstr ""
+msgstr "default character size"
 
 #. type: cindex
 #: original_texis/frames.texi:705
 #, no-wrap
 msgid "default character width"
-msgstr ""
+msgstr "default character width"
 
 #. type: cindex
 #: original_texis/frames.texi:706
 #, no-wrap
 msgid "default width of character"
-msgstr ""
+msgstr "default width of character"
 
 #. type: cindex
 #: original_texis/frames.texi:707
 #, no-wrap
 msgid "default character height"
-msgstr ""
+msgstr "default character height"
 
 #. type: cindex
 #: original_texis/frames.texi:708
 #, no-wrap
 msgid "default height of character"
-msgstr ""
+msgstr "default height of character"
 
 #. type: Plain text
 #: original_texis/frames.texi:714
 msgid "Each frame has a @dfn{default font} which specifies the default character size for that frame.  This size is meant when retrieving or changing the size of a frame in terms of columns or lines (@pxref{Size Parameters}).  It is also used when resizing (@pxref{Window Sizes}) or splitting (@pxref{Splitting Windows}) windows."
-msgstr ""
+msgstr "フレームにはそれぞれ、そのフレームにたいするデフォルト文字サイズを指定する@dfn{デフォルトフォント(default font)}があります。このサイズは、行や列の単位でのフレームサイズの取得や変更での使用を意図したものです(@ref{Size Parameters}を参照)。これはウィンドウのリサイズ(@ref{Window Sizes}を参照)や分割(@ref{Splitting Windows}を参照)の際にも使用されます。"
 
 #. type: cindex
 #: original_texis/frames.texi:715
-#, fuzzy, no-wrap
-#| msgid "height"
+#, no-wrap
 msgid "line height"
-msgstr "height"
+msgstr "line height"
 
 #. type: cindex
 #: original_texis/frames.texi:716
 #, no-wrap
 msgid "column width"
-msgstr ""
+msgstr "column width"
 
 #. type: cindex
 #: original_texis/frames.texi:717
 #, no-wrap
 msgid "canonical character height"
-msgstr ""
+msgstr "canonical character height"
 
 #. type: cindex
 #: original_texis/frames.texi:718
 #, no-wrap
 msgid "canonical character width"
-msgstr ""
+msgstr "canonical character width"
 
 #. type: Plain text
 #: original_texis/frames.texi:723
 msgid "The terms @dfn{line height} and @dfn{canonical character height} are sometimes used instead of ``default character height''.  Similarly, the terms @dfn{column width} and @dfn{canonical character width} are used instead of ``default character width''."
-msgstr ""
+msgstr "``デフォルト文字高さ(default character height)t''のかわりに@dfn{行高さ(line height)}や@dfn{正準文字高さ(canonical character height)}という用語を使用するときがあります。同様に``デフォルト文字幅(default character width)''のかわりに@dfn{列幅(column width)}や@dfn{正準文字幅(canonical character width)}という用語も使用されます。"
 
 #. type: defun
 #: original_texis/frames.texi:724
@@ -1609,80 +1583,71 @@ msgstr "frame-char-width &optional frame"
 
 #. type: defun
 #: original_texis/frames.texi:730
-#, fuzzy
-#| msgid "These functions return the height and width of a character in @var{frame}, measured in pixels.  The values depend on the choice of font.  If you don't supply @var{frame}, these functions use the selected frame."
 msgid "These functions return the default height and width of a character in @var{frame}, measured in pixels.  Together, these values establish the size of the default font on @var{frame}.  The values depend on the choice of font for @var{frame}, see @ref{Font and Color Parameters}."
-msgstr "これらの関数は、ピクセルで測った@var{frame}の高さまたは幅をリターンする。値は選択されたフォントに依存する。@var{frame}を指定しないと選択されたフレームを使用する。"
+msgstr "これらの関数はピクセルで測った@var{frame}内の文字のデフォルトの高さまたは幅をリターンする。両者をあわせたサイズにより@var{frame}の@var{frame}のサイズが確立される。値は@var{frame}にたいして選択されたフォントに依存する。@ref{Font and Color Parameters}を参照のこと。"
 
 #. type: Plain text
 #: original_texis/frames.texi:733
 msgid "The default font can be also set directly with the following function:"
-msgstr ""
+msgstr "以下の関数でデフォルトフォントを直接セットすることもできます:"
 
 #. type: deffn
 #: original_texis/frames.texi:734
-#, fuzzy, no-wrap
-#| msgid "Command raise-frame &optional frame"
+#, no-wrap
 msgid "Command set-frame-font font &optional keep-size frames"
-msgstr "Command raise-frame &optional frame"
+msgstr "Command set-frame-font font &optional keep-size frames"
 
 #. type: deffn
 #: original_texis/frames.texi:739
 msgid "This sets the default font to @var{font}.  When called interactively, it prompts for the name of a font, and uses that font on the selected frame.  When called from Lisp, @var{font} should be a font name (a string), a font object, font entity, or a font spec."
-msgstr ""
+msgstr "これはデフォルトフォントに@var{font}をセットする。インタラクティブに呼び出された際にはフォント名の入力を求めて、選択されたフレームにそのフォントを使用する。Lispから呼び出す際には、@var{font}はフォント名(文字列)、フォントオブジェクト、フォントエンティティー、フォントspecのいずれかであること。"
 
 #. type: deffn
 #: original_texis/frames.texi:746
 msgid "If the optional argument @var{keep-size} is @code{nil}, this keeps the number of frame lines and columns fixed.  (If non-@code{nil}, the option @code{frame-inhibit-implied-resize} described in the next section will override this.)  If @var{keep-size} is non-@code{nil} (or with a prefix argument), it tries to keep the size of the display area of the current frame fixed by adjusting the number of lines and columns."
-msgstr ""
+msgstr "オプション引数@var{keep-size}が@code{nil}ならフレームの行数と列数を固定に保つ(非@code{nil}なら次セクションで説明するオプション@code{frame-inhibit-implied-resize}がこれをオーバーライドするだろう)。@var{keep-size}が非@code{nil} (またはプレフィクス引数を指定)なら行数と列数を調節することにより、カレントフレームのディスプレーエリアのサイズの維持を試みる。"
 
 #. type: deffn
 #: original_texis/frames.texi:751
 msgid "If the optional argument @var{frames} is @code{nil}, this applies the font to the selected frame only.  If @var{frames} is non-@code{nil}, it should be a list of frames to act upon, or @code{t} meaning all existing and all future graphical frames."
-msgstr ""
+msgstr "オプション引数@var{frames}が@code{nil}なら、そのフォントは選択されたフレームだけに適用される。@var{frames}が非@code{nil}ならそれは作用するフレームのリスト、またはすべての既存フレームおよび将来のすべてのグラフィカルフレームを意味する@code{t}のいずれかであること。"
 
 #. type: Plain text
 #: original_texis/frames.texi:766
 msgid "You can read or change the position of a frame using the frame parameters @code{left} and @code{top} (@pxref{Position Parameters}) and its size using the @code{height} and @code{width} parameters (@pxref{Size Parameters}).  Here are some special features for working with sizes and positions.  For all of these functions the argument @var{frame} must denote a live frame and defaults to the selected frame."
-msgstr ""
+msgstr "フレームパラメーター@code{left}と@code{top} (@ref{Position Parameters}を参照)を使用してフレームの位置、およびパラメーター@code{height}と@code{width} (@ref{Size Parameters}を参照)を使用してフレームのサイズの読み取りや変更ができます。サイズと位置を処理するために特別な機能があります。これらの関数すべてにたいして、引数@var{frame}は生きたフレームでなければならず、デフォルトは選択されたフレームです。"
 
 #. type: defun
 #: original_texis/frames.texi:767
-#, fuzzy, no-wrap
-#| msgid "frame-pointer-visible-p &optional frame"
+#, no-wrap
 msgid "frame-position &optional Lisp_Object &optional frame"
-msgstr "frame-pointer-visible-p &optional frame"
+msgstr "frame-position &optional Lisp_Object &optional frame"
 
 #. type: defun
 #: original_texis/frames.texi:773
 msgid "This function returns the outer position (@pxref{Frame Layout}) of @var{frame} in pixels.  The value is a cons giving the coordinates of the top left corner of the outer frame of @var{frame} relative to an origin at the position (0, 0) of the frame's display.  On a text terminal frame both values are zero."
-msgstr ""
+msgstr "この関数は@var{frame}のアウター位置(@ref{Frame Layout}を参照)のピクセル単位でリターンする。値は@var{frame}のアウターフレームの左上隅にたいして、フレームのディスプレーの位置(0, 0)から相対的な座標を与えるコンス。テキスト端末フレームではいずれも0。"
 
 #. type: defun
 #: original_texis/frames.texi:775
-#, fuzzy, no-wrap
-#| msgid "set-frame-position frame left top"
+#, no-wrap
 msgid "set-frame-position frame X Y"
-msgstr "set-frame-position frame left top"
+msgstr "set-frame-position frame X Y"
 
 #. type: defun
 #: original_texis/frames.texi:779
-#, fuzzy
-#| msgid "This function sets the position of the top left corner of @var{frame} to @var{left} and @var{top}.  These arguments are measured in pixels, and normally count from the top left corner of the screen."
 msgid "This function sets the outer frame position of @var{frame} to @var{X} and @var{Y}.  The latter arguments specify pixels and normally count from an origin at the position (0, 0) of @var{frame}'s display."
-msgstr "この関数は、@var{frame}の左上隅を@var{left}、@var{top}にセットする。これらの引数はピクセル単位で、通常はスクリーンの左上隅から測られる。"
+msgstr "この関数は@var{frame}のアウターフレームの位置を@var{X}と@var{Y}にセットする。後者の引数はピクセル単位で、通常は@var{frame}のディスプレーの位置(0, 0)にある原点から計測される。"
 
 #. type: defun
 #: original_texis/frames.texi:783
 msgid "A negative parameter value positions the right edge of the outer frame by @var{-x} pixels left from the right edge of the screen or the bottom edge by @var{-y} pixels up from the bottom edge of the screen."
-msgstr ""
+msgstr "負のパラメーター値はスクリーン右エッジから@var{-x}ピクセルのアウターフレームの右エッジ、またはスクリーン下エッジから@var{-y}ピクセルのアウターフレームの下エッジを指す。"
 
 #. type: defun
 #: original_texis/frames.texi:785
-#, fuzzy
-#| msgid "This function clears the table of defined colors for a text terminal."
 msgid "This function has no effect on text terminal frames."
-msgstr "この関数は、テキスト端末の定義済みカラーのテーブルをクリアーする。"
+msgstr "この関数はテキスト端末フレームでは効果がない。"
 
 #. type: defun
 #: original_texis/frames.texi:787
@@ -1698,41 +1663,35 @@ msgstr "frame-pixel-width &optional frame"
 
 #. type: defun
 #: original_texis/frames.texi:793
-#, fuzzy
-#| msgid "These functions return the height and width of the main display area of @var{frame}, measured in pixels.  If you don't supply @var{frame}, they use the selected frame.  For a text terminal, the results are in characters rather than pixels."
 msgid "These functions return the inner height and width (the height and width of the display area, see @ref{Frame Layout}) of @var{frame} in pixels.  For a text terminal, the results are in characters rather than pixels."
-msgstr "これらの関数は、ピクセルで測った@var{frame}の主要表示領域の高さまたは幅をリターンする。@var{frame}を指定しないと選択されたフレームを使用する。テキスト端末では、結果はピクセルではなく文字単位となる。"
+msgstr "これらの関数は@var{frame}のインナー高さやインナー幅(ディスプレーエリアの高さと幅。@ref{Frame Layout}を参照)をピクセル単位でリターンする。テキスト端末では結果はピクセル単位ではなく文字単位。"
 
 #. type: defun
 #: original_texis/frames.texi:795
-#, fuzzy, no-wrap
-#| msgid "frame-height &optional frame"
+#, no-wrap
 msgid "frame-text-height &optional frame"
-msgstr "frame-height &optional frame"
+msgstr "frame-text-height &optional frame"
 
 #. type: defunx
 #: original_texis/frames.texi:796
-#, fuzzy, no-wrap
-#| msgid "frame-width &optional frame"
+#, no-wrap
 msgid "frame-text-width &optional frame"
-msgstr "frame-width &optional frame"
+msgstr "frame-text-width &optional frame"
 
 #. type: defun
 #: original_texis/frames.texi:800
-#, fuzzy
-#| msgid "These functions return the height and width of the main display area of @var{frame}, measured in pixels.  If you don't supply @var{frame}, they use the selected frame.  For a text terminal, the results are in characters rather than pixels."
 msgid "These functions return the height and width of the text area of @var{frame} (@pxref{Frame Layout}), measured in pixels.  For a text terminal, the results are in characters rather than pixels."
-msgstr "これらの関数は、ピクセルで測った@var{frame}の主要表示領域の高さまたは幅をリターンする。@var{frame}を指定しないと選択されたフレームを使用する。テキスト端末では、結果はピクセルではなく文字単位となる。"
+msgstr "これらの関数はピクセルで測った@var{frame}のテキストエリア(@ref{Frame Layout}を参照)の高さや幅をリターンする。テキスト端末では結果はピクセルではなく文字単位。"
 
 #. type: defun
 #: original_texis/frames.texi:805
 msgid "The value returned by @code{frame-text-height} differs from that returned by @code{frame-pixel-height} by not including the heights of any internal tool bar or menu bar, the height of one horizontal scroll bar and the widths of the internal border."
-msgstr ""
+msgstr "@code{frame-text-height}がリターンする値はすべてのインターナルなツールバーとメニューバーの高さ、水平スクロールバーの高さやインターナルボーダーの幅を含まないので、@code{frame-pixel-height}のリターン値とは異なる。"
 
 #. type: defun
 #: original_texis/frames.texi:810
 msgid "The value returned by @code{frame-text-width} differs from that returned by @code{frame-pixel-width} by not including the width of one vertical scroll bar, the widths of one left and one right fringe and the widths of the internal border."
-msgstr ""
+msgstr "@code{frame-text-width}垂直スクロールバーの幅や左右フリンジの幅、およびインターナルボーダーの幅を含まないので、@code{frame-pixel-width}のリターン値とは異なる。"
 
 #. type: defun
 #: original_texis/frames.texi:812
@@ -1749,12 +1708,12 @@ msgstr "frame-width &optional frame"
 #. type: defun
 #: original_texis/frames.texi:819
 msgid "These functions return the height and width of the text area of @var{frame}, measured in units of the default font height and width of @var{frame} (@pxref{Frame Font}).  These functions are plain shorthands for writing @code{(frame-parameter frame 'height)} and @code{(frame-parameter frame 'width)}."
-msgstr ""
+msgstr "これらの関数は@var{frame}のテキストエリアの高さと幅を、@var{frame}のデフォルトフォントの高さと幅を単位に計測してリターンする。これらの関数は単に@code{(frame-parameter frame 'height)}と@code{(frame-parameter frame 'width)}を略記したもの。"
 
 #. type: defun
 #: original_texis/frames.texi:824
 msgid "If the text area of @var{frame} measured in pixels is not a multiple of its default font size, the values returned by these functions are rounded down to the number of characters of the default font that fully fit into the text area."
-msgstr ""
+msgstr "ピクセルで計測した@var{frame}のテキストエリアがデフォルトフォントサイズの倍数でなければ、これらの関数がリターンする値はテキストエリアに完全に収まるデフォルトフォントの文字数に切り捨てられる。"
 
 #. type: defopt
 #: original_texis/frames.texi:826
@@ -1764,48 +1723,39 @@ msgstr "frame-resize-pixelwise"
 
 #. type: defopt
 #: original_texis/frames.texi:832
-#, fuzzy
-#| msgid "If this option is @code{nil}, a frame's size is usually rounded to a multiple of the current values of that frame's @code{frame-char-height} and @code{frame-char-width}.  If this is non-@code{nil}, no rounding occurs, hence frame sizes can increase/decrease by one pixel."
 msgid "If this option is @code{nil}, a frame's size is usually rounded to a multiple of the current values of that frame's @code{frame-char-height} and @code{frame-char-width} whenever the frame is resized.  If this is non-@code{nil}, no rounding occurs, hence frame sizes can increase/decrease by one pixel."
-msgstr "このオプションが@code{nil}なら、フレームのサイズは、通常はそのフレームの@code{frame-char-height}と@code{frame-char-width}のカレント値の倍数に丸められる。非@code{nil}の場合、丸めは行われずフレームのサイズはピクセル単位で増加/減少が可能になる。"
+msgstr "このオプションが@code{nil}なら、通常はフレームリサイズ時にサイズがそのフレームの@code{frame-char-height}と@code{frame-char-width}のカレント値の倍数に丸められる。非@code{nil}なら丸めは行われず、フレームのサイズはピクセル単位で増加/減少が可能になる。"
 
 #. type: defopt
 #: original_texis/frames.texi:837
-#, fuzzy
-#| msgid "Setting this causes the next resize operation to pass the corresponding size hints to the window manager.  This means that this variable should be set only in a user's initial file; applications should never bind it temporarily."
 msgid "Setting this variable usually causes the next resize operation to pass the corresponding size hints to the window manager.  This means that this variable should be set only in a user's initial file; applications should never bind it temporarily."
-msgstr "これをセットすることにより、次回のリサイズ処理では、ウィンドウマネージャーにこれに相当するサイズのヒントを渡す。これは、ユーザーの初期ファイル内でのみこの変数をセットすべきで、アプリケーションが一時的にこれをバインドすべきではないことを意味する。"
+msgstr "この変数をセットすることにより次回のリサイズ処理では、通常はウィンドウマネージャーにこれに相当するサイズのヒントを渡す。これはユーザーの初期ファイル内でのみこの変数をセットすべきで、アプリケーションが一時的にこれをバインドすべきではないことを意味する。"
 
 #. type: defopt
 #: original_texis/frames.texi:845
-#, fuzzy
-#| msgid "The precise meaning of a value of @code{nil} for this option depends on the toolkit used.  Dragging the frame border with the mouse is usually done character-wise.  Calling @code{set-frame-size} (see below)  with arguments that do not specify the frame size as an integer multiple of its character size, however, may: be ignored, cause a rounding (GTK+), or be accepted (Lucid, Motif, MS-Windows)."
 msgid "The precise meaning of a value of @code{nil} for this option depends on the toolkit used.  Dragging the external border with the mouse is done character-wise provided the window manager is willing to process the corresponding size hints.  Calling @code{set-frame-size} (see below)  with arguments that do not specify the frame size as an integer multiple of its character size, however, may: be ignored, cause a rounding (GTK+), or be accepted (Lucid, Motif, MS-Windows)."
-msgstr "このオプションにたいして@code{nil}値がもつ正確な意味は、使用されるツールキットに依存する。マウスによるフレームボーダーのドラッグは、通常は文字単位で行われる。文字サイズの整数倍ではないフレームサイズを引数として@code{set-frame-size}(以下参照)を呼び出すと、もしかしたら丸められたり(GTK+)、あるいは受容される(Lucid、Motif、MS-Windows)かもしれない。"
+msgstr "このオプションにたいして@code{nil}値がもつ正確な意味は使用されるツールキットに依存する。マウスによるエクスターナルボーダーのドラッグは、ウィンドウマネージャーが対応するサイズヒントを処理する意思があれば文字単位で行われる。文字サイズの整数倍ではないフレームサイズを引数として@code{set-frame-size} (以下参照)を呼び出すと、もしかしたら丸められたり(GTK+)、あるいは受容される(Lucid、Motif、MS-Windows)かもしれない。"
 
 #. type: defopt
 #: original_texis/frames.texi:848
-#, fuzzy
-#| msgid "With some window managers you may have to set this to non-@code{nil} in order to make a frame appear truly ``maximized'' or ``fullscreen''."
 msgid "With some window managers you may have to set this to non-@code{nil} in order to make a frame appear truly maximized or full-screen."
-msgstr "いくつかのウィンドウマネージャーでは、フレームを本当に``最大化''あるいは``全画面''で表示させるためには、これを非@code{nil}にセットする必要があるかもしれない。"
+msgstr "いくつかのウィンドウマネージャーでは、フレームを本当に最大化や全画面で表示させるために、これを非@code{nil}にセットする必要があるかもしれない。"
 
 #. type: defun
 #: original_texis/frames.texi:850
-#, fuzzy, no-wrap
-#| msgid "set-frame-size frame width height pixelwise"
+#, no-wrap
 msgid "set-frame-size frame width height &optional pixelwise"
-msgstr "set-frame-size frame width height pixelwise"
+msgstr "set-frame-size frame width height &optional pixelwise"
 
 #. type: defun
 #: original_texis/frames.texi:854
 msgid "This function sets the size of the text area of @var{frame}, measured in terms of the canonical height and width of a character on @var{frame} (@pxref{Frame Font})."
-msgstr ""
+msgstr "この関数は@var{frame}のテキストエリアのサイズを、@var{frame}の文字の正準高さと正準幅で計測した単位でセトする(@ref{Frame Font}を参照)。"
 
 #. type: defun
 #: original_texis/frames.texi:860
 msgid "The optional argument @var{pixelwise} non-@code{nil} means to measure the new width and height in units of pixels instead.  Note that if @code{frame-resize-pixelwise} is @code{nil}, some toolkits may refuse to fully honor the request if it does not increase/decrease the frame size to a multiple of its character size."
-msgstr "オプション引数@var{pixelwise}が非@code{nil}の場合は、かわりにピクセル単位で新たな幅と高さを測ることを意味する。@code{frame-resize-pixelwise}が@code{nil}の場合、それが文字の整数倍でフレームサイズを増加あるいは減少させないなら、この要求を完全には尊重せずに拒絶するツールキットがいくつかあることに注意されたい。"
+msgstr "オプション引数@var{pixelwise}が非@code{nil}なら、かわりにピクセル単位で新たな幅と高さを測ることを意味する。@code{frame-resize-pixelwise}が@code{nil}の場合には、それが文字の整数倍でフレームサイズを増加や減少させないなら、この要求を完全には尊重せずに拒絶するツールキットがいくつかあることに注意。"
 
 #. type: defun
 #: original_texis/frames.texi:862
@@ -1815,22 +1765,18 @@ msgstr "set-frame-height frame height &optional pretend pixelwise"
 
 #. type: defun
 #: original_texis/frames.texi:866
-#, fuzzy
-#| msgid "This function resizes @var{frame} to a height of @var{height} lines.  The sizes of existing windows in @var{frame} are altered proportionally to fit."
 msgid "This function resizes the text area of @var{frame} to a height of @var{height} lines.  The sizes of existing windows in @var{frame} are altered proportionally to fit."
-msgstr "この関数は、@var{frame}を高さ@var{height}行にリサイズする。@var{frame}内の既存ウィンドウのサイズは、フレームにフィットするよう比例して変更される。"
+msgstr "この関数は@var{frame}のテキストエリアを@var{height}行の高さにリサイズする。@var{frame}内の既存ウィンドウのサイズはフレームにフィットするよう比例して変更される。"
 
 #. type: defun
 #: original_texis/frames.texi:876
-#, fuzzy
-#| msgid "If @var{pretend} is non-@code{nil}, then Emacs displays @var{height} lines of output in @var{frame}, but does not change its value for the actual height of the frame.  This is only useful on text terminals.  Using a smaller height than the terminal actually implements may be useful to reproduce behavior observed on a smaller screen, or if the terminal malfunctions when using its whole screen.  Setting the frame height ``for real'' does not always work, because knowing the correct actual size may be necessary for correct cursor positioning on text terminals."
 msgid "If @var{pretend} is non-@code{nil}, then Emacs displays @var{height} lines of output in @var{frame}, but does not change its value for the actual height of the frame.  This is only useful on text terminals.  Using a smaller height than the terminal actually implements may be useful to reproduce behavior observed on a smaller screen, or if the terminal malfunctions when using its whole screen.  Setting the frame height directly does not always work, because knowing the correct actual size may be necessary for correct cursor positioning on text terminals."
-msgstr "@var{pretend}が非@code{nil}の場合、Emacsは@var{frame}内で@var{height}行の出力を表示するが、そのフレームの実際の高さにたいする値は変更しない。これはテキスト端末上でのみ有用である。端末が実際に実装するより小さい高さの使用は、より小さいスクリーン上での振る舞いの再現したり、スクリーン全体を使用時の端末の誤動作を観察するとき有用かもしれない。フレームの高さを``実際''のようにセットするのは、常に機能するとは限らない。なぜなら、テキスト端末上でのカーソルを正しく配置するために、正確な実サイズを知る必要があるかもしれないからである。"
+msgstr "@var{pretend}が非@code{nil}なら、Emacsは@var{frame}内で@var{height}行の出力を表示するが、そのフレームの実際の高さにたいする値は変更しない。これはテキスト端末上でのみ有用。端末が実際に実装するより小さい高さの使用は、より小さいスクリーン上での振る舞いの再現したり、スクリーン全体を使用時の端末の誤動作を観察するとき有用かもしれない。フレームの高さの直接セットは常に機能するとは限らない。なぜならテキスト端末上でのカーソルを正しく配置するために、正確な実サイズを知る必要があるかもしれないからである。"
 
 #. type: defun
 #: original_texis/frames.texi:882
 msgid "The optional fourth argument @var{pixelwise} non-@code{nil} means that @var{frame} should be @var{height} pixels high.  Note that if @code{frame-resize-pixelwise} is @code{nil}, some toolkits may refuse to fully honor the request if it does not increase/decrease the frame height to a multiple of its character height."
-msgstr "オプションの第4引数@var{pixelwise}が非@code{nil}なら、それは@var{frame}の高さが@var{height}ピクセル高くなることを意味する。@code{frame-resize-pixelwise}が@code{nil}の場合、それが文字の整数倍でフレームサイズを増加あるいは減少させないなら、この要求を完全には尊重せずに拒絶するツールキットがいくつかあることに注意されたい。"
+msgstr "オプションの第4引数@var{pixelwise}が非@code{nil}なら、それは@var{frame}の高さが@var{height}ピクセル高くなることを意味する。@code{frame-resize-pixelwise}が@code{nil}なら、それが文字の整数倍でフレームサイズを増加や減少させない場合には、この要求を完全には尊重せずに拒絶するツールキットがいくつかあることに注意。"
 
 #. type: defun
 #: original_texis/frames.texi:884
@@ -1840,74 +1786,72 @@ msgstr "set-frame-width frame width &optional pretend pixelwise"
 
 #. type: defun
 #: original_texis/frames.texi:888
-#, fuzzy
-#| msgid "This function sets the width of @var{frame}, measured in characters.  The argument @var{pretend} has the same meaning as in @code{set-frame-height}."
 msgid "This function sets the width of the text area of @var{frame}, measured in characters.  The argument @var{pretend} has the same meaning as in @code{set-frame-height}."
-msgstr "この関数は、文字単位で@var{frame}の幅をセットする。引数@var{pretend}は、@code{set-frame-height}のときと同じ意味をもつ。"
+msgstr "この関数は文字単位で@var{frame}のテキストエリアの幅をセットする。引数@var{pretend}は@code{set-frame-height}のときと同じ意味をもつ。"
 
 #. type: defun
 #: original_texis/frames.texi:894
 msgid "The optional fourth argument @var{pixelwise} non-@code{nil} means that @var{frame} should be @var{width} pixels wide.  Note that if @code{frame-resize-pixelwise} is @code{nil}, some toolkits may refuse to fully honor the request if it does not increase/decrease the frame width to a multiple of its character width."
-msgstr "オプションの第4引数@var{pixelwise}が非@code{nil}なら、それは@var{frame}の幅が@var{height}ピクセル広くなることを意味する。@code{frame-resize-pixelwise}が@code{nil}の場合、それが文字の整数倍でフレームサイズを増加あるいは減少させないなら、この要求を完全には尊重せずに拒絶するツールキットがいくつかあることに注意されたい。"
+msgstr "オプションの第4引数@var{pixelwise}が非@code{nil}なら、それは@var{frame}の幅が@var{height}ピクセル広くなることを意味する。@code{frame-resize-pixelwise}が@code{nil}なら、それが文字の整数倍でフレームサイズを増加あるいは減少させない場合には、この要求を完全には尊重せずに拒絶するツールキットがいくつかあることに注意。"
 
 #. type: Plain text
 #: original_texis/frames.texi:903
 msgid "None of these three functions will make a frame smaller than needed to display all of its windows together with their scroll bars, fringes, margins, dividers, mode and header lines.  This contrasts with requests by the window manager triggered, for example, by dragging the external border of a frame with the mouse.  Such requests are always honored by clipping, if necessary, portions that cannot be displayed at the right, bottom corner of the frame."
-msgstr ""
+msgstr "これら3つの関数のうち、すべてのウィンドウとともにスクロールバー、フリンジ、マージン、ディバイダー、モードライン、ヘッダーラインを表示するために必要なサイズよりフレームを小さくする関数はありません。これはたとえばマウスによるフレームのエクスターナルボーダーのドラッグのようなウィンドウマネージャーのリクエストとは対照的です。フレーム右下隅にある表示できない部分は必要に応じてクリッピングするとにより、そのようなリクエストは常に尊重されます。"
 
 #. type: cindex
 #: original_texis/frames.texi:907
 #, no-wrap
 msgid "implied frame resizing"
-msgstr ""
+msgstr "implied frame resizing"
 
 #. type: cindex
 #: original_texis/frames.texi:908
 #, no-wrap
 msgid "implied resizing of frame"
-msgstr ""
+msgstr "implied resizing of frame"
 
 #. type: Plain text
 #: original_texis/frames.texi:918
+#, fuzzy
 msgid "By default, Emacs tries to keep the number of lines and columns of a frame's text area unaltered when, for example, adding or removing the menu bar, changing the default font or setting the width of the frame's scroll bars.  This means, however, that in such case Emacs must ask the window manager to resize the outer frame in order to accommodate the size change.  Note that wrapping a menu or tool bar usually does not resize the frame's outer size, hence this will alter the number of displayed lines."
-msgstr ""
+msgstr "たとえばメニューバーの追加や削除、デフォルトフォントの変更、フレームのスクロールバーの幅のセットの際、Emacsはデフォルトではフレームのテキストエリアの行数と列数を未変更に保つように試みます。しかしこれはそのような場合のサイズ変更を調停するために、Emacsがウィンドウマネージャーに依頼しなければならないことを意味します。メニューバーやツールバーのでは、通常はフレームのフレームサイズをリサイズしないので、表示される行数に変更はないことに注意してください。"
 
 #. type: Plain text
 #: original_texis/frames.texi:923
 msgid "Occasionally, such @dfn{implied frame resizing} may be unwanted, for example, when the frame is maximized or made full-screen (where it's turned off by default).  In other cases you can disable implied resizing with the following option:"
-msgstr ""
+msgstr "たとえばフレームの最大化や全画面化の際のように、そのような@dfn{暗黙なフレームのリサイズ(implied frame resizing)}がおそらく望ましくないケースもあります(デフォルトではオフになっている)。それ以外のケースでは以下のオプションで暗黙のリサイズを無効にできます。"
 
 #. type: defopt
 #: original_texis/frames.texi:924
-#, fuzzy, no-wrap
-#| msgid "frame-inherited-parameters"
+#, no-wrap
 msgid "frame-inhibit-implied-resize"
-msgstr "frame-inherited-parameters"
+msgstr "frame-inhibit-implied-resize"
 
 #. type: defopt
 #: original_texis/frames.texi:930
 msgid "If this option is @code{nil}, changing font, menu bar, tool bar, internal borders, fringes or scroll bars of a specific frame may implicitly resize the frame's display area in order to preserve the number of columns or lines the frame displays.  If this option is non-@code{nil}, no implied resizing is done."
-msgstr ""
+msgstr "このオプションが@code{nil}ならフレームが表示する列数と行数を確保するために特定フレームのフォント、メニューバー、ツールバー、インターナルボーダー、フリンジ、スクロールバーの変更によってフレームのディスプレーエリアを暗黙に変更できる。このオプションが非@code{nil}なら暗黙のリサイズは行われない。"
 
 #. type: defopt
 #: original_texis/frames.texi:937
 msgid "The value of this option can be also be a list of frame parameters.  In that case, implied resizing is inhibited when changing a parameter that appears in this list.  The frame parameters currently handled by this option are: @code{font}, @code{font-backend}, @code{internal-border-width}, @code{menu-bar-lines} and @code{tool-bar-lines}."
-msgstr ""
+msgstr "このオプションの値はフレームパラメーターのリストかもしれない。この場合には、このリスト内に出現するパラメーター変更時の暗黙のリサイズは抑制される。このオプションで処理されるフレームパラメーター現在のところ@code{font}、@code{font-backend}、@code{internal-border-width}、@code{menu-bar-lines}、@code{tool-bar-lines}。"
 
 #. type: defopt
 #: original_texis/frames.texi:947
 msgid "Changing any of the @code{scroll-bar-width}, @code{scroll-bar-height}, @code{vertical-scroll-bars}, @code{horizontal-scroll-bars}, @code{left-fringe} and @code{right-fringe} frame parameters is handled as if the frame contained just one live window.  This means, for example, that removing vertical scroll bars on a frame containing several side by side windows will shrink the outer frame width by the width of one scroll bar provided this option is @code{nil} and keep it unchanged if this option is either @code{t} or a list containing @code{vertical-scroll-bars}."
-msgstr ""
+msgstr "フレームパラメーター@code{scroll-bar-width}、@code{scroll-bar-height}、@code{vertical-scroll-bars}、@code{horizontal-scroll-bars}、@code{left-fringe}、@code{right-fringe}のいずれかにたいする変更は、あたかもそのフレームが単一の生きたウィンドウを含むかのように処理される。これはたとえば複数の横並びのウィンドウをフレームで垂直スクロールバーを削除すると、このオプションが@code{nil}なら@code{nil}はスクロールバーの幅の分だけ縮小されて、@code{t}や@code{vertical-scroll-bars}を含む場合には未変更に保たれることを意味する。"
 
 #. type: defopt
 #: original_texis/frames.texi:955
 msgid "The default value is @code{'(tool-bar-lines)} for Lucid, Motif and Windows (which means that adding/removing a tool bar there does not change the outer frame height), @code{nil} on all other window systems including GTK+ (which means that changing any of the parameters listed above may change the size of the outer frame), and @code{t} otherwise (which means the outer frame size never changes implicitly when there's no window system support)."
-msgstr ""
+msgstr "デフォルト値はLucid、Motif、Windowsにたいしては@code{'(tool-bar-lines)} (ツールバーの追加や削除でアウターフレーム高さを変更しない)、GTK+を含むその他のウィンドウシステムでは@code{nil} (上述したすべてのパラメーターの変更によりアウターフレームのサイズは変更され得る)、それ以外なら@code{t} (ウィンドウシステムのサポートがないときには暗黙に変更が行われることはない)。"
 
 #. type: defopt
 #: original_texis/frames.texi:959
 msgid "Note that when a frame is not large enough to accommodate a change of any of the parameters listed above, Emacs may try to enlarge the frame even if this option is non-@code{nil}."
-msgstr ""
+msgstr "フレームが上述のいずれかのパラメーターにたいする変更の調停に不十分な際には、たとえこのオプションが非@code{nil}でもEmacsがフレームの拡大を試みるかもしれないことに注意。"
 
 #. type: cindex
 #: original_texis/frames.texi:964
