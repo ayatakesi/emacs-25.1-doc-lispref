@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-01-05 02:27+0900\n"
+"PO-Revision-Date: 2020-01-05 23:21+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2011,7 +2011,7 @@ msgstr "parameters of initial frame"
 #. type: Plain text
 #: original_texis/frames.texi:1057
 msgid "You can specify the parameters for the initial startup frame by setting @code{initial-frame-alist} in your init file (@pxref{Init File})."
-msgstr "initファイル(@ref{Init File}を参照)内で@code{initial-frame-alist}をセットすることにより、フレームの初期スタートアップにパラメーターを指定できます。"
+msgstr "initファイル(@ref{Init File}を参照)の内部で@code{initial-frame-alist}をセットすることにより、フレームの初期スタートアップにパラメーターを指定できます。"
 
 #. type: defopt
 #: original_texis/frames.texi:1058
@@ -2022,7 +2022,7 @@ msgstr "initial-frame-alist"
 #. type: defopt
 #: original_texis/frames.texi:1063
 msgid "This variable's value is an alist of parameter values used when creating the initial frame.  You can set this variable to specify the appearance of the initial frame without altering subsequent frames.  Each element has the form:"
-msgstr "この変数の値は、初期フレーム作成時に使用されるパラメーター値のalistである。以降のフレームを変更することなく、初期フレームの外見を指定するために、この変数を使用できる。要素はそれぞれ以下の形式をもつ:"
+msgstr "この変数の値は初期フレーム作成時に使用されるパラメーター値のalist。以降のフレームを変更することなく初期フレームの外見を指定するためにこの変数を使用できる。要素はそれぞれ以下の形式をもつ:"
 
 #. type: example
 #: original_texis/frames.texi:1066
@@ -2033,22 +2033,22 @@ msgstr "(@var{parameter} . @var{value})\n"
 #. type: defopt
 #: original_texis/frames.texi:1072
 msgid "Emacs creates the initial frame before it reads your init file.  After reading that file, Emacs checks @code{initial-frame-alist}, and applies the parameter settings in the altered value to the already created initial frame."
-msgstr "Emacsは、initファイル読み取り前に初期フレームを作成する。After reading that file, Emacs checks  @code{initial-frame-alist}をチェックして、すでに作成済みの初期フレームに、変更する値に含まれるパラメーターのセッティングを適用する。"
+msgstr "Emacsはinitファイル読み取り前に初期フレームを作成する。Emacsはこのファイル読み取り後に@code{initial-frame-alist}をチェックして、変更する値に含まれるパラメーターのセッティングを作成済みの初期フレームに適用する。"
 
 #. type: defopt
 #: original_texis/frames.texi:1078
 msgid "If these settings affect the frame geometry and appearance, you'll see the frame appear with the wrong ones and then change to the specified ones.  If that bothers you, you can specify the same geometry and appearance with X resources; those do take effect before the frame is created.  @xref{X Resources,, X Resources, emacs, The GNU Emacs Manual}."
-msgstr "これらのセッティングがフレームのジオメトリーと外見に影響する場合には、間違った外見のフレームを見た後、指定した外見に変更されるのを目にするだろう。これが煩わしい場合は、Xリソースで同じジオメトリーと外見を指定できる。これらは、フレーム作成前に効果をもつ。@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照されたい。"
+msgstr "これらのセッティングがフレームのジオメトリーと外見に影響する場合には、間違った外見のフレームを目にした後に、指定した外見に変更される様を目にするだろう。これが煩わしければ、Xリソースで同じジオメトリーと外見を指定できる。これらはフレーム作成前に効果をもつ。@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: defopt
 #: original_texis/frames.texi:1086
 msgid "X resource settings typically apply to all frames.  If you want to specify some X resources solely for the sake of the initial frame, and you don't want them to apply to subsequent frames, here's how to achieve this.  Specify parameters in @code{default-frame-alist} to override the X resources for subsequent frames; then, to prevent these from affecting the initial frame, specify the same parameters in @code{initial-frame-alist} with values that match the X resources."
-msgstr "Xリソースセッティングは通常、すべての!に適用される。初期フレームのために、あるXリソースを単独で指定して、それ以降のフレームには適用したくない場合は、次の方法によりこれを達成できる。それ以降のフレームにたいするXリソースをオーバーライドするために、@code{default-frame-alist}内でパラメーターを指定してから、それらが初期フレームに影響するのを防ぐために、@code{initial-frame-alist}内の同じパラメーターにたいして、Xリソースにマッチする値を指定すればよい。"
+msgstr "Xリソースセッティングは、通常はすべてのフレームに適用される。初期フレームのためにあるXリソースを単独で指定して、それ以降のフレームには適用したくなければ、次の方法によりこれを達成できる。それ以降のフレームにたいするXリソースをオーバーライドするために@code{default-frame-alist}内でパラメーターを指定してから、それらが初期フレームに影響するのを防ぐために@code{initial-frame-alist}内の同じパラメーターにたいしてXリソースにマッチする値を指定すればよい。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1092
 msgid "If these parameters include @code{(minibuffer . nil)}, that indicates that the initial frame should have no minibuffer.  In this case, Emacs creates a separate @dfn{minibuffer-only frame} as well."
-msgstr "これらのパラメーターに@code{(minibuffer . nil)}が含まれるなら、それは初期フレームがミニバッファーをもつべきではないことを示します。この場合、Emacsは同じように@dfn{ミニバッファーオンリーフレーム(minibuffer-only frame)}を別個作成します。"
+msgstr "これらのパラメーターに@code{(minibuffer . nil)}が含まれていれば、それは初期フレームがミニバッファーをもつべきではないことを示しています。この場合には、Emacsは同じように@dfn{ミニバッファーonlyフレーム(minibuffer-only frame)}を個別に作成します。"
 
 #. type: defopt
 #: original_texis/frames.texi:1093
@@ -2059,7 +2059,7 @@ msgstr "minibuffer-frame-alist"
 #. type: defopt
 #: original_texis/frames.texi:1098
 msgid "This variable's value is an alist of parameter values used when creating an initial minibuffer-only frame (i.e., the minibuffer-only frame that Emacs creates if @code{initial-frame-alist} specifies a frame with no minibuffer)."
-msgstr "この変数の値は、初期ミニバッファーオンリーフレーム(@code{initial-frame-alist}がミニバッファーのないフレームを指定する場合にEmacsが作成するミニバッファーオンリーフレームのこと)を作成時に使用されるパラメーター値のalistである。"
+msgstr "この変数の値は、初期ミニバッファーonlyフレーム( @code{initial-frame-alist}がミニバッファーのないフレームを指定する場合にEmacsが作成するミニバッファーonlyフレーム)を作成時に使用されるパラメーター値のalist。"
 
 #. type: defopt
 #: original_texis/frames.texi:1100
@@ -2070,17 +2070,17 @@ msgstr "default-frame-alist"
 #. type: defopt
 #: original_texis/frames.texi:1105
 msgid "This is an alist specifying default values of frame parameters for all Emacs frames---the first frame, and subsequent frames.  When using the X Window System, you can get the same results by means of X resources in many cases."
-msgstr "これは、すべてのEmacsフレーム(最初のフレームとそれ以降のフレーム)にたいして、フレームパラメーターのデフォルト値を指定するalistである。Xウィンドウシステム使用時には、大抵はXリソースで同じ結果を得られる。"
+msgstr "これはすべてのEmacsフレーム(最初のフレームとそれ以降のフレーム)にたいしてフレームパラメーターのデフォルト値を指定するalist。Xウィンドウシステム使用時には、大抵はXリソースで同じ結果を得られる。"
 
 #. type: defopt
 #: original_texis/frames.texi:1109
 msgid "Setting this variable does not affect existing frames.  Furthermore, functions that display a buffer in a separate frame may override the default parameters by supplying their own parameters."
-msgstr "この変数のセットは既存フレームに影響しない。さらに、別フレームにバッファーを表示する関数は、自身のパラメーターを提供することにより、デフォルトパラメーターをオーバーライドできる。"
+msgstr "この変数のセットは既存フレームに影響しない。さらに別フレームにバッファーを表示する関数は、自身のパラメーターを提供することによりデフォルトパラメーターをオーバーライドできる。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1118
 msgid "If you invoke Emacs with command-line options that specify frame appearance, those options take effect by adding elements to either @code{initial-frame-alist} or @code{default-frame-alist}.  Options which affect just the initial frame, such as @samp{--geometry} and @samp{--maximized}, add to @code{initial-frame-alist}; the others add to @code{default-frame-alist}.  @pxref{Emacs Invocation,, Command Line Arguments for Emacs Invocation, emacs, The GNU Emacs Manual}."
-msgstr "フレームの外見を指定するコマンドラインオプションとともにEmacsを呼び出した場合、これらのオプションは@code{initial-frame-alist}または@code{default-frame-alist}のいずれかに要素を追加することにより、効果を発揮します。@samp{--geometry}や@samp{--maximized}のような、初期フレームだけに影響するオプションは@code{initial-frame-alist}、その他のオプションは@code{default-frame-alist}に要素を追加します。@ref{Emacs Invocation,, Command Line Arguments for Emacs Invocation, emacs, The GNU Emacs Manual}を参照してください。"
+msgstr "フレームの外見を指定するコマンドラインオプションとともにEmacsを呼び出すと、これらのオプションは@code{initial-frame-alist}か@code{default-frame-alist}のいずれかに要素を追加することにより効果を発揮します。@samp{--geometry}や@samp{--maximized}のような初期フレームだけに影響するオプションは@code{initial-frame-alist}、その他のオプションは@code{default-frame-alist}に要素を追加します。@ref{Emacs Invocation,, Command Line Arguments for Emacs Invocation, emacs, The GNU Emacs Manual}を参照してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:1121
@@ -2091,7 +2091,7 @@ msgstr "frame parameters for windowed displays"
 #. type: Plain text
 #: original_texis/frames.texi:1130
 msgid "Just what parameters a frame has depends on what display mechanism it uses.  This section describes the parameters that have special meanings on some or all kinds of terminals.  Of these, @code{name}, @code{title}, @code{height}, @code{width}, @code{buffer-list} and @code{buffer-predicate} provide meaningful information in terminal frames, and @code{tty-color-mode} is meaningful only for frames on text terminals."
-msgstr "フレームがどんなパラメーターをもつかは、どのようなディスプレイのメカニズムがそれを使用するかに依存します。このセクションでは、一部、またはすべての端末種類において特別な意味をもつパラメーターを説明します。これらのうち@code{name}、@code{title}、@code{height}、@code{width}、@code{buffer-list}、@code{buffer-predicate}は端末フレームにおいて有意な情報を提供し、@code{tty-color-mode}はテキスト端末上のフレームにたいして意味があります。"
+msgstr "フレームがどんなパラメーターをもつかは、どのようなディスプレイのメカニズムがそれを使用するかに依存します。このセクションでは一部、またはすべての端末種類において特別な意味をもつパラメーターを説明します。これらのうち@code{name}、@code{title}、@code{height}、@code{width}、@code{buffer-list}、@code{buffer-predicate}は端末フレームにおいて意味をもつ情報を提供し、@code{tty-color-mode}はテキスト端末上のフレームにたいしてのみ意味があります。"
 
 #. type: subsubsection
 #: original_texis/frames.texi:1141 original_texis/frames.texi:1143
@@ -2139,7 +2139,7 @@ msgstr "Layout Parameters"
 #. type: menuentry
 #: original_texis/frames.texi:1141
 msgid "Size of parts of the frame, and enabling or disabling some parts."
-msgstr "フレームのパーツのサイズと、一部パーツの有効化と無効化。"
+msgstr "フレームのパーツのサイズ、一部パーツの有効化と無効化。"
 
 #. type: subsubsection
 #: original_texis/frames.texi:1141 original_texis/frames.texi:1443
@@ -2191,7 +2191,7 @@ msgstr "フレームテキストにたいするフォントとカラー。"
 #. type: Plain text
 #: original_texis/frames.texi:1148
 msgid "These frame parameters give the most basic information about the frame.  @code{title} and @code{name} are meaningful on all terminals."
-msgstr "以下のフレームパラメーターは、フレームに関してもっとも基本的な情報を提供します。@code{title}と@code{name}は、すべての端末において意味をもちます。"
+msgstr "以下のフレームパラメーターはフレームに関するっとも基本的な情報を提供します。@code{title}と@code{name}はすべての端末において意味をもちます。"
 
 #. type: vindex
 #: original_texis/frames.texi:1150
@@ -2208,7 +2208,7 @@ msgstr "display"
 #. type: table
 #: original_texis/frames.texi:1156
 msgid "The display on which to open this frame.  It should be a string of the form @samp{@var{host}:@var{dpy}.@var{screen}}, just like the @env{DISPLAY} environment variable.  @xref{Multiple Terminals}, for more details about display names."
-msgstr "このフレームをオープンするためのディスプレイ。これは環境変数@env{DISPLAY}のような、@samp{@var{host}:@var{dpy}.@var{screen}}という形式の文字列であること。ディスプレイ名についての詳細は、@xref{Multiple Terminals}を参照のこと。"
+msgstr "このフレームをオープンするためのディスプレイ。これは環境変数@env{DISPLAY}のような@samp{@var{host}:@var{dpy}.@var{screen}}という形式の文字列であること。ディスプレイ名についての詳細は、@ref{Multiple Terminals}を参照のこと。"
 
 #. type: vindex
 #: original_texis/frames.texi:1157
@@ -2225,7 +2225,7 @@ msgstr "display-type"
 #. type: table
 #: original_texis/frames.texi:1162
 msgid "This parameter describes the range of possible colors that can be used in this frame.  Its value is @code{color}, @code{grayscale} or @code{mono}."
-msgstr "このパラメーターは、このフレーム内で使用できる利用可能なカラーの範囲を記述する。値は@code{color}、@code{grayscale}、@code{mono}のいずれか。"
+msgstr "このパラメーターはこのフレーム内で使用できる利用可能なカラーの範囲を記述する。値は@code{color}、@code{grayscale}、@code{mono}のいずれか。"
 
 #. type: vindex
 #: original_texis/frames.texi:1163
@@ -2242,7 +2242,7 @@ msgstr "title"
 #. type: table
 #: original_texis/frames.texi:1171
 msgid "If a frame has a non-@code{nil} title, it appears in the window system's title bar at the top of the frame, and also in the mode line of windows in that frame if @code{mode-line-frame-identification} uses @samp{%F} (@pxref{%-Constructs}).  This is normally the case when Emacs is not using a window system, and can only display one frame at a time.  @xref{Frame Titles}."
-msgstr "フレームが非@code{nil}のtitleをもつ場合、それはフレーム上端にあるウィンドウシステムのタイトルバーに表示され、@code{mode-line-frame-identification}に@samp{%F}(@ref{%-Constructs}を参照)を使用していればそのフレーム内のウィンドウのモードラインにも表示される。これは通常、Emacsがウィンドウシステムを使用しておらず、かつ同時に1つのフレームのみ表示可能なケースが該当する。@ref{Frame Titles}を参照のこと。"
+msgstr "フレームが非@code{nil}のtitleをもつ場合には、それはフレーム上端にあるウィンドウシステムのタイトルバーに表示され、@code{mode-line-frame-identification}に@samp{%F} (@ref{%-Constructs}を参照)を使用していればそのフレーム内のウィンドウのモードラインにも表示される。これは通常はEmacsがウィンドウシステムを使用しておらず、かつ同時に1つのフレームのみ表示可能なケースが該当する。@ref{Frame Titles}を参照のこと。"
 
 #. type: vindex
 #: original_texis/frames.texi:1172
@@ -2253,12 +2253,12 @@ msgstr "name, a frame parameter"
 #. type: table
 #: original_texis/frames.texi:1178
 msgid "The name of the frame.  The frame name serves as a default for the frame title, if the @code{title} parameter is unspecified or @code{nil}.  If you don't specify a name, Emacs sets the frame name automatically (@pxref{Frame Titles})."
-msgstr "そのフレームの名前。@code{title}が未指定または@code{nil}なら、フレーム名はフレームタイトルにたいしてデフォルトの役割りを果たす。nameを指定しない場合、Emacsは自動的にフレーム名をセットする(@ref{Frame Titles}を参照)。"
+msgstr "そのフレームの名前。@code{title}が未指定か@code{nil}ならフレーム名はフレームタイトルにたいしてデフォルトの役割りを果たす。nameを指定しなければEmacsは自動的にフレーム名をセットする(@ref{Frame Titles}を参照)。"
 
 #. type: table
 #: original_texis/frames.texi:1182
 msgid "If you specify the frame name explicitly when you create the frame, the name is also used (instead of the name of the Emacs executable) when looking up X resources for the frame."
-msgstr "フレーム作成時に明示的にフレーム名を指定した場合は、そのフレームにたいしてXリソースを照合する際にも、(Emacs実行可能形式名のかわりに)その名前が使用される。"
+msgstr "フレーム作成時に明示的にフレーム名を指定すると、そのフレームにたいしてXリソースを照合する際にも、(Emacs実行可能形式名のかわりに)その名前が使用される。"
 
 #. type: item
 #: original_texis/frames.texi:1183
@@ -2269,7 +2269,7 @@ msgstr "explicit-name"
 #. type: table
 #: original_texis/frames.texi:1187
 msgid "If the frame name was specified explicitly when the frame was created, this parameter will be that name.  If the frame wasn't explicitly named, this parameter will be @code{nil}."
-msgstr "フレーム作成時にフレーム名が明示的に指定された場合、このパラメーターはその名前になるだろう。明示的に名付けられなかった場合、このパラメーターは@code{nil}になる。"
+msgstr "フレーム作成時にフレーム名が明示的に指定されると、このパラメーターはその名前。明示的に名付けられなかったら、このパラメーターは@code{nil}。"
 
 #. type: cindex
 #: original_texis/frames.texi:1191
@@ -2279,10 +2279,8 @@ msgstr "window position on display"
 
 #. type: Plain text
 #: original_texis/frames.texi:1196
-#, fuzzy
-#| msgid "Position parameters' values are normally measured in pixels, but on text terminals they count characters or lines instead."
 msgid "Position parameters' values are measured in pixels.  (Note that none of these parameters exist on TTY frames.)"
-msgstr "位置パラメーターの値は通常はピクセル単位ですが、テキスト端末ではピクセル単位のかわりに文字数か行数で数えられます。"
+msgstr "位置のパラメーターの値はピクセル単位で計測されます(以下のパラメーターはTTYフレームには存在しないことに注意)。"
 
 #. type: vindex
 #: original_texis/frames.texi:1198
