@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-10-14 22:47+0900\n"
-"PO-Revision-Date: 2019-11-09 15:33+0900\n"
+"PO-Revision-Date: 2020-01-06 03:05+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -37,7 +37,7 @@ msgstr "command loop"
 #. type: Plain text
 #: original_texis/commands.texi:15
 msgid "When you run Emacs, it enters the @dfn{editor command loop} almost immediately.  This loop reads key sequences, executes their definitions, and displays the results.  In this chapter, we describe how these things are done, and the subroutines that allow Lisp programs to do them."
-msgstr "Emacsを実行すると、ほぼ即座に@dfn{エディターコマンドループ(editor command loop)}にエンターします。このループはキーシーケンスを読み取り、それらの定義を実行して結果を表示します。このチャプターではこれらが行われる方法と、Lispプログラムがこれらを行えるようにするサブルーチンを説明します。"
+msgstr "Emacsを実行すると、ほぼ即座に@dfn{エディターコマンドループ(editor command loop)}に移行します。このループはキーシーケンスを読み取り、それらの定義を実行して結果を表示します。このチャプターではこれらが行われる方法と、Lispプログラムがこれらを行えるようにするサブルーチンを説明します。"
 
 #. type: node
 #: original_texis/commands.texi:34 original_texis/commands.texi:36
@@ -188,7 +188,7 @@ msgstr "Recursive Editing"
 #. type: menuentry
 #: original_texis/commands.texi:34
 msgid "Entering a recursive edit, and why you usually shouldn't."
-msgstr "再帰編集へのエンターと、なぜ通常は再帰編集を行うべきでないのか。"
+msgstr "再帰編集への移行と、なぜ通常は再帰編集を行うべきでないのか。"
 
 #. type: section
 #: original_texis/commands.texi:34 original_texis/commands.texi:3389
@@ -426,7 +426,7 @@ msgstr "interactive arg-descriptor"
 #. type: defspec
 #: original_texis/commands.texi:162
 msgid "This special form declares that a function is a command, and that it may therefore be called interactively (via @kbd{M-x} or by entering a key sequence bound to it).  The argument @var{arg-descriptor} declares how to compute the arguments to the command when the command is called interactively."
-msgstr "このスペシャルフォームは関数がコマンドであり、したがって(@kbd{M-x}を通じて、またはそのコマンドにバインドされたキーシーケンスのエンターすることにより)インタラクティブに呼び出すことができることを宣言する。引数@var{arg-descriptor}は、そのコマンドがインタラクティブに呼び出されたときに引数を計算する方法を宣言する。"
+msgstr "このスペシャルフォームは関数がコマンドであり、したがって(@kbd{M-x}を通じて、またはそのコマンドにバインドされたキーシーケンスをエンターすることにより)インタラクティブに呼び出すことができることを宣言する。引数@var{arg-descriptor}は、そのコマンドがインタラクティブに呼び出されたときに引数を計算する方法を宣言する。"
 
 #. type: defspec
 #: original_texis/commands.texi:166
@@ -5701,7 +5701,7 @@ msgstr "command loop, recursive"
 #. type: Plain text
 #: original_texis/commands.texi:3283
 msgid "The Emacs command loop is entered automatically when Emacs starts up.  This top-level invocation of the command loop never exits; it keeps running as long as Emacs does.  Lisp programs can also invoke the command loop.  Since this makes more than one activation of the command loop, we call it @dfn{recursive editing}.  A recursive editing level has the effect of suspending whatever command invoked it and permitting the user to do arbitrary editing before resuming that command."
-msgstr "Emacsはスタートアップ時に、自動的にEmacsコマンドループにエンターします。このトップレベルのコマンドループ呼び出しは決してexitすることなく、Emacs実行中は実行を継続します。Lispプログラムもコマンドループを呼び出せます。これは複数のコマンドループを活性化するので、@dfn{再帰編集(recursive editing)}と呼ばれています。再帰編集レベルは呼び出したコマンドが何であれそれをサスペンドして、そのコマンドを再開する前にユーザーが任意の編集を行うことを可能にする効果をもちます。"
+msgstr "Emacsはスタートアップ時に、自動的にEmacsコマンドループに移行します。このトップレベルのコマンドループ呼び出しは決してexitすることなく、Emacs実行中は実行を継続します。Lispプログラムもコマンドループを呼び出せます。これは複数のコマンドループを活性化するので、@dfn{再帰編集(recursive editing)}と呼ばれています。再帰編集レベルは呼び出したコマンドが何であれそれをサスペンドして、そのコマンドを再開する前にユーザーが任意の編集を行うことを可能にする効果をもちます。"
 
 #. type: Plain text
 #: original_texis/commands.texi:3290
