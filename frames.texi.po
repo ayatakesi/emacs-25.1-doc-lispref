@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-01-05 23:21+0900\n"
+"PO-Revision-Date: 2020-01-13 02:09+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1180,7 +1180,7 @@ msgstr "メニューバーのように、ツールバー(@ref{Tool Bar}を参照
 #: original_texis/frames.texi:541
 #, no-wrap
 msgid "Native Frame"
-msgstr "Native Frame"
+msgstr "ネイティブフレーム(Native Frame)"
 
 #. type: cindex
 #: original_texis/frames.texi:542
@@ -1813,7 +1813,6 @@ msgstr "implied resizing of frame"
 
 #. type: Plain text
 #: original_texis/frames.texi:918
-#, fuzzy
 msgid "By default, Emacs tries to keep the number of lines and columns of a frame's text area unaltered when, for example, adding or removing the menu bar, changing the default font or setting the width of the frame's scroll bars.  This means, however, that in such case Emacs must ask the window manager to resize the outer frame in order to accommodate the size change.  Note that wrapping a menu or tool bar usually does not resize the frame's outer size, hence this will alter the number of displayed lines."
 msgstr "たとえばメニューバーの追加や削除、デフォルトフォントの変更、フレームのスクロールバーの幅のセットの際、Emacsはデフォルトではフレームのテキストエリアの行数と列数を未変更に保つように試みます。しかしこれはそのような場合のサイズ変更を調停するために、Emacsがウィンドウマネージャーに依頼しなければならないことを意味します。メニューバーやツールバーのでは、通常はフレームのフレームサイズをリサイズしないので、表示される行数に変更はないことに注意してください。"
 
@@ -2297,7 +2296,7 @@ msgstr "left"
 #. type: table
 #: original_texis/frames.texi:1202
 msgid "The position, in pixels, of the left (or right) edge of the frame with respect to the left (or right) edge of the screen.  The value may be:"
-msgstr "スクリーンの左(右)端からフレームの左(右)端までの、ピクセル単位での位置。値は:"
+msgstr "スクリーンの左(右)エッジからフレームの左(右)エッジまでの、ピクセル単位での位置。値は:"
 
 #. type: item
 #: original_texis/frames.texi:1204
@@ -2308,7 +2307,7 @@ msgstr "整数"
 #. type: table
 #: original_texis/frames.texi:1208
 msgid "A positive integer relates the left edge of the frame to the left edge of the screen.  A negative integer relates the right frame edge to the right screen edge."
-msgstr "正の整数は、スクリーン左端をフレーム左端に、負の整数はフレーム右端をスクリーン右端に関連付ける。"
+msgstr "正の整数はスクリーン左エッジをフレーム左エッジに、負の整数はフレーム右エッジをスクリーン右エッジに関連付ける。"
 
 #. type: code{#1}
 #: original_texis/frames.texi:1209
@@ -2319,7 +2318,7 @@ msgstr "(+ @var{pos})"
 #. type: table
 #: original_texis/frames.texi:1214
 msgid "This specifies the position of the left frame edge relative to the left screen edge.  The integer @var{pos} may be positive or negative; a negative value specifies a position outside the screen or on a monitor other than the primary one (for multi-monitor displays)."
-msgstr "これは、スクリーン左端にたいしフレーム左端の相対的位置を指定する。整数@var{pos}は正および負の値をとり得る。負の値はスクリーン外側、または(マルチモニターディスプレイにたいしては)プライマリーモニター以外のモニター上の位置を指定する。"
+msgstr "これはスクリーン左エッジにたいしフレーム左エッジの相対的位置を指定する。整数@var{pos}は正か負の値をとり得る。負の値はスクリーン外側、または(マルチモニターディスプレイにたいしては)プライマリーモニター以外のモニター上の位置を指定する。"
 
 #. type: code{#1}
 #: original_texis/frames.texi:1215
@@ -2330,17 +2329,17 @@ msgstr "(- @var{pos})"
 #. type: table
 #: original_texis/frames.texi:1220
 msgid "This specifies the position of the right frame edge relative to the right screen edge.  The integer @var{pos} may be positive or negative; a negative value specifies a position outside the screen or on a monitor other than the primary one (for multi-monitor displays)."
-msgstr "これは、スクリーン右端にたいしフレーム右端の相対的位置を指定する。整数@var{pos}は正および負の値をとり得る。負の値はスクリーン外側、または(マルチモニターディスプレイにたいしては)プライマリーモニター以外のモニター上の位置を指定する。"
+msgstr "これはスクリーン右エッジにたいしフレーム右エッジの相対的位置を指定する。整数@var{pos}は正か負の値をとり得る。負の値はスクリーン外側、または(マルチモニターディスプレイにたいしては)プライマリーモニター以外のモニター上の位置を指定する。"
 
 #. type: table
 #: original_texis/frames.texi:1225
 msgid "Some window managers ignore program-specified positions.  If you want to be sure the position you specify is not ignored, specify a non-@code{nil} value for the @code{user-position} parameter as well."
-msgstr "プログラム指定の位置を無視するウィンドウマネージャーがいくつかある。指定した位置が無視されない保証を望む場合は、パラメーター@code{user-position}にも同様に非@code{nil}値を指定すること。"
+msgstr "プログラムで指定した位置を無視するウィンドウマネージャーがいくつかある。指定した位置が無視されないことを保証したければ、パラメーター@code{user-position}にも同様に非@code{nil}値を指定すること。"
 
 #. type: table
 #: original_texis/frames.texi:1228
 msgid "If the window manager refuses to align a frame at the left or top screen edge, combining position notation and @code{user-position} as in"
-msgstr ""
+msgstr "ウィンドウマネージャがスクリーン左右のエッジにあるフレームの位置揃えを拒絶するようなら、以下のように位置指定と@code{user-position}を組み合わせる"
 
 #. type: example
 #: original_texis/frames.texi:1232
@@ -2349,11 +2348,13 @@ msgid ""
 "(modify-frame-parameters\n"
 "  nil '((user-position . t) (left . (+ -4))))\n"
 msgstr ""
+"(modify-frame-parameters\n"
+"  nil '((user-position . t) (left . (+ -4))))\n"
 
 #. type: table
 #: original_texis/frames.texi:1235
 msgid "may help to override that."
-msgstr ""
+msgstr "このようにすれば、そのような挙動をオーバーライドする助けとなるだろう。"
 
 #. type: vindex
 #: original_texis/frames.texi:1236
@@ -2370,7 +2371,7 @@ msgstr "top"
 #. type: table
 #: original_texis/frames.texi:1241
 msgid "The screen position of the top (or bottom) edge, in pixels, with respect to the top (or bottom) edge of the screen.  It works just like @code{left}, except vertically instead of horizontally."
-msgstr "スクリーン上(下)端にたいして、上(下)端のスクリーン位置をピクセル単位で指定する。方向が水平ではなく垂直である点を除き、これは@code{left}と同様に機能する。"
+msgstr "スクリーン上(下)エッジにたいして、上(下)エッジのスクリーン位置をピクセル単位で指定する。方向が水平ではなく垂直である点を除き、これは@code{left}と同様に機能する。"
 
 #. type: vindex
 #: original_texis/frames.texi:1242
@@ -2387,7 +2388,7 @@ msgstr "icon-left"
 #. type: table
 #: original_texis/frames.texi:1249
 msgid "The screen position of the left edge of the frame's icon, in pixels, counting from the left edge of the screen.  This takes effect when the frame is iconified, if the window manager supports this feature.  If you specify a value for this parameter, then you must also specify a value for @code{icon-top} and vice versa."
-msgstr "スクリーン左端から数えた、フレームアイコン左端のピクセル単位のスクリーン位置。ウィンドウマネージャーがこの機能をサポートすれば、これはフレームをアイコン化したとき効果を発揮する。このパラメーターに値を指定する場合は@code{icon-top}にも値を指定しなければならず、その逆も真である。"
+msgstr "スクリーン左エッジから数えた、フレームアイコン左エッジのピクセル単位のスクリーン位置。ウィンドウマネージャーがこの機能をサポートすれば、これはフレームをアイコン化したとき効果を発揮する。このパラメーターに値を指定する場合には@code{icon-top}にも値を指定しなければならず、その逆も真。"
 
 #. type: vindex
 #: original_texis/frames.texi:1250
@@ -2404,7 +2405,7 @@ msgstr "icon-top"
 #. type: table
 #: original_texis/frames.texi:1255
 msgid "The screen position of the top edge of the frame's icon, in pixels, counting from the top edge of the screen.  This takes effect when the frame is iconified, if the window manager supports this feature."
-msgstr "スクリーン上端から数えた、フレームアイコン上端のピクセル単位のスクリーン位置。ウィンドウマネージャーがこの機能をサポートすれば、これはフレームをアイコン化したとき効果を発揮する。"
+msgstr "スクリーン上端から数えたフレームアイコン上端のピクセル単位のスクリーン位置。ウィンドウマネージャーがこの機能をサポートすれば、これはフレームをアイコン化したときに効果を発揮する。"
 
 #. type: vindex
 #: original_texis/frames.texi:1256
@@ -2421,7 +2422,7 @@ msgstr "user-position"
 #. type: table
 #: original_texis/frames.texi:1263
 msgid "When you create a frame and specify its screen position with the @code{left} and @code{top} parameters, use this parameter to say whether the specified position was user-specified (explicitly requested in some way by a human user) or merely program-specified (chosen by a program).  A non-@code{nil} value says the position was user-specified."
-msgstr "フレームを作成してパラメーター@code{left}と@code{top}で位置を指定する際は、指定した位置がユーザー指定(人間であるユーザーにより明示的に要求された位置)なのか、それとも単なるプログラム指定(プログラムにより選択された位置)なのかを告げるために、このパラメーターを使用する。非@code{nil}値は、それがユーザー指定の位置であることを告げる。"
+msgstr "フレームを作成してパラメーター@code{left}と@code{top}で位置を指定する際は、指定した位置がユーザー指定(人間であるユーザーにより明示的に要求された位置)なのか、それとも単なるプログラム指定(プログラムにより選択された位置)なのかを告げるためにこのパラメーターを使用する。非@code{nil}値はそれがユーザー指定の位置であることを告げる。"
 
 #. type: cindex
 #: original_texis/frames.texi:1264
@@ -2432,12 +2433,12 @@ msgstr "window positions and window managers"
 #. type: table
 #: original_texis/frames.texi:1271
 msgid "Window managers generally heed user-specified positions, and some heed program-specified positions too.  But many ignore program-specified positions, placing the window in a default fashion or letting the user place it with the mouse.  Some window managers, including @code{twm}, let the user specify whether to obey program-specified positions or ignore them."
-msgstr "ウィンドウマネージャーは一般的にユーザー指定位置に留意し、プログラム指定位置にも幾分か留意する。しかし、多くはプログラム指定位置を無視してウィンドウをウィンドウマネージャーのデフォルトの方法で配すか、ユーザーのマウスによる配置に任せる。@code{twm}を含むウィンドウマネージャーのいくつかは、プログラム指定位置にしたがうか無視するかをユーザーの指定に任せる。"
+msgstr "ウィンドウマネージャーは一般的にユーザー指定位置に留意するとともに、プログラム指定位置にも幾分か留意する。しかし多くのウィンドウマネージャーはプログラム指定位置を無視して、ウィンドウをウィンドウマネージャーのデフォルトの方法で配置するかユーザーのマウスによる配置に任せる。@code{twm}を含むウィンドウマネージャーのいくつかは、プログラム指定位置にしたがうか無視するかをユーザーの指定に任せる。"
 
 #. type: table
 #: original_texis/frames.texi:1276
 msgid "When you call @code{make-frame}, you should specify a non-@code{nil} value for this parameter if the values of the @code{left} and @code{top} parameters represent the user's stated preference; otherwise, use @code{nil}."
-msgstr "@code{make-frame}を呼び出す際、パラメーター@code{left}および@code{top}の値がそのユーザーにより示される嗜好を表すなら、このパラメーターに非@code{nil}値を、それ以外は@code{nil}を指定するべきである。"
+msgstr "@code{make-frame}を呼び出す際にパラメーター@code{left}や@code{top}の値がそのユーザーにより示される嗜好を表すなら、このパラメーターに非@code{nil}値、それ以外は@code{nil}を指定すること。"
 
 #. type: cindex
 #: original_texis/frames.texi:1281
@@ -2465,7 +2466,7 @@ msgstr "height"
 #. type: table
 #: original_texis/frames.texi:1292
 msgid "The height of the frame's text area (@pxref{Frame Geometry}), in characters."
-msgstr ""
+msgstr "フレームのテキストエリアの文字単位の高さ(@ref{Frame Geometry}を参照)。"
 
 #. type: vindex
 #: original_texis/frames.texi:1293
@@ -2482,7 +2483,7 @@ msgstr "width"
 #. type: table
 #: original_texis/frames.texi:1297
 msgid "The width of the frame's text area (@pxref{Frame Geometry}), in characters."
-msgstr ""
+msgstr "フレームのテキストエリアの文字単位の幅(@ref{Frame Geometry}を参照)。"
 
 #. type: vindex
 #: original_texis/frames.texi:1298
@@ -2499,34 +2500,31 @@ msgstr "user-size"
 #. type: table
 #: original_texis/frames.texi:1304
 msgid "This does for the size parameters @code{height} and @code{width} what the @code{user-position} parameter (@pxref{Position Parameters, user-position}) does for the position parameters @code{top} and @code{left}."
-msgstr "これは、サイズパラメーター@code{height}および@code{width}にたいして、@code{user-position}(@ref{Position Parameters, user-position}を参照)が@code{top}および@code{left}が行うのと同じことを行う。"
+msgstr "これはサイズパラメーター@code{height}と@code{width}にたいして、@code{user-position} (@ref{Position Parameters, user-position}を参照)が@code{top}と@code{left}が行うのと同じことを行う。"
 
 #. type: cindex
 #: original_texis/frames.texi:1305
-#, fuzzy, no-wrap
-#| msgid "full-screen frames"
+#, no-wrap
 msgid "fullboth frames"
-msgstr "full-screen frames"
+msgstr "fullboth frames"
 
 #. type: cindex
 #: original_texis/frames.texi:1306
 #, no-wrap
 msgid "fullheight frames"
-msgstr ""
+msgstr "fullheight frames"
 
 #. type: cindex
 #: original_texis/frames.texi:1307
-#, fuzzy, no-wrap
-#| msgid "full-screen frames"
+#, no-wrap
 msgid "fullwidth frames"
-msgstr "full-screen frames"
+msgstr "fullwidth frames"
 
 #. type: cindex
 #: original_texis/frames.texi:1308
-#, fuzzy, no-wrap
-#| msgid "minimized frame"
+#, no-wrap
 msgid "maximized frames"
-msgstr "minimized frame"
+msgstr "maximized frames"
 
 #. type: vindex
 #: original_texis/frames.texi:1309
@@ -2543,36 +2541,34 @@ msgstr "fullscreen"
 #. type: table
 #: original_texis/frames.texi:1322
 msgid "This parameter specifies whether to maximize the frame's width, height or both.  Its value can be @code{fullwidth}, @code{fullheight}, @code{fullboth}, or @code{maximized}.  A @dfn{fullwidth} frame is as wide as possible, a @dfn{fullheight} frame is as tall as possible, and a @dfn{fullboth} frame is both as wide and as tall as possible.  A @dfn{maximized} frame is like a ``fullboth'' frame, except that it usually keeps its title bar and the buttons for resizing and closing the frame.  Also, maximized frames typically avoid hiding any task bar or panels displayed on the desktop.  A ``fullboth'' frame, on the other hand, usually omits the title bar and occupies the entire available screen space."
-msgstr ""
+msgstr "このパラメータはフレームの幅、高さ、またはその両方を最大化するかどうかを指定する。値は@code{fullwidth}、@code{fullheight}、@code{fullboth}、または@code{maximized}。フレームが@dfn{fullwidth}なら幅、@dfn{fullheight}なら高さ、@dfn{fullboth}まら幅と高さが可能なかぎり大きくなる。@dfn{maximized}は``fullboth''と同様だが、通常はタイトルバーとフレームのリサイズやクローズ用のボタンが維持される点が異なる。同様に最大化されたフレームでは、デスクトップ上に表示されているタスクバーやパネルが見えなくなること通常はない。一方で``fullboth(全画面)''のフレームは、通常はタイトルバーは省略されて、利用可能なスクリーンスペース全体を占有する。"
 
 #. type: table
 #: original_texis/frames.texi:1328
 msgid "Full-height and full-width frames are more similar to maximized frames in this regard.  However, these typically display an external border which might be absent with maximized frames.  Hence the heights of maximized and full-height frames and the widths of maximized and full-width frames often differ by a few pixels."
-msgstr ""
+msgstr "この点ではfullheightやfullwidthのフレームは最大化されたフレームと類似している。しかしこれらは通常は最大化フレームでは存在しないエクスターナルボーダーを表示する。したがって最大化されたフレームの高さと幅は、fullheightのフレームの高さやfullwidthのフレームの幅とあ数ピクセル異なることがある。"
 
 #. type: table
 #: original_texis/frames.texi:1335
 msgid "With some window managers you may have to customize the variable @code{frame-resize-pixelwise} (@pxref{Size and Position}) in order to make a frame truly appear maximized or full-screen.  Moreover, some window managers might not support smooth transition between the various full-screen or maximization states.  Customizing the variable @code{x-frame-normalize-before-maximize} can help to overcome that."
-msgstr ""
+msgstr "いくつかのウィンドウマネージャでは、フレームを真に最大化または全画面で表示させるために、変数@code{frame-resize-pixelwise} (@ref{Size and Position}を参照)のカスタマイズが必要になる。更に全画面や最大化の種々の状態間での円滑な繊維をサポートしないウィンドウマネージャもいくつかあるだろう。これらに対処するために変数@code{x-frame-normalize-before-maximize}のカスタマイズが助けとなるだろう。"
 
 #. type: vindex
 #: original_texis/frames.texi:1336
-#, fuzzy, no-wrap
-#| msgid "fullscreen, a frame parameter"
+#, no-wrap
 msgid "fullscreen-restore, a frame parameter"
-msgstr "fullscreen, a frame parameter"
+msgstr "fullscreen-restore, a frame parameter"
 
 #. type: item
 #: original_texis/frames.texi:1337
-#, fuzzy, no-wrap
-#| msgid "full-screen frames"
+#, no-wrap
 msgid "fullscreen-restore"
-msgstr "full-screen frames"
+msgstr "fullscreen-restore"
 
 #. type: table
 #: original_texis/frames.texi:1345
 msgid "This parameter specifies the desired fullscreen state of the frame after invoking the @code{toggle-frame-fullscreen} command (@pxref{Frame Commands,,, emacs, The GNU Emacs Manual}) in the ``fullboth'' state.  Normally this parameter is installed automatically by that command when toggling the state to fullboth.  If, however, you start Emacs in the ``fullboth'' state, you have to specify the desired behavior in your initial file as, for example"
-msgstr ""
+msgstr "このパラメータは@code{toggle-frame-fullscreen}コマンド (@ref{Frame Commands,,, emacs, The GNU Emacs Manual}を参照)呼び出し後の``fullboth''状態での、望ましい全画面状態を指定する。このパラメーターは@ref{Frame Commands,,, emacs, The GNU Emacs Manualを参照}の切り替え時に、このコマンドによって自動的にインストールされる。しかしEmacsが``fullboth''の状態で開始された場合には、以下の例のように初期ファイル内で望ましい挙動を指定する必要がある"
 
 #. type: example
 #: original_texis/frames.texi:1349
@@ -2581,11 +2577,13 @@ msgid ""
 "(setq default-frame-alist\n"
 "    '((fullscreen . fullboth) (fullscreen-restore . fullheight)))\n"
 msgstr ""
+"(setq default-frame-alist\n"
+"    '((fullscreen . fullboth) (fullscreen-restore . fullheight)))\n"
 
 #. type: table
 #: original_texis/frames.texi:1353
 msgid "This will give a new frame full height after typing in it @key{F11} for the first time."
-msgstr ""
+msgstr "これは@key{F11}の初回タイプ後に、フレームに新たにfullheightを与えるだろう。"
 
 #. type: cindex
 #: original_texis/frames.texi:1358
@@ -2602,7 +2600,7 @@ msgstr "frame layout parameters"
 #. type: Plain text
 #: original_texis/frames.texi:1363
 msgid "These frame parameters enable or disable various parts of the frame, or control their sizes."
-msgstr "以下のフレームパラメーターにより、フレームのさまざまなパーツを有効または無効にしたり、サイズを制御できます。"
+msgstr "以下のフレームパラメーターによりフレームのさまざまなパーツを有効または無効にしたりサイズを制御できます。"
 
 #. type: vindex
 #: original_texis/frames.texi:1365
@@ -2647,7 +2645,7 @@ msgstr "vertical-scroll-bars"
 #. type: table
 #: original_texis/frames.texi:1378
 msgid "Whether the frame has scroll bars for vertical scrolling, and which side of the frame they should be on.  The possible values are @code{left}, @code{right}, and @code{nil} for no scroll bars."
-msgstr "フレームが垂直スクロール用のスクロールバーをもつべきか否か、スクロールバーをフレームのどちら側に置くか。可能な値は@code{left}、@code{right}、スクロールバーなしは@code{nil}。"
+msgstr "フレームが垂直スクロール用のスクロールバーをもつべきかと、スクロールバーをフレームのどちら側に置くか。可能な値は@code{left}、@code{right}、スクロールバーなしは@code{nil}。"
 
 #. type: vindex
 #: original_texis/frames.texi:1379
@@ -2664,7 +2662,7 @@ msgstr "horizontal-scroll-bars"
 #. type: table
 #: original_texis/frames.texi:1383
 msgid "Whether the frame has scroll bars for horizontal scrolling (@code{t} and @code{bottom} mean yes, @code{nil} means no)."
-msgstr ""
+msgstr "フレームが水平スクロール用のスクロールバーをもつべきかと、スクロールバーをフレームのどちら側に置くか(@code{t}と@code{bottom}はスクロールバーあり、@code{nil}はスクロールバーなしを意味する)。"
 
 #. type: vindex
 #: original_texis/frames.texi:1384
@@ -2685,24 +2683,20 @@ msgstr "垂直スクロールバーのピクセル単位による幅。@code{nil
 
 #. type: vindex
 #: original_texis/frames.texi:1389
-#, fuzzy, no-wrap
-#| msgid "scroll-bar-width, a frame parameter"
+#, no-wrap
 msgid "scroll-bar-height, a frame parameter"
-msgstr "scroll-bar-width, a frame parameter"
+msgstr "scroll-bar-height, a frame parameter"
 
 #. type: item
 #: original_texis/frames.texi:1390
-#, fuzzy, no-wrap
-#| msgid "scroll-bar-width"
+#, no-wrap
 msgid "scroll-bar-height"
-msgstr "scroll-bar-width"
+msgstr "scroll-bar-height"
 
 #. type: table
 #: original_texis/frames.texi:1393
-#, fuzzy
-#| msgid "The width of vertical scroll bars, in pixels, or @code{nil} meaning to use the default width."
 msgid "The height of horizontal scroll bars, in pixels, or @code{nil} meaning to use the default height."
-msgstr "垂直スクロールバーのピクセル単位による幅。@code{nil}はデフォルト幅の使用を意味する。"
+msgstr "垂直スクロールバーのピクセル単位による高さ。@code{nil}はデフォルト高さの使用を意味する。"
 
 #. type: vindex
 #: original_texis/frames.texi:1394
@@ -2731,14 +2725,12 @@ msgstr "right-fringe"
 #. type: table
 #: original_texis/frames.texi:1401
 msgid "The default width of the left and right fringes of windows in this frame (@pxref{Fringes}).  If either of these is zero, that effectively removes the corresponding fringe."
-msgstr ""
-"そのフレーム内のウィンドウの左右フリンジのデフォルト幅(@ref{Fringes}を参照)。いずれかが0なら、対応するフリンジを削除する効果がある。\n"
-"If either of these is zero, that effectively removes the corresponding fringe."
+msgstr "そのフレーム内のウィンドウの左右フリンジのデフォルト幅(@ref{Fringes}を参照)。いずれかが0なら対応するフリンジを削除する効果がある。"
 
 #. type: table
 #: original_texis/frames.texi:1406
 msgid "When you use @code{frame-parameter} to query the value of either of these two frame parameters, the return value is always an integer.  When using @code{set-frame-parameter}, passing a @code{nil} value imposes an actual default value of 8 pixels."
-msgstr "これら2つのフレームパラメーターの値を問い合わせるために@code{frame-parameter}を使用する際、リターン値は常に整数となる。@code{nil}値を渡して@code{set-frame-parameter}を使用する際は、実際のデフォルト値8ピクセルが課せられる。"
+msgstr "これら2つのフレームパラメーターの値を問い合わせるために@code{frame-parameter}を使用する際のリターン値は常に整数。@code{nil}値を渡して@code{set-frame-parameter}を使用する際には、実際のデフォルト値8ピクセルが課せられる。"
 
 #. type: vindex
 #: original_texis/frames.texi:1407
@@ -2755,7 +2747,7 @@ msgstr "right-divider-width"
 #. type: table
 #: original_texis/frames.texi:1412
 msgid "The width (thickness) reserved for the right divider (@pxref{Window Dividers}) of any window on the frame, in pixels.  A value of zero means to not draw right dividers."
-msgstr "フレーム上のすべてのウィンドウの右ディバイダー(@ref{Window Dividers}を参照)用に予約される、ピクセル単位の幅(厚さ)。値0は右ディバイダーを描画しないことを意味する。"
+msgstr "フレーム上のすべてのウィンドウの右ディバイダー(@ref{Window Dividers}を参照)用に予約されるピクセル単位の幅(厚さ)。値0は右ディバイダーを描画しないことを意味する。"
 
 #. type: vindex
 #: original_texis/frames.texi:1413
@@ -2772,7 +2764,7 @@ msgstr "bottom-divider-width"
 #. type: table
 #: original_texis/frames.texi:1418
 msgid "The width (thickness) reserved for the bottom divider (@pxref{Window Dividers}) of any window on the frame, in pixels.  A value of zero means to not draw bottom dividers."
-msgstr "フレーム上のすべてのウィンドウの下ディバイダー(@ref{Window Dividers}を参照)用に予約される、ピクセル単位の幅(厚さ)。値0は下ディバイダーを描画しないことを意味する。"
+msgstr "フレーム上のすべてのウィンドウの下ディバイダー(@ref{Window Dividers}を参照)用に予約されるピクセル単位の幅(厚さ)。値0は下ディバイダーを描画しないことを意味する。"
 
 #. type: vindex
 #: original_texis/frames.texi:1419
@@ -2789,7 +2781,7 @@ msgstr "menu-bar-lines"
 #. type: table
 #: original_texis/frames.texi:1424
 msgid "The number of lines to allocate at the top of the frame for a menu bar.  The default is 1 if Menu Bar mode is enabled, and 0 otherwise.  @xref{Menu Bars,,,emacs, The GNU Emacs Manual}."
-msgstr "メニューバー用にフレーム上端に割り当てる行数。Menu Barモードが有効の場合のデフォルトは1、それ以外は0である。@ref{Menu Bars,,,emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "メニューバー用にフレーム上端に割り当てる行数。Menu Barモードが有効の場合のデフォルトは1、それ以外は0。@ref{Menu Bars,,,emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: vindex
 #: original_texis/frames.texi:1425
@@ -2806,7 +2798,7 @@ msgstr "tool-bar-lines"
 #. type: table
 #: original_texis/frames.texi:1430
 msgid "The number of lines to use for the tool bar.  The default is 1 if Tool Bar mode is enabled, and 0 otherwise.  @xref{Tool Bars,,,emacs, The GNU Emacs Manual}."
-msgstr "ツールバー用に使用する行数。Tool Barモードが有効の場合のデフォルトは1、それ以外は0である。@xref{Tool Bars,,,emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "ツールバー用に使用する行数。Tool Barモードが有効の場合のデフォルトは1、それ以外は0であ。@ref{Tool Bars,,,emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: vindex
 #: original_texis/frames.texi:1431
@@ -2834,7 +2826,7 @@ msgstr "line-spacing"
 #. type: table
 #: original_texis/frames.texi:1441
 msgid "Additional space to leave below each text line, in pixels (a positive integer).  @xref{Line Height}, for more information."
-msgstr "各テキスト行配下に残す、ピクセル単位の追加スペース(正の整数)。詳細は@ref{Line Height}を参照のこと。"
+msgstr "各テキスト行の下に残すピクセル単位の追加スペース(正の整数)。詳細は@ref{Line Height}を参照のこと。"
 
 #. type: cindex
 #: original_texis/frames.texi:1445
@@ -2851,7 +2843,7 @@ msgstr "buffers to display on frame"
 #. type: Plain text
 #: original_texis/frames.texi:1450
 msgid "These frame parameters, meaningful on all kinds of terminals, deal with which buffers have been, or should, be displayed in the frame."
-msgstr "以下は、フレーム内でどのバッファーが表示されているか、されるべきかを扱うためのフレームパラメーターで、すべての種類の端末上で意味があります。"
+msgstr "以下はフレーム内でどのバッファーが表示されているか、表示されるべきかを扱うためのフレームパラメーターであり、すべての種類の端末上で意味があります。"
 
 #. type: vindex
 #: original_texis/frames.texi:1452
@@ -2868,7 +2860,7 @@ msgstr "minibuffer"
 #. type: table
 #: original_texis/frames.texi:1458
 msgid "Whether this frame has its own minibuffer.  The value @code{t} means yes, @code{nil} means no, @code{only} means this frame is just a minibuffer.  If the value is a minibuffer window (in some other frame), the frame uses that minibuffer."
-msgstr "そのフレームが自身のミニバッファーをもつか否か。もつ場合は@code{t}、もたない場合は@code{nil}、@code{only}ならそのフレームが正にミニバッファーであることを意味する。値が(別フレーム内の)ミニバッファーウィンドウの場合、そのフレームはそのミニバッファーを使用する。"
+msgstr "そのフレームが自身のミニバッファーをもつか否か。もつ場合には@code{t}、もたない場合は@code{nil}、@code{only}ならそのフレームが正にミニバッファーであることを意味する。値が(別フレーム内の)ミニバッファーウィンドウなら、そのフレームはそのミニバッファーを使用する。"
 
 #. type: table
 #: original_texis/frames.texi:1461
@@ -2890,7 +2882,7 @@ msgstr "buffer-predicate"
 #. type: table
 #: original_texis/frames.texi:1470
 msgid "The buffer-predicate function for this frame.  The function @code{other-buffer} uses this predicate (from the selected frame) to decide which buffers it should consider, if the predicate is not @code{nil}.  It calls the predicate with one argument, a buffer, once for each buffer; if the predicate returns a non-@code{nil} value, it considers that buffer."
-msgstr "このフレームにたいする、buffer-predicate関数。関数@code{other-buffer}は、どのバッファーを考慮すべきか決定するために、(選択されたフレームから)この述語が@code{nil}でなければ、これを使用する。これは各バッファーにたいして、そのバッファーを唯一の引数として、この述語を1回呼び出す。この述語が非@code{nil}値をリターンしたら、そのバッファーは考慮される。"
+msgstr "このフレームにたいするバッファー述語関数。関数@code{other-buffer}はこの述語が非@code{nil}なら、(選択されたフレームから)どのバッファーを考慮すべきか決定するためにこれを使用する。これは各バッファーにたいして、そのバッファーを唯一の引数としてこの述語を1回呼び出す。この述語が非@code{nil}値をリターンしたら、そのバッファーは考慮される。"
 
 #. type: vindex
 #: original_texis/frames.texi:1471
@@ -2907,7 +2899,7 @@ msgstr "buffer-list"
 #. type: table
 #: original_texis/frames.texi:1475
 msgid "A list of buffers that have been selected in this frame, ordered most-recently-selected first."
-msgstr "そのフレーム内で選択されているバッファーの、もっとも最近選択されたバッファーが先頭になるような順のリスト。"
+msgstr "そのフレーム内で選択されたことのあるバッファーにたいする、もっとも最近選択されたバッファーが先頭になるような順のリスト。"
 
 #. type: vindex
 #: original_texis/frames.texi:1476
@@ -2941,7 +2933,7 @@ msgstr "window manager interaction, and frame parameters"
 #. type: Plain text
 #: original_texis/frames.texi:1488
 msgid "The following frame parameters control various aspects of the frame's interaction with the window manager.  They have no effect on text terminals."
-msgstr "以下のフレームパラメーターは、ウィンドウマネージャーとフレームとの相互作用のさまざまな面を制御します。これらは、テキスト端末上では効果がありません。"
+msgstr "以下のフレームパラメーターは、ウィンドウマネージャーとフレームとの相互作用に関するさまざまな側面を制御します。これらはテキスト端末上では効果がありません。"
 
 #. type: vindex
 #: original_texis/frames.texi:1490
@@ -2958,7 +2950,7 @@ msgstr "visibility"
 #. type: table
 #: original_texis/frames.texi:1495
 msgid "The state of visibility of the frame.  There are three possibilities: @code{nil} for invisible, @code{t} for visible, and @code{icon} for iconified.  @xref{Visibility of Frames}."
-msgstr "フレームの可視性(visibility)の状態。可能な値は3つあり、@code{nil}は不可視、@code{t}は可視、@code{icon}はアイコン化されていることを意味する。@ref{Visibility of Frames}を参照のこと。"
+msgstr "フレームの可視性(visibility)の状態。可能な値は3つあり@code{nil}は不可視、@code{t}は可視、@code{icon}はアイコン化されていることを意味する。@ref{Visibility of Frames}を参照のこと。"
 
 #. type: vindex
 #: original_texis/frames.texi:1496
@@ -3009,7 +3001,7 @@ msgstr "icon-type"
 #. type: table
 #: original_texis/frames.texi:1512
 msgid "The type of icon to use for this frame.  If the value is a string, that specifies a file containing a bitmap to use; @code{nil} specifies no icon (in which case the window manager decides what to show); any other non-@code{nil} value specifies the default Emacs icon."
-msgstr "そのフレームに使用するアイコンのタイプ。値が文字列の場合、それは使用するビットマップを含むファイルを指定し、@code{nil}はアイコンなしを指定する(何を表示するかはウィンドウマネージャーが決定する)。その他の非@code{nil}値は、デフォルトのEmacsアイコンを指定する。"
+msgstr "そのフレームに使用するアイコンのタイプ。値が文字列なら使用するビットマップを含むファイル、@code{nil}ならアイコンなしを指定する(何を表示するかはウィンドウマネージャーが決定する)。その他の非@code{nil}値はデフォルトのEmacsアイコンを指定する。"
 
 #. type: vindex
 #: original_texis/frames.texi:1513
@@ -3026,7 +3018,7 @@ msgstr "icon-name"
 #. type: table
 #: original_texis/frames.texi:1517
 msgid "The name to use in the icon for this frame, when and if the icon appears.  If this is @code{nil}, the frame's title is used."
-msgstr "このフレームにたいするアイコンで使用する名前。アイコンを表示する場合は、その際に表示される。これが@code{nil}なら、フレームのタイトルが使用される。"
+msgstr "このフレームにたいするアイコンで使用する名前。アイコンを表示する場合は、その際に表示される。これが@code{nil}ならフレームのタイトルが使用される。"
 
 #. type: vindex
 #: original_texis/frames.texi:1518
@@ -3043,7 +3035,7 @@ msgstr "window-id"
 #. type: table
 #: original_texis/frames.texi:1523
 msgid "The ID number which the graphical display uses for this frame.  Emacs assigns this parameter when the frame is created; changing the parameter has no effect on the actual ID number."
-msgstr "グラフィカルディスプレイがこのフレームにたいして使用するID番号。Emacsは、フレーム作成時にこのパラメーターを割り当てる。このパラメーターを変更しても、実際のID番号に効果はない。"
+msgstr "グラフィカルディスプレイがこのフレームにたいして使用するID番号。Emacsはフレーム作成時にこのパラメーターを割り当てる。このパラメーターを変更しても実際のID番号に効果はない。"
 
 #. type: vindex
 #: original_texis/frames.texi:1524
@@ -3060,7 +3052,7 @@ msgstr "outer-window-id"
 #. type: table
 #: original_texis/frames.texi:1529
 msgid "The ID number of the outermost window-system window in which the frame exists.  As with @code{window-id}, changing this parameter has no actual effect."
-msgstr "そのフレームが存在する最外殻のウィンドウシステムのウィンドウのID番号。@code{window-id}と同様、このパラメーターを変更しても実際の効果はない。"
+msgstr "そのフレームが存在する最外殻のウィンドウシステムのウィンドウのID番号。@code{window-id}と同じように、このパラメーターを変更しても実際の効果はない。"
 
 #. type: vindex
 #: original_texis/frames.texi:1530
@@ -3077,7 +3069,7 @@ msgstr "wait-for-wm"
 #. type: table
 #: original_texis/frames.texi:1536
 msgid "If non-@code{nil}, tell Xt to wait for the window manager to confirm geometry changes.  Some window managers, including versions of Fvwm2 and KDE, fail to confirm, so Xt hangs.  Set this to @code{nil} to prevent hanging with those window managers."
-msgstr "非@code{nil}なら、ジオメトリー変更を確認するために、ウィンドウマネージャーを待機するようXtに指示する。Fvwm2およびKDEのバージョンを含むウィンドウマネージャーのいくつかは確認に失敗するので、Xtがハングする。これらウィンドウマネージャーのハングを防ぐために、これを@code{nil}にセットする。"
+msgstr "非@code{nil}ならジオメトリー変更を確認するために、ウィンドウマネージャーを待機するようXtに指示する。Fvwm2およびKDEのバージョンを含むウィンドウマネージャーのいくつかは確認に失敗してXtがハングする。これらウィンドウマネージャーのハングを防ぐためには、これを@code{nil}にセットすること。"
 
 #. type: vindex
 #: original_texis/frames.texi:1537
@@ -3094,7 +3086,7 @@ msgstr "sticky"
 #. type: table
 #: original_texis/frames.texi:1541
 msgid "If non-@code{nil}, the frame is visible on all virtual desktops on systems with virtual desktops."
-msgstr "非@code{nil}なら、仮想デスクトップを伴うシステム上のすべての仮想デスクトップ上で、そのフレームが可視になる。"
+msgstr "非@code{nil}なら仮想デスクトップを伴うシステム上のすべての仮想デスクトップ上でそのフレームが可視になる。"
 
 #. type: vindex
 #: original_texis/frames.texi:1543
@@ -3117,7 +3109,7 @@ msgstr "cursor, and frame parameters"
 #. type: Plain text
 #: original_texis/frames.texi:1558
 msgid "This frame parameter controls the way the cursor looks."
-msgstr "このフレームパラメーター!、カーソルの外見を制御します。"
+msgstr "このフレームパラメーターはカーソルの外見を制御します。"
 
 #. type: vindex
 #: original_texis/frames.texi:1560
@@ -3168,7 +3160,7 @@ msgstr "nil"
 #. type: table
 #: original_texis/frames.texi:1571
 msgid "Don't display a cursor."
-msgstr "カーソルウィンドウ表示しない。"
+msgstr "カーソルを表示しない。"
 
 #. type: item
 #: original_texis/frames.texi:1571
@@ -3217,12 +3209,12 @@ msgstr "文字間に高さが@var{height}ピクセルの水平バー(horizontal 
 #. type: Plain text
 #: original_texis/frames.texi:1586
 msgid "The @code{cursor-type} frame parameter may be overridden by the variables @code{cursor-type} and @code{cursor-in-non-selected-windows}:"
-msgstr "フレームパラメーター@code{cursor-type}は、変数@code{cursor-type}および@code{cursor-in-non-selected-windows}によりオーバーライドされるかもしれません。"
+msgstr "フレームパラメーター@code{cursor-type}は変数@code{cursor-type}と@code{cursor-in-non-selected-windows}によりオーバーライドされるかもしれません。"
 
 #. type: defvar
 #: original_texis/frames.texi:1593
 msgid "This buffer-local variable controls how the cursor looks in a selected window showing the buffer.  If its value is @code{t}, that means to use the cursor specified by the @code{cursor-type} frame parameter.  Otherwise, the value should be one of the cursor types listed above, and it overrides the @code{cursor-type} frame parameter."
-msgstr "このバッファーローカル変数は、選択されたウィンドウ内で表示されているそのバッファーのカーソルの外見を制御する。この値が@code{t}なら、それはフレームパラメーター@code{cursor-type}で指定されたカーソルのーを使用することを意味する。それ以外では、値は上記リストのカーソルタイプのいずれかであるべきで、これはフレームパラメーター@code{cursor-type}をオーバーライドする。"
+msgstr "このバッファーローカル変数は選択されたウィンドウ内で表示されているそのバッファーのカーソルの外見を制御する。この値が@code{t}なら、それはフレームパラメーター@code{cursor-type}で指定されたカーソルのーを使用することを意味する。それ以外では値は上記リストのカーソルタイプのいずれかであるべきであり、これはフレームパラメーター@code{cursor-type}をオーバーライドする。"
 
 #. type: defopt
 #: original_texis/frames.texi:1595
@@ -3233,23 +3225,23 @@ msgstr "cursor-in-non-selected-windows"
 #. type: defopt
 #: original_texis/frames.texi:1602
 msgid "This buffer-local variable controls how the cursor looks in a window that is not selected.  It supports the same values as the @code{cursor-type} frame parameter; also, @code{nil} means don't display a cursor in nonselected windows, and @code{t} (the default)  means use a standard modification of the usual cursor type (solid box becomes hollow box, and bar becomes a narrower bar)."
-msgstr "このバッファーローカル変数は、選択されていないウィンドウ内でのカーソルの外見を制御する。これは、フレームパラメーター@code{cursor-type}と同じ値をサポートする。さらに、@code{nil}は選択されていないウィンドウ内にはカーソルを表示せず、@code{t}は通常のカーソルタイプの標準的な変更(塗りつぶされた四角形は中抜きの四角形に、バーはより細いバーにする)の使用を意味する。"
+msgstr "このバッファーローカル変数は選択されていないウィンドウ内でのカーソルの外見を制御する。これはフレームパラメーター@code{cursor-type}と同じ値をサポートする。さらに@code{nil}は選択されていないウィンドウ内にはカーソルを表示せず、@code{t}は通常のカーソルタイプの標準的な変更(塗りつぶされた四角形は中抜きの四角形、バーはより細いバーになる)の使用を意味する。"
 
 #. type: defopt
 #: original_texis/frames.texi:1604
 #, no-wrap
 msgid "x-stretch-cursor"
-msgstr ""
+msgstr "x-stretch-cursor"
 
 #. type: defopt
 #: original_texis/frames.texi:1612
 msgid "This variable controls the width of the block cursor displayed on extra-wide glyphs such as a tab or a stretch of white space.  By default, the block cursor is only as wide as the font's default character, and will not cover all of the width of the glyph under it if that glyph is extra-wide.  A non-@code{nil} value of this variable means draw the block cursor as wide as the glyph under it.  The default value is @code{nil}."
-msgstr ""
+msgstr "この変数はタブや伸長された空白文字のようなエクストラワイドグリフで表示されるblockカーソルの幅を制御する。デフォルトではそのフォントのデルト文字だけの幅で、これはカーソル一のグリフがエクストラワイドなら幅を完全にカバーしないだろう。この変数にたいする非@code{nil}値はカーソル位置のグリフの幅に応じてblockカーソルを描画することを意味する。デフォルト値は@code{nil}。"
 
 #. type: defopt
 #: original_texis/frames.texi:1615
 msgid "This variable has no effect on text-mode frames, since the text-mode cursor is drawn by the terminal out of Emacs's control."
-msgstr ""
+msgstr "テキストモードのフレームではEmacsの制御外部の端末によりカーソルが描画されるので、この変数に効果はない。"
 
 #. type: defopt
 #: original_texis/frames.texi:1617
@@ -3259,10 +3251,8 @@ msgstr "blink-cursor-alist"
 
 #. type: defopt
 #: original_texis/frames.texi:1624
-#, fuzzy
-#| msgid "This variable specifies how to blink the cursor.  Each element has the form @code{(@var{on-state} . @var{off-state})}.  Whenever the cursor type equals @var{on-state} (comparing using @code{equal}), the corresponding @var{off-state} specifies what the cursor looks like when it blinks ``off''.  Both @var{on-state} and @var{off-state} should be suitable values for the @code{cursor-type} frame parameter."
 msgid "This variable specifies how to blink the cursor.  Each element has the form @code{(@var{on-state} . @var{off-state})}.  Whenever the cursor type equals @var{on-state} (comparing using @code{equal}), the corresponding @var{off-state} specifies what the cursor looks like when it blinks off.  Both @var{on-state} and @var{off-state} should be suitable values for the @code{cursor-type} frame parameter."
-msgstr "この変数は、カーソルのブリンク(blink: 点滅)方法を指定する。各要素は@code{(@var{on-state} . @var{off-state})}という形式をもつ。カーソルタイプが@var{on-state}と等しい(@code{equal}を用いて比較)ときは常に、これに対応する@var{off-state}がブリンクが``off''の際のカーソルの外見を指定する。@var{on-state}と@var{off-state}はどちらもフレームパラメーター@code{cursor-type}に適した値であること。"
+msgstr "この変数はカーソルのブリンク(blink: 点滅)方法を指定する。各要素は@code{(@var{on-state} . @var{off-state})}という形式をもつ。カーソルタイプが@var{on-state}と等しい(@code{equal}を用いて比較)ときは、これに対応する@var{off-state}がブリンクが``off''の際のカーソルの外見を指定する。@var{on-state}と@var{off-state}はどちらもフレームパラメーター@code{cursor-type}に適した値であること。"
 
 #. type: defopt
 #: original_texis/frames.texi:1629
@@ -3278,7 +3268,7 @@ msgstr "font and color, frame parameters"
 #. type: Plain text
 #: original_texis/frames.texi:1636
 msgid "These frame parameters control the use of fonts and colors."
-msgstr "以下のフレームパラメーターは、フォントとカラーの使用を制御します。"
+msgstr "以下のフレームパラメーターはフォントとカラーの使用を制御します。"
 
 #. type: vindex
 #: original_texis/frames.texi:1638
@@ -3295,7 +3285,7 @@ msgstr "font-backend"
 #. type: table
 #: original_texis/frames.texi:1648
 msgid "A list of symbols, specifying the @dfn{font backends} to use for drawing fonts in the frame, in order of priority.  On X, there are currently two available font backends: @code{x} (the X core font driver) and @code{xft} (the Xft font driver).  On MS-Windows, there are currently two available font backends: @code{gdi} and @code{uniscribe} (@pxref{Windows Fonts,,, emacs, The GNU Emacs Manual}).  On other systems, there is only one available font backend, so it does not make sense to modify this frame parameter."
-msgstr "フレーム内でフォントの描画に使用するための@dfn{フォントバックエンド(font backends)}を指定する、優先順のシンボルのリスト。Xでは現在のところ、@code{x}(X core font driver)と@code{xft}(Xft font driver)の2つの利用可能なフォントバックエンドがある。MS-Windowsでは現在のところ、@code{gdi}と@code{uniscribe}の2つの利用可能なフォントバックエンドがある(@ref{Windows Fonts,,, emacs, The GNU Emacs Manual}を参照)。その他のシステムでは利用可能なフォントバックエンドは1つだけなので、このフレームパラメーターを変更しても意味がない。"
+msgstr "フレーム内でフォントの描画に使用するための@dfn{フォントバックエンド(font backends)}を指定するシンボルの優先順のリスト。Xでは現在のところ@code{x} (X core font driver)と@code{xft} (Xft font driver)の2つの利用可能なフォントバックエンドがある。MS-Windowsでは現在のところ@code{gdi}と@code{uniscribe}の2つの利用可能なフォントバックエンドがある(@ref{Windows Fonts,,, emacs, The GNU Emacs Manual}を参照)。その他のシステムでは利用可能なフォントバックエンドは1つだけなので、このフレームパラメーターを変更しても意味がない。"
 
 #. type: vindex
 #: original_texis/frames.texi:1649
@@ -3335,12 +3325,12 @@ msgstr "standard colors for character terminals"
 #. type: table
 #: original_texis/frames.texi:1665
 msgid "This parameter overrides the terminal's color support as given by the system's terminal capabilities database in that this parameter's value specifies the color mode to use on a text terminal.  The value can be either a symbol or a number.  A number specifies the number of colors to use (and, indirectly, what commands to issue to produce each color).  For example, @code{(tty-color-mode . 8)} specifies use of the ANSI escape sequences for 8 standard text colors.  A value of -1 turns off color support."
-msgstr "このパラメーターは端末上で使用するカラーモードを指定し、、そのシステムの端末機能データベース(terminal capabilities database、termcap)により与えられた端末のカラーサポートを、その値でオーバーライドする。値にはシンボルか数値を指定できる。数値の場合は、使用するカラー数(および間接的にはそれぞれのカラーを生成するためのコマンド)を指定する。たとえば@code{(tty-color-mode . 8)}は、標準的なテキストカラーにたいしてANSIエスケープシーケンスの使用を指定する。値-1はカラーサポートをオフに切り替える。"
+msgstr "このパラメーターは端末上で使用するカラーモードを指定して、そのシステムの端末機能データベース(terminal capabilities database、termcap)により与えられた端末のカラーサポートを、その値でオーバーライドする。値にはシンボルか数値を指定できる。数値なら使用するカラー数(および間接的にはそれぞれのカラーを生成するためのコマンド)を指定する。たとえば@code{(tty-color-mode . 8)}は、標準的なテキストカラーにたいしてANSIエスケープシーケンスの使用を指定する。値-1はカラーサポートをオフに切り替える。"
 
 #. type: table
 #: original_texis/frames.texi:1669
 msgid "If the parameter's value is a symbol, it specifies a number through the value of @code{tty-color-mode-alist}, and the associated number is used instead."
-msgstr "このパラメーターの値がシンボルの場合、それは@code{tty-color-mode-alist}の値を通じた数値を指定するもので、かわりにそのシンボルに割り当てられた数値が使用される。"
+msgstr "このパラメーターの値がシンボルなら、それは@code{tty-color-mode-alist}の値を通じて数値を指定するもので、そのシンボルに割り当てられた数値がかわりに使用される。"
 
 #. type: vindex
 #: original_texis/frames.texi:1670
@@ -3362,20 +3352,18 @@ msgstr "gamma correction"
 
 #. type: table
 #: original_texis/frames.texi:1676
-#, fuzzy
-#| msgid "If this is a number, Emacs performs ``gamma correction'' which adjusts the brightness of all colors.  The value should be the screen gamma of your display."
 msgid "If this is a number, Emacs performs gamma correction which adjusts the brightness of all colors.  The value should be the screen gamma of your display."
-msgstr "これが数値の場合、Emacsはすべてのカラーの輝度を調整する``ガンマ補正(gamma correction)''を行う。値はディスプレイのスクリーンのガンマであること。"
+msgstr "これが数値ならEmacsはすべてのカラーの輝度を調整するガンマ補正(gamma correction)を行う。値はディスプレイのスクリーンのガンマであること。"
 
 #. type: table
 #: original_texis/frames.texi:1684
 msgid "Usual PC monitors have a screen gamma of 2.2, so color values in Emacs, and in X windows generally, are calibrated to display properly on a monitor with that gamma value.  If you specify 2.2 for @code{screen-gamma}, that means no correction is needed.  Other values request correction, designed to make the corrected colors appear on your screen the way they would have appeared without correction on an ordinary monitor with a gamma value of 2.2."
-msgstr "通常のPCモニター／あスクリーンガンマが2.2なので、EmacsおよびXウィンドウのカラー値は一般的にそのガンマ値のモニター上で正しく表示するよう校正されている。@code{screen-gamma}にたいして2.2を指定した場合、それは補正が不必要であることを意味する。その他の値は、通常のモニター上でガンマ値2.2で表示されるであろう、補正されたカラーがスクリーン上に表示されるように意図された補正を要求する。"
+msgstr "通常のPCモニターはスクリーンガンマが2.2なので、EmacsとXウィンドウのカラー値は一般的にそのガンマ値のモニター上で正しく表示するよう校正されている。@code{screen-gamma}にたいして2.2を指定すると、それは補正が不必要であることを意味する。その他の値は通常のモニター上のガンマ値2.2で表示されるように、補正したカラーがスクリーン上に表示されることを意図された補正を要求する。"
 
 #. type: table
 #: original_texis/frames.texi:1689
 msgid "If your monitor displays colors too light, you should specify a @code{screen-gamma} value smaller than 2.2.  This requests correction that makes colors darker.  A screen gamma value of 1.5 may give good results for LCD color displays."
-msgstr "モニターが表示するカラーが明るすぎる場合は、@code{screen-gamma}に2.2より小さい値を指定するべきである。これは、カラーをより暗くする補正を要求する。スクリーンガンマの値1.5は、LCDカラーディスプレイにたいして、よい結果を与えるだろう。"
+msgstr "モニターが表示するカラーが明るすぎる場合には、@code{screen-gamma}に2.2より小さい値を指定すること。これはカラーをより暗くする補正を要求する。スクリーンガンマの値1.5は、LCDカラーディスプレイにたいして良好な結果を与えるだろう。"
 
 #. type: vindex
 #: original_texis/frames.texi:1690
@@ -3410,24 +3398,22 @@ msgstr "frame-alpha-lower-limit"
 #. type: table
 #: original_texis/frames.texi:1700
 msgid "This parameter specifies the opacity of the frame, on graphical displays that support variable opacity.  It should be an integer between 0 and 100, where 0 means completely transparent and 100 means completely opaque.  It can also have a @code{nil} value, which tells Emacs not to set the frame opacity (leaving it to the window manager)."
-msgstr "このパラメーターは、可変透明度(variable opacity)をサポートするグラフィカルディスプレイ上での、そのフレームの透明度を指定する(訳注: opacityを訳すと逆の不透明度だが、このような場合は一般的に透明度と訳すようなので、それに倣う)。これは0から100の整数であるべきで、0は完全な透明、100hは完全な不透明を意味する。@code{nil}値をもつこともでき、これはEmacsにフレームのopacityをセットしない(ウィンドウマネージャーに委ねる)よう告げる。"
+msgstr "このパラメーターは可変透明度(variable opacity)をサポートするグラフィカルディスプレイ上でそのフレームの透明度を指定する。これは0から100の整数であるべきで0は完全な透明、100は完全な不透明を意味する。@code{nil}値をもつこともでき、これはEmacsにフレームのopacityをセットしないよう告げる(ウィンドウマネージャーに委ねる)。"
 
 #. type: table
 #: original_texis/frames.texi:1706
 msgid "To prevent the frame from disappearing completely from view, the variable @code{frame-alpha-lower-limit} defines a lower opacity limit.  If the value of the frame parameter is less than the value of this variable, Emacs uses the latter.  By default, @code{frame-alpha-lower-limit} is 20."
-msgstr "フレームが完全に見えなくなるのを防ぐために、変数@code{frame-alpha-lower-limit}は透明度の最低限度を定義する。フレームパラメーターの値がこの変数の値より小さい場合、Emacsは後者を使用する。デフォルトの@code{frame-alpha-lower-limit}は20。"
+msgstr "フレームが完全に見えなくなるのを防ぐために、変数@code{frame-alpha-lower-limit}は透明度の最低限度を定義する。フレームパラメーターの値がこの変数の値より小さければEmacsは後者を使用する。デフォルトの@code{frame-alpha-lower-limit}は20。"
 
 #. type: table
 #: original_texis/frames.texi:1711
-#, fuzzy
-#| msgid "The @code{alpha} frame parameter can also be a cons cell @code{(@samp{active} . @samp{inactive})}, where @samp{active} is the opacity of the frame when it is selected, and @samp{inactive} is the opacity when it is not selected."
 msgid "The @code{alpha} frame parameter can also be a cons cell @code{(@var{active} . @var{inactive})}, where @var{active} is the opacity of the frame when it is selected, and @var{inactive} is the opacity when it is not selected."
-msgstr "フレームパラメーター@code{alpha}にはコンスセル@code{(@samp{active} . @samp{inactive})}も指定できる。ここで、@samp{active}は選択時のフレームの透明度、@samp{inactive}は未選択時の透明度である。"
+msgstr "フレームパラメーター@code{alpha}にはコンスセル@code{(@code{active} . @code{inactive})}も指定できる。ここで@code{active}は選択時のフレームの透明度、@code{inactive}は未選択時の透明度。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1716
 msgid "The following frame parameters are semi-obsolete in that they are automatically equivalent to particular face attributes of particular faces (@pxref{Standard Faces,,, emacs, The Emacs Manual}):"
-msgstr "以下は、特定のフェイスの特定のフェイス属性と自動的に等しくなるので、凖時代遅れとなったフレームパラメーターです(@ref{Standard Faces,,, emacs, The Emacs Manual}を参照)。"
+msgstr "以下は特定のフェイスの特定のフェイス属性と自動的に等しくなるので、ほぼ時代遅れとなったフレームパラメーターです(@ref{Standard Faces,,, emacs, The Emacs Manual}を参照)。"
 
 #. type: vindex
 #: original_texis/frames.texi:1718
@@ -3444,7 +3430,7 @@ msgstr "font"
 #. type: table
 #: original_texis/frames.texi:1724
 msgid "The name of the font for displaying text in the frame.  This is a string, either a valid font name for your system or the name of an Emacs fontset (@pxref{Fontsets}).  It is equivalent to the @code{font} attribute of the @code{default} face."
-msgstr "フレーム内でテキストを表示するためのフォントの名前。これはシステムで有効なフォント名、またはEmacsフォントセット名(@ref{Fontsets}を参照)のいずれかであるような文字列である。これは、@code{default}フェイスの@code{font}属性と等価である。"
+msgstr "フレーム内でテキストを表示するためのフォントの名前。これはシステムで有効なフォント名か、Emacsフォントセット名(@ref{Fontsets}を参照)のいずれかであるような文字列。これは@code{default}フェイスの@code{font}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1725
@@ -3461,7 +3447,7 @@ msgstr "foreground-color"
 #. type: table
 #: original_texis/frames.texi:1729
 msgid "The color to use for the image of a character.  It is equivalent to the @code{:foreground} attribute of the @code{default} face."
-msgstr "文字のイメージに使用するカラー。これは、@code{default}フェイスの@code{:foreground}属性と等価である。"
+msgstr "文字のイメージに使用するカラー。これは@code{default}フェイスの@code{:foreground}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1730
@@ -3478,7 +3464,7 @@ msgstr "background-color"
 #. type: table
 #: original_texis/frames.texi:1734
 msgid "The color to use for the background of characters.  It is equivalent to the @code{:background} attribute of the @code{default} face."
-msgstr "文字のバックグラウンドに使用するカラー。これは、@code{default}フェイスの@code{:background}属性と等価である。"
+msgstr "文字のバックグラウンドに使用するカラー。これは@code{default}フェイスの@code{:background}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1735
@@ -3495,7 +3481,7 @@ msgstr "mouse-color"
 #. type: table
 #: original_texis/frames.texi:1739
 msgid "The color for the mouse pointer.  It is equivalent to the @code{:background} attribute of the @code{mouse} face."
-msgstr "マウスポインターのカラー。これは@code{mouse}フェイスの@code{:background}属性と等価である。"
+msgstr "マウスポインターのカラー。これは@code{mouse}フェイスの@code{:background}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1740
@@ -3512,7 +3498,7 @@ msgstr "cursor-color"
 #. type: table
 #: original_texis/frames.texi:1744
 msgid "The color for the cursor that shows point.  It is equivalent to the @code{:background} attribute of the @code{cursor} face."
-msgstr "ポイントを表示するカーソルのカラー。これは、@code{cursor}フェイスの@code{:background}属性と等価である。"
+msgstr "ポイントを表示するカーソルのカラー。これは@code{cursor}フェイスの@code{:background}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1745
@@ -3529,7 +3515,7 @@ msgstr "border-color"
 #. type: table
 #: original_texis/frames.texi:1749
 msgid "The color for the border of the frame.  It is equivalent to the @code{:background} attribute of the @code{border} face."
-msgstr "これは、フレームのボーダーのカラーと等価である。これは、@code{border}フェイスの@code{:background}属性と等価である。"
+msgstr "これはフレームのボーダーのカラー。これは@code{border}フェイスの@code{:background}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1750
@@ -3546,7 +3532,7 @@ msgstr "scroll-bar-foreground"
 #. type: table
 #: original_texis/frames.texi:1755
 msgid "If non-@code{nil}, the color for the foreground of scroll bars.  It is equivalent to the @code{:foreground} attribute of the @code{scroll-bar} face."
-msgstr "非@code{nil}の場合は、スクロールバーのフォアグラウンドカラー。これは、@code{scroll-bar}フェイスの@code{:foreground}属性と等価である。"
+msgstr "非@code{nil}ならスクロールバーのフォアグラウンドカラー。これは@code{scroll-bar}フェイスの@code{:foreground}属性と等価。"
 
 #. type: vindex
 #: original_texis/frames.texi:1756
@@ -3563,12 +3549,12 @@ msgstr "scroll-bar-background"
 #. type: table
 #: original_texis/frames.texi:1761
 msgid "If non-@code{nil}, the color for the background of scroll bars.  It is equivalent to the @code{:background} attribute of the @code{scroll-bar} face."
-msgstr "非@code{nil}の場合は、スクロールバーのバックグラウンドカラー。これは、@code{scroll-bar}フェイスの@code{:background}属性と等価である。"
+msgstr "非@code{nil}ならスクロールバーのバックグラウンドカラー。これは@code{scroll-bar}フェイスの@code{:background}属性と等価。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1769
 msgid "Here's how to examine the data in an X-style window geometry specification:"
-msgstr "以下は、Xスタイルのウィンドウジオメトリー指定によるアクションのデータを調べる方法です:"
+msgstr "以下はXスタイルのウィンドウジオメトリー指定によるアクションのデータを調べる方法です:"
 
 #. type: defun
 #: original_texis/frames.texi:1770
@@ -3585,22 +3571,22 @@ msgstr "geometry specification"
 #. type: defun
 #: original_texis/frames.texi:1775
 msgid "The function @code{x-parse-geometry} converts a standard X window geometry string to an alist that you can use as part of the argument to @code{make-frame}."
-msgstr "関数@code{x-parse-geometry}は、標準的なXウィンドウのジオメトリー文字列を、@code{make-frame}の引数の一部として使用できるalistに変換する。"
+msgstr "関数@code{x-parse-geometry}は標準的なXウィンドウのジオメトリー文字列を@code{make-frame}の引数の一部として使用できるalistに変換する。"
 
 #. type: defun
 #: original_texis/frames.texi:1780
 msgid "The alist describes which parameters were specified in @var{geom}, and gives the values specified for them.  Each element looks like @code{(@var{parameter} . @var{value})}.  The possible @var{parameter} values are @code{left}, @code{top}, @code{width}, and @code{height}."
-msgstr "このalistは@var{geom}内で指定されたパラメーターと、そのパラメーターに指定された値を記述する。各要素は@code{(@var{parameter} . @var{value})}のような形式である。可能な@var{parameter}の値は@code{left}、@code{top}、@code{width}、@code{height}である。"
+msgstr "このalistは@var{geom}内で指定されたパラメーターと、そのパラメーターに指定された値を記述する。各要素は@code{(@var{parameter} . @var{value})}のような形式。可能な@var{parameter}の値は@code{left}、@code{top}、@code{width}、@code{height}。"
 
 #. type: defun
 #: original_texis/frames.texi:1787
 msgid "For the size parameters, the value must be an integer.  The position parameter names @code{left} and @code{top} are not totally accurate, because some values indicate the position of the right or bottom edges instead.  The @var{value} possibilities for the position parameters are: an integer, a list @code{(+ @var{pos})}, or a list @code{(- @var{pos})}; as previously described (@pxref{Position Parameters})."
-msgstr "サイズのパラメーターの値は整数でなければならない。位置のパラメーター@code{left}および@code{top}の名前に関しては、かわりに右端または下端の位置を示す値もいくつかあるので、完全に正確ではない。位置パラメーターにたいして可能な@var{value}は前述(@ref{Position Parameters}を参照)したような整数、リスト@code{(+ @var{pos})}、リスト@code{(- @var{pos})}である。"
+msgstr "サイズのパラメーターの値は整数でなければならない。位置のパラメーター@code{left}と@code{top}の名前に関しては、かわりに右端または下端の位置を示す値もいくつかあるので完全に正確ではない。位置パラメーターにたいして可能な@var{value}は前述したような整数(@ref{Position Parameters}を参照)、リスト@code{(+ @var{pos})}、リスト@code{(- @var{pos})}である。"
 
 #. type: defun
 #: original_texis/frames.texi:1789
 msgid "Here is an example:"
-msgstr "以下は例である:"
+msgstr "以下は例:"
 
 #. type: example
 #: original_texis/frames.texi:1794
@@ -3623,12 +3609,12 @@ msgstr "terminal parameters"
 #. type: Plain text
 #: original_texis/frames.texi:1805
 msgid "Each terminal has a list of associated parameters.  These @dfn{terminal parameters} are mostly a convenient way of storage for terminal-local variables, but some terminal parameters have a special meaning."
-msgstr "端末はそれぞれ、関連するパラメーターのリストをもっています。これら@dfn{端末パラメーター(terminal parameters)}は主に、端末ローカル変数を格納するための便利な手段ですが、いくつかの端末パラメーターは特別な意味をもっています。"
+msgstr "端末はそれぞれ関連するパラメーターのリストをもっています。これら@dfn{端末パラメーター(terminal parameters)}は主に端末ローカル変数を格納するための便利な手段ですが、いくつかの端末パラメーターは特別な意味をもっています。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1810
 msgid "This section describes functions to read and change the parameter values of a terminal.  They all accept as their argument either a terminal or a frame; the latter means use that frame's terminal.  An argument of @code{nil} means the selected frame's terminal."
-msgstr "このセクションでは、端末のパラメーター値の読み取りや変更を行う関数を説明します。これらはすべて引数として端末かフレームいずれかを受け入れます。フレームの場合、それはそのフレームの端末の使用を意味します。引数@code{nil}は、選択されたフレームの端末という意味です。"
+msgstr "このセクションでは端末のパラメーター値の読み取りや変更を行う関数を説明します。これらはすべて引数として端末かフレームいずれかを受け入れます。フレームならそれはそのフレームの端末の使用を意味します。引数@code{nil}は選択されたフレームの端末という意味です。"
 
 #. type: defun
 #: original_texis/frames.texi:1811
@@ -3639,7 +3625,7 @@ msgstr "terminal-parameters &optional terminal"
 #. type: defun
 #: original_texis/frames.texi:1814
 msgid "This function returns an alist listing all the parameters of @var{terminal} and their values."
-msgstr "この関数は、@var{terminal}nのすべてのパラメーターとその値をリストするalistをリターンする。"
+msgstr "この関数は@var{terminal}nのすべてのパラメーターとその値をリストするalistをリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:1816
@@ -3650,7 +3636,7 @@ msgstr "terminal-parameter terminal parameter"
 #. type: defun
 #: original_texis/frames.texi:1820
 msgid "This function returns the value of the parameter @var{parameter} (a symbol) of @var{terminal}.  If @var{terminal} has no setting for @var{parameter}, this function returns @code{nil}."
-msgstr "この関数は、@var{terminal}のパラメーター@var{parameter}(シンボル)の値をリターンする。@var{terminal}が@var{parameter}にたいするセッティングをもたない場合、この関数は@code{nil}をリターンする。"
+msgstr "この関数は@var{terminal}のパラメーター@var{parameter} (シンボル)の値をリターンする。@var{terminal}が@var{parameter}にたいするセッティングをもたなければ、この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:1822
@@ -3660,20 +3646,18 @@ msgstr "set-terminal-parameter terminal parameter value"
 
 #. type: defun
 #: original_texis/frames.texi:1826
-#, fuzzy
-#| msgid "This function sets the parameter @var{parm} of @var{terminal} to the specified @var{value}, and returns the previous value of that parameter."
-msgid "This function sets the parameter @var{parameter} of @var{terminal} to the specified @var{value}, and returns the previous value of that parameter."
-msgstr "この関数は、@var{terminal}のパラメーター@var{parm}に指定された@var{value}をセットして、そのパラメーターの以前の値をリターンする。"
+msgid "This function sets the parameter  of @var{terminal} to the specified @var{value}, and returns the previous value of that parameter."
+msgstr "この関数は@var{terminal}のパラメーター@var{parameter}に指定された@var{value}をセットして、そのパラメーターの以前の値をリターンする。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1830
 msgid "Here's a list of a few terminal parameters that have a special meaning:"
-msgstr "以下は、特別な意味をもついくつかの端末パラメーターのリストです:"
+msgstr "以下は特別な意味をもついくつかの端末パラメーターのリストです:"
 
 #. type: table
 #: original_texis/frames.texi:1835
 msgid "The classification of the terminal's background color, either @code{light} or @code{dark}."
-msgstr "端末のバックグラウンドカラーの区分で、@code{light}か@code{dark}のいずれか。"
+msgstr "端末のバックグラウンドカラーの区分で@code{light}か@code{dark}のいずれか。"
 
 #. type: item
 #: original_texis/frames.texi:1835
@@ -3695,29 +3679,29 @@ msgstr "terminal-initted"
 #. type: table
 #: original_texis/frames.texi:1842
 msgid "After the terminal is initialized, this is set to the terminal-specific initialization function."
-msgstr "端末の初期化後に、端末固有の初期化関数にセットされる。"
+msgstr "端末の初期化後に端末固有の初期化関数にセットされる。"
 
 #. type: item
 #: original_texis/frames.texi:1842
 #, no-wrap
 msgid "tty-mode-set-strings"
-msgstr ""
+msgstr "tty-mode-set-strings"
 
 #. type: table
 #: original_texis/frames.texi:1850
 msgid "When present, a list of strings containing escape sequences that Emacs will output while configuring a tty for rendering.  Emacs emits these strings only when configuring a terminal: if you want to enable a mode on a terminal that is already active (for example, while in @code{tty-setup-hook}), explicitly output the necessary escape sequence using @code{send-string-to-terminal} in addition to adding the sequence to @code{tty-mode-set-strings}."
-msgstr ""
+msgstr "与えられた際には、読み取り用にttyを設定時にEmacsが出力するエスケープシーケンスを含む文字列のリスト。Emacsは端末の設定時のみこれらの文字列を発行する。すでにアクティブな端末上(たとえば@code{tty-setup-hook}内)でモードを有効にしたければ、@code{tty-mode-set-strings}へのシーケンスの追加に加えて、@code{send-string-to-terminal}を使用して明示的に必要なエスケープシーケンスを出力すること。"
 
 #. type: item
 #: original_texis/frames.texi:1850
 #, no-wrap
 msgid "tty-mode-reset-strings"
-msgstr ""
+msgstr "tty-mode-reset-strings"
 
 #. type: table
 #: original_texis/frames.texi:1854
 msgid "When present, a list of strings that undo the effects of the strings in @code{tty-mode-set-strings}.  Emacs emits these strings when exiting, deleting a terminal, or suspending itself."
-msgstr ""
+msgstr "与えられた際には、@code{tty-mode-set-strings}内の文字列の効果をアンドゥする文字列のリスト。Emacsはexit、端末の削除、Emacs自身のサスペンドの際にそれらの文字列を発行する。"
 
 #. type: cindex
 #: original_texis/frames.texi:1858
@@ -3728,12 +3712,12 @@ msgstr "frame title"
 #. type: Plain text
 #: original_texis/frames.texi:1864
 msgid "Every frame has a @code{name} parameter; this serves as the default for the frame title which window systems typically display at the top of the frame.  You can specify a name explicitly by setting the @code{name} frame property."
-msgstr "それぞれのフレームには@code{name}というパラメーターがあります。これは、ウィンドウシステムが通常フレーム上端に表示するフレームタイトルにたいする、デフォルトとしての役割をもちます。フレームプロパティ@code{name}をセットすることにより、明示的に名前を指定できます。"
+msgstr "フレームにはそれぞれ@code{name}というパラメーターがあります。これはウィンドウシステムが通常フレーム上端に表示するフレームタイトルにたいするデフォルトとしての役割をもちます。フレームプロパティ@code{name}をセットすることにより明示的に名前を指定できます。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1869
 msgid "Normally you don't specify the name explicitly, and Emacs computes the frame name automatically based on a template stored in the variable @code{frame-title-format}.  Emacs recomputes the name each time the frame is redisplayed."
-msgstr "通常は名前を明示的に指定せず、Emacsが変数@code{frame-title-format}に格納されたテンプレートにもとづき、自動的にフレーム名を計算します。Emacsはフレームが再表示されるたびに、毎回名前を再計算します。"
+msgstr "通常は名前を明示的に指定せずに、Emacsが変数@code{frame-title-format}に格納されたテンプレートにもとづいて自動的にフレーム名を計算します。Emacsはフレームが再表示されるたびに名前を再計算します。"
 
 #. type: defvar
 #: original_texis/frames.texi:1870
@@ -3744,7 +3728,7 @@ msgstr "frame-title-format"
 #. type: defvar
 #: original_texis/frames.texi:1876
 msgid "This variable specifies how to compute a name for a frame when you have not explicitly specified one.  The variable's value is actually a mode line construct, just like @code{mode-line-format}, except that the @samp{%c} and @samp{%l} constructs are ignored.  @xref{Mode Line Data}."
-msgstr "この変数は、フレーム名が明示的に指定されないときに、フレーム名を計算する方法を指定する。この変数の値は、実際には@code{mode-line-format}のようなモードライン構成(mode line construct)だが、@samp{%c}および@samp{%l}の構成は無視される。@ref{Mode Line Data}を参照のこと。"
+msgstr "この変数はフレーム名が明示的に指定されないときにフレーム名を計算する方法を指定する。この変数の値は実際には@code{mode-line-format}のようなモードライン構文(mode line construct)だが、@samp{%c}と@samp{%l}の構文は無視される。@ref{Mode Line Data}を参照のこと。"
 
 #. type: defvar
 #: original_texis/frames.texi:1878
@@ -3755,7 +3739,7 @@ msgstr "icon-title-format"
 #. type: defvar
 #: original_texis/frames.texi:1882
 msgid "This variable specifies how to compute the name for an iconified frame, when you have not explicitly specified the frame title.  This title appears in the icon itself."
-msgstr "この変数は、フレームタイトルを明示的に指定しないときの、アイコン化されたフレームの名前の計算方法を指定する。このタイトルはアイコン自体に表示される。"
+msgstr "この変数はフレームタイトルを明示的に指定しないときの、アイコン化されたフレームの名前の計算方法を指定する。このタイトルはアイコン自体に表示される。"
 
 #. type: defvar
 #: original_texis/frames.texi:1884
@@ -3766,12 +3750,12 @@ msgstr "multiple-frames"
 #. type: defvar
 #: original_texis/frames.texi:1890
 msgid "This variable is set automatically by Emacs.  Its value is @code{t} when there are two or more frames (not counting minibuffer-only frames or invisible frames).  The default value of @code{frame-title-format} uses @code{multiple-frames} so as to put the buffer name in the frame title only when there is more than one frame."
-msgstr "この変数はEmacsにより自動的にセットされる。フレームが2つ以上(ミニバッファーのみのフレームと不可視のフレームは勘定に入らない)のとき、値は@code{t}となる。@code{frame-title-format}のデフォルト値は、フレームが複数存在する場合のみ、フレーム名にバッファー名を入れるために、@code{multiple-frames}を使用する。"
+msgstr "この変数はEmacsにより自動的にセットされる。フレームが2つ以上(ミニバッファーのみのフレームと不可視のフレームは勘定に入らない)のとき、値は@code{t}となる。@code{frame-title-format}のデフォルト値はフレームが複数存在する場合のみ、フレーム名にバッファー名を入れるために@code{multiple-frames}を使用する。"
 
 #. type: defvar
 #: original_texis/frames.texi:1894
 msgid "The value of this variable is not guaranteed to be accurate except while processing @code{frame-title-format} or @code{icon-title-format}."
-msgstr "この変数の値は、@code{frame-title-format}と@code{icon-title-format}の処理中を除き、正確である保証はない。"
+msgstr "この変数の値は@code{frame-title-format}と@code{icon-title-format}の処理中を除き正確である保証はない。"
 
 #. type: cindex
 #: original_texis/frames.texi:1898
@@ -3782,7 +3766,7 @@ msgstr "deleting frames"
 #. type: Plain text
 #: original_texis/frames.texi:1904
 msgid "A @dfn{live frame} is one that has not been deleted.  When a frame is deleted, it is removed from its terminal display, although it may continue to exist as a Lisp object until there are no more references to it."
-msgstr "@dfn{生きたフレーム(live frame)}とは、削除されていないフレームのことです。フレームが削除される際は、たとえそれへの参照元がなくなるまでLispオブジェクトとして存在し続けるとしても、端末ディスプレイからは削除されます。"
+msgstr "@dfn{生きたフレーム(live frame)}とは削除されていないフレームのことです。フレームが削除される際には、たとえそれへの参照元がなくなるまでLispオブジェクトとして存在し続けるとしても端末ディスプレイからは削除されます。"
 
 #. type: deffn
 #: original_texis/frames.texi:1905
@@ -3799,14 +3783,12 @@ msgstr "delete-frame-functions"
 #. type: deffn
 #: original_texis/frames.texi:1911
 msgid "This function deletes the frame @var{frame}.  Unless @var{frame} is a tooltip, it first runs the hook @code{delete-frame-functions} (each function gets one argument, @var{frame}).  By default, @var{frame} is the selected frame."
-msgstr "この関数は、フレーム@var{frame}を削除する。@var{frame}がツールチップでなければ、まずフック@code{delete-frame-functions}を実行する(フックの各関数は唯一の引数として@var{frame}を受け取る)。デフォルトでは、@var{frame}は選択されたフレームである。"
+msgstr "この関数はフレーム@var{frame}を削除する。@var{frame}がツールチップでなければ、まずフック@code{delete-frame-functions}を実行する(フックの各関数は唯一の引数として@var{frame}を受け取る)。デフォルトでは@var{frame}は選択されたフレーム。"
 
 #. type: deffn
 #: original_texis/frames.texi:1916
-#, fuzzy
-#| msgid "A frame cannot be deleted if its minibuffer is used by other frames.  Normally, you cannot delete a frame if all other frames are invisible, but if @var{force} is non-@code{nil}, then you are allowed to do so."
 msgid "A frame cannot be deleted as long as its minibuffer serves as surrogate minibuffer for another frame (@pxref{Minibuffers and Frames}).  Normally, you cannot delete a frame if all other frames are invisible, but if @var{force} is non-@code{nil}, then you are allowed to do so."
-msgstr "ミニバッファーが別のフレームに使用されているフレームは削除できない。通常、他のフレームすべてが不可視の場合、フレームは削除できないが、@var{force}が非@code{nil}なら、削除が可能になる。"
+msgstr "フレームのミニバッファーが別のフレームの代替えミニバッファー(surrogate minibuffer)としての役割をもつかぎり削除することはできない。他のフレームがすべて不可視なら通常はフレームを削除できないが、@var{force}が非@code{nil}なら削除が可能。"
 
 #. type: defun
 #: original_texis/frames.texi:1918
@@ -3817,12 +3799,12 @@ msgstr "frame-live-p frame"
 #. type: defun
 #: original_texis/frames.texi:1922
 msgid "The function @code{frame-live-p} returns non-@code{nil} if the frame @var{frame} has not been deleted.  The possible non-@code{nil} return values are like those of @code{framep}.  @xref{Frames}."
-msgstr "関数@code{frame-live-p}は、フレーム@var{frame}が削除されていなければ、非@code{nil}をリターンする。リターンされ得る非@code{nil}の値は、@code{framep}と同様である。@ref{Frames}を参照のこと。"
+msgstr "関数@code{frame-live-p}はフレーム@var{frame}が削除されていなければ非@code{nil}をリターンする。リターンされ得る非@code{nil}の値は@code{framep}と同様。@ref{Frames}を参照のこと。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1929
 msgid "Some window managers provide a command to delete a window.  These work by sending a special message to the program that operates the window.  When Emacs gets one of these commands, it generates a @code{delete-frame} event, whose normal definition is a command that calls the function @code{delete-frame}.  @xref{Misc Events}."
-msgstr "いくつかのウィンドウマネージャーは、ウィンドウを削除するコマンドを提供します。これらは、そのウィンドウを操作するプログラムに特別なメッセージを送ることにより機能します。Emacsがそれらメッセージのいずれかを受け取ったときは、@code{delete-frame}イベントを生成します。このイベントの通常の定義は、関数@code{delete-frame}を呼び出すコマンドです。@ref{Misc Events}を参照してください。"
+msgstr "いくつかのウィンドウマネージャーはウィンドウを削除するコマンドを提供します。これらはそのウィンドウを操作するプログラムに特別なメッセージを送ることにより機能します。Emacsがそれらメッセージのいずれかを受け取ったときは@code{delete-frame}イベントを生成します。このイベントの通常の定義は関数@code{delete-frame}を呼び出すコマンドです。@ref{Misc Events}を参照してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:1932
@@ -3839,7 +3821,7 @@ msgstr "frame-list"
 #. type: defun
 #: original_texis/frames.texi:1940
 msgid "This function returns a list of all the live frames, i.e., those that have not been deleted.  It is analogous to @code{buffer-list} for buffers, and includes frames on all terminals.  The list that you get is newly created, so modifying the list doesn't have any effect on the internals of Emacs."
-msgstr "この関数は、すべての生きたフレーム(削除されていないフレーム)のリストをリターンする。これはバッファーにたいする@code{buffer-list}に類似しており、すべての端末上のフレームが含まれる。リターンされるリストは新たに作成されたものであり、このリストを変更してもEmacs内部への影響はない。"
+msgstr "この関数はすべての生きたフレーム(削除されていないフレーム)のリストをリターンする。これはバッファーにたいする@code{buffer-list}に類似しており、すべての端末上のフレームが含まれる。リターンされるリストは新たに作成されたものであり、このリストを変更してもEmacs内部への影響はない。"
 
 #. type: defun
 #: original_texis/frames.texi:1942
@@ -3849,10 +3831,8 @@ msgstr "visible-frame-list"
 
 #. type: defun
 #: original_texis/frames.texi:1946
-#, fuzzy
-#| msgid "This function returns a list of just the currently visible frames.  @xref{Visibility of Frames}.  Frames on text terminals always count as ``visible'', even though only the selected one is actually displayed."
 msgid "This function returns a list of just the currently visible frames.  @xref{Visibility of Frames}.  Frames on text terminals always count as visible, even though only the selected one is actually displayed."
-msgstr "この関数はカレントで可視なフレームだけのリストをリターンする。@xref{Visibility of Frames}を参照のこと。テキスト端末上のフレームは、実際に表示されるのが選択されたフレームだけだとしても、常に``可視''であるとみなされる。"
+msgstr "この関数はカレントで可視なフレームだけのリストをリターンする。@xref{Visibility of Frames}を参照のこと。テキスト端末上のフレームは、実際に表示されるのが選択されたフレームだけだとしても常に可視であるとみなされる。"
 
 #. type: defun
 #: original_texis/frames.texi:1948
@@ -3862,15 +3842,13 @@ msgstr "next-frame &optional frame minibuf"
 
 #. type: defun
 #: original_texis/frames.texi:1954
-#, fuzzy
-#| msgid "This function lets you cycle conveniently through all the frames on the current display from an arbitrary starting point.  It returns the ``next'' frame after @var{frame} in the cycle.  If @var{frame} is omitted or @code{nil}, it defaults to the selected frame (@pxref{Input Focus})."
 msgid "This function lets you cycle conveniently through all the frames on the current display from an arbitrary starting point.  It returns the next frame after @var{frame} in the cycle.  If @var{frame} is omitted or @code{nil}, it defaults to the selected frame (@pxref{Input Focus})."
-msgstr "この関数は、カレントディスプレイ上そすべてのフレームを、任意のフレームを開始点としいぇ巡回するのに便利である。これは、そのその巡回サイクル上で@var{frame}の``次''に該当するフレームをリターンする。@var{frame}が省略または@code{nil}の場合のデフォルトは、選択されたフレーム(@ref{Input Focus}を参照)である。"
+msgstr "この関数はカレントディスプレイ上のすべてのフレームを、任意のフレームを開始点としいて巡回するのに有用。これはそのその巡回サイクル上で@var{frame}の次に該当するフレームをリターンする。@var{frame}が省略または@code{nil}の場合のデフォルトは選択されたフレーム(@ref{Input Focus}を参照)。"
 
 #. type: defun
 #: original_texis/frames.texi:1956
 msgid "The second argument, @var{minibuf}, says which frames to consider:"
-msgstr "2つ目の引数@var{minibuf}は、どのフレームを考慮するかを示す:"
+msgstr "2つ目の引数@var{minibuf}はどのフレームを考慮するかを示す:"
 
 #. type: table
 #: original_texis/frames.texi:1960
@@ -3897,7 +3875,7 @@ msgstr "0"
 #. type: table
 #: original_texis/frames.texi:1964
 msgid "Consider all visible or iconified frames."
-msgstr "すべての可視およびアイコン化されたフレームを考慮する。"
+msgstr "すべての可視フレームとアイコン化されたフレームを考慮する。"
 
 #. type: item
 #: original_texis/frames.texi:1964
@@ -3930,7 +3908,7 @@ msgstr "previous-frame &optional frame minibuf"
 #. type: defun
 #: original_texis/frames.texi:1975
 msgid "Like @code{next-frame}, but cycles through all frames in the opposite direction."
-msgstr "@code{next-frame}と同様だが、すべてのフレームを逆方向に巡回する。"
+msgstr "@code{next-frame}と同様だがすべてのフレームを逆方向に巡回する。"
 
 #. type: Plain text
 #: original_texis/frames.texi:1979
@@ -3939,10 +3917,8 @@ msgstr "@ref{Cyclic Window Ordering}の@code{next-window}と@code{previous-windo
 
 #. type: Plain text
 #: original_texis/frames.texi:1986
-#, fuzzy
-#| msgid "Normally, each frame has its own minibuffer window at the bottom, which is used whenever that frame is selected.  If the frame has a minibuffer, you can get it with @code{minibuffer-window} (@pxref{Definition of minibuffer-window})."
 msgid "Normally, each frame has its own minibuffer window at the bottom, which is used whenever that frame is selected.  If the frame has a minibuffer, you can get it with @code{minibuffer-window} (@pxref{Minibuffer Windows})."
-msgstr "通常は、それぞれのフレームは下端に自身のミニバッファーウィンドウをもち、そのフレームが選択された際は常にそれを使用します。フレームにミニバッファーがある場合は、@code{minibuffer-window}でそれを取得できます(@ref{Definition of minibuffer-window}を参照)。"
+msgstr "それぞれのフレームは通常は下端に自身のミニバッファーウィンドウをもち、そのフレームが選択された際には常にそれを使用します。フレームにミニバッファーがある場合には、@code{minibuffer-window}でそれを取得できます(@ref{Minibuffer Windows}を参照)。"
 
 #. type: cindex
 #: original_texis/frames.texi:1987
@@ -3952,29 +3928,24 @@ msgstr "frame without a minibuffer"
 
 #. type: cindex
 #: original_texis/frames.texi:1988
-#, fuzzy, no-wrap
-#| msgid "minibuffer-only frame"
+#, no-wrap
 msgid "surrogate minibuffer frame"
-msgstr "minibuffer-only frame"
+msgstr "surrogate minibuffer frame"
 
 #. type: Plain text
 #: original_texis/frames.texi:1994
-#, fuzzy
-#| msgid "However, you can also create a frame with no minibuffer.  Such a frame must use the minibuffer window of some other frame.  When you create the frame, you can explicitly specify the minibuffer window to use (in some other frame).  If you don't, then the minibuffer is found in the frame which is the value of the variable @code{default-minibuffer-frame}.  Its value should be a frame that does have a minibuffer."
 msgid "However, you can also create a frame without a minibuffer.  Such a frame must use the minibuffer window of some other frame.  That other frame will serve as @dfn{surrogate minibuffer frame} for this frame and cannot be deleted via @code{delete-frame} (@pxref{Deleting Frames}) as long as this frame is live."
-msgstr "しかし、ミニバッファーのないフレームの作成も可能です。そのようなフレームは、別のフレームのミニバッファーウィンドウを使用しなければなりません。フレーム作成時に、(別フレーム上にある)使用するミニバッファーを明示的に指定できます。これを行わない場合は、変数@code{default-minibuffer-frame}の値のフレーム内でミニバッファーを探します。この値は、ミニバッファーをもつフレームにしてください。"
+msgstr "しかしミニバッファーをもたないフレームも作成できます。そのようなフレームは、別のフレームのミニバッファーを使用しなければなりません。この別フレームはそのフレームにたいする@dfn{代替えミニバッファーフレーム(surrogate minibuffer frame)}としての役目を果たし、そのフレームが生きているかぎり@code{delete-frame}で削除することはできなくなります(@ref{Deleting Frames}を参照)。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2000
-#, fuzzy
-#| msgid "However, you can also create a frame with no minibuffer.  Such a frame must use the minibuffer window of some other frame.  When you create the frame, you can explicitly specify the minibuffer window to use (in some other frame).  If you don't, then the minibuffer is found in the frame which is the value of the variable @code{default-minibuffer-frame}.  Its value should be a frame that does have a minibuffer."
 msgid "When you create the frame, you can explicitly specify the minibuffer window to use (in some other frame).  If you don't, then the minibuffer is found in the frame which is the value of the variable @code{default-minibuffer-frame}.  Its value should be a frame that does have a minibuffer."
-msgstr "しかし、ミニバッファーのないフレームの作成も可能です。そのようなフレームは、別のフレームのミニバッファーウィンドウを使用しなければなりません。フレーム作成時に、(別フレーム上にある)使用するミニバッファーを明示的に指定できます。これを行わない場合は、変数@code{default-minibuffer-frame}の値のフレーム内でミニバッファーを探します。この値は、ミニバッファーをもつフレームにしてください。"
+msgstr "フレーム作成時に、(別フレーム上にある)使用するミニバッファーを明示的に指定できます。これを行わない場合には、変数@code{default-minibuffer-frame}の値のフレーム内でミニバッファーを探します。この値はミニバッファーをもつフレームにしてください。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2004
 msgid "If you use a minibuffer-only frame, you might want that frame to raise when you enter the minibuffer.  If so, set the variable @code{minibuffer-auto-raise} to @code{t}.  @xref{Raising and Lowering}."
-msgstr "ミニバッファーのみのフレームを使用する場合は、ミニバッファーにエンター時にそのフレームを前面に移動(raise)したいと思うかもしれません。その場合は、変数@code{minibuffer-auto-raise}に@code{t}をセットします。@ref{Raising and Lowering}を参照してください。"
+msgstr "ミニバッファーのみのフレームを使用する場合には、ミニバッファーにエンター時にそのフレームを前面に移動(raise)したいと思うかもしれません。その場合には変数@code{minibuffer-auto-raise}に@code{t}をセットします。@ref{Raising and Lowering}を参照してください。"
 
 #. type: defvar
 #: original_texis/frames.texi:2005
@@ -3985,7 +3956,7 @@ msgstr "default-minibuffer-frame"
 #. type: defvar
 #: original_texis/frames.texi:2010
 msgid "This variable specifies the frame to use for the minibuffer window, by default.  It does not affect existing frames.  It is always local to the current terminal and cannot be buffer-local.  @xref{Multiple Terminals}."
-msgstr "この変数は、デフォルトでミニバッファーウィンドウとして使用するフレームを指定する。これは、既存のフレームには影響しない。これはカレント端末にたいして常にローカルで、バッファーローカルにはできない。@ref{Multiple Terminals}を参照のこと。"
+msgstr "この変数はデフォルトでミニバッファーウィンドウとして使用するフレームを指定する。これは既存のフレームには影響しない。これはカレント端末にたいして常にローカルであり、バッファーローカルにはできない。@ref{Multiple Terminals}を参照のこと。"
 
 #. type: cindex
 #: original_texis/frames.texi:2014
@@ -3996,14 +3967,12 @@ msgstr "input focus"
 #. type: Plain text
 #: original_texis/frames.texi:2019
 msgid "At any time, one frame in Emacs is the @dfn{selected frame}.  The selected window always resides on the selected frame."
-msgstr "どんなときでも、Emacs内のただ1つのフレームが@dfn{選択されたフレーム(selected frame)}です。選択されたウィンドウは、常に選択されたフレーム上にあります。"
+msgstr "どんなときでもEmacs内のただ1つのフレームが@dfn{選択されたフレーム(selected frame)}です。選択されたウィンドウは常に選択されたフレーム上にあります。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2030
-#, fuzzy
-#| msgid "When Emacs displays its frames on several terminals (@pxref{Multiple Terminals}), each terminal has its own selected frame.  But only one of these is ``@emph{the} selected frame'': it's the frame that belongs to the terminal from which the most recent input came.  That is, when Emacs runs a command that came from a certain terminal, the selected frame is the one of that terminal.  Since Emacs runs only a single command at any given time, it needs to consider only one selected frame at a time; this frame is what we call @dfn{the selected frame} in this manual.  The display on which the selected frame is shown is the @dfn{selected frame's display}."
 msgid "When Emacs displays its frames on several terminals (@pxref{Multiple Terminals}), each terminal has its own selected frame.  But only one of these is @emph{the} selected frame: it's the frame that belongs to the terminal from which the most recent input came.  That is, when Emacs runs a command that came from a certain terminal, the selected frame is the one of that terminal.  Since Emacs runs only a single command at any given time, it needs to consider only one selected frame at a time; this frame is what we call @dfn{the selected frame} in this manual.  The display on which the selected frame is shown is the @dfn{selected frame's display}."
-msgstr "Emacsがフレームを複数端末(@ref{Multiple Terminals}を参照)上に表示する際、各端末は自身の選択されたフレームをもちます。しかし、それらのうち1つだけが、``@emph{いわゆる}選択されたフレーム''であり、それはもっとも最近に入力があった端末に属すフレームです。つまり、特定の端末からのコマンドをEmacsが実行する際は、その端末上の1つが選択されたフレームです。Emacsが実行するコマンドは常に1つだけなので、選択されたフレームは常に1つだけだと考える必要があります。このフレームこそ、このマニュアルで@dfn{選択されたフレーム}と呼ぶフレームです。選択されたフレームを表示するディスプレイは、@dfn{選択されたフレームのディスプレイ(selected frame's display)}です。"
+msgstr "Emacsがフレームを複数端末(@ref{Multiple Terminals}を参照)上に表示する際には、各端末は自身の選択されたフレームをもちます。しかしそれらのうち1つだけが、@emph{いわゆる}選択されたフレームであり、それはもっとも最近に入力があった端末に属すフレームです。つまり特定の端末からのコマンドをEmacsが実行する際には、その端末上の1つが選択されたフレームです。Emacsが実行するコマンドは常に1つだけなので、選択されたフレームは常に1つだけだと考える必要があります。このフレームこそが、このマニュアルで@dfn{選択されたフレーム}と呼ぶフレームです。選択されたフレームを表示するディスプレイは、@dfn{選択されたフレームのディスプレイ(selected frame's display)}です。"
 
 #. type: defun
 #: original_texis/frames.texi:2031
@@ -4019,19 +3988,17 @@ msgstr "この関数は選択されたフレームをリターンする。"
 #. type: Plain text
 #: original_texis/frames.texi:2041
 msgid "Some window systems and window managers direct keyboard input to the window object that the mouse is in; others require explicit clicks or commands to @dfn{shift the focus} to various window objects.  Either way, Emacs automatically keeps track of which frame has the focus.  To explicitly switch to a different frame from a Lisp function, call @code{select-frame-set-input-focus}."
-msgstr "いくつかのウィンドウシステムおよびウィンドウマネージャーは、マウスがあるウィンドウオブジェクトにキーボード入力をダイレクトします。それ以外は、さまざまなウィンドウオブジェクトに@dfn{フォーカスをシフト(shift the focus)}するために、明示的なクリックやコマンドを要求します。どちらの方法でも、Emacsはフォーカスをもつフレームを自動的に追跡します。Lisp関数から別フレームに明示的に切り替えるためには、@code{select-frame-set-input-focus}を呼び出します。"
+msgstr "いくつかのウィンドウシステムおよびウィンドウマネージャーは、マウスがあるウィンドウオブジェクトにキーボード入力をダイレクトします。それ以外は、さまざまなウィンドウオブジェクトに@dfn{フォーカスをシフト(shift the focus)}するために、明示的なクリックやコマンドを要求します。どちらの方法でもEmacsはフォーカスをもつフレームを自動的に追跡します。Lisp関数から別フレームに明示的に切り替えるためには、@code{select-frame-set-input-focus}を呼び出します。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2046
-#, fuzzy
-#| msgid "Lisp programs can also switch frames ``temporarily'' by calling the function @code{select-frame}.  This does not alter the window system's concept of focus; rather, it escapes from the window manager's control until that control is somehow reasserted."
 msgid "Lisp programs can also switch frames temporarily by calling the function @code{select-frame}.  This does not alter the window system's concept of focus; rather, it escapes from the window manager's control until that control is somehow reasserted."
-msgstr "関数@code{select-frame}を呼び出すことにより、Lispプログラムが``一時的''にフレームを切り替えることもできます。これは、そのウィンドウシステムのフォーカス概念を変更はしません。変更ではなく、何らかの方法により制御が再確認(reasserted)されるまで、ウィンドウマネージャーの制御から抜け出す(escape)のです。"
+msgstr "関数@code{select-frame}を呼び出すことにより、Lispプログラムが一時的にフレームを切り替えることもできます。これはそのウィンドウシステムのフォーカス概念を変更はしません。変更ではなく何らかの方法により制御が再確認(reasserted)されるまで、ウィンドウマネージャーの制御から抜け出す(escape)のです。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2053
 msgid "When using a text terminal, only one frame can be displayed at a time on the terminal, so after a call to @code{select-frame}, the next redisplay actually displays the newly selected frame.  This frame remains selected until a subsequent call to @code{select-frame}.  Each frame on a text terminal has a number which appears in the mode line before the buffer name (@pxref{Mode Line Variables})."
-msgstr "テキスト端末使用時は、その端末上で一度に表示できるフレームは1つだけなので、@code{select-frame}呼び出し後、次回の再表示で新たに選択されたフレームが実際に表示されます。このフレームは、次の@code{select-frame}呼び出しまで、選択されたままです。テキスト端末上の各フレームは、バッファー名の前に表示される番号をもちます(@ref{Mode Line Variables}を参照)。"
+msgstr "テキスト端末使用時はその端末上で一度に表示できるフレームは1つだけなので、@code{select-frame}呼び出し後に次回の再表示で新たに選択されたフレームが実際に表示されます。このフレームは次の@code{select-frame}呼び出しまで選択されたままです。テキスト端末上の各フレームはバッファー名の前に表示される番号をもちます(@ref{Mode Line Variables}を参照)。"
 
 #. type: defun
 #: original_texis/frames.texi:2054
@@ -4042,7 +4009,7 @@ msgstr "select-frame-set-input-focus frame &optional norecord"
 #. type: defun
 #: original_texis/frames.texi:2061
 msgid "This function selects @var{frame}, raises it (should it happen to be obscured by other frames) and tries to give it the X server's focus.  On a text terminal, the next redisplay displays the new frame on the entire terminal screen.  The optional argument @var{norecord} has the same meaning as for @code{select-frame} (see below).  The return value of this function is not significant."
-msgstr "この関数は、@var{frame}を選択、(他のフレームのせいで不明瞭な場合には)それを前面に移動(raise)して、Xサーバーのフォーカス授与を試みる。テキスト端末上では、次回再表示時に端末スクリーン全体に新たにフレームが表示される。オプション引数@var{norecord}は、@code{select-frame}(下記参照)のときと同じ意味をもつ。この関数のリターン値に意味はない。"
+msgstr "この関数は@var{frame}を選択して、(他のフレームのせいで不明瞭な場合には)それを前面に移動(raise)してXサーバーのフォーカス授与を試みる。テキスト端末上では、次回再表示時に端末スクリーン全体に新たにフレームが表示される。オプション引数@var{norecord}は@code{select-frame}(下記参照)のときと同じ意味をもつ。この関数のリターン値に意味はない。"
 
 #. type: deffn
 #: original_texis/frames.texi:2063
@@ -4053,27 +4020,27 @@ msgstr "Command select-frame frame &optional norecord"
 #. type: deffn
 #: original_texis/frames.texi:2071
 msgid "This function selects frame @var{frame}, temporarily disregarding the focus of the X server if any.  The selection of @var{frame} lasts until the next time the user does something to select a different frame, or until the next time this function is called.  (If you are using a window system, the previously selected frame may be restored as the selected frame after return to the command loop, because it still may have the window system's input focus.)"
-msgstr "この関数は、フレーム@var{frame}を選択し、Xサーバーのフォーカスがあればそれを一時的に無視する。@var{frame}にたいする選択は、次回ユーザーが別フレームに何かを行うか、この関数の次回呼び出しまで継続する(ウィンドウシステムを使用する場合は、以前に選択されていたフレームに依然としてウィンドウシステムの入力フォーカスがあるかもしれないので、コマンドループからリターン後に、そのフレームが選択されたフレームとしてリストアされるかもしれない)。"
+msgstr "この関数はフレーム@var{frame}を選択して、Xサーバーのフォーカスがあればそれを一時的に無視する。@var{frame}にたいする選択は次回ユーザーが別フレームに何かを行うか、この関数の次回呼び出しまで継続する(ウィンドウシステムを使用する場合には以前に選択されていたフレームに依然としてウィンドウシステムの入力フォーカスがあるかもしれないので、コマンドループからリターン後にそのフレームが選択されたフレームとしてリストアされるかもしれない)。"
 
 #. type: deffn
 #: original_texis/frames.texi:2079
 msgid "The specified @var{frame} becomes the selected frame, and its terminal becomes the selected terminal.  This function then calls @code{select-window} as a subroutine, passing the window selected within @var{frame} as its first argument and @var{norecord} as its second argument (hence, if @var{norecord} is non-@code{nil}, this avoids changing the order of recently selected windows nor the buffer list).  @xref{Selecting Windows}."
-msgstr "指定された@var{frame}は選択されたフレームとなり、その端末が選択された端末になる。その後、この関数は@var{frame}内で選択されていたウィンドウを第1引数、@var{norecord}を第2引数でサブルーチンとして@code{select-window}を呼び出す(したがって、@var{norecord}が非@code{nil}なら、もっとも最近に選択されたウィンドウおよびバッファーリストの変更を避ける)。@ref{Selecting Windows}を参照のこと。"
+msgstr "指定された@var{frame}は選択されたフレームとなり、その端末が選択された端末になる。その後でこの関数は@var{frame}内で選択されていたウィンドウを第1引数、@var{norecord}を第2引数として、サブルーチンとして@code{select-window}を呼び出す(したがって@var{norecord}が非@code{nil}ならもっとも最近に選択されたウィンドウとバッファーリストの変更を避ける)。@ref{Selecting Windows}を参照のこと。"
 
 #. type: deffn
 #: original_texis/frames.texi:2082
 msgid "This function returns @var{frame}, or @code{nil} if @var{frame} has been deleted."
-msgstr "この関数は@var{frame}、または@var{frame}が削除されていれば@code{nil}をリターンする。"
+msgstr "この関数は@var{frame}、@var{frame}が削除されていれば@code{nil}をリターンする。"
 
 #. type: deffn
 #: original_texis/frames.texi:2086
 msgid "In general, you should never use @code{select-frame} in a way that could switch to a different terminal without switching back when you're done."
-msgstr "一般的には、実行後に端末を戻すよう切り替えることなく、別の端末に切り替えるのが可能な手段として@code{select-frame}を決して使用すべきではない。"
+msgstr "一般的には実行後に端末を戻すよう切り替えることなく、別の端末に切り替えるのが可能な手段として@code{select-frame}を決して使用しないこと。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2093
 msgid "Emacs cooperates with the window system by arranging to select frames as the server and window manager request.  It does so by generating a special kind of input event, called a @dfn{focus} event, when appropriate.  The command loop handles a focus event by calling @code{handle-switch-frame}.  @xref{Focus Events}."
-msgstr "Emacsは、サーバーおよびウィンドウマネージャーのリクエストとしてフレーム選択をアレンジすることにより、ウィンドウシステムと協調します。これは、適切なときに@dfn{フォーカス(focus)}と呼ばれる特殊な入力イベントを生成することにより行われます。コマンドループは、@code{handle-switch-frame}を呼び出してフォーカスイベントを処理します。@ref{Focus Events}を参照してください。"
+msgstr "Emacsはサーバーやウィンドウマネージャーのリクエストとしてフレーム選択をアレンジすることによりウィンドウシステムと協調します。これは適切なときに@dfn{フォーカス(focus)}と呼ばれる特殊な入力イベントを生成することにより行われます。コマンドループは@code{handle-switch-frame}を呼び出してフォーカスイベントを処理します。@ref{Focus Events}を参照してください。"
 
 #. type: deffn
 #: original_texis/frames.texi:2094
@@ -4084,12 +4051,12 @@ msgstr "Command handle-switch-frame frame"
 #. type: deffn
 #: original_texis/frames.texi:2096
 msgid "This function handles a focus event by selecting frame @var{frame}."
-msgstr "この関数は、フレーム@var{frame}選択によりフォーカスイベントを処理する。"
+msgstr "この関数はフレーム@var{frame}選択によりフォーカスイベントを処理する。"
 
 #. type: deffn
 #: original_texis/frames.texi:2099
 msgid "Focus events normally do their job by invoking this command.  Don't call it for any other reason."
-msgstr "フォーカスイベントは通常、このコマンドを呼び出すことにより、その処理を行う。他の理由でこれを呼び出しではならない。"
+msgstr "フォーカスイベントは、通常はこのコマンドを呼び出すことによりその処理を行う。他の理由でこれを呼び出しではならない。"
 
 #. type: defun
 #: original_texis/frames.texi:2101
@@ -4100,27 +4067,27 @@ msgstr "redirect-frame-focus frame &optional focus-frame"
 #. type: defun
 #: original_texis/frames.texi:2107
 msgid "This function redirects focus from @var{frame} to @var{focus-frame}.  This means that @var{focus-frame} will receive subsequent keystrokes and events intended for @var{frame}.  After such an event, the value of @code{last-event-frame} will be @var{focus-frame}.  Also, switch-frame events specifying @var{frame} will instead select @var{focus-frame}."
-msgstr "この関数は、@var{frame}から@var{focus-frame}にフォーカスをリダイレクトする。これは、@var{frame}にかわって@var{focus-frame}が以降のキーストロークとイベントを受け取るであろうことを意味する。そのようなイベント後は、@code{last-event-frame}の値は@var{focus-frame}になるだろう。また、@var{frame}を指定したswitch-frameイベントも、かわりに @var{focus-frame}を選択するだろう。"
+msgstr "この関数は@var{frame}から@var{focus-frame}にフォーカスをリダイレクトする。これは@var{frame}にかわって@var{focus-frame}が以降のキーストロークとイベントを受け取るであろうことを意味する。そのようなイベント後には@code{last-event-frame}の値は@var{focus-frame}になるだろう。また@var{frame}を指定したswitch-frameイベントも、かわりに@var{focus-frame}を選択するだろう。"
 
 #. type: defun
 #: original_texis/frames.texi:2111
 msgid "If @var{focus-frame} is omitted or @code{nil}, that cancels any existing redirection for @var{frame}, which therefore once again receives its own events."
-msgstr "@var{focus-frame}が省略または@code{nil}の場合は、@var{frame}にたいするすべての既存のリダイレクションがキャンセルされ、したがって@var{frame}が自身のイベントを再度受け取ることになる。"
+msgstr "@var{focus-frame}が省略または@code{nil}なら、@var{frame}にたいするすべての既存のリダイレクションがキャンセルされるので、@var{frame}が自身のイベントを再度受け取ることになる。"
 
 #. type: defun
 #: original_texis/frames.texi:2117
 msgid "One use of focus redirection is for frames that don't have minibuffers.  These frames use minibuffers on other frames.  Activating a minibuffer on another frame redirects focus to that frame.  This puts the focus on the minibuffer's frame, where it belongs, even though the mouse remains in the frame that activated the minibuffer."
-msgstr "フォーカスリダイレクトの用途の1つは、ミニバッファーをもたないフレームにたいしてである。これらのフレームは、別フレーム上のミニバッファーを使用する。別フレーム上のミニバッファーをアクティブにすることは、そのフレームにフォーカスをリダイレクトすることである。これは、たとえマウスがミニバッファーをアクティブにしたフレーム内に留まっていても、ミニバッファーが属すフレームにフォーカスを置く。"
+msgstr "フォーカスリダイレクトの用途の1つは、ミニバッファーをもたないフレームにたいしてである。これらのフレームは別フレーム上のミニバッファーを使用する。別フレーム上のミニバッファーをアクティブにすることは、そのフレームにフォーカスをリダイレクトすることである。これはたとえマウスがミニバッファーをアクティブにしたフレーム内に留まっていても、ミニバッファーが属すフレームにフォーカスを置く。"
 
 #. type: defun
 #: original_texis/frames.texi:2123
 msgid "Selecting a frame can also change focus redirections.  Selecting frame @code{bar}, when @code{foo} had been selected, changes any redirections pointing to @code{foo} so that they point to @code{bar} instead.  This allows focus redirection to work properly when the user switches from one frame to another using @code{select-window}."
-msgstr "フレーム選択は、フォーカスリダイレクションの変更も可能にする。@code{foo}が選択されているときにフレーム@code{bar}を選択することにより、@code{foo}を指すすべてのリダイレクションは、かわりに@code{bar}を指す。これは、ユーザーが@code{select-window}を使用してあるフレームから別のフレームに切り替えた際に、フォーカスのリダイレクトが正しく機能することを可能にする。"
+msgstr "フレーム選択はフォーカスリダイレクションの変更も可能にする。@code{foo}が選択されているときにフレーム@code{bar}を選択することにより、@code{foo}を指すすべてのリダイレクションはかわりに@code{bar}を指す。これはユーザーが@code{select-window}を使用してあるフレームから別のフレームに切り替えた際に、フォーカスのリダイレクトが正しく機能することを可能にする。"
 
 #. type: defun
 #: original_texis/frames.texi:2127
 msgid "This means that a frame whose focus is redirected to itself is treated differently from a frame whose focus is not redirected.  @code{select-frame} affects the former but not the latter."
-msgstr "これは、フォーカスが自身にリダイレクトされたフレームが、フォーカスがリダイレクトされていないフレームとは異なう扱いを受けることを意味する。前者にたいして@code{select-frame}は影響するが、後者には影響がない。"
+msgstr "これはフォーカスが自身にリダイレクトされたフレームが、フォーカスがリダイレクトされていないフレームとは異なる扱いを受けることを意味する。前者にたいして@code{select-frame}は影響するが、後者には影響がない。"
 
 #. type: defun
 #: original_texis/frames.texi:2130
@@ -4136,7 +4103,7 @@ msgstr "focus-in-hook"
 #. type: defvar
 #: original_texis/frames.texi:2134
 msgid "This is a normal hook run when an Emacs frame gains input focus."
-msgstr "これは、Emacsフレームが入力フォーカスを得た際に実行されるノーマルフックである。"
+msgstr "これはEmacsフレームが入力フォーカスを得た際に実行されるノーマルフック。"
 
 #. type: defvar
 #: original_texis/frames.texi:2136
@@ -4147,7 +4114,7 @@ msgstr "focus-out-hook"
 #. type: defvar
 #: original_texis/frames.texi:2138
 msgid "This is a normal hook run when an Emacs frame loses input focus."
-msgstr "これは、Emacsフレームが入力フォーカスを失った際に実行されるノーマルフックである。"
+msgstr "これはEmacsフレームが入力フォーカスを失った際に実行されるノーマルフック。"
 
 #. type: defopt
 #: original_texis/frames.texi:2140
@@ -4158,7 +4125,7 @@ msgstr "focus-follows-mouse"
 #. type: defopt
 #: original_texis/frames.texi:2145
 msgid "This option is how you inform Emacs whether the window manager transfers focus when the user moves the mouse.  Non-@code{nil} says that it does.  When this is so, the command @code{other-frame} moves the mouse to a position consistent with the new selected frame."
-msgstr "これは、ユーザーがマウスを移動した際に、ウィンドウマネージャーがフォーカスを転送するかどうかをEmacsに告げるためのオプションである。非@code{nil}なら、フォーカスは転送される。その場合、コマンド@code{other-frame}は新たに選択されたフレームと一貫性のある位置にマウスを移動する。"
+msgstr "これはユーザーがマウスを移動した際に、ウィンドウマネージャーがフォーカスを転送するかどうかをEmacsに告げるためのオプション。非@code{nil}ならフォーカスは転送される。その場合にはコマンド@code{other-frame}は新たに選択されたフレームと一貫性のある位置にマウスを移動する。"
 
 #. type: cindex
 #: original_texis/frames.texi:2149
@@ -4193,12 +4160,12 @@ msgstr "frame visibility"
 #. type: Plain text
 #: original_texis/frames.texi:2162
 msgid "A frame on a graphical display may be @dfn{visible}, @dfn{invisible}, or @dfn{iconified}.  If it is visible, its contents are displayed in the usual manner.  If it is iconified, its contents are not displayed, but there is a little icon somewhere to bring the frame back into view (some window managers refer to this state as @dfn{minimized} rather than @dfn{iconified}, but from Emacs' point of view they are the same thing).  If a frame is invisible, it is not displayed at all."
-msgstr "グラフィカルなディスプレイ上のフレームは@dfn{可視(visible)}、@dfn{不可視(invisible)}、または@dfn{アイコン化(iconified)}されているかもしれません。可視なら、そのコンテンツは通常の方法により表示されます。アイコン化されている場合、そのコンテンツは表示されませんが、ビュー内にフレームを戻すための小さいアイコンがどこかにあります(いくつかのウィンドウマネージャーは、この状態を@dfn{アイコン化}ではなく@dfn{最小化}と呼ぶが、Emacsの見地ではこれらは同等である)。フレームが不可視なら、それはまったく表示されません。"
+msgstr "グラフィカルなディスプレイ上のフレームは@dfn{可視(visible)}、@dfn{不可視(invisible)}、または@dfn{アイコン化(iconified)}されているかもしれません。可視ならそのコンテンツは通常の方法により表示されます。アイコン化されている場合にはそのコンテンツは表示されませんが、ビュー内にフレームを戻すための小さいアイコンがどこかにあります(いくつかのウィンドウマネージャーはこの状態を@dfn{アイコン化}ではなく@dfn{最小化}と呼ぶがEmacsの見地ではこれらは同等である)。フレームが不可視ならまったく表示されません。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2165
 msgid "Visibility is meaningless on text terminals, since only the selected one is actually displayed in any case."
-msgstr "テキスト端末では、いつでも実際に表示されるのはただ1つの選択されたフレームだけなので、可視性に意味はありません。"
+msgstr "テキスト端末では実際に表示されるのは常にただ1つの選択されたフレームだけなので、可視性に意味はありません。"
 
 #. type: defun
 #: original_texis/frames.texi:2166
@@ -4209,14 +4176,12 @@ msgstr "frame-visible-p frame"
 #. type: defun
 #: original_texis/frames.texi:2170
 msgid "This function returns the visibility status of frame @var{frame}.  The value is @code{t} if @var{frame} is visible, @code{nil} if it is invisible, and @code{icon} if it is iconified."
-msgstr "この関数は、フレーム@var{frame}の可視性の状態をリターンする。値は、@var{frame}が可視なら@code{t}、不可視なら@code{nil}、アイコン化されている場合は@code{icon}になる。"
+msgstr "この関数はフレーム@var{frame}の可視性の状態をリターンする。値は@var{frame}が可視なら@code{t}、不可視なら@code{nil}、アイコン化されていれば@code{icon}。"
 
 #. type: defun
 #: original_texis/frames.texi:2174
-#, fuzzy
-#| msgid "On a text terminal, all frames are considered ``visible'' for the purposes of this function, even though only one frame is displayed.  @xref{Raising and Lowering}."
 msgid "On a text terminal, all frames are considered visible for the purposes of this function, even though only one frame is displayed.  @xref{Raising and Lowering}."
-msgstr "テキスト端末上では、たとえ1つのフレームだけが表示されているとしても、この関数の目的にたいしては、すべてのフレームが``可視''とみなされる。@ref{Raising and Lowering}を参照のこと。"
+msgstr "テキスト端末上ではたとえ1つのフレームだけが表示されているとしても、この関数の目的にたいしてはすべてのフレームが可視とみなされる。@ref{Raising and Lowering}を参照のこと。"
 
 #. type: deffn
 #: original_texis/frames.texi:2176
@@ -4227,7 +4192,7 @@ msgstr "Command iconify-frame &optional frame"
 #. type: deffn
 #: original_texis/frames.texi:2179
 msgid "This function iconifies frame @var{frame}.  If you omit @var{frame}, it iconifies the selected frame."
-msgstr "この関数は、フレーム@var{frame}をアイコン化する。@var{frame}を省略した場合は、選択されたフレームをアイコン化する。"
+msgstr "この関数はフレーム@var{frame}をアイコン化する。@var{frame}を省略すると選択されたフレームをアイコン化する。"
 
 #. type: deffn
 #: original_texis/frames.texi:2181
@@ -4238,7 +4203,7 @@ msgstr "Command make-frame-visible &optional frame"
 #. type: deffn
 #: original_texis/frames.texi:2186
 msgid "This function makes frame @var{frame} visible.  If you omit @var{frame}, it makes the selected frame visible.  This does not raise the frame, but you can do that with @code{raise-frame} if you wish (@pxref{Raising and Lowering})."
-msgstr "この関数は、フレーム@var{frame}を可視にする。@var{frame}を省略した場合は、選択されたフレームを可視にする。これはフレームを前面に移動しないが、望むなら@code{raise-frame}でそれを行うことができる(@ref{Raising and Lowering}を参照)。"
+msgstr "この関数はフレーム@var{frame}を可視にする。@var{frame}を省略すると選択されたフレームを可視にする。これはフレームを前面に移動しないが、望むなら@code{raise-frame}でこれを行うことができる(@ref{Raising and Lowering}を参照)。"
 
 #. type: deffn
 #: original_texis/frames.texi:2188
@@ -4249,17 +4214,17 @@ msgstr "Command make-frame-invisible &optional frame force"
 #. type: deffn
 #: original_texis/frames.texi:2191
 msgid "This function makes frame @var{frame} invisible.  If you omit @var{frame}, it makes the selected frame invisible."
-msgstr "この関数は、フレーム@var{frame}を不可視にする。@var{frame}を省略した場合は、選択されたフレームを不可視にする。"
+msgstr "この関数はフレーム@var{frame}を不可視にする。@var{frame}を省略すると選択されたフレームを不可視にする。"
 
 #. type: deffn
 #: original_texis/frames.texi:2194
 msgid "Unless @var{force} is non-@code{nil}, this function refuses to make @var{frame} invisible if all other frames are invisible.."
-msgstr "@var{force}が@code{nil}なら、この関数は他のすべてのフレームが不可視の場合は、@var{frame}を不可視にするのを拒絶する。"
+msgstr "@var{force}が@code{nil}なら、この関数は他のすべてのフレームが不可視の場合に@var{frame}を不可視にすることを拒絶する。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2202
 msgid "The visibility status of a frame is also available as a frame parameter.  You can read or change it as such.  @xref{Management Parameters}.  The user can also iconify and deiconify frames with the window manager.  This happens below the level at which Emacs can exert any control, but Emacs does provide events that you can use to keep track of such changes.  @xref{Misc Events}."
-msgstr "フレームの可視性の状態は、フレームパラメーターとしても利用可能である。つまりフレームパラメーターとして読み取りと変更ができる。@ref{Management Parameters}を参照のこと。ウィンドウマネージャーによりユーザーがフレームのアイコン化や非アイコン化を行うこともできる。これは、Emacsが何らかの制御を及ぼすのが可能なレベルより下のレベルにおいて発生するが、Emacsはそのような変化を追跡するために使用するイベントを提供する。@ref{Misc Events}を参照のこと。"
+msgstr "フレームの可視性の状態はフレームパラメーターとしても利用可能である。つまりフレームパラメーターとして読み取りと変更ができる。@ref{Management Parameters}を参照のこと。ウィンドウマネージャーによりユーザーがフレームのアイコン化や非アイコン化を行うこともできる。これはEmacsが何らかの制御を及ぼすのが可能なレベルより下のレベルにおいて発生するが、Emacsはそのような変化を追跡するために使用するイベントを提供する。@ref{Misc Events}を参照のこと。"
 
 #. type: section
 #: original_texis/frames.texi:2204
@@ -4282,7 +4247,7 @@ msgstr "lowering a frame"
 #. type: Plain text
 #: original_texis/frames.texi:2214
 msgid "Most window systems use a desktop metaphor.  Part of this metaphor is the idea that system-level windows (e.g., Emacs frames) are stacked in a notional third dimension perpendicular to the screen surface.  Where two overlap, the one higher up covers the one underneath.  You can @dfn{raise} or @dfn{lower} a frame using the functions @code{raise-frame} and @code{lower-frame}."
-msgstr "ほとんどのウィンドウシステムは、デスクトップというメタファー(metaphor: 比喩的概念)を使用します。このメタファーの一部は、システムレベルのウィンドウ(Emacsではフレーム)が、スクリーン表面に向かって、概念的3次元の垂直方向に積まれていくというアイデアです。2つが重なる箇所では、より高い一方が、より低い一方を覆い隠します。関数@code{raise-frame}および@code{lower-frame}を使用して、フレームを@dfn{前面に移動(raise: より高い位置へ上げる)}したり@dfn{背面に移動(lower: より低い位置へ移動)}したりすることができます。"
+msgstr "ほとんどのウィンドウシステムでは、デスクトップというメタファー(metaphor: 比喩的概念)は使用されます。このメタファーの一部はシステムレベルのウィンドウ(Emacsではフレーム)がスクリーン表面に向かって、概念的な3次元の垂直方向に積まれていくというアイデアです。2つが重なる箇所では、より高い一方がより低い一方を覆い隠します。関数@code{raise-frame}や@code{lower-frame}を使用して、フレームを@dfn{前面に移動(raise: より高い位置へ上げる)}したり@dfn{背面に移動(lower: より低い位置へ移動)}したりすることができます。"
 
 #. type: deffn
 #: original_texis/frames.texi:2215
@@ -4293,7 +4258,7 @@ msgstr "Command raise-frame &optional frame"
 #. type: deffn
 #: original_texis/frames.texi:2218
 msgid "This function raises frame @var{frame} (default, the selected frame).  If @var{frame} is invisible or iconified, this makes it visible."
-msgstr "この関数は、フレーム@var{frame}(デフォルトは選択されたフレーム)を前面に移動する。@var{frame}が不可視もしくはアイコン化されている場合は、それを可視にする。"
+msgstr "この関数はフレーム@var{frame} (デフォルトは選択されたフレーム)を前面に移動する。@var{frame}が不可視もしくはアイコン化されていればそれを可視にする。"
 
 #. type: deffn
 #: original_texis/frames.texi:2220
@@ -4304,7 +4269,7 @@ msgstr "Command lower-frame &optional frame"
 #. type: deffn
 #: original_texis/frames.texi:2222
 msgid "This function lowers frame @var{frame} (default, the selected frame)."
-msgstr "この関数は、フレーム@var{frame}(デフォルトは選択されたフレーム)を背面に移動する。"
+msgstr "この関数はフレーム@var{frame} (デフォルトは選択されたフレーム)を背面に移動する。"
 
 #. type: defopt
 #: original_texis/frames.texi:2224
@@ -4315,12 +4280,12 @@ msgstr "minibuffer-auto-raise"
 #. type: defopt
 #: original_texis/frames.texi:2227
 msgid "If this is non-@code{nil}, activation of the minibuffer raises the frame that the minibuffer window is in."
-msgstr "これが非@code{nil}なら、ミニバッファーをアクティブにすることにより、ミニバッファーウィンドウのあるフレームが前面に移動される。"
+msgstr "これが非@code{nil}ならミニバッファーをアクティブにすることにより、ミニバッファーウィンドウのあるフレームが前面に移動される。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2232
 msgid "On window systems, you can also enable auto-raising (on frame selection) or auto-lowering (on frame deselection) using frame parameters.  @xref{Management Parameters}."
-msgstr "ウィンドウシステム上では、フレームパラメーターを使用して、(フレーム選択時に)auto-raising、(フレーム選択解除時に)auto-loweringを有効にできます。@ref{Management Parameters}を参照してください。"
+msgstr "ウィンドウシステム上ではフレームパラメーターを使用して、(フレーム選択時に)auto-raising、(フレーム選択解除時に)auto-loweringを有効にできます。@ref{Management Parameters}を参照してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:2233
@@ -4331,19 +4296,18 @@ msgstr "top frame"
 #. type: Plain text
 #: original_texis/frames.texi:2237
 msgid "The concept of raising and lowering frames also applies to text terminal frames.  On each text terminal, only the top frame is displayed at any one time."
-msgstr "フレームを前面または背面に移動するという概念は、テキスト端末のフレームにも適用できます。各テキスト端末上で、一度に表示されるのは、常に最前面のフレームだけです。"
+msgstr "フレームを前面や背面に移動するという概念は、テキスト端末のフレームにも適用できます。各テキスト端末上では一度に表示されるのは常に最前面のフレームだけです。"
 
 #. type: defun
 #: original_texis/frames.texi:2238
-#, fuzzy, no-wrap
-#| msgid "tty-top-frame terminal"
+#, no-wrap
 msgid "tty-top-frame &optional terminal"
-msgstr "tty-top-frame terminal"
+msgstr "tty-top-frame &optional terminal"
 
 #. type: defun
 #: original_texis/frames.texi:2243
 msgid "This function returns the top frame on @var{terminal}.  @var{terminal} should be a terminal object, a frame (meaning that frame's terminal), or @code{nil} (meaning the selected frame's terminal).  If it does not refer to a text terminal, the return value is @code{nil}."
-msgstr "この関数は、@var{terminal}上の最前面のフレームをリターンする。@var{terminal}は端末オブジェクト、フレーム(そのフレームの端末を意味する)、または@code{nil}(選択されたフレームの端末を意味する)であること。これがテキスト端末を参照しなければ、リターン値は@code{nil}となる。"
+msgstr "この関数は@var{terminal}上の最前面のフレームをリターンする。@var{terminal}は端末オブジェクト、フレーム(そのフレームの端末を意味する)、または@code{nil} (選択されたフレームの端末を意味する)であること。これがテキスト端末を参照しなければリターン値は@code{nil}。"
 
 #. type: cindex
 #: original_texis/frames.texi:2247
@@ -4365,7 +4329,7 @@ msgstr "current-frame-configuration"
 #. type: defun
 #: original_texis/frames.texi:2256
 msgid "This function returns a frame configuration list that describes the current arrangement of frames and their contents."
-msgstr "この関数は、フレームのカレント配置およびそのコンテンツを記述するフレーム構成のリストをリターンする。"
+msgstr "この関数はフレームのカレント配置とそのコンテンツを記述するフレーム構成のリストをリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2258
@@ -4376,12 +4340,12 @@ msgstr "set-frame-configuration configuration &optional nodelete"
 #. type: defun
 #: original_texis/frames.texi:2262
 msgid "This function restores the state of frames described in @var{configuration}.  However, this function does not restore deleted frames."
-msgstr "この関数は、フレームの状態を@var{configuration}の記述にリストアする。しかし、この関数は削除されたフレームはリストアしない。"
+msgstr "この関数はフレームの状態を@var{configuration}の記述にリストアする。ただしこの関数は削除されたフレームはリストアしない。"
 
 #. type: defun
 #: original_texis/frames.texi:2266
 msgid "Ordinarily, this function deletes all existing frames not listed in @var{configuration}.  But if @var{nodelete} is non-@code{nil}, the unwanted frames are iconified instead."
-msgstr "通常、この関数は@var{configuration}内にリストされない既存フレームすべてを削除する。しかし@var{nodelete}が非@code{nil}なら、希望しないそれらフレームはかわりにアイコン化される。"
+msgstr "この関数は通常は@var{configuration}内にリストされない既存フレームすべてを削除する。しかし@var{nodelete}が非@code{nil}なら、それらのフレームはかわりにアイコン化される。"
 
 #. type: cindex
 #: original_texis/frames.texi:2270
@@ -4392,12 +4356,12 @@ msgstr "mouse tracking"
 #. type: Plain text
 #: original_texis/frames.texi:2277
 msgid "Sometimes it is useful to @dfn{track} the mouse, which means to display something to indicate where the mouse is and move the indicator as the mouse moves.  For efficient mouse tracking, you need a way to wait until the mouse actually moves."
-msgstr "マウスを@dfn{トラック(track: 追跡)}するのが有用なことが時折あります。マウスのトラックとは、マウスの位置を示す何かを表示して、マウス移動とともにそのインジケーターを移動する、という意味です。効果的にマウスをトラックするためには、マウスが実際に移動するまで待機する手段が必要になります。"
+msgstr "マウスを@dfn{トラック(track: 追跡)}するのが有用なことが時折あります。マウスのトラックとはマウスの位置を示す何かを表示して、マウス移動とともにそのインジケーターを移動するという意味です。効果的にマウスをトラックするためには、マウスが実際に移動するまで待機する手段が必要になります。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2284
 msgid "The convenient way to track the mouse is to ask for events to represent mouse motion.  Then you can wait for motion by waiting for an event.  In addition, you can easily handle any other sorts of events that may occur.  That is useful, because normally you don't want to track the mouse forever---only until some other event, such as the release of a button."
-msgstr "マウスをトラックする便利なのは、マウスのモーション(motion: 移動)を表すイベントを問い合わせる方法です。その後は、そのイベントを待機することにより、モーションを待機できます。加えて、発生し得る他の類のイベントも、簡単に処理できます。ボタンのリリースのような何か他のイベントだけを待機してマウスを永久にトラックするは通常は望ましくないので、これは有用です。"
+msgstr "マウスをトラックするためには、マウスのモーション(motion: 移動)を表すイベントを問い合わせるのが便利な方法です。その後はそのイベントを待機することによりモーションを待機できます。それに加えて発生し得る他の類のイベントも簡単に処理できます。ボタンのリリースのような何か他のイベントだけを待機してマウスを永久にトラックすることは、通常は望ましくないのでこれは有用です。"
 
 #. type: defspec
 #: original_texis/frames.texi:2285
@@ -4408,17 +4372,17 @@ msgstr "track-mouse body@dots{}"
 #. type: defspec
 #: original_texis/frames.texi:2290
 msgid "This special form executes @var{body}, with generation of mouse motion events enabled.  Typically, @var{body} would use @code{read-event} to read the motion events and modify the display accordingly.  @xref{Motion Events}, for the format of mouse motion events."
-msgstr "このスペシャルフォームは、マウスモーションイベントの生成を有効にして、@var{body}を実行する。通常、@var{body}はモーションイベントを読み取るために@code{read-event}を使用し、それに対応して表示を変更する。マウスモーションイベントのフォーマットについては、@ref{Motion Events}を参照のこと。"
+msgstr "このスペシャルフォームはマウスモーションイベントの生成を有効にして@var{body}を実行する。@var{body}はモーションイベントを読み取るために通常は@code{read-event}を使用して、それに対応して表示を変更する。マウスモーションイベントのフォーマットについては@ref{Motion Events}を参照のこと。"
 
 #. type: defspec
 #: original_texis/frames.texi:2295
 msgid "The value of @code{track-mouse} is that of the last form in @var{body}.  You should design @var{body} to return when it sees the up-event that indicates the release of the button, or whatever kind of event means it is time to stop tracking."
-msgstr "@code{track-mouse}の値は、@var{body}内の最後のフォームの値である。ボタンのリリースを示すup-event、またはトラックを止めるべきタイミングを意味する類のイベントを確認した際にはリターンするよう、@var{body}をデザインするべきである。"
+msgstr "@code{track-mouse}の値は@var{body}内の最後のフォームの値。ボタンのリリースを示すup-event、またはトラックを止めるべきタイミングを意味する類のイベントを確認した際にはリターンするように@var{body}をデザインすること。"
 
 #. type: defspec
 #: original_texis/frames.texi:2308
 msgid "The @code{track-mouse} form causes Emacs to generate mouse motion events by binding the variable @code{track-mouse} to a non-@code{nil} value.  If that variable has the special value @code{dragging}, it additionally instructs the display engine to refrain from changing the shape of the mouse pointer.  This is desirable in Lisp programs that require mouse dragging across large portions of Emacs display, which might otherwise cause the mouse pointer to change its shape according to the display portion it hovers on (@pxref{Pointer Shape}).  Therefore, Lisp programs that need the mouse pointer to retain its original shape during dragging should bind @code{track-mouse} to the value @code{dragging} at the beginning of their @var{body}."
-msgstr ""
+msgstr "@code{track-mouse}フォームでは変数@code{track-mouse}を非@code{nil}値にバインドすることにより、Emacsにマウスモーションイベントを生成させる。この変数が特別な値@code{dragging}をもつなら、ディスプレーエンジンにマウスポインターのシェイプ(形状)の変更を控えるように追加で指示する。これはEmacsが表示する大きな範囲を横断するマウスドラッグを要するLispプログラムでは、そうしなければ表示箇所に応じてマウスポインターのシェイプが変更されてしまうので望ましいだろう(@ref{Pointer Shape}を参照)。したがってドラッグ中にオリジナルのマウスポインターシェイプを保つ必要があるLispプログラムは、@var{body}の先頭で@code{track-mouse}を値@code{dragging}にバインドすること。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2313
@@ -4428,7 +4392,7 @@ msgstr "マウスモーションをトラックする通常の目的は、それ
 #. type: Plain text
 #: original_texis/frames.texi:2318
 msgid "In many cases, you can avoid the need to track the mouse by using the @code{mouse-face} text property (@pxref{Special Properties}).  That works at a much lower level and runs more smoothly than Lisp-level mouse tracking."
-msgstr "多くの場合は、テキストプロパティ@code{mouse-face}(@ref{Special Properties}を参照)を使用することにより、マウスをトラックする必要性を回避できます。これは、より低レベルで機能し、かつLispレベルのマウストラッキングよりスムーズに実行されます。"
+msgstr "多くの場合はテキストプロパティ@code{mouse-face}(@ref{Special Properties}を参照)を使用することにより、マウスをトラックする必要性を回避できます。これはより低レベルで機能して、かつLispレベルのマウストラッキングよりスムーズに実行されます。"
 
 # @ignore
 # @c These are not implemented yet.
@@ -4535,7 +4499,7 @@ msgstr "position of mouse"
 #. type: Plain text
 #: original_texis/frames.texi:2361
 msgid "The functions @code{mouse-position} and @code{set-mouse-position} give access to the current position of the mouse."
-msgstr "関数@code{mouse-position}および@code{set-mouse-position}は、マウスのカレント位置にたいするアクセスを提供します。"
+msgstr "関数@code{mouse-position}と@code{set-mouse-position}はマウスのカレント位置にたいするアクセスを提供します。"
 
 #. type: defun
 #: original_texis/frames.texi:2362
@@ -4545,10 +4509,8 @@ msgstr "mouse-position"
 
 #. type: defun
 #: original_texis/frames.texi:2369
-#, fuzzy
-#| msgid "This function returns a description of the position of the mouse.  The value looks like @code{(@var{frame} @var{x} . @var{y})}, where @var{x} and @var{y} are integers giving the position in characters relative to the top left corner of the inside of @var{frame}."
 msgid "This function returns a description of the position of the mouse.  The value looks like @code{(@var{frame} @var{x} . @var{y})}, where @var{x} and @var{y} are integers giving the (possibly rounded) position in multiples of the default character size of @var{frame} (@pxref{Frame Font}) relative to the native position of @var{frame} (@pxref{Frame Geometry})."
-msgstr "この関数は、マウス位置の記述をリターンする。値は@code{(@var{frame} @var{x} . @var{y})}のような形式で、@var{x}と@var{y}は@var{frame}内部の左上隅から相対的な位置を文字単位で与える整数である。"
+msgstr "この関数はマウス位置の記述子をリターンする。値は@code{(@var{frame} @var{x} . @var{y})}のような形式であり、@var{x}と@var{y}は@var{frame}のネイティブ位置(@ref{Frame Geometry}を参照)から相対的に、@var{frame}のデフォルト文字サイズ(@ref{Frame Font}を参照)の単位で位置を与える整数(丸められている可能性あり)。"
 
 #. type: defvar
 #: original_texis/frames.texi:2371
@@ -4559,12 +4521,12 @@ msgstr "mouse-position-function"
 #. type: defvar
 #: original_texis/frames.texi:2376
 msgid "If non-@code{nil}, the value of this variable is a function for @code{mouse-position} to call.  @code{mouse-position} calls this function just before returning, with its normal return value as the sole argument, and it returns whatever this function returns to it."
-msgstr "非@code{nil}なら、この変数の値は@code{mouse-position}にたいして呼び出される関数である。@code{mouse-position}はリターン直前には、自身の通常のリターン値を唯一の引数としてこの関数を呼び出し、それが何であれその関数がリターンしたものをリターンする。"
+msgstr "この変数の値は非@code{nil}なら@code{mouse-position}にたいして呼び出される関数。@code{mouse-position}はリターン直前に、自身の通常のリターン値を唯一の引数としてこの関数を呼び出して、それが何であれその関数がリターンした値をリターンする。"
 
 #. type: defvar
 #: original_texis/frames.texi:2379
 msgid "This abnormal hook exists for the benefit of packages like @file{xt-mouse.el} that need to do mouse handling at the Lisp level."
-msgstr "このアブノーマルフックは、@file{xt-mouse.el}のようにLispレベルでマウス処理を行う必要があるパッケージのために存在する。"
+msgstr "このアブノーマルフックは@file{xt-mouse.el}のようにLispレベルでマウス処理を行う必要があるパッケージのために存在する。"
 
 #. type: defun
 #: original_texis/frames.texi:2381
@@ -4574,17 +4536,13 @@ msgstr "set-mouse-position frame x y"
 
 #. type: defun
 #: original_texis/frames.texi:2387
-#, fuzzy
-#| msgid "This function @dfn{warps the mouse} to position @var{x}, @var{y} in frame @var{frame}.  The arguments @var{x} and @var{y} are integers, giving the position in characters relative to the top left corner of the inside of @var{frame}.  If @var{frame} is not visible, this function does nothing.  The return value is not significant."
 msgid "This function @dfn{warps the mouse} to position @var{x}, @var{y} in frame @var{frame}.  The arguments @var{x} and @var{y} are integers, giving the position in multiples of the default character size of @var{frame} (@pxref{Frame Font}) relative to the native position of @var{frame} (@pxref{Frame Geometry})."
-msgstr "この関数は、フレーム@var{frame}内の位置@var{x}、@var{y}に@dfn{マウスをワープ}させる。引数@var{x}と@var{y}は、@var{frame}内部の左上隅から相対的な位置を文字単位で与える整数である。@var{frame}が不可視なら、この関数は何も行わない。リターン値に意味はない。"
+msgstr "この関数はフレーム@var{frame}内の位置@var{x}、@var{y}に@dfn{マウスをワープ(warps the mouse)}する。引数@var{x}と@var{y}は@var{frame}のネイティブ位置(@ref{Frame Geometry}を参照)から相対的に、@var{frame}のデフォルト文字サイズ(@ref{Frame Font}を参照)の単位で位置を与える整数(丸められている可能性あり)。"
 
 #. type: defun
 #: original_texis/frames.texi:2391
-#, fuzzy
-#| msgid "If @var{frame} is not visible, this function does nothing.  The return value is not significant."
 msgid "The resulting mouse position is constrained to the native frame of @var{frame}.  If @var{frame} is not visible, this function does nothing.  The return value is not significant."
-msgstr "@var{frame}が不可視なら、この関数は何も行わない。リターン値に意味はない。"
+msgstr "結果となるマウス位置は@var{frame}のネイティブフレームに拘束される。この関数は@var{frame}が不可視なら何も行わない。リターン値に意味はない。"
 
 #. type: defun
 #: original_texis/frames.texi:2393
@@ -4595,7 +4553,7 @@ msgstr "mouse-pixel-position"
 #. type: defun
 #: original_texis/frames.texi:2396
 msgid "This function is like @code{mouse-position} except that it returns coordinates in units of pixels rather than units of characters."
-msgstr "この関数は@code{mouse-position}と似ているが、文字単位ではなくピクセル単位の座標をリターンする。"
+msgstr "この関数は@code{mouse-position}と似ているが文字単位ではなくピクセル単位の座標をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2398
@@ -4605,51 +4563,45 @@ msgstr "set-mouse-pixel-position frame x y"
 
 #. type: defun
 #: original_texis/frames.texi:2402
-#, fuzzy
-#| msgid "This function warps the mouse like @code{set-mouse-position} except that @var{x} and @var{y} are in units of pixels rather than units of characters.  These coordinates are not required to be within the frame."
 msgid "This function warps the mouse like @code{set-mouse-position} except that @var{x} and @var{y} are in units of pixels rather than units of characters."
-msgstr "この関数は@code{set-mouse-position}のようにマウスをワープするが、@var{x}と@var{y}が文字単位ではなくピクセル単位であることを除く。これらの座標が、そのフレーム内にあることは要求されない。"
+msgstr "この関数は@code{set-mouse-position}のようにマウスをワープするが、@var{x}と@var{y}が文字単位ではなくピクセル単位である点が異なる。"
 
 #. type: defun
 #: original_texis/frames.texi:2406
-#, fuzzy
-#| msgid "If @var{frame} is not visible, this function does nothing.  The return value is not significant."
 msgid "The resulting mouse position is not constrained to the native frame of @var{frame}.  If @var{frame} is not visible, this function does nothing.  The return value is not significant."
-msgstr "@var{frame}が不可視なら、この関数は何も行わない。リターン値に意味はない。"
+msgstr "結果となるマウス位置は@var{frame}のネイティブフレームに拘束される。この関数は@var{frame}が不可視なら何も行わない。リターン値に意味はない。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2410
 msgid "On a graphical terminal the following two functions allow the absolute position of the mouse cursor to be retrieved and set."
-msgstr ""
+msgstr "フラフィカルな端末上では、以下の2つの関数によりマウスカーソルの絶対位置の取得とセットができます。"
 
 #. type: defun
 #: original_texis/frames.texi:2411
-#, fuzzy, no-wrap
-#| msgid "mouse-pixel-position"
+#, no-wrap
 msgid "mouse-absolute-pixel-position"
-msgstr "mouse-pixel-position"
+msgstr "mouse-absolute-pixel-position"
 
 #. type: defun
 #: original_texis/frames.texi:2415
 msgid "This function returns a cons cell (@var{x} . @var{y}) of the coordinates of the mouse cursor position in pixels, relative to a position (0, 0) of the selected frame's display."
-msgstr ""
+msgstr "この関数は選択されたフレームのディスプレーの位(0, 0)から相対的に、マウスカーソルの位置の座標をピクセル単位のコンスセル(@var{x} . @var{y})でリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2417
-#, fuzzy, no-wrap
-#| msgid "set-mouse-pixel-position frame x y"
+#, no-wrap
 msgid "set-mouse-absolute-pixel-position x y"
-msgstr "set-mouse-pixel-position frame x y"
+msgstr "set-mouse-absolute-pixel-position x y"
 
 #. type: defun
 #: original_texis/frames.texi:2421
 msgid "This function moves the mouse cursor to the position (@var{x}, @var{y}).  The coordinates @var{x} and @var{y} are interpreted in pixels relative to a position (0, 0) of the selected frame's display."
-msgstr ""
+msgstr "この関数はマウスカーソルを位置(@var{x}, @var{y})に移動する。座標@var{x}と@var{y}は、選択されたフレームのディスプレーの位置(0, 0)から相対的なピクセル値と解釈される。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2425
 msgid "The following function can tell whether the mouse cursor is currently visible on a frame:"
-msgstr ""
+msgstr "以下の関数はフレーム上のマウスカーソルがレントで可視かどうかを確認します:"
 
 #. type: defun
 #: original_texis/frames.texi:2426
@@ -4659,10 +4611,8 @@ msgstr "frame-pointer-visible-p &optional frame"
 
 #. type: defun
 #: original_texis/frames.texi:2433
-#, fuzzy
-#| msgid "This predicate function returns non-@code{nil} if the mouse pointer displayed on @var{frame} is visible; otherwise it returns @code{nil}.  @var{frame} omitted or @code{nil} means the selected frame.  This is useful when @code{make-pointer-invisible} is set to @code{t}: it allows to know if the pointer has been hidden.  @xref{Mouse Avoidance,,,emacs, The Emacs Manual}."
 msgid "This predicate function returns non-@code{nil} if the mouse pointer displayed on @var{frame} is visible; otherwise it returns @code{nil}.  @var{frame} omitted or @code{nil} means the selected frame.  This is useful when @code{make-pointer-invisible} is set to @code{t}: it allows you to know if the pointer has been hidden.  @xref{Mouse Avoidance,,,emacs, The Emacs Manual}."
-msgstr "この述語関数は、@var{frame}上に表示されたマウスポインターが可視なら非@code{nil}、それ以外は@code{nil}をリターンする。@var{frame}が省略または@code{nil}なら、それは選択されたフレームを意味する。これは、@code{make-pointer-invisible}が@code{t}にセットされているとき有用である。これにより、ポインターが隠されていることを知ることができる。@ref{Mouse Avoidance,,,emacs, The Emacs Manual}を参照のこと。"
+msgstr "この述語関数は@var{frame}上に表示されたマウスポインターが可視なら非@code{nil}、それ以外は@code{nil}をリターンする。@var{frame}が省略または@code{nil}ならそれは選択されたフレームを意味する。これは@code{make-pointer-invisible}が@code{t}にセットされているときに有用。これによりポインターが隠されていることを知ることができる。@ref{Mouse Avoidance,,,emacs, The Emacs Manual}を参照のこと。"
 
 #. type: cindex
 #: original_texis/frames.texi:2439
@@ -4673,7 +4623,7 @@ msgstr "menus, popup"
 #. type: Plain text
 #: original_texis/frames.texi:2445
 msgid "A Lisp program can pop up a menu so that the user can choose an alternative with the mouse.  On a text terminal, if the mouse is not available, the user can choose an alternative using the keyboard motion keys---@kbd{C-n}, @kbd{C-p}, or up- and down-arrow keys."
-msgstr "Lispプログラムはポップアップメニューを表示できるので、ユーザーはマウスで候補を選択できます。テキスト端末上では、マウスが利用不可なら、キーボードのモーションキー@kbd{C-n}、@kbd{C-p}、上矢印キー、下矢印キーで候補を選択できます。"
+msgstr "Lispプログラムがポップアップメニューを表示して、ユーザーがマウスで候補を選択できます。テキスト端末上では、マウスが利用不可ならキーボードのモーションキー@kbd{C-n}や@kbd{C-p}、上矢印キーや下矢印キーで候補を選択できます。"
 
 #. type: defun
 #: original_texis/frames.texi:2446
@@ -4684,12 +4634,12 @@ msgstr "x-popup-menu position menu"
 #. type: defun
 #: original_texis/frames.texi:2449
 msgid "This function displays a pop-up menu and returns an indication of what selection the user makes."
-msgstr "この関数は、ポップアップメニューを表示して、ユーザーが何を選択したかの指標をリターンする。"
+msgstr "この関数はポップアップメニューを表示して、ユーザーが何を選択したかの指標をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2454
 msgid "The argument @var{position} specifies where on the screen to put the top left corner of the menu.  It can be either a mouse button event (which says to put the menu where the user actuated the button) or a list of this form:"
-msgstr "引数@var{position}は、メニュー左上隅をスクリーン上どこに置くか指定する。これはマウスボタンイベント(ユーザーがボタンを操作した位置にメニューを置くよう告げる)、または以下の形式のリストのいずれかである:"
+msgstr "引数@var{position}には、メニュー左上隅をスクリーン上のどこに置くか指定する。これはマウスボタンイベント(ユーザーがボタンを操作した位置にメニューを置くよう指示する)、または以下の形式のリストのいずれか:"
 
 #. type: example
 #: original_texis/frames.texi:2457
@@ -4700,22 +4650,22 @@ msgstr "((@var{xoffset} @var{yoffset}) @var{window})\n"
 #. type: defun
 #: original_texis/frames.texi:2463
 msgid "where @var{xoffset} and @var{yoffset} are coordinates, measured in pixels, counting from the top left corner of @var{window}.  @var{window} may be a window or a frame."
-msgstr "ここで、@var{xoffset}と@var{yoffset}は@var{window}左上隅からピクセル単位で測られた座標である。@var{window}はウィンドウ、またはフレームかもしれない。"
+msgstr "ここで@var{xoffset}と@var{yoffset}は@var{window}の左上隅からピクセル単位で測られた座標である。@var{window}はウィンドウかフレーム。"
 
 #. type: defun
 #: original_texis/frames.texi:2470
 msgid "If @var{position} is @code{t}, it means to use the current mouse position (or the top-left corner of the frame if the mouse is not available on a text terminal).  If @var{position} is @code{nil}, it means to precompute the key binding equivalents for the keymaps specified in @var{menu}, without actually displaying or popping up the menu."
-msgstr "@var{position}が@code{t}の場合、それはマウスのカレント位置の使用を意味する(テキスト端末上でマウスが利用不可ならフレーム左上隅)。@var{position}が@code{nil}なら、それは実際にメニューをポップアップせずに、@var{menu}内で指定されたキーマップと等価なキーバインディングを事前に計算することを意味する。"
+msgstr "@var{position}が@code{t}なら、それはマウスのカレント位置の使用を意味する(テキスト端末上でマウスが利用不可ならフレーム左上隅)。@var{position}が@code{nil}なら、それは実際にメニューをポップアップせずに、@var{menu}内で指定されたキーマップと等価なキーバインディングを事前に計算することを意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:2481
 msgid "The argument @var{menu} says what to display in the menu.  It can be a keymap or a list of keymaps (@pxref{Menu Keymaps}).  In this case, the return value is the list of events corresponding to the user's choice.  This list has more than one element if the choice occurred in a submenu.  (Note that @code{x-popup-menu} does not actually execute the command bound to that sequence of events.)  On text terminals and toolkits that support menu titles, the title is taken from the prompt string of @var{menu} if @var{menu} is a keymap, or from the prompt string of the first keymap in @var{menu} if it is a list of keymaps (@pxref{Defining Menus})."
-msgstr "引数@var{menu}は、メニュー内で何を表示するかを告げる。これはキーマップまたはキーマップのリストを指定できる(@ref{Menu Keymaps}を参照)。この場合、リターン値はユーザー選択に対応するイベントのリストである。選択がサブメニュー内で発生した場合、このリストには複数の要素がある(@code{x-popup-menu}はそのイベントシーケンスにバインドされたコマンドを実際には実行しないことに注意)。テキスト端末、およびメニュータイトルをサポートするツールキットでは、@var{menu}がキーマップならタイトルは@var{menu}のプロンプト文字列、@var{menu}がキーマップのリストなら最初のキーマップのプロンプト文字列から取得される(@ref{Defining Menus}を参照)。"
+msgstr "引数@var{menu}はメニュー内で何を表示するかを意味する。これはキーマップかキーマップのリストを指定できる(@ref{Menu Keymaps}を参照)。この場合にはリターン値はユーザー選択に対応するイベントのリスト。選択がサブメニュー内で発生した場合には、このリストには複数の要素がある(@code{x-popup-menu}はそのイベントシーケンスにバインドされたコマンドを実際には実行しないことに注意)。テキスト端末やメニュータイトルをサポートするツールキットでは、@var{menu}がキーマップならタイトルは@var{menu}のプロンプト文字列、@var{menu}がキーマップのリストなら最初のキーマップのプロンプト文字列から取得される(@ref{Defining Menus}を参照)。"
 
 #. type: defun
 #: original_texis/frames.texi:2483
 msgid "Alternatively, @var{menu} can have the following form:"
-msgstr "かわりに、@var{menu}は以下の形式をもつこともできる:"
+msgstr "かわりに@var{menu}は以下の形式をもつこともできる:"
 
 #. type: example
 #: original_texis/frames.texi:2486
@@ -4726,7 +4676,7 @@ msgstr "(@var{title} @var{pane1} @var{pane2}...)\n"
 #. type: defun
 #: original_texis/frames.texi:2490
 msgid "where each pane is a list of form"
-msgstr "ここで、それぞれのpaneは以下の形式のリストである"
+msgstr "ここでpaneはそれぞれ以下の形式のリストである"
 
 #. type: example
 #: original_texis/frames.texi:2493
@@ -4737,27 +4687,27 @@ msgstr "(@var{title} @var{item1} @var{item2}...)\n"
 #. type: defun
 #: original_texis/frames.texi:2501
 msgid "Each @var{item} should be a cons cell, @code{(@var{line} . @var{value})}, where @var{line} is a string and @var{value} is the value to return if that @var{line} is chosen.  Unlike in a menu keymap, a @code{nil} @var{value} does not make the menu item non-selectable.  Alternatively, each @var{item} can be a string rather than a cons cell; this makes a non-selectable menu item."
-msgstr "それぞれ@var{item}は、コンスセル@code{(@var{line} . @var{value})}であること。ここで@var{line}は文字列、@var{value}は@var{line}が選択された場合にリターンされる値である。メニューキーマップと異なり、@code{nil}の@var{value}は選択不可のメニューアイテムを作成しない。かわりに、それぞれの@var{item}にコンスセルではなく文字列を指定できる。これは選択不可のメニューアイテムを作成する。"
+msgstr "@var{item}はそれぞれコンスセル@code{(@var{line} . @var{value})}であること。ここで@var{line}は文字列、@var{value}は@var{line}が選択された場合にリターンされる値。メニューキーマップとは異なり@code{nil}の@var{value}は選択不可のメニューアイテムを作成しない。かわりに@var{item}にコンスセルではなく文字列を指定できる。これは選択不可のメニューアイテムを作成する。"
 
 #. type: defun
 #: original_texis/frames.texi:2508
 msgid "If the user gets rid of the menu without making a valid choice, for instance by clicking the mouse away from a valid choice or by typing @kbd{C-g}, then this normally results in a quit and @code{x-popup-menu} does not return.  But if @var{position} is a mouse button event (indicating that the user invoked the menu with the mouse) then no quit occurs and @code{x-popup-menu} returns @code{nil}."
-msgstr "たとえば有効な選択からマウスを外してクリックしたり、@kbd{C-g}をタイプすることにより、有効な選択を行うことなくユーザーがメニューを取り除いた場合は、通常はquitして@code{x-popup-menu}はリターンしない。しかし、@var{position}がマウスボタンイベント(ユーザーがマウスでメニューを呼び出したことを示す)なら、quitは起こらず@code{x-popup-menu}はリターンする。"
+msgstr "たとえば有効な選択からマウスを外してクリックしたり、@kbd{C-g}をタイプすることにより、有効な選択を行うことなくユーザーがメニューを取り除いた場合は、通常はquitして@code{x-popup-menu}はリターンしない。しかし@var{position}がマウスボタンイベント(ユーザーがマウスでメニューを呼び出したことを示す)なら、quitは発生せずに@code{x-popup-menu}はリターンする。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2517
 msgid "@strong{Usage note:} Don't use @code{x-popup-menu} to display a menu if you could do the job with a prefix key defined with a menu keymap.  If you use a menu keymap to implement a menu, @kbd{C-h c} and @kbd{C-h a} can see the individual items in that menu and provide help for them.  If instead you implement the menu by defining a command that calls @code{x-popup-menu}, the help facilities cannot know what happens inside that command, so they cannot give any help for the menu's items."
-msgstr "@strong{使用上の注意: }メニューキーマップで定義したプレフィクスキー処理を行えるなら、メニューの表示に@code{x-popup-menu}を使用しないでください。メニューの実装にメニューキーマップを使用する場合は、@kbd{C-h c}および@kbd{C-h a}でメニュー内の個別アイテムの確認、およびそれらにたいするヘルプを提供できます。かわりに@code{x-popup-menu}を呼び出すコマンドを定義することによりメニューを実装した場合、ヘルプ機能はそのコマンド内部で何が起こっているか知ることができず、そのメニューアイテムのヘルプを何も与えられません。"
+msgstr "@strong{使用上の注意: }メニューキーマップで定義したプレフィクスキー処理を行える場合には、メニューの表示に@code{x-popup-menu}を使用しないでください。メニューの実装にメニューキーマップを使用する場合には、@kbd{C-h c}と@kbd{C-h a}でメニュー内の個別アイテムの確認、およびそれらにたいするヘルプを提供できます。かわりに@code{x-popup-menu}を呼び出すコマンドを定義することによりメニューを実装した場合には、ヘルプ機能はそのコマンド内部で何が起こっているか知ることができず、そのメニューアイテムのヘルプを何も与えることはできません。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2525
 msgid "The menu bar mechanism, which lets you switch between submenus by moving the mouse, cannot look within the definition of a command to see that it calls @code{x-popup-menu}.  Therefore, if you try to implement a submenu using @code{x-popup-menu}, it cannot work with the menu bar in an integrated fashion.  This is why all menu bar submenus are implemented with menu keymaps within the parent menu, and never with @code{x-popup-menu}.  @xref{Menu Bar}."
-msgstr "マウス移動によりサブメニュー間を切り替えるメニューバーのメカニズムは、それが@code{x-popup-menu}を呼び出すか確認するために、コマンドの定義を見ることができません。したがって、@code{x-popup-menu}を使用してサブメニューの実装を試みた場合、それは統合された方式でメニューバーとともに機能しません。メニューバーのすべてのサブメニューは、親メニューのメニューキーマップにより実装され、決して@code{x-popup-menu}で実装されないのは、これが理由です。@ref{Menu Bar}を参照してください。"
+msgstr "マウス移動によってサブメニュー間を切り替えるメニューバーのメカニズムは、それが@code{x-popup-menu}を呼び出すか確認するためにコマンドの定義を見ることができません。したがって@code{x-popup-menu}を使用してサブメニューの実装を試みた場合には、それは統合された方式でメニューバーとともに機能しません。メニューバーのすべてのサブメニューは親メニューのメニューキーマップにより実装されて、決して@code{x-popup-menu}で実装されないのはこれが理由です。@ref{Menu Bar}を参照してください。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2530
 msgid "If you want a menu bar submenu to have contents that vary, you should still use a menu keymap to implement it.  To make the contents vary, add a hook function to @code{menu-bar-update-hook} to update the contents of the menu keymap as necessary."
-msgstr "メニューバーのサブメニューのコンテンツを変化させたい場合にも、その実装には依然としてメニューキーマップを使用するべきです。コンテンツを変化させるためには、必要に応じてメニューキーマップのコンテンツを更新するために、フック関数を@code{menu-bar-update-hook}に追加してください。"
+msgstr "メニューバーのサブメニューのコンテンツを変化させたい場合にも、その実装には依然としてメニューキーマップを使用するべきです。コンテンツを変化させるためには、必要に応じてメニューキーマップのコンテンツを更新するためにフック関数を@code{menu-bar-update-hook}に追加してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:2533
@@ -4768,7 +4718,7 @@ msgstr "dialog boxes"
 #. type: Plain text
 #: original_texis/frames.texi:2543
 msgid "A dialog box is a variant of a pop-up menu---it looks a little different, it always appears in the center of a frame, and it has just one level and one or more buttons.  The main use of dialog boxes is for asking questions that the user can answer with ``yes'', ``no'', and a few other alternatives.  With a single button, they can also force the user to acknowledge important information.  The functions @code{y-or-n-p} and @code{yes-or-no-p} use dialog boxes instead of the keyboard, when called from commands invoked by mouse clicks."
-msgstr "ダイアログボックスとはポップアップメニューの一種です。外見は多少異なり、常にフレーム中央に表示され、階層を1つしかもたず1つ以上のボタンがあります。ユーザーが``yes''、``no''、および別の少数の候補で応答ができる質問を尋ねるのが、ダイアログボックスの主な用途です。単一のボタンでは、ユーザーに重要な情報の確認を強いることもできます。関数@code{y-or-n-p}および@code{yes-or-no-p}は、マウスのクリックにより呼び出されたコマンドから呼び出された際は、キーボードのかわりにダイアログボックスを使用します。"
+msgstr "ダイアログボックスとはポップアップメニューの一種です。外見は多少異なり常にフレーム中央に表示されて、階層を1つしかもたず1つ以上のボタンがあります。ユーザーが``yes''、``no''、および別のいくつかの候補で応答ができる質問を尋ねるのがダイアログボックスの主な用途です。単一のボタンではユーザーに重要な情報の確認を強いることもできます。関数@code{y-or-n-p}や@code{yes-or-no-p}は、マウスのクリックで呼び出されたコマンドから呼び出された際には、キーボードのかわりにダイアログボックスを使用します。"
 
 #. type: defun
 #: original_texis/frames.texi:2544
@@ -4779,7 +4729,7 @@ msgstr "x-popup-dialog position contents &optional header"
 #. type: defun
 #: original_texis/frames.texi:2548
 msgid "This function displays a pop-up dialog box and returns an indication of what selection the user makes.  The argument @var{contents} specifies the alternatives to offer; it has this format:"
-msgstr "この関数は、ポップアップダイアログボックスを表示して、ユーザーが何を選択したかの指標をリターンする。引数@var{contents}は、提供するための候補を指定する。これは、以下のフォーマットをもつ:"
+msgstr "この関数はポップアップダイアログボックスを表示してユーザーが何を選択したかの指標をリターンする。引数@var{contents}は提供する選択肢を指定する。これは以下のフォーマットをもつ:"
 
 #. type: example
 #: original_texis/frames.texi:2551
@@ -4790,42 +4740,42 @@ msgstr "(@var{title} (@var{string} . @var{value})@dots{})\n"
 #. type: defun
 #: original_texis/frames.texi:2556
 msgid "which looks like the list that specifies a single pane for @code{x-popup-menu}."
-msgstr "これは、@code{x-popup-menu}にたいして単一paneを指定するリストのように見える。"
+msgstr "これは@code{x-popup-menu}にたいして単一のpaneを指定するリストのように見える。"
 
 #. type: defun
 #: original_texis/frames.texi:2558
 msgid "The return value is @var{value} from the chosen alternative."
-msgstr "リターン値は、選択された候補の@var{value}である。"
+msgstr "リターン値は選択された候補の@var{value}。"
 
 #. type: defun
 #: original_texis/frames.texi:2562
 msgid "As for @code{x-popup-menu}, an element of the list may be just a string instead of a cons cell @code{(@var{string} . @var{value})}.  That makes a box that cannot be selected."
-msgstr "@code{x-popup-menu}の場合と同様、このリストの要素はコンスセル@code{(@var{string} . @var{value})}のかわりに、単なる文字列かもしれない。これは、選択不可のボックスを作成する。"
+msgstr "@code{x-popup-menu}の場合と同じように、このリストの要素はコンスセル@code{(@var{string} . @var{value})}のかわりに単なる文字列かもしれない。これは選択不可のボックスを作成する。"
 
 #. type: defun
 #: original_texis/frames.texi:2568
 msgid "If @code{nil} appears in the list, it separates the left-hand items from the right-hand items; items that precede the @code{nil} appear on the left, and items that follow the @code{nil} appear on the right.  If you don't include a @code{nil} in the list, then approximately half the items appear on each side."
-msgstr "このリスト内に@code{nil}がある場合、それは左手側と右手側のアイテムを分ける。つまり、@code{nil}より前のアイテムは左、@code{nil}より後のアイテムは右に表示される。リスト内に@code{nil}を含めない場合は、およそ半数づつが両サイドに表示される。"
+msgstr "このリスト内に@code{nil}がある場合には、それは左手側と右手側のアイテムを分ける。つまり@code{nil}より前のアイテムは左、@code{nil}より後のアイテムは右に表示される。リスト内に@code{nil}を含めない場合には、およそ半数ずつが両サイドに表示される。"
 
 #. type: defun
 #: original_texis/frames.texi:2573
 msgid "Dialog boxes always appear in the center of a frame; the argument @var{position} specifies which frame.  The possible values are as in @code{x-popup-menu}, but the precise coordinates or the individual window don't matter; only the frame matters."
-msgstr "ダイアログボックスは、常にフレームの中央に表示される。引数@var{position}は、どのフレームかを指定する。可能な値は@code{x-popup-menu}の場合と同様だが、正確な座標や個別のウィンドウは問題ではなく、フレームだけが問題となる。"
+msgstr "ダイアログボックスは常にフレームの中央に表示される。引数@var{position}はどのフレームかを指定する。可能な値は@code{x-popup-menu}の場合と同様だが、正確な座標や個別のウィンドウは問題ではなくフレームだけが問題となる。"
 
 #. type: defun
 #: original_texis/frames.texi:2578
 msgid "If @var{header} is non-@code{nil}, the frame title for the box is @samp{Information}, otherwise it is @samp{Question}.  The former is used for @code{message-box} (@pxref{message-box}).  (On text terminals, the box title is not displayed.)"
-msgstr "@var{header}が非@code{nil}ならボックスのフレームタイトルは@samp{Information}、それ以外は@samp{Question}になる。前者は@code{message-box}(@pxref{message-box}を参照)にたいして使用される(テキスト端末上ではボックスタイトルは表示されない)。"
+msgstr "@var{header}が非@code{nil}ならボックスのフレームタイトルは@samp{Information}、それ以外は@samp{Question}になる。前者は@code{message-box} (@ref{message-box}を参照)にたいして使用される(テキスト端末上ではボックスタイトルは表示されない)。"
 
 #. type: defun
 #: original_texis/frames.texi:2582
 msgid "In some configurations, Emacs cannot display a real dialog box; so instead it displays the same items in a pop-up menu in the center of the frame."
-msgstr "いくつかの構成では、Emacsは本当のダイアログボックスを表示できないので、かわりにフレーム中央のポップアップメニュー内に同じアイテムを表示する。"
+msgstr "いくつかの構成ではEmacsは本当のダイアログボックスを表示できないので、かわりにフレーム中央のポップアップメニュー内に同じアイテムを表示する。"
 
 #. type: defun
 #: original_texis/frames.texi:2586
 msgid "If the user gets rid of the dialog box without making a valid choice, for instance using the window manager, then this produces a quit and @code{x-popup-dialog} does not return."
-msgstr "たとえばウィンドウマネージャーを使用して、有効な選択を行うことなくユーザーがダイアログボックスを取り除いた場合は、通常はquitして@code{x-popup-dialog}はリターンしない。"
+msgstr "たとえばウィンドウマネージャーを使用して有効な選択を行うことなくユーザーがダイアログボックスを取り除いた場合には、通常はquitして@code{x-popup-dialog}はリターンしない。"
 
 #. type: cindex
 #: original_texis/frames.texi:2590
@@ -4842,12 +4792,12 @@ msgstr "mouse pointer shape"
 #. type: Plain text
 #: original_texis/frames.texi:2600
 msgid "You can specify the mouse pointer style for particular text or images using the @code{pointer} text property, and for images with the @code{:pointer} and @code{:map} image properties.  The values you can use in these properties are @code{text} (or @code{nil}), @code{arrow}, @code{hand}, @code{vdrag}, @code{hdrag}, @code{modeline}, and @code{hourglass}.  @code{text} stands for the usual mouse pointer style used over text."
-msgstr "テキストプロパティ@code{pointer}や、イメージならイメージプロパティ@code{:pointer}および@code{:map}を使用して、特定のテキストやイメージにたいしてマウスポインターのスタイルを指定できます。これらのプロパティに使用できる値は@code{text}(または@code{nil})、@code{arrow}、@code{hand}、@code{vdrag}、@code{hdrag}、@code{modeline}、@code{hourglass}です。@code{text}は、テキスト上で使用される、通常のマウスポインタースタイルを意味します。"
+msgstr "テキストプロパティ@code{pointer}や、イメージならイメージプロパティ@code{:pointer}と@code{:map}を使用して、特定のテキストやイメージにたいしてマウスポインターのスタイルを指定できます。これらのプロパティに使用できる値は@code{text} (または@code{nil})、@code{arrow}、@code{hand}、@code{vdrag}、@code{hdrag}、@code{modeline}、@code{hourglass}です。@code{text}はテキスト上で使用される通常のマウスポインタースタイルを意味します。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2605
 msgid "Over void parts of the window (parts that do not correspond to any of the buffer contents), the mouse pointer usually uses the @code{arrow} style, but you can specify a different style (one of those above) by setting @code{void-text-area-pointer}."
-msgstr "ウィンドウの空部分(void parts: バッファーコンテンツのどの部分にも対応しない部分)の上では、マウスポインターは通常@code{arrow}スタイルを使用しますが、@code{void-text-area-pointer}をセットすることにより、異なるスタイルを指定できます。"
+msgstr "ウィンドウの空部分(void parts: バッファーコンテンツのどの部分にも対応しない部分)の上では、マウスポインターは通常@code{arrow}スタイルを使用しますが、@code{void-text-area-pointer}をセットすることにより異なるスタイルを指定できます。"
 
 #. type: defopt
 #: original_texis/frames.texi:2606
@@ -4858,12 +4808,12 @@ msgstr "void-text-area-pointer"
 #. type: defopt
 #: original_texis/frames.texi:2611
 msgid "This variable specifies the mouse pointer style for void text areas.  These include the areas after the end of a line or below the last line in the buffer.  The default is to use the @code{arrow} (non-text)  pointer style."
-msgstr "この変数は、空テキストエリアにたいするマウスポインタースタイルを指定する。このエリアには、行末の後や、バッファー終端行の下が含まれる。デフォルトでは、@code{arrow}(non-text)ポインタースタイルを使用。"
+msgstr "この変数は空テキストエリアにたいするマウスポインタースタイルを指定する。このエリアには行末の後やバッファー終端行の下が含まれる。デフォルトでは@code{arrow}(non-text)ポインタースタイルを使用する。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2615
 msgid "When using X, you can specify what the @code{text} pointer style really looks like by setting the variable @code{x-pointer-shape}."
-msgstr "Xを使用する際は、変数@code{x-pointer-shape}をセットすることにより、@code{text}の本当の外見を指定できます。"
+msgstr "Xを使用する際は変数@code{x-pointer-shape}をセットすることにより@code{text}の実際の外見を指定できます。"
 
 #. type: defvar
 #: original_texis/frames.texi:2616
@@ -4874,7 +4824,7 @@ msgstr "x-pointer-shape"
 #. type: defvar
 #: original_texis/frames.texi:2619
 msgid "This variable specifies the pointer shape to use ordinarily in the Emacs frame, for the @code{text} pointer style."
-msgstr "この変数は、Emacsフレーム内で@code{text}ポインタースタイルに通常使用するポインターシェイプを指定する。"
+msgstr "この変数はEmacsフレーム内でポインタースタイル@code{text}に通常使用するポインターシェイプを指定する。"
 
 #. type: defvar
 #: original_texis/frames.texi:2621
@@ -4885,17 +4835,17 @@ msgstr "x-sensitive-text-pointer-shape"
 #. type: defvar
 #: original_texis/frames.texi:2624
 msgid "This variable specifies the pointer shape to use when the mouse is over mouse-sensitive text."
-msgstr "この変数は、マウスがマウスセンシティブテキスト上にあるときのポインターシェイプを指定する。"
+msgstr "この変数はマウスがマウスセンシティブテキスト上にあるときのポインターシェイプを指定する。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2630
 msgid "These variables affect newly created frames.  They do not normally affect existing frames; however, if you set the mouse color of a frame, that also installs the current value of those two variables.  @xref{Font and Color Parameters}."
-msgstr "これらの変数は、新たに作成されるフレームに影響します。通常これらは既存のフレームに効果はありませんが、フレームのマウスカラーのインストール時には、これら2つ変数のカレント値もインストールされます。@ref{Font and Color Parameters}を参照してください。"
+msgstr "これらの変数は新たに作成されるフレームに影響します。これらは通常は既存のフレームに効果はありませんが、フレームのマウスカラーのインストール時にはこれら2つ変数のカレント値もインストールされます。@ref{Font and Color Parameters}を参照してください。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2634
 msgid "The values you can use, to specify either of these pointer shapes, are defined in the file @file{lisp/term/x-win.el}.  Use @kbd{M-x apropos @key{RET} x-pointer @key{RET}} to see a list of them."
-msgstr "これらのポインターシェイプのいずれかを指定するために使用可能な値は、ファイル@file{lisp/term/x-win.el}内で定義されています。それらのリストを確認するには、@kbd{M-x apropos @key{RET} x-pointer @key{RET}}を使用してください。"
+msgstr "これらのポインターシェイプのいずれかを指定するために使用可能な値はファイル@file{lisp/term/x-win.el}内で定義されています。それらのリストを確認するには@kbd{M-x apropos @key{RET} x-pointer @key{RET}}を使用してください。"
 
 #. type: cindex
 #: original_texis/frames.texi:2637
@@ -4923,34 +4873,29 @@ msgstr "secondary selection"
 
 #. type: Plain text
 #: original_texis/frames.texi:2651
-#, fuzzy
-#| msgid "In the X window system, data can be transferred between different applications by means of @dfn{selections}.  X defines an arbitrary number of @dfn{selection types}, each of which can store its own data; however, only three are commonly used: the @dfn{clipboard}, @dfn{primary selection}, and @dfn{secondary selection}.  @xref{Cut and Paste,, Cut and Paste, emacs, The GNU Emacs Manual}, for Emacs commands that make use of these selections.  This section documents the low-level functions for reading and setting X selections."
 msgid "In window systems, such as X, data can be transferred between different applications by means of @dfn{selections}.  X defines an arbitrary number of @dfn{selection types}, each of which can store its own data; however, only three are commonly used: the @dfn{clipboard}, @dfn{primary selection}, and @dfn{secondary selection}.  Other window systems support only the clipboard.  @xref{Cut and Paste,, Cut and Paste, emacs, The GNU Emacs Manual}, for Emacs commands that make use of these selections.  This section documents the low-level functions for reading and setting window-system selections."
-msgstr "Xウィンドウシステムでは、異なるアプリケーション間のデータ転送は、@dfn{選択(selections)}により行われます。Xは任意の数の@dfn{選択タイプ(selection types)}を定義し、それぞれが独自にデータを格納できます。しかし、一般的に使用されるのは@dfn{クリップボード(clipboard)}、@dfn{プライマリー選択(primary selection)}、@dfn{セカンダリー選択(secondary selection)}の3つだけです。これら3つの選択を使用するEmacsコマンドについては、@ref{Cut and Paste,, Cut and Paste, emacs, The GNU Emacs Manual}を参照してください。このセクションでは、X選択の読み取りとセットを行う、低レベル関数について説明します。"
+msgstr "Xのようなウィンドウシステムでは、異なるアプリケーション間のデータ転送は@dfn{選択(selections)}により行われます。Xは任意の数の@dfn{選択タイプ(selection types)}を定義し、それぞれが独自にデータを格納できます。しかし一般的に使用されるのは@dfn{クリップボード(clipboard)}、@dfn{プライマリー選択(primary selection)}、@dfn{セカンダリー選択(secondary selection)}の3つだけです。それ以外のウィンドウシステムではクリップボードだけがサポートされます。これら3つの選択を使用するEmacsコマンドについては@ref{Cut and Paste,, Cut and Paste, emacs, The GNU Emacs Manual}を参照してください。このセクションではウィンドウシステムによる選択の読み取りとセットを行う低レベル関数について説明します。"
 
 #. type: deffn
 #: original_texis/frames.texi:2652
-#, fuzzy, no-wrap
-#| msgid "Command x-set-selection type data"
+#, no-wrap
 msgid "Command gui-set-selection type data"
-msgstr "Command x-set-selection type data"
+msgstr "Command gui-set-selection type data"
 
 #. type: deffn
 #: original_texis/frames.texi:2655
-#, fuzzy
-#| msgid "This function sets an X selection.  It takes two arguments: a selection type @var{type}, and the value to assign to it, @var{data}."
 msgid "This function sets a window-system selection.  It takes two arguments: a selection type @var{type}, and the value to assign to it, @var{data}."
-msgstr "この関数は、X選択をセットする。これは、選択タイプ@var{type}と、それに割り当てる値@var{data}の、2つの引数をとる。"
+msgstr "この関数はウィンドウシステムの選択をセットする。これは選択タイプ@var{type}、それに割り当てる値@var{data}という2つの引数を受け取る。"
 
 #. type: deffn
 #: original_texis/frames.texi:2660
 msgid "@var{type} should be a symbol; it is usually one of @code{PRIMARY}, @code{SECONDARY} or @code{CLIPBOARD}.  These are symbols with upper-case names, in accord with X Window System conventions.  If @var{type} is @code{nil}, that stands for @code{PRIMARY}."
-msgstr "@var{type}はシンボルであること。通常は@code{PRIMARY}、@code{SECONDARY}、@code{CLIPBOARD}のいずれかである。これらは、Xウィンドウシステムの慣例に対応する大文字のシンボル名である。@var{type}が@code{nil}なら、それは@code{PRIMARY}を意味する。"
+msgstr "@var{type}はシンボルであること。通常は@code{PRIMARY}、@code{SECONDARY}、@code{CLIPBOARD}のいずれかである。これらはXウィンドウシステムの慣例に対応する大文字のシンボル名である。@var{type}が@code{nil}ならそれは@code{PRIMARY}を意味する。"
 
 #. type: deffn
 #: original_texis/frames.texi:2667
 msgid "If @var{data} is @code{nil}, it means to clear out the selection.  Otherwise, @var{data} may be a string, a symbol, an integer (or a cons of two integers or list of two integers), an overlay, or a cons of two markers pointing to the same buffer.  An overlay or a pair of markers stands for text in the overlay or between the markers.  The argument @var{data} may also be a vector of valid non-vector selection values."
-msgstr "@var{data}が@code{nil}なら、それはその選択をクリアーすることを意味する。それ以外では、@var{data}は文字列、シンボル、整数(2つの整数からなるコンスかリスト)、オーバーレイ、同じバッファーを指す2つのマーカーのコンスを指定できる。オーバーレイとマーカーのペアは、そのオーバーレイまたはマーカー間のテキストを意味する。引数@var{data}には、非ベクターの選択の値のベクターも指定できる。"
+msgstr "@var{data}が@code{nil}なら、それはその選択をクリアーすることを意味する。それ以外なら@var{data}は文字列、シンボル、整数(2つの整数からなるコンスかリスト)、オーバーレイ、同じバッファーを指す2つのマーカーのコンスを指定できる。オーバーレイとマーカーのペアは、そのオーバーレイまたはマーカー間のテキストを意味する。引数@var{data}には有効な非ベクターの選択のベクターも指定できる。"
 
 #. type: deffn
 #: original_texis/frames.texi:2669
@@ -4959,24 +4904,19 @@ msgstr "この関数は@var{data}をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2671
-#, fuzzy, no-wrap
-#| msgid "x-get-selection &optional type data-type"
+#, no-wrap
 msgid "gui-get-selection &optional type data-type"
-msgstr "x-get-selection &optional type data-type"
+msgstr "gui-get-selection &optional type data-type"
 
 #. type: defun
 #: original_texis/frames.texi:2676
-#, fuzzy
-#| msgid "This function accesses selections set up by Emacs or by other X clients.  It takes two optional arguments, @var{type} and @var{data-type}.  The default for @var{type}, the selection type, is @code{PRIMARY}."
 msgid "This function accesses selections set up by Emacs or by other programs.  It takes two optional arguments, @var{type} and @var{data-type}.  The default for @var{type}, the selection type, is @code{PRIMARY}."
-msgstr "この関数は、Emacsおよび別のXクライアントによりセットアップされた選択にアクセスする。これは@var{type}と@var{data-type}の、2つの引数をとる。@var{type}は選択のタイプで、デフォルトは@code{PRIMARY}。"
+msgstr "この関数はEmacsや他のプログラムによりセットアップされた選択にアクセスする。これは@var{type}と@var{data-type}の2つの引数を受け取る。@var{type}は選択のタイプでありデフォルトは@code{PRIMARY}。"
 
 #. type: defun
 #: original_texis/frames.texi:2688
-#, fuzzy
-#| msgid "The @var{data-type} argument specifies the form of data conversion to use, to convert the raw data obtained from another X client into Lisp data.  Meaningful values include @code{TEXT}, @code{STRING}, @code{UTF8_STRING}, @code{TARGETS}, @code{LENGTH}, @code{DELETE}, @code{FILE_NAME}, @code{CHARACTER_POSITION}, @code{NAME}, @code{LINE_NUMBER}, @code{COLUMN_NUMBER}, @code{OWNER_OS}, @code{HOST_NAME}, @code{USER}, @code{CLASS}, @code{ATOM}, and @code{INTEGER}.  (These are symbols with upper-case names in accord with X conventions.)  The default for @var{data-type} is @code{STRING}."
 msgid "The @var{data-type} argument specifies the form of data conversion to use, to convert the raw data obtained from another program into Lisp data.  Meaningful values include @code{TEXT}, @code{STRING}, @code{UTF8_STRING}, @code{TARGETS}, @code{LENGTH}, @code{DELETE}, @code{FILE_NAME}, @code{CHARACTER_POSITION}, @code{NAME}, @code{LINE_NUMBER}, @code{COLUMN_NUMBER}, @code{OWNER_OS}, @code{HOST_NAME}, @code{USER}, @code{CLASS}, @code{ATOM}, and @code{INTEGER}.  (These are symbols with upper-case names in accord with X conventions.)  The default for @var{data-type} is @code{STRING}.  Window systems other than X usually support only a small subset of these types, in addition to @code{STRING}."
-msgstr "@var{data-type}引数は、別のXクライアントから取得したrawデータをLispデータに変換するための、データ変換に使用する形式を指定する。意味のある値には@code{TEXT}、@code{STRING}、@code{UTF8_STRING}、@code{TARGETS}、@code{LENGTH}、@code{DELETE}、@code{FILE_NAME}、@code{CHARACTER_POSITION}、@code{NAME}、@code{LINE_NUMBER}、@code{COLUMN_NUMBER}、@code{OWNER_OS}、@code{HOST_NAME}、@code{USER}、@code{CLASS}、@code{ATOM}、@code{INTEGER}が含まれる(これらは、対応するX慣習の大文字シンボル名である)。@var{data-type}のデフォルトは@code{STRING}。"
+msgstr "@var{data-type}引数は別のXクライアントから取得したrawデータをLispデータに変換するためにデータ変換に使用する形式を指定する。有意義な値には@code{TEXT}、@code{STRING}、@code{UTF8_STRING}、@code{TARGETS}、@code{LENGTH}、@code{DELETE}、@code{FILE_NAME}、@code{CHARACTER_POSITION}、@code{NAME}、@code{LINE_NUMBER}、@code{COLUMN_NUMBER}、@code{OWNER_OS}、@code{HOST_NAME}、@code{USER}、@code{CLASS}、@code{ATOM}、@code{INTEGER}が含まれる(これらは対応するX慣習の大文字シンボル名である)。@var{data-type}のデフォルトは@code{STRING}。X以外のウィンドウシステムは、通常は@code{STRING}に加えて、少数の部分集合だけをサポートする。"
 
 #. type: defopt
 #: original_texis/frames.texi:2690
@@ -4987,7 +4927,7 @@ msgstr "selection-coding-system"
 #. type: defopt
 #: original_texis/frames.texi:2695
 msgid "This variable specifies the coding system to use when reading and writing selections or the clipboard.  @xref{Coding Systems}.  The default is @code{compound-text-with-extensions}, which converts to the text representation that X11 normally uses."
-msgstr "この変数は、選択やクリップボードに読み書きする際のコーディングシステムを指定する。@ref{Coding Systems}を参照してください。デフォルトは@code{compound-text-with-extensions}で、これはX11が通常使用するテキスト表現に変換する。"
+msgstr "この変数は選択やクリップボードに読み書きする際のコーディングシステムを指定する。@ref{Coding Systems}を参照のこと。デフォルトは@code{compound-text-with-extensions}で、これはX11が通常使用するテキスト表現に変換する。"
 
 #. type: cindex
 #: original_texis/frames.texi:2697
@@ -4997,15 +4937,13 @@ msgstr "clipboard support (for MS-Windows)"
 
 #. type: Plain text
 #: original_texis/frames.texi:2703
-#, fuzzy
-#| msgid "When Emacs runs on MS-Windows, it does not implement X selections in general, but it does support the clipboard.  @code{x-get-selection} and @code{x-set-selection} on MS-Windows support the text data type only; if the clipboard holds other types of data, Emacs treats the clipboard as empty."
 msgid "When Emacs runs on MS-Windows, it does not implement X selections in general, but it does support the clipboard.  @code{gui-get-selection} and @code{gui-set-selection} on MS-Windows support the text data type only; if the clipboard holds other types of data, Emacs treats the clipboard as empty.  The supported data type is @code{STRING}."
-msgstr "EmacsがMS-Windows上で実行されている際は、一般的にX選択はサポートしませんが、クリップボードはサポートします。MS-Windowsでは、@code{x-get-selection}および@code{x-set-selection}は、テキストデータタイプだけをサポートします。クリップボードが他のタイプのデータを保持している場合、Emacsはクリップボードを空として扱います。"
+msgstr "EmacsがMS-Windows上で実行されている際には、一般的にX選択はサポートされませんがクリップボードはサポートされます。MS-Windowsでの@code{gui-get-selection}と@code{gui-set-selection}は、テキストデータタイプだけをサポートします。クリップボードが他のタイプのデータを保持している場合には、Emacsはクリップボードを空として扱います。サポートされるデータタイプは@code{STRING}です。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2708
 msgid "For backward compatibility, there are obsolete aliases @code{x-get-selection} and @code{x-set-selection}, which were the names of @code{gui-get-selection} and @code{gui-set-selection} before Emacs 25.1."
-msgstr ""
+msgstr "後方互換性のために@code{gui-get-selection}と@code{gui-set-selection}にたいして、Emacs 25.1以前の名前@code{x-get-selection}と@code{x-set-selection}が時代遅れのエイリアスとして存在します。"
 
 #. type: cindex
 #: original_texis/frames.texi:2711
@@ -5028,7 +4966,7 @@ msgstr "x-dnd-known-types"
 #. type: Plain text
 #: original_texis/frames.texi:2723
 msgid "When a user drags something from another application over Emacs, that other application expects Emacs to tell it if Emacs can handle the data that is dragged.  The variable @code{x-dnd-test-function} is used by Emacs to determine what to reply.  The default value is @code{x-dnd-default-test-function} which accepts drops if the type of the data to be dropped is present in @code{x-dnd-known-types}.  You can customize @code{x-dnd-test-function} and/or @code{x-dnd-known-types} if you want Emacs to accept or reject drops based on some other criteria."
-msgstr "ユーザーが別のアプリケーションからEmacsに何かをドラッグをした際、その別アプリケーションはEmacsがドラッグされたデータを処理可能か告げることを期待します。変数@code{x-dnd-test-function}は、何を応答するか決定するために、Emacsにより使用されます。デフォルト値は@code{x-dnd-default-test-function}で、これはドロップされたデータのタイプが@code{x-dnd-known-types}内にあれば、ドロップを受け入れます。何か別の条件にもとづいてEmacsにドロップを許容または拒絶させたい場合は、@code{x-dnd-test-function}および/または@code{x-dnd-known-types}をカスタマイズできます。"
+msgstr "ユーザーが別のアプリケーションからEmacsに何かをドラッグをした際には、その別アプリケーションはEmacsがドラッグされたデータを処理可能か告げることを期待します。変数@code{x-dnd-test-function}は何を応答するか決定するためにEmacsにより使用されます。デフォルト値は@code{x-dnd-default-test-function}で、これはドロップされたデータのタイプが@code{x-dnd-known-types}内にあればドロップを受け入れます。何か別の条件にもとづいてEmacsにドロップを許容または拒絶させたければ、@code{x-dnd-test-function}および/または@code{x-dnd-known-types}をカスタマイズできます。"
 
 #. type: vindex
 #: original_texis/frames.texi:2724
@@ -5039,7 +4977,7 @@ msgstr "x-dnd-types-alist"
 #. type: Plain text
 #: original_texis/frames.texi:2729
 msgid "If you want to change the way Emacs handles drop of different types or add a new type, customize @code{x-dnd-types-alist}.  This requires detailed knowledge of what types other applications use for drag and drop."
-msgstr "Emacsが異なるタイプのドロップを処理する方法を変更したり、新たなタイプを追加したい場合は、@code{x-dnd-types-alist}をカスタマイズします。これには、他のアプリケーションがドラッグアンドドロップに使用するのが何のタイプなのか、詳細な知識が要求されます。"
+msgstr "Emacsが異なるタイプのドロップを処理する方法を変更したり新たなタイプを追加したければ@code{x-dnd-types-alist}をカスタマイズします。これには他のアプリケーションがドラッグアンドドロップに使用するタイプが何なのか詳細な知識が要求されます。"
 
 #. type: vindex
 #: original_texis/frames.texi:2730
@@ -5050,7 +4988,7 @@ msgstr "dnd-protocol-alist"
 #. type: Plain text
 #: original_texis/frames.texi:2738
 msgid "When an URL is dropped on Emacs it may be a file, but it may also be another URL type (ftp, http, etc.).  Emacs first checks @code{dnd-protocol-alist} to determine what to do with the URL@.  If there is no match there and if @code{browse-url-browser-function} is an alist, Emacs looks for a match there.  If no match is found the text for the URL is inserted.  If you want to alter Emacs behavior, you can customize these variables."
-msgstr "EmacsにURLがドロップされたとき、それはファイルかもしれませんが、他のURLタイプ(ftp、http、...)であるかもしれません。Emacsはまず、そのURLに何を行うべきか判断するために、@code{dnd-protocol-alist}をチェックします。それにマッチがなく、かつ@code{browse-url-browser-function}がalistなら、Emacsはそこでマッチを探します。それでもマッチが見つからなければ、そのURLにたいするテキストを挿入します。これらの変数をカスタマイズすれば、Emacsの挙動を変更できます。"
+msgstr "EmacsにURLがドロップされたとき、それはファイルかもしれませんが他のURLタイプ(ftp、http、...)であるかもしれません。EmacsはまずそのURLに何を行うべきか判断するために、@code{dnd-protocol-alist}をチェックします。それにマッチがなく、かつ@code{browse-url-browser-function}がalistならEmacsはそこでマッチを探します。それでもマッチが見つからなければ、そのURLにたいするテキストを挿入します。これらの変数をカスタマイズすればEmacsの挙動を変更できます。"
 
 #. type: cindex
 #: original_texis/frames.texi:2742
@@ -5073,17 +5011,17 @@ msgstr "numerical RGB color specification"
 #. type: Plain text
 #: original_texis/frames.texi:2757
 msgid "A color name is text (usually in a string) that specifies a color.  Symbolic names such as @samp{black}, @samp{white}, @samp{red}, etc., are allowed; use @kbd{M-x list-colors-display} to see a list of defined names.  You can also specify colors numerically in forms such as @samp{#@var{rgb}} and @samp{RGB:@var{r}/@var{g}/@var{b}}, where @var{r} specifies the red level, @var{g} specifies the green level, and @var{b} specifies the blue level.  You can use either one, two, three, or four hex digits for @var{r}; then you must use the same number of hex digits for all @var{g} and @var{b} as well, making either 3, 6, 9 or 12 hex digits in all.  (See the documentation of the X Window System for more details about numerical RGB specification of colors.)"
-msgstr "カラー名(color name)とは、カラーを指定するテキスト(通常は文字列)です。@samp{black}、@samp{white}、@samp{red}等が指定できます。定義された名前のリストは、@kbd{M-x list-colors-display}を使用して確認できます。@samp{#@var{rgb}}や@samp{RGB:@var{r}/@var{g}/@var{b}}のような、数値的な形式でカラーを指定することもできます。ここで、@var{r}は赤(red)、@var{g}は緑(green)、@var{b}は青(blue)のレベルを指定します。1桁、2桁、3桁、または4桁の16進数を@var{r}に使用できます。その後、@var{g}と@var{b}には同じ桁数の16進数を同様に使用しなければなりません。これにより、総桁数が3､6､9､または12桁の16進数となります(カラーの数値的なRGB指定についての詳細は、Xウィンドウシステムのドキュメントを参照されたい)。"
+msgstr "カラー名(color name)とはカラーを指定するテキスト(通常は文字列)です。@samp{black}、@samp{white}、@samp{red}等を指定できます。定義された名前のリストは@kbd{M-x list-colors-display}を使用して確認できます。@samp{#@var{rgb}}や@samp{RGB:@var{r}/@var{g}/@var{b}}のような数値的な形式でカラーを指定することもできます。ここで@var{r}は赤(red)、@var{g}は緑(green)、@var{b}は青(blue)のレベルを指定します。1桁、2桁、3桁、または4桁の16進数を@var{r}に使用できます。その後の@var{g}と@var{b}には同じ桁数の16進数を同様に使用しなければなりません。これにより総桁数が3､6､9､または12桁の16進数となります(カラーの数値的なRGB指定についての詳細はXウィンドウシステムのドキュメントを参照)。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2762
 msgid "These functions provide a way to determine which color names are valid, and what they look like.  In some cases, the value depends on the @dfn{selected frame}, as described below; see @ref{Input Focus}, for the meaning of the term ``selected frame''."
-msgstr "以下の関数は、有効なカラー名と、それらの外見を判断する手段を提供します。以下で説明するように、その値は@dfn{選択されたフレーム(selected frame)}に依存する場合があります。``選択されたフレーム''という用語の意味については、@ref{Input Focus}を参照してください。"
+msgstr "以下の関数は有効なカラー名と、それらの外見を判断する手段を提供します。以下で説明するようにその値は@dfn{選択されたフレーム(selected frame)}に依存する場合があります。``選択されたフレーム''という用語の意味については@ref{Input Focus}を参照してください。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2765
 msgid "To read user input of color names with completion, use @code{read-color} (@pxref{High-Level Completion, read-color})."
-msgstr "補完付きでカラー名のユーザー入力を読み取るには、@code{read-color}を使用します(@ref{High-Level Completion, read-color}を参照)。"
+msgstr "補完付きでカラー名のユーザー入力を読み取るには@code{read-color}を使用します(@ref{High-Level Completion, read-color}を参照)。"
 
 #. type: defun
 #: original_texis/frames.texi:2766
@@ -5094,12 +5032,12 @@ msgstr "color-defined-p color &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2771
 msgid "This function reports whether a color name is meaningful.  It returns @code{t} if so; otherwise, @code{nil}.  The argument @var{frame} says which frame's display to ask about; if @var{frame} is omitted or @code{nil}, the selected frame is used."
-msgstr "この関数は、カラー名が有意かどうかを報告する。もし有意なら@code{t}、それ以外は@code{nil}をリターンする。引数@var{frame}は、どのフレームのディスプレイにたいして問い合わせるかを指定する。@var{frame}が省略または@code{nil}の場合は、選択されたフレームが使用される。"
+msgstr "この関数はカラー名が有意かどうかを報告する。もし有意なら@code{t}、それ以外は@code{nil}をリターンする。引数@var{frame}はどのフレームのディスプレイにたいして問い合わせるかを指定する。@var{frame}が省略または@code{nil}の場合は選択されたフレームが使用される。"
 
 #. type: defun
 #: original_texis/frames.texi:2777
 msgid "Note that this does not tell you whether the display you are using really supports that color.  When using X, you can ask for any defined color on any kind of display, and you will get some result---typically, the closest it can do.  To determine whether a frame can really display a certain color, use @code{color-supported-p} (see below)."
-msgstr "これは、使用しているディスプレイがそのカラーをサポートするかどうかは告げないことに注意。X使用時には、すべての種類のディスプレイ上のすべての定義されたカラーを問い合わせることができ、何らかの結果(通常は可能な限り近いカラー)を得ることができるでしょう。あるフレームが特定のカラーを実際に表示できるかどうか判断するためには、@code{color-supported-p}(以下参照)を使用してください。"
+msgstr "これは使用しているディスプレイがそのカラーをサポートするかどうかは告げないことに注意。X使用時にはすべての種類のディスプレイ上のすべての定義されたカラーを問い合わせることができ、何らかの結果(通常は可能な限り近いカラー)を得ることができるだろう。あるフレームが特定のカラーを実際に表示できるかどうか判断するためには@code{color-supported-p} (以下参照)を使用する。"
 
 #. type: findex
 #: original_texis/frames.texi:2778
@@ -5110,7 +5048,7 @@ msgstr "x-color-defined-p"
 #. type: defun
 #: original_texis/frames.texi:2781
 msgid "This function used to be called @code{x-color-defined-p}, and that name is still supported as an alias."
-msgstr "この関数は、以前は@code{x-color-defined-p}と呼ばれており、その名前は今でもエイリアスとしてサポートされている。"
+msgstr "この関数は以前は@code{x-color-defined-p}と呼ばれており、その名前は今でもエイリアスとしてサポートされている。"
 
 #. type: defun
 #: original_texis/frames.texi:2783
@@ -5121,7 +5059,7 @@ msgstr "defined-colors &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2787
 msgid "This function returns a list of the color names that are defined and supported on frame @var{frame} (default, the selected frame).  If @var{frame} does not support colors, the value is @code{nil}."
-msgstr "この関数は、@var{frame}(デフォルトは選択されたフレーム)上で定義かつサポートされるカラー名のリストをリターンする。@var{frame}がカラーをサポートしなければ、値は@code{nil}となる。"
+msgstr "この関数は@var{frame}(デフォルトは選択されたフレーム)上で定義されていて、かつサポートされるカラー名のリストをリターンする。@var{frame}がカラーをサポートしなければ値は@code{nil}。"
 
 #. type: findex
 #: original_texis/frames.texi:2788
@@ -5132,7 +5070,7 @@ msgstr "x-defined-colors"
 #. type: defun
 #: original_texis/frames.texi:2791
 msgid "This function used to be called @code{x-defined-colors}, and that name is still supported as an alias."
-msgstr "この関数は、以前は@code{x-defined-colors}と呼ばれており、その名前は今でもエイリアスとしてサポートされている。"
+msgstr "この関数は以前は@code{x-defined-colors}と呼ばれており、その名前は今でもエイリアスとしてサポートされている。"
 
 #. type: defun
 #: original_texis/frames.texi:2793
@@ -5143,17 +5081,17 @@ msgstr "color-supported-p color &optional frame background-p"
 #. type: defun
 #: original_texis/frames.texi:2797
 msgid "This returns @code{t} if @var{frame} can really display the color @var{color} (or at least something close to it).  If @var{frame} is omitted or @code{nil}, the question applies to the selected frame."
-msgstr "これは、@var{frame}が実際にカラー@var{color}(または最低でもそれに近いカラー)を表示可能なら@code{t}をリターンする。@var{frame}が省略または@code{nil}なら、この問いは選択されたフレームに適用される。"
+msgstr "これは、@var{frame}が実際にカラー@var{color} (または最低でもそれに近いカラー)を表示可能なら@code{t}をリターンする。@var{frame}が省略または@code{nil}ならこの問いは選択されたフレームに適用される。"
 
 #. type: defun
 #: original_texis/frames.texi:2802
 msgid "Some terminals support a different set of colors for foreground and background.  If @var{background-p} is non-@code{nil}, that means you are asking whether @var{color} can be used as a background; otherwise you are asking whether it can be used as a foreground."
-msgstr "フォアグラウンドおよびバックグラウンドにたいして異なるカラーセットをサポートする端末がいくつかある。@var{background-p}が非@code{nil}の場合、それは@var{color}がバックグラウンドとして、それ以外はフォアグラウンドとして使用可能かどうかを問うことを意味する。"
+msgstr "フォアグラウンドとバックグラウンドにたいして異なるカラーセットをサポートする端末がいくつかある。@var{background-p}が非@code{nil}なら、それは@var{color}がバックグラウンドとして、それ以外はフォアグラウンドとして使用可能かどうかを問うことを意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:2804
 msgid "The argument @var{color} must be a valid color name."
-msgstr "引数@var{color}は、有効なカラー名でなければならない。"
+msgstr "引数@var{color}は有効なカラー名でなければならない。"
 
 #. type: defun
 #: original_texis/frames.texi:2806
@@ -5164,7 +5102,7 @@ msgstr "color-gray-p color &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2811
 msgid "This returns @code{t} if @var{color} is a shade of gray, as defined on @var{frame}'s display.  If @var{frame} is omitted or @code{nil}, the question applies to the selected frame.  If @var{color} is not a valid color name, this function returns @code{nil}."
-msgstr "これは、@var{color}が@var{frame}のディスプレイ上の定義として、グレイスケールなら@code{t}をリターンする。@var{frame}が省略または@code{nil}なら、この問いは選択されたフレームに適用される。@var{color}が有効なカラー名でなければ、この関数は@code{nil}をリターンする。"
+msgstr "これは@var{color}が@var{frame}のディスプレイ上の定義としてグレイスケールなら@code{t}をリターンする。@var{frame}が省略または@code{nil}なら、この問いは選択されたフレームに適用される。@var{color}が有効なカラー名でなければ、この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2813
@@ -5181,12 +5119,12 @@ msgstr "rgb value"
 #. type: defun
 #: original_texis/frames.texi:2822
 msgid "This function returns a value that describes what @var{color} should ideally look like on @var{frame}.  If @var{color} is defined, the value is a list of three integers, which give the amount of red, the amount of green, and the amount of blue.  Each integer ranges in principle from 0 to 65535, but some displays may not use the full range.  This three-element list is called the @dfn{rgb values} of the color."
-msgstr "この関数は、@var{frame}上で理想的には@var{color}がどのように見えるべきかを記述する値をリターンする。@var{color}が定義済みの場合、値は赤、緑、青の割合を与える3つの整数からなるリストである。それぞれの整数の範囲は原則として0から65535だが、この範囲全体を使用しないディスプレイもいくつか存在するだろう。この3要素のリストは、カラーの@dfn{RGB値(rgb values)}と呼ばれる。"
+msgstr "この関数は@var{frame}上で理想的には@var{color}がどのように見えるべきかを記述する値をリターンする。@var{color}が定義済みなら値は赤、緑、青の割合を与える3つの整数からなるリストとなる。それぞれの整数の範囲は原則として0から65535だが、この範囲全体を使用しないディスプレイもいくつか存在するだろう。この3要素のリストはカラーの@dfn{RGB値(rgb values)}と呼ばれる。"
 
 #. type: defun
 #: original_texis/frames.texi:2824
 msgid "If @var{color} is not defined, the value is @code{nil}."
-msgstr "@var{color}が未定義なら、値は@code{nil}である。"
+msgstr "@var{color}が未定義なら値は@code{nil}。"
 
 #. type: example
 #: original_texis/frames.texi:2836
@@ -5217,7 +5155,7 @@ msgstr ""
 #. type: defun
 #: original_texis/frames.texi:2842
 msgid "The color values are returned for @var{frame}'s display.  If @var{frame} is omitted or @code{nil}, the information is returned for the selected frame's display.  If the frame cannot display colors, the value is @code{nil}."
-msgstr "カラーの値は、@var{frame}のディスプレイにたいしてリターンされる。@var{frame}が省略または@code{nil}の場合、この情報は選択されたフレームのディスプレイにたいしてリターンされる。このフレームがカラーを表示できない場合、値は@code{nil}となる。"
+msgstr "カラーの値は@var{frame}のディスプレイにたいしてリターンされる。@var{frame}が省略または@code{nil}の場合には、この情報は選択されたフレームのディスプレイにたいしてリターンされる。このフレームがカラーを表示できなければ値は@code{nil}。"
 
 #. type: findex
 #: original_texis/frames.texi:2843
@@ -5228,7 +5166,7 @@ msgstr "x-color-values"
 #. type: defun
 #: original_texis/frames.texi:2846
 msgid "This function used to be called @code{x-color-values}, and that name is still supported as an alias."
-msgstr "この関数は、以前は@code{x-color-values}と呼ばれており、その名前は今でもエイリアスとしてサポートされている。"
+msgstr "この関数は以前は@code{x-color-values}と呼ばれており、その名前は今でもエイリアスとしてサポートされている。"
 
 #. type: cindex
 #: original_texis/frames.texi:2850
@@ -5239,22 +5177,22 @@ msgstr "colors on text terminals"
 #. type: Plain text
 #: original_texis/frames.texi:2858
 msgid "Text terminals usually support only a small number of colors, and the computer uses small integers to select colors on the terminal.  This means that the computer cannot reliably tell what the selected color looks like; instead, you have to inform your application which small integers correspond to which colors.  However, Emacs does know the standard set of colors and will try to use them automatically."
-msgstr "通常、テキスト端末は少しのカラーしかサポートせず、コンピューターはカラー選択に小さい整数を使用します。これは、選択したカラーがどのように見えるかコンピューターが信頼性をもって告げることができず、どのカラーがどのような小さい整数に対応するかという情報を、をアプリケーションに伝える必要があることを意味します。しかし、Emacsは標準的なカラーセットを知っており、それらの自動的な使用を試みるでしょう。"
+msgstr "テキスト端末は通常は少しのカラーしかサポートせず、コンピューターはカラー選択に小さい整数を使用します。これは選択したカラーがどのように見えるかコンピューターが信頼性をもって告げることができず、どのカラーがどのような小さい整数に対応するかという情報をアプリケーションに伝える必要があることを意味します。しかしEmacsは標準的なカラーセットを知っており、それらの自動的な使用を試みるでしょう。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2861
 msgid "The functions described in this section control how terminal colors are used by Emacs."
-msgstr "このセクションで説明する関数は、Emacsが端末カラーを使用する方法を制御します。"
+msgstr "このセクションで説明する関数はEmacsが端末カラーを使用する方法を制御します。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2864
 msgid "Several of these functions use or return @dfn{rgb values}, described in @ref{Color Names}."
-msgstr "これらの関数のうちのいくつかは、@ref{Color Names}で説明した@dfn{RGB値(rgb values)}を使用またはリターンします。"
+msgstr "これらの関数のうちのいくつかは@ref{Color Names}で説明した@dfn{RGB値(rgb values)}を使用またはリターンします。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2871
 msgid "These functions accept a display (either a frame or the name of a terminal) as an optional argument.  We hope in the future to make Emacs support different colors on different text terminals; then this argument will specify which terminal to operate on (the default being the selected frame's terminal; @pxref{Input Focus}).  At present, though, the @var{frame} argument has no effect."
-msgstr "これらの関数は、オプション引数としてディスプレイ(フレームまたは端末名のいずれか)を受け取ります。わたしたちは将来、異なる端末上で異なるカラーをEmacsにサポートさせたいと望んでいます。そうすれば、この引数はどの端末を処理するか(デフォルトは選択されたフレームの端末。@ref{Input Focus}を参照のこと)を指定するようになるでしょう。しかし現在のところ、@var{frame}引数に効果はありません。"
+msgstr "これらの関数はオプション引数としてディスプレイ(フレームまたは端末名のいずれか)を受け取ります。わたしたちは将来には異なる端末上で異なるカラーをEmacsにサポートさせたいと望んでいます。そうすればこの引数はどの端末を処理するか(デフォルトは選択されたフレームの端末。@ref{Input Focus}を参照)を指定するようになるでしょう。しかし現在のところ@var{frame}引数に効果はありません。"
 
 #. type: defun
 #: original_texis/frames.texi:2872
@@ -5265,12 +5203,12 @@ msgstr "tty-color-define name number &optional rgb frame"
 #. type: defun
 #: original_texis/frames.texi:2875
 msgid "This function associates the color name @var{name} with color number @var{number} on the terminal."
-msgstr "この関数は、カラー名@var{name}を、その端末上のカラー値@var{number}に関連付ける。"
+msgstr "この関数はカラー名@var{name}をその端末上のカラー値@var{number}に関連付ける。"
 
 #. type: defun
 #: original_texis/frames.texi:2881
 msgid "The optional argument @var{rgb}, if specified, is an rgb value, a list of three numbers that specify what the color actually looks like.  If you do not specify @var{rgb}, then this color cannot be used by @code{tty-color-approximate} to approximate other colors, because Emacs will not know what it looks like."
-msgstr "オプション引数@var{rgb}が指定された場合、それはそのカラーが実際にどのように見えるかを指定する、3つの数値のリストからなるRGB値である。@var{rgb}を指定しない場合、Emacsはそれがどのように見えるか知らないので、そのカラーを他のカラーに近似するために@code{tty-color-approximate}で使用することができない。"
+msgstr "オプション引数@var{rgb}が指定された場合、それはそのカラーが実際にどのように見えるかを指定する3つの数値のリストからなるRGB値である。@var{rgb}を指定しなければEmacsはそれがどのように見えるか知らないので、そのカラーを他のカラーに近似するために@code{tty-color-approximate}で使用することができない。"
 
 #. type: defun
 #: original_texis/frames.texi:2883
@@ -5281,7 +5219,7 @@ msgstr "tty-color-clear &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2885
 msgid "This function clears the table of defined colors for a text terminal."
-msgstr "この関数は、テキスト端末の定義済みカラーのテーブルをクリアーする。"
+msgstr "この関数はテキスト端末の定義済みカラーのテーブルをクリアーする。"
 
 #. type: defun
 #: original_texis/frames.texi:2887
@@ -5292,12 +5230,12 @@ msgstr "tty-color-alist &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2890
 msgid "This function returns an alist recording the known colors supported by a text terminal."
-msgstr "この関数は、テキスト端末がサポートする既知のカラーを記録したalistをリターンする。"
+msgstr "この関数はテキスト端末がサポートする既知のカラーを記録したalistをリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:2896
 msgid "Each element has the form @code{(@var{name} @var{number} . @var{rgb})} or @code{(@var{name} @var{number})}.  Here, @var{name} is the color name, @var{number} is the number used to specify it to the terminal.  If present, @var{rgb} is a list of three color values (for red, green, and blue) that says what the color actually looks like."
-msgstr "それぞれの要素は、@code{(@var{name} @var{number} . @var{rgb})}または@code{(@var{name} @var{number})}という形式をもつ。ここで、@var{name}はカラー名、@var{number}はその端末でカラー指定に使用される数値である。@var{rgb}が与えられた場合、それはそのカラーが実際にどのように見えるかを告げる3つのカラー値(赤、緑、青)のリストである。"
+msgstr "それぞれの要素は@code{(@var{name} @var{number} . @var{rgb})}、または@code{(@var{name} @var{number})}という形式をもつ。ここで@var{name}はカラー名、@var{number}はその端末でカラー指定に使用される数値。@var{rgb}が与えられたら、それはそのカラーが実際にどのように見えるかを告げる3つのカラー値(赤、緑、青)のリストである。"
 
 #. type: defun
 #: original_texis/frames.texi:2898
@@ -5308,7 +5246,7 @@ msgstr "tty-color-approximate rgb &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2903
 msgid "This function finds the closest color, among the known colors supported for @var{display}, to that described by the rgb value @var{rgb} (a list of color values).  The return value is an element of @code{tty-color-alist}."
-msgstr "この関数は、@var{display}にたいしてサポートされた既知のカラーの中から、RGB値@var{rgb}(カラー値のリスト)で記述されたもっとも近いカラーを探す。リターン値は、@code{tty-color-alist}の要素である。"
+msgstr "この関数は@var{display}にたいしてサポートされた既知のカラーの中から、RGB値@var{rgb} (カラー値のリスト)で記述されたもっとも近いカラーを探す。リターン値は@code{tty-color-alist}の要素。"
 
 #. type: defun
 #: original_texis/frames.texi:2905
@@ -5319,7 +5257,7 @@ msgstr "tty-color-translate color &optional frame"
 #. type: defun
 #: original_texis/frames.texi:2909
 msgid "This function finds the closest color to @var{color} among the known colors supported for @var{display} and returns its index (an integer).  If the name @var{color} is not defined, the value is @code{nil}."
-msgstr "この関数は、@var{display}にたいしてサポートされた既知のカラーの中から、もっとも近いカラーのインデックス(整数)をリターンする。名前@var{color}が未定義なら、値は@code{nil}となる。"
+msgstr "この関数は@var{display}にたいしてサポートされた既知のカラーの中から、もっとも近いカラーのインデックス(整数)をリターンする。名前@var{color}が未定義なら値は@code{nil}。"
 
 #. type: section
 #: original_texis/frames.texi:2912
@@ -5330,7 +5268,7 @@ msgstr "X Resources"
 #. type: Plain text
 #: original_texis/frames.texi:2918
 msgid "This section describes some of the functions and variables for querying and using X resources, or their equivalent on your operating system.  @xref{X Resources,, X Resources, emacs, The GNU Emacs Manual}, for more information about X resources."
-msgstr "このセクションでは、Xリソース、または他のオペレーティングシステム上での等価物を問い合わせたり使用する関数および変数をいくつか説明します。Xリソースにたいする詳細な情報は、@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照してください。"
+msgstr "このセクションではXリソース、または他のオペレーティングシステム上での等価物を問い合わせたり使用する関数および変数をいくつか説明します。Xリソースにたいする詳細な情報は@ref{X Resources,, X Resources, emacs, The GNU Emacs Manual}を参照してください。"
 
 #. type: defun
 #: original_texis/frames.texi:2919
@@ -5341,17 +5279,17 @@ msgstr "x-get-resource attribute class &optional component subclass"
 #. type: defun
 #: original_texis/frames.texi:2922
 msgid "The function @code{x-get-resource} retrieves a resource value from the X Window defaults database."
-msgstr "関数@code{x-get-resource}は、Xウィンドウのデフォルトデータベースからリソース値を取得する。"
+msgstr "関数@code{x-get-resource}はXウィンドウのデフォルトデータベースからリソース値を取得する。"
 
 #. type: defun
 #: original_texis/frames.texi:2928
 msgid "Resources are indexed by a combination of a @dfn{key} and a @dfn{class}.  This function searches using a key of the form @samp{@var{instance}.@var{attribute}} (where @var{instance} is the name under which Emacs was invoked), and using @samp{Emacs.@var{class}} as the class."
-msgstr "リソースは、@dfn{キー(key)}と@dfn{クラス(class)}の組み合わせによりインデックス付けされている。この関数は、@samp{@var{instance}.@var{attribute}}という形式をキー(@var{instance}はEmacsが呼び出されたときの名前)、クラスとして@samp{Emacs.@var{class}}として使用することにより検索を行う。"
+msgstr "リソースは@dfn{キー(key)}と@dfn{クラス(class)}の組み合わせによりインデックス付けされている。この関数は@samp{@var{instance}.@var{attribute}}という形式をキー(@var{instance}はEmacsが呼び出されたときの名前)、クラスとして@samp{Emacs.@var{class}}として使用することにより検索を行う。"
 
 #. type: defun
 #: original_texis/frames.texi:2934
 msgid "The optional arguments @var{component} and @var{subclass} add to the key and the class, respectively.  You must specify both of them or neither.  If you specify them, the key is @samp{@var{instance}.@var{component}.@var{attribute}}, and the class is @samp{Emacs.@var{class}.@var{subclass}}."
-msgstr "オプション引数@var{component}および@var{subclass}は、それぞれキーおよびクラスを追加する。指定する場合は両方を指定するか、さもなくばどちらも指定してはならない。これらを指定した場合、キーは@samp{@var{instance}.@var{component}.@var{attribute}}、クラスは@samp{Emacs.@var{class}.@var{subclass}}となる。"
+msgstr "オプション引数@var{component}と@var{subclass}は、それぞれキーとクラスを追加する。指定する場合には両方を指定するか、さもなくばどちらも指定してはならない。これらを指定した場合にはキーは@samp{@var{instance}.@var{component}.@var{attribute}}、クラスは@samp{Emacs.@var{class}.@var{subclass}}となる。"
 
 #. type: defvar
 #: original_texis/frames.texi:2936
@@ -5361,10 +5299,8 @@ msgstr "x-resource-class"
 
 #. type: defvar
 #: original_texis/frames.texi:2941
-#, fuzzy
-#| msgid "This variable specifies the application name that @code{x-get-resource} should look up.  The default value is @code{\"Emacs\"}.  You can examine X resources for application names other than ``Emacs'' by binding this variable to some other string, around a call to @code{x-get-resource}."
 msgid "This variable specifies the application name that @code{x-get-resource} should look up.  The default value is @code{\"Emacs\"}.  You can examine X resources for other application names by binding this variable to some other string, around a call to @code{x-get-resource}."
-msgstr "この変数は、@code{x-get-resource}が照会すべきアプリケーション名を指定する。デフォルト値は@code{\"Emacs\"}。@code{x-get-resource}の呼び出し周辺で、この変数を``Emacs''以外の文字列にバインドすることにより、アプリケーション名にたいしてXリソースを調べることができる。"
+msgstr "この変数は@code{x-get-resource}が照会すべきアプリケーション名を指定する。デフォルト値は@code{\"Emacs\"}。@code{x-get-resource}の呼び出し周辺で、この変数を他のアプリケーション名の文字列にバインドすることにより、アプリケーション名にたいしてXリソースを調べることができる。"
 
 #. type: defvar
 #: original_texis/frames.texi:2943
@@ -5375,12 +5311,12 @@ msgstr "x-resource-name"
 #. type: defvar
 #: original_texis/frames.texi:2947
 msgid "This variable specifies the instance name that @code{x-get-resource} should look up.  The default value is the name Emacs was invoked with, or the value specified with the @samp{-name} or @samp{-rn} switches."
-msgstr "この変数は、@code{x-get-resource}が照会すべきインスタンス名を指定する。デフォルト値はEmacs呼び出し時の名前、またはスイッチ@samp{-name}または@samp{-rn}で指定された値である。"
+msgstr "この変数は@code{x-get-resource}が照会すべきインスタンス名を指定する。デフォルト値はEmacs呼び出し時の名前、またはスイッチ@samp{-name}、または@samp{-rn}で指定された値。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2950
 msgid "To illustrate some of the above, suppose that you have the line:"
-msgstr "上述のいくつかを説明するために、Xリソースファイル(通常は@file{~/.Xdefaults}や@file{~/.Xresources})内に以下のような行があるとしましょう:"
+msgstr "上述のいくつかを説明するためにXリソースファイル(通常は@file{~/.Xdefaults}や@file{~/.Xresources})内に以下のような行があるとしましょう:"
 
 #. type: example
 #: original_texis/frames.texi:2953
@@ -5426,7 +5362,7 @@ msgstr "inhibit-x-resources"
 #. type: defvar
 #: original_texis/frames.texi:2976
 msgid "If this variable is non-@code{nil}, Emacs does not look up X resources, and X resources do not have any effect when creating new frames."
-msgstr "この変数が非@code{nil}なら、EmacsはXリソースを照会せず、新たなフレーム作成時にXリソースは何も効果をもたない。"
+msgstr "この変数が非@code{nil}ならEmacsはXリソースを照会せず、新たなフレーム作成時にXリソースは何も効果をもたない。"
 
 #. type: cindex
 #: original_texis/frames.texi:2980
@@ -5437,17 +5373,17 @@ msgstr "display feature testing"
 #. type: Plain text
 #: original_texis/frames.texi:2986
 msgid "The functions in this section describe the basic capabilities of a particular display.  Lisp programs can use them to adapt their behavior to what the display can do.  For example, a program that ordinarily uses a popup menu could use the minibuffer if popup menus are not supported."
-msgstr "このセクションの関数は、特定のディスプレイの基本的な能力を説明します。Lispプログラムは、そのディスプレイが行えることに挙動を合わせるために、それらを使用できます。たとえば、ポップアップメニューがサポートされなければ、通常はポップアップメニューを使用するプログラムは、ミニバッファーを使用できます。"
+msgstr "このセクションの関数は特定のディスプレイの基本的な能力を説明します。Lispプログラムはそのディスプレイが行えることに挙動を合わせるために、それらを使用できます。たとえばポップアップメニューがサポートされなければ、通常はポップアップメニューを使用するプログラムはミニバッファーを使用できます。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2991
 msgid "The optional argument @var{display} in these functions specifies which display to ask the question about.  It can be a display name, a frame (which designates the display that frame is on), or @code{nil} (which refers to the selected frame's display, @pxref{Input Focus})."
-msgstr "これらの関数のオプション引数@var{display}は、問い合わせるディスプレイを指定します。これにはディスプレイ名、フレーム(フレームがあるディスプレイを指定)、または@code{nil}(選択されたフレームのディスプレイを参照する。@ref{Input Focus}を参照されたい)を指定できます。"
+msgstr "これらの関数のオプション引数@var{display}は問い合わせるディスプレイを指定します。これにはディスプレイ名、フレーム(フレームがあるディスプレイを指定)、または@code{nil} (選択されたフレームのディスプレイを参照する。@ref{Input Focus}を参照)を指定できます。"
 
 #. type: Plain text
 #: original_texis/frames.texi:2994
 msgid "@xref{Color Names}, @ref{Text Terminal Colors}, for other functions to obtain information about displays."
-msgstr "ディスプレイに関する情報を取得するその他の関数については、@ref{Color Names}を参照してください。"
+msgstr "ディスプレイに関する情報を取得するその他の関数については@ref{Color Names}を参照してください。"
 
 #. type: defun
 #: original_texis/frames.texi:2995
@@ -5458,7 +5394,7 @@ msgstr "display-popup-menus-p &optional display"
 #. type: defun
 #: original_texis/frames.texi:3000
 msgid "This function returns @code{t} if popup menus are supported on @var{display}, @code{nil} if not.  Support for popup menus requires that the mouse be available, since the menu is popped up by clicking the mouse on some portion of the Emacs display."
-msgstr "この関数は、@var{display}上でポップアップメニューがサポートされていれば@code{t}、それ以外は@code{nil}をリターンする。Emacsディスプレイのある部分をマウスでクリックすることによりメニューがポップアップするので、ポップアップメニューのサポートにはマウスが利用可能であることが要求される。"
+msgstr "この関数は@var{display}上でポップアップメニューがサポートされていれば@code{t}、それ以外は@code{nil}をリターンする。Emacsディスプレイのある部分をマウスでクリックすることによりメニューがポップアップするので、ポップアップメニューのサポートにはマウスが利用可能であることが要求される。"
 
 #. type: defun
 #: original_texis/frames.texi:3002
@@ -5469,7 +5405,7 @@ msgstr "display-graphic-p &optional display"
 #. type: defun
 #: original_texis/frames.texi:3007
 msgid "This function returns @code{t} if @var{display} is a graphic display capable of displaying several frames and several different fonts at once.  This is true for displays that use a window system such as X, and false for text terminals."
-msgstr "この関数は、@var{display}が一度に複フレームおよび複数の異なるフォントを表示する能力を有すグラフィックディスプレイなら@code{t}をリターンする。これは、Xのようなウィンドウシステムのディスプレイにたいしては真、テキスト端末にたいしては偽となる。"
+msgstr "この関数は@var{display}が一度に複数フレームおよび複数の異なるフォントを表示する能力を有すグラフィックディスプレイなら@code{t}をリターンする。これはXのようなウィンドウシステムのディスプレイにたいしては真、テキスト端末にたいしては偽となる。"
 
 #. type: defun
 #: original_texis/frames.texi:3009
@@ -5486,7 +5422,7 @@ msgstr "mouse, availability"
 #. type: defun
 #: original_texis/frames.texi:3013
 msgid "This function returns @code{t} if @var{display} has a mouse available, @code{nil} if not."
-msgstr "この関数は、@var{display}でマウスが利用可能なら@code{t}、それ以外は@code{nil}をリターンする。"
+msgstr "この関数は@var{display}でマウスが利用可能なら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:3015
@@ -5503,7 +5439,7 @@ msgstr "x-display-color-p"
 #. type: defun
 #: original_texis/frames.texi:3020
 msgid "This function returns @code{t} if the screen is a color screen.  It used to be called @code{x-display-color-p}, and that name is still supported as an alias."
-msgstr "この関数は、そのスクリーンがカラースクリーンなら@code{t}をリターンする。これは以前は@code{x-display-color-p}と呼ばれており、その名前はエイリアスとして今でもサポートされる。"
+msgstr "この関数はそのスクリーンがカラースクリーンなら@code{t}をリターンする。これは以前は@code{x-display-color-p}と呼ばれており、その名前はエイリアスとして今でもサポートされる。"
 
 #. type: defun
 #: original_texis/frames.texi:3022
@@ -5514,7 +5450,7 @@ msgstr "display-grayscale-p &optional display"
 #. type: defun
 #: original_texis/frames.texi:3025
 msgid "This function returns @code{t} if the screen can display shades of gray.  (All color displays can do this.)"
-msgstr "この関数は、スクリーンがグレースケールを表示可能なら@code{t}をリターンする(カラーディスプレイはすべてこれを行うことができる)。"
+msgstr "この関数はスクリーンがグレースケールを表示可能なら@code{t}をリターンする(カラーディスプレイはすべてこれを行うことができる)。"
 
 #. type: defun
 #: original_texis/frames.texi:3027
@@ -5530,14 +5466,12 @@ msgstr "Display Face Attribute Testing"
 #. type: defun
 #: original_texis/frames.texi:3031
 msgid "This function returns non-@code{nil} if all the face attributes in @var{attributes} are supported (@pxref{Face Attributes})."
-msgstr "この関数は、@var{attributes}内のすべてのフェイス属性がサポートされていれば非@code{nil}をリターンする(@ref{Face Attributes}を参照)。"
+msgstr "この関数は@var{attributes}内のすべてのフェイス属性がサポートされていれば非@code{nil}をリターンする(@ref{Face Attributes}を参照)。"
 
 #. type: defun
 #: original_texis/frames.texi:3036
-#, fuzzy
-#| msgid "The definition of `supported' is somewhat heuristic, but basically means that a face containing all the attributes in @var{attributes}, when merged with the default face for display, can be represented in a way that's"
 msgid "The definition of ``supported'' is somewhat heuristic, but basically means that a face containing all the attributes in @var{attributes}, when merged with the default face for display, can be represented in a way that's"
-msgstr "幾分発見的ではあるが、`サポートされる'という言葉は、基本的にはあるフェイスが@var{attributes}内のすべての属性を含み、ディスプレイにたいしてデフォルトフェイスにマージ時に、"
+msgstr "幾分発見的ではあるが``サポートされる''という言葉は、基本的にはあるフェイスが@var{attributes}内のすべての属性を含み、ディスプレイにたいしてデフォルトフェイスにマージ時に、"
 
 #. type: enumerate
 #: original_texis/frames.texi:3040
@@ -5546,17 +5480,13 @@ msgstr "デフォルトフェイスとは異なる外見で表示でき、かつ
 
 #. type: enumerate
 #: original_texis/frames.texi:3043
-#, fuzzy
-#| msgid "`close in spirit' to what the attributes specify, if not exact."
 msgid "close in spirit to what the attributes specify, if not exact."
-msgstr "指定した属性と正確に一致しない場合は、`より近い(close in spirit)'"
+msgstr "指定した属性と正確に一致しない場合はより近い(close in spirit)外見で表示する"
 
 #. type: defun
 #: original_texis/frames.texi:3051
-#, fuzzy
-#| msgid "Point (2) implies that a @code{:weight black} attribute will be satisfied by any display that can display bold, as will @code{:foreground \"yellow\"} as long as some yellowish color can be displayed, but @code{:slant italic} will @emph{not} be satisfied by the tty display code's automatic substitution of a `dim' face for italic."
 msgid "Point (2) implies that a @code{:weight black} attribute will be satisfied by any display that can display bold, as will @code{:foreground \"yellow\"} as long as some yellowish color can be displayed, but @code{:slant italic} will @emph{not} be satisfied by the tty display code's automatic substitution of a dim face for italic."
-msgstr "方法で表現可能なことを意味する。2つ目のポイントは、属性@code{:weight black}は太字(bold)表示可能な、同様に属性@code{:foreground \"yellow\"}は黄色がかった何らかのカラーを表示可能なすべてのディスプレイで満たされるだろうが、属性@code{:slant italic}は斜体(italic)を自動的に`淡色(dim)'に置き換えるttyの表示コードでは@emph{満たされない}であろうことを暗に示している。"
+msgstr "2つ目のポイントによると属性@code{:weight black}は太字(bold)表示可能、同様に属性@code{:foreground \"yellow\"}は黄色がかった何らかのカラーを表示可能なすべてのディスプレイで満たされるだろうが、属性@code{:slant italic}は斜体(italic)を自動的に淡色(dim)に置き換えるttyの表示コードでは@emph{満たされない}であろうことを暗示している。"
 
 #. type: defun
 #: original_texis/frames.texi:3053
@@ -5567,7 +5497,7 @@ msgstr "display-selections-p &optional display"
 #. type: defun
 #: original_texis/frames.texi:3057
 msgid "This function returns @code{t} if @var{display} supports selections.  Windowed displays normally support selections, but they may also be supported in some other cases."
-msgstr "この関数は、@var{display}が選択(selections)をサポートすれば@code{t}をリターンする。ウィンドウ化されたディスプレイでは、通常は選択がサポートされるが、他の場合にもサポートされ得る。"
+msgstr "この関数は@var{display}が選択(selections)をサポートすれば@code{t}をリターンする。ウィンドウ化されたディスプレイでは通常は選択がサポートされるが、他の場合にもサポートされ得る。"
 
 #. type: defun
 #: original_texis/frames.texi:3059
@@ -5578,7 +5508,7 @@ msgstr "display-images-p &optional display"
 #. type: defun
 #: original_texis/frames.texi:3064
 msgid "This function returns @code{t} if @var{display} can display images.  Windowed displays ought in principle to handle images, but some systems lack the support for that.  On a display that does not support images, Emacs cannot display a tool bar."
-msgstr "この関数は、@var{display}がイメージを表示可能なら@code{t}をリターンする。ウィンドウ化されたディスプレイは原則イメージを処理するが、イメージにたいするサポートを欠くシステムもいくつかある。イメージをサポートしないディスプレイ上では、Emacsはツールバーを表示できない。"
+msgstr "この関数は@var{display}がイメージを表示可能なら@code{t}をリターンする。ウィンドウ化されたディスプレイは原則イメージを処理するが、イメージにたいするサポートを欠くシステムもいくつかある。イメージをサポートしないディスプレイ上ではEmacsはツールバーを表示できない。"
 
 #. type: defun
 #: original_texis/frames.texi:3066
@@ -5589,7 +5519,7 @@ msgstr "display-screens &optional display"
 #. type: defun
 #: original_texis/frames.texi:3068
 msgid "This function returns the number of screens associated with the display."
-msgstr "この関数は、そのディスプレイに割り当てられたスクリーンの数をリターンする。"
+msgstr "この関数はそのディスプレイに割り当てられたスクリーンの数をリターンする。"
 
 #. type: defun
 #: original_texis/frames.texi:3070
@@ -5600,14 +5530,12 @@ msgstr "display-pixel-height &optional display"
 #. type: defun
 #: original_texis/frames.texi:3073
 msgid "This function returns the height of the screen in pixels.  On a character terminal, it gives the height in characters."
-msgstr "この関数は、スクリーンの高さをピクセルでリターンする。文字端末では、文字数で高さを与える。"
+msgstr "この関数はスクリーンの高さをピクセルでリターンする。文字端末では文字数で高さを与える。"
 
 #. type: defun
 #: original_texis/frames.texi:3077
-#, fuzzy
-#| msgid "For graphical terminals, note that on ``multi-monitor'' setups this refers to the pixel height for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
 msgid "For graphical terminals, note that on multi-monitor setups this refers to the pixel height for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
-msgstr "``マルチモニター''にセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
+msgstr "マルチモニターにセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
 
 #. type: defun
 #: original_texis/frames.texi:3079
@@ -5618,14 +5546,12 @@ msgstr "display-pixel-width &optional display"
 #. type: defun
 #: original_texis/frames.texi:3082
 msgid "This function returns the width of the screen in pixels.  On a character terminal, it gives the width in characters."
-msgstr "この関数は、スクリーンの幅をピクセルでリターンする。文字端末では、文字数で幅を与える。"
+msgstr "この関数はスクリーンの幅をピクセルでリターンする。文字端末では文字数で幅を与える。"
 
 #. type: defun
 #: original_texis/frames.texi:3086
-#, fuzzy
-#| msgid "For graphical terminals, note that on ``multi-monitor'' setups this refers to the pixel width for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
 msgid "For graphical terminals, note that on multi-monitor setups this refers to the pixel width for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
-msgstr "``マルチモニター''にセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
+msgstr "マルチモニターにセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
 
 #. type: defun
 #: original_texis/frames.texi:3088
@@ -5636,14 +5562,12 @@ msgstr "display-mm-height &optional display"
 #. type: defun
 #: original_texis/frames.texi:3091
 msgid "This function returns the height of the screen in millimeters, or @code{nil} if Emacs cannot get that information."
-msgstr "この関数は、スクリーンの高さをミリメートルでリターンする。@code{nil}なら、Emacsがその情報を取得できなかったことを意味する。"
+msgstr "この関数はスクリーンの高さをミリメートルでリターンする。@code{nil}ならEmacsがその情報を取得できなかったことを意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:3095
-#, fuzzy
-#| msgid "For graphical terminals, note that on ``multi-monitor'' setups this refers to the height for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
 msgid "For graphical terminals, note that on multi-monitor setups this refers to the height for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
-msgstr "``マルチモニター''にセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
+msgstr "マルチモニターにセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
 
 #. type: defun
 #: original_texis/frames.texi:3097
@@ -5654,14 +5578,12 @@ msgstr "display-mm-width &optional display"
 #. type: defun
 #: original_texis/frames.texi:3100
 msgid "This function returns the width of the screen in millimeters, or @code{nil} if Emacs cannot get that information."
-msgstr "この関数は、スクリーンの幅をミリメートルでリターンする。@code{nil}なら、Emacsがその情報を取得できなかったことを意味する。"
+msgstr "この関数はスクリーンの幅をミリメートルでリターンする。@code{nil}ならEmacsがその情報を取得できなかったことを意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:3104
-#, fuzzy
-#| msgid "For graphical terminals, note that on ``multi-monitor'' setups this refers to the width for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
 msgid "For graphical terminals, note that on multi-monitor setups this refers to the width for all physical monitors associated with @var{display}.  @xref{Multiple Terminals}."
-msgstr "``マルチモニター''にセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
+msgstr "マルチモニターにセットアップされているグラフィカル端末では、@var{display}に割り当てられたすべての物理モニターのピクセル幅を参照することに注意。@ref{Multiple Terminals}を参照のこと。"
 
 #. type: defopt
 #: original_texis/frames.texi:3106
@@ -5672,7 +5594,7 @@ msgstr "display-mm-dimensions-alist"
 #. type: defopt
 #: original_texis/frames.texi:3110
 msgid "This variable allows the user to specify the dimensions of graphical displays returned by @code{display-mm-height} and @code{display-mm-width} in case the system provides incorrect values."
-msgstr "この変数は、システムの提供する値が不正な場合に@code{display-mm-height}および@code{display-mm-width}がリターンするグラフィカルなディスプレイのサイズを、ユーザーが指定できるようにする。"
+msgstr "この変数はシステムの提供する値が不正な場合に@code{display-mm-height}と@code{display-mm-width}がリターンするグラフィカルなディスプレイのサイズをユーザーが指定できるようにする。"
 
 #. type: cindex
 #: original_texis/frames.texi:3112
@@ -5689,12 +5611,12 @@ msgstr "display-backing-store &optional display"
 #. type: defun
 #: original_texis/frames.texi:3118
 msgid "This function returns the backing store capability of the display.  Backing store means recording the pixels of windows (and parts of windows) that are not exposed, so that when exposed they can be displayed very quickly."
-msgstr "この関数は、そのディスプレイのバッキングストアー(backing store)の能力をリターンする。バッキングストアーとは、非露出ウィンドウ(およびウィンドウの一部)のピクセルを記録しておいて、露出時に素早く表示できるようにすることを意味する。"
+msgstr "この関数はそのディスプレイのバッキングストアー(backing store)の能力をリターンする。バッキングストアーとは非露出ウィンドウ(およびウィンドウの一部)のピクセルを記録しておいて、露出時に素早く表示できるようにすることを意味する。"
 
 #. type: defun
 #: original_texis/frames.texi:3122
 msgid "Values can be the symbols @code{always}, @code{when-mapped}, or @code{not-useful}.  The function can also return @code{nil} when the question is inapplicable to a certain kind of display."
-msgstr "値にはシンボル@code{always}、@code{when-mapped}、@code{not-useful}である。特定の種類のディスプレイにたいしてこの問いが適用外の際、この関数は@code{nil}をリターンすることもある。"
+msgstr "値はシンボル@code{always}、@code{when-mapped}、@code{not-useful}。特定の種類のディスプレイにたいしてこの問いが適用外の際には、この関数は@code{nil}をリターンすることもある。"
 
 #. type: cindex
 #: original_texis/frames.texi:3124
@@ -5711,7 +5633,7 @@ msgstr "display-save-under &optional display"
 #. type: defun
 #: original_texis/frames.texi:3130
 msgid "This function returns non-@code{nil} if the display supports the SaveUnder feature.  That feature is used by pop-up windows to save the pixels they obscure, so that they can pop down quickly."
-msgstr "この関数は、そのディスプレイがSaveUnder機能をサポートすれば非@code{nil}をリターンする。この機能は、ポップアップウィンドウに隠されるピクセルを保存して、素早くポップダウンができるようにするために使用される。"
+msgstr "この関数はそのディスプレイがSaveUnder機能をサポートすれば非@code{nil}をリターンする。この機能はポップアップウィンドウに隠されるピクセルを保存して素早くポップダウンができるようにするために使用される。"
 
 #. type: defun
 #: original_texis/frames.texi:3132
@@ -5722,7 +5644,7 @@ msgstr "display-planes &optional display"
 #. type: defun
 #: original_texis/frames.texi:3136
 msgid "This function returns the number of planes the display supports.  This is typically the number of bits per pixel.  For a tty display, it is log to base two of the number of colors supported."
-msgstr "この関数は、そのディスプレイがサポートする平面数(number of planes)をリターンする。これは通常、ピクセルごとのビット(bits per pixel: 色深度[bpp])数である。ttyディスプレイでは、サポートされるカラー数の2進対数(log to base two)である。"
+msgstr "この関数はそのディスプレイがサポートする平面数(number of planes)をリターンする。これは通常はピクセルごとのビット数(bits per pixel: 色深度[bpp])。ttyディスプレイではサポートされるカラー数の2進対数(log to base two)。"
 
 #. type: defun
 #: original_texis/frames.texi:3138
@@ -5733,7 +5655,7 @@ msgstr "display-visual-class &optional display"
 #. type: defun
 #: original_texis/frames.texi:3146
 msgid "This function returns the visual class for the screen.  The value is one of the symbols @code{static-gray} (a limited, unchangeable number of grays), @code{gray-scale} (a full range of grays), @code{static-color} (a limited, unchangeable number of colors), @code{pseudo-color} (a limited number of colors), @code{true-color} (a full range of colors), and @code{direct-color} (a full range of colors)."
-msgstr "この関数は、そのスクリーンのビジュアルクラスをリターンする。値はシンボル@code{static-gray}(カラー数変更不可の限定されたグレイ)、@code{gray-scale}(フルレンジのグレイ)、@code{static-color}(カラー数変更不可の限定されたカラー)、@code{pseudo-color}(限定されたカラー数のカラー)、@code{true-color}(フルレンジのカラー)、および@code{direct-color}(フルレンジのカラー)のいずれかである。"
+msgstr "この関数はそのスクリーンのビジュアルクラスをリターンする。値はシンボル@code{static-gray} (カラー数変更不可の限定されたグレイ)、@code{gray-scale} (フルレンジのグレイ)、@code{static-color} (カラー数変更不可の限定されたカラー)、@code{pseudo-color} (限定されたカラー数のカラー)、@code{true-color} (フルレンジのカラー)、および@code{direct-color} (フルレンジのカラー)のいずれか。"
 
 #. type: defun
 #: original_texis/frames.texi:3148
@@ -5744,12 +5666,12 @@ msgstr "display-color-cells &optional display"
 #. type: defun
 #: original_texis/frames.texi:3150
 msgid "This function returns the number of color cells the screen supports."
-msgstr "この関数は、そのスクリーンがサポートするカラーのセル数をリターンする。"
+msgstr "この関数はそのスクリーンがサポートするカラーのセル数をリターンする。"
 
 #. type: Plain text
 #: original_texis/frames.texi:3155
 msgid "These functions obtain additional information about the window system in use where Emacs shows the specified @var{display}.  (Their names begin with @code{x-} for historical reasons.)"
-msgstr "以下の関数は、Emacsが指定された@var{display}を表示する場所に使用されるウィンドウシステムの追加情報を取得します(関数名先頭の@code{x-}は歴史的理由による)。"
+msgstr "以下の関数はEmacsが指定された@var{display}を表示する場所に使用されるウィンドウシステムの追加情報を取得します(関数名先頭の@code{x-}は歴史的理由による)。"
 
 #. type: defun
 #: original_texis/frames.texi:3156
@@ -5760,7 +5682,7 @@ msgstr "x-server-version &optional display"
 #. type: defun
 #: original_texis/frames.texi:3165
 msgid "This function returns the list of version numbers of the GUI window system running on @var{display}, such as the X server on GNU and Unix systems.  The value is a list of three integers: the major and minor version numbers of the protocol, and the distributor-specific release number of the window system software itself.  On GNU and Unix systems, these are normally the version of the X protocol and the distributor-specific release number of the X server software.  On MS-Windows, this is the version of the Windows OS."
-msgstr "この関数は、GNUおよびUnixシステム上のXサーバーのような、@var{display}上で実行されているGUIウィンドウシステムのバージョン番号のリストをリターンする。値は3つの整数からなるリストで、1つ目と2つ目の整数はそのプロトコルのメジャーバージョン番号とマイナーバージョン番号、3つ目の整数はウィンドウシステムソフトウェア自体のディストリビューター固有のリリース番号である。GNUおよびUnixシステムでは、通常これらはXプロトコルのバージョン番号と、Xサーバーソフトウェアのディストリビューター固有のリリース番号である。MS-Windowsでは、WidowsのOSバージョン番号である。"
+msgstr "この関数はGNUおよびUnixシステム上のXサーバーのような、@var{display}上で実行されているGUIウィンドウシステムのバージョン番号のリストをリターンする。値は3つの整数からなるリストで、1つ目と2つ目の整数はそのプロトコルのメジャーバージョン番号とマイナーバージョン番号、3つ目の整数はウィンドウシステムソフトウェア自体のディストリビューター固有のリリース番号。GNUおよびUnixシステムでは、通常これらはXプロトコルのバージョン番号と、Xサーバーソフトウェアのディストリビューター固有のリリース番号。MS-WindowsではWidowsのOSバージョン番号。"
 
 #. type: defun
 #: original_texis/frames.texi:3167
@@ -5770,10 +5692,8 @@ msgstr "x-server-vendor &optional display"
 
 #. type: defun
 #: original_texis/frames.texi:3172
-#, fuzzy
-#| msgid "This function returns the ``vendor'' that provided the window system software (as a string).  On GNU and Unix systems this really means whoever distributes the X server.  On MS-Windows this is the vendor ID string of the Windows OS (Microsoft)."
 msgid "This function returns the vendor that provided the window system software (as a string).  On GNU and Unix systems this really means whoever distributes the X server.  On MS-Windows this is the vendor ID string of the Windows OS (Microsoft)."
-msgstr "この関数は、ウィンドウシステムソフトウェアを提供する``ベンダー''をリターン(文字列)する。GNUおよびUnixシステムでは、それが誰であれそのXサーバーを配布するベンダーを意味する。MS-Windowsでは、Widows OSのベンダーID文字列(Microsoft)である。"
+msgstr "この関数はウィンドウシステムソフトウェアを提供するベンダー(文字列)をリターンする。GNUおよびUnixシステムでは、それが誰であれそのXサーバーを配布するベンダーを意味する。MS-WindowsではWidows OSのベンダーID文字列(Microsoft)。"
 
 #. type: defun
 #: original_texis/frames.texi:3176
@@ -5790,4 +5710,4 @@ msgstr "x-no-window-manager"
 #: original_texis/frames.texi:3181
 #, no-wrap
 msgid "This variable's value is @code{t} if no X window manager is in use.\n"
-msgstr "この変数の値は、Xウィンドウマネージャーが何も使用されていなければ@code{t}となる。\n"
+msgstr "この変数の値はXウィンドウマネージャーが何も使用されていなければ@code{t}。\n"
