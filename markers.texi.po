@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2018-11-02 17:31+0900\n"
+"PO-Revision-Date: 2020-01-13 21:55+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -30,7 +30,7 @@ msgstr "markers"
 #. type: Plain text
 #: original_texis/markers.texi:14
 msgid "A @dfn{marker} is a Lisp object used to specify a position in a buffer relative to the surrounding text.  A marker changes its offset from the beginning of the buffer automatically whenever text is inserted or deleted, so that it stays with the two characters on either side of it."
-msgstr "@dfn{マーカー(marker)}とは、あるバッファー内で取り囲んでいるテキストにたいして相対的な位置を指定するために使用されるオブジェクトです。テキストが挿入または削除されると常に、マーカーは自動的にそのバッファーの先頭からのオフセットを自動的に変更して、自身の左右にある文字の間に留まります。"
+msgstr "@dfn{マーカー(marker)}とは、あるバッファー内で取り囲んでいるテキストにたいして相対的な位置を指定するために使用されるオブジェクトです。テキストが挿入や削除される際には、常にマーカーは自動的にそのバッファーの先頭からのオフセットを自動的に変更して自身の左右にある文字の間に留まります。"
 
 #. type: section
 #: original_texis/markers.texi:25 original_texis/markers.texi:27
@@ -111,10 +111,8 @@ msgstr "The Mark"
 
 #. type: menuentry
 #: original_texis/markers.texi:25
-#, fuzzy
-#| msgid "How \"the mark\" is implemented with a marker."
 msgid "How the mark is implemented with a marker."
-msgstr "マーカーによる\"マーク\"の実装方法。"
+msgstr "マーカーによるマークの実装方法。"
 
 #. type: section
 #: original_texis/markers.texi:25 original_texis/markers.texi:680
@@ -125,20 +123,18 @@ msgstr "The Region"
 
 #. type: menuentry
 #: original_texis/markers.texi:25
-#, fuzzy
-#| msgid "How to access \"the region\"."
 msgid "How to access the region."
-msgstr "\"リージョン\"へのアクセス方法。"
+msgstr "リージョンへのアクセス方法。"
 
 #. type: Plain text
 #: original_texis/markers.texi:37
 msgid "A marker specifies a buffer and a position in that buffer.  A marker can be used to represent a position in functions that require one, just as an integer could be used.  In that case, the marker's buffer is normally ignored.  Of course, a marker used in this way usually points to a position in the buffer that the function operates on, but that is entirely the programmer's responsibility.  @xref{Positions}, for a complete description of positions."
-msgstr "マーカーは、バッファーとそのバッファー内の位置を指定します。マーカーは、位置を要求する関数内において、位置を表すために整数と同じようにして使用することができます。その場合、そのマーカーのバッファーは、通常は無視されます。この方法で使用されるマーカーは通常、その関数が処理するバッファー内の位置を指しますが、それは完全にプログラマーの責任です。位置についての完全な説明は、@ref{Positions}を参照してください。"
+msgstr "マーカーはバッファーとそのバッファー内の位置を指定します。マーカーは位置を要求する関数内において、整数と同じように位置を表すために使用することができます。その場合には、そのマーカーのバッファーは通常は無視されます。この方法で使用されるマーカーは、通常はその関数が処理するバッファー内の位置を指しますが、それは完全にプログラマーの責任です。位置についての完全な説明は@ref{Positions}を参照してください。"
 
 #. type: Plain text
 #: original_texis/markers.texi:47
 msgid "A marker has three attributes: the marker position, the marker buffer, and the insertion type.  The marker position is an integer that is equivalent (at a given time) to the marker as a position in that buffer.  But the marker's position value can change during the life of the marker, and often does.  Insertion and deletion of text in the buffer relocate the marker.  The idea is that a marker positioned between two characters remains between those two characters despite insertion and deletion elsewhere in the buffer.  Relocation changes the integer equivalent of the marker."
-msgstr "マーカーはマーカー位置(marker position)、マーカーバッファー(marker buffer)、挿入タイプ(insertion type)という3つの属性をもちます。マーカー位置は、そのバッファー内の位置としてのマーカーと、(その時点において)等しい整数です。しかし、マーカー位置はマーカー生存期間中に変化し得るものであり、頻繁に変化されます。バッファー内でのテキストの挿入や削除で、マーカーは再配置されます。マーカー前後の2文字以外の場所で挿入や削除がおこなわれても、マーカー位置はその2文字間に留まるというのが、このアイデアです。再配置により、マーカーと等価な整数は変更されます。"
+msgstr "マーカーはマーカー位置(marker position)、マーカーバッファー(marker buffer)、挿入タイプ(insertion type)という3つの属性をもちます。マーカー位置はそのバッファー内の位置としてのマーカーと(その時点において)等しい整数です。しかしマーカー位置はマーカーの生存期間中に変化し得るものであり頻繁に変更されます。バッファー内でのテキストの挿入や削除によってマーカーは再配置されます。マーカー前後の2文字以外の場所で挿入や削除がおこなわれても、マーカー位置はその2文字間に留まるというのがこのアイデアです。再配置によってマーカーと等価な整数は変更されます。"
 
 #. type: cindex
 #: original_texis/markers.texi:48
@@ -149,7 +145,7 @@ msgstr "marker relocation"
 #. type: Plain text
 #: original_texis/markers.texi:55
 msgid "Deleting text around a marker's position leaves the marker between the characters immediately before and after the deleted text.  Inserting text at the position of a marker normally leaves the marker either in front of or after the new text, depending on the marker's @dfn{insertion type} (@pxref{Marker Insertion Types})---unless the insertion is done with @code{insert-before-markers} (@pxref{Insertion})."
-msgstr "マーカー位置周辺のテキストを削除することにより、そのマーカーは削除されたテキストの直前および直後にある文字の間に残されます。マーカー位置へのテキスト挿入では、マーカーは通常は新たなテキストの前か後のいずれかに置かれます。その挿入が@code{insert-before-markers}(@ref{Insertion}を参照)で行われたものでなければ、どちらに置かれるかはマーカーの@dfn{挿入タイプ}(@ref{Marker Insertion Types}を参照)に依存します。"
+msgstr "マーカー位置周辺のテキストを削除することにより、そのマーカーは削除されたテキストの直前と直後にある文字の間に残されます。マーカー位置へのテキスト挿入では、マーカーは通常は新たなテキストの前か後のいずれかに配置されます。その挿入が@code{insert-before-markers} (@ref{Insertion}を参照)で行われたものでなければ、どちらに配置されるかはマーカーの@dfn{挿入タイプ}(@ref{Marker Insertion Types}を参照)に依存します。"
 
 #. type: cindex
 #: original_texis/markers.texi:56
@@ -160,7 +156,7 @@ msgstr "marker garbage collection"
 #. type: Plain text
 #: original_texis/markers.texi:63
 msgid "Insertion and deletion in a buffer must check all the markers and relocate them if necessary.  This slows processing in a buffer with a large number of markers.  For this reason, it is a good idea to make a marker point nowhere if you are sure you don't need it any more.  Markers that can no longer be accessed are eventually removed (@pxref{Garbage Collection})."
-msgstr "バッファーでの挿入と削除では、すべてのマーカーをチェックして、必要ならそれらを再配置しなければなりません。これは、多数のマーカーをもつバッファーでの処理を遅くします。それ以上マーカーが不必要なのが確信できる場合には、存在しない場所も指さないようにマーカーを設定することは、この理由によりよいアイデアといえるでしょう。それ以上アクセスされる可能性がないマーカーは、最終的には削除されます(@ref{Garbage Collection}を参照)。"
+msgstr "バッファーでの挿入と削除では、すべてのマーカーをチェックして必要ならそれらを再配置しなければなりません。これは多数のマーカーをもつバッファーでの処理を低速にします。この理由によりそれ以上マーカーが不必要なことが確信できるなら、存在しない場所を指さないようにマーカーを設定することはよいアイデアといえるでしょう。それ以上アクセスされる可能性がないマーカーは最終的には削除されます(@ref{Garbage Collection}を参照)。"
 
 #. type: cindex
 #: original_texis/markers.texi:64
@@ -171,12 +167,12 @@ msgstr "markers as numbers"
 #. type: Plain text
 #: original_texis/markers.texi:69
 msgid "Because it is common to perform arithmetic operations on a marker position, most of these operations (including @code{+} and @code{-}) accept markers as arguments.  In such cases, the marker stands for its current position."
-msgstr "マーカー位置にたいして算術演算を行うことは一般的なので、それらの演算子のほとんど(@code{+}や@code{-}を含む)が、引数としてマーカーに渡すことができます。そのような場合には、マーカーはカレント位置を意味します。"
+msgstr "マーカー位置にたいして算術演算を行うことは一般的なので、それらの演算子のほとんど(@code{+}や@code{-}を含む)が引数としてマーカーに渡すことができます。そのような場合でのマーカーはカレント位置を意味します。"
 
 #. type: Plain text
 #: original_texis/markers.texi:72
 msgid "Here are examples of creating markers, setting markers, and moving point to markers:"
-msgstr "以下ではマーカー渡す作成とセットを行い、ポイントをマーカーに移動しています:"
+msgstr "以下ではマーカーの作成とセットを行ってポイントをマーカーに移動しています:"
 
 #. type: group
 #: original_texis/markers.texi:78
@@ -281,7 +277,7 @@ msgstr "markers, predicates for"
 #. type: Plain text
 #: original_texis/markers.texi:127
 msgid "You can test an object to see whether it is a marker, or whether it is either an integer or a marker.  The latter test is useful in connection with the arithmetic functions that work with both markers and integers."
-msgstr "あるオブジェクトがマーカーなのか、それとも整数かマーカーのいずれかであるか確認するために、テストを行うことができます。後者のテストは、マーカーと整数の両方にたいして機能する算術関数において有用です。"
+msgstr "あるオブジェクトがマーカーなのか、それとも整数かマーカーのいずれかであるかを確認するためのテストを行うことができます。後者のテストはマーカーと整数の両方にたいして機能する算術関数において有用です。"
 
 #. type: defun
 #: original_texis/markers.texi:128
@@ -292,7 +288,7 @@ msgstr "markerp object"
 #. type: defun
 #: original_texis/markers.texi:132
 msgid "This function returns @code{t} if @var{object} is a marker, @code{nil} otherwise.  Note that integers are not markers, even though many functions will accept either a marker or an integer."
-msgstr "この関数は、@var{object}がマーカーなら@code{nil}、それ以外は@code{t}をリターンする。多くの関数はマーカーか整数のいずれかを受け入れるだろうが、整数はマーカーと異なることに注意。"
+msgstr "この関数は@var{object}がマーカーなら@code{nil}、それ以外は@code{t}をリターンする。多くの関数はマーカーか整数のいずれかを受け入れるだろうが、整数はマーカーとは異なることに注意。"
 
 #. type: defun
 #: original_texis/markers.texi:134
@@ -303,7 +299,7 @@ msgstr "integer-or-marker-p object"
 #. type: defun
 #: original_texis/markers.texi:137
 msgid "This function returns @code{t} if @var{object} is an integer or a marker, @code{nil} otherwise."
-msgstr "この関数は、@var{object}が整数またはマーカーなら@code{t}、それ以外は@code{nil}をリターンする。"
+msgstr "この関数は@var{object}が整数かマーカーなら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/markers.texi:139
@@ -314,7 +310,7 @@ msgstr "number-or-marker-p object"
 #. type: defun
 #: original_texis/markers.texi:142
 msgid "This function returns @code{t} if @var{object} is a number (either integer or floating point) or a marker, @code{nil} otherwise."
-msgstr "この関数は、@var{object}が数値(整数か浮動小数点数のいずれか)またはマーカーなら@code{t}、それ以外は@code{nil}をリターンする。"
+msgstr "この関数は@var{object}が数値(整数か浮動小数点数)またはマーカーなら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: section
 #: original_texis/markers.texi:145
@@ -337,12 +333,12 @@ msgstr "marker creation"
 #. type: Plain text
 #: original_texis/markers.texi:153
 msgid "When you create a new marker, you can make it point nowhere, or point to the present position of point, or to the beginning or end of the accessible portion of the buffer, or to the same place as another given marker."
-msgstr "マーカーを新たに作成する際は、存在しない場所、ポイントの現在位置、バッファーのアクセス可能範囲の先頭や終端、または別の与えられたマーカーと同じ箇所を指すようにすることができます。"
+msgstr "マーカーを新たに作成する際には存在しない場所、ポイントの現在位置、バッファーのアクセス可能範囲の先頭や終端、または別の与えられたマーカーと同じ箇所を指すようにすることができます。"
 
 #. type: Plain text
 #: original_texis/markers.texi:156
 msgid "The next four functions all return markers with insertion type @code{nil}.  @xref{Marker Insertion Types}."
-msgstr "以下の4つの関数はすべて、挿入タイプ@code{nil}のマーカーをリターンします。@ref{Marker Insertion Types}を参照してください。"
+msgstr "以下の4つの関数はすべて挿入タイプ@code{nil}のマーカーをリターンします。@ref{Marker Insertion Types}を参照してください。"
 
 #. type: defun
 #: original_texis/markers.texi:157
@@ -353,7 +349,7 @@ msgstr "make-marker"
 #. type: defun
 #: original_texis/markers.texi:160
 msgid "This function returns a newly created marker that does not point anywhere."
-msgstr "この関数は、どこも指さないマーカーを新たに作成してリターンする。"
+msgstr "この関数はどこも指さないマーカーを新たに作成してリターンする。"
 
 #. type: group
 #: original_texis/markers.texi:165
@@ -374,7 +370,7 @@ msgstr "point-marker"
 #. type: defun
 #: original_texis/markers.texi:173
 msgid "This function returns a new marker that points to the present position of point in the current buffer.  @xref{Point}.  For an example, see @code{copy-marker}, below."
-msgstr "この関数は、カレントバッファーのポイント現在位置を指すマーカーを新たに作成してリターンする。@xref{Point}を参照のこと。例は以下の@code{copy-marker}を参照されたい。"
+msgstr "この関数はカレントバッファーのポイント現在位置を指すマーカーを新たに作成してリターンする。@ref{Point}を参照のこと。例は以下の@code{copy-marker}を参照のこと。"
 
 #. type: defun
 #: original_texis/markers.texi:175
@@ -385,7 +381,7 @@ msgstr "point-min-marker"
 #. type: defun
 #: original_texis/markers.texi:179
 msgid "This function returns a new marker that points to the beginning of the accessible portion of the buffer.  This will be the beginning of the buffer unless narrowing is in effect.  @xref{Narrowing}."
-msgstr "この関数は、バッファーのアクセス可能範囲の先頭を指すマーカーを新たに作成してリターンする。ナローイングが効力をもたなければ、これはバッファーの先頭になるだろう。@ref{Narrowing}を参照のこと。"
+msgstr "この関数はバッファーのアクセス可能範囲の先頭を指すマーカーを新たに作成してリターンする。ナローイングが効力をもたなければ、これはバッファーの先頭になるだろう。@ref{Narrowing}を参照のこと。"
 
 #. type: defun
 #: original_texis/markers.texi:181
@@ -396,12 +392,12 @@ msgstr "point-max-marker"
 #. type: defun
 #: original_texis/markers.texi:185
 msgid "This function returns a new marker that points to the end of the accessible portion of the buffer.  This will be the end of the buffer unless narrowing is in effect.  @xref{Narrowing}."
-msgstr "この関数は、バッファーのアクセス可能範囲の終端を指すマーカーを新たに作成してリターンする。ナローイングが効力をもたなければ、これはバッファーの終端になるだろう。@ref{Narrowing}を参照のこと。"
+msgstr "この関数はバッファーのアクセス可能範囲の終端を指すマーカーを新たに作成してリターンする。ナローイングが効力をもたなければ、これはバッファーの終端になるだろう。@ref{Narrowing}を参照のこと。"
 
 #. type: defun
 #: original_texis/markers.texi:189
 msgid "Here are examples of this function and @code{point-min-marker}, shown in a buffer containing a version of the source file for the text of this chapter."
-msgstr "以下に、このチャプターのテキストのソースファイルのバージョンを含むバッファーにたいして、この関数および@code{point-min-marker}を使用した例を示す。"
+msgstr "以下はこのチャプターのテキストのソースファイルのバージョンを含むバッファーにたいして、この関数と@code{point-min-marker}を使用する例。"
 
 #. type: group
 #: original_texis/markers.texi:196
@@ -456,12 +452,12 @@ msgstr "copy-marker &optional marker-or-integer insertion-type"
 #. type: defun
 #: original_texis/markers.texi:219
 msgid "If passed a marker as its argument, @code{copy-marker} returns a new marker that points to the same place and the same buffer as does @var{marker-or-integer}.  If passed an integer as its argument, @code{copy-marker} returns a new marker that points to position @var{marker-or-integer} in the current buffer."
-msgstr "引数としてマーカーを渡されると、@code{copy-marker}は@var{marker-or-integer}が行うようにして、同じバッファーの同じ位置を指すマーカーを新たに作成してリターンする。整数を渡された場合、@code{copy-marker}はカレントバッファーの位置@var{marker-or-integer}を指すマーカーを新たに作成してリターンする。"
+msgstr "引数としてマーカーを渡されると、@code{copy-marker}は@var{marker-or-integer}が行うように同じバッファーの同じ位置を指すマーカーを新たに作成してリターンする。整数を渡されると、@code{copy-marker}はカレントバッファーの位置@var{marker-or-integer}を指すマーカーを新たに作成してリターンする。"
 
 #. type: defun
 #: original_texis/markers.texi:222
 msgid "The new marker's insertion type is specified by the argument @var{insertion-type}.  @xref{Marker Insertion Types}."
-msgstr "新たなマーカーの挿入タイプは、引数@var{insertion-type}により指定される。@ref{Marker Insertion Types}を参照のこと。"
+msgstr "新たなマーカーの挿入タイプは引数@var{insertion-type}により指定される。@ref{Marker Insertion Types}を参照のこと。"
 
 #. type: group
 #: original_texis/markers.texi:236
@@ -486,12 +482,12 @@ msgstr ""
 #. type: defun
 #: original_texis/markers.texi:246
 msgid "An error is signaled if @var{marker} is neither a marker nor an integer."
-msgstr "@var{marker}がマーカーと整数のいずれでもない場合は、エラーがシグナルされる。"
+msgstr "@var{marker}がマーカーと整数のいずれでもなければエラーがシグナルされる。"
 
 #. type: Plain text
 #: original_texis/markers.texi:251
 msgid "Two distinct markers are considered @code{equal} (even though not @code{eq}) to each other if they have the same position and buffer, or if they both point nowhere."
-msgstr "2つのマーカーは、それらが同じバッファーの同じ位置、またはどちらも存在しない場所を指す場合は、(@code{eq}ではないものの)@code{equal}とみなされます。"
+msgstr "2つのマーカーはそれらが同じバッファーの同じ位置、またはどちらも存在しない場所を指す場合には、(@code{eq}ではないが)@code{equal}とみなされます。"
 
 #. type: group
 #: original_texis/markers.texi:256
@@ -542,7 +538,7 @@ msgstr "marker information"
 #. type: Plain text
 #: original_texis/markers.texi:280
 msgid "This section describes the functions for accessing the components of a marker object."
-msgstr "このセクションでは、マーカーオブジェクトの構成要素にアクセスする関数を説明します。"
+msgstr "このセクションではマーカーオブジェクトの構成要素にアクセスする関数を説明します。"
 
 #. type: defun
 #: original_texis/markers.texi:281
@@ -553,7 +549,7 @@ msgstr "marker-position marker"
 #. type: defun
 #: original_texis/markers.texi:284
 msgid "This function returns the position that @var{marker} points to, or @code{nil} if it points nowhere."
-msgstr "この関数は、@var{marker}が指す位置、または存在しない場所なら@code{nil}をリターンする。"
+msgstr "この関数は@var{marker}が指す位置、存在しない場所なら@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/markers.texi:286
@@ -564,7 +560,7 @@ msgstr "marker-buffer marker"
 #. type: defun
 #: original_texis/markers.texi:289
 msgid "This function returns the buffer that @var{marker} points into, or @code{nil} if it points nowhere."
-msgstr "この関数は、@var{marker}がその内部を指すバッファー、存在しない場所を指す場合は@code{nil}をリターンする。"
+msgstr "この関数は@var{marker}がその内部を指すバッファー、存在しない場所を指す場合には@code{nil}をリターンする。"
 
 #. type: group
 #: original_texis/markers.texi:296
@@ -635,7 +631,7 @@ msgstr "insertion type of a marker"
 #. type: Plain text
 #: original_texis/markers.texi:331
 msgid "When you insert text directly at the place where a marker points, there are two possible ways to relocate that marker: it can point before the inserted text, or point after it.  You can specify which one a given marker should do by setting its @dfn{insertion type}.  Note that use of @code{insert-before-markers} ignores markers' insertion types, always relocating a marker to point after the inserted text."
-msgstr "マーカーが指す位置に直接テキストを挿入する際、そのマーカーを再配置するために利用可能な手段が2つあります。そのマーカーはは挿入されたテキストの前、あるいは後を指すことができます。マーカーの@dfn{挿入タイプ(insertion type)}を指定することにより、マーカーがどちらを行うか指定できます。@code{insert-before-markers}を使用する場合は、マーカーの挿入タイプを無視して、常にマーカーが挿入されたテキストの後を指すよう再配置されることに注意してください。"
+msgstr "マーカーが指す位置に直接テキストを挿入する際には、そのマーカーを再配置するために利用可能な手段が2つあります。そのマーカーは挿入されたテキストの前か後を指すことができます。マーカーの@dfn{挿入タイプ(insertion type)}を指定することにより、マーカーがどちらを行うか指定できます。@code{insert-before-markers}を使用する場合には、マーカーの挿入タイプを無視して常にマーカーが挿入されたテキストの後を指すよう再配置されることに注意してください。"
 
 #. type: defun
 #: original_texis/markers.texi:332
@@ -646,7 +642,7 @@ msgstr "set-marker-insertion-type marker type"
 #. type: defun
 #: original_texis/markers.texi:337
 msgid "This function sets the insertion type of marker @var{marker} to @var{type}.  If @var{type} is @code{t}, @var{marker} will advance when text is inserted at its position.  If @var{type} is @code{nil}, @var{marker} does not advance when text is inserted there."
-msgstr "この関数は、マーカー@var{marker}の挿入タイプを、@var{type}にセットする。@var{type}が@code{t}の場合、テキスト挿入時に@var{marker}はその位置まで進められるだろう。@var{type}が@code{nil}なら、テキスト挿入時に@var{marker}はそこまで進められない。"
+msgstr "この関数はマーカー@var{marker}の挿入タイプを@var{type}にセットする。@var{type}が@code{t}なら、テキスト挿入時に@var{marker}はその位置まで進められるだろう。@var{type}が@code{nil}なら、テキスト挿入時に@var{marker}はそこまで進められることはない。"
 
 #. type: defun
 #: original_texis/markers.texi:339
@@ -657,14 +653,12 @@ msgstr "marker-insertion-type marker"
 #. type: defun
 #: original_texis/markers.texi:341
 msgid "This function reports the current insertion type of @var{marker}."
-msgstr "この関数は、@var{marker}のカレント挿入タイプを報告する。"
+msgstr "この関数は@var{marker}のカレント挿入タイプを報告する。"
 
 #. type: Plain text
 #: original_texis/markers.texi:347
-#, fuzzy
-#| msgid "Most functions that create markers, without an argument allowing to specify the insertion type, create them with insertion type @code{nil}.  Also, the mark has, by default, insertion type @code{nil}."
 msgid "All functions that create markers without accepting an argument that specifies the insertion type, create them with insertion type @code{nil} (@pxref{Creating Markers}).  Also, the mark has, by default, insertion type @code{nil}."
-msgstr "挿入タイプを指定するための引数を受け取らない、マーカーを作成する関数のほとんどは、挿入タイプ@code{nil}のマーカーを作成します。また、マークがもつデフォルトの挿入タイプも@code{nil}です。"
+msgstr "挿入タイプを指定するための引数を受け取らずにマーカーを作成するすべての関数は、挿入タイプ@code{nil}でマーカーを作成します。マークもデフォルトでは挿入タイプ@code{nil}をもちます。"
 
 #. type: section
 #: original_texis/markers.texi:349
@@ -687,7 +681,7 @@ msgstr "marker, how to move position"
 #. type: Plain text
 #: original_texis/markers.texi:358
 msgid "This section describes how to change the position of an existing marker.  When you do this, be sure you know whether the marker is used outside of your program, and, if so, what effects will result from moving it---otherwise, confusing things may happen in other parts of Emacs."
-msgstr "このセクションでは、既存マーカーの位置を変更する方法について説明します。これを行う際は、そのマーカーがあなたのプログラム外部に使用されているかどうか、もし使用されているならマーカーを移動した結果どのような影響が生じるかを確実に理解する必要があります。さもないと、Emacsの他の部分で、混乱した出来事が発生するかもしれません。"
+msgstr "このセクションでは既存マーカーの位置を変更する方法について説明します。これを行う際にはそのマーカーがあなたのプログラム外部に使用されているかどうか、もし使用されているならマーカーを移動した結果どのような影響が生じるかを確実に理解する必要があります。さもないとEmacsの他の部分で混乱した出来事が発生するかもしれません。"
 
 #. type: defun
 #: original_texis/markers.texi:359
@@ -698,17 +692,17 @@ msgstr "set-marker marker position &optional buffer"
 #. type: defun
 #: original_texis/markers.texi:363
 msgid "This function moves @var{marker} to @var{position} in @var{buffer}.  If @var{buffer} is not provided, it defaults to the current buffer."
-msgstr "この関数は、@var{buffer}内で@var{marker}を@var{position}に移動する。@var{buffer}が与えられなかった場合のデフォルトは、カレントバッファーである。"
+msgstr "この関数は@var{buffer}内で@var{marker}を@var{position}に移動する。@var{buffer}が与えられなかった場合のデフォルトはカレントバッファー。"
 
 #. type: defun
 #: original_texis/markers.texi:373
 msgid "If @var{position} is @code{nil} or a marker that points nowhere, then @var{marker} is set to point nowhere."
-msgstr "@var{position}が@code{nil}、または存在しない場所を指すマーカーの場合、@var{marker}は存在しない場所を指すようにセットされる。"
+msgstr "@var{position}が@code{nil}、または存在しない場所を指すマーカーなら、@var{marker}は存在しない場所を指すようにセットされる。"
 
 #. type: defun
 #: original_texis/markers.texi:375
 msgid "The value returned is @var{marker}."
-msgstr "リターン値は@var{marker}である。"
+msgstr "リターン値は@var{marker}。"
 
 #. type: group
 #: original_texis/markers.texi:380
@@ -759,7 +753,7 @@ msgstr "move-marker marker position &optional buffer"
 #. type: defun
 #: original_texis/markers.texi:398
 msgid "This is another name for @code{set-marker}."
-msgstr "これは@code{set-marker}の別名である。"
+msgstr "これは@code{set-marker}の別名。"
 
 #. type: cindex
 #: original_texis/markers.texi:402
@@ -769,27 +763,23 @@ msgstr "mark, the"
 
 #. type: Plain text
 #: original_texis/markers.texi:409
-#, fuzzy
-#| msgid "Each buffer has a special marker, which is designated @dfn{the mark}.  When a buffer is newly created, this marker exists but does not point anywhere; this means that the mark ``doesn't exist'' in that buffer yet.  Subsequent commands can set the mark."
 msgid "Each buffer has a special marker, which is designated @dfn{the mark}.  When a buffer is newly created, this marker exists but does not point anywhere; this means that the mark doesn't exist in that buffer yet.  Subsequent commands can set the mark."
-msgstr "バッファーはそれぞれ、@dfn{マーク(mark)}という、バッファー専用の特別なマーカーをもちますバッファーが新たに作成される際、すでにこのマーカーは存在していますが、どこも指していません。これは、そのバッファーにはまだマークが``存在しない''ことを意味します。それ以降のコマンドがマークをセットできます。"
+msgstr "バッファーはそれぞれ@dfn{マーク(mark)}というバッファー専用の特別なマーカーをもちます。バッファーが新たに作成される際には、このマーカーはすでに存在していますがどこも指していません。これはそのバッファーにはまだマークが存在しないことを意味します。それ以降のコマンドがマークをセットできます。"
 
 #. type: Plain text
 #: original_texis/markers.texi:419
 msgid "The mark specifies a position to bound a range of text for many commands, such as @code{kill-region} and @code{indent-rigidly}.  These commands typically act on the text between point and the mark, which is called the @dfn{region}.  If you are writing a command that operates on the region, don't examine the mark directly; instead, use @code{interactive} with the @samp{r} specification.  This provides the values of point and the mark as arguments to the command in an interactive call, but permits other Lisp programs to specify arguments explicitly.  @xref{Interactive Codes}."
-msgstr "マークは、@code{kill-region}や@code{indent-rigidly}のような多くのコマンドにたいして、テキスト範囲をバインドするための位置を指定します。通常これらのコマンドは、ポイントとマークの間の、@dfn{リージョン(region)}と呼ばれるテキストに作用します。リージョンを操作するコマンドを記述する場合は、マークを直接調べず、かわりに@samp{r}指定とともに@code{interactive}を使用してください。このようにすれば、インタラクティブな呼び出しではコマンドの引数としてポイントとマークの値が提供され、かつ他のLispプログラムは引数を明示的に指定できます。@ref{Interactive Codes}を参照してください。"
+msgstr "マークは@code{kill-region}や@code{indent-rigidly}のような多くのコマンドにたいしてテキスト範囲をバインドするための位置を指定します。これらのコマンドは、通常はポイントとマークの間の@dfn{リージョン(region)}と呼ばれるテキストに作用します。リージョンを操作するコマンドを記述する場合にはマークを直接調べず、かわりに@samp{r}指定とともに@code{interactive}を使用してください。このようにすればインタラクティブな呼び出しではコマンドの引数としてポイントとマークの値が提供され、かつ他のLispプログラムは引数を明示的に指定できます。@ref{Interactive Codes}を参照してください。"
 
 #. type: Plain text
 #: original_texis/markers.texi:426
 msgid "Some commands set the mark as a side-effect.  Commands should do this only if it has a potential use to the user, and never for their own internal purposes.  For example, the @code{replace-regexp} command sets the mark to the value of point before doing any replacements, because this enables the user to move back there conveniently after the replace is finished."
-msgstr "いくつかのコマンドは、その副作用(side-effect)としてマークをセットします。コマンドは、ユーザーがそれを使用する可能性がある場合のみマークをセットするべきであり、決してコマンドの内部的な目的にたいして使用してはなりません。たとえば@code{replace-regexp}コマンドは、何らかの置換を行う前にマークにポイントの値をセットしますが、その理由はこれによりユーザーが置換を終えた後、簡単にその位置に戻ることが可能になるからです。"
+msgstr "いくつかのコマンドは副作用(side-effect)としてマークをセットします。コマンドはユーザーがそれを使用する可能性がある場合のみマークをセットするべきであって、決してコマンドの内部的な目的にたいして使用してはなりません。たとえば@code{replace-regexp}コマンドは何らかの置換を行う前にマークにポイントの値をセットしますが、その理由はこれによりユーザーが置換を終えた後に簡単にその位置に戻ることが可能になるからです。"
 
 #. type: Plain text
 #: original_texis/markers.texi:435
-#, fuzzy
-#| msgid "Once the mark ``exists'' in a buffer, it normally never ceases to exist.  However, it may become @dfn{inactive}, if Transient Mark mode is enabled.  The buffer-local variable @code{mark-active}, if non-@code{nil}, means that the mark is active.  A command can call the function @code{deactivate-mark} to deactivate the mark directly, or it can request deactivation of the mark upon return to the editor command loop by setting the variable @code{deactivate-mark} to a non-@code{nil} value."
 msgid "Once the mark exists in a buffer, it normally never ceases to exist.  However, it may become @dfn{inactive}, if Transient Mark mode is enabled.  The buffer-local variable @code{mark-active}, if non-@code{nil}, means that the mark is active.  A command can call the function @code{deactivate-mark} to deactivate the mark directly, or it can request deactivation of the mark upon return to the editor command loop by setting the variable @code{deactivate-mark} to a non-@code{nil} value."
-msgstr "一度バッファー内にマークが``存在''すれば、その存在は通常は決して消えることはありません。しかし、Transient Markモードが有効な場合、マークが@dfn{非アクティブ(inactive)}になることはあります。バッファーローカル変数@code{mark-active}が非@code{nil}なら、それはマークがアクティブであることを意味します。コマンドはマークを直接非アクティブにするために関数@code{deactivate-mark}を呼び出すことができ、変数@code{deactivate-mark}を非@code{nil}値にセットすることにより、エディターコマンドループ(editor command loop)にリターン時にマークの非アクティブ化を要求できます。"
+msgstr "一度バッファー内にマークが存在すれば、その存在は通常は決して消えることはありません。しかしTransient Markモードが有効だとマークが@dfn{非アクティブ(inactive)}になることはあります。バッファーローカル変数@code{mark-active}が非@code{nil}なら、それはマークがアクティブであることを意味します。コマンドはマークを直接非アクティブにするために関数@code{deactivate-mark}を呼び出すことができ、変数@code{deactivate-mark}を非@code{nil}値にセットすることにより、エディターコマンドループ(editor command loop)にリターン時にマークの非アクティブ化を要求できます。"
 
 #. type: Plain text
 #: original_texis/markers.texi:441
