@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-01-13 21:55+0900\n"
+"PO-Revision-Date: 2020-01-14 22:27+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -784,7 +784,7 @@ msgstr "一度バッファー内にマークが存在すれば、その存在は
 #. type: Plain text
 #: original_texis/markers.texi:441
 msgid "If Transient Mark mode is enabled, certain editing commands that normally apply to text near point, apply instead to the region when the mark is active.  This is the main motivation for using Transient Mark mode.  (Another is that this enables highlighting of the region when the mark is active.  @xref{Display}.)"
-msgstr "Transient Markモードが有効な場合、通常ならポイント近傍に適用される特定の編集コマンドは、マークがアクティブなときはかわりにリージョンに適用されます。これがTransient Markモードを使用する主な動機です(他にも、マークアクティブ時にはリージョンのハイライトが有効になるという理由もある。@ref{Display}を参照されたい)。"
+msgstr "Transient Markモードが有効だと、通常ならポイント近傍に適用される特定の編集コマンドはマークがアクティブなときはかわりにリージョンに適用されます。これがTransient Markモードを使用する主な動機です(他にもマークアクティブ時にはリージョンのハイライトが有効になるという理由もある。@ref{Display}を参照)。"
 
 #. type: cindex
 #: original_texis/markers.texi:442
@@ -795,12 +795,12 @@ msgstr "mark ring"
 #. type: Plain text
 #: original_texis/markers.texi:449
 msgid "In addition to the mark, each buffer has a @dfn{mark ring} which is a list of markers containing previous values of the mark.  When editing commands change the mark, they should normally save the old value of the mark on the mark ring.  The variable @code{mark-ring-max} specifies the maximum number of entries in the mark ring; once the list becomes this long, adding a new element deletes the last element."
-msgstr "マークに加えて、バッファーはそれぞれ@dfn{マークリング(mark ring)}をもっています。これは、以前のマーク値を含むマーカーのリストです。編集コマンドがマークを変更する際、それらのコマンドは通常はマークの旧値をマークリングに保存するべきです。変数@code{mark-ring-max}は、マークリング内のエントリー最大数を指定します。リストがこの長さに達すると、最後の要素を削除して、新たな要素が追加されます。"
+msgstr "マークに加えてバッファーはそれぞれ@dfn{マークリング(mark ring)}をもっています。これは以前のマーク値を含むマーカーのリストです。編集コマンドがマークを変更する際には、それらのコマンドは通常はマークの旧値をマークリングに保存するべきです。変数@code{mark-ring-max}はマークリング内のエントリー最大数を指定します。リストがこの長さに達すると最後の要素を削除して新たな要素が追加されます。"
 
 #. type: Plain text
 #: original_texis/markers.texi:453
 msgid "There is also a separate global mark ring, but that is used only in a few particular user-level commands, and is not relevant to Lisp programming.  So we do not describe it here."
-msgstr "これとは別にグローバルマークリング(global mark ring)がありますが、それは少数の特定のユーザーレベルコマンドでのみ使用され、Lispプログラムとは関連しないので、ここでは説明しません。"
+msgstr "これとは別にグローバルマークリング(global mark ring)がありますが、それは少数の特定のユーザーレベルコマンドでのみ使用されて、Lispプログラムとは関連しないのでここでは説明しません。"
 
 #. type: defun
 #: original_texis/markers.texi:454
@@ -817,7 +817,7 @@ msgstr "current buffer mark"
 #. type: defun
 #: original_texis/markers.texi:458
 msgid "This function returns the current buffer's mark position as an integer, or @code{nil} if no mark has ever been set in this buffer."
-msgstr "この関数は、カレントバッファーのマーク位置を整数でリターンする。そのバッファー内でそれまでマークがセットされていなければ@code{nil}をリターンする。"
+msgstr "この関数はカレントバッファーのマーク位置を整数でリターンする。そのバッファー内でそれまでマークがセットされていなければ@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/markers.texi:464
@@ -833,7 +833,7 @@ msgstr "mark-marker"
 #. type: defun
 #: original_texis/markers.texi:471
 msgid "This function returns the marker that represents the current buffer's mark.  It is not a copy, it is the marker used internally.  Therefore, changing this marker's position will directly affect the buffer's mark.  Don't do that unless that is the effect you want."
-msgstr "この関数は、カレントバッファーのマークを表すマーカーをリターンする。これはコピーではなく、内部的に使用されるマーカーである。したがって、このマーカー位置にたいする変更は、そのバッファーのマークに直接影響する。それが望む効果でなければ、これを行ってはならない。"
+msgstr "この関数はカレントバッファーのマークを表すマーカーをリターンする。これはコピーではなく内部的に使用されるマーカー。したがってこのマーカー位置にたいする変更は、そのバッファーのマークに直接影響する。それが望む効果でなければこれを行ってはならない。"
 
 #. type: group
 #: original_texis/markers.texi:476
@@ -868,7 +868,7 @@ msgstr ""
 #. type: defun
 #: original_texis/markers.texi:491
 msgid "Like any marker, this marker can be set to point at any buffer you like.  If you make it point at any buffer other than the one of which it is the mark, it will yield perfectly consistent, but rather odd, results.  We recommend that you not do it!"
-msgstr "他のマーカー同様、このマーカーを任意のバッファー位置にセットできる。このマーカーに、これがマークする以外のバッファーを指すようにすると、完全に整合性があるものの、いささか奇妙な結果を得ることになるだろう。これを行わないことを、わたしたちは推奨する!"
+msgstr "他のマーカー同じように、このマーカーを任意のバッファー位置にセットできる。このマーカーにたいして、これがマークする以外のバッファーを指すようにすると、完全に整合性があるものの、いささか奇妙な結果を得ることになるだろう。わたしたちはこれを行わないことを推奨する!"
 
 #. type: defun
 #: original_texis/markers.texi:493
@@ -879,17 +879,17 @@ msgstr "set-mark position"
 #. type: defun
 #: original_texis/markers.texi:496
 msgid "This function sets the mark to @var{position}, and activates the mark.  The old value of the mark is @emph{not} pushed onto the mark ring."
-msgstr "この関数は、マークを@var{position}にセットして、そのマークをアクティブにする。マークの旧値はマークリングに@emph{pushされない}。"
+msgstr "この関数はマークを@var{position}にセットして、そのマークをアクティブにする。マークの旧値はマークリングに@emph{pushされない}。"
 
 #. type: defun
 #: original_texis/markers.texi:502
 msgid "@strong{Please note:} Use this function only if you want the user to see that the mark has moved, and you want the previous mark position to be lost.  Normally, when a new mark is set, the old one should go on the @code{mark-ring}.  For this reason, most applications should use @code{push-mark} and @code{pop-mark}, not @code{set-mark}."
-msgstr "@strong{注意:} マークが移動したことをユーザーに確認させ、かつ前のマーク位置が失われることを望む場合のみ、この関数を使用すること。通常は、マークセット時に古いマークは@code{mark-ring}にpushされるべきである。この理由により、ほとんどのアプリケーションは@code{set-mark}ではなく、@code{push-mark}および@code{pop-mark}を使用するべきである。"
+msgstr "@strong{注意:} マークが移動したことをユーザーに確認させて、かつ前のマーク位置が失われることを望む場合のみこの関数を使用すること。通常はマークセット時に古いマークを@code{mark-ring}にpushすること。この理由により、ほとんどのアプリケーションは@code{set-mark}ではなく、@code{push-mark}と@code{pop-mark}を使用するべきである。"
 
 #. type: defun
 #: original_texis/markers.texi:510
 msgid "Novice Emacs Lisp programmers often try to use the mark for the wrong purposes.  The mark saves a location for the user's convenience.  An editing command should not alter the mark unless altering the mark is part of the user-level functionality of the command.  (And, in that case, this effect should be documented.)  To remember a location for internal use in the Lisp program, store it in a Lisp variable.  For example:"
-msgstr "Emacs Lispの初心者プログラマーは、誤った用途にマークの使用を試みがちである。ユーザーの利便のために位置を保存するのがマークである。編集コマンドは、マーク変更がコマンドのユーザーレベル機能の一部でない限り、マークを変更するべきではない(そして、そのような場合にはその効果をドキュメントするべきである)。Lispプログラムの内部的な使用のために位置を記憶するためには、マークをLisp変数に格納すること。たとえば:"
+msgstr "Emacs Lisp初心者のプログラマーは誤った用途にマークの使用を試みがちである。ユーザーの利便のために位置を保存するのがマークである。編集コマンドはマーク変更がコマンドのユーザーレベル機能の一部でない限りマークを変更しないこと(そのような場合にはその効果をドキュメントするべきである)。Lispプログラムの内部的な使用のために位置を記憶するためには、マークをLisp変数に格納すること。たとえば:"
 
 #. type: group
 #: original_texis/markers.texi:516
@@ -912,17 +912,17 @@ msgstr "push-mark &optional position nomsg activate"
 #. type: defun
 #: original_texis/markers.texi:526
 msgid "This function sets the current buffer's mark to @var{position}, and pushes a copy of the previous mark onto @code{mark-ring}.  If @var{position} is @code{nil}, then the value of point is used."
-msgstr "この関数は、カレントバッファーのマークを@var{position}にセットして、前のマークを@code{mark-ring}にpushする。@var{position}が@code{nil}の場合は、ポイントの値を使用する。"
+msgstr "この関数はカレントバッファーのマークを@var{position}にセットして、前のマークを@code{mark-ring}にpushする。@var{position}が@code{nil}ならポイントの値を使用する。"
 
 #. type: defun
 #: original_texis/markers.texi:529
 msgid "The function @code{push-mark} normally @emph{does not} activate the mark.  To do that, specify @code{t} for the argument @var{activate}."
-msgstr "関数@code{push-mark}は通常、マークをアクティブに@emph{しない}。アクティブにする場合は、引数@var{activate}に@code{t}を指定する。"
+msgstr "関数@code{push-mark}は通常はマークをアクティブに@emph{しない}。アクティブにする場合には引数@var{activate}に@code{t}を指定する。"
 
 #. type: defun
 #: original_texis/markers.texi:532
 msgid "A @samp{Mark set} message is displayed unless @var{nomsg} is non-@code{nil}."
-msgstr "@var{nomsg}が@code{nil}なら、メッセージ@samp{Mark set}が表示される。"
+msgstr "@var{nomsg}が@code{nil}ならメッセージ@samp{Mark set}が表示される。"
 
 #. type: defun
 #: original_texis/markers.texi:534
@@ -933,7 +933,7 @@ msgstr "pop-mark"
 #. type: defun
 #: original_texis/markers.texi:542
 msgid "This function pops off the top element of @code{mark-ring} and makes that mark become the buffer's actual mark.  This does not move point in the buffer, and it does nothing if @code{mark-ring} is empty.  It deactivates the mark."
-msgstr "この関数は、@code{mark-ring}のトップ要素をpopして、そのマークをバッファーの実際のマークにする。これはバッファー内のポイントを移動せず、@code{mark-ring}が空なら何も行わない。これはマークを非アクティブ化する。"
+msgstr "この関数は@code{mark-ring}のトップ要素をpopして、そのマークをバッファーの実際のマークにする。これはバッファー内のポイントを移動せず、@code{mark-ring}が空なら何も行わない。これはマークを非アクティブ化する。"
 
 #. type: defopt
 #: original_texis/markers.texi:544
@@ -944,17 +944,17 @@ msgstr "transient-mark-mode"
 #. type: defopt
 #: original_texis/markers.texi:549
 msgid "This variable, if non-@code{nil}, enables Transient Mark mode.  In Transient Mark mode, every buffer-modifying primitive sets @code{deactivate-mark}.  As a consequence, most commands that modify the buffer also deactivate the mark."
-msgstr "この変数が非@code{nil}なら、Transient Markモードを有効にする。Transient Markモードでは、すべてのバッファー変更プリミティブが@code{deactivate-mark}をセットする。結果として、バッファーを変更するほとんどのコマンドも、マークを非アクティブにする。"
+msgstr "この変数が非@code{nil}ならTransient Markモードを有効にする。Transient Markモードでは、すべてのバッファー変更プリミティブが@code{deactivate-mark}をセットする。結果としてバッファーを変更するほとんどのコマンドもマークを非アクティブにする。"
 
 #. type: defopt
 #: original_texis/markers.texi:554
 msgid "When Transient Mark mode is enabled and the mark is active, many commands that normally apply to the text near point instead apply to the region.  Such commands should use the function @code{use-region-p} to test whether they should operate on the region.  @xref{The Region}."
-msgstr "Transient Markモードが有効かつマークがアクティブの場合、通常はポイント近傍に適用されるコマンドの多くは、かわりにリージョンに適用される。そのようなコマンドは、リージョンを処理すべきかどうかをテストするために、関数@code{use-region-p}を使用するべきである。@ref{The Region}を参照のこと。"
+msgstr "Transient Markモードが有効かつマークがアクティブなら、通常はポイント近傍に適用されるコマンドの多くは、かわりにリージョンに適用される。そのようなコマンド、リージョンを処理すべきかどうかをテストするために、関数@code{use-region-p}を使用すること。@ref{The Region}を参照のこと。"
 
 #. type: defopt
 #: original_texis/markers.texi:564
 msgid "Lisp programs can set @code{transient-mark-mode} to non-@code{nil}, non-@code{t} values to enable Transient Mark mode temporarily.  If the value is @code{lambda}, Transient Mark mode is automatically turned off after any action, such as buffer modification, that would normally deactivate the mark.  If the value is @w{@code{(only . @var{oldval})}}, then @code{transient-mark-mode} is set to the value @var{oldval} after any subsequent command that moves point and is not shift-translated (@pxref{Key Sequence Input, shift-translation}), or after any other action that would normally deactivate the mark."
-msgstr "Lispプログラムは、一時的にTransient Markモードを有効にするために、@code{transient-mark-mode}を@code{nil}でも@code{t}でもない値にセットできる。値が@code{lambda}なら、バッファー変更のような通常ならマークを非アクティブ化するような操作の後、Transient Markモードを自動的にオフに切り替える。値が@w{@code{(only . @var{oldval})}}なら、後続のコマンドがポイントを移動かつシフト変換(@ref{Key Sequence Input, shift-translation}を参照)されていない場合、あるいは通常はマークを非アクティブにするその他の操作の場合は、@code{transient-mark-mode}に値@var{oldval}をセットする。"
+msgstr "Lispプログラムは一時的にTransient Markモードを有効にするために、@code{transient-mark-mode}を@code{nil}でも@code{t}でもない値にセットできる。値が@code{lambda}なら、通常ならマークを非アクティブ化するバッファー変更ような操作の後に、Transient Markモードを自動的にオフに切り替える。値が@w{@code{(only . @var{oldval})}}なら後続のコマンドがポイントを移動かつシフト変換(@ref{Key Sequence Input, shift-translation}を参照)されていない場合、あるいは通常はマークを非アクティブにするその他の操作の場合にに、@code{transient-mark-mode}に値@var{oldval}をセットする。"
 
 #. type: defopt
 #: original_texis/markers.texi:566
@@ -965,7 +965,7 @@ msgstr "mark-even-if-inactive"
 #. type: defopt
 #: original_texis/markers.texi:572
 msgid "If this is non-@code{nil}, Lisp programs and the Emacs user can use the mark even when it is inactive.  This option affects the behavior of Transient Mark mode.  When the option is non-@code{nil}, deactivation of the mark turns off region highlighting, but commands that use the mark behave as if the mark were still active."
-msgstr "これが非@code{nil}なら、LispプログラムおよびEmacsユーザーは、たとえ非アクティブでもマークを使用できる。このオプションは、Transient Markモードの動作に影響を及ぼす。このオプションが非@code{nil}なら、マークの非アクティブ化によりリージョンのハイライトはオフに切り替えられるが、マークを使用するコマンドは、あたかもマークがアクティブであるかのように振る舞う。"
+msgstr "これが非@code{nil}なLispプログラムおよびEmacsユーザーは、たとえ非アクティブでもマークを使用できる。このオプションはTransient Markモードの動作に影響を及ぼす。このオプションが非@code{nil}ならマークの非アクティブ化によりリージョンのハイライトはオフに切り替えられるが、マークを使用するコマンドは、あたかもマークがアクティブであるかのように振る舞う。"
 
 #. type: defvar
 #: original_texis/markers.texi:574
@@ -975,10 +975,8 @@ msgstr "deactivate-mark"
 
 #. type: defvar
 #: original_texis/markers.texi:580
-#, fuzzy
-#| msgid "If an editor command sets this variable non-@code{nil}, then the editor command loop deactivates the mark after the command returns (if Transient Mark mode is enabled).  All the primitives that change the buffer set @code{deactivate-mark}, to deactivate the mark when the command is finished."
 msgid "If an editor command sets this variable non-@code{nil}, then the editor command loop deactivates the mark after the command returns (if Transient Mark mode is enabled).  All the primitives that change the buffer set @code{deactivate-mark}, to deactivate the mark when the command is finished.  Setting this variable makes it buffer-local."
-msgstr "エディターコマンドがこの変数を非@code{nil}にセットすると、エディターコマンドループはコマンドのリターン後に、(Transient Markモードが有効なら)マークを非アクティブにする。バッファーを変更するすべてのプリミティブは、コマンド終了時にマークを非アクティブにするために、@code{deactivate-mark}をセットする。"
+msgstr "エディターコマンドがこの変数を非@code{nil}にセットすると、エディターコマンドループはコマンドのリターン後に、(Transient Markモードが有効なら)マークを非アクティブにする。バッファーを変更するすべてのプリミティブは、コマンド終了時にマークを非アクティブにするために@code{deactivate-mark}をセットする。この変数はセットすらことによりバッファーローカルになる。"
 
 #. type: defvar
 #: original_texis/markers.texi:585
@@ -1004,7 +1002,7 @@ msgstr "deactivate-mark &optional force"
 #. type: defun
 #: original_texis/markers.texi:596
 msgid "If Transient Mark mode is enabled or @var{force} is non-@code{nil}, this function deactivates the mark and runs the normal hook @code{deactivate-mark-hook}.  Otherwise, it does nothing."
-msgstr "Transient Markモードが有効、または@var{force}が非@code{nil}の場合、この関数はマークを非アクティブにしてノーマルフック@code{deactivate-mark-hook}を実行し、それ以外は何も行わない。"
+msgstr "Transient Markモードが有効、または@var{force}が非@code{nil}なら、この関数はマークを非アクティブにしてノーマルフック@code{deactivate-mark-hook}を実行して、それ以外は何も行わない。"
 
 #. type: defvar
 #: original_texis/markers.texi:598
@@ -1015,7 +1013,7 @@ msgstr "mark-active"
 #. type: defvar
 #: original_texis/markers.texi:604
 msgid "The mark is active when this variable is non-@code{nil}.  This variable is always buffer-local in each buffer.  Do @emph{not} use the value of this variable to decide whether a command that normally operates on text near point should operate on the region instead.  Use the function @code{use-region-p} for that (@pxref{The Region})."
-msgstr "この変数が非@code{nil}なら、マークはアクティブである。この変数は、それぞれのバッファーにたいして、常にローカルである。通常はポイント近傍を操作するコマンドが、かわりにリージョンを操作すべきかどうかを判断するために、この変数の値を@emph{使用してはならない}。その目的にたいしては、関数@code{use-region-p}を使用すること(@ref{The Region}を参照)。"
+msgstr "この変数が非@code{nil}ならマークはアクティブ。この変数はそれぞれのバッファーにたいして常にローカル。通常はポイント近傍を操作するコマンドが、かわりにリージョンを操作すべきかどうかを判断するためにこの変数の値を@emph{使用してはならない}。その目的にたいしては関数@code{use-region-p}を使用すること(@ref{The Region}を参照)。"
 
 #. type: defvar
 #: original_texis/markers.texi:606
@@ -1032,7 +1030,7 @@ msgstr "deactivate-mark-hook"
 #. type: defvar
 #: original_texis/markers.texi:612
 msgid "These normal hooks are run, respectively, when the mark becomes active and when it becomes inactive.  The hook @code{activate-mark-hook} is also run at the end of the command loop if the mark is active and it is possible that the region may have changed."
-msgstr "これらのノーマルフックは、マークがアクティブまたは非アクティブになった際に、順次実行される。マークがアクティブで、かつリージョンが変更された可能性があるなら、コマンドループの最後にフック@code{activate-mark-hook}も実行される。"
+msgstr "これらのノーマルフックはマークがアクティブや非アクティブになった際に順次実行される。マークがアクティブかつリージョンが変更された可能性があるなら、コマンドループの最後にフック@code{activate-mark-hook}も実行される。"
 
 #. type: defun
 #: original_texis/markers.texi:622
@@ -1042,15 +1040,13 @@ msgstr "handle-shift-selection"
 
 #. type: defun
 #: original_texis/markers.texi:629
-#, fuzzy
-#| msgid "This function implements the ``shift-selection'' behavior of point-motion commands.  @xref{Shift Selection,,, emacs, The GNU Emacs Manual}.  It is called automatically by the Emacs command loop whenever a command with a @samp{^} character in its @code{interactive} spec is invoked, before the command itself is executed (@pxref{Interactive Codes, ^})."
 msgid "This function implements the shift-selection behavior of point-motion commands.  @xref{Shift Selection,,, emacs, The GNU Emacs Manual}.  It is called automatically by the Emacs command loop whenever a command with a @samp{^} character in its @code{interactive} spec is invoked, before the command itself is executed (@pxref{Interactive Codes, ^})."
-msgstr "この関数は、ポイント移動コマンドの``シフト選択(shift-selection)''の動作を実装する。@ref{Shift Selection,,, emacs, The GNU Emacs Manual}を参照のこと。これは、@code{interactive}指定に文字@samp{^}を含むコマンド呼び出し時は常に、そのコマンド自身を実行する前に、Emacsコマンドループにより自動的に呼び出される(@ref{Interactive Codes, ^}を参照)。"
+msgstr "この関数はポイント移動コマンドのシフト選択(shift-selection)の動作を実装する。@ref{Shift Selection,,, emacs, The GNU Emacs Manual}を参照のこと。これは@code{interactive}指定に文字@samp{^}を含むコマンドの呼び出し時は常に、そのコマンド自身を実行する前にEmacsコマンドループにより自動的に呼び出される(@ref{Interactive Codes, ^}を参照)。"
 
 #. type: defun
 #: original_texis/markers.texi:637
 msgid "If @code{shift-select-mode} is non-@code{nil} and the current command was invoked via shift translation (@pxref{Key Sequence Input, shift-translation}), this function sets the mark and temporarily activates the region, unless the region was already temporarily activated in this way.  Otherwise, if the region has been activated temporarily, it deactivates the mark and restores the variable @code{transient-mark-mode} to its earlier value."
-msgstr "@code{shift-select-mode}が非@code{nil}、かつカレントコマンドがシフト変換(@ref{Key Sequence Input, shift-translation}を参照)を通じて呼び出された場合、この関数はマークをセットして一時的にリージョンをアクティブにする(すでにこの方法によりリージョンが一時的にアクティブにされている場合を除く)。それ以外では、リージョンが一時的にアクティブにされていれば、マークを非アクティブにして、変数@code{transient-mark-mode}に前の値をリストアする。"
+msgstr "@code{shift-select-mode}が非@code{nil}、かつカレントコマンドがシフト変換(@ref{Key Sequence Input, shift-translation}を参照)を通じて呼び出された場合には、この関数はマークをセットして一時的にリージョンをアクティブにする(すでにこの方法によりリージョンが一時的にアクティブにされている場合を除く)。それ以外ではリージョンが一時的にアクティブにされていればマークを非アクティブにして、変数@code{transient-mark-mode}に前の値をリストアする。"
 
 #. type: defvar
 #: original_texis/markers.texi:639
@@ -1061,7 +1057,7 @@ msgstr "mark-ring"
 #. type: defvar
 #: original_texis/markers.texi:642
 msgid "The value of this buffer-local variable is the list of saved former marks of the current buffer, most recent first."
-msgstr "このバッファーローカル変数の値は、もっとも最近のものが先頭となった、カレントバッファーの以前に保存されたマークのリストである。"
+msgstr "このバッファーローカル変数の値は、もっとも最近のものが先頭となるような、以前に保存されたカレントバッファーのマークのリスト。"
 
 #. type: group
 #: original_texis/markers.texi:649
@@ -1086,31 +1082,30 @@ msgstr "mark-ring-max"
 #. type: defopt
 #: original_texis/markers.texi:657
 msgid "The value of this variable is the maximum size of @code{mark-ring}.  If more marks than this are pushed onto the @code{mark-ring}, @code{push-mark} discards an old mark when it adds a new one."
-msgstr "この変数の値は、@code{mark-ring}の最大サイズである。これより多くのマークが@code{mark-ring}にpushされると、新たなマーク追加時に@code{push-mark}は古いマークを破棄する。"
+msgstr "この変数の値は@code{mark-ring}の最大サイズ。これより多くのマークが@code{mark-ring}にpushされると、@code{push-mark}新たなマーク追加時には古いマークを破棄する。"
 
 #. type: cindex
 #: original_texis/markers.texi:662
 #, no-wrap
 msgid "@code{delete-selection}, symbol property"
-msgstr ""
+msgstr "@code{delete-selection}, symbol property"
 
 #. type: findex
 #: original_texis/markers.texi:663
-#, fuzzy, no-wrap
-#| msgid "handle-shift-selection"
+#, no-wrap
 msgid "delete-selection-helper"
-msgstr "handle-shift-selection"
+msgstr "delete-selection-helper"
 
 #. type: findex
 #: original_texis/markers.texi:664
 #, no-wrap
 msgid "delete-selection-pre-hook"
-msgstr ""
+msgstr "delete-selection-pre-hook"
 
 #. type: Plain text
 #: original_texis/markers.texi:679
 msgid "When Delete Selection mode (@pxref{Using Region, Delete Selection, , emacs, The GNU Emacs Manual}) is enabled, commands that operate on the active region (a.k.a.@: ``selection'') behave slightly differently.  This works by adding the function @code{delete-selection-pre-hook} to the @code{pre-command-hook} (@pxref{Command Overview}).  That function calls @code{delete-selection-helper} to delete the selection as appropriate for the command.  If you want to adapt a command to Delete Selection mode, put the @code{delete-selection} property on the function's symbol (@pxref{Symbol Plists}); commands that don't have this property on their symbol won't delete the selection.  This property can have one of several values to tailor the behavior to what the command is supposed to do; see the doc strings of @code{delete-selection-pre-hook} and @code{delete-selection-helper} for the details."
-msgstr ""
+msgstr "Delete Selectionモード(@ref{Using Region, Delete Selection, , emacs, The GNU Emacs Manual}を参照)が有効な際には、アクティブリージョン(いわゆる``選択'')を操作するコマンドは若干異なる振る舞いをします。これは@code{pre-command-hook}に関数@code{delete-selection-pre-hook}を追加することにより機能します(@ref{Command Overview}を参照)。この関数はそのコマンドにたいして適切なように選択を削除するために@code{delete-selection-helper}を呼び出します。コマンドをDelete Selectionモードに適応させたければ、その関数シンボルの@code{delete-selection}プロパティにputしてください(@ref{Symbol Plists}を参照)。シンボルにこのプロパティをもたないコマンドは選択を削除しません。そのコマンドに期待される挙動を調整するために、このプロパティはいくつかの値のいずれかをもつことができます。詳細は@code{delete-selection-pre-hook}と@code{delete-selection-helper}のドキュメント文字列を参照してください。"
 
 #. type: cindex
 #: original_texis/markers.texi:687
@@ -1126,7 +1121,7 @@ msgstr "ポイントとマークの間のテキストは、@dfn{リージョン(
 #. type: Plain text
 #: original_texis/markers.texi:698
 msgid "The next two functions signal an error if the mark does not point anywhere.  If Transient Mark mode is enabled and @code{mark-even-if-inactive} is @code{nil}, they also signal an error if the mark is inactive."
-msgstr "以下の2つの関数は、マークが何処も指していなければエラーをシグナルします。Transient Markモードが有効、かつ@code{mark-even-if-inactive}が@code{nil}なら、マークが非アクティブな場合のエラーをシグナルします。"
+msgstr "以下の2つの関数はマークが何処も指していなければエラーをシグナルします。Transient Markモードが有効、かつ@code{mark-even-if-inactive}が@code{nil}な、マークが非アクティブな場合にエラーをシグナルします。"
 
 #. type: defun
 #: original_texis/markers.texi:699
@@ -1137,7 +1132,7 @@ msgstr "region-beginning"
 #. type: defun
 #: original_texis/markers.texi:703
 msgid "This function returns the position of the beginning of the region (as an integer).  This is the position of either point or the mark, whichever is smaller."
-msgstr "この関数は、リージョンの先頭位置を、(整数として)リターンする。これは、ポイントかマークのいずれか小さいほうの位置である。"
+msgstr "この関数はリージョンの先頭位置を、(整数として)リターンする。これはポイントかマークのいずれか小さいほうの位置。"
 
 #. type: defun
 #: original_texis/markers.texi:705
@@ -1148,12 +1143,12 @@ msgstr "region-end"
 #. type: defun
 #: original_texis/markers.texi:709
 msgid "This function returns the position of the end of the region (as an integer).  This is the position of either point or the mark, whichever is larger."
-msgstr "この関数は、リージョンの終端位置を、(整数として)リターンする。これは、ポイントかマークのいずれか大きいほうの位置である。"
+msgstr "この関数はリージョンの終端位置を、(整数として)リターンする。これはポイントかマークのいずれか大きいほうの位置。"
 
 #. type: Plain text
 #: original_texis/markers.texi:717
 msgid "Instead of using @code{region-beginning} and @code{region-end}, a command designed to operate on a region should normally use @code{interactive} with the @samp{r} specification to find the beginning and end of the region.  This lets other Lisp programs specify the bounds explicitly as arguments.  @xref{Interactive Codes}."
-msgstr "リージョンにたいして操作を行うようにデザインされたコマンドがリージョンの先頭と終端を探すには、@code{region-beginning}および@code{region-end}を使用するかわりに、通常は@samp{r}指定とともに@code{interactive}を使用するべきです。これにより、他のLispプログラムが引数として明示的にリージョンの境界を指定できるようになります。@ref{Interactive Codes}を参照してください。。"
+msgstr "リージョンにたいして操作を行うようにデザインされたコマンドがリージョンの先頭と終端を探すためには、@code{region-beginning}や@code{region-end}を使用するかわりに、通常は@samp{r}指定とともに@code{interactive}を使用するべきです。これにより他のLispプログラムが引数として明示的にリージョンの境界を指定できるようになります。@ref{Interactive Codes}を参照してください。。"
 
 #. type: defun
 #: original_texis/markers.texi:718
@@ -1164,7 +1159,7 @@ msgstr "use-region-p"
 #. type: defun
 #: original_texis/markers.texi:723
 msgid "This function returns @code{t} if Transient Mark mode is enabled, the mark is active, and there is a valid region in the buffer.  This function is intended to be used by commands that operate on the region, instead of on text near point, when the mark is active."
-msgstr "この関数は、Transient Markモードが有効でマークがアクティブであり、かつバッファー内に有効なリージョンがあれば@code{t}をリターンする。この関数は、マークアクティブ時にはポイント近傍のテキストのかわりにリージョンを操作するコマンドにより使用されることを意図している。"
+msgstr "この関数はTransient Markモードが有効でマークがアクティブであり、かつバッファー内に有効なリージョンがあれば@code{t}をリターンする。この関数はマークアクティブ時にはポイント近傍のテキストのかわりにリージョンを操作するコマンドにより使用されることを意図している。"
 
 #. type: cindex
 #: original_texis/markers.texi:724
@@ -1181,4 +1176,4 @@ msgstr "use-empty-active-region"
 #. type: defun
 #: original_texis/markers.texi:732
 msgid "A region is valid if it has a non-zero size, or if the user option @code{use-empty-active-region} is non-@code{nil} (by default, it is @code{nil}).  The function @code{region-active-p} is similar to @code{use-region-p}, but considers all regions as valid.  In most cases, you should not use @code{region-active-p}, since if the region is empty it is often more appropriate to operate on point."
-msgstr "リージョンは、それが非0のサイズをもつか、あるいはユーザーオプション@code{use-empty-active-region}が非@code{nil}(デフォルトは@code{nil})なら有効である。関数@code{region-active-p}は@code{use-region-p}と同様だが、すべてのリージョンを有効とみなす。リージョンが空ならポイントにたいして操作を行うほうが適切な場合が多いため、ほとんどの場合は@code{region-active-p}を使用するべきではない。"
+msgstr "リージョンはそれが非0のサイズをもつか、あるいはユーザーオプション@code{use-empty-active-region}が非@code{nil} (デフォルトは@code{nil})なら有効。関数@code{region-active-p}は@code{use-region-p}と同様だが、すべてのリージョンを有効とみなす。リージョンが空ならポイントにたいして操作を行うほうが適切な場合が多いために、ほとんどの場合は@code{region-active-p}を使用するべきではない。"
