@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-18 02:31+0900\n"
+"PO-Revision-Date: 2020-01-19 00:57+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -30,12 +30,12 @@ msgstr "text"
 #. type: Plain text
 #: original_texis/text.texi:14
 msgid "This chapter describes the functions that deal with the text in a buffer.  Most examine, insert, or delete text in the current buffer, often operating at point or on text adjacent to point.  Many are interactive.  All the functions that change the text provide for undoing the changes (@pxref{Undo})."
-msgstr "このチャプターでは、バッファー内のテキストを扱う関数を説明します。ほとんどはカレントバッファー内のテキストにたいして検査、挿入、削除を行い、ポイント位置やポイントに隣接するテキストを操作することが多々あります。その多くはインタラクティブ(interactive: 対話的)です。テキストを変更するすべての関数は、その変更にたいするundo(アンドゥ、取り消し)を提供します(@ref{Undo}を参照)。"
+msgstr "このチャプターではバッファー内のテキストを扱う関数を説明します。ほとんどはカレントバッファー内のテキストにたいして検査、挿入、削除を行ってポイント位置やポイントに隣接するテキストを操作することが多々あります。その多くはインタラクティブ(interactive: 対話的)です。テキストを変更するすべての関数は、その変更にたいするundo(アンドゥ、取り消し)を提供します(@ref{Undo}を参照)。"
 
 #. type: Plain text
 #: original_texis/text.texi:25
 msgid "Many text-related functions operate on a region of text defined by two buffer positions passed in arguments named @var{start} and @var{end}.  These arguments should be either markers (@pxref{Markers}) or numeric character positions (@pxref{Positions}).  The order of these arguments does not matter; it is all right for @var{start} to be the end of the region and @var{end} the beginning.  For example, @code{(delete-region 1 10)} and @code{(delete-region 10 1)} are equivalent.  An @code{args-out-of-range} error is signaled if either @var{start} or @var{end} is outside the accessible portion of the buffer.  In an interactive call, point and the mark are used for these arguments."
-msgstr "テキストに関連する関数の多くが、@var{start}および@var{end}という名前の引数として渡された、2つのバッファー位置により定義された、テキストのリージョンを操作します。これらの引数は、マーカー(@ref{Markers}を参照)か、数値的な文字位置(@ref{Positions}を参照)のいずれかであるべきです。これらの引数の順序は関係ありません。@var{start}がリージョンの終端で、@var{end}がリージョンの先頭であっても、何も問題はないのです。たとえば、@code{(delete-region 1 10)}と@code{(delete-region 10 1)}は等価です。@var{start}と@var{end}のいずれかが、バッファーのアクセス可能範囲の外部なら、@code{args-out-of-range}エラーがシグナルされます。インタラクティブな呼び出しでは、これらの引数にポイントとマークが使用されます。"
+msgstr "テキストに関連する関数の多くが、@var{start}と@var{end}という名前の引数として渡された2つのバッファー位置により定義されるテキストのリージョンを操作します。これらの引数はマーカー(@ref{Markers}を参照)か数値的な文字位置(@ref{Positions}を参照)のいずれかであるべきです。これらの引数の順序は関係ありません。@var{start}がリージョンの終端で@var{end}がリージョンの先頭であっても問題はありません。たとえば@code{(delete-region 1 10)}と@code{(delete-region 10 1)}は等価です。@var{start}と@var{end}のいずれかがバッファーのアクセス可能範囲の外部なら@code{args-out-of-range}エラーがシグナルされます。インタラクティブな呼び出しでは、これらの引数にポイントとマークが使用されます。"
 
 #. type: cindex
 #: original_texis/text.texi:26
@@ -46,7 +46,7 @@ msgstr "buffer contents"
 #. type: Plain text
 #: original_texis/text.texi:31
 msgid "Throughout this chapter, ``text'' refers to the characters in the buffer, together with their properties (when relevant).  Keep in mind that point is always between two characters, and the cursor appears on the character after point."
-msgstr "このチャプターを通じて、``テキスト(text)''とは(関係あるときは)そのプロパティも含めた、バッファー内の文字を意味します。ポイントは常に2つの文字の間にあり、カーソルはポイントの後の文字上に表示されることを覚えておいてください。"
+msgstr "このチャプターを通じて、``テキスト(text)''とは(関係あるときは)そのプロパティも含めたバッファー内の文字を意味します。ポイントは常に2つの文字の間にあり、カーソルはポイントの後の文字上に表示されることを覚えておいてください。"
 
 #. type: node
 #: original_texis/text.texi:63 original_texis/text.texi:65
@@ -352,10 +352,8 @@ msgstr "Atomic Changes"
 
 #. type: menuentry
 #: original_texis/text.texi:63
-#, fuzzy
-#| msgid "Installing several buffer changes \"atomically\"."
 msgid "Installing several buffer changes atomically."
-msgstr "複数バッファーへの変更を\"アトミック\"にインストールする。"
+msgstr "複数バッファーへの変更をアトミックにインストールする。"
 
 #. type: section
 #: original_texis/text.texi:63 original_texis/text.texi:4676
@@ -384,12 +382,12 @@ msgstr "text near point"
 #. type: Plain text
 #: original_texis/text.texi:72
 msgid "Many functions are provided to look at the characters around point.  Several simple functions are described here.  See also @code{looking-at} in @ref{Regexp Search}."
-msgstr "ポイント付近にある文字を調べるための関数が、数多く提供されています。簡単な関数のいくつかは、ここで説明します。@ref{Regexp Search}の@code{looking-at}も参照してください。"
+msgstr "ポイント付近にある文字を調べるための関数が数多く提供されています。簡単な関数のいくつかはここで説明します。@ref{Regexp Search}の@code{looking-at}も参照してください。"
 
 #. type: Plain text
 #: original_texis/text.texi:75
 msgid "In the following four functions, ``beginning'' or ``end'' of buffer refers to the beginning or end of the accessible portion."
-msgstr "以下の4つの関数においてバッファーの``先頭(beginning)''と``終端(end)''はそれぞれ、アクセス可能範囲の先頭と終端を意味します。"
+msgstr "以下の4つの関数でのバッファーの``先頭(beginning)''と``終端(end)''はそれぞれ、アクセス可能範囲の先頭と終端を意味します。"
 
 #. type: defun
 #: original_texis/text.texi:76
@@ -400,12 +398,12 @@ msgstr "char-after &optional position"
 #. type: defun
 #: original_texis/text.texi:82
 msgid "This function returns the character in the current buffer at (i.e., immediately after) position @var{position}.  If @var{position} is out of range for this purpose, either before the beginning of the buffer, or at or beyond the end, then the value is @code{nil}.  The default for @var{position} is point."
-msgstr "この関数は、カレントバッファーの位置@var{position}(つまり直後)の文字をリターンする。@var{position}が、この目的にたいする範囲の外にある場合、すなわちバッファーの先頭より前、またはバッファーの終端以降にある場合、値は@code{nil}となる。@var{position}のデフォルトは、ポイントである。"
+msgstr "この関数はカレントバッファーの位置@var{position} (つまり直後)の文字をリターンする。@var{position}がこの目的にたいする範囲の外にある場合、すなわちバッファーの先頭より前、またはバッファーの終端以降にあるなら値は@code{nil}。@var{position}のデフォルトはポイント。"
 
 #. type: defun
 #: original_texis/text.texi:85
 msgid "In the following example, assume that the first character in the buffer is @samp{@@}:"
-msgstr "以下の例では、バッファーの最初の文字が@samp{@@}であると仮定する:"
+msgstr "以下の例ではバッファーの最初の文字が@samp{@@}であると仮定する:"
 
 #. type: group
 #: original_texis/text.texi:90
@@ -426,7 +424,7 @@ msgstr "char-before &optional position"
 #. type: defun
 #: original_texis/text.texi:100
 msgid "This function returns the character in the current buffer immediately before position @var{position}.  If @var{position} is out of range for this purpose, either at or before the beginning of the buffer, or beyond the end, then the value is @code{nil}.  The default for @var{position} is point."
-msgstr "この関数は、カレントバッファーの位置@var{position}の直前の文字をリターンする。@var{position}が、この目的にたいする範囲の外にある場合、すなわちバッファーの先頭より前、またはバッファーの終端より後にある場合、値は@code{nil}となる。@var{position}のデフォルトは、ポイントである。"
+msgstr "この関数はカレントバッファーの位置@var{position}の直前の文字をリターンする。@var{position}がこの目的にたいする範囲の外にある場合、すなわちバッファーの先頭より前、またはバッファーの終端より後にあるなら値は@code{nil}。@var{position}のデフォルトはポイント。"
 
 #. type: defun
 #: original_texis/text.texi:102
@@ -437,17 +435,17 @@ msgstr "following-char"
 #. type: defun
 #: original_texis/text.texi:106
 msgid "This function returns the character following point in the current buffer.  This is similar to @code{(char-after (point))}.  However, if point is at the end of the buffer, then @code{following-char} returns 0."
-msgstr "この関数は、カレントバッファーのポイントの後にある文字をリターンする。これは@code{(char-after (point))}と同様。ただし、ポイントがバッファー終端にある場合、@code{following-char}は0をリターンする。"
+msgstr "この関数はカレントバッファーのポイントの後にある文字をリターンする。これは@code{(char-after (point))}と同様。ただしポイントがバッファー終端にある場合には、@code{following-char}は0をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:111
 msgid "Remember that point is always between characters, and the cursor normally appears over the character following point.  Therefore, the character returned by @code{following-char} is the character the cursor is over."
-msgstr "ポイントが常に2文字間にあり、通常カーソルはポイント後の文字上に表示されることを思い出していただきたい。したがって、@code{following-char}がリターンする文字は、カーソル上の文字となる。"
+msgstr "ポイントが常に2つの文字の間にあり、カーソルは通常はポイント後の文字上に表示されることを思い出してほしい。したがって@code{following-char}がリターンする文字はカーソル上の文字となる。"
 
 #. type: defun
 #: original_texis/text.texi:113
 msgid "In this example, point is between the @samp{a} and the @samp{c}."
-msgstr "以下の例では、@samp{a}と@samp{c}の間にポイントがある。"
+msgstr "以下の例では@samp{a}と@samp{c}の間にポイントがある。"
 
 #. type: group
 #: original_texis/text.texi:120
@@ -486,7 +484,7 @@ msgstr "preceding-char"
 #. type: defun
 #: original_texis/text.texi:136
 msgid "This function returns the character preceding point in the current buffer.  See above, under @code{following-char}, for an example.  If point is at the beginning of the buffer, @code{preceding-char} returns 0."
-msgstr "この関数は、カレントバッファーのポイントの前の文字をリターンする。上記@code{following-char}の下の例を参照されたい。ポイントがバッファー先頭にある場合、@code{preceding-char}は0をリターンする。"
+msgstr "この関数はカレントバッファーのポイントの前の文字をリターンする。上記@code{following-char}の下の例を参照のこと。ポイントがバッファー先頭にあれば、@code{preceding-char}は0をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:138
@@ -497,7 +495,7 @@ msgstr "bobp"
 #. type: defun
 #: original_texis/text.texi:143
 msgid "This function returns @code{t} if point is at the beginning of the buffer.  If narrowing is in effect, this means the beginning of the accessible portion of the text.  See also @code{point-min} in @ref{Point}."
-msgstr "この関数は、ポイントがバッファー先頭にあれば@code{t}をリターンする。ナローイングが効力をもつ場合、これはテキストのアクセス可能範囲の先頭を意味する。@ref{Point}の@code{point-min}も参照のこと。"
+msgstr "この関数はポイントがバッファー先頭にあれば@code{t}をリターンする。ナローイングが効力をもつなら、これはテキストのアクセス可能範囲の先頭を意味する。@ref{Point}の@code{point-min}も参照のこと。"
 
 #. type: defun
 #: original_texis/text.texi:145
@@ -508,7 +506,7 @@ msgstr "eobp"
 #. type: defun
 #: original_texis/text.texi:149
 msgid "This function returns @code{t} if point is at the end of the buffer.  If narrowing is in effect, this means the end of accessible portion of the text.  See also @code{point-max} in @xref{Point}."
-msgstr "この関数は、ポイントがバッファー終端にあれば@code{t}をリターンする。ナローイングが効力をもつ場合、これはテキストのアクセス可能範囲の終端を意味する。@ref{Point}の@code{point-max}も参照のこと。"
+msgstr "この関数はポイントがバッファー終端にあれば@code{t}をリターンする。ナローイングが効力をもつなら、これはテキストのアクセス可能範囲の終端を意味する。@ref{Point}の@code{point-max}も参照のこと。"
 
 #. type: defun
 #: original_texis/text.texi:151
@@ -519,7 +517,7 @@ msgstr "bolp"
 #. type: defun
 #: original_texis/text.texi:155
 msgid "This function returns @code{t} if point is at the beginning of a line.  @xref{Text Lines}.  The beginning of the buffer (or of its accessible portion) always counts as the beginning of a line."
-msgstr "この関数は、ポイントが行の先頭にあれば@code{t}をリターンする。@ref{Text Lines}を参照のこと。バッファー(またはアクセス可能範囲)の先頭は、常に行の先頭とみなされる。"
+msgstr "この関数はポイントが行の先頭にあれば@code{t}をリターンする。@ref{Text Lines}を参照のこと。バッファー(またはアクセス可能範囲)の先頭は、常に行の先頭とみなされる。"
 
 #. type: defun
 #: original_texis/text.texi:157
@@ -530,7 +528,7 @@ msgstr "eolp"
 #. type: defun
 #: original_texis/text.texi:161
 msgid "This function returns @code{t} if point is at the end of a line.  The end of the buffer (or of its accessible portion) is always considered the end of a line."
-msgstr "この関数は、ポイントが行の終端にあれば@code{t}をリターンする。@ref{Text Lines}を参照のこと。バッファー(またはアクセス可能範囲)の終端は、常に行の先頭とみなされる。"
+msgstr "この関数はポイントが行の終端にあれば@code{t}をリターンする。@ref{Text Lines}を参照のこと。バッファー(またはアクセス可能範囲)の終端は常に行の先頭とみなされる。"
 
 #. type: section
 #: original_texis/text.texi:164
@@ -547,7 +545,7 @@ msgstr "buffer portion as string"
 #. type: Plain text
 #: original_texis/text.texi:169
 msgid "This section describes functions that allow a Lisp program to convert any portion of the text in the buffer into a string."
-msgstr "このセクションでは、Lispプログラムがバッファー内の任意の範囲のテキストを、文字列に変換するための関数を説明します。"
+msgstr "このセクションではLispプログラムがバッファー内の任意の範囲にあるテキストを文字列に変換するための関数を説明します。"
 
 #. type: defun
 #: original_texis/text.texi:170
@@ -558,12 +556,12 @@ msgstr "buffer-substring start end"
 #. type: defun
 #: original_texis/text.texi:176
 msgid "This function returns a string containing a copy of the text of the region defined by positions @var{start} and @var{end} in the current buffer.  If the arguments are not positions in the accessible portion of the buffer, @code{buffer-substring} signals an @code{args-out-of-range} error."
-msgstr "この関数は、カレントバッファー内の位置@var{start}と@var{end}で定義されるリージョンのテキストのコピーを含む文字列をリターンする。引数がバッファーのアクセス可能範囲内の位置でない場合、@code{buffer-substring}は@code{args-out-of-range}エラーをリターンする。"
+msgstr "この関数はカレントバッファー内の位置@var{start}と@var{end}で定義されるリージョンのテキストのコピーを含む文字列をリターンする。引数がバッファーのアクセス可能範囲内の位置でなければ、@code{buffer-substring}は@code{args-out-of-range}エラーをリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:178
 msgid "Here's an example which assumes Font-Lock mode is not enabled:"
-msgstr "以下の例では、Font-Lockモードが有効でないものとする:"
+msgstr "以下の例ではFont-Lockモードが有効でないものとする:"
 
 #. type: group
 #: original_texis/text.texi:183
@@ -606,12 +604,12 @@ msgstr ""
 #. type: defun
 #: original_texis/text.texi:201
 msgid "If the text being copied has any text properties, these are copied into the string along with the characters they belong to.  @xref{Text Properties}.  However, overlays (@pxref{Overlays}) in the buffer and their properties are ignored, not copied."
-msgstr "コピーされるテキストが何らかのテキストプロパティをもっていた場合、それらのプロパティが属す文字とともに文字列にコピーされる。しかし、バッファー内のオーバーレイ(@ref{Overlays}を参照)、およびそれらのプロパティは無視されるため、コピーされない。"
+msgstr "コピーされるテキストが何らかのテキストプロパティをもっていたら、それらのプロパティが属する文字とともに文字列にコピーされる。しかしバッファー内のオーバーレイ(@ref{Overlays}を参照)、およびそれらのプロパティは無視されるためコピーされない。"
 
 #. type: defun
 #: original_texis/text.texi:204
 msgid "For example, if Font-Lock mode is enabled, you might get results like these:"
-msgstr "たとえば、Font-Lockモードが有効なら、以下のような結果を得るだろう:"
+msgstr "たとえばFont-Lockモードが有効なら以下のような結果を得るだろう:"
 
 #. type: group
 #: original_texis/text.texi:209
@@ -632,7 +630,7 @@ msgstr "buffer-substring-no-properties start end"
 #. type: defun
 #: original_texis/text.texi:216
 msgid "This is like @code{buffer-substring}, except that it does not copy text properties, just the characters themselves.  @xref{Text Properties}."
-msgstr "これは@code{buffer-substring}と同様だが、テキストプロパティはコピーせず、文字自体だけをコピーする点が異なる。@ref{Text Properties}を参照のこと。"
+msgstr "これは@code{buffer-substring}と同様だが、テキストプロパティはコピーせずに文字自体だけをコピーする点が異なる。@ref{Text Properties}を参照のこと。"
 
 #. type: defun
 #: original_texis/text.texi:218
@@ -643,12 +641,12 @@ msgstr "buffer-string"
 #. type: defun
 #: original_texis/text.texi:221
 msgid "This function returns the contents of the entire accessible portion of the current buffer, as a string."
-msgstr "この関数は、カレントバッファーのアクセス可能範囲全体のコンテンツを、文字列としてリターンする。"
+msgstr "この関数はカレントバッファーのアクセス可能範囲全体のコンテンツを文字列としてリターンする。"
 
 #. type: Plain text
 #: original_texis/text.texi:228
 msgid "If you need to make sure the resulting string, when copied to a different location, will not change its visual appearance due to reordering of bidirectional text, use the @code{buffer-substring-with-bidi-context} function (@pxref{Bidirectional Display, buffer-substring-with-bidi-context})."
-msgstr ""
+msgstr "異なる場所からのコピー時に双方向テキストの再配置によって結果の文字列の視覚的外見が変更されないように保証する必要があるなら、@code{buffer-substring-with-bidi-context}関数を使用すること(@ref{Bidirectional Display, buffer-substring-with-bidi-context}を参照)。"
 
 #. type: defun
 #: original_texis/text.texi:229
@@ -659,22 +657,22 @@ msgstr "filter-buffer-substring start end &optional delete"
 #. type: defun
 #: original_texis/text.texi:233
 msgid "This function filters the buffer text between @var{start} and @var{end} using a function specified by the variable @code{filter-buffer-substring-function}, and returns the result."
-msgstr "この関数は、変数@code{filter-buffer-substring-function}により指定された関数を使用して、@var{start}と@var{end}の間のバッファーテキストをフィルターし、その結果をリターンする。"
+msgstr "この関数は変数@code{filter-buffer-substring-function}により指定された関数を使用して、@var{start}と@var{end}の間のバッファーテキストをフィルターしてその結果をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:239
 msgid "The default filter function consults the obsolete wrapper hook @code{filter-buffer-substring-functions}, and the obsolete variable @code{buffer-substring-filters}.  If both of these are @code{nil}, it returns the unaltered text from the buffer, i.e., what @code{buffer-substring} would return."
-msgstr "デフォルトのフィルター関数は時代遅れとなったラッパーフック@code{filter-buffer-substring-functions}、および同様に時代遅れとなった変数@code{buffer-substring-filters}を参照する。これら両者が@code{nil}なら、バッファーから未変更のテキスト、すなわち@code{buffer-substring}がリターンするであろうテキストをリターンする。"
+msgstr "デフォルトのフィルター関数は時代遅れとなったラッパーフック@code{filter-buffer-substring-functions}、および同様に時代遅れとなった変数@code{buffer-substring-filters}を参照する。これらがいずれも@code{nil}ならバッファーから未変更のテキスト、すなわち@code{buffer-substring}がリターンするであろうテキストをリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:243
 msgid "If @var{delete} is non-@code{nil}, the function deletes the text between @var{start} and @var{end} after copying it, like @code{delete-and-extract-region}."
-msgstr "@var{delete}が非@code{nil}なら、この関数は@code{delete-and-extract-region}と同様、コピー後に@var{start}と@var{end}の間のテキストを削除する。"
+msgstr "@var{delete}が非@code{nil}なら、この関数は@code{delete-and-extract-region}と同じように、コピー後に@var{start}と@var{end}の間のテキストを削除する。"
 
 #. type: defun
 #: original_texis/text.texi:250
 msgid "Lisp code should use this function instead of @code{buffer-substring}, @code{buffer-substring-no-properties}, or @code{delete-and-extract-region} when copying into user-accessible data structures such as the kill-ring, X clipboard, and registers.  Major and minor modes can modify @code{filter-buffer-substring-function} to alter such text as it is copied out of the buffer."
-msgstr "Lispコードは、killリング、Xクリップボード、レジスターのようなユーザーがアクセス可能なデータ構造内にコピーする際は@code{buffer-substring}、@code{buffer-substring-no-properties}、@code{delete-and-extract-region}のかわりにこの関数を使用するべきである。メジャーモードおよびマイナーモードは、バッファー外部にコピーするテキストを変更するために@code{filter-buffer-substring-function}を変更することができる。"
+msgstr "Lispコードはkillリング、Xクリップボード、レジスターのようなユーザーがアクセス可能なデータ構造内にコピーする際には@code{buffer-substring}、@code{buffer-substring-no-properties}、@code{delete-and-extract-region}のかわりにこの関数を使用すること。メジャーモードとマイナーモードはバッファー外部にコピーするテキストを変更するために@code{filter-buffer-substring-function}を変更することができる。"
 
 #. type: defvar
 #: original_texis/text.texi:252
@@ -685,12 +683,12 @@ msgstr "filter-buffer-substring-function"
 #. type: defvar
 #: original_texis/text.texi:258
 msgid "The value of this variable is a function that @code{filter-buffer-substring} will call to do the actual work.  The function receives three arguments, the same as those of @code{filter-buffer-substring}, which it should treat as per the documentation of that function.  It should return the filtered text (and optionally delete the source text)."
-msgstr "この変数の値は、実際の処理を行うために@code{filter-buffer-substring}が呼び出す関数である。その関数は、@code{filter-buffer-substring}と同じように3つの引数を受けとり、それらは@code{filter-buffer-substring}にドキュメントされているように扱われるべきである。関数は、フィルターされたテキストをリターン(およびオプションでソーステキストを削除)すること。"
+msgstr "この変数の値は実際の処理を行うために@code{filter-buffer-substring}が呼び出す関数。その関数は@code{filter-buffer-substring}と同じように3つの引数を受けとり、それらは@code{filter-buffer-substring}にドキュメントされているように扱うこと。関数はフィルターされたテキストをリターン(およびオプションでソーステキストを削除)すること。"
 
 #. type: Plain text
 #: original_texis/text.texi:263
 msgid "@code{filter-buffer-substring-function}, but are still supported for backward compatibility."
-msgstr "以下の2つの変数は、@code{filter-buffer-substring-function}により時代遅れになりましたが、後方互換のために依然サポートされます。"
+msgstr "以下の2つの変数は@code{filter-buffer-substring-function}により時代遅れになりましたが、後方互換のために依然としてサポートされます。"
 
 #. type: defvar
 #: original_texis/text.texi:264
@@ -701,12 +699,12 @@ msgstr "filter-buffer-substring-functions"
 #. type: defvar
 #: original_texis/text.texi:271
 msgid "This obsolete variable is a wrapper hook, whose members should be functions that accept four arguments: @var{fun}, @var{start}, @var{end}, and @var{delete}.  @var{fun} is a function that takes three arguments (@var{start}, @var{end}, and @var{delete}), and returns a string.  In both cases, the @var{start}, @var{end}, and @var{delete} arguments are the same as those of @code{filter-buffer-substring}."
-msgstr "これは時代遅れとなったラッパーフックであり、このフックのメンバーは@var{fun}、@var{start}、@var{end}、@var{delete}の4つの引数を受け取る関数であること。@var{fun}は3つの引数(@var{start}、@var{end}、@var{delete})をとり、文字列をリターンする関数である。両者とも、引数@var{start}、@var{end}、@var{delete}は@code{filter-buffer-substring}のときと同様の意味をもつ。"
+msgstr "これは時代遅れとなったラッパーフックであり、このフックのメンバーは@var{fun}、@var{start}、@var{end}、@var{delete}の4つの引数を受け取る関数であること。@var{fun}は3つの引数(@var{start}、@var{end}、@var{delete})を受け取り、文字列をリターンする関数。いずれも引数@var{start}、@var{end}、@var{delete}は@code{filter-buffer-substring}のときと同様の意味をもつ。"
 
 #. type: defvar
 #: original_texis/text.texi:281
 msgid "The first hook function is passed a @var{fun} that is equivalent to the default operation of @code{filter-buffer-substring}, i.e., it returns the buffer-substring between @var{start} and @var{end} (processed by any @code{buffer-substring-filters}) and optionally deletes the original text from the buffer.  In most cases, the hook function will call @var{fun} once, and then do its own processing of the result.  The next hook function receives a @var{fun} equivalent to this, and so on.  The actual return value is the result of all the hook functions acting in sequence."
-msgstr "1つ目のフック関数は@code{filter-buffer-substring}のデフォルトの処理と同じく@var{start}と@var{end}の間の(任意の@code{buffer-substring-filters}により処理された)バッファー部分文字列をリターンし、オプションでバッファーから元テキストを削除する関数で、それが@var{fun}に渡される。ほとんどの場合、フック関数は@var{fun}を1回だけ呼び出してから、その結果にたいして自身の処理を行う。次のフック関数はこれと等しい@var{fun}を受け取り、順次それが繰り返されていく。実際のリターン値は、すべてのフック関数が順次処理した結果である。"
+msgstr "1つ目のフック関数は@code{filter-buffer-substring}のデフォルトの処理と同じく@var{start}と@var{end}の間の(任意の@code{buffer-substring-filters}により処理された)バッファー部分文字列をリターン、オプションでバッファーから元テキストを削除する関数であり、それが@var{fun}に渡される。ほとんどの場合にはフック関数は@var{fun}を1回だけ呼び出してから、その結果にたいして自身の処理を行う。次のフック関数はこれと等しい@var{fun}を受け取って、それが順次繰り返されていく。実際のリターン値はすべてのフック関数が順次処理した結果。"
 
 #. type: defvar
 #: original_texis/text.texi:283
@@ -717,7 +715,7 @@ msgstr "buffer-substring-filters"
 #. type: defvar
 #: original_texis/text.texi:290
 msgid "The value of this obsolete variable should be a list of functions that accept a single string argument and return another string.  The default @code{filter-buffer-substring} function passes the buffer substring to the first function in this list, and the return value of each function is passed to the next function.  The return value of the last function is passed to @code{filter-buffer-substring-functions}."
-msgstr "時代遅れとなったこの変数の値は、文字列を唯一の引数ちして別の文字列をリターンする関数のリストであること。デフォルトの@code{filter-buffer-substring}関数は、バッファー部分文字列をこのリストの1つ目の関数に渡し、そのリターン値を次の関数に渡して、それぞれの関数にたいしてこれが順次繰り返される。最後の関数のリターン値は、@code{filter-buffer-substring-functions}に渡される。"
+msgstr "時代遅れとなったこの変数の値は、文字列を唯一の引数ちして別の文字列をリターンする関数のリストであること。デフォルトの@code{filter-buffer-substring}関数は、バッファー部分文字列をこのリストの1つ目の関数に渡して、そのリターン値を次の関数に渡して、これがそれぞれの関数にたいして順次繰り返される。最後の関数のリターン値は@code{filter-buffer-substring-functions}に渡される。"
 
 #. type: defun
 #: original_texis/text.texi:292
@@ -728,7 +726,7 @@ msgstr "current-word &optional strict really-word"
 #. type: defun
 #: original_texis/text.texi:295
 msgid "This function returns the symbol (or word) at or near point, as a string.  The return value includes no text properties."
-msgstr "この関数は、ポイント位置またはその付近のシンボル(または単語)を、文字列としてリターンする。リターン値にはテキストプロパティは含まれない。"
+msgstr "この関数はポイント位置またはその付近のシンボル(または単語)を文字列としてリターンする。リターン値にテキストプロパティは含まれない。"
 
 #. type: defun
 #: original_texis/text.texi:299
@@ -738,29 +736,28 @@ msgstr "オプション引数@var{really-word}が非@code{nil}なら単語、そ
 #. type: defun
 #: original_texis/text.texi:304
 msgid "If the optional argument @var{strict} is non-@code{nil}, then point must be in or next to the symbol or word---if no symbol or word is there, the function returns @code{nil}.  Otherwise, a nearby symbol or word on the same line is acceptable."
-msgstr "オプション引数@var{strict}が非@code{nil}の場合、ポイントは単語(またはシンボル)の内部にあるか隣接しなければならない。そこに単語(またはシンボル)がなければ、この関数は@code{nil}をリターンする。@var{strict}が@code{nil}なら、ポイントと同一行にある近接する単語(またはシンボル)が許容される。"
+msgstr "オプション引数@var{strict}が非@code{nil}のならポイントは単語(またはシンボル)の内部にあるか隣接しなければならない。そこに単語(またはシンボル)がなければ、この関数は@code{nil}をリターンする。@var{strict}が@code{nil}ならポイントと同一行にある近接する単語(またはシンボル)を許容する。"
 
 #. type: defun
 #: original_texis/text.texi:306
-#, fuzzy, no-wrap
-#| msgid "thing-at-point thing"
+#, no-wrap
 msgid "thing-at-point thing &optional no-properties"
-msgstr "thing-at-point thing"
+msgstr "thing-at-point thing &optional no-properties"
 
 #. type: defun
 #: original_texis/text.texi:308
 msgid "Return the @var{thing} around or next to point, as a string."
-msgstr "ポイントに隣接または周辺にある@var{thing}を、文字列としてリターンする。"
+msgstr "ポイントに隣接または周辺にある@var{thing}を文字列としてリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:313
 msgid "The argument @var{thing} is a symbol which specifies a kind of syntactic entity.  Possibilities include @code{symbol}, @code{list}, @code{sexp}, @code{defun}, @code{filename}, @code{url}, @code{word}, @code{sentence}, @code{whitespace}, @code{line}, @code{page}, and others."
-msgstr "引数@var{thing}は、構文エンティティの種別を指定するシンボルである。可能なシンボルとしては@code{symbol}、@code{list}、@code{sexp}、@code{defun}、@code{filename}、@code{url}、@code{word}、@code{sentence}、@code{whitespace}、@code{line}、@code{page}、その他が含まれる。"
+msgstr "引数@var{thing}は構文エンティティの種別を指定するシンボルである。可能なシンボルとしては@code{symbol}、@code{list}、@code{sexp}、@code{defun}、@code{filename}、@code{url}、@code{word}、@code{sentence}、@code{whitespace}、@code{line}、@code{page}、および他が含まれる。"
 
 #. type: defun
 #: original_texis/text.texi:316
 msgid "When the optional argument @var{no-properties} is non-@code{nil}, this function strips text properties from the return value."
-msgstr ""
+msgstr "オプション引数@var{no-properties}は非@code{nil}なら、この関数はリターン値からテキストプロパティを取り除く。"
 
 #. type: example
 #: original_texis/text.texi:322
@@ -805,7 +802,7 @@ msgstr "comparing buffer text"
 #. type: Plain text
 #: original_texis/text.texi:338
 msgid "This function lets you compare portions of the text in a buffer, without copying them into strings first."
-msgstr "この関数により、最初にバッファー内のテキストを文字列内にコピーすることなく、バッファー内のテキスト断片を比較することが可能になります。"
+msgstr "以下の関数により最初にバッファー内のテキストを文字列内にコピーすることなく、バッファー内のテキスト断片を比較することが可能になります。"
 
 #. type: defun
 #: original_texis/text.texi:339
@@ -816,22 +813,22 @@ msgstr "compare-buffer-substrings buffer1 start1 end1 buffer2 start2 end2"
 #. type: defun
 #: original_texis/text.texi:346
 msgid "This function lets you compare two substrings of the same buffer or two different buffers.  The first three arguments specify one substring, giving a buffer (or a buffer name) and two positions within the buffer.  The last three arguments specify the other substring in the same way.  You can use @code{nil} for @var{buffer1}, @var{buffer2}, or both to stand for the current buffer."
-msgstr "この関数により、1つのバッファー、または2つの異なるバッファーの、2つの部分文字列(substrings)を比較できる。最初の3つの引数は、バッファーとそのバッファー内の2つの位置を与えることにより、1つの部分文字列を指定する。最後の3つの引数は、同様の方法によりもう一方の部分文字列を指定する。@var{buffer1}と@var{buffer2}のいずれか、または両方にたいして、カレントバッファーを意味する@code{nil}を使用できる。"
+msgstr "この関数により1つのバッファー、または2つの異なるバッファーの2つの部分文字列(substrings)を比較できる。最初の3つの引数はバッファーとそのバッファー内の2つの位置を与えることにより、1つの部分文字列を指定する。最後の3つの引数は、同様の方法によりもう一方の部分文字列を指定する。@var{buffer1}と@var{buffer2}のいずれか、または両方にたいしてカレントバッファーを意味する@code{nil}を使用できる。"
 
 #. type: defun
 #: original_texis/text.texi:351
 msgid "The value is negative if the first substring is less, positive if the first is greater, and zero if they are equal.  The absolute value of the result is one plus the index of the first differing characters within the substrings."
-msgstr "1つ目の部分文字列が2つ目の部分文字列より小なら負、大なら正、等しければ値は0となる。結果の絶対値は、部分文字列内で最初に異なる文字のインデックスに1を和した値である。"
+msgstr "1つ目の部分文字列が2つ目の部分文字列より小なら負、大なら正、等しければ値は0となる。結果の絶対値は部分文字列内で最初に異なる文字のインデックスに1を和した値。"
 
 #. type: defun
 #: original_texis/text.texi:355
 msgid "This function ignores case when comparing characters if @code{case-fold-search} is non-@code{nil}.  It always ignores text properties."
-msgstr "@code{case-fold-search}が非@code{nil}なら、この関数は大文字小文字の違いを無視する。テキストプロパティは常に無視される。"
+msgstr "@code{case-fold-search}が非@code{nil}なら、この関数はcase(大文字小文字)の違いを無視する。テキストプロパティは常に無視される。"
 
 #. type: defun
 #: original_texis/text.texi:360
 msgid "Suppose you have the text @w{@samp{foobarbar haha!rara!}} in the current buffer; then in this example the two substrings are @samp{rbar } and @samp{rara!}.  The value is 2 because the first substring is greater at the second character."
-msgstr "カレントバッファー内にテキスト@w{@samp{foobarbar haha!rara!}}があるとしよう。そしてこの例では2つの部分文字列が@samp{rbar }と@samp{rara!}であるとする。1つ目の文字列の2つ目の文字が大きいので、値は2となる。"
+msgstr "カレントバッファー内にテキスト@w{@samp{foobarbar haha!rara!}}がある。そしてこの例では2つの部分文字列が@samp{rbar }と@samp{rara!}だとする。1つ目の文字列の2つ目の文字が大きいので値は2となる。"
 
 #. type: example
 #: original_texis/text.texi:364
@@ -876,27 +873,27 @@ msgstr "before point, insertion"
 #. type: Plain text
 #: original_texis/text.texi:379
 msgid "@dfn{Insertion} means adding new text to a buffer.  The inserted text goes at point---between the character before point and the character after point.  Some insertion functions leave point before the inserted text, while other functions leave it after.  We call the former insertion @dfn{after point} and the latter insertion @dfn{before point}."
-msgstr "@dfn{挿入(insertion)}とは、バッファーへの新たなテキストの追加を意味します。テキストはポイント位置、すなわちポイント前の文字とポイント後の文字の間に追加されます。挿入関数は挿入されたテキストの後にポイントを残しますが、前にポイントを残す関数もいくつかあります。前者の挿入を@dfn{ポイント後挿入(after point)}、後者を@dfn{ポイント前挿入(before point)}と呼びます。"
+msgstr "@dfn{挿入(insertion)}とはバッファーへの新たなテキストの追加を意味します。テキストはポイント位置、すなわちポイント前の文字とポイント後の文字の間に追加されます。挿入関数は挿入されたテキストの後にポイントを残しますが、前にポイントを残す関数もいくつかあります。前者の挿入を@dfn{ポイント後挿入(after point)}、後者を@dfn{ポイント前挿入(before point)}と呼びます。"
 
 #. type: Plain text
 #: original_texis/text.texi:387
 msgid "Insertion moves markers located at positions after the insertion point, so that they stay with the surrounding text (@pxref{Markers}).  When a marker points at the place of insertion, insertion may or may not relocate the marker, depending on the marker's insertion type (@pxref{Marker Insertion Types}).  Certain special functions such as @code{insert-before-markers} relocate all such markers to point after the inserted text, regardless of the markers' insertion type."
-msgstr "挿入により、挿入位置の後にあったマーカーは、テキストを取り囲むように移動されます(@ref{Markers}を参照)。マーカーは挿入箇所をさしている際は、挿入によるマーカー再配置の有無は、そのマーカーの挿入タイプに依存します(@ref{Marker Insertion Types}を参照)。@code{insert-before-markers}のような特定のスペシャル関数は、マーカーの挿入タイプとは関係なく、挿入されたテキストの後にそのようなマーカーすべてを再配置します。"
+msgstr "挿入により挿入位置の後にあったマーカーは、テキストを取り囲むように移動されます(@ref{Markers}を参照)。マーカーが挿入箇所をさしている際には、挿入によるマーカーの再配置の有無はそのマーカーの挿入タイプに依存します(@ref{Marker Insertion Types}を参照)。@code{insert-before-markers}のような特定のスペシャル関数は、マーカーの挿入タイプとは関係なく挿入されたテキストの後にそのようなすべてのマーカーを再配置します。"
 
 #. type: Plain text
 #: original_texis/text.texi:391
 msgid "Insertion functions signal an error if the current buffer is read-only (@pxref{Read Only Buffers}) or if they insert within read-only text (@pxref{Special Properties})."
-msgstr "カレントバッファーが読み取り専用(@ref{Read Only Buffers}を参照)、または読み取り専用テキスト(@ref{Special Properties}を参照)を挿入しようとした場合、挿入関数はエラーをシグナルします。"
+msgstr "カレントバッファーが読み取り専用(@ref{Read Only Buffers}を参照)、または読み取り専用テキスト(@ref{Special Properties}を参照)を挿入しようとすると、挿入関数はエラーをシグナルします。"
 
 #. type: Plain text
 #: original_texis/text.texi:397
 msgid "These functions copy text characters from strings and buffers along with their properties.  The inserted characters have exactly the same properties as the characters they were copied from.  By contrast, characters specified as separate arguments, not part of a string or buffer, inherit their text properties from the neighboring text."
-msgstr "以下の関数は、文字列およびバッファーからプロパティとともにテキスト文字をコピーします。挿入される文字は、コピー元の文字と完全に同一のプロパティをもちます。それとは対照的に、文字列やバッファーの一部ではない個別の引数として指定された文字は、隣接するテキストからテキストプロパティを継承します。"
+msgstr "以下の関数は文字列やバッファーからプロパティとともにテキスト文字をコピーします。挿入される文字はコピー元の文字と完全に同一のプロパティをもちます。それとは対照的に文字列やバッファーの一部ではない個別の引数として指定された文字は、隣接するテキストからテキストプロパティを継承します。"
 
 #. type: Plain text
 #: original_texis/text.texi:404
 msgid "The insertion functions convert text from unibyte to multibyte in order to insert in a multibyte buffer, and vice versa---if the text comes from a string or from a buffer.  However, they do not convert unibyte character codes 128 through 255 to multibyte characters, not even if the current buffer is a multibyte buffer.  @xref{Converting Representations}."
-msgstr "テキストが文字列またはバッファー由来の場合、マルチバイトバッファーに挿入するために、挿入関数はユニバイトからマルチバイトへの変換、およびその逆も行います。しかし、たとえカレントバッファーがマルチバイトバッファーであったとしても、コード128から255までのユニバイトはマルチバイトに変換しません。@ref{Converting Representations}を参照してください。"
+msgstr "テキストが文字列かバッファー由来なら、マルチバイトバッファーに挿入するために挿入関数はユニバイトからマルチバイトへの変換、およびその逆も行います。しかしたとえカレントバッファーがマルチバイトバッファーであったとしても、コード128から255までのユニバイトはマルチバイトに変換しません。@ref{Converting Representations}を参照してください。"
 
 #. type: defun
 #: original_texis/text.texi:405
@@ -907,7 +904,7 @@ msgstr "insert &rest args"
 #. type: defun
 #: original_texis/text.texi:410
 msgid "This function inserts the strings and/or characters @var{args} into the current buffer, at point, moving point forward.  In other words, it inserts the text before point.  An error is signaled unless all @var{args} are either strings or characters.  The value is @code{nil}."
-msgstr "この関数は、文字列および/または1つ以上の文字@var{args}を、カレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。言い換えると、ポイントの前にテキストを挿入する。すべての@var{args}が文字列が文字列と文字のいずれでもない場合は、エラーをシグナルする。値は@code{nil}。"
+msgstr "この関数は文字列および/または1つ以上の文字@var{args}をカレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。言い換えるとポイントの前にテキストを挿入する。すべての@var{args}が文字列が文字列と文字のいずれでもなければエラーをシグナルする。値は@code{nil}。"
 
 #. type: defun
 #: original_texis/text.texi:412
@@ -918,12 +915,12 @@ msgstr "insert-before-markers &rest args"
 #. type: defun
 #: original_texis/text.texi:417
 msgid "This function inserts the strings and/or characters @var{args} into the current buffer, at point, moving point forward.  An error is signaled unless all @var{args} are either strings or characters.  The value is @code{nil}."
-msgstr "この関数は、文字列および/または1つ以上の文字@var{args}を、カレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。すべての@var{args}が文字列が文字列と文字のいずれでもない場合は、エラーをシグナルする。値は@code{nil}。"
+msgstr "この関数は文字列および/または1つ以上の文字@var{args}をカレントバッファーのポイント位置に挿入して、ポイントを前方に移動する。すべての@var{args}が文字列が文字列と文字のいずれでもなければエラーをシグナルする。値は@code{nil}。"
 
 #. type: defun
 #: original_texis/text.texi:424
 msgid "This function is unlike the other insertion functions in that it relocates markers initially pointing at the insertion point, to point after the inserted text.  If an overlay begins at the insertion point, the inserted text falls outside the overlay; if a nonempty overlay ends at the insertion point, the inserted text falls inside that overlay."
-msgstr "他の挿入関数と異なり、この関数は挿入されたテキストの後を指すように、まずマーカーが挿入位置を指すように再配置する。挿入位置からオーバーレイが開始される場合、挿入されたテキストはそのオーバーレイの外側に出される。空でないオーバーレイが挿入位置で終わる場合、挿入されたテキストはそのオーバーレイの内側に入れられる。"
+msgstr "この関数は他の挿入関数と異なり、挿入されたテキストの後を指すように、まずマーカーが挿入位置を指すよう再配置する。挿入位置からオーバーレイが開始される場合には、挿入されたテキストはそのオーバーレイの外側に出される。空でないオーバーレイが挿入位置で終わる場合には、挿入されたテキストはそのオーバーレイの内側に入れられる。"
 
 #. type: deffn
 #: original_texis/text.texi:426
@@ -934,22 +931,22 @@ msgstr "Command insert-char character &optional count inherit"
 #. type: deffn
 #: original_texis/text.texi:430
 msgid "This command inserts @var{count} instances of @var{character} into the current buffer before point.  The argument @var{count} must be an integer, and @var{character} must be a character."
-msgstr "このコマンドは、カレントバッファーのポイントの前に、@var{character}のインスタンスを@var{count}個挿入する。引数@var{count}は整数、@var{character}は文字でなければならない。"
+msgstr "このコマンドはカレントバッファーのポイントの前に、@var{character}のインスタンスを@var{count}個挿入する。引数@var{count}は整数、@var{character}は文字でなければならない。"
 
 #. type: deffn
 #: original_texis/text.texi:434
 msgid "If called interactively, this command prompts for @var{character} using its Unicode name or its code point.  @xref{Inserting Text,,, emacs, The GNU Emacs Manual}."
-msgstr "インタラクティブに呼び出された際は、このコマンドは@var{character}にたいしてコードポイントかUnicode名による入力を求める。@ref{Inserting Text,,, emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "インタラクティブに呼び出された際には、このコマンドは@var{character}にたいしてコードポイントかUnicode名による入力を求める。@ref{Inserting Text,,, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:438
 msgid "This function does not convert unibyte character codes 128 through 255 to multibyte characters, not even if the current buffer is a multibyte buffer.  @xref{Converting Representations}."
-msgstr "この関数は、たとえカレントバッファーがマルチバイトバッファーであっても、コード128から255のユニバイト文字をマルチバイト文字に変換しない。@ref{Converting Representations}を参照のこと。"
+msgstr "この関数はたとえカレントバッファーがマルチバイトバッファーであっても、コード128から255のユニバイト文字をマルチバイト文字に変換しない。@ref{Converting Representations}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:442
 msgid "If @var{inherit} is non-@code{nil}, the inserted characters inherit sticky text properties from the two characters before and after the insertion point.  @xref{Sticky Properties}."
-msgstr "@var{inherit}が非@code{nil}の場合、挿入された文字は挿入位置前後の2文字から、ステッキーテキストプロパティ(sticky text properties)を継承する。@ref{Sticky Properties}を参照のこと。"
+msgstr "@var{inherit}が非@code{nil}なら、挿入された文字は挿入位置前後の2文字からステッキーテキストプロパティ(sticky text properties)を継承する。@ref{Sticky Properties}を参照のこと。"
 
 #. type: defun
 #: original_texis/text.texi:444
@@ -960,12 +957,12 @@ msgstr "insert-buffer-substring from-buffer-or-name &optional start end"
 #. type: defun
 #: original_texis/text.texi:450
 msgid "This function inserts a portion of buffer @var{from-buffer-or-name} into the current buffer before point.  The text inserted is the region between @var{start} (inclusive) and @var{end} (exclusive).  (These arguments default to the beginning and end of the accessible portion of that buffer.)  This function returns @code{nil}."
-msgstr "この関数は、カレントバッファーのポイント前に、バッファー@var{from-buffer-or-name}の一部を挿入する。挿入されるテキストは、@var{start}(を含む)から@var{end}(を含まない)の間のリージョン(これらの引数のデフォルトは、そのバッファーのアクセス可能範囲の先頭と終端)である。この関数は@code{nil}をリターンする。"
+msgstr "この関数はカレントバッファーのポイント前に、バッファー@var{from-buffer-or-name}の一部を挿入する。挿入されるテキストは@var{start} (を含む)から@var{end} (を含まない)の間のリージョン(これらの引数のデフォルトは、そのバッファーのアクセス可能範囲の先頭と終端)。この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:453
 msgid "In this example, the form is executed with buffer @samp{bar} as the current buffer.  We assume that buffer @samp{bar} is initially empty."
-msgstr "以下の例では、バッファー@samp{bar}をカレントバッファーとしてフォームを実行する。バッファー@samp{bar}は、最初は空であるものとする。"
+msgstr "以下の例ではバッファー@samp{bar}をカレントバッファーとしてフォームを実行する。バッファー@samp{bar}は最初は空であるものとする。"
 
 #. type: group
 #: original_texis/text.texi:459
@@ -1017,7 +1014,7 @@ msgstr "これは@code{insert-buffer-substring}と似ているが、テキスト
 #. type: Plain text
 #: original_texis/text.texi:481
 msgid "@xref{Sticky Properties}, for other insertion functions that inherit text properties from the nearby text in addition to inserting it.  Whitespace inserted by indentation functions also inherits text properties."
-msgstr "テキスト挿入に加えて、隣接するテキストからテキストプロパティを継承する他の関数については、@ref{Sticky Properties}を参照のこと。インデント関数により挿入された空白文字も、テキストプロパティを継承する。"
+msgstr "テキスト挿入に加えて、隣接するテキストからテキストプロパティを継承する他の関数については@ref{Sticky Properties}を参照のこと。インデント関数により挿入された空白文字もテキストプロパティを継承する。"
 
 #. type: section
 #: original_texis/text.texi:483
@@ -1028,7 +1025,7 @@ msgstr "User-Level Insertion Commands"
 #. type: Plain text
 #: original_texis/text.texi:488
 msgid "This section describes higher-level commands for inserting text, commands intended primarily for the user but useful also in Lisp programs."
-msgstr "このセクションでは、テキスト挿入のための高レベルコマンド、ユーザーによる使用を意図しているがLispプログラムでも有用なコマンドについて説明します。"
+msgstr "このセクションではテキスト挿入のための高レベルコマンド、ユーザーによる使用を意図しているがLispプログラムでも有用なコマンドについて説明します。"
 
 #. type: deffn
 #: original_texis/text.texi:489
@@ -1039,7 +1036,7 @@ msgstr "Command insert-buffer from-buffer-or-name"
 #. type: deffn
 #: original_texis/text.texi:494
 msgid "This command inserts the entire accessible contents of @var{from-buffer-or-name} (which must exist) into the current buffer after point.  It leaves the mark after the inserted text.  The value is @code{nil}."
-msgstr "このコマンドは、@var{from-buffer-or-name}(存在しなければならない)のアクセス可能範囲全体を、カレントバッファーのポイントの後に挿入する。マークは挿入されたテキストの後に残される。値は@code{nil}。"
+msgstr "このコマンドは@var{from-buffer-or-name} (存在しなければならない)のアクセス可能範囲全体をカレントバッファーのポイントの後に挿入する。マークは挿入されたテキストの後に残される。値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:496
@@ -1062,29 +1059,27 @@ msgstr "self-insertion"
 #. type: deffn
 #: original_texis/text.texi:504
 msgid "This command inserts the last character typed; it does so @var{count} times, before point, and returns @code{nil}.  Most printing characters are bound to this command.  In routine use, @code{self-insert-command} is the most frequently called function in Emacs, but programs rarely use it except to install it on a keymap."
-msgstr "このコマンドは、タイプされた最後の文字を挿入する。これをポイント前で@var{count}回繰り返して、@code{nil}をリターンする。ほとんどのプリント文字が、このコマンドにバインドされる。通常の使用では、@code{self-insert-command}はEmacsでもっとも頻繁に呼び出される関数だが、Lispプログラムではそれをキーマップにインストールする場合を除き、使用されるのは稀である。"
+msgstr "このコマンドはタイプされた最後の文字を挿入する。これをポイント前で@var{count}回繰り返して@code{nil}をリターンする。ほとんどのプリント文字はこのコマンドにバインドされる。通常の使用では@code{self-insert-command}はEmacsでもっとも頻繁に呼び出される関数だが、Lispプログラムではそれをキーマップにインストールする場合を除いて使用されるのは稀。"
 
 #. type: deffn
 #: original_texis/text.texi:506
 msgid "In an interactive call, @var{count} is the numeric prefix argument."
-msgstr "インタラクティブな呼び出しでは、@var{count}は数プレフィクス引数である。"
+msgstr "インタラクティブな呼び出しでは@var{count}は数プレフィクス引数。"
 
 #. type: deffn
 #: original_texis/text.texi:510
 msgid "Self-insertion translates the input character through @code{translation-table-for-input}.  @xref{Translation of Characters}."
-msgstr "自己挿入では、入力文字は@code{translation-table-for-input}を通じて変換される。@ref{Translation of Characters}を参照のこと。"
+msgstr "自己挿入では入力文字は@code{translation-table-for-input}を通じて変換される。@ref{Translation of Characters}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:514
 msgid "This command calls @code{auto-fill-function} whenever that is non-@code{nil} and the character inserted is in the table @code{auto-fill-chars} (@pxref{Auto Filling})."
-msgstr "これは、入力文字がテーブル@code{auto-fill-chars}内にあり、@code{auto-fill-function}が非@code{nil}なら、常にそれを呼び出す(@ref{Auto Filling}を参照)。"
+msgstr "これは、入力文字がテーブル@code{auto-fill-chars}内にあり、@code{auto-fill-function}が非@code{nil}なら常にそれを呼び出す(@ref{Auto Filling}を参照)。"
 
 #. type: deffn
 #: original_texis/text.texi:521
-#, fuzzy
-#| msgid "This command performs abbrev expansion if Abbrev mode is enabled and the inserted character does not have word-constituent syntax. (@xref{Abbrevs}, and @ref{Syntax Class Table}.)  It is also responsible for calling @code{blink-paren-function} when the inserted character has close parenthesis syntax (@pxref{Blinking})."
 msgid "This command performs abbrev expansion if Abbrev mode is enabled and the inserted character does not have word-constituent syntax.  (@xref{Abbrevs}, and @ref{Syntax Class Table}.)  It is also responsible for calling @code{blink-paren-function} when the inserted character has close parenthesis syntax (@pxref{Blinking})."
-msgstr "このコマンドは、Abbrevモードが有効で、入力文字が単語コウセ構文をもたなければ、abbrev展開を行う(@ref{Abbrevs}および@ref{Syntax Class Table}を参照されたい)。さらに、入力文字が閉じカッコ構文(close parenthesis syntax)をもつ場合は、@code{blink-paren-function}を呼び出す責任もある(@ref{Blinking}を参照)。"
+msgstr "このコマンドはAbbrevモードが有効で、かつ入力文字が単語構成構文をもたなければabbrev展開を行う(@ref{Abbrevs}と@ref{Syntax Class Table}を参照)。さらに入力文字が閉カッコ構文(close parenthesis syntax)をもつ場合には@code{blink-paren-function}を呼び出す責任もある(@ref{Blinking}を参照)。"
 
 #. type: vindex
 #: original_texis/text.texi:522
@@ -1095,12 +1090,12 @@ msgstr "post-self-insert-hook"
 #. type: deffn
 #: original_texis/text.texi:526
 msgid "The final thing this command does is to run the hook @code{post-self-insert-hook}.  You could use this to automatically reindent text as it is typed, for example."
-msgstr "このコマンドは最後に、フック@code{post-self-insert-hook}を実行する。たとえば、タイプされたテキストにしたがい自動インデントするために、これを使用できる。"
+msgstr "このコマンドは最後にフック@code{post-self-insert-hook}を実行する。たとえばタイプされたテキストにしたがい自動インデントするためにこれを使用できる。"
 
 #. type: deffn
 #: original_texis/text.texi:530
 msgid "Do not try substituting your own definition of @code{self-insert-command} for the standard one.  The editor command loop handles this function specially."
-msgstr "@code{self-insert-command}の標準的な定義にたいして、独自の定義による置き換えを試みてはならない。エディターコマンドループは、このコマンドを特別に扱うからだ。"
+msgstr "@code{self-insert-command}の標準的な定義にたいして、独自の定義による置き換えを試みてはならない。エディターコマンドループはこのコマンドを特別に扱うからだ。"
 
 #. type: deffn
 #: original_texis/text.texi:532
@@ -1111,7 +1106,7 @@ msgstr "Command newline &optional number-of-newlines"
 #. type: deffn
 #: original_texis/text.texi:536
 msgid "This command inserts newlines into the current buffer before point.  If @var{number-of-newlines} is supplied, that many newline characters are inserted."
-msgstr "このコマンドは、カレントバッファーのポイントの前に、改行を挿入する。@var{number-of-newlines}が与えられた場合は、その個数の改行文字が挿入される。"
+msgstr "このコマンドはカレントバッファーのポイントの前に改行を挿入する。@var{number-of-newlines}が与えられたら、その個数の改行文字が挿入される。"
 
 #. type: cindex
 #: original_texis/text.texi:537
@@ -1122,17 +1117,17 @@ msgstr "newline and Auto Fill mode"
 #. type: deffn
 #: original_texis/text.texi:545
 msgid "This function calls @code{auto-fill-function} if the current column number is greater than the value of @code{fill-column} and @var{number-of-newlines} is @code{nil}.  Typically what @code{auto-fill-function} does is insert a newline; thus, the overall result in this case is to insert two newlines at different places: one at point, and another earlier in the line.  @code{newline} does not auto-fill if @var{number-of-newlines} is non-@code{nil}."
-msgstr "この関数は、カレント列数が@code{fill-column}より大、かつ@var{number-of-newlines}が@code{nil}なら、@code{auto-fill-function}を呼び出す。@code{auto-fill-function}が通常行うのは改行の挿入ではり、最終的な結果としては、ポイント位置と、その行のより前方の位置という、2つの異なる箇所に改行を挿入する。@var{number-of-newlines}が非@code{nil}なら、@code{newline}はauto-fillを行わない。"
+msgstr "この関数はカレント列数が@code{fill-column}より大、かつ@var{number-of-newlines}が@code{nil}なら@code{auto-fill-function}を呼び出す。@code{auto-fill-function}が通常行うのは改行の挿入であり、最終的な結果としてはポイント位置と、その行のより前方の位置という2つの異なる箇所に改行を挿入する。@var{number-of-newlines}が非@code{nil}なら@code{newline}はauto-fillを行わない。"
 
 #. type: deffn
 #: original_texis/text.texi:548
 msgid "This command indents to the left margin if that is not zero.  @xref{Margins}."
-msgstr "このコマンドは、左マージンが0でなければ、左マージンにインデントする。@ref{Margins}を参照のこと。"
+msgstr "このコマンドは左マージンが0でなければ、左マージンにインデントする。@ref{Margins}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:551
 msgid "The value returned is @code{nil}.  In an interactive call, @var{count} is the numeric prefix argument."
-msgstr "リターン値は@code{nil}。インタラクティブな呼び出しでは、@var{count}は数プレフィクス引数である。"
+msgstr "リターン値は@code{nil}。インタラクティブな呼び出しでは@var{count}は数プレフィクス引数。"
 
 #. type: defvar
 #: original_texis/text.texi:553
@@ -1143,7 +1138,7 @@ msgstr "overwrite-mode"
 #. type: defvar
 #: original_texis/text.texi:560
 msgid "This variable controls whether overwrite mode is in effect.  The value should be @code{overwrite-mode-textual}, @code{overwrite-mode-binary}, or @code{nil}.  @code{overwrite-mode-textual} specifies textual overwrite mode (treats newlines and tabs specially), and @code{overwrite-mode-binary} specifies binary overwrite mode (treats newlines and tabs like any other characters)."
-msgstr "この変数は、overwriteモードに効力をもつかどうかを制御する。値は@code{overwrite-mode-textual}、@code{overwrite-mode-binary}、または@code{nil}であること。@code{overwrite-mode-textual}はテキスト的なoverwriteモード(改行とタブを特別に扱う)、@code{overwrite-mode-binary}はバイナリーoverwriteモード(改行とタブを普通の文字と同様に扱う)を指定する。"
+msgstr "この変数はoverwriteモードが効力をもつかどうかを制御する。値は@code{overwrite-mode-textual}、@code{overwrite-mode-binary}、または@code{nil}。@code{overwrite-mode-textual}はテキスト的なoverwriteモード(改行とタブを特別に扱う)、@code{overwrite-mode-binary}はバイナリーoverwriteモード(改行とタブを普通の文字と同様に扱う)を指定する。"
 
 #. type: section
 #: original_texis/text.texi:563
@@ -1166,12 +1161,12 @@ msgstr "deleting text vs killing"
 #. type: Plain text
 #: original_texis/text.texi:572
 msgid "Deletion means removing part of the text in a buffer, without saving it in the kill ring (@pxref{The Kill Ring}).  Deleted text can't be yanked, but can be reinserted using the undo mechanism (@pxref{Undo}).  Some deletion functions do save text in the kill ring in some special cases."
-msgstr "削除とは、バッファー内のテキストの一部を、killリングに保存せずに取り除くことを意味します。(@ref{The Kill Ring}を参照)。削除されたテキストをyankすることはできませんが、undoメカニズム(@ref{Undo}を参照)を使用すれば再挿入が可能です。特別なケースにおいては、killリングにテキストの保存を行う削除関数がいくつかあります。"
+msgstr "削除とはバッファー内のテキストの一部をkillリングに保存せずに取り除くことを意味します(@ref{The Kill Ring}を参照)。削除されたテキストをyankすることはできませんが、undoメカニズム(@ref{Undo}を参照)を使用すれば再挿入が可能です。特別なケースにおいてはkillリングにテキストの保存を行う削除関数がいくつかあります。"
 
 #. type: Plain text
 #: original_texis/text.texi:574
 msgid "All of the deletion functions operate on the current buffer."
-msgstr "削除関数はすべて、カレントバッファーにたいして処理を行います。"
+msgstr "削除関数はすべてカレントバッファーにたいして処理を行います。"
 
 #. type: deffn
 #: original_texis/text.texi:575
@@ -1182,14 +1177,12 @@ msgstr "Command erase-buffer"
 #. type: deffn
 #: original_texis/text.texi:582
 msgid "This function deletes the entire text of the current buffer (@emph{not} just the accessible portion), leaving it empty.  If the buffer is read-only, it signals a @code{buffer-read-only} error; if some of the text in it is read-only, it signals a @code{text-read-only} error.  Otherwise, it deletes the text without asking for any confirmation.  It returns @code{nil}."
-msgstr "この関数は、カレントバッファーのテキスト全体(アクセス可能範囲だけでは@emph{ない})を削除してバッファーが読み取り専用なら@code{buffer-read-only}、バッファー内の一部テキストが読み取り専用の場合は@code{text-read-only}をシグナルする。それ以外では、確認なしでテキストを削除する。リターン値は@code{nil}。"
+msgstr "この関数はカレントバッファーのテキスト全体(アクセス可能範囲だけでは@emph{ない})を削除してバッファーが読み取り専用なら@code{buffer-read-only}、バッファー内の一部テキストが読み取り専用なら@code{text-read-only}をシグナルする。それ以外では確認なしでテキストを削除する。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:588
-#, fuzzy
-#| msgid "Normally, deleting a large amount of text from a buffer inhibits further auto-saving of that buffer ``because it has shrunk''.  However, @code{erase-buffer} does not do this, the idea being that the future text is not really related to the former text, and its size should not be compared with that of the former text."
 msgid "Normally, deleting a large amount of text from a buffer inhibits further auto-saving of that buffer because it has shrunk.  However, @code{erase-buffer} does not do this, the idea being that the future text is not really related to the former text, and its size should not be compared with that of the former text."
-msgstr "バッファーからの大量テキストの削除により、``バッファーが大幅に縮小された''という理由で、通常はさらなる自動保存ふぁ抑制される。しかし@code{erase-buffer}は、将来のテキストが以前のテキストと関連があるのは稀であり、以前のテキストのサイズと比較されるべきではないというアイデアにもとづき、これを行わない。"
+msgstr "バッファーからの大量テキストの削除では、バッファーが大幅に縮小されたという理由により、通常はさらなる自動保存が抑制される。しかし@code{erase-buffer}は将来のテキストが以前のテキストと関連があるのは稀であり、以前のテキストのサイズと比較されるべきではないというアイデアにもとづいてこれを行わない。"
 
 #. type: deffn
 #: original_texis/text.texi:590
@@ -1200,7 +1193,7 @@ msgstr "Command delete-region start end"
 #. type: deffn
 #: original_texis/text.texi:595
 msgid "This command deletes the text between positions @var{start} and @var{end} in the current buffer, and returns @code{nil}.  If point was inside the deleted region, its value afterward is @var{start}.  Otherwise, point relocates with the surrounding text, as markers do."
-msgstr "このコマンドは、カレントバッファー内の位置@var{start}から@var{end}までの間のテキストを削除して、@code{nil}をリターンする。削除されるリージョン内にポイントがある場合、リージョン削除後のポイントの値は@var{start}になる。それ以外の場合は、マーカーが行うようにポイントはテキストを取り囲むように再配置される。"
+msgstr "このコマンドはカレントバッファー内の位置@var{start}から@var{end}までの間のテキストを削除して@code{nil}をリターンする。削除されるリージョン内にポイントがあれば、リージョン削除後のポイントの値は@var{start}。それ以外の場合は、マーカーが行うようにポイントはテキストを取り囲むように再配置される。"
 
 #. type: defun
 #: original_texis/text.texi:597
@@ -1211,12 +1204,12 @@ msgstr "delete-and-extract-region start end"
 #. type: defun
 #: original_texis/text.texi:601
 msgid "This function deletes the text between positions @var{start} and @var{end} in the current buffer, and returns a string containing the text just deleted."
-msgstr "この関数は、カレントバッファー内の位置@var{start}から@var{end}までの間のテキストを削除して、削除されたテキストを含む文字列をリターンする。"
+msgstr "この関数はカレントバッファー内の位置@var{start}から@var{end}までの間のテキストを削除して、削除されたテキストを含む文字列をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:605
 msgid "If point was inside the deleted region, its value afterward is @var{start}.  Otherwise, point relocates with the surrounding text, as markers do."
-msgstr "削除されるリージョン内にポイントがある場合、リージョン削除後のポイントの値は@var{start}になる。それ以外の場合は、マーカーが行うようにポイントはテキストを取り囲むように再配置される。"
+msgstr "削除されるリージョン内にポイントがあれば、リージョン削除後のポイントの値は@var{start}。それ以外ならマーカーが行うようにポイントはテキストを取り囲むように再配置される。"
 
 #. type: deffn
 #: original_texis/text.texi:607
@@ -1227,19 +1220,19 @@ msgstr "Command delete-char count &optional killp"
 #. type: deffn
 #: original_texis/text.texi:611
 msgid "This command deletes @var{count} characters directly after point, or before point if @var{count} is negative.  If @var{killp} is non-@code{nil}, then it saves the deleted characters in the kill ring."
-msgstr "このコマンドは、ポイント直後の@var{count}文字、@var{count}が負なら直前の@var{count}文字を削除する。@var{killp}が非@code{nil}なら、削除した文字をkillリングに保存する。"
+msgstr "このコマンドはポイント直後の@var{count}文字、@var{count}が負なら直前の@var{count}文字を削除する。@var{killp}が非@code{nil}なら削除した文字をkillリングに保存する。"
 
 #. type: deffn
 #: original_texis/text.texi:617 original_texis/text.texi:632
 #: original_texis/text.texi:654
 msgid "In an interactive call, @var{count} is the numeric prefix argument, and @var{killp} is the unprocessed prefix argument.  Therefore, if a prefix argument is supplied, the text is saved in the kill ring.  If no prefix argument is supplied, then one character is deleted, but not saved in the kill ring."
-msgstr "インタラクティブな呼び出しでは、@var{count}は数プレフィクス引数、@var{killp}は未処理プレフィクス引数(unprocessed prefix argument)である。すなわち、プレフィクス引数が与えられた場合、そのテキストはkillリングに保存され、与えられなければ、1文字が削除され、それはkillリングに保存されない。"
+msgstr "インタラクティブな呼び出しでは、@var{count}は数プレフィクス引数、@var{killp}は未処理プレフィクス引数(unprocessed prefix argument)。すなわちプレフィクス引数が与えられたらそのテキストはkillリングに保存され、与えられなければ1文字が削除されて、それはkillリングに保存されない。"
 
 #. type: deffn
 #: original_texis/text.texi:619 original_texis/text.texi:634
 #: original_texis/text.texi:656
 msgid "The value returned is always @code{nil}."
-msgstr "リターン値は常に@code{nil}である。"
+msgstr "リターン値は常に@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:621
@@ -1256,7 +1249,7 @@ msgstr "deleting previous char"
 #. type: deffn
 #: original_texis/text.texi:626
 msgid "This command deletes @var{count} characters directly before point, or after point if @var{count} is negative.  If @var{killp} is non-@code{nil}, then it saves the deleted characters in the kill ring."
-msgstr "このコマンドは、ポイント直前の@var{count}文字、@var{count}が負なら直後の@var{count}文字を削除する。@var{killp}が非@code{nil}なら、削除した文字をkillリングに保存する。"
+msgstr "このコマンドはポイント直前の@var{count}文字、@var{count}が負なら直後の@var{count}文字を削除する。@var{killp}が非@code{nil}なら、削除した文字をkillリングに保存する。"
 
 #. type: deffn
 #: original_texis/text.texi:636
@@ -1273,12 +1266,12 @@ msgstr "tab deletion"
 #. type: deffn
 #: original_texis/text.texi:644
 msgid "This command deletes @var{count} characters backward, changing tabs into spaces.  When the next character to be deleted is a tab, it is first replaced with the proper number of spaces to preserve alignment and then one of those spaces is deleted instead of the tab.  If @var{killp} is non-@code{nil}, then the command saves the deleted characters in the kill ring."
-msgstr "このコマンドは、タブをスペースに変換しながら、後方に@var{count}文字を削除する。次に削除する文字がタブなら、まず適正な位置を保つような数のスペースに変換してから、それらのうちのスペース1つをタブのかわりに削除する。@var{killp}が非@code{nil}なら、このコマンドは削除した文字をkillリングに保存する。"
+msgstr "このコマンドはタブをスペースに変換しながら、後方に@var{count}文字を削除する。次に削除する文字がタブなら、まず適正な位置を保つような数のスペースに変換してから、それらのうちのスペース1つをタブのかわりに削除する。@var{killp}が非@code{nil}なら、このコマンドは削除した文字をkillリングに保存する。"
 
 #. type: deffn
 #: original_texis/text.texi:648
 msgid "Conversion of tabs to spaces happens only if @var{count} is positive.  If it is negative, exactly @minus{}@var{count} characters after point are deleted."
-msgstr "タブからスペースへの変換は、@var{count}が正の場合のみ発生する。負の場合は、ポイント後の@minus{}@var{count}文字が、正確に削除される。"
+msgstr "タブからスペースへの変換は@var{count}が正の場合のみ発生する。負の場合はポイント後の正確に@minus{}@var{count}文字が削除される。"
 
 #. type: defopt
 #: original_texis/text.texi:658
@@ -1289,7 +1282,7 @@ msgstr "backward-delete-char-untabify-method"
 #. type: defopt
 #: original_texis/text.texi:666
 msgid "This option specifies how @code{backward-delete-char-untabify} should deal with whitespace.  Possible values include @code{untabify}, the default, meaning convert a tab to many spaces and delete one; @code{hungry}, meaning delete all tabs and spaces before point with one command; @code{all} meaning delete all tabs, spaces and newlines before point, and @code{nil}, meaning do nothing special for whitespace characters."
-msgstr "このオプションは、@code{backward-delete-char-untabify}が空白文字を扱う方法を指定する。可能な値には@code{untabify}(タブを個数分のスペースに変換してスペースを1つ削。これがデフォルト除)、@code{hungry}(1コマンドでポイント前のタブとスペースすべてを削除する)、@code{all}(ポイント前のタブとスペース、および改行すべてを削除する)、@code{nil}(空白文字にたいして特に何もしない)。"
+msgstr "このオプションは@code{backward-delete-char-untabify}が空白文字を扱う方法を指定する。可能な値には@code{untabify} (タブを個数分のスペースに変換してスペースを1つ削除。これがデフォルト)、@code{hungry} (1コマンドでポイント前のタブとスペースすべてを削除する)、@code{all} (ポイント前のタブとスペース、および改行すべてを削除する)、@code{nil} (空白文字にたいして特に何もしない)。"
 
 #. type: section
 #: original_texis/text.texi:669
@@ -1300,7 +1293,7 @@ msgstr "User-Level Deletion Commands"
 #. type: Plain text
 #: original_texis/text.texi:674
 msgid "This section describes higher-level commands for deleting text, commands intended primarily for the user but useful also in Lisp programs."
-msgstr "このセクションでは、主にユーザーにたいして有用なものの、Lispプログラムでも有用な、テキストを削除するための高レベルんｑコマンドを説明します。"
+msgstr "このセクションでは、主にユーザーにたいして有用ですがLispプログラムでも有用なテキストを削除するための高レベルのコマンドを説明します。"
 
 #. type: deffn
 #: original_texis/text.texi:675
@@ -1317,17 +1310,17 @@ msgstr "deleting whitespace"
 #. type: deffn
 #: original_texis/text.texi:679
 msgid "This function deletes all spaces and tabs around point.  It returns @code{nil}."
-msgstr "この関数は、ポイント近辺のすべてのスペースとタブを削除する。リターン値は@code{nil}。"
+msgstr "この関数はポイント近辺のすべてのスペースとタブを削除する。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:682
 msgid "If @var{backward-only} is non-@code{nil}, the function deletes spaces and tabs before point, but not after point."
-msgstr "@var{backward-only}が非@code{nil}の場合、この関数はポイント前のスペースとタブを削除するがポイント後のスペースとタブは削除しない。"
+msgstr "@var{backward-only}が非@code{nil}なら、この関数はポイント前のスペースとタブを削除するがポイント後のスペースとタブは削除しない。"
 
 #. type: deffn
 #: original_texis/text.texi:686
 msgid "In the following examples, we call @code{delete-horizontal-space} four times, once on each line, with point between the second and third characters on the line each time."
-msgstr "以下の例では、各行ごとに、2番目と3番目の間にポイントを置いて、@code{delete-horizontal-space}を4回呼び出している。"
+msgstr "以下の例では、各行ごとに2番目と3番目の間にポイントを置いて、@code{delete-horizontal-space}を4回呼び出している。"
 
 #. type: group
 #: original_texis/text.texi:695
@@ -1386,17 +1379,17 @@ msgstr "Command delete-indentation &optional join-following-p"
 #. type: deffn
 #: original_texis/text.texi:717
 msgid "This function joins the line point is on to the previous line, deleting any whitespace at the join and in some cases replacing it with one space.  If @var{join-following-p} is non-@code{nil}, @code{delete-indentation} joins this line to the following line instead.  The function returns @code{nil}."
-msgstr "この関数は、ポイントのある行を、その前の行に結合(join)する。結合においては、すべての空白文字を削除、特定のケースにおいてはそれらを1つのスペースに置き換える。@var{join-following-p}が非@code{nil}なら、@code{delete-indentation}はかわりに後続行と結合を行う。この関数は@code{nil}をリターンする。"
+msgstr "この関数はポイントのある行をその前の行に結合(join)する。結合においてはすべての空白文字を削除、特定のケースにおいてはそれらを1つのスペースに置き換える。@var{join-following-p}が非@code{nil}なら、@code{delete-indentation}はかわりに後続行と結合を行う。この関数は@code{nil}をリターンする。"
 
 #. type: deffn
 #: original_texis/text.texi:721
 msgid "If there is a fill prefix, and the second of the lines being joined starts with the prefix, then @code{delete-indentation} deletes the fill prefix before joining the lines.  @xref{Margins}."
-msgstr "fillプレフィクスがあり、結合される2つ目の行もそのプレフィクスで始まる場合、行の結合前に@code{delete-indentation}はそのfillプレフィクスを削除する。@ref{Margins}を参照のこと。"
+msgstr "fillプレフィクスがあり、結合される2つ目の行もそのプレフィクスで始まる場合には、行の結合前に@code{delete-indentation}はそのfillプレフィクスを削除する。@ref{Margins}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:725
 msgid "In the example below, point is located on the line starting @samp{events}, and it makes no difference if there are trailing spaces in the preceding line."
-msgstr "以下の例では、@samp{events}で始まる行にポイントがあり、前の行の末尾に1つ以上のスペースが存在しても、違いは生じない。"
+msgstr "以下の例では@samp{events}で始まる行にポイントがあり、前の行の末尾に1つ以上のスペースが存在しても違いは生じない。"
 
 #. type: group
 #: original_texis/text.texi:732
@@ -1439,7 +1432,7 @@ msgstr ""
 #. type: deffn
 #: original_texis/text.texi:746
 msgid "After the lines are joined, the function @code{fixup-whitespace} is responsible for deciding whether to leave a space at the junction."
-msgstr "行の結合後に、結合点に単一のスペースを残すか否かを決定するのは、関数@code{fixup-whitespace}の責任である。"
+msgstr "行の結合後に結合点に単一のスペースを残すか否かを決定するのは、関数@code{fixup-whitespace}の責任である。"
 
 #. type: deffn
 #: original_texis/text.texi:748
@@ -1450,17 +1443,17 @@ msgstr "Command fixup-whitespace"
 #. type: deffn
 #: original_texis/text.texi:752
 msgid "This function replaces all the horizontal whitespace surrounding point with either one space or no space, according to the context.  It returns @code{nil}."
-msgstr "この関数は、ポイントを取り囲むすべての水平スペースを、コンテキストに応じて1つのスペースまたはスペースなしに置き換える。リターン値は@code{nil}。"
+msgstr "この関数はポイントを取り囲むすべての水平スペースを、コンテキストに応じて1つのスペースまたはスペースなしに置き換える。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:758
 msgid "At the beginning or end of a line, the appropriate amount of space is none.  Before a character with close parenthesis syntax, or after a character with open parenthesis or expression-prefix syntax, no space is also appropriate.  Otherwise, one space is appropriate.  @xref{Syntax Class Table}."
-msgstr "行の先頭または末尾において、スペースの適正な数は0である。閉じカッコ構文(close parenthesis syntax)の前の文字、開きカッコの後の文字、式プレフィクス構文(expression-prefix syntax)においても、スペースの適正な数は0である。それ以外では、スペースの適正な数は1である。@ref{Syntax Class Table}を参照のこと。"
+msgstr "行の先頭や末尾において、スペースの適正な数は0。閉カッコ構文(close parenthesis syntax)の前の文字、開カッコの後の文字、式プレフィクス構文(expression-prefix syntax)においても、スペースの適正な数は0。それ以外ではスペースの適正な数は1。@ref{Syntax Class Table}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:762
 msgid "In the example below, @code{fixup-whitespace} is called the first time with point before the word @samp{spaces} in the first line.  For the second invocation, point is directly after the @samp{(}."
-msgstr "以下の例では、最初に1行目の単語@samp{spaces}の前にポイントがある状態で、@code{fixup-whitespace}を呼び出している。2回目の呼び出しでは、@samp{(}の直後にポイントがある。"
+msgstr "以下の例では最初に1行目の単語@samp{spaces}の前にポイントがある状態で、@code{fixup-whitespace}を呼び出している。2回目の呼び出しでは@samp{(}の直後にポイントがある。"
 
 #. type: group
 #: original_texis/text.texi:769
@@ -1513,7 +1506,7 @@ msgstr "Command just-one-space &optional n"
 #. type: deffn
 #: original_texis/text.texi:792
 msgid "This command replaces any spaces and tabs around point with a single space, or @var{n} spaces if @var{n} is specified.  It returns @code{nil}."
-msgstr "このコマンドは、ポイントを取り囲むすべてのスペースを1つのスペース、または@var{n}が指定された場合は@var{n}個のスペースで置き換える。リターン値は@code{nil}。"
+msgstr "このコマンドはポイントを取り囲むすべてのスペースを1つのスペース、@var{n}が指定された場合は@var{n}個のスペースで置き換える。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:797
@@ -1524,12 +1517,12 @@ msgstr "Command delete-blank-lines"
 #. type: deffn
 #: original_texis/text.texi:803
 msgid "This function deletes blank lines surrounding point.  If point is on a blank line with one or more blank lines before or after it, then all but one of them are deleted.  If point is on an isolated blank line, then it is deleted.  If point is on a nonblank line, the command deletes all blank lines immediately following it."
-msgstr "この関数は、ポイントを取り囲む空行を削除する。ポイントが前後に1行以上の空行がある空の行にある場合は、1行を除きそれらすべてを削除する。ポイントが孤立した空行にあるなら、その行を削除する。ポイントが空でない行にあるなら、その直後にあるすべての空白を削除する。"
+msgstr "この関数はポイントを取り囲む空行を削除する。ポイントが前後に1行以上の空行がある空の行にある場合には、1行を除いてそれらすべてを削除する。ポイントが孤立した空行にあればその行を削除する。ポイントが空でない行にあれば、その直後にあるすべての空白を削除する。"
 
 #. type: deffn
 #: original_texis/text.texi:806
 msgid "A blank line is defined as a line containing only tabs and spaces."
-msgstr "空行とは、タブまたはスペースのみを含む行として定義される。"
+msgstr "空行とはタブまたはスペースのみを含む行として定義される。"
 
 #. type: deffn
 #: original_texis/text.texi:808
@@ -1538,20 +1531,19 @@ msgstr "@code{delete-blank-lines}は@code{nil}をリターンする。"
 
 #. type: deffn
 #: original_texis/text.texi:810
-#, fuzzy, no-wrap
-#| msgid "Command delete-trailing-whitespace start end"
+#, no-wrap
 msgid "Command delete-trailing-whitespace &optional start end"
-msgstr "Command delete-trailing-whitespace start end"
+msgstr "Command delete-trailing-whitespace &optional start end"
 
 #. type: deffn
 #: original_texis/text.texi:813
 msgid "Delete trailing whitespace in the region defined by @var{start} and @var{end}."
-msgstr "@var{start}と@var{end}で定義されるリージョン内の、末尾の空白文字を削除する。"
+msgstr "@var{start}と@var{end}で定義されるリージョン内から末尾の空白文字を削除する。"
 
 #. type: deffn
 #: original_texis/text.texi:816
 msgid "This command deletes whitespace characters after the last non-whitespace character in each line in the region."
-msgstr "このコマンドは、リージョン内の各行の最後の非空白文字後にある空白文字を削除する。"
+msgstr "このコマンドはリージョン内の各行の最後の非空白文字後にある空白文字を削除する。"
 
 #. type: deffn
 #: original_texis/text.texi:821
