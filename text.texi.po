@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-01-19 00:57+0900\n"
+"PO-Revision-Date: 2020-01-19 16:14+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1547,10 +1547,8 @@ msgstr "このコマンドはリージョン内の各行の最後の非空白文
 
 #. type: deffn
 #: original_texis/text.texi:821
-#, fuzzy
-#| msgid "If this command acts on the entire buffer (i.e. if called interactively with the mark inactive, or called from Lisp with @var{end} @code{nil}), it also deletes all trailing lines at the end of the buffer if the variable @code{delete-trailing-lines} is non-@code{nil}."
 msgid "If this command acts on the entire buffer (i.e., if called interactively with the mark inactive, or called from Lisp with @var{end} @code{nil}), it also deletes all trailing lines at the end of the buffer if the variable @code{delete-trailing-lines} is non-@code{nil}."
-msgstr "このコマンドがバッファー全体(マークが非アクティブな状態で呼び出された場合やLispから@var{end}と@code{nil}で呼び出された場合)にたいして動作する場合、変数@code{delete-trailing-lines}が非@code{nil}ならバッファーの終端行の末尾の行も削除する。"
+msgstr "このコマンドがバッファー全体(マークが非アクティブな状態で呼び出された場合やLispから@var{end}と@code{nil}で呼び出された場合)にたいして動作する場合には、変数@code{delete-trailing-lines}が非@code{nil}ならバッファーの終端行の末尾の行も削除する。"
 
 #. type: cindex
 #: original_texis/text.texi:825
@@ -1560,27 +1558,23 @@ msgstr "kill ring"
 
 #. type: Plain text
 #: original_texis/text.texi:833
-#, fuzzy
-#| msgid "@dfn{Kill functions} delete text like the deletion functions, but save it so that the user can reinsert it by @dfn{yanking}.  Most of these functions have @samp{kill-} in their name.  By contrast, the functions whose names start with @samp{delete-} normally do not save text for yanking (though they can still be undone); these are ``deletion'' functions."
 msgid "@dfn{Kill functions} delete text like the deletion functions, but save it so that the user can reinsert it by @dfn{yanking}.  Most of these functions have @samp{kill-} in their name.  By contrast, the functions whose names start with @samp{delete-} normally do not save text for yanking (though they can still be undone); these are deletion functions."
-msgstr "@dfn{kill関数(kill functions)}は削除関数のようにテキストを削除しますが、ユーザーが@dfn{yank}により再挿入できるようにそれらを保存する点が異なります。これらの関数のほとんどは、@samp{kill-}という名前をもちます。対照的に名前が@samp{delete-}で始まる関数は、(たとえ削除をundoできるとしても)通常はyank用にテキストを保存しません。それらは``削除(deletion)''関数です。"
+msgstr "@dfn{kill関数(kill functions)}は削除関数のようにテキストを削除しますが、ユーザーが@dfn{yank}により再挿入できるようにそれらを保存する点が異なります。これらの関数のほとんどは@samp{kill-}という名前をもちます。対照的に名前が@samp{delete-}で始まる関数は、(たとえ削除をundoできるとしても)通常はyank用にテキストを保存しません。それらは削除(deletion)関数です。"
 
 #. type: Plain text
 #: original_texis/text.texi:841
 msgid "Most of the kill commands are primarily for interactive use, and are not described here.  What we do describe are the functions provided for use in writing such commands.  You can use these functions to write commands for killing text.  When you need to delete text for internal purposes within a Lisp function, you should normally use deletion functions, so as not to disturb the kill ring contents.  @xref{Deletion}."
-msgstr "ほとんどのkillコマンドは、主にインタラクティブな使用を意図しており、ここでは説明しません。ここで説明するのは、そのようなコマンドの記述に使用されるために提供される関数です。テキストをkillするために、これらのカを使用できます。Lisp関数の内部的な目的のためにテキストの削除を要するときは、killリング内のコンテンツに影響を与えないように、通常は削除関数を使用するべきでしょう。@ref{Deletion}を参照してください。"
+msgstr "ほとんどのkillコマンドは主にインタラクティブな使用を意図しており、ここでは説明しません。ここで説明するのは、そのようなコマンドの記述に使用されるために提供される関数です。テキストをkillするために、これらの関数を使用できます。Lisp関数の内部的な目的のためにテキストの削除を要するときは、killリング内のコンテンツに影響を与えないように通常は削除関数を使用するべきでしょう。@ref{Deletion}を参照してください。"
 
 #. type: Plain text
 #: original_texis/text.texi:849
 msgid "Killed text is saved for later yanking in the @dfn{kill ring}.  This is a list that holds a number of recent kills, not just the last text kill.  We call this a ``ring'' because yanking treats it as having elements in a cyclic order.  The list is kept in the variable @code{kill-ring}, and can be operated on with the usual functions for lists; there are also specialized functions, described in this section, that treat it as a ring."
-msgstr "killされたテキストは、後のyank用に@dfn{killリング(kill ring)}内に保存されます。これは、直前のkillだけでなく直近のkillのいくつかを保持するリストです。yankがそれをサイクル順に要素をもつリストとして扱うので、これを``リング(ring)''と称しています。このリストは変数@code{kill-ring}に保持されており、リスト用の通常関数で操作可能です。このセクションで説明する、これをリングとして扱うために特化された関数も存在します。"
+msgstr "killされたテキストは後のyank用に@dfn{killリング(kill ring)}内に保存されます。これは直前のkillだけでなく直近のkillのいくつかを保持するリストです。yankがそれをサイクル順に要素をもつリストとして扱うので、これを``リング(ring)''と称しています。このリストは変数@code{kill-ring}に保持されており、リスト用の通常関数で操作可能です。このセクションで説明する、これをリングとして扱うために特化された関数も存在します。"
 
 #. type: Plain text
 #: original_texis/text.texi:858
-#, fuzzy
-#| msgid "Some people think this use of the word ``kill'' is unfortunate, since it refers to operations that specifically @emph{do not} destroy the entities ``killed''.  This is in sharp contrast to ordinary life, in which death is permanent and ``killed'' entities do not come back to life.  Therefore, other metaphors have been proposed.  For example, the term ``cut ring'' makes sense to people who, in pre-computer days, used scissors and paste to cut up and rearrange manuscripts.  However, it would be difficult to change the terminology now."
 msgid "Some people think this use of the word ``kill'' is unfortunate, since it refers to operations that specifically @emph{do not} destroy the entities killed.  This is in sharp contrast to ordinary life, in which death is permanent and killed entities do not come back to life.  Therefore, other metaphors have been proposed.  For example, the term ``cut ring'' makes sense to people who, in pre-computer days, used scissors and paste to cut up and rearrange manuscripts.  However, it would be difficult to change the terminology now."
-msgstr "特に``kill''された実体が@emph{破壊}されてしまわないような操作を参照するという理由から、``kill''という単語の使用が不適切だと考える人もいます。これは通常の生活において、死は永遠であり``kill''された実体は生活に戻ることはないことと対照的です。したがって、他の比喩表現も提案されてきました。たとえば、``cutリング(cut ring)''という用語は、コンピューター誕生前に原稿を再配置するためにハサミで切り取って貼り付けていたような人に意味があるでしょう。しかし、今となってはこの用語を変更するのは困難です。"
+msgstr "特にkillされた実体が@emph{破壊}されてしまわないような操作を参照するという理由から、``kill''という単語の使用が不適切だと考える人もいます。これは通常の生活において死は永遠であり、killされた実体は生活に戻ることはないことと対照的です。したがって他の比喩表現も提案されてきました。たとえば、``cutリング(cut ring)''という用語は、コンピューター誕生前に原稿を再配置するためにハサミで切り取って貼り付けていたような人に意味があるでしょう。しかし今となってはこの用語を変更するのは困難です。"
 
 #. type: subsection
 #: original_texis/text.texi:866 original_texis/text.texi:868
@@ -1638,7 +1632,7 @@ msgstr "Low-Level Kill Ring"
 #. type: menuentry
 #: original_texis/text.texi:866
 msgid "Functions and variables for kill ring access."
-msgstr "killリングアクセス用の関数および変数。"
+msgstr "killリングアクセス用の関数と変数。"
 
 #. type: node
 #: original_texis/text.texi:866 original_texis/text.texi:1197
@@ -1654,7 +1648,7 @@ msgstr "killリングのデータを保持する変数。"
 #. type: Plain text
 #: original_texis/text.texi:873
 msgid "The kill ring records killed text as strings in a list, most recent first.  A short kill ring, for example, might look like this:"
-msgstr "killリングは、リスト内でもっとも最近にkillされたテキストが先頭になるように、killされたテキストを記録します。たとえば、短いkillリングは以下のようになるでしょう:"
+msgstr "killリングはリスト内でもっとも最近にkillされたテキストが先頭になるように、killされたテキストを記録します。たとえば短いkillリングは以下のようになるでしょう:"
 
 #. type: example
 #: original_texis/text.texi:876
@@ -1674,10 +1668,8 @@ msgstr "killコマンドが他のコマンドと混ざり合っているとき�
 
 #. type: Plain text
 #: original_texis/text.texi:893
-#, fuzzy
-#| msgid "For yanking, one entry in the kill ring is designated the ``front'' of the ring.  Some yank commands ``rotate'' the ring by designating a different element as the ``front''.  But this virtual rotation doesn't change the list itself---the most recent entry always comes first in the list."
 msgid "For yanking, one entry in the kill ring is designated the front of the ring.  Some yank commands rotate the ring by designating a different element as the front.  But this virtual rotation doesn't change the list itself---the most recent entry always comes first in the list."
-msgstr "yankにたいしては、killリング内のただ1つのエントリーが、そのリングの``先頭''のエントリーとなります。いくつかのyankコマンドは、異なる要素を``先頭''に指定することにより、リングを``回転(rotate)''させます。しかしこの仮想的回転はリスト自身を変更しません。もっとも最近のエントリーが、常にリスト内の最初に配置されます。"
+msgstr "yankにたいしては、killリング内のただ1つのエントリーが、そのリングの先頭のエントリーとなります。いくつかのyankコマンドは、異なる要素を先頭に指定することにより、リングを回転(rotate)させます。しかしこの仮想的回転はリスト自身を変更しません。もっとも最近のエントリーが、常にリスト内の最初に配置されます。"
 
 #. type: subsection
 #: original_texis/text.texi:895
@@ -1687,46 +1679,41 @@ msgstr "Functions for Killing"
 
 #. type: Plain text
 #: original_texis/text.texi:904
-#, fuzzy
-#| msgid "@code{kill-region} is the usual subroutine for killing text.  Any command that calls this function is a ``kill command'' (and should probably have @samp{kill} in its name).  @code{kill-region} puts the newly killed text in a new element at the beginning of the kill ring or adds it to the most recent element.  It determines automatically (using @code{last-command}) whether the previous command was a kill command, and if so appends the killed text to the most recent entry."
 msgid "@code{kill-region} is the usual subroutine for killing text.  Any command that calls this function is a kill command (and should probably have @samp{kill} in its name).  @code{kill-region} puts the newly killed text in a new element at the beginning of the kill ring or adds it to the most recent element.  It determines automatically (using @code{last-command}) whether the previous command was a kill command, and if so appends the killed text to the most recent entry."
-msgstr "@code{kill-region}は、テキストkill用の通常サブルーチンです。この関数を呼び出すすべてのコマンドは、``killコマンド''です(そして恐らくは名前に@samp{kill}が含まれる)。@code{kill-region}は新たにkillされたテキストをkillリング内の最初の要素内に置くか、それをもっとも最近の要素に追加します。これは、前のコマンドがkillコマンドか否かを、(@code{last-command}を使用して)自動的に判別し、もしkillコマンドならkillされたテキストをもっとも最近のエントリーに追加します。"
+msgstr "@code{kill-region}はテキストkill用の通常サブルーチンです。この関数を呼び出すすべてのコマンドはkillコマンドです(そして恐らくは名前に@samp{kill}が含まれる)。@code{kill-region}は新たにkillされたテキストをkillリング内の最初の要素内に置くか、それをもっとも最近の要素に追加します。これは前のコマンドがkillコマンドか否かを、(@code{last-command}を使用して)自動的に判別して、もしkillコマンドならkillされたテキストをもっとも最近のエントリーに追加します。"
 
 #. type: cindex
 #: original_texis/text.texi:905
-#, fuzzy, no-wrap
-#| msgid "inserting killed text"
+#, no-wrap
 msgid "filtering killed text"
-msgstr "inserting killed text"
+msgstr "filtering killed text"
 
 #. type: Plain text
 #: original_texis/text.texi:912
 msgid "The commands described below can filter the killed text before they save it in the kill ring.  They call @code{filter-buffer-substring} (@pxref{Buffer Contents}) to perform the filtering.  By default, there's no filtering, but major and minor modes and hook functions can set up filtering, so that text saved in the kill ring is different from what was in the buffer."
-msgstr ""
+msgstr "以下で説明するコマンドはkillされるテキストがkillリングに保存される前に、それらをフィルターできます。これらの関数は、このフィルタリングを行うために@code{filter-buffer-substring}を呼び出します(@ref{Buffer Contents}を参照)。デフォルトではこれらはフィルタリングを行いませんが、バッファーにあったときと異なるようにテキストをkillリングに保存するために、マイナーモードとフック関数はフィルタリングをセットアップできます。"
 
 #. type: deffn
 #: original_texis/text.texi:913
-#, fuzzy, no-wrap
-#| msgid "Command indent-region start end &optional to-column"
+#, no-wrap
 msgid "Command kill-region start end &optional region"
-msgstr "Command indent-region start end &optional to-column"
+msgstr "Command kill-region start end &optional region"
 
 #. type: deffn
 #: original_texis/text.texi:920
 #, fuzzy
-#| msgid "This function kills the text in the region defined by @var{start} and @var{end}.  The text is deleted but saved in the kill ring, along with its text properties.  The value is always @code{nil}."
 msgid "This function kills the stretch of text between @var{start} and @var{end}; but if the optional argument @var{region} is non-@code{nil}, it ignores @var{start} and @var{end}, and kills the text in the current region instead.  The text is deleted but saved in the kill ring, along with its text properties.  The value is always @code{nil}."
-msgstr "この関数は、@var{start}と@var{end}から定義されるリージョン内のテキストをkillする。そのテキストは削除されるが、そのテキストプロパティと共にkillリングに保存される。値は常に@code{nil}。"
+msgstr "この関数は@var{start}と@var{end}の間のテキスト範囲をkillするが、オプション引数@var{region}が非@code{nil}なら、かわりにカレントリージョンのテキストをkillする。そのテキストは削除されるが、そのテキストプロパティと共にkillリングに保存される。値は常に@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:924
 msgid "In an interactive call, @var{start} and @var{end} are point and the mark, and @var{region} is always non-@code{nil}, so the command always kills the text in the current region."
-msgstr ""
+msgstr "インタラクティブな呼び出しでは@var{start}と@var{end}はポイントとマークで@var{region}は常に非@code{nil}なので、このコマンドは常にカレントリージョン内のテキストをkillする。"
 
 #. type: deffn
 #: original_texis/text.texi:929
 msgid "If the buffer or text is read-only, @code{kill-region} modifies the kill ring just the same, then signals an error without modifying the buffer.  This is convenient because it lets the user use a series of kill commands to copy text from a read-only buffer into the kill ring."
-msgstr "バッファーまたはテキストが読み取り専用の場合、@code{kill-region}は同じようにkillリングを変更後、バッファーを変更せずにエラーをシグナルする。これは、ユーザーが一連のkillコマンドで、読み取り専用バッファーからkillリングにテキストをコピーするのに有用である。"
+msgstr "バッファーまたはテキストが読み取り専用なら、@code{kill-region}は同じようにkillリングを変更後に、バッファーを変更せずにエラーをシグナルする。これはユーザーが一連のkillコマンドで、読み取り専用バッファーからkillリングにテキストをコピーするのに有用。"
 
 #. type: defopt
 #: original_texis/text.texi:931
@@ -1737,36 +1724,33 @@ msgstr "kill-read-only-ok"
 #. type: defopt
 #: original_texis/text.texi:935
 msgid "If this option is non-@code{nil}, @code{kill-region} does not signal an error if the buffer or text is read-only.  Instead, it simply returns, updating the kill ring but not changing the buffer."
-msgstr "このオプションが非@code{nil}なら、バッファーやテキストが読み取り専用でも、@code{kill-region}はエラーをシグナルしない。かわりに、バッファーを変更せずにkillリングを更新して、単にリターンする。"
+msgstr "このオプションが非@code{nil}なら、バッファーやテキストが読み取り専用でも@code{kill-region}はエラーをシグナルしない。かわりにバッファーを変更せずにkillリングを更新して単にリターンする。"
 
 #. type: deffn
 #: original_texis/text.texi:937
-#, fuzzy, no-wrap
-#| msgid "Command copy-region-as-kill start end"
+#, no-wrap
 msgid "Command copy-region-as-kill start end &optional region"
-msgstr "Command copy-region-as-kill start end"
+msgstr "Command copy-region-as-kill start end &optional region"
 
 #. type: deffn
 #: original_texis/text.texi:944
-#, fuzzy
-#| msgid "This command saves the region defined by @var{start} and @var{end} on the kill ring (including text properties), but does not delete the text from the buffer.  It returns @code{nil}."
 msgid "This function saves the stretch of text between @var{start} and @var{end} on the kill ring (including text properties), but does not delete the text from the buffer.  However, if the optional argument @var{region} is non-@code{nil}, the function ignores @var{start} and @var{end}, and saves the current region instead.  It always returns @code{nil}."
-msgstr "このコマンドは、killリングに@var{start}と@var{end}で定義されるリージョン(テキストプロパティを含む)を保存するが、バッファーからテキストを削除しない。リターン値は@code{nil}。"
+msgstr "この関数は@var{start}と@var{end}の間のテキスト範囲(テキストプロパティを含む)をkillリングに保存するが、バッファーからそのテキストを削除しない。しかしオプション引数@var{region}が非@code{nil}なら、この関数は@var{start}と@var{end}を無視して、かわりにカレントリージョンを保存する。この関数は常に@code{nil}をリターンする。"
 
 #. type: deffn
 #: original_texis/text.texi:948
 msgid "In an interactive call, @var{start} and @var{end} are point and the mark, and @var{region} is always non-@code{nil}, so the command always saves the text in the current region."
-msgstr ""
+msgstr "インタラクティブな呼び出しでは@var{start}と@var{end}はポイントとマークで@var{region}は常に非@code{nil}なので、このコマンドは常にカレントリージョン内のテキストをkillする。"
 
 #. type: deffn
 #: original_texis/text.texi:951
 msgid "The command does not set @code{this-command} to @code{kill-region}, so a subsequent kill command does not append to the same kill ring entry."
-msgstr "このコマンドは、後続のkillコマンドが同一のkillリングエントリーに追加しないよう、@code{this-command}に@code{kill-region}をセットしない。"
+msgstr "このコマンドは後続のkillコマンドが同一のkillリングエントリーに追加しないように、@code{this-command}に@code{kill-region}をセットしない。"
 
 #. type: Plain text
 #: original_texis/text.texi:960
 msgid "Yanking means inserting text from the kill ring, but it does not insert the text blindly.  The @code{yank} command, and related commands, use @code{insert-for-yank} to perform special processing on the text before it is inserted."
-msgstr "yankとは、killリングからテキストを挿入するものの、単なる挿入ではないことを意味します。@code{yank}および関連するコマンドは、テキスト挿入前に特別な処理を施すために、@code{insert-for-yank}を使用します。"
+msgstr "yankとはkillリングからテキストを挿入しますが、それが単なる挿入ではないことを意味します。@code{yank}とそれに関連するコマンドは、テキスト挿入前に特別な処理を施すために@code{insert-for-yank}を使用します。"
 
 #. type: defun
 #: original_texis/text.texi:961
@@ -1777,7 +1761,7 @@ msgstr "insert-for-yank string"
 #. type: defun
 #: original_texis/text.texi:967
 msgid "This function works like @code{insert}, except that it processes the text in @var{string} according to the @code{yank-handler} text property, as well as the variables @code{yank-handled-properties} and @code{yank-excluded-properties} (see below), before inserting the result into the current buffer."
-msgstr "この関数は@code{insert}と同様に機能するが、結果をカレントバッファーに挿入する前に、テキストプロパティ@code{yank-handler}、同様に変数@code{yank-handled-properties}および@code{yank-excluded-properties}に応じて@var{string}内のテキストを処理する点が異なる。"
+msgstr "この関数は@code{insert}と同様に機能するが、結果をカレントバッファーに挿入する前にテキストプロパティ@code{yank-handler}、同様に変数@code{yank-handled-properties}と@code{yank-excluded-properties}に応じて@var{string}内のテキストを処理する点が異なる。"
 
 #. type: defun
 #: original_texis/text.texi:969
@@ -1788,12 +1772,12 @@ msgstr "insert-buffer-substring-as-yank buf &optional start end"
 #. type: defun
 #: original_texis/text.texi:975
 msgid "This function resembles @code{insert-buffer-substring}, except that it processes the text according to @code{yank-handled-properties} and @code{yank-excluded-properties}.  (It does not handle the @code{yank-handler} property, which does not normally occur in buffer text anyway.)"
-msgstr "この関数は@code{insert-buffer-substring}と似ているが、@code{yank-handled-properties}および@code{yank-excluded-properties}に応じてテキストを処理する点が異なる(これは@code{yank-handler}プロパティを処理しないが、いずれにせよバッファー内のテキストでは通常は発生しない)。"
+msgstr "この関数は@code{insert-buffer-substring}と似ているが、@code{yank-handled-properties}と@code{yank-excluded-properties}に応じてテキストを処理する点が異なる(これは@code{yank-handler}プロパティを処理しないが、いずれにせよバッファー内のテキストでは通常は発生しない)。"
 
 #. type: Plain text
 #: original_texis/text.texi:985
 msgid "If you put a @code{yank-handler} text property on all or part of a string, that alters how @code{insert-for-yank} inserts the string.  If different parts of the string have different @code{yank-handler} values (comparison being done with @code{eq}), each substring is handled separately.  The property value must be a list of one to four elements, with the following format (where elements after the first may be omitted):"
-msgstr "文字列の一部またはすべてにテキストプロパティ@code{yank-handler}をputした場合、@code{insert-for-yank}が文字列を挿入する方法が変更されます。文字列の別の箇所が異なる@code{yank-handler}の値をもつ場合(比較は@code{eq}で行われる)、部分文字列はそれぞれ個別に処理されます。プロパティ値は以下の形式からなる1から4要素のリストでなければなりません(2番目以降の要素は省略されるかもしれない):"
+msgstr "文字列の一部またはすべてにテキストプロパティ@code{yank-handler}をputすると、@code{insert-for-yank}が文字列を挿入する方法が変更されます。文字列の別の箇所が異なる@code{yank-handler}の値をもつ場合(比較は@code{eq})、部分文字列はそれぞれ個別に処理されます。プロパティ値は以下の形式からなる1から4要素のリストでなければなりません(2番目以降の要素は省略可):"
 
 #. type: example
 #: original_texis/text.texi:988
@@ -1804,7 +1788,7 @@ msgstr "(@var{function} @var{param} @var{noexclude} @var{undo})\n"
 #. type: Plain text
 #: original_texis/text.texi:991
 msgid "Here is what the elements do:"
-msgstr "以下は、これらの要素が何を行うかです:"
+msgstr "これらの要素が何を行うかを以下に示します:"
 
 #. type: item
 #: original_texis/text.texi:993
@@ -1826,7 +1810,7 @@ msgstr "param"
 #. type: table
 #: original_texis/text.texi:1004
 msgid "If @var{param} is present and non-@code{nil}, it replaces @var{string} (or the substring of @var{string} being processed) as the object passed to @var{function} (or @code{insert}).  For example, if @var{function} is @code{yank-rectangle}, @var{param} should be a list of strings to insert as a rectangle."
-msgstr "非@code{nil}の@var{param}が与えられた場合、それは@var{string}(または処理される@var{string}の部分文字列)を置き換えるオブジェクトとして@var{function}(または@code{insert})に渡される。たとえば@var{function}が@code{yank-rectangle}なら、@var{param}は矩形(rectangle)として挿入されるべき文字列のリストになる。"
+msgstr "非@code{nil}の@var{param}が与えられた場合には、それは@var{string} (または処理される@var{string}の部分文字列)を置き換えるオブジェクトとして@var{function} (または@code{insert})に渡される。たとえば@var{function}が@code{yank-rectangle}なら、@var{param}は矩形(rectangle)として挿入されるべき文字列のリスト。"
 
 #. type: item
 #: original_texis/text.texi:1005
@@ -1837,7 +1821,7 @@ msgstr "noexclude"
 #. type: table
 #: original_texis/text.texi:1009
 msgid "If @var{noexclude} is present and non-@code{nil}, that disables the normal action of @code{yank-handled-properties} and @code{yank-excluded-properties} on the inserted string."
-msgstr "非@code{nil}の@var{noexclude}が与えられた場合は、挿入される文字列にたいする@code{yank-handled-properties}および@code{yank-excluded-properties}の通常の動作を無効にする。"
+msgstr "非@code{nil}の@var{noexclude}が与えられたら、挿入される文字列にたいする@code{yank-handled-properties}と@code{yank-excluded-properties}の通常の動作を無効にする。"
 
 #. type: item
 #: original_texis/text.texi:1010
@@ -1848,7 +1832,7 @@ msgstr "undo"
 #. type: table
 #: original_texis/text.texi:1016
 msgid "If @var{undo} is present and non-@code{nil}, it is a function that will be called by @code{yank-pop} to undo the insertion of the current object.  It is called with two arguments, the start and end of the current region.  @var{function} can set @code{yank-undo-function} to override the @var{undo} value."
-msgstr "非@code{nil}の@var{undo}が与えられた場合、それはカレントオブジェクトの挿入をundoするために@code{yank-pop}が呼び出す関数である。この関数は、カレントリージョンのstartとendの、2つの引数で呼び出される。@var{function}は@code{yank-undo-function}をセットすることにより、@var{undo}の値をオーバーライドできる。"
+msgstr "非@code{nil}の@var{undo}が与えられたら、それはカレントオブジェクトの挿入をundoするために@code{yank-pop}が呼び出す関数。この関数はカレントリージョンのstartとendという2つの引数で呼び出される。@var{function}は@code{yank-undo-function}をセットすることにより@var{undo}の値をオーバーライドできる。"
 
 #. type: cindex
 #: original_texis/text.texi:1018
@@ -1865,12 +1849,12 @@ msgstr "yank-handled-properties"
 #. type: defopt
 #: original_texis/text.texi:1024
 msgid "This variable specifies special text property handling conditions for yanked text.  It takes effect after the text has been inserted (either normally, or via the @code{yank-handler} property), and prior to @code{yank-excluded-properties} taking effect."
-msgstr "この変数は、yankされるテキストの状態を処理するスペシャルテキストプロパティを指定する。これは(通常の方法、または@code{yank-handler}を通じた)テキスト挿入後、@code{yank-excluded-properties}が効力をもつ前に効果を発揮する。"
+msgstr "この変数はyankされるテキストの状態を処理するスペシャルテキストプロパティを指定する。これは(通常の方法、または@code{yank-handler}を通じた)テキストの挿入後、@code{yank-excluded-properties}が効力をもつ前に効果を発揮する。"
 
 #. type: defopt
 #: original_texis/text.texi:1031
 msgid "The value should be an alist of elements @code{(@var{prop} . @var{fun})}.  Each alist element is handled in order.  The inserted text is scanned for stretches of text having text properties @code{eq} to @var{prop}; for each such stretch, @var{fun} is called with three arguments: the value of the property, and the start and end positions of the text."
-msgstr "値は、要素が@code{(@var{prop} . @var{fun})}であるようなalistであること。alistの各要素は、順番に処理される。挿入されるテキストはテキスト範囲にたいして、テキストプロパティが@var{prop}と@code{eq}なものがスキャンされる。そのような範囲には、そのプロパティの値、そのテキストの開始と終了の位置という、3つの引数により@var{fun}が呼び出される。"
+msgstr "値は要素が@code{(@var{prop} . @var{fun})}であるようなalistであること。alistの各要素は順番に処理される。挿入されるテキストはテキスト範囲にたいして、テキストプロパティが@var{prop}と@code{eq}なものがスキャンされる。そのような範囲にたいしてプロパティの値、そのテキストの開始と終了の位置という3つの引数により@var{fun}が呼び出される。"
 
 #. type: defopt
 #: original_texis/text.texi:1033
@@ -1881,7 +1865,7 @@ msgstr "yank-excluded-properties"
 #. type: defopt
 #: original_texis/text.texi:1039
 msgid "The value of this variable is the list of properties to remove from inserted text.  Its default value contains properties that might lead to annoying results, such as causing the text to respond to the mouse or specifying key bindings.  It takes effect after @code{yank-handled-properties}."
-msgstr "この変数の値は、挿入されるテキストから削除するための、プロパティのリストである。デフォルト値には、マウスに応答したりキーバインディングの指定を引き起こすテキストのような、煩わしい結果をもたらすかもしれないプロパティが含まれる。これは、@code{yank-handled-properties}の後に効果を発揮する。"
+msgstr "この変数の値は挿入されるテキストから削除するためのプロパティのリスト。デフォルト値にはマウスに応答したりキーバインディングの指定を引き起こすテキストのような、煩わしい結果をもたらすかもしれないプロパティが含まれる。これは@code{yank-handled-properties}の後に効果を発揮する。"
 
 #. type: subsection
 #: original_texis/text.texi:1043
@@ -1892,7 +1876,7 @@ msgstr "Functions for Yanking"
 #. type: Plain text
 #: original_texis/text.texi:1050
 msgid "This section describes higher-level commands for yanking, which are intended primarily for the user but useful also in Lisp programs.  Both @code{yank} and @code{yank-pop} honor the @code{yank-excluded-properties} variable and @code{yank-handler} text property (@pxref{Yanking})."
-msgstr "このセクションでは、yank用の高レベルなコマンドを説明します。これらのコマンドは主にユーザー用に意図されたものですが、Lispプログラム内での使用にたいしても有用です。@code{yank}および@code{yank-pop}はどちらも、変数@code{yank-excluded-properties}およびテキストプロパティ@code{yank-handler}にしたがいます(@ref{Yanking}を参照)。"
+msgstr "このセクションではyank用の高レベルなコマンドを説明します。これらのコマンドは主にユーザー用に意図されたものですが、Lispプログラム内での使用にたいしても有用です。@code{yank}と@code{yank-pop}はいずれも、変数@code{yank-excluded-properties}とテキストプロパティ@code{yank-handler}にしたがいます(@ref{Yanking}を参照)。"
 
 #. type: deffn
 #: original_texis/text.texi:1051
@@ -1909,22 +1893,22 @@ msgstr "inserting killed text"
 #. type: deffn
 #: original_texis/text.texi:1056
 msgid "This command inserts before point the text at the front of the kill ring.  It sets the mark at the beginning of that text, using @code{push-mark} (@pxref{The Mark}), and puts point at the end."
-msgstr "このコマンドは、killリングの先頭にあるテキストを、ポイントの前に挿入する。これは@code{push-mark}(@ref{The Mark}を参照)を使用して、そのテキストの先頭にマークをセットする。"
+msgstr "このコマンドはkillリングの先頭にあるテキストをポイントの前に挿入する。これは@code{push-mark}(@ref{The Mark}を参照)を使用して、そのテキストの先頭にマークをセットする。"
 
 #. type: deffn
 #: original_texis/text.texi:1061
 msgid "If @var{arg} is a non-@code{nil} list (which occurs interactively when the user types @kbd{C-u} with no digits), then @code{yank} inserts the text as described above, but puts point before the yanked text and sets the mark after it."
-msgstr "@var{arg}が非@code{nil}のリスト(これはユーザーがインタラクティブに数字を指定せずに@kbd{C-u}をタイプ時に発生する)なら、@code{yank}は上述のようにテキストを挿入するが、ポイントはyankされたテキストの前、マークはyankされたテキストの後に置かれる。"
+msgstr "@var{arg}が非@code{nil}のリスト(これはユーザーがインタラクティブに数字を指定せずに@kbd{C-u}タイプ時に発生する)なら、@code{yank}は上述のようにテキストを挿入するがポイントはyankされたテキストの前、マークはyankされたテキストの後に置かれる。"
 
 #. type: deffn
 #: original_texis/text.texi:1066
 msgid "If @var{arg} is a number, then @code{yank} inserts the @var{arg}th most recently killed text---the @var{arg}th element of the kill ring list, counted cyclically from the front, which is considered the first element for this purpose."
-msgstr "@var{arg}が数字なら、@code{yank}は@var{arg}番目に最近killされたテキスト、すなわちkillリングリストの@var{arg}番目の要素を挿入する。この順番は、コマンドの目的にたいして1番目の要素としてみなされる、リスト先頭の要素から巡回的に数えられる。"
+msgstr "@var{arg}が数字なら@code{yank}は@var{arg}番目に最近killされたテキスト、すなわちkillリングリストの@var{arg}番目の要素を挿入する。この順番はコマンドの目的にたいして1番目の要素としてみなされるリスト先頭の要素から巡回的に数えられる。"
 
 #. type: deffn
 #: original_texis/text.texi:1071
 msgid "@code{yank} does not alter the contents of the kill ring, unless it used text provided by another program, in which case it pushes that text onto the kill ring.  However if @var{arg} is an integer different from one, it rotates the kill ring to place the yanked string at the front."
-msgstr "@code{yank}は、それが他のプログラムから提供されるテキストを使用しないかぎり(使用する場合はそのテキストをkillリングにpushする)、killリングのコンテンツを変更しない。しかし、@var{arg}が非1の整数の場合は、killリングを転回(rotate)してyankされるテキストをリング先頭に置く。"
+msgstr "@code{yank}は、それが他のプログラムから提供されるテキストを使用しないかぎり(使用する場合はそのテキストをkillリングにpushする)、killリングのコンテンツを変更しない。しかし@var{arg}が非1の整数なら、killリングを転回(rotate)してyankされるテキストをリング先頭に置く。"
 
 #. type: deffn
 #: original_texis/text.texi:1073
@@ -1940,17 +1924,17 @@ msgstr "Command yank-pop &optional arg"
 #. type: deffn
 #: original_texis/text.texi:1078
 msgid "This command replaces the just-yanked entry from the kill ring with a different entry from the kill ring."
-msgstr "このコマンドは、killリング上の正にyankされたばかりのエントリーを、killリングの別エントリーで置き換える。"
+msgstr "このコマンドはkillリング上の正にyankされたばかりのエントリーをkillリングの別エントリーで置き換える。"
 
 #. type: deffn
 #: original_texis/text.texi:1086
 msgid "This is allowed only immediately after a @code{yank} or another @code{yank-pop}.  At such a time, the region contains text that was just inserted by yanking.  @code{yank-pop} deletes that text and inserts in its place a different piece of killed text.  It does not add the deleted text to the kill ring, since it is already in the kill ring somewhere.  It does however rotate the kill ring to place the newly yanked string at the front."
-msgstr "このコマンドは、@code{yank}または別の@code{yank-pop}の直後のみ許される。そのような際、そのリージョンにはyankにより正に挿入されたテキストが含まれる。@code{yank-pop}はそのテキストを削除して、killされた別のテキスト片をその位置に挿入する。そのテキスト片はすでにkillリング内のどこか別の箇所にあるので、これは削除されたテキストをkillリングに追加しない。しかし、新たにyankされたテキストが先頭になるよう、killリングの転回は行う。"
+msgstr "このコマンドは@code{yank}か別の@code{yank-pop}の直後のみ許される。そのような際にそのリージョンには、yankにより正に挿入されたテキストが含まれる。@code{yank-pop}はそのテキストを削除して、killされた別のテキスト片をその位置に挿入する。そのテキスト片はすでにkillリング内のどこか別の箇所にあるので、これは削除されたテキストをkillリングに追加しない。しかし新たにyankされたテキストが先頭になるように、killリングの転回は行う。"
 
 #. type: deffn
 #: original_texis/text.texi:1091
 msgid "If @var{arg} is @code{nil}, then the replacement text is the previous element of the kill ring.  If @var{arg} is numeric, the replacement is the @var{arg}th previous kill.  If @var{arg} is negative, a more recent kill is the replacement."
-msgstr "@var{arg}が@code{nil}なら、置換テキストはkillリングの1つ前の要素である。@var{arg}が数字なら、置換テキストはkillリングの@var{arg}個前の要素である。@var{arg}が負の場合は、より最近のkillが置換される。"
+msgstr "@var{arg}が@code{nil}なら置換テキストはkillリングの1つ前の要素。@var{arg}が数字なら置換テキストはkillリングの@var{arg}個前の要素である。@var{arg}が負なら、より最近のkillが置換される。"
 
 #. type: deffn
 #: original_texis/text.texi:1095
@@ -1971,17 +1955,17 @@ msgstr "yank-undo-function"
 #. type: defvar
 #: original_texis/text.texi:1105
 msgid "If this variable is non-@code{nil}, the function @code{yank-pop} uses its value instead of @code{delete-region} to delete the text inserted by the previous @code{yank} or @code{yank-pop} command.  The value must be a function of two arguments, the start and end of the current region."
-msgstr "この変数が非@code{nil}の場合、関数@code{yank-pop}は前の@code{yank}または@code{yank-pop}により挿入されたテキストを削除するために、@code{delete-region}のかわりにこの変数の値を使用する。値は、カレントリージョンの開始と終了という、2つの引数をとる関数でなければならない。"
+msgstr "この変数が非@code{nil}なら、関数@code{yank-pop}は前の@code{yank}や@code{yank-pop}により挿入されたテキストを削除するために、@code{delete-region}のかわりにこの変数の値を使用する。値はカレントリージョンの開始と終了という2つの引数をとる関数でなければならない。"
 
 #. type: defvar
 #: original_texis/text.texi:1109
 msgid "The function @code{insert-for-yank} automatically sets this variable according to the @var{undo} element of the @code{yank-handler} text property, if there is one."
-msgstr "関数@code{insert-for-yank}は、テキストプロパティ@code{yank-handler}の要素@var{undo}に対応して、この変数を自動的にセットする。"
+msgstr "関数@code{insert-for-yank}はテキストプロパティ@code{yank-handler}の要素@var{undo}に対応して、この変数を自動的にセットする。"
 
 #. type: Plain text
 #: original_texis/text.texi:1118
 msgid "These functions and variables provide access to the kill ring at a lower level, but are still convenient for use in Lisp programs, because they take care of interaction with window system selections (@pxref{Window System Selections})."
-msgstr "以下の関数および変数は、killリングにたいして低レベルなアクセスを提供しますが、それらはウィンドウシステムの選択(@ref{Window System Selections}を参照)との相互作用にも留意するので、Lispプログラム内での使用に関しても依然として有用です。"
+msgstr "以下の関数と変数はkillリングにたいして低レベルなアクセスを提供しますが、それらはウィンドウシステムの選択(@ref{Window System Selections}を参照)との相互作用にも留意するので、Lispプログラム内での使用に関しても依然として有用です。"
 
 #. type: defun
 #: original_texis/text.texi:1119
@@ -1991,20 +1975,18 @@ msgstr "current-kill n &optional do-not-move"
 
 #. type: defun
 #: original_texis/text.texi:1123
-#, fuzzy
-#| msgid "The function @code{current-kill} rotates the yanking pointer, which designates the ``front'' of the kill ring, by @var{n} places (from newer kills to older ones), and returns the text at that place in the ring."
 msgid "The function @code{current-kill} rotates the yanking pointer, which designates the front of the kill ring, by @var{n} places (from newer kills to older ones), and returns the text at that place in the ring."
-msgstr "関数@code{current-kill}は、killリングの``先頭''を指すyankポインターを、(新しいkillから古いkillに)@var{n}個転回して、リング内のその箇所のテキストをリターンする。"
+msgstr "関数@code{current-kill}はkillリングの先頭を指すyankポインターを、(新しいkillから古いkillに) @var{n}個転回して、リング内のその箇所のテキストをリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:1127
 msgid "If the optional second argument @var{do-not-move} is non-@code{nil}, then @code{current-kill} doesn't alter the yanking pointer; it just returns the @var{n}th kill, counting from the current yanking pointer."
-msgstr "オプションの第2引数@var{do-not-move}が非@code{nil}なら、@code{current-kill}はyankポインターを変更しない。カレントyankポインターから、@var{n}個目のkillを単にリターンする。"
+msgstr "オプションの第2引数@var{do-not-move}が非@code{nil}なら、@code{current-kill}はyankポインターを変更しない。カレントyankポインターから@var{n}個目のkillを単にリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:1140
 msgid "If @var{n} is zero, indicating a request for the latest kill, @code{current-kill} calls the value of @code{interprogram-paste-function} (documented below) before consulting the kill ring.  If that value is a function and calling it returns a string or a list of several string, @code{current-kill} pushes the strings onto the kill ring and returns the first string.  It also sets the yanking pointer to point to the kill-ring entry of the first string returned by @code{interprogram-paste-function}, regardless of the value of @var{do-not-move}.  Otherwise, @code{current-kill} does not treat a zero value for @var{n} specially: it returns the entry pointed at by the yanking pointer and does not move the yanking pointer."
-msgstr "@var{n}が0の場合、それは最新のkillの要求を意味しており、@code{current-kill}はkillリング照会前に@code{interprogram-paste-function}(以下参照)の値を呼び出す。その値が関数で、かつそれが文字列または複数の文字列からなるリストをリターンした場合、@code{current-kill}はその文字列をkillリング上にpushして、最初の文字列をリターンする。これは@var{do-not-move}の値に関わらず、@code{interprogram-paste-function}がリターンする最初の文字列のkillリングエントリーを指すように、yankポインターのセットも行う。それ以外では、@code{current-kill}は@var{n}にたいする0値を特別に扱うことはなく、yankポインターが指すエントリーをリターンし、yankポインターの移動は行わない。"
+msgstr "@var{n}が0ならそれは最新のkillの要求を意味しており、@code{current-kill}はkillリング照会前に@code{interprogram-paste-function} (以下参照)の値を呼び出す。その値が関数であり、かつそれが文字列か複数の文字列からなるリストをリターンすると、@code{current-kill}はその文字列をkillリング上にpushして最初の文字列をリターンする。これは@var{do-not-move}の値に関わらず、@code{interprogram-paste-function}がリターンする最初の文字列のkillリングエントリーを指すようにyankポインターのセットも行う。それ以外では@code{current-kill}は@var{n}にたいする0値を特別に扱うことはなく、yankポインターが指すエントリーをリターンしてyankポインターの移動は行わない。"
 
 #. type: defun
 #: original_texis/text.texi:1142
@@ -2015,12 +1997,12 @@ msgstr "kill-new string &optional replace"
 #. type: defun
 #: original_texis/text.texi:1147
 msgid "This function pushes the text @var{string} onto the kill ring and makes the yanking pointer point to it.  It discards the oldest entry if appropriate.  It also invokes the value of @code{interprogram-cut-function} (see below)."
-msgstr "この関数は、テキスト@var{string}をkillリング上にpushして、yankポインターがそれを指すようにセットする。それが適切なら、もっとも古いエントリーを破棄する。@code{interprogram-cut-function}(以下参照)の呼び出しも行う。"
+msgstr "この関数はテキスト@var{string}をkillリング上にpushして、yankポインターがそれを指すようにセットする。それが適切ならもっとも古いエントリーを破棄する。@code{interprogram-cut-function} (以下参照)の呼び出しも行う。"
 
 #. type: defun
 #: original_texis/text.texi:1151
 msgid "If @var{replace} is non-@code{nil}, then @code{kill-new} replaces the first element of the kill ring with @var{string}, rather than pushing @var{string} onto the kill ring."
-msgstr "@var{replace}が非@code{nil}なら、@code{kill-new}はkillリング上に@var{string}をpushせずに、killリングの1つ目の要素を@var{string}に置き換える。"
+msgstr "@var{replace}が非@code{nil}なら@code{kill-new}はkillリング上に@var{string}をpushせずに、killリングの1つ目の要素を@var{string}に置き換える。"
 
 #. type: defun
 #: original_texis/text.texi:1153
@@ -2031,7 +2013,7 @@ msgstr "kill-append string before-p"
 #. type: defun
 #: original_texis/text.texi:1160
 msgid "This function appends the text @var{string} to the first entry in the kill ring and makes the yanking pointer point to the combined entry.  Normally @var{string} goes at the end of the entry, but if @var{before-p} is non-@code{nil}, it goes at the beginning.  This function also invokes the value of @code{interprogram-cut-function} (see below)."
-msgstr "この関数は、killリング内の最初のエントリーにテキスト@var{string}を追加して、その結合されたエントリーを指すようにyankポインターをセットする。通常はそのエントリーの終端に@var{string}が追加されるが、@var{before-p}が非@code{nil}ならエントリーの先頭に追加される。この関数は、@code{interprogram-cut-function}(以下参照)の呼び出しも行う。"
+msgstr "この関数はkillリング内の最初のエントリーにテキスト@var{string}を追加して、その結合されたエントリーを指すようにyankポインターをセットする。通常はそのエントリーの終端に@var{string}が追加されるが、@var{before-p}が非@code{nil}ならエントリーの先頭に追加される。この関数は@code{interprogram-cut-function} (以下参照)の呼び出しも行う。"
 
 #. type: defvar
 #: original_texis/text.texi:1162
@@ -2042,26 +2024,22 @@ msgstr "interprogram-paste-function"
 #. type: defvar
 #: original_texis/text.texi:1166
 msgid "This variable provides a way of transferring killed text from other programs, when you are using a window system.  Its value should be @code{nil} or a function of no arguments."
-msgstr "この変数は、他のプログラムからkillリングへkillされたテキストを転送する方法を提供する。値は@code{nil}、または引数のない関数であること。"
+msgstr "この変数は他のプログラムからkillリングへkillされたテキストを転送する方法を提供する。値は@code{nil}、または引数のない関数であること。"
 
 #. type: defvar
 #: original_texis/text.texi:1171
-#, fuzzy
-#| msgid "If the value is a function, @code{current-kill} calls it to get the ``most recent kill''.  If the function returns a non-@code{nil} value, then that value is used as the ``most recent kill''.  If it returns @code{nil}, then the front of the kill ring is used."
 msgid "If the value is a function, @code{current-kill} calls it to get the most recent kill.  If the function returns a non-@code{nil} value, then that value is used as the most recent kill.  If it returns @code{nil}, then the front of the kill ring is used."
-msgstr "値が関数なら、``もっとも最近のkill''を取得するために、@code{current-kill}はそれを呼び出す。その関数が非@code{nil}値をリターンした場合は、その値が``もっとも最近のkill''として使用される。@code{nil}をリターンした場合は、killリングの先頭が使用される。"
+msgstr "値が関数なら、もっとも最近のkillを取得するために@code{current-kill}はそれを呼び出す。その関数が非@code{nil}値をリターンすると、その値がもっとも最近のkillとして使用される。@code{nil}をリターンしたらkillリングの先頭が使用される。"
 
 #. type: defvar
 #: original_texis/text.texi:1177
-#, fuzzy
-#| msgid "To facilitate support for window systems that support multiple selections, this function may also return a list of strings.  In that case, the first string is used as the ``most recent kill'', and all the other strings are pushed onto the kill ring, for easy access by @code{yank-pop}."
 msgid "To facilitate support for window systems that support multiple selections, this function may also return a list of strings.  In that case, the first string is used as the most recent kill, and all the other strings are pushed onto the kill ring, for easy access by @code{yank-pop}."
-msgstr "複数選択をサポートするウィンドウシステムのサポートを容易にするために、この関数は文字列のリストもリターンするかもしれない。その場合、1つ目の文字列が``もっとも最近のkill''として使用され、その他の文字列はすべて@code{yank-pop}によるアクセスを容易にするために、killリング上にpushされる。"
+msgstr "複数選択をサポートするウィンドウシステムのサポートを容易にするために、この関数は文字列のリストをリターンすることもある。その場合には1つ目の文字列がもっとも最近のkillとして使用され、その他の文字列はすべて@code{yank-pop}によるアクセスを容易にするためにkillリング上にpushされる。"
 
 #. type: defvar
 #: original_texis/text.texi:1183
 msgid "The normal use of this function is to get the window system's clipboard as the most recent kill, even if the selection belongs to another application.  @xref{Window System Selections}.  However, if the clipboard contents come from the current Emacs session, this function should return @code{nil}."
-msgstr "この関数の通常の用途は、たとえそれが他アプリケーションに属する選択であっても、もっとも最近のkillとして、ウィンドウシステムのクリップボードからそれを取得することである。しかし、クリップボードのコンテンツがカレントEmacsセッション由来なら、この関数は@code{nil}をリターンする筈である。"
+msgstr "この関数の通常の用途は、たとえそれが他アプリケーションに属する選択であっても、もっとも最近のkillとしてウィンドウシステムのクリップボードからそれを取得することである。しかしクリップボードのコンテンツがカレントEmacsセッションに由来するなら、この関数は@code{nil}をリターンする筈である。"
 
 #. type: defvar
 #: original_texis/text.texi:1185
@@ -2072,17 +2050,17 @@ msgstr "interprogram-cut-function"
 #. type: defvar
 #: original_texis/text.texi:1189
 msgid "This variable provides a way of communicating killed text to other programs, when you are using a window system.  Its value should be @code{nil} or a function of one required argument."
-msgstr "この変数は、ウィンドウシステム使用時に、他のプログラムにkillされたテキストを転送する方法を提供する。値は@code{nil}、または1つの引数を要求する関数であること。"
+msgstr "この変数はウィンドウシステム使用時に、他のプログラムにkillされたテキストを転送する方法を提供する。値は@code{nil}、または1つの引数を要求する関数であること。"
 
 #. type: defvar
 #: original_texis/text.texi:1192
 msgid "If the value is a function, @code{kill-new} and @code{kill-append} call it with the new first element of the kill ring as the argument."
-msgstr "値が関数なら、@code{kill-new}および@code{kill-append}は、killリングの新たな1つ目要素を引数として、それを呼び出す。"
+msgstr "値が関数なら@code{kill-new}と@code{kill-append}はkillリングの新たな1つ目要素を引数としてそれを呼び出す。"
 
 #. type: defvar
 #: original_texis/text.texi:1195
 msgid "The normal use of this function is to put newly killed text in the window system's clipboard.  @xref{Window System Selections}."
-msgstr "この関数の通常の用途は、新たにkillされたテキストを、ウィンドウシステムのクリップボードに配すことである。@ref{Window System Selections}を参照のこと。"
+msgstr "この関数の通常の用途は、新たにkillされたテキストをウィンドウシステムのクリップボードに配置することである。@ref{Window System Selections}を参照のこと。"
 
 #. type: subsection
 #: original_texis/text.texi:1198
@@ -2093,29 +2071,27 @@ msgstr "Internals of the Kill Ring"
 #. type: Plain text
 #: original_texis/text.texi:1203
 msgid "The variable @code{kill-ring} holds the kill ring contents, in the form of a list of strings.  The most recent kill is always at the front of the list."
-msgstr "変数@code{kill-ring}は、文字列リスト形式でkillリングのコンテンツを保持します。もっとも最近のkillが、常にこのリストの先頭になります。"
+msgstr "変数@code{kill-ring}は、文字列リスト形式でkillリングのコンテンツを保持します。もっとも最近のkillが常にこのリストの先頭になります。"
 
 #. type: Plain text
 #: original_texis/text.texi:1212
-#, fuzzy
-#| msgid "The @code{kill-ring-yank-pointer} variable points to a link in the kill ring list, whose @sc{car} is the text to yank next.  We say it identifies the ``front'' of the ring.  Moving @code{kill-ring-yank-pointer} to a different link is called @dfn{rotating the kill ring}.  We call the kill ring a ``ring'' because the functions that move the yank pointer wrap around from the end of the list to the beginning, or vice-versa.  Rotation of the kill ring is virtual; it does not change the value of @code{kill-ring}."
 msgid "The @code{kill-ring-yank-pointer} variable points to a link in the kill ring list, whose @sc{car} is the text to yank next.  We say it identifies the front of the ring.  Moving @code{kill-ring-yank-pointer} to a different link is called @dfn{rotating the kill ring}.  We call the kill ring a ``ring'' because the functions that move the yank pointer wrap around from the end of the list to the beginning, or vice-versa.  Rotation of the kill ring is virtual; it does not change the value of @code{kill-ring}."
-msgstr "変数@code{kill-ring-yank-pointer}は、@sc{car}が次のyankのテキストであるような、killリングリスト内のリンクをpointします。これを、リングの``先頭''を識別すると言います。そして、@code{kill-ring-yank-pointer}を異なるリンクに移動することを、@dfn{killリングの転回(rotating the kill ring)}と呼びます。yankポインターを移動する関数は、yankポインターをリスト終端から先頭、またはその逆へラップするので、、killリングを``ring''と呼びます。killリングの転回は仮想的なものであり、@code{kill-ring}の値は変更しません。"
+msgstr "変数@code{kill-ring-yank-pointer}は、@sc{car}が次のyankのテキストであるような、killリングリスト内のリンクをpointします。これをリングの先頭を識別すると言います。そして、@code{kill-ring-yank-pointer}を異なるリンクに移動することを@dfn{killリングの転回(rotating the kill ring)}と呼びます。yankポインターを移動する関数はyankポインターをリスト終端から先頭、またはその逆へラップするのでkillリングを``ring''と呼びます。killリングの転回は仮想的なものであって@code{kill-ring}の値は変更しません。"
 
 #. type: Plain text
 #: original_texis/text.texi:1218
 msgid "Both @code{kill-ring} and @code{kill-ring-yank-pointer} are Lisp variables whose values are normally lists.  The word ``pointer'' in the name of the @code{kill-ring-yank-pointer} indicates that the variable's purpose is to identify one element of the list for use by the next yank command."
-msgstr "@code{kill-ring}および@code{kill-ring-yank-pointer}はどちらも、通常は値がリストであるようなLisp変数です。@code{kill-ring-yank-pointer}の名前にある単語``pointer''は、その変数の目的が次回yankコマンドにより使用されるリストの最初の要素を指すことであるのを示します。"
+msgstr "@code{kill-ring}と@code{kill-ring-yank-pointer}はいずれも、通常は値がリストであるようなLisp変数です。@code{kill-ring-yank-pointer}の名前にある単語``pointer''は、その変数の目的が次回yankコマンドにより使用されるリストの最初の要素を指すことであることを示します。"
 
 #. type: Plain text
 #: original_texis/text.texi:1224
 msgid "The value of @code{kill-ring-yank-pointer} is always @code{eq} to one of the links in the kill ring list.  The element it identifies is the @sc{car} of that link.  Kill commands, which change the kill ring, also set this variable to the value of @code{kill-ring}.  The effect is to rotate the ring so that the newly killed text is at the front."
-msgstr "@code{kill-ring-yank-pointer}の値は常にkillリングリスト内の1つのリンクと@code{eq}です。それが指す要素は、そのリンクの@sc{car}です。killリングを変更するkillコマンドも、この変数に@code{kill-ring}の値をセットします。その効果は、新たにkillされた先頭になるように、リングを転回することです。"
+msgstr "@code{kill-ring-yank-pointer}の値は常にkillリングリスト内の1つのリンクと@code{eq}です。それが指す要素は、そのリンクの@sc{car}です。killリングを変更するkillコマンドも、この変数に@code{kill-ring}の値をセットします。その効果は新たにkillされた先頭になるように、リングを転回することです。"
 
 #. type: Plain text
 #: original_texis/text.texi:1228
 msgid "Here is a diagram that shows the variable @code{kill-ring-yank-pointer} pointing to the second entry in the kill ring @code{(\"some text\" \"a different piece of text\" \"yet older text\")}."
-msgstr "以下は、変数@code{kill-ring-yank-pointer}が、killリング@code{(\"some text\" \"a different piece of text\" \"yet older text\")}内の2番目のエントリーを指すことを表すダイアグラムです。"
+msgstr "以下は変数@code{kill-ring-yank-pointer}が、killリング@code{(\"some text\" \"a different piece of text\" \"yet older text\")}内の2番目のエントリーを指すことを表すダイアグラムです。"
 
 #. type: group
 #: original_texis/text.texi:1244
@@ -2152,7 +2128,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/text.texi:1250
 msgid "This state of affairs might occur after @kbd{C-y} (@code{yank})  immediately followed by @kbd{M-y} (@code{yank-pop})."
-msgstr "この状態は、@kbd{C-y}(@code{yank})の直後に@kbd{M-y}(@code{yank-pop})を行うことにより発生し得ます。"
+msgstr "この状態は@kbd{C-y} (@code{yank})の直後に@kbd{M-y} (@code{yank-pop})を行うことにより発生し得ます。"
 
 #. type: defvar
 #: original_texis/text.texi:1251
@@ -2163,7 +2139,7 @@ msgstr "kill-ring"
 #. type: defvar
 #: original_texis/text.texi:1254
 msgid "This variable holds the list of killed text sequences, most recently killed first."
-msgstr "この変数は、もっとも最近にkillされたテキストが先頭になるように、killされたテキストのシーケンスのリストを保持する。"
+msgstr "この変数はもっとも最近にkillされたテキストが先頭になるように、killされたテキストのシーケンスのリストを保持する。"
 
 #. type: defvar
 #: original_texis/text.texi:1256
@@ -2173,10 +2149,8 @@ msgstr "kill-ring-yank-pointer"
 
 #. type: defvar
 #: original_texis/text.texi:1261
-#, fuzzy
-#| msgid "This variable's value indicates which element of the kill ring is at the ``front'' of the ring for yanking.  More precisely, the value is a tail of the value of @code{kill-ring}, and its @sc{car} is the kill string that @kbd{C-y} should yank."
 msgid "This variable's value indicates which element of the kill ring is at the front of the ring for yanking.  More precisely, the value is a tail of the value of @code{kill-ring}, and its @sc{car} is the kill string that @kbd{C-y} should yank."
-msgstr "この変数の値は、yankにたいして使用される、killリングの先頭にある要素を示す。より正確には、値は@code{kill-ring}の値のtail値であり、その@sc{car}が@kbd{C-y}によりyankされるはずのkill文字列となる。"
+msgstr "この変数の値は、yankにたいして使用されるkillリングの先頭にある要素を示す。より正確には値は@code{kill-ring}の値のtail値であり、その@sc{car}が@kbd{C-y}によりyankされるはずのkill文字列。"
 
 #. type: defopt
 #: original_texis/text.texi:1263
@@ -2187,7 +2161,7 @@ msgstr "kill-ring-max"
 #. type: defopt
 #: original_texis/text.texi:1267
 msgid "The value of this variable is the maximum length to which the kill ring can grow, before elements are thrown away at the end.  The default value for @code{kill-ring-max} is 60."
-msgstr "この変数の値は、リング終端の要素を破棄する前に、killリングが成長し得る最大長である。@code{kill-ring-max}のデフォルト値は60。"
+msgstr "この変数の値は、リング終端の要素を破棄する前にkillリングが成長し得る最大長。@code{kill-ring-max}のデフォルト値は60。"
 
 #. type: cindex
 #: original_texis/text.texi:1271
@@ -2198,7 +2172,7 @@ msgstr "redo"
 #. type: Plain text
 #: original_texis/text.texi:1281
 msgid "Most buffers have an @dfn{undo list}, which records all changes made to the buffer's text so that they can be undone.  (The buffers that don't have one are usually special-purpose buffers for which Emacs assumes that undoing is not useful.  In particular, any buffer whose name begins with a space has its undo recording off by default; see @ref{Buffer Names}.)  All the primitives that modify the text in the buffer automatically add elements to the front of the undo list, which is in the variable @code{buffer-undo-list}."
-msgstr "ほとんどのバッファーは、バッファーのテキストにたいして行われた変更をundoできるように、すべての変更を記録する@dfn{undoリスト(undo list)}をもちます(undoリストをもたないバッファーとは通常、Emacsがundoを有用とみなさない特殊用途のバッファーである。特に、名前がスペースで始まるバッファーはすべて、undo記録がデフォルトでオフになっている。@ref{Buffer Names}を参照されたい)。バッファー内でテキストを変更するすべてのプリミティブは、undoリストの先頭に自動的に要素を追加し、それは変数@code{buffer-undo-list}に格納されます。"
+msgstr "ほとんどのバッファーは、バッファーのテキストにたいして行われた変更をundoできるように、すべての変更を記録する@dfn{undoリスト(undo list)}をもっています(undoリストをもたないバッファーとは通常はEmacsがundoを有用とみなさない特殊用途のバッファーである。特に名前がスペースで始まるバッファーはすべてundoの記録がデフォルトでオフになっている。@ref{Buffer Names}を参照)。バッファー内でテキストを変更するすべてのプリミティブはundoリストの先頭に自動的に要素を追加して、それは変数@code{buffer-undo-list}に格納されます。"
 
 #. type: defvar
 #: original_texis/text.texi:1282
@@ -2209,12 +2183,12 @@ msgstr "buffer-undo-list"
 #. type: defvar
 #: original_texis/text.texi:1285
 msgid "This buffer-local variable's value is the undo list of the current buffer.  A value of @code{t} disables the recording of undo information."
-msgstr "このバッファーローカル変数の値は、カレントバッファーのundoリストである。値が@code{t}なら、undo情報の記録を無効にする。"
+msgstr "このバッファーローカル変数の値は、カレントバッファーのundoリスト。値が@code{t}ならundo情報の記録を無効にする。"
 
 #. type: Plain text
 #: original_texis/text.texi:1288
 msgid "Here are the kinds of elements an undo list can have:"
-msgstr "以下は、undoリストが保有可能な要素の種類です:"
+msgstr "以下はundoリストが保有可能な要素の種類です:"
 
 #. type: var{#1}
 #: original_texis/text.texi:1290
@@ -2225,7 +2199,7 @@ msgstr "position"
 #. type: table
 #: original_texis/text.texi:1295
 msgid "This kind of element records a previous value of point; undoing this element moves point to @var{position}.  Ordinary cursor motion does not make any sort of undo record, but deletion operations use these entries to record where point was before the command."
-msgstr "この種の要素は、前のポイント値を記録する。この要素をundoすることにより、ポイントは@var{position}に移動する。通常のカーソル移動はどのような類のundo記録も作成しないが、削除操作はそのコマンド以前にポイントがあった場所を記録するために、このエントリーを使用する。"
+msgstr "この種の要素は前のポイント値を記録する。この要素をundoすることによりポイントは@var{position}に移動する。通常のカーソル移動はどのような類のundo記録も作成しないが、削除操作はそのコマンド以前にポイントがあった場所を記録するためにこのエントリーを使用する。"
 
 #. type: item
 #: original_texis/text.texi:1296
@@ -2236,7 +2210,7 @@ msgstr "(@var{beg} . @var{end})"
 #. type: table
 #: original_texis/text.texi:1300
 msgid "This kind of element indicates how to delete text that was inserted.  Upon insertion, the text occupied the range @var{beg}--@var{end} in the buffer."
-msgstr "この種の要素は、挿入されたテキストを削除する方法を示す。挿入において、そのテキストはバッファー内の範囲@var{beg}から@var{end}を占める。"
+msgstr "この種の要素は挿入されたテキストを削除する方法を示す。挿入においてそのテキストはバッファー内の範囲@var{beg}から@var{end}を占める。"
 
 #. type: item
 #: original_texis/text.texi:1301
@@ -2247,7 +2221,7 @@ msgstr "(@var{text} . @var{position})"
 #. type: table
 #: original_texis/text.texi:1308
 msgid "This kind of element indicates how to reinsert text that was deleted.  The deleted text itself is the string @var{text}.  The place to reinsert it is @code{(abs @var{position})}.  If @var{position} is positive, point was at the beginning of the deleted text, otherwise it was at the end.  Zero or more (@var{marker} . @var{adjustment})  elements follow immediately after this element."
-msgstr "この種の要素は、削除されたテキストを再度挿入する方法を示す。文字列@var{text}は、削除されたテキストそのものである。削除されたテキストを再挿入する位置は@code{(abs @var{position})}である。@var{position}が正ならポイントがあったのは削除されたテキストの先頭、それ以外では末尾である。0個以上の(@var{marker} . @var{adjustment})要素が、この要素の直後に続く。"
+msgstr "この種の要素は削除されたテキストを再度挿入する方法を示す。文字列@var{text}は削除されたテキストそのもの。削除されたテキストを再挿入する位置は@code{(abs @var{position})}。@var{position}が正ならポイントがあったのは削除されたテキストの先頭、それ以外では末尾。この要素の直後に0個以上の(@var{marker} . @var{adjustment})要素が続く。"
 
 #. type: item
 #: original_texis/text.texi:1309
@@ -2258,7 +2232,7 @@ msgstr "(t . @var{time-flag})"
 #. type: table
 #: original_texis/text.texi:1321
 msgid "This kind of element indicates that an unmodified buffer became modified.  A @var{time-flag} of the form @code{(@var{sec-high} @var{sec-low} @var{microsec} @var{picosec})} represents the visited file's modification time as of when it was previously visited or saved, using the same format as @code{current-time}; see @ref{Time of Day}.  A @var{time-flag} of 0 means the buffer does not correspond to any file; @minus{}1 means the visited file previously did not exist.  @code{primitive-undo} uses these values to determine whether to mark the buffer as unmodified once again; it does so only if the file's status matches that of @var{time-flag}."
-msgstr "この種の要素は、未変更のバッファーが変更されたことを示す。@code{(@var{sec-high} @var{sec-low} @var{microsec} @var{picosec})}という形式の@var{time-flag}は、visitされたファイルにたいして、それが以前にvisitまたは保存されたときの更新時刻(modification time)を、@code{current-time}と同じ形式を用いて表す。@ref{Time of Day}を参照のこと。@var{time-flag}が0ならそのバッファーに対応するファイルがないことを、@minus{}1ならvisitされたファイルは以前は存在しなかったことを意味する。@code{primitive-undo}は、バッファーを再度未変更とマークするかどうかを判断するために、これらの値を使用(ファイルの状態が@var{time-flag}のそれとマッチする場合のみ未変更とマーク)する。"
+msgstr "この種の要素は未変更のバッファーが変更されたことを示す。@code{(@var{sec-high} @var{sec-low} @var{microsec} @var{picosec})}という形式の@var{time-flag}は、visitされたファイルにたいしてそれが以前にvisitや保存されたときの更新時刻(modification time)を、@code{current-time}と同じ形式を用いて表す。@ref{Time of Day}を参照のこと。@var{time-flag}が0ならそのバッファーに対応するファイルがないことを、@minus{}1ならvisitされたファイルは以前は存在しなかったことを意味する。@code{primitive-undo}はバッファーを再度未変更とマークするかどうかを判断するために、これらの値を使用する(ファイルの状態が@var{time-flag}のそれとマッチする場合のみ未変更とマーク)。"
 
 #. type: item
 #: original_texis/text.texi:1322
@@ -2269,7 +2243,7 @@ msgstr "(nil @var{property} @var{value} @var{beg} . @var{end})"
 #. type: table
 #: original_texis/text.texi:1325
 msgid "This kind of element records a change in a text property.  Here's how you might undo the change:"
-msgstr "この種の要素は、テキストプロパティの変更を記録する。変更をundoする方法は、以下のようになる:"
+msgstr "この種の要素はテキストプロパティの変更を記録する。変更をundoする方法は以下のようになる:"
 
 #. type: example
 #: original_texis/text.texi:1328
@@ -2286,7 +2260,7 @@ msgstr "(@var{marker} . @var{adjustment})"
 #. type: table
 #: original_texis/text.texi:1337
 msgid "This kind of element records the fact that the marker @var{marker} was relocated due to deletion of surrounding text, and that it moved @var{adjustment} character positions.  If the marker's location is consistent with the (@var{text} . @var{position}) element preceding it in the undo list, then undoing this element moves @var{marker} @minus{} @var{adjustment} characters."
-msgstr "この種の要素は、マーカー@var{marker}がそれを取り囲むテキストの削除により再配置されて、@var{adjustment}文字位置を移動したということを記録する。undoリスト内の前にある要素(@var{text} . @var{position})とマーカーの位置が一致する場合、は、この要素をundoすることにより、@var{marker} @minus{} @var{adjustment}文字移動する。"
+msgstr "この種の要素はマーカー@var{marker}がそれを取り囲むテキストの削除により再配置されて、@var{adjustment}文字位置を移動したということを記録する。undoリスト内の前にある要素(@var{text} . @var{position})とマーカーの位置が一致する場合には、この要素をundoすることにより@var{marker} @minus{} @var{adjustment}文字移動する。"
 
 #. type: item
 #: original_texis/text.texi:1338
@@ -2308,12 +2282,12 @@ msgstr "(apply @var{delta} @var{beg} @var{end} @var{funname} . @var{args})"
 #. type: table
 #: original_texis/text.texi:1347
 msgid "This is an extensible undo item, which records a change limited to the range @var{beg} to @var{end}, which increased the size of the buffer by @var{delta} characters.  It is undone by calling @var{funname} with arguments @var{args}."
-msgstr "これは拡張可能なundoアイテムであり、@var{beg}から@var{end}までに限定された範囲にたいして、そのバッファーのサイズを@var{delta}文字増加させる変更を記録する。これは、引数@var{args}とともに@var{funname}を呼び出すことによりundoが行われる。"
+msgstr "これは拡張可能なundoアイテムであり、@var{beg}から@var{end}までに限定された範囲にたいして、そのバッファーのサイズを@var{delta}文字増加させる変更を記録する。これは引数@var{args}とともに@var{funname}を呼び出すことによりundoが行われる。"
 
 #. type: table
 #: original_texis/text.texi:1350
 msgid "This kind of element enables undo limited to a region to determine whether the element pertains to that region."
-msgstr "この種の要素は、それがリージョンと関係するか否かを判断することにより、リージョンに限定されたundoを有効にする。"
+msgstr "この種の要素は、それがリージョンと関係するか否かを判断することによりリージョンに限定されたundoを有効にする。"
 
 #. type: item
 #: original_texis/text.texi:1351
@@ -2324,7 +2298,7 @@ msgstr "nil"
 #. type: table
 #: original_texis/text.texi:1356
 msgid "This element is a boundary.  The elements between two boundaries are called a @dfn{change group}; normally, each change group corresponds to one keyboard command, and undo commands normally undo an entire group as a unit."
-msgstr "この要素は境界(boundary)である。2つの境界の間にある要素を@dfn{変更グループ(change group)}と呼び、それぞれの変更グループは通常1つのキーボードコマンドに対応するとともに、undoコマンドは通常、グループを1つの単位として全体をundoを行う。"
+msgstr "この要素は境界(boundary)である。2つの境界の間にある要素を@dfn{変更グループ(change group)}と呼び、それぞれの変更グループは通常1つのキーボードコマンドに対応するとともに、undoコマンドは通常はグループを1つの単位として全体をundoを行う。"
 
 #. type: defun
 #: original_texis/text.texi:1358
@@ -2335,46 +2309,45 @@ msgstr "undo-boundary"
 #. type: defun
 #: original_texis/text.texi:1362
 msgid "This function places a boundary element in the undo list.  The undo command stops at such a boundary, and successive undo commands undo to earlier and earlier boundaries.  This function returns @code{nil}."
-msgstr "この関数は、undoリスト内に境界を配置する。このような境界ごとにundoコマンドは停止し、連続するundoコマンドは、より以前の境界へとundoを行っていく。この関数は@code{nil}をリターンする。"
+msgstr "この関数はundoリスト内に境界を配置する。このような境界ごとにundoコマンドは停止して、連続するundoコマンドは、より以前の境界へとundoを行っていく。この関数は@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:1367
 msgid "Calling this function explicitly is useful for splitting the effects of a command into more than one unit.  For example, @code{query-replace} calls @code{undo-boundary} after each replacement, so that the user can undo individual replacements one by one."
-msgstr "この関数を明示的に呼び出すことは、あるコマンドの効果を複数単位に分割するために有用である。たとえば@code{query-replace}は、ユーザーが個別に置換をundoできるように、それぞれの置換後に@code{undo-boundary}を呼び出している。"
+msgstr "この関数を明示的に呼び出すことは、あるコマンドの効果を複数単位に分割するために有用である。たとえば@code{query-replace}はユーザーが個別に置換をundoできるように、それぞれの置換後に@code{undo-boundary}を呼び出している。"
 
 #. type: defun
 #: original_texis/text.texi:1370
 msgid "Mostly, however, this function is called automatically at an appropriate time."
-msgstr ""
+msgstr "しかしほとんどの場合には、この関数は適切なタイミングで自動的に呼び出される。"
 
 #. type: defun
 #: original_texis/text.texi:1372
-#, fuzzy, no-wrap
-#| msgid "undo-outer-limit"
+#, no-wrap
 msgid "undo-auto-amalgamate"
-msgstr "undo-outer-limit"
+msgstr "undo-auto-amalgamate"
 
 #. type: cindex
 #: original_texis/text.texi:1373
 #, no-wrap
 msgid "amalgamating commands, and undo"
-msgstr ""
+msgstr "amalgamating commands, and undo"
 
 #. type: defun
 #: original_texis/text.texi:1387
 msgid "The editor command loop automatically calls @code{undo-boundary} just before executing each key sequence, so that each undo normally undoes the effects of one command.  A few exceptional commands are @dfn{amalgamating}: these commands generally cause small changes to buffers, so with these a boundary is inserted only every 20th command, allowing the changes to be undone as a group.  By default, the commands @code{self-insert-command}, which produces self-inserting input characters (@pxref{Commands for Insertion}), and @code{delete-char}, which deletes characters (@pxref{Deletion}), are amalgamating.  Where a command affects the contents of several buffers, as may happen, for example, when a function on the @code{post-command-hook} affects a buffer other than the @code{current-buffer}, then @code{undo-boundary} will be called in each of the affected buffers."
-msgstr ""
+msgstr "エディターコマンドループは各アンドゥがが通常はそれぞれ1つのコマンドの効果をアンドゥするように、各キーシーケンスを実行する直前に@code{undo-boundary}を呼び出す。少数の例外は@dfn{融合(amalgamating)}コマンドである。これらのコマンドは一般的にバッファーにたいして小さい変更を発生させるので、変更をグループとしてアンドゥできるように、20回目のコマンドごとに境界が挿入される。デフォルトでは自己挿入入力文字を生成するコマンド@code{self-insert-command} (@ref{Commands for Insertion}を参照)、文字を削除するコマンド@code{delete-char} (@ref{Deletion}を参照)は融合コマンドである。複数バッファーのコンテンツに影響するコマンド、たとえば発生し得るとすれば@code{post-command-hook}上の関数が@code{current-buffer}以外のバッファーに影響を及ぼす場合には、影響を受ける各バッファーごとに@code{undo-boundary}が呼び出されるだろう。"
 
 #. type: defvar
 #: original_texis/text.texi:1389
 #, no-wrap
 msgid "undo-auto-current-boundary-timer"
-msgstr ""
+msgstr "undo-auto-current-boundary-timer"
 
 #. type: defvar
 #: original_texis/text.texi:1394
 msgid "Some buffers, such as process buffers, can change even when no commands are executing.  In these cases, @code{undo-boundary} is normally called periodically by the timer in this variable.  Setting this variable to non-@code{nil} prevents this behavior."
-msgstr ""
+msgstr "プロセスバッファーのようないくつかのバッファーでは、何もコマンドを実行していなくても変更が発生し得る。このような場合には、通常は@code{undo-boundary}この変数内のタイマーにより定期的に呼び出される。この挙動を抑制するには、この変数を非@code{nil}にセットすること。"
 
 #. type: defvar
 #: original_texis/text.texi:1396
@@ -2385,7 +2358,7 @@ msgstr "undo-in-progress"
 #. type: defvar
 #: original_texis/text.texi:1400
 msgid "This variable is normally @code{nil}, but the undo commands bind it to @code{t}.  This is so that various kinds of change hooks can tell when they're being called for the sake of undoing."
-msgstr "この変数は通常@code{nil}だが、undoコマンドはこれを@code{t}にバインドする。これにより、さまざまな種類の変更フックがundoにより呼び出された際、それを告げることが可能になる。"
+msgstr "この変数は通常は@code{nil}だが、undoコマンドはこれを@code{t}にバインドする。これによりさまざまな種類の変更フックがundoにより呼び出された際に、それを告げることが可能になる。"
 
 #. type: defun
 #: original_texis/text.texi:1402
@@ -2396,17 +2369,17 @@ msgstr "primitive-undo count list"
 #. type: defun
 #: original_texis/text.texi:1406
 msgid "This is the basic function for undoing elements of an undo list.  It undoes the first @var{count} elements of @var{list}, returning the rest of @var{list}."
-msgstr "これは、undoリストの要素のundoにたいする基本的な関数である。これは@var{list}の最初の@var{count}要素をundoして、@var{list}の残りをリターンする。"
+msgstr "これはundoリストの要素のundoにたいする基本的な関数。これは@var{list}の最初の@var{count}要素をundoして@var{list}の残りをリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:1413
 msgid "@code{primitive-undo} adds elements to the buffer's undo list when it changes the buffer.  Undo commands avoid confusion by saving the undo list value at the beginning of a sequence of undo operations.  Then the undo operations use and update the saved value.  The new elements added by undoing are not part of this saved value, so they don't interfere with continuing to undo."
-msgstr "@code{primitive-undo}はバッファー変更時、そのバッファーのundoリストに要素を追加する。undoコマンドは混乱を避けるために、undo操作シーケンス冒頭にundoリストの値を保存する。その後、undo操作は保存された値の使用および更新を行う。undoにより追加された新たな要素はこの保存値の一部でないので、継続するundoと干渉しない。"
+msgstr "@code{primitive-undo}はバッファー変更時に、そのバッファーのundoリストに要素を追加する。undoコマンドは混乱を避けるためにundo操作シーケンス冒頭にundoリストの値を保存する。その後でundo操作は保存された値の使用と更新を行う。undoにより追加された新たな要素はこの保存値の一部でないので継続するundoと干渉しない。"
 
 #. type: defun
 #: original_texis/text.texi:1415
 msgid "This function does not bind @code{undo-in-progress}."
-msgstr "この関数は、@code{undo-in-progress}をバインドしない。"
+msgstr "この関数は@code{undo-in-progress}をバインドしない。"
 
 #. type: section
 #: original_texis/text.texi:1418
@@ -2417,12 +2390,12 @@ msgstr "Maintaining Undo Lists"
 #. type: Plain text
 #: original_texis/text.texi:1423
 msgid "This section describes how to enable and disable undo information for a given buffer.  It also explains how the undo list is truncated automatically so it doesn't get too big."
-msgstr "このセクションでは、与えられたバッファーにたいしてundo情報を有効、および無効にする方法を説明します。undoリストが巨大化しないように、undoリストを切り詰める方法も説明します。"
+msgstr "このセクションでは与えられたバッファーにたいしてundo情報を有効や無効にする方法を説明します。undoリストが巨大化しないようにundoリストを切り詰める方法も説明します。"
 
 #. type: Plain text
 #: original_texis/text.texi:1429
 msgid "Recording of undo information in a newly created buffer is normally enabled to start with; but if the buffer name starts with a space, the undo recording is initially disabled.  You can explicitly enable or disable undo recording with the following two functions, or by setting @code{buffer-undo-list} yourself."
-msgstr "新たに作成されたバッファー内のundo情報記録は、開始とともに通常は有効になります。しかしバッファー名がスペースで始まる場合、undoの記録は初期状態では無効になっています。以下の2つの関数、または自身で@code{buffer-undo-list}をセットすることにより、undo記録の有効、または無効化を明示的に行うことができます。"
+msgstr "新たに作成されたバッファー内のundo情報記録は、通常は開始とともに有効になります。しかしバッファー名がスペースで始まる場合には、undoの記録は初期状態では無効になっています。以下の2つの関数、または自身で@code{buffer-undo-list}をセットすることにより、undo記録の有効化や無効化を明示的に行うことができます。"
 
 #. type: deffn
 #: original_texis/text.texi:1430
@@ -2433,12 +2406,12 @@ msgstr "Command buffer-enable-undo &optional buffer-or-name"
 #. type: deffn
 #: original_texis/text.texi:1436
 msgid "This command enables recording undo information for buffer @var{buffer-or-name}, so that subsequent changes can be undone.  If no argument is supplied, then the current buffer is used.  This function does nothing if undo recording is already enabled in the buffer.  It returns @code{nil}."
-msgstr "このコマンドは、以降の変更をundo可能にするよう、バッファー@var{buffer-or-name}のundo情報記録を有効にする。引数が与えられない場合は、カレントバッファーを使用する。そのバッファー内のundo記録がすでに有効なら、この関数は何も行わない。リターン値は@code{nil}。"
+msgstr "このコマンドは以降の変更をundo可能にするように、バッファー@var{buffer-or-name}のundo情報記録を有効にする。引数が与えられなければカレントバッファーを使用する。そのバッファー内のundo記録がすでに有効ならこの関数は何も行わない。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:1439
 msgid "In an interactive call, @var{buffer-or-name} is the current buffer.  You cannot specify any other buffer."
-msgstr "インタラクティブな呼び出しでは、@var{buffer-or-name}はカレントバッファーであり、他のバッファーを指定することはできない。"
+msgstr "インタラクティブな呼び出しでは@var{buffer-or-name}はカレントバッファーであり、他のバッファーを指定することはできない。"
 
 #. type: deffn
 #: original_texis/text.texi:1441
@@ -2455,19 +2428,17 @@ msgstr "disabling undo"
 #. type: deffn
 #: original_texis/text.texi:1448
 msgid "This function discards the undo list of @var{buffer-or-name}, and disables further recording of undo information.  As a result, it is no longer possible to undo either previous changes or any subsequent changes.  If the undo list of @var{buffer-or-name} is already disabled, this function has no effect."
-msgstr "この関数は@var{buffer-or-name}のundoリストを破棄して、それ以上のundo情報記録を無効にする。結果として、以前の変更および以降のすべての変更にたいするそれ以上のundoは不可能になる。@var{buffer-or-name}のundoリストがすでに無効なら、この関数に効果はない。"
+msgstr "この関数は@var{buffer-or-name}のundoリストを破棄して、それ以上のundo情報記録を無効にする。結果として以前の変更と以後のすべての変更にたいするそれ以上のundoは不可能になる。@var{buffer-or-name}のundoリストがすでに無効ならこの関数に効果はない。"
 
 #. type: deffn
 #: original_texis/text.texi:1451
 msgid "In an interactive call, BUFFER-OR-NAME is the current buffer.  You cannot specify any other buffer.  This function returns @code{nil}."
-msgstr "インタラクティブな呼び出しでは、BUFFER-OR-NAMEはカレントバッファーとなる。他のバッファーを指定することはできない。リターン値は@code{nil}。"
+msgstr "インタラクティブな呼び出しではBUFFER-OR-NAMEはカレントバッファー。他のバッファーを指定することはできない。リターン値は@code{nil}。"
 
 #. type: Plain text
 #: original_texis/text.texi:1462
-#, fuzzy
-#| msgid "As editing continues, undo lists get longer and longer.  To prevent them from using up all available memory space, garbage collection trims them back to size limits you can set.  (For this purpose, the ``size'' of an undo list measures the cons cells that make up the list, plus the strings of deleted text.)  Three variables control the range of acceptable sizes: @code{undo-limit}, @code{undo-strong-limit} and @code{undo-outer-limit}.  In these variables, size is counted as the number of bytes occupied, which includes both saved text and other data."
 msgid "As editing continues, undo lists get longer and longer.  To prevent them from using up all available memory space, garbage collection trims them back to size limits you can set.  (For this purpose, the size of an undo list measures the cons cells that make up the list, plus the strings of deleted text.)  Three variables control the range of acceptable sizes: @code{undo-limit}, @code{undo-strong-limit} and @code{undo-outer-limit}.  In these variables, size is counted as the number of bytes occupied, which includes both saved text and other data."
-msgstr "編集が継続されるにつれ、undoリストは次第に長くなっていく。利用可能なメモリー空間すべてを使い尽くすのを防ぐために、ガベージコレクションがundoリストを設定可能な制限サイズに切り詰め戻す(この目的のために、undoリストの``サイズ''はリストを構成するコンスセルに加えて削除された文字列により算出される)。@code{undo-limit}、@code{undo-strong-limit}、@code{undo-outer-limit}の3つの変数は、許容できるサイズの範囲を制御する。これらの変数においてサイズは専有するバイト数で計数され、それには保存されたテキストとその他データが含まれる。"
+msgstr "編集が継続されるにつれてundoリストは次第に長くなっていきます。利用可能なメモリー空間すべてを使い尽くすのを防ぐために、ガベージコレクションがundoリストを設定可能な制限サイズに切り詰めて戻します(この目的のためにundoリストのサイズはリストを構成するコンスセルに加えて削除された文字列により算出される)。@code{undo-limit}、@code{undo-strong-limit}、@code{undo-outer-limit}の3つの変数は、許容できるサイズの範囲を制御します。これらの変数においてサイズは専有するバイト数で計数され、それには保存されたテキストとその他データが含まれます。"
 
 #. type: defopt
 #: original_texis/text.texi:1463
@@ -2478,7 +2449,7 @@ msgstr "undo-limit"
 #. type: defopt
 #: original_texis/text.texi:1466
 msgid "This is the soft limit for the acceptable size of an undo list.  The change group at which this size is exceeded is the last one kept."
-msgstr "これは、許容できるundoリストサイズのソフトリミットである。このサイズを超過した箇所の変更グループは、最新の変更グループ1つが保持される。"
+msgstr "これは許容できるundoリストサイズのソフトリミット。このサイズを超過した箇所の変更グループは最新の変更グループ1つが保持される。"
 
 #. type: defopt
 #: original_texis/text.texi:1468
@@ -2489,7 +2460,7 @@ msgstr "undo-strong-limit"
 #. type: defopt
 #: original_texis/text.texi:1473
 msgid "This is the upper limit for the acceptable size of an undo list.  The change group at which this size is exceeded is discarded itself (along with all older change groups).  There is one exception: the very latest change group is only discarded if it exceeds @code{undo-outer-limit}."
-msgstr "これは、undoリストの許容できるサイズの上限である。このサイズを超過する箇所の変更グループは(その他すべてのより古い変更グループとともに)自身を破棄する。1つ例外があり、@code{undo-outer-limit}を超過した場合は、最新の変更グループだけが破棄される。"
+msgstr "これはundoリストの許容できるサイズの上限。このサイズを超過する箇所の変更グループは(その他すべてのより古い変更グループとともに)自身を破棄する。1つ例外があり@code{undo-outer-limit}を超過すると最新の変更グループだけが破棄される。"
 
 #. type: defopt
 #: original_texis/text.texi:1475
@@ -2500,7 +2471,7 @@ msgstr "undo-outer-limit"
 #. type: defopt
 #: original_texis/text.texi:1479
 msgid "If at garbage collection time the undo info for the current command exceeds this limit, Emacs discards the info and displays a warning.  This is a last ditch limit to prevent memory overflow."
-msgstr "ガベージコレクション時にカレントコマンドのundo情報がこの制限を超過したら、Emacsはその情報を破棄して、警告を表示する。これはメモリーオーバーフローを防ぐための、最後の回避用リミットである。"
+msgstr "ガベージコレクション時にカレントコマンドのundo情報がこの制限を超過したら、Emacsはその情報を破棄して警告を表示する。これはメモリーオーバーフローを防ぐための最後の回避用リミットである。"
 
 #. type: defopt
 #: original_texis/text.texi:1481
@@ -2511,12 +2482,12 @@ msgstr "undo-ask-before-discard"
 #. type: defopt
 #: original_texis/text.texi:1486
 msgid "If this variable is non-@code{nil}, when the undo info exceeds @code{undo-outer-limit}, Emacs asks in the echo area whether to discard the info.  The default value is @code{nil}, which means to discard it automatically."
-msgstr "この変数が非@code{nil}なら、undo情報の@code{undo-outer-limit}超過時、Emacsはその情報を破棄するかどうかを、エコーエリアで尋ねる。デフォルト値は@code{nil}で、これは自動的な破棄を意味する。"
+msgstr "この変数が非@code{nil}ならundo情報の@code{undo-outer-limit}超過時に、Emacsはその情報を破棄するかどうかをエコーエリアで尋ねる。デフォルト値は@code{nil}でこれは自動的な破棄を意味する。"
 
 #. type: defopt
 #: original_texis/text.texi:1490
 msgid "This option is mainly intended for debugging.  Garbage collection is inhibited while the question is asked, which means that Emacs might leak memory if the user waits too long before answering the question."
-msgstr "このオプションは、主にデバッグを意図している。これを尋ねる際、ガベージコレクションは抑制されており、もしユーザーがその問にたいして答えるのをあまりに長くかかるなら、Emacsがメモリーリークを起こすかもしれないことを意味する。"
+msgstr "このオプションは主にデバッグを意図している。これを尋ねる際にはガベージコレクションは抑制されており、もしユーザーがその問にたいして答えるのをあまりに長くかかるなら、Emacsがメモリーリークを起こすかもしれないことを意味する。"
 
 #. type: cindex
 #: original_texis/text.texi:1494
@@ -2527,27 +2498,27 @@ msgstr "filling text"
 #. type: Plain text
 #: original_texis/text.texi:1502
 msgid "@dfn{Filling} means adjusting the lengths of lines (by moving the line breaks) so that they are nearly (but no greater than) a specified maximum width.  Additionally, lines can be @dfn{justified}, which means inserting spaces to make the left and/or right margins line up precisely.  The width is controlled by the variable @code{fill-column}.  For ease of reading, lines should be no longer than 70 or so columns."
-msgstr "@dfn{フィル(fill: 充填)}とは、指定された最大幅付近(ただし超えず)に、(行ブレークを移動することにより)行の長さを調整することを意味します。加えて、複数行を@dfn{位置揃え(justify)}することもできます。位置揃えとは、スペースを挿入して左および/または右マージンを正確に整列させることを意味します。その幅は、変数@code{fill-column}により制御されます。読みやすくするために、行の長さは70列程度を超えないようにするべきです。"
+msgstr "@dfn{フィル(fill: 充填)}とは、指定された最大幅付近(ただし超過せず)に、(行ブレークを移動することにより)行の長さを調整することを意味します。加えて複数行を@dfn{位置揃え(justify)}することもできます。位置揃えとはスペースを挿入して左および/または右マージンを正確に整列させることを意味します。その幅は変数@code{fill-column}により制御されます。読みやすくするために行の長さは70列程度を超えないようにするべきです。"
 
 #. type: Plain text
 #: original_texis/text.texi:1506
 msgid "You can use Auto Fill mode (@pxref{Auto Filling}) to fill text automatically as you insert it, but changes to existing text may leave it improperly filled.  Then you must fill the text explicitly."
-msgstr "テキストの挿入とともに自動的にテキストをフィルするAuto Fillモードを使用できますが、既存テキストの変更では不適切にフィルされたままになるかもしれません。その場合は、テキストを明示的にフィルしなければなりません。"
+msgstr "テキストの挿入とともに自動的にテキストをフィルするAuto Fillモードを使用できますが、既存テキストの変更では不適切にフィルされたままになるかもしれません。その場合にはテキストを明示的にフィルしなければなりません。"
 
 #. type: Plain text
 #: original_texis/text.texi:1512
 msgid "Most of the commands in this section return values that are not meaningful.  All the functions that do filling take note of the current left margin, current right margin, and current justification style (@pxref{Margins}).  If the current justification style is @code{none}, the filling functions don't actually do anything."
-msgstr "このセクションのコマンドのほとんどは、有意な値をリターンしません。フィルを行うすべての関数は、カレント左マージン、カレント右マージン、カレント位置揃えスタイルに留意します(@ref{Margins}を参照)。カレント位置揃えスタイルが@code{none}の場合、フィル関数は実際には何も行いません。"
+msgstr "このセクションのコマンドのほとんどは有意な値をリターンしません。フィルを行うすべての関数はカレント左マージン、カレント右マージン、カレント位置揃えスタイルに留意します(@ref{Margins}を参照)。カレント位置揃えスタイルが@code{none}なら、フィル関数は実際には何も行いません。"
 
 #. type: Plain text
 #: original_texis/text.texi:1520
 msgid "Several of the filling functions have an argument @var{justify}.  If it is non-@code{nil}, that requests some kind of justification.  It can be @code{left}, @code{right}, @code{full}, or @code{center}, to request a specific style of justification.  If it is @code{t}, that means to use the current justification style for this part of the text (see @code{current-justification}, below).  Any other value is treated as @code{full}."
-msgstr "フィル関数のいくつかは、引数@var{justify}をもちます。これが非@code{nil}なら、それは何らかの類の位置揃えを要求します。特定の位置揃えスタイルを要求するために@code{left}、@code{right}、@code{full}、@code{center}を指定できます。これが@code{t}なら、それはそのテキスト部分にたいしてカレント位置揃えスタイルを使用することを意味します(以下の@code{current-justification}を参照)。その他すべての値は、@code{full}として扱われます。"
+msgstr "フィル関数のいくつかは引数@var{justify}を受け取ります。これが非@code{nil}なら、それは何らかの類の位置揃えを要求します。特定の位置揃えスタイルを要求するために@code{left}、@code{right}、@code{full}、@code{center}を指定できます。これが@code{t}なら、それはそのテキスト部分にたいしてカレント位置揃えスタイルを使用することを意味します(以下の@code{current-justification}を参照)。その他すべての値は@code{full}として扱われます。"
 
 #. type: Plain text
 #: original_texis/text.texi:1523
 msgid "When you call the filling functions interactively, using a prefix argument implies the value @code{full} for @var{justify}."
-msgstr "インタラクティブにフィル関数を呼び出す際、プレフィクス引数の使用は@var{justify}にたいして暗に値@code{full}を指定します。"
+msgstr "インタラクティブにフィル関数を呼び出すには際、プレフィクス引数の使用は@var{justify}にたいして暗に値@code{full}を指定します。"
 
 #. type: deffn
 #: original_texis/text.texi:1524
@@ -2558,12 +2529,12 @@ msgstr "Command fill-paragraph &optional justify region"
 #. type: deffn
 #: original_texis/text.texi:1529
 msgid "This command fills the paragraph at or after point.  If @var{justify} is non-@code{nil}, each line is justified as well.  It uses the ordinary paragraph motion commands to find paragraph boundaries.  @xref{Paragraphs,,, emacs, The GNU Emacs Manual}."
-msgstr "このコマンドは、ポイント位置、またはその後のパラグラフ(paragraph: 段落)をフィルする。@var{justify}が非@code{nil}なら、同様に各行が位置揃えされる。これはパラグラフ境界を探すために、通常のパラグラフ移動コマンドを使用する。@ref{Paragraphs,,, emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "このコマンドはポイント位置、またはその後のパラグラフ(paragraph: 段落)をフィルする。@var{justify}が非@code{nil}なら、同様に各行が位置揃えされる。これはパラグラフ境界を探すために、通常のパラグラフ移動コマンドを使用する。@ref{Paragraphs,,, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:1535
 msgid "When @var{region} is non-@code{nil}, then if Transient Mark mode is enabled and the mark is active, this command calls @code{fill-region} to fill all the paragraphs in the region, instead of filling only the current paragraph.  When this command is called interactively, @var{region} is @code{t}."
-msgstr "もし@var{region}が非@code{nil}で、Transient Markモードが有効かつマークがアクティブなら、このコマンドはカレントパラグラフのみフィルするかわりに、リージョン内すべてのパラグラフをフィルするために、コマンド@code{fill-region}を呼び出す。このコマンドがインタラクティブに呼び出されたとき、@var{region}は@code{t}である。"
+msgstr "もし@var{region}が非@code{nil}で、Transient Markモードが有効かつマークがアクティブなら、このコマンドはカレントパラグラフのみフィルするかわりに、リージョン内すべてのパラグラフをフィルするためにコマンド@code{fill-region}を呼び出す。このコマンドがインタラクティブに呼び出された際は、@var{region}は@code{t}。"
 
 #. type: deffn
 #: original_texis/text.texi:1537
@@ -2574,17 +2545,17 @@ msgstr "Command fill-region start end &optional justify nosqueeze to-eop"
 #. type: deffn
 #: original_texis/text.texi:1541
 msgid "This command fills each of the paragraphs in the region from @var{start} to @var{end}.  It justifies as well if @var{justify} is non-@code{nil}."
-msgstr "このコマンドは、@var{start}から@var{end}のリージョン内のすべてのパラグラフをフィルする。@var{justify}が非@code{nil}なら、同様に位置揃えも行う。"
+msgstr "このコマンドは@var{start}から@var{end}のリージョン内のすべてのパラグラフをフィルする。@var{justify}が非@code{nil}なら同様に位置揃えも行う。"
 
 #. type: deffn
 #: original_texis/text.texi:1546
 msgid "If @var{nosqueeze} is non-@code{nil}, that means to leave whitespace other than line breaks untouched.  If @var{to-eop} is non-@code{nil}, that means to keep filling to the end of the paragraph---or the next hard newline, if @code{use-hard-newlines} is enabled (see below)."
-msgstr "@var{nosqueeze}が非@code{nil}なら、それは行ブレーク以外の空白文字を残すことを意味する。@var{to-eop}が非@code{nil}の場合、それはパラグラフ終端(以下の@code{use-hard-newlines}が有効なら次のhard改行)までのフィルを維持することを意味する"
+msgstr "@var{nosqueeze}が非@code{nil}なら、それは行ブレーク以外の空白文字を残すことを意味する。@var{to-eop}が非@code{nil}なら、それはパラグラフ終端(以下の@code{use-hard-newlines}が有効なら次のhard改行)までのフィルを維持することを意味する。"
 
 #. type: deffn
 #: original_texis/text.texi:1549
 msgid "The variable @code{paragraph-separate} controls how to distinguish paragraphs.  @xref{Standard Regexps}."
-msgstr "変数@code{paragraph-separate}は、パラグラフを分割する方法を制御する。@ref{Standard Regexps}を参照のこと。"
+msgstr "変数@code{paragraph-separate}はパラグラフを分割する方法を制御する。@ref{Standard Regexps}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:1551
@@ -2595,17 +2566,17 @@ msgstr "Command fill-individual-paragraphs start end &optional justify citation-
 #. type: deffn
 #: original_texis/text.texi:1556
 msgid "This command fills each paragraph in the region according to its individual fill prefix.  Thus, if the lines of a paragraph were indented with spaces, the filled paragraph will remain indented in the same fashion."
-msgstr "このコマンドは、リージョン内の各パラグラフを、それの固有なフィルプレフィクスに応じてフィルする。したがって、パラグラフの行がスペースでインデントされている場合、フィルされたパラグラフは同じ様式でインデントされた状態に保たれるだろう。"
+msgstr "このコマンドはリージョン内の各パラグラフを、それの固有なフィルプレフィクスに応じてフィルする。したがってパラグラフの行がスペースでインデントされていれば、フィルされたパラグラフは同じ様式でインデントされた状態に保たれるだろう。"
 
 #. type: deffn
 #: original_texis/text.texi:1566
 msgid "The first two arguments, @var{start} and @var{end}, are the beginning and end of the region to be filled.  The third and fourth arguments, @var{justify} and @var{citation-regexp}, are optional.  If @var{justify} is non-@code{nil}, the paragraphs are justified as well as filled.  If @var{citation-regexp} is non-@code{nil}, it means the function is operating on a mail message and therefore should not fill the header lines.  If @var{citation-regexp} is a string, it is used as a regular expression; if it matches the beginning of a line, that line is treated as a citation marker."
-msgstr "最初の2つの引数@var{start}と@var{end}は、フィルするリージョンの先頭と終端である。3つ目の引数@var{justify}、4つ目の引数@var{citation-regexp}はオプションである。@var{justify}が非@code{nil}なら、そのパラグラフはフィルと同様に位置揃えもされる。@var{citation-regexp}が非@code{nil}なら、それはこの関数がメールメッセージを処理しているので、ヘッダーラインをフィルするべきではないことを意味する。@var{citation-regexp}が文字列の場合、それは正規表現として扱われる。それが行の先頭にマッチすれば、その行は引用マーカー(citation marker)として扱われる。"
+msgstr "最初の2つの引数@var{start}と@var{end}はフィルするリージョンの先頭と終端。3つ目の引数@var{justify}、4つ目の引数@var{citation-regexp}はオプション。@var{justify}が非@code{nil}なら、そのパラグラフはフィルと同様に位置揃えも行われる。@var{citation-regexp}が非@code{nil}なら、それはこの関数がメールメッセージを処理しているのでヘッダーラインをフィルするべきではないことを意味する。@var{citation-regexp}が文字列なら、それは正規表現として扱われる。それが行の先頭にマッチすれば、その行は引用マーカー(citation marker)として扱われる。"
 
 #. type: deffn
 #: original_texis/text.texi:1573
 msgid "Ordinarily, @code{fill-individual-paragraphs} regards each change in indentation as starting a new paragraph.  If @code{fill-individual-varying-indent} is non-@code{nil}, then only separator lines separate paragraphs.  That mode can handle indented paragraphs with additional indentation on the first line."
-msgstr "@code{fill-individual-paragraphs}は通常、インデントの変更を新たなパラグラフの開始とみなす。@code{fill-individual-varying-indent}が非@code{nil}の場合は、セパレーターラインだけがパラグラフを分割する。その場合は、最初の行からさらにインデントが追加されたパラグラフを処理することが可能になる。"
+msgstr "@code{fill-individual-paragraphs}は通常はインデントの変更を新たなパラグラフの開始とみなす。@code{fill-individual-varying-indent}が非@code{nil}ならセパレーターラインだけがパラグラフを分割する。その場合には、最初の行からさらにインデントが追加されたパラグラフを処理することが可能になる。"
 
 #. type: defopt
 #: original_texis/text.texi:1575
@@ -2616,7 +2587,7 @@ msgstr "fill-individual-varying-indent"
 #. type: defopt
 #: original_texis/text.texi:1578
 msgid "This variable alters the action of @code{fill-individual-paragraphs} as described above."
-msgstr "この変数は、上述のように@code{fill-individual-paragraphs}の動作を変更する。"
+msgstr "この変数は上述のように@code{fill-individual-paragraphs}の動作を変更する。"
 
 #. type: deffn
 #: original_texis/text.texi:1580
@@ -2627,17 +2598,17 @@ msgstr "Command fill-region-as-paragraph start end &optional justify nosqueeze s
 #. type: deffn
 #: original_texis/text.texi:1585
 msgid "This command considers a region of text as a single paragraph and fills it.  If the region was made up of many paragraphs, the blank lines between paragraphs are removed.  This function justifies as well as filling when @var{justify} is non-@code{nil}."
-msgstr "このコマンドは、テキストのリージョンを1つのパラグラフとみなして、それをフィルする。そのリージョンが多数のパラグラフから構成されていたら、パラグラフ間の空行は削除される。@var{justify}が非@code{nil}なら、フィルとともに位置揃えも行う。"
+msgstr "このコマンドはテキストのリージョンを1つのパラグラフとみなしてそれをフィルする。そのリージョンが多数のパラグラフから構成されていたらパラグラフ間の空行は削除される。@var{justify}が非@code{nil}ならフィルとともに位置揃えも行う。"
 
 #. type: deffn
 #: original_texis/text.texi:1590
 msgid "If @var{nosqueeze} is non-@code{nil}, that means to leave whitespace other than line breaks untouched.  If @var{squeeze-after} is non-@code{nil}, it specifies a position in the region, and means don't canonicalize spaces before that position."
-msgstr "@var{nosqueeze}が非@code{nil}なら、それは改行以外の空白に手を加えずに残すことを意味する。@var{squeeze-after}が非@code{nil}の場合、それはリージョン内の位置を指定し、その位置より前にあるスペースについては標準化を行わないことを意味する。"
+msgstr "@var{nosqueeze}が非@code{nil}なら、それは改行以外の空白に手を加えずに残すことを意味する。@var{squeeze-after}が非@code{nil}なら、それはリージョン内の位置を指定して、その位置より前にあるスペースについては標準化を行わないことを意味する。"
 
 #. type: deffn
 #: original_texis/text.texi:1593
 msgid "In Adaptive Fill mode, this command calls @code{fill-context-prefix} to choose a fill prefix by default.  @xref{Adaptive Fill}."
-msgstr "Adaptive Fillモードでは、このコマンドはフィルプレフィクスを選択するために、デフォルトで@code{fill-context-prefix}を呼び出す。@ref{Adaptive Fill}を参照のこと。"
+msgstr "Adaptive Fillモードでは、このコマンドはフィルプレフィクスを選択するためにデフォルトで@code{fill-context-prefix}を呼び出す。@ref{Adaptive Fill}を参照のこと。"
 
 #. type: deffn
 #: original_texis/text.texi:1595
@@ -2648,17 +2619,17 @@ msgstr "Command justify-current-line &optional how eop nosqueeze"
 #. type: deffn
 #: original_texis/text.texi:1599
 msgid "This command inserts spaces between the words of the current line so that the line ends exactly at @code{fill-column}.  It returns @code{nil}."
-msgstr "このコマンドは、その行が正確に@code{fill-column}で終わるように、単語間にスペースを挿入する。リターン値は@code{nil}。"
+msgstr "このコマンドはその行が正確に@code{fill-column}で終わるように単語間にスペースを挿入する。リターン値は@code{nil}。"
 
 #. type: deffn
 #: original_texis/text.texi:1605
 msgid "The argument @var{how}, if non-@code{nil} specifies explicitly the style of justification.  It can be @code{left}, @code{right}, @code{full}, @code{center}, or @code{none}.  If it is @code{t}, that means to do follow specified justification style (see @code{current-justification}, below).  @code{nil} means to do full justification."
-msgstr "引数@var{how}が非@code{nil}なら、それは位置揃えスタイルを明示的に指定する。指定できる値は@code{left}、@code{right}、@code{full}、@code{center}、または@code{none}。値が@code{t}の場合、それは指定済みの位置揃えスタイル(以下の@code{current-justification}を参照)にしたがうことを意味する。@code{nil}は位置揃え@code{full}と同じ。"
+msgstr "引数@var{how}が非@code{nil}なら、それは位置揃えスタイルを明示的に指定する。指定できる値は@code{left}、@code{right}、@code{full}、@code{center}、または@code{none}。値が@code{t}なら、それは指定済みの位置揃えスタイル(以下の@code{current-justification}を参照)にしたがうことを意味する。@code{nil}は位置揃え@code{full}と同じ。"
 
 #. type: deffn
 #: original_texis/text.texi:1610
 msgid "If @var{eop} is non-@code{nil}, that means do only left-justification if @code{current-justification} specifies full justification.  This is used for the last line of a paragraph; even if the paragraph as a whole is fully justified, the last line should not be."
-msgstr "@var{eop}が非@code{nil}なら、それは@code{current-justification}がfull位置揃えを指定する場合にleft位置揃えだけを行うことを意味する。これは、パラグラフ最終行にたいして使用される。パラグラフ全体がfull位置揃えだったとしても、最終行はfull位置揃えであるべきではない。"
+msgstr "@var{eop}が非@code{nil}なら、それは@code{current-justification}がfull位置揃えを指定する場合にleft位置揃えだけを行うことを意味する。これはパラグラフ最終行にたいして使用される。パラグラフ全体がfull位置揃えだったとしても最終行はfull位置揃えであるべきではない。"
 
 #. type: deffn
 #: original_texis/text.texi:1613
@@ -2674,7 +2645,7 @@ msgstr "default-justification"
 #. type: defopt
 #: original_texis/text.texi:1620
 msgid "This variable's value specifies the style of justification to use for text that doesn't specify a style with a text property.  The possible values are @code{left}, @code{right}, @code{full}, @code{center}, or @code{none}.  The default value is @code{left}."
-msgstr "この変数の値は、位置揃えに使用するスタイルをテキストプロパティで指定しないテキストにたいするスタイルを指定する。可能な値は@code{left}、@code{right}、@code{full}、@code{center}、または@code{none}。デフォルト値は@code{left}である。"
+msgstr "この変数の値は位置揃えに使用するスタイルをテキストプロパティで指定しないテキストにたいするスタイルを指定する。可能な値は@code{left}、@code{right}、@code{full}、@code{center}、または@code{none}。デフォルト値は@code{left}。"
 
 #. type: defun
 #: original_texis/text.texi:1622
@@ -2685,12 +2656,12 @@ msgstr "current-justification"
 #. type: defun
 #: original_texis/text.texi:1625
 msgid "This function returns the proper justification style to use for filling the text around point."
-msgstr "この関数は、ポイント周辺のフィルに使用するための、適正な位置揃えスタイルをリターンする。"
+msgstr "この関数はポイント周辺のフィルに使用するための適正な位置揃えスタイルをリターンする。"
 
 #. type: defun
 #: original_texis/text.texi:1630
 msgid "This returns the value of the @code{justification} text property at point, or the variable @var{default-justification} if there is no such text property.  However, it returns @code{nil} rather than @code{none} to mean ``don't justify''."
-msgstr "これは、ポイント位置のテキストプロパティ@code{justification}の値、そのようなテキストプロパティが存在しなければ変数@var{default-justification}の値をリターンする。しかし、``位置揃えなし''の場合は、@code{none}ではなく@code{nil}をリターンする。"
+msgstr "これはポイント位置のテキストプロパティ@code{justification}の値、そのようなテキストプロパティが存在しなければ変数@var{default-justification}の値をリターンする。しかし、``位置揃えなし''の場合には、@code{none}ではなく@code{nil}をリターンする。"
 
 #. type: defopt
 #: original_texis/text.texi:1632
@@ -2706,7 +2677,7 @@ msgstr "Definition of sentence-end-double-space"
 #. type: defopt
 #: original_texis/text.texi:1637
 msgid "If this variable is non-@code{nil}, a period followed by just one space does not count as the end of a sentence, and the filling functions avoid breaking the line at such a place."
-msgstr "この変数が非@code{nil}の場合、ピリオドの後の単一のスペースをセンテンスの終わりとみなさず、フィル関数はそのような箇所でのラインブレークを行わない。"
+msgstr "この変数が非@code{nil}ならピリオドの後の単一のスペースをセンテンスの終わりとみなさず、フィル関数はそのような箇所でのラインブレークを行わない。"
 
 #. type: defopt
 #: original_texis/text.texi:1639
@@ -2717,7 +2688,7 @@ msgstr "sentence-end-without-period"
 #. type: defopt
 #: original_texis/text.texi:1643
 msgid "If this variable is non-@code{nil}, a sentence can end without a period.  This is used for languages like Thai, where sentences end with a double space but without a period."
-msgstr "この変数が非@code{nil}なら、ピリオドなしでセンテンスは終了できる。これはたとえば、ピリオドなしの2連スペースでセンテンスが終わるタイ語な土に使用される。"
+msgstr "この変数が非@code{nil}なら、ピリオドなしでセンテンスは終了できる。これはたとえばピリオドなしの2連スペースでセンテンスが終わるタイ語などに使用される。"
 
 #. type: defopt
 #: original_texis/text.texi:1645
@@ -2739,12 +2710,12 @@ msgstr "fill-paragraph-function"
 #. type: defvar
 #: original_texis/text.texi:1656
 msgid "This variable provides a way to override the filling of paragraphs.  If its value is non-@code{nil}, @code{fill-paragraph} calls this function to do the work.  If the function returns a non-@code{nil} value, @code{fill-paragraph} assumes the job is done, and immediately returns that value."
-msgstr "この変数は、パラグラフのフィルをオーバーライドする手段を提供する。この値が非@code{nil}なら、@code{fill-paragraph}はその処理を行うためにその関数を呼び出す。その関数が非@code{nil}値をリターンした場合、@code{fill-paragraph}は処理が終了したとみなして、即座にその値をリターンする。"
+msgstr "この変数はパラグラフのフィルをオーバーライドする手段を提供する。この値が非@code{nil}なら、@code{fill-paragraph}はその処理を行うためにその関数を呼び出す。その関数が非@code{nil}値をリターンすると、@code{fill-paragraph}は処理が終了したとみなして即座にその値をリターンする。"
 
 #. type: defvar
 #: original_texis/text.texi:1660
 msgid "The usual use of this feature is to fill comments in programming language modes.  If the function needs to fill a paragraph in the usual way, it can do so as follows:"
-msgstr "この機能の通常の用途は、プログラミング言語のモードにおいてコメントをフィルすることである。通常の方法でその関数がパラグラフをフィルする必要がある場合は、以下のようにそれを行うことができる:"
+msgstr "この機能の通常の用途はプログラミング言語のモードにおいてコメントをフィルすることである。通常の方法でその関数がパラグラフをフィルする必要があるなら、以下のようにそれを行うことができる:"
 
 #. type: example
 #: original_texis/text.texi:1664
@@ -2765,7 +2736,7 @@ msgstr "fill-forward-paragraph-function"
 #. type: defvar
 #: original_texis/text.texi:1676
 msgid "This variable provides a way to override how the filling functions, such as @code{fill-region} and @code{fill-paragraph}, move forward to the next paragraph.  Its value should be a function, which is called with a single argument @var{n}, the number of paragraphs to move, and should return the difference between @var{n} and the number of paragraphs actually moved.  The default value of this variable is @code{forward-paragraph}.  @xref{Paragraphs,,, emacs, The GNU Emacs Manual}."
-msgstr "この変数は、@code{fill-region}や@code{fill-paragraph}のようなフィル関数が、次のパラグラフへ前方に移動する方法を、オーバーライドするための手段を提供する。値は、移動するパラグラフの数@var{n}を唯一の引数として呼び出される関数で、@var{n}と実際に移動したパラグラフ数の差をリターンするべきである。この変数のデフォルト値は@code{forward-paragraph}。@ref{Paragraphs,,, emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "この変数は@code{fill-region}や@code{fill-paragraph}のようなフィル関数が次のパラグラフへ前方に移動する方法をオーバーライドするための手段を提供する。値は移動するパラグラフの数@var{n}を唯一の引数として呼び出される関数であり、@var{n}と実際に移動したパラグラフ数の差をリターンすること。この変数のデフォルト値は@code{forward-paragraph}。@ref{Paragraphs,,, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: defvar
 #: original_texis/text.texi:1678
@@ -2775,10 +2746,8 @@ msgstr "use-hard-newlines"
 
 #. type: defvar
 #: original_texis/text.texi:1683
-#, fuzzy
-#| msgid "If this variable is non-@code{nil}, the filling functions do not delete newlines that have the @code{hard} text property.  These ``hard newlines'' act as paragraph separators.  @xref{Hard and Soft Newlines,, Hard and Soft Newlines, emacs, The GNU Emacs Manual}."
 msgid "If this variable is non-@code{nil}, the filling functions do not delete newlines that have the @code{hard} text property.  These hard newlines act as paragraph separators.  @xref{Hard and Soft Newlines,, Hard and Soft Newlines, emacs, The GNU Emacs Manual}."
-msgstr "この変数が非@code{nil}なら、フィル関数はテキストプロパティ@code{hard}をもつ改行を削除しない。これらの``hard改行'は、パラグラフのセパレーターとして機能する。@ref{Hard and Soft Newlines,, Hard and Soft Newlines, emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "この変数が非@code{nil}なら、フィル関数はテキストプロパティ@code{hard}をもつ改行を削除しない。これらのhard改行、パラグラフのセパレーターとして機能する。@ref{Hard and Soft Newlines,, Hard and Soft Newlines, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: section
 #: original_texis/text.texi:1686
@@ -2801,12 +2770,12 @@ msgstr "fill-prefix"
 #. type: defopt
 #: original_texis/text.texi:1698
 msgid "This buffer-local variable, if non-@code{nil}, specifies a string of text that appears at the beginning of normal text lines and should be disregarded when filling them.  Any line that fails to start with the fill prefix is considered the start of a paragraph; so is any line that starts with the fill prefix followed by additional whitespace.  Lines that start with the fill prefix but no additional whitespace are ordinary text lines that can be filled together.  The resulting filled lines also start with the fill prefix."
-msgstr "このバッファーローカル変数が非@code{nil}なら、それは通常のテキスト行の先頭に出現そ、それらのテキスト行をフィルする際には無視されるべきテキスト文字列を指定する。そのフィルプレフィクスで始まらない行はパラグラフの開始とみなされ、フィルプレフィクスで始まる行は、その後にスペースが追加される。フィルプレフィクスで始まりその後に追加のスペースがない行は、フィル可能な通常のテキスト行である。結果となるフィル済みの行も、フィルプレフィクスで開始される。"
+msgstr "このバッファーローカル変数が非@code{nil}なら、それは通常のテキスト行の先頭に出現して、それらのテキスト行をフィルする際には無視されるべきテキスト文字列を指定する。そのフィルプレフィクスで始まらない行はパラグラフの開始とみなされ、フィルプレフィクスで始まる行はその後にスペースが追加される。フィルプレフィクスで始まりその後に追加のスペースがない行はフィル可能な通常のテキスト行。結果となるフィル済みの行もフィルプレフィクスで開始される。"
 
 #. type: defopt
 #: original_texis/text.texi:1700
 msgid "The fill prefix follows the left margin whitespace, if any."
-msgstr "もしあれば、フィルプレフィクスは左マージンのスペースの後になる。"
+msgstr "もしあればフィルプレフィクスは左マージンのスペースの後になる。"
 
 #. type: defopt
 #: original_texis/text.texi:1702
@@ -2817,17 +2786,17 @@ msgstr "fill-column"
 #. type: defopt
 #: original_texis/text.texi:1707
 msgid "This buffer-local variable specifies the maximum width of filled lines.  Its value should be an integer, which is a number of columns.  All the filling, justification, and centering commands are affected by this variable, including Auto Fill mode (@pxref{Auto Filling})."
-msgstr "このバッファーローカル変数は、フィルされる行の最大幅を指定する。値は列数を表す整数であること。Auto Fillモード(@ref{Auto Filling}を参照)を含む、フィル、位置揃え、センタリングを行うすべてのコマンドが、この変数の影響を受ける。"
+msgstr "このバッファーローカル変数はフィルされる行の最大幅を指定する。値は列数を表す整数であること。Auto Fillモード(@ref{Auto Filling}を参照)を含むフィル、位置揃え、センタリングを行うすべてのコマンドがこの変数の影響を受ける。"
 
 #. type: defopt
 #: original_texis/text.texi:1712
 msgid "As a practical matter, if you are writing text for other people to read, you should set @code{fill-column} to no more than 70.  Otherwise the line will be too long for people to read comfortably, and this can make the text seem clumsy."
-msgstr "実際の問題として、他の人が読むためのテキストを記述する場合は、@code{fill-column}を70より大きくするべきではない。これにしたがわない場合、人が快適に読むには行が長くなり過ぎ、それは下手に記述されたテキストに見えてしまうだろう。"
+msgstr "実際の問題として他の人が読むためのテキストを記述する場合には、@code{fill-column}を70より大きくするべきではない。これにしたがわないと人が快適に読むには行が長くなり過ぎてしまい、下手に記述されたテキストに見えてしまうだろう。"
 
 #. type: defopt
 #: original_texis/text.texi:1714
 msgid "The default value for @code{fill-column} is 70."
-msgstr "@code{fill-column}のデフォルト値は70である。"
+msgstr "@code{fill-column}のデフォルト値は70。"
 
 #. type: deffn
 #: original_texis/text.texi:1716
@@ -2838,7 +2807,7 @@ msgstr "Command set-left-margin from to margin"
 #. type: deffn
 #: original_texis/text.texi:1720
 msgid "This sets the @code{left-margin} property on the text from @var{from} to @var{to} to the value @var{margin}.  If Auto Fill mode is enabled, this command also refills the region to fit the new margin."
-msgstr "これは、@var{from}から@var{to}のテキストの@code{left-margin}プロパティに、値@var{margin}をセットする。Auto Fillモードが有効なら、このコマンドは新たなマージンにフィットするよう、リージョンの再フィルも行う。"
+msgstr "これは@var{from}から@var{to}のテキストの@code{left-margin}プロパティに値@var{margin}をセットする。Auto Fillモードが有効なら、このコマンドは新たなマージンにフィットするようにリージョンの再フィルも行う。"
 
 #. type: deffn
 #: original_texis/text.texi:1722
@@ -2849,7 +2818,7 @@ msgstr "Command set-right-margin from to margin"
 #. type: deffn
 #: original_texis/text.texi:1726
 msgid "This sets the @code{right-margin} property on the text from @var{from} to @var{to} to the value @var{margin}.  If Auto Fill mode is enabled, this command also refills the region to fit the new margin."
-msgstr "これは、@var{from}から@var{to}のテキストの@code{right-margin}プロパティに、値@var{margin}をセットする。Auto Fillモードが有効なら、このコマンドは新たなマージンにフィットするよう、リージョンの再フィルも行う。"
+msgstr "これは@var{from}から@var{to}のテキストの@code{right-margin}プロパティに値@var{margin}をセットする。Auto Fillモードが有効なら、このコマンドは新たなマージンにフィットするようにリージョンの再フィルも行う。"
 
 #. type: defun
 #: original_texis/text.texi:1728
@@ -2860,7 +2829,7 @@ msgstr "current-left-margin"
 #. type: defun
 #: original_texis/text.texi:1733
 msgid "This function returns the proper left margin value to use for filling the text around point.  The value is the sum of the @code{left-margin} property of the character at the start of the current line (or zero if none), and the value of the variable @code{left-margin}."
-msgstr "この関数は、ポイント周辺をフィルするために使用する、適切な左マージン値をリターンする。値はカレント行開始文字の@code{left-margin}プロパティの値(なければ0)と、変数@code{left-margin}の値の合計。"
+msgstr "この関数はポイント周辺をフィルするために使用する、適切な左マージン値をリターンする。値はカレント行開始文字の@code{left-margin}プロパティの値(なければ0)と変数@code{left-margin}の値の合計。"
 
 #. type: defun
 #: original_texis/text.texi:1735
@@ -2871,7 +2840,7 @@ msgstr "current-fill-column"
 #. type: defun
 #: original_texis/text.texi:1740
 msgid "This function returns the proper fill column value to use for filling the text around point.  The value is the value of the @code{fill-column} variable, minus the value of the @code{right-margin} property of the character after point."
-msgstr "この関数は、ポイント周辺のテキストをフィルするために使用する、適切なフィル列値をリターンする。値は、変数@code{fill-column}からポイント後の文字の@code{right-margin}プロパティの値を減じた値。"
+msgstr "この関数はポイント周辺のテキストをフィルするために使用する、適切なフィル列値をリターンする。値は変数@code{fill-column}からポイント後の文字の@code{right-margin}プロパティの値を減じた値。"
 
 #. type: deffn
 #: original_texis/text.texi:1742
@@ -2882,12 +2851,12 @@ msgstr "Command move-to-left-margin &optional n force"
 #. type: deffn
 #: original_texis/text.texi:1747
 msgid "This function moves point to the left margin of the current line.  The column moved to is determined by calling the function @code{current-left-margin}.  If the argument @var{n} is non-@code{nil}, @code{move-to-left-margin} moves forward @var{n}@minus{}1 lines first."
-msgstr "この関数は、カレント行の左マージンにポイントを移動する。移動先の列は、関数@code{current-left-margin}により決定される。引数@var{n}が非@code{nil}なら、@code{move-to-left-margin}はまず@var{n}行前方に移動する。"
+msgstr "この関数はカレント行の左マージンにポイントを移動する。移動先の列は関数@code{current-left-margin}により決定される。引数@var{n}が非@code{nil}なら、まず@code{move-to-left-margin}は@var{n}行前方に移動する。"
 
 #. type: deffn
 #: original_texis/text.texi:1750
 msgid "If @var{force} is non-@code{nil}, that says to fix the line's indentation if that doesn't match the left margin value."
-msgstr "@var{force}が非@code{nil}の場合、それは行のインデントが左マージン値とマッチしなければ、インデントを修正するよう指定する。"
+msgstr "@var{force}が非@code{nil}なら、それは行のインデントが左マージン値とマッチしなければインデントを修正するように指定する。"
 
 #. type: defun
 #: original_texis/text.texi:1752
@@ -2898,7 +2867,7 @@ msgstr "delete-to-left-margin &optional from to"
 #. type: defun
 #: original_texis/text.texi:1758
 msgid "This function removes left margin indentation from the text between @var{from} and @var{to}.  The amount of indentation to delete is determined by calling @code{current-left-margin}.  In no case does this function delete non-whitespace.  If @var{from} and @var{to} are omitted, they default to the whole buffer."
-msgstr "この関数は、@var{from}から@var{to}の間のテキストから、左マージンのインデントを取り除く。削除するインデントの量は、@code{current-left-margin}を呼び出すことにより決定される。この関数が、非空白文字を削除することはない。@var{from}と@var{to}が省略された場合のデフォルトは、そのバッファー全体である。"
+msgstr "この関数は@var{from}から@var{to}の間のテキストから左マージンのインデントを取り除く。削除するインデントの量は@code{current-left-margin}を呼び出すことにより決定される。この関数が非空白文字を削除することはない。@var{from}と@var{to}が省略された場合のデフォルトはそのバッファー全体。"
 
 #. type: defun
 #: original_texis/text.texi:1760
@@ -2909,7 +2878,7 @@ msgstr "indent-to-left-margin"
 #. type: defun
 #: original_texis/text.texi:1765
 msgid "This function adjusts the indentation at the beginning of the current line to the value specified by the variable @code{left-margin}.  (That may involve either inserting or deleting whitespace.)  This function is value of @code{indent-line-function} in Paragraph-Indent Text mode."
-msgstr "この関数は、カレント行の先頭のインデントを、変数@code{left-margin}に指定された値に調整する(これにより空白文字の挿入や削除が起こるかもしれない)。Paragraph-Indent Textモード内の変数@code{indent-line-function}の値は、この関数である。"
+msgstr "この関数はカレント行の先頭のインデントを変数@code{left-margin}に指定された値に調整する(これにより空白文字の挿入や削除が起こるかもしれない)。Paragraph-Indent Textモード内の変数@code{indent-line-function}の値はこの関数。"
 
 #. type: item
 #: original_texis/text.texi:1767 original_texis/text.texi:3557
@@ -2919,10 +2888,8 @@ msgstr "left-margin"
 
 #. type: defopt
 #: original_texis/text.texi:1771
-#, fuzzy
-#| msgid "This variable specifies the base left margin column.  In Fundamental mode, @kbd{RET} indents to this column.  This variable automatically becomes buffer-local when set in any fashion."
 msgid "This variable specifies the base left margin column.  In Fundamental mode, @key{RET} indents to this column.  This variable automatically becomes buffer-local when set in any fashion."
-msgstr "この変数は左マージンの基本列を指定する。Fundamentalモードでは、@kbd{RET}はこの列にインデントする。手段の如何を問わず、この変数がセットされると自動的にバッファーローカルになる。"
+msgstr "この変数は左マージンの基本列を指定する。Fundamentalモードでは、@key{RET}はこの列にインデントする。この変数は手段の如何を問わずセットされると自動的にバッファーローカルになる。"
 
 #. type: defopt
 #: original_texis/text.texi:1773
@@ -2933,7 +2900,7 @@ msgstr "fill-nobreak-predicate"
 #. type: defopt
 #: original_texis/text.texi:1780
 msgid "This variable gives major modes a way to specify not to break a line at certain places.  Its value should be a list of functions.  Whenever filling considers breaking the line at a certain place in the buffer, it calls each of these functions with no arguments and with point located at that place.  If any of the functions returns non-@code{nil}, then the line won't be broken there."
-msgstr "この変数はメジャーモードにたいして、特定の箇所で行ブレークしないよう指定する手段を提供する。値は関数のリストであること。フィルがバッファー内の特定箇所で行ブレークすると判断されるときは常に、その箇所にポイントを置いた状態で、これらの関数を引数なしで呼び出す。これらの関数のいずれ可が非@code{nil}をリターンした場合は、その行のその箇所では行ブレークしない。"
+msgstr "この変数はメジャーモードにたいして、特定の箇所で行ブレークしないように指定する手段を提供する。値は関数のリストであること。フィルがバッファー内の特定箇所で行ブレークすると判断されるときは、常にその箇所にポイントを置いた状態でこれらの関数を引数なしで呼び出す。これらの関数のいずれかが非@code{nil}をリターンすると、その行のその箇所では行ブレークしない。"
 
 #. type: section
 #: original_texis/text.texi:1783
@@ -2944,7 +2911,7 @@ msgstr "Adaptive Fill Mode"
 #. type: Plain text
 #: original_texis/text.texi:1792
 msgid "When @dfn{Adaptive Fill Mode} is enabled, Emacs determines the fill prefix automatically from the text in each paragraph being filled rather than using a predetermined value.  During filling, this fill prefix gets inserted at the start of the second and subsequent lines of the paragraph as described in @ref{Filling}, and in @ref{Auto Filling}."
-msgstr "@dfn{Adaptive Fillモード}が有効なとき、Emacsは事前定義された値を使用するのではなく、フィルされる各パラグラフのテキストから自動的に、フィルプレフィクスを決定します。このフィルプレフィクスはフィルの間、@ref{Filling}と@ref{Auto Filling}で説明されているように、そのパラグラフの2行目以降の行頭に挿入されます。"
+msgstr "@dfn{Adaptive Fillモード}が有効なとき、Emacsは事前定義された値を使用するのではなく、フィルされる各パラグラフのテキストから自動的にフィルプレフィクスを決定します。@ref{Filling}と@ref{Auto Filling}で説明されているように、このフィルプレフィクスはフィルの間にそのパラグラフの2行目以降の行頭に挿入されます。"
 
 #. type: defopt
 #: original_texis/text.texi:1793
@@ -2955,7 +2922,7 @@ msgstr "adaptive-fill-mode"
 #. type: defopt
 #: original_texis/text.texi:1796
 msgid "Adaptive Fill mode is enabled when this variable is non-@code{nil}.  It is @code{t} by default."
-msgstr "この変数が非@code{nil}なら、Adaptive Fillモードは有効である。デフォルトは@code{t}。"
+msgstr "この変数が非@code{nil}ならAdaptive Fillモードは有効。デフォルトは@code{t}。"
 
 #. type: defun
 #: original_texis/text.texi:1798
@@ -2966,37 +2933,37 @@ msgstr "fill-context-prefix from to"
 #. type: defun
 #: original_texis/text.texi:1807
 msgid "This function implements the heart of Adaptive Fill mode; it chooses a fill prefix based on the text between @var{from} and @var{to}, typically the start and end of a paragraph.  It does this by looking at the first two lines of the paragraph, based on the variables described below."
-msgstr "この関数は、Adaptive Fillモードの肝を実装する。これは@var{from}から@var{to}、通常はパラグラフの開始から終了にあるテキストにもとづいて、フィルプレフィクスを選択する。これは、以下で説明する変数にもとづき、そのパラグラフの最初の2行を調べることにより、これを行う。"
+msgstr "この関数はAdaptive Fillモード実装の肝である。これは@var{from}から@var{to}、通常はパラグラフの開始から終了にあるテキストにもとづいてフィルプレフィクスを選択する。これは以下で説明する変数にもとづき、そのパラグラフの最初の2行を調べることによりこれを行う。"
 
 #. type: defun
 #: original_texis/text.texi:1813
 msgid "Usually, this function returns the fill prefix, a string.  However, before doing this, the function makes a final check (not specially mentioned in the following) that a line starting with this prefix wouldn't look like the start of a paragraph.  Should this happen, the function signals the anomaly by returning @code{nil} instead."
-msgstr "この関数は通常、文字列としてフィルプレフィクスをリターンする。しかしこれを行う前に、この関数はそのプレフィクスで始まる行がパラグラフの開始とは見えないだろうか、最終チェックを行う(以降では特に明記しない)。これが発生した場合、この関数はかわりに@code{nil}をリターンすることにより、異常を通知する。"
+msgstr "この関数は通常は文字列としてフィルプレフィクスをリターンする。しかしこれを行う前に、この関数はそのプレフィクスで始まる行がパラグラフの開始とは見えないだろうか、最終チェックを行う(以降では特に明記しない)。これが発生した場合には、この関数はかわりに@code{nil}をリターンすることにより異常を通知する。"
 
 #. type: defun
 #: original_texis/text.texi:1815
 msgid "In detail, @code{fill-context-prefix} does this:"
-msgstr "以下が、@code{fill-context-prefix}が行う詳細である:"
+msgstr "以下は@code{fill-context-prefix}が行う詳細:"
 
 #. type: enumerate
 #: original_texis/text.texi:1823
 msgid "It takes a candidate for the fill prefix from the first line---it tries first the function in @code{adaptive-fill-function} (if any), then the regular expression @code{adaptive-fill-regexp} (see below).  The first non-@code{nil} result of these, or the empty string if they're both @code{nil}, becomes the first line's candidate."
-msgstr "1行目からフィルプレフィクス候補を取得するために、(もしあれば)まず@code{adaptive-fill-function}内の関数、次に@code{adaptive-fill-regexp}(以下参照)の正規表現を試みる。これらの非@code{nil}の最初の結果、いずれも@code{nil}なら空文字列が1行目の候補となる。"
+msgstr "1行目からフィルプレフィクス候補を取得するために、(もしあれば)まず@code{adaptive-fill-function}内の関数、次に@code{adaptive-fill-regexp} (以下参照)の正規表現を試みる。これらの非@code{nil}の最初の結果、いずれも@code{nil}なら空文字列が1行目の候補となる。"
 
 #. type: enumerate
 #: original_texis/text.texi:1828
 msgid "If the paragraph has as yet only one line, the function tests the validity of the prefix candidate just found.  The function then returns the candidate if it's valid, or a string of spaces otherwise.  (see the description of @code{adaptive-fill-first-line-regexp} below)."
-msgstr "そのパラグラフが1行だけなら、関数は見つかったプレフィクス候補の妥当性をテストする。その後、この関数はそれが妥当ならその候補を、それ以外はスペース文字列をリターンする(以下の@code{adaptive-fill-first-line-regexp}の説明を参照)。"
+msgstr "そのパラグラフが1行だけなら、関数は見つかったプレフィクス候補の妥当性をテストする。その後でこの関数はそれが妥当ならその候補を、それ以外はスペース文字列をリターンする(以下の@code{adaptive-fill-first-line-regexp}の説明を参照)。"
 
 #. type: enumerate
 #: original_texis/text.texi:1832
 msgid "When the paragraph already has two lines, the function next looks for a prefix candidate on the second line, in just the same way it did for the first line.  If it doesn't find one, it returns @code{nil}."
-msgstr "すでにそのパラグラフが2行以上なら、この関数は次に1行目にたいして行なったのとまったく同じ方法で、2行目でプレフィクス候補を探す。見つからなければ@code{nil}をリターンする。"
+msgstr "すでにそのパラグラフが2行以上なら、この関数は次に1行目にたいして行なったのとまったく同じ方法で2行目でプレフィクス候補を探す。見つからなければ@code{nil}をリターンする。"
 
 #. type: enumerate
 #: original_texis/text.texi:1838
 msgid "The function now compares the two candidate prefixes heuristically: if the non-whitespace characters in the line 2 candidate occur in the same order in the line 1 candidate, the function returns the line 2 candidate.  Otherwise, it returns the largest initial substring which is common to both candidates (which might be the empty string)."
-msgstr "ここで、この関数は発見的手法により2つのプレフィクス候補を比較する。2行目の候補の非空白文字の並びが1行目の候補と同じなら、この関数は2行目の候補をリターンする。それ以外では、2つの候補に共通するもっとも長い先頭の部分文字列(これは空文字列かもしれない)をリターンする。"
+msgstr "ここでこの関数は発見的手法により2つのプレフィクス候補を比較する。2行目の候補の非空白文字の並びが1行目の候補と同じなら、この関数は2行目の候補をリターンする。それ以外では2つの候補に共通するもっとも長い先頭の部分文字列(これは空文字列かもしれない)をリターンする。"
 
 #. type: defopt
 #: original_texis/text.texi:1841
@@ -3007,12 +2974,12 @@ msgstr "adaptive-fill-regexp"
 #. type: defopt
 #: original_texis/text.texi:1845
 msgid "Adaptive Fill mode matches this regular expression against the text starting after the left margin whitespace (if any) on a line; the characters it matches are that line's candidate for the fill prefix."
-msgstr "Adaptive Fillモードは、(もしあれば)行の左マージン空白文字の後から開始されるテキストにたいして、この正規表現をマッチする。マッチする文字列が、その行のフィルプレフィクス候補である。"
+msgstr "Adaptive Fillモードは、(もしあれば)行の左マージン空白文字の後から開始されるテキストにたいしてこの正規表現をマッチする。マッチする文字列がその行のフィルプレフィクス候補。"
 
 #. type: defopt
 #: original_texis/text.texi:1848
 msgid "The default value matches whitespace with certain punctuation characters intermingled."
-msgstr "デフォルト値は、空白文字と特定の句読点文字が混在した文字列にマッチする。"
+msgstr "デフォルト値は空白文字と特定の句読点文字が混在した文字列にマッチする。"
 
 #. type: defopt
 #: original_texis/text.texi:1850
@@ -3022,15 +2989,13 @@ msgstr "adaptive-fill-first-line-regexp"
 
 #. type: defopt
 #: original_texis/text.texi:1857
-#, fuzzy
-#| msgid "Used only in one-line paragraphs, this regular expression acts as an additional check of the validity of the one available candidate fill prefix: the candidate must match this regular expression, or match @code{comment-start-skip}.  If it doesn't, @code{fill-context-prefix} replaces the candidate with a string of spaces ``of the same width'' as it."
 msgid "Used only in one-line paragraphs, this regular expression acts as an additional check of the validity of the one available candidate fill prefix: the candidate must match this regular expression, or match @code{comment-start-skip}.  If it doesn't, @code{fill-context-prefix} replaces the candidate with a string of spaces of the same width as it."
-msgstr "この正規表現は1行だけのパラグラフに使用され、1つの可能なフィルプレフィクス候補の追加の妥当性評価として機能する。その候補は、この正規表現にマッチするか、@code{comment-start-skip}にマッチしなければならない。マッチしなければ、@code{fill-context-prefix}はその候補を``同じ幅''のスペース文字列に置き換える。"
+msgstr "この正規表現は1行だけのパラグラフに使用され、1つの可能なフィルプレフィクス候補の追加の妥当性評価として機能する。その候補はこの正規表現にマッチするか、@code{comment-start-skip}にマッチしなければならない。マッチしなければ@code{fill-context-prefix}はその候補を同じ幅のスペース文字列に置き換える。"
 
 #. type: defopt
 #: original_texis/text.texi:1862
 msgid "The default value of this variable is @w{@code{\"\\\\`[ \\t]*\\\\'\"}}, which matches only a string of whitespace.  The effect of this default is to force the fill prefixes found in one-line paragraphs always to be pure whitespace."
-msgstr "この変数のデフォルト値は @w{@code{\"\\\\`[ \\t]*\\\\'\"}}で、これは空白文字列だけにマッチする。このデフォルトの効果は、1行パラグラフで見つかったフィルプレフィクスが、常に純粋な空白文字となるよう強制することである。"
+msgstr "この変数のデフォルト値は @w{@code{\"\\\\`[ \\t]*\\\\'\"}}であり、これは空白文字列だけにマッチする。このデフォルトの効果は1行パラグラフで見つかったフィルプレフィクスが、常に純粋な空白文字となるよう強制することである。"
 
 #. type: defopt
 #: original_texis/text.texi:1864
@@ -3040,10 +3005,8 @@ msgstr "adaptive-fill-function"
 
 #. type: defopt
 #: original_texis/text.texi:1870
-#, fuzzy
-#| msgid "You can specify more complex ways of choosing a fill prefix automatically by setting this variable to a function.  The function is called with point after the left margin (if any) of a line, and it must preserve point.  It should return either ``that line's'' fill prefix or @code{nil}, meaning it has failed to determine a prefix."
 msgid "You can specify more complex ways of choosing a fill prefix automatically by setting this variable to a function.  The function is called with point after the left margin (if any) of a line, and it must preserve point.  It should return either that line's fill prefix or @code{nil}, meaning it has failed to determine a prefix."
-msgstr "この変数に関数をセットすることにより、自動的なフィルプレフィクス選択にたいして、より複雑な方法を指定することが可能になる。その関数は、(もしあれば)行の左マージンの後のポイントで呼び出され、かつポイントを保たなければならない。その関数は、``その行''のフィルプレフィクス、またはプレフィクスの判断に失敗したことを意味する@code{nil}のいずれかをリターンすること。"
+msgstr "この変数に関数をセットすることにより、自動的なフィルプレフィクス選択にたいしてより複雑な方法を指定することが可能になる。その関数は、(もしあれば)行の左マージンの後のポイントで呼び出され、かつポイントを保たなければならない。その関数はその行のフィルプレフィクス、またはプレフィクスの判断に失敗したことを意味する@code{nil}のいずれかをリターンすること。"
 
 #. type: cindex
 #: original_texis/text.texi:1874
@@ -3060,12 +3023,12 @@ msgstr "Auto Fill mode"
 #. type: Plain text
 #: original_texis/text.texi:1882
 msgid "Auto Fill mode is a minor mode that fills lines automatically as text is inserted.  This section describes the hook used by Auto Fill mode.  For a description of functions that you can call explicitly to fill and justify existing text, see @ref{Filling}."
-msgstr "Auto Fillモードは、テキスト挿入とともに自動的に行をフィルするマイナーモードです。このセクションでは、Auto Fillモードにより使用されるフックを説明します。既存テキストを明示的にフィルしたり位置揃えすることができる関数の説明は、@ref{Filling}を参照してください。"
+msgstr "Auto Fillモードはテキスト挿入とともに自動的に行をフィルするマイナーモードです。このセクションではAuto Fillモードにより使用されるフックを説明します。既存テキストを明示的にフィルしたり位置揃えすることができる関数の説明は@ref{Filling}を参照してください。"
 
 #. type: Plain text
 #: original_texis/text.texi:1885
 msgid "Auto Fill mode also enables the functions that change the margins and justification style to refill portions of the text.  @xref{Margins}."
-msgstr "Auto Fillモードでは、テキスの一部を再フィルするために、マージンや位置揃えを変更する関数も利用できます。@ref{Margins}を参照してください。"
+msgstr "Auto Fillモードではテキスの一部を再フィルするためにマージンや位置揃えを変更する関数も利用できます。@ref{Margins}を参照してください。"
 
 #. type: defvar
 #: original_texis/text.texi:1886
@@ -3076,12 +3039,12 @@ msgstr "auto-fill-function"
 #. type: defvar
 #: original_texis/text.texi:1891
 msgid "The value of this buffer-local variable should be a function (of no arguments) to be called after self-inserting a character from the table @code{auto-fill-chars}.  It may be @code{nil}, in which case nothing special is done in that case."
-msgstr "このバッファーローカル変数の値は、テーブル@code{auto-fill-chars}からの文字の自己挿入後に呼び出される関数(引数なし)であること。@code{nil}も可で、その場合は特に何もしない。"
+msgstr "このバッファーローカル変数の値は、テーブル@code{auto-fill-chars}の文字の自己挿入後に呼び出される関数(引数なし)であること。@code{nil}も可であり、その場合は特に何もしない。"
 
 #. type: defvar
 #: original_texis/text.texi:1895
 msgid "The value of @code{auto-fill-function} is @code{do-auto-fill} when Auto-Fill mode is enabled.  That is a function whose sole purpose is to implement the usual strategy for breaking a line."
-msgstr "Auto-Fillモードが有効なら、@code{auto-fill-function}の値は@code{do-auto-fill}である。これは、行ブレークにたいする通常の戦略を実装することを唯一の目的とする関数である。"
+msgstr "Auto-Fillモードが有効なら@code{auto-fill-function}の値は@code{do-auto-fill}。これは行ブレークにたいする通常の戦略を実装することを唯一の目的とする関数。"
 
 #. type: defvar
 #: original_texis/text.texi:1897
@@ -3092,7 +3055,7 @@ msgstr "normal-auto-fill-function"
 #. type: defvar
 #: original_texis/text.texi:1902
 msgid "This variable specifies the function to use for @code{auto-fill-function}, if and when Auto Fill is turned on.  Major modes can set buffer-local values for this variable to alter how Auto Fill works."
-msgstr "この変数は、もしAuto Fillがオンのときは@code{auto-fill-function}にたいして使用する関数を指定する。Auto Fillの動作方法を変更するために、メジャーモードはこの変数にバッファーローカル値をセットである。"
+msgstr "この変数はAuto Fillがオンのときは@code{auto-fill-function}にたいして使用する関数を指定する。Auto Fillの動作方法を変更するためにメジャーモードはこの変数にバッファーローカル値をセットできる。"
 
 #. type: defvar
 #: original_texis/text.texi:1904
@@ -3103,7 +3066,7 @@ msgstr "auto-fill-chars"
 #. type: defvar
 #: original_texis/text.texi:1908
 msgid "A char table of characters which invoke @code{auto-fill-function} when self-inserted---space and newline in most language environments.  They have an entry @code{t} in the table."
-msgstr "文字が自己挿入された際に@code{auto-fill-function}を呼び出す文字(ほとんどの言語環境においてはスペースと改行)からなる文字テーブル。"
+msgstr "文字が自己挿入された際に@code{auto-fill-function}を呼び出す文字からなる文字テーブル(ほとんどの言語環境においてはスペースと改行)。"
 
 #. type: section
 #: original_texis/text.texi:1911
@@ -3120,7 +3083,7 @@ msgstr "sorting text"
 #. type: Plain text
 #: original_texis/text.texi:1918
 msgid "The sorting functions described in this section all rearrange text in a buffer.  This is in contrast to the function @code{sort}, which rearranges the order of the elements of a list (@pxref{Rearrangement}).  The values returned by these functions are not meaningful."
-msgstr "このセクションで説明するソート関数はすべて、バッファー内のテキストを再配置し。これはリスト要素を再配置する@code{sort}関数とは対照的です(@pxref{Rearrangement})。これらの関数がリターンする値に意味はありません。"
+msgstr "このセクションで説明するソート関数は、すべてバッファー内のテキストを再配置します。これはリスト要素を再配置する@code{sort}関数とは対照的です(@pxref{Rearrangement})。これらの関数がリターンする値に意味はありません。"
 
 #. type: defun
 #: original_texis/text.texi:1919
@@ -3131,20 +3094,21 @@ msgstr "sort-subr reverse nextrecfun endrecfun &optional startkeyfun endkeyfun p
 #. type: defun
 #: original_texis/text.texi:1923
 msgid "This function is the general text-sorting routine that subdivides a buffer into records and then sorts them.  Most of the commands in this section use this function."
-msgstr "この関数はバッファーをレコードに細分してそれらをソートする、一般的なテキストソートルーチンである。このセクションのコマンドのほとんどは、この関数を使用する。"
+msgstr "この関数はバッファーをレコードに細分してそれらをソートする一般的なテキストソートルーチン。このセクションのコマンドのほとんどは、この関数を使用する。"
 
 #. type: defun
 #: original_texis/text.texi:1930
 msgid "To understand how @code{sort-subr} works, consider the whole accessible portion of the buffer as being divided into disjoint pieces called @dfn{sort records}.  The records may or may not be contiguous, but they must not overlap.  A portion of each sort record (perhaps all of it) is designated as the sort key.  Sorting rearranges the records in order by their sort keys."
-msgstr "@code{sort-subr}が機能する方法を理解するためには、バッファーのアクセス可能範囲を@dfn{ソートレコード(sort records)}と呼ばれる、分離された断片に分割すると考えればよい。レコードは連続、あるいは非連続かもしれないが、オーバーラップしてはならない。各ソートレコードの一部(全体かもしれない)は、ソートキーとして指定される。これらソートキーによるソートにより、レコードは再配置される。"
+msgstr "@code{sort-subr}が機能する方法を理解するためには、バッファーのアクセス可能範囲を@dfn{ソートレコード(sort records)}と呼ばれる分離された断片に分割すると考えればよい。レコードは連続、あるいは非連続かもしれないがオーバーラップしてはならない。各ソートレコードの一部(全体かもしれない)はソートキーとして指定される。これらソートキーによるソートによりレコードは再配置される。"
 
 #. type: defun
 #: original_texis/text.texi:1935
 msgid "Usually, the records are rearranged in order of ascending sort key.  If the first argument to the @code{sort-subr} function, @var{reverse}, is non-@code{nil}, the sort records are rearranged in order of descending sort key."
-msgstr "通常、レコードはソートキー昇順で再配置される。@code{sort-subr}の1つ目の引数@var{reverse}が非@code{nil}なら、レコードはソートキー降順にソートされて再配置される。"
+msgstr "レコードは通常はソートキー昇順で再配置される。@code{sort-subr}の1つ目の引数@var{reverse}が非@code{nil}ならレコードはソートキー降順にソートされて再配置される。"
 
 #. type: defun
 #: original_texis/text.texi:1939
+#, fuzzy
 msgid "The next four arguments to @code{sort-subr} are functions that are called to move point across a sort record.  They are called many times from within @code{sort-subr}."
 msgstr "@code{sort-subr}にたいする以下の4つの引数は、ソートレコード間でポイントを移動するために呼び出される。これらは@code{sort-subr}内で頻繁に呼び出される。"
 
