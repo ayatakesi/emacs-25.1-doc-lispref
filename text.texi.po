@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emacs-lispref 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-01-19 18:28+0900\n"
+"PO-Revision-Date: 2020-01-19 22:01+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1701,7 +1701,6 @@ msgstr "Command kill-region start end &optional region"
 
 #. type: deffn
 #: original_texis/text.texi:920
-#, fuzzy
 msgid "This function kills the stretch of text between @var{start} and @var{end}; but if the optional argument @var{region} is non-@code{nil}, it ignores @var{start} and @var{end}, and kills the text in the current region instead.  The text is deleted but saved in the kill ring, along with its text properties.  The value is always @code{nil}."
 msgstr "この関数は@var{start}と@var{end}の間のテキスト範囲をkillするが、オプション引数@var{region}が非@code{nil}なら、かわりにカレントリージョンのテキストをkillする。そのテキストは削除されるが、そのテキストプロパティと共にkillリングに保存される。値は常に@code{nil}。"
 
@@ -3108,7 +3107,6 @@ msgstr "レコードは通常はソートキー昇順で再配置される。@co
 
 #. type: defun
 #: original_texis/text.texi:1939
-#, fuzzy
 msgid "The next four arguments to @code{sort-subr} are functions that are called to move point across a sort record.  They are called many times from within @code{sort-subr}."
 msgstr "@code{sort-subr}にたいする以下の4つの引数は、ソートレコード間でポイントを移動するために呼び出される。これらは@code{sort-subr}内で頻繁に呼び出される。"
 
@@ -5122,7 +5120,7 @@ msgstr "help-echo @r{(text property)}"
 #: original_texis/text.texi:3210
 #, no-wrap
 msgid "tooltip for help strings"
-msgstr ""
+msgstr "tooltip for help strings"
 
 #. type: anchor{#1}
 #: original_texis/text.texi:3215
@@ -5769,35 +5767,33 @@ msgstr "ユーザーがそれらをタイプした際にはバッファーに挿
 
 #. type: Plain text
 #: original_texis/text.texi:3585
-#, fuzzy
-#| msgid "A Lisp program can do insertion with inheritance or without, depending on the choice of insertion primitive.  The ordinary text insertion functions, such as @code{insert}, do not inherit any properties.  They insert text with precisely the properties of the string being inserted, and no others.  This is correct for programs that copy text from one context to another---for example, into or out of the kill ring.  To insert with inheritance, use the special primitives described in this section.  Self-inserting characters inherit properties because they work using these primitives."
 msgid "By contrast, a Lisp program can do insertion with inheritance or without, depending on the choice of insertion primitive.  The ordinary text insertion functions, such as @code{insert}, do not inherit any properties.  They insert text with precisely the properties of the string being inserted, and no others.  This is correct for programs that copy text from one context to another---for example, into or out of the kill ring.  To insert with inheritance, use the special primitives described in this section.  Self-inserting characters inherit properties because they work using these primitives."
-msgstr "Lispプログラムは継承の有無に関わらず挿入を行うことができ、それは挿入プリミティブの選択に依存します。@code{insert}のような通常のテキスト挿入関数は、何もプロパティを継承しません。これらは挿入される文字列と正確に同じプロパティをもち、それ以外のプロパティはもちません。これはたとえばkillリング外部にたいしてのように、あるコンテキストから他のコンテキストにテキストをコピーするプログラムにたいして適正です。継承つきで挿入を行うためには、このセクションで説明するスペシャルプリミティブを使用します。自己挿入文字は、これらのプリミティブを使用するので、プロパティを継承するのです。"
+msgstr "対照的にLispプログラムは継承の有無に関わらず挿入を行うことができ、それは挿入プリミティブの選択に依存します。@code{insert}のような通常のテキスト挿入関数は何もプロパティを継承しません。これらは挿入される文字列と正確に同じプロパティをもち、それ以外のプロパティはもちません。これはたとえばkillリング外部にたいしてのように、あるコンテキストから他のコンテキストにテキストをコピーするプログラムにたいして適正です。継承つきで挿入を行うためには、このセクションで説明するスペシャルプリミティブを使用します。自己挿入文字はこれらのプリミティブを使用するのでプロパティを継承します。"
 
 #. type: Plain text
 #: original_texis/text.texi:3593
 msgid "When you do insertion with inheritance, @emph{which} properties are inherited, and from where, depends on which properties are @dfn{sticky}.  Insertion after a character inherits those of its properties that are @dfn{rear-sticky}.  Insertion before a character inherits those of its properties that are @dfn{front-sticky}.  When both sides offer different sticky values for the same property, the previous character's value takes precedence."
-msgstr "継承つきで挿入を行う際に、@emph{どの}プロパティがどこから継承されるかは、@dfn{sticky(スティッキー、粘着する)}に依存します。ある文字の後への挿入における、それらのモジノプロパティ継承は@dfn{rear-sticky(後方スティッキー)}です。ある文字の前への挿入における、それらのモジノプロパティ継承は@dfn{front-sticky(前方スティッキー)}です。これら両側のstickyが、同じプロパティにたいして異なるsticky値をもつ場合は、前の文字の値が優先します。"
+msgstr "継承つきで挿入を行う際に、@emph{何の}プロパティがどこから継承されるかは@dfn{sticky(スティッキー、粘着する)}に依存します。ある文字の後への挿入における、それらの文字ノプロパティ継承は@dfn{rear-sticky(後方スティッキー)}です。ある文字の前への挿入における、それらの文字ノプロパティ継承は@dfn{front-sticky(前方スティッキー)}です。これら両側のstickyが同じプロパティにたいして異なるsticky値をもつ場合には、前の文字の値が優先します。"
 
 #. type: Plain text
 #: original_texis/text.texi:3597
 msgid "By default, a text property is rear-sticky but not front-sticky; thus, the default is to inherit all the properties of the preceding character, and nothing from the following character."
-msgstr "デフォルトでは、テキストプロパティはfront-stickyではなく、rear-stickyです。したがってデフォルトでは、すべてのプロパティは前の文字から継承し、後の文字からは何も継承しません。"
+msgstr "デフォルトではテキストプロパティはfront-stickyではなくrear-stickyです。したがってデフォルトでは、すべてのプロパティは前の文字から継承して、後の文字からは何も継承しません。"
 
 #. type: Plain text
 #: original_texis/text.texi:3604
 msgid "You can control the stickiness of various text properties with two specific text properties, @code{front-sticky} and @code{rear-nonsticky}, and with the variable @code{text-property-default-nonsticky}.  You can use the variable to specify a different default for a given property.  You can use those two text properties to make any specific properties sticky or nonsticky in any particular part of the text."
-msgstr "さまざまなテキストプロパティのstickiness(スティッキネス、スティッキー性、粘着性、粘着度)はは、2つのテキストプロパティ@code{front-sticky}および@code{rear-nonsticky}と、変数@code{text-property-default-nonsticky}で制御できます。与えられたプロパティにたいして異なるデフォルトを指定するために、この変数を使用できます。テキストの任意の特定部分に特定のプロパティsticky、または非stickyを指定するために、これら2つのテキストプロパティを使用できます。"
+msgstr "さまざまなテキストプロパティのstickiness(スティッキネス、スティッキー性、粘着性、粘着度)は、2つのテキストプロパティ@code{front-sticky}と@code{rear-nonsticky}、および変数@code{text-property-default-nonsticky}で制御できます。与えられたプロパティにたいして異なるデフォルトを指定するためにこの変数を使用できます。テキストの任意の特定部分に特定のstickyや非stickyプロパティを指定するために、これら2つのテキストプロパティを使用できます。"
 
 #. type: Plain text
 #: original_texis/text.texi:3612
 msgid "If a character's @code{front-sticky} property is @code{t}, then all its properties are front-sticky.  If the @code{front-sticky} property is a list, then the sticky properties of the character are those whose names are in the list.  For example, if a character has a @code{front-sticky} property whose value is @code{(face read-only)}, then insertion before the character can inherit its @code{face} property and its @code{read-only} property, but no others."
-msgstr "ある文字の@code{front-sticky}プロパティが@code{t}なら、その文字のすべてのプロパティはfront-stickyです。@code{front-sticky}プロパティがリストなら、その文字のstickyなプロパティは、名前がそのリスト内にあるプロパティです。たとえばある文字が値が@code{(face read-only)}であるような@code{front-sticky}プロパティをもつなら、その文字の前への挿入ではその文字の@code{face}プロパティと@code{read-only}プロパティは継承できますが、他のプロパティはｐ継承できません。"
+msgstr "ある文字の@code{front-sticky}プロパティが@code{t}なら、その文字のすべてのプロパティはfront-stickyです。@code{front-sticky}プロパティがリストなら、その文字のstickyなプロパティは名前がそのリスト内にあるプロパティです。たとえばある文字が値が@code{(face read-only)}であるような@code{front-sticky}プロパティをもつなら、その文字の前への挿入ではその文字の@code{face}プロパティと@code{read-only}プロパティは継承できますが他のプロパティは継承できません。"
 
 #. type: Plain text
 #: original_texis/text.texi:3620
 msgid "The @code{rear-nonsticky} property works the opposite way.  Most properties are rear-sticky by default, so the @code{rear-nonsticky} property says which properties are @emph{not} rear-sticky.  If a character's @code{rear-nonsticky} property is @code{t}, then none of its properties are rear-sticky.  If the @code{rear-nonsticky} property is a list, properties are rear-sticky @emph{unless} their names are in the list."
-msgstr "@code{rear-nonsticky}は逆の方法で機能します。ほとんどのプロパティはデフォルトでrear-stickyであり、@code{rear-nonsticky}プロパティはどのプロパティがrear-sticky@emph{ではない}かを告げますある文字の@code{rear-nosticky}プロパティが@code{t}なら、その文字のすべてのプロパティはrear-stickyではありません。@code{rear-nosticky}プロパティがリストなら、その文字のstickyなプロパティは、名前がそのリスト内に@emph{ない}プロパティです。"
+msgstr "@code{rear-nonsticky}は逆の方法で機能します。ほとんどのプロパティはデフォルトでrear-stickyであり、@code{rear-nonsticky}プロパティはどのプロパティが@emph{rear-stickyではない}かを告げます。ある文字の@code{rear-nosticky}プロパティが@code{t}なら、その文字のすべてのプロパティはrear-stickyではありません。@code{rear-nosticky}プロパティがリストなら、その文字のstickyなプロパティは名前がそのリスト内に@emph{ない}プロパティです。"
 
 #. type: defvar
 #: original_texis/text.texi:3621
@@ -5808,17 +5804,17 @@ msgstr "text-property-default-nonsticky"
 #. type: defvar
 #: original_texis/text.texi:3626
 msgid "This variable holds an alist which defines the default rear-stickiness of various text properties.  Each element has the form @code{(@var{property} . @var{nonstickiness})}, and it defines the stickiness of a particular text property, @var{property}."
-msgstr "この変数は、さまざまなテキストプロパティのデフォルトのrear-stickinessを定義するalistである。各要素は@code{(@var{property} . @var{nonstickiness})}という形式をもち、これは特定のテキストプロパティ@var{property}のstickinessを定義する。"
+msgstr "この変数はさまざまなテキストプロパティのデフォルトのrear-stickinessを定義するalist。各要素は@code{(@var{property} . @var{nonstickiness})}という形式をもち、これは特定のテキストプロパティ@var{property}のstickinessを定義する。"
 
 #. type: defvar
 #: original_texis/text.texi:3631
 msgid "If @var{nonstickiness} is non-@code{nil}, this means that the property @var{property} is rear-nonsticky by default.  Since all properties are front-nonsticky by default, this makes @var{property} nonsticky in both directions by default."
-msgstr "@var{nonstickiness}が非@code{nil}なら、それはプロパティ@var{property}がデフォルトでrear-nonstickyであることを意味する。すべてのプロパティはデフォルトでfront-nonstickyなので、これにより@var{property}は両方向にたいしてデフォルトでnonstickyになる。"
+msgstr "@var{nonstickiness}が非@code{nil}なら、それはプロパティ@var{property}がデフォルトでrear-nonstickyであることを意味する。すべてのプロパティはデフォルトではfront-nonstickyなので、これにより@var{property}は両方向にたいしてデフォルトでnonstickyになる。"
 
 #. type: defvar
 #: original_texis/text.texi:3635
 msgid "The text properties @code{front-sticky} and @code{rear-nonsticky}, when used, take precedence over the default @var{nonstickiness} specified in @code{text-property-default-nonsticky}."
-msgstr "テキストプロパティ@code{front-sticky}および@code{rear-nonsticky}が使用された際には、@code{text-property-default-nonsticky}内で指定されたデフォルトの@var{nonstickiness}より優先される。"
+msgstr "テキストプロパティ@code{front-sticky}と@code{rear-nonsticky}が使用された際には、@code{text-property-default-nonsticky}内で指定されたデフォルトの@var{nonstickiness}より優先される。"
 
 #. type: Plain text
 #: original_texis/text.texi:3638
@@ -5850,7 +5846,7 @@ msgstr "関数@code{insert-before-markers}と同じように文字列@var{string
 #. type: Plain text
 #: original_texis/text.texi:3652
 msgid "@xref{Insertion}, for the ordinary insertion functions which do not inherit."
-msgstr "継承を行わない通常の挿入関数については、@ref{Insertion}を参照してください。"
+msgstr "継承を行わない通常の挿入関数については@ref{Insertion}を参照してください。"
 
 #. type: subsection
 #: original_texis/text.texi:3654
@@ -5861,12 +5857,12 @@ msgstr "Lazy Computation of Text Properties"
 #. type: Plain text
 #: original_texis/text.texi:3659
 msgid "Instead of computing text properties for all the text in the buffer, you can arrange to compute the text properties for parts of the text when and if something depends on them."
-msgstr "バッファー内のすべてのテキストにたいしてテキストプロパティを計算するかわりに、何かがテキスト範囲に依存している場合、その際はテキストプロパティを計算するようにアレンジできます。"
+msgstr "バッファー内のすべてのテキストにたいしてテキストプロパティを計算するかわりに、何かがテキスト範囲に依存している場合にはテキストプロパティを計算するようにアレンジできます。"
 
 #. type: Plain text
 #: original_texis/text.texi:3663
 msgid "The primitive that extracts text from the buffer along with its properties is @code{buffer-substring}.  Before examining the properties, this function runs the abnormal hook @code{buffer-access-fontify-functions}."
-msgstr "プロパティとともにバッファーからテキストを抽出するプリミティブは、@code{buffer-substring}です。プロパティを調べる前に、この関数はアブノーマルフック@code{buffer-access-fontify-functions}を実行します。"
+msgstr "プロパティとともにバッファーからテキストを抽出するプリミティブは@code{buffer-substring}です。この関数はプロパティを調べる前にアブノーマルフック@code{buffer-access-fontify-functions}を実行します。"
 
 #. type: defvar
 #: original_texis/text.texi:3664
@@ -5877,7 +5873,7 @@ msgstr "buffer-access-fontify-functions"
 #. type: defvar
 #: original_texis/text.texi:3671
 msgid "This variable holds a list of functions for computing text properties.  Before @code{buffer-substring} copies the text and text properties for a portion of the buffer, it calls all the functions in this list.  Each of the functions receives two arguments that specify the range of the buffer being accessed.  (The buffer itself is always the current buffer.)"
-msgstr "この変数は、テキストプロパティ計算用の関数のリストを保持する。@code{buffer-substring}がバッファーの一部のテキストとテキストプロパティをコピーする前に、このリスト内の関数すべてを呼び出す。各関数はアクセスされるバッファー範囲を指定する、2つの引数を受け取る(バッファーは常にカレントバッファーとなる)。"
+msgstr "この変数はテキストプロパティ計算用の関数のリストを保持する。@code{buffer-substring}がバッファーの一部のテキストとテキストプロパティをコピーする前にこのリスト内の関数すべてを呼び出す。各関数はアクセスされるバッファー範囲を指定する2つの引数を受け取る(バッファーは常にカレントバッファー)。"
 
 #. type: Plain text
 #: original_texis/text.texi:3675
@@ -5887,7 +5883,7 @@ msgstr "関数@code{buffer-substring-no-properties}はいずれにせよテキ�
 #. type: Plain text
 #: original_texis/text.texi:3679
 msgid "In order to prevent the hook functions from being called more than once for the same part of the buffer, you can use the variable @code{buffer-access-fontified-property}."
-msgstr "同じバッファー部分にたいして複数回フック関数が呼び出されるのを防ぐには、変数@code{buffer-access-fontified-property}を使用できる。"
+msgstr "同じバッファー部分にたいして複数回フック関数が呼び出されるのを防ぐために変数@code{buffer-access-fontified-property}を使用できる。"
 
 #. type: defvar
 #: original_texis/text.texi:3680
@@ -5897,20 +5893,18 @@ msgstr "buffer-access-fontified-property"
 
 #. type: defvar
 #: original_texis/text.texi:3685
-#, fuzzy
-#| msgid "If this variable's value is non-@code{nil}, it is a symbol which is used as a text property name.  A non-@code{nil} value for that text property means, ``the other text properties for this character have already been computed''."
 msgid "If this variable's value is non-@code{nil}, it is a symbol which is used as a text property name.  A non-@code{nil} value for that text property means the other text properties for this character have already been computed."
-msgstr "この変数の値が非@code{nil}なら、それはテキストプロパティ名として使用されるシンボルである。そのテキストプロパティにたいする非@code{nil}値は、``その文字にたいする他のテキストプロパティはすでに計算済み''であることを意味する。"
+msgstr "この変数の値が非@code{nil}なら、それはテキストプロパティ名として使用されるシンボル。そのテキストプロパティにたいする非@code{nil}値は、その文字にたいする他のテキストプロパティはすでに計算済みであることを意味する。"
 
 #. type: defvar
 #: original_texis/text.texi:3691
 msgid "If all the characters in the range specified for @code{buffer-substring} have a non-@code{nil} value for this property, @code{buffer-substring} does not call the @code{buffer-access-fontify-functions} functions.  It assumes these characters already have the right text properties, and just copies the properties they already have."
-msgstr "@code{buffer-substring}にたいして指定された範囲内のすべての文字が、このプロパティにたいする値として非@code{nil}をもつなら、@code{buffer-substring}は@code{buffer-access-fontify-functions}の関数を呼び出さない。それらの文字がすでに正しいテキストプロパティをもつとみなし、それらがすでに所有するプロパティを単にコピーする。"
+msgstr "@code{buffer-substring}にたいして指定された範囲内のすべての文字、このプロパティにたいする値として非@code{nil}をもつなら、@code{buffer-substring}は@code{buffer-access-fontify-functions}の関数を呼び出さない。それらの文字がすでに正しいテキストプロパティをもつとみなして、それらがすでに所有するプロパティを単にコピーする。"
 
 #. type: defvar
 #: original_texis/text.texi:3696
 msgid "The normal way to use this feature is that the @code{buffer-access-fontify-functions} functions add this property, as well as others, to the characters they operate on.  That way, they avoid being called over and over for the same text."
-msgstr "@code{buffer-access-fontify-functions}の関数にこのプロパティ、同様に他のプロパティを処理対象の文字に追加させるのが、この機能の通常の用途である。この方法では、同じテキストにたいして、それらの関数が何度も呼び出されるのを防ぐことができる。"
+msgstr "@code{buffer-access-fontify-functions}の関数にこのプロパティ、同様に他のプロパティを処理対象の文字に追加させることがこの機能の通常の用途である。この方法では同じテキストにたいして、それらの関数が何度も呼び出されるのを防ぐことができる。"
 
 #. type: subsection
 #: original_texis/text.texi:3699
@@ -5939,24 +5933,22 @@ msgstr "mouse-1"
 #. type: Plain text
 #: original_texis/text.texi:3708
 msgid "@dfn{Clickable text} is text that can be clicked, with either the mouse or via a keyboard command, to produce some result.  Many major modes use clickable text to implement textual hyper-links, or @dfn{links} for short."
-msgstr "@dfn{クリック可能テキスト(clickable text)}とは何らかの結果を生成するために、マウス、またはキーボードコマンドを通じてクリックできるテキストです。多くのメジャーモードがテキスト的なハイパーリンク、略して@dfn{リンク(link)}を実装するために、クリック可能テキストを使用しています。"
+msgstr "@dfn{クリック可能テキスト(clickable text)}とは何らかの結果を生成するためにマウスやキーボードコマンドを通じてクリックできるテキストです。多くのメジャーモードがテキスト的なハイパーリンク、略して@dfn{リンク(link)}を実装するためにクリック可能テキストを使用しています。"
 
 #. type: Plain text
 #: original_texis/text.texi:3714
 msgid "The easiest way to insert and manipulate links is to use the @code{button} package.  @xref{Buttons}.  In this section, we will explain how to manually set up clickable text in a buffer, using text properties.  For simplicity, we will refer to the clickable text as a @dfn{link}."
-msgstr "リンクを挿入および操作するもっとも簡単な方法は、@code{button}パッケージの使用です。@ref{Buttons}を参照してください。このセクションではテキストプロパティを使用して、バッファー内に手作業でクリック可能テキストをセットアップする方法を説明します。簡略にするために、クリック可能テキストを@dfn{リンク}と呼ぶことにします。"
+msgstr "リンクの挿入や操作を行うもっとも簡単な方法は@code{button}パッケージの使用です。@ref{Buttons}を参照してください。このセクションではテキストプロパティを使用してバッファー内に手作業でクリック可能テキストをセットアップする方法を説明します。簡略にするためにクリック可能テキストを@dfn{リンク}と呼ぶことにします。"
 
 #. type: Plain text
 #: original_texis/text.texi:3720
-#, fuzzy
-#| msgid "Implementing a link involves three separate steps: (1) indicating clickability when the mouse moves over the link; (2) making @key{RET} or @kbd{Mouse-2} on that link do something; and (3) setting up a @code{follow-link} condition so that the link obeys @code{mouse-1-click-follows-link}."
 msgid "Implementing a link involves three separate steps: (1) indicating clickability when the mouse moves over the link; (2) making @key{RET} or @kbd{mouse-2} on that link do something; and (3) setting up a @code{follow-link} condition so that the link obeys @code{mouse-1-click-follows-link}."
-msgstr "リンクの実装には、(1)リンク上にマウスが移動した際にクリック可能であることを示し、(2)そのリンク上の@key{RET}か@kbd{Mouse-2}で何かを行うようにして、(3)そのリンクが@code{mouse-1-click-follows-link}にしたがうよう@code{follow-link}をセットアップする、という3つのステップが含まれます。"
+msgstr "リンクの実装には、(1)リンク上にマウスが移動した際にクリック可能であることを示し、(2)そのリンク上の@key{RET}か@kbd{mouse-2}で何かを行うようにして、(3)そのリンクが@code{mouse-1-click-follows-link}にしたがうよう@code{follow-link}をセットアップする、という3つのステップが含まれます。"
 
 #. type: Plain text
 #: original_texis/text.texi:3727
 msgid "To indicate clickability, add the @code{mouse-face} text property to the text of the link; then Emacs will highlight the link when the mouse moves over it.  In addition, you should define a tooltip or echo area message, using the @code{help-echo} text property.  @xref{Special Properties}.  For instance, here is how Dired indicates that file names are clickable:"
-msgstr "クリック可能を示すためには、そのリンクのテキストに@code{mouse-face}プロパティを追加します。すると、以降Emacsはマウスがその上に移動した際にリンクをハイライトするでしょう。加えて@code{help-echo}テキストプロパティを使用して、ツールチップかエコーエリアメッセージを定義するべきです。@ref{Special Properties}を参照してください。たとえば以下は、Diredがファイル名がクリック可能なことを示す方法です:"
+msgstr "クリック可能なことを示すためには、そのリンクのテキストに@code{mouse-face}プロパティを追加します。するとEmacsはそれ以降マウスがその上に移動した際にリンクをハイライトするでしょう。加えて@code{help-echo}テキストプロパティを使用してツールチップかエコーエリアメッセージを定義するべきです。@ref{Special Properties}を参照してください。たとえば以下はDiredがファイル名がクリック可能なことを示す方法です:"
 
 #. type: smallexample
 #: original_texis/text.texi:3737
@@ -5982,10 +5974,8 @@ msgstr ""
 
 #. type: Plain text
 #: original_texis/text.texi:3744
-#, fuzzy
-#| msgid "To make the link clickable, bind @key{RET} and @kbd{Mouse-2} to commands that perform the desired action.  Each command should check to see whether it was called on a link, and act accordingly.  For instance, Dired's major mode keymap binds @kbd{Mouse-2} to the following command:"
 msgid "To make the link clickable, bind @key{RET} and @kbd{mouse-2} to commands that perform the desired action.  Each command should check to see whether it was called on a link, and act accordingly.  For instance, Dired's major mode keymap binds @kbd{mouse-2} to the following command:"
-msgstr "リンクをクリック可能にするためには、 @key{RET}と@kbd{Mouse-2}を望むアクションを行うコマンドにバインドします。各コマンドは、リンク上から呼び出されたかチェックして、それに応じて動作するべきです。たとえばDiredメジャーモードのキーマップは、@kbd{Mouse-2}を以下のコマンドにバインドします:"
+msgstr "リンクをクリック可能にするためには、 @key{RET}と@kbd{mouse-2}を望むアクションを行うコマンドにバインドします。各コマンドはリンク上から呼び出されたかチェックして、それに応じて動作するべきです。たとえばDiredメジャーモードのキーマップは@kbd{mouse-2}を以下のコマンドにバインドします:"
 
 #. type: smallexample
 #: original_texis/text.texi:3765
@@ -6034,12 +6024,12 @@ msgstr ""
 #. type: Plain text
 #: original_texis/text.texi:3771
 msgid "This command uses the functions @code{posn-window} and @code{posn-point} to determine where the click occurred, and @code{dired-get-file-for-visit} to determine which file to visit."
-msgstr "このコマンドはクリックがどこで発生したかを判断するために、関数@code{posn-window}と@code{posn-point}、visitするファイルの判断に関数@code{dired-get-file-for-visit}を使用します。"
+msgstr "このコマンドはクリックがどこで発生したかを判断するために関数@code{posn-window}と@code{posn-point}、visitするファイルの判断に関数@code{dired-get-file-for-visit}を使用します。"
 
 #. type: Plain text
 #: original_texis/text.texi:3775
 msgid "Instead of binding the mouse command in a major mode keymap, you can bind it within the link text, using the @code{keymap} text property (@pxref{Special Properties}).  For instance:"
-msgstr "マウスコマンドをメジャーモードキーマップ内でバインドするかわりに、@code{keymap}プロパティ(@ref{Special Properties}を参照)を使用して、リンクテキスト内でバインドできます。たとえば:"
+msgstr "マウスコマンドをメジャーモードキーマップ内でバインドするかわりに、@code{keymap}プロパティ(@ref{Special Properties}を参照)を使用してリンクテキスト内でバインドできます。たとえば:"
 
 #. type: example
 #: original_texis/text.texi:3780
