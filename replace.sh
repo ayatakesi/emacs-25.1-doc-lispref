@@ -707,7 +707,8 @@ case ${1} in
 	perl -pe 's/\@subsection Changing Text Properties/\@subsection テキストプロパティの変更/' -i text-ja.texi;
 	perl -pe 's/\@subsection Text Property Search Functions/\@subsection テキストプロパティの検索関数/' -i text-ja.texi;
 	perl -pe 's/\@subsection Properties with Special Meanings/\@subsection 特殊な意味をもつプロパティ/' -i text-ja.texi;
-	perl -pe 's/\@subsection Formatted Text Properties/\@subsection フォーマットされたテキストプロパティ/' -i text-ja.texi;
+	perl -pe 's/\@subsection Formatt
+ed Text Properties/\@subsection フォーマットされたテキストのプロパティ/' -i text-ja.texi;
 	perl -pe 's/\@subsection Stickiness of Text Properties/\@subsection テキストプロパティの粘着性/' -i text-ja.texi;
 	perl -pe 's/\@subsection Lazy Computation of Text Properties/\@subsection テキストプロパティのlazyな計算/' -i text-ja.texi;
 	perl -pe 's/\@subsection Defining Clickable Text/\@subsection クリック可能なテキストの定義/' -i text-ja.texi;
