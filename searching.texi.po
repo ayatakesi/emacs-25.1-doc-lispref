@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-18 02:30+0900\n"
+"PO-Revision-Date: 2020-01-26 22:58+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -30,7 +30,7 @@ msgstr "searching"
 #. type: Plain text
 #: original_texis/searching.texi:15
 msgid "GNU Emacs provides two ways to search through a buffer for specified text: exact string searches and regular expression searches.  After a regular expression search, you can examine the @dfn{match data} to determine which text matched the whole regular expression or various portions of it."
-msgstr "GNU Emacsは、バッファーから指定されたテキストを検索するために、２つの手段を提供します。それは文字列の正確一致検索(exact string search)と、正規表現検索(regular expression search)です。正規表現検索の後、マッチしたテキストが正規表現壱阡にマッチしたのか、それとも正規表現のさまざまな部分に一致したかを判断するために、@dfn{マッチデータ(match data)}を調べることができます。"
+msgstr "GNU Emacsはバッファーから指定されたテキストを検索するために2つの手段を提供します。それは文字列の正確一致検索(exact string search)と正規表現検索(regular expression search)です。正規表現検索の後で、マッチしたテキストが正規表現全体にマッチしたのか、それとも正規表現のさまざまな部分に一致したかを判断するために@dfn{マッチデータ(match data)}を調べることができます。"
 
 #. type: node
 #: original_texis/searching.texi:26 original_texis/searching.texi:32
@@ -98,7 +98,7 @@ msgstr "Match Data"
 #. type: menuentry
 #: original_texis/searching.texi:26
 msgid "Finding out which part of the text matched, after a string or regexp search."
-msgstr "文字列またはregexp検索後に、テキストがマッチした部分を見つける。"
+msgstr "文字列またはregexp検索後にテキストがマッチした部分を見つける。"
 
 #. type: section
 #: original_texis/searching.texi:26 original_texis/searching.texi:1694
@@ -126,7 +126,7 @@ msgstr "センテンスやページ等を探すために有用なregexp。"
 #. type: Plain text
 #: original_texis/searching.texi:31
 msgid "The @samp{skip-chars@dots{}} functions also perform a kind of searching.  @xref{Skipping Characters}.  To search for changes in character properties, see @ref{Property Search}."
-msgstr "@samp{skip-chars@dots{}}関連の関数も、ある種の検索を行います。@ref{Skipping Characters}を参照してください。文字プロパティ内の変更を検索するには、@ref{Property Search}を参照してください。"
+msgstr "@samp{skip-chars@dots{}}関連の関数もある種の検索を行います。@ref{Skipping Characters}を参照してください。文字プロパティ内の変更の検索は@ref{Property Search}を参照してください。"
 
 #. type: section
 #: original_texis/searching.texi:33
@@ -143,29 +143,28 @@ msgstr "string search"
 #. type: Plain text
 #: original_texis/searching.texi:42
 msgid "These are the primitive functions for searching through the text in a buffer.  They are meant for use in programs, but you may call them interactively.  If you do so, they prompt for the search string; the arguments @var{limit} and @var{noerror} are @code{nil}, and @var{repeat} is 1.  For more details on interactive searching, @pxref{Search,, Searching and Replacement, emacs, The GNU Emacs Manual}."
-msgstr "バッファー内のテキストを検索するための、プリミティブ関数が存在します。これらはプログラム内での使用を意図したものですが、インタラクティブに呼び出すこともできます。これらをインタラクティブに呼び出した場合は、検索文字列の入力を求め、引数@var{limit}および@var{noerror}は@code{nil}、@var{repeat}は1になります。インタラクティブ検索に関するより詳細な情報は、@ref{Search,, Searching and Replacement, emacs, The GNU Emacs Manual}を参照してください。"
+msgstr "バッファー内のテキストを検索するためのプリミティブ関数が存在します。これらはプログラム内での使用を意図したものですがインタラクティブに呼び出すこともできます。これらをインタラクティブに呼び出すと検索文字列の入力を求めて、引数@var{limit}と@var{noerror}は@code{nil}、@var{repeat}は1になります。インタラクティブ検索に関するより詳細な情報は@ref{Search,, Searching and Replacement, emacs, The GNU Emacs Manual}を参照してください。"
 
 #. type: Plain text
 #: original_texis/searching.texi:46
 msgid "These search functions convert the search string to multibyte if the buffer is multibyte; they convert the search string to unibyte if the buffer is unibyte.  @xref{Text Representations}."
-msgstr "以下の検索関数は、バッファーがマルチバイトバッファーならマルチバイト、ユニバイトバッファーならユニバイトに、検索文字列を変換します。@ref{Text Representations}を参照してください。"
+msgstr "以下の検索関数はバッファーがマルチバイトバッファーならマルチバイト、ユニバイトバッファーならユニバイトに検索文字列を変換します。@ref{Text Representations}を参照してください。"
 
 #. type: deffn
 #: original_texis/searching.texi:47
-#, fuzzy, no-wrap
-#| msgid "Command search-forward string &optional limit noerror repeat"
+#, no-wrap
 msgid "Command search-forward string &optional limit noerror count"
-msgstr "Command search-forward string &optional limit noerror repeat"
+msgstr "Command search-forward string &optional limit noerror count"
 
 #. type: deffn
 #: original_texis/searching.texi:52
 msgid "This function searches forward from point for an exact match for @var{string}.  If successful, it sets point to the end of the occurrence found, and returns the new value of point.  If no match is found, the value and side effects depend on @var{noerror} (see below)."
-msgstr "この関数は、@var{string}にたいする正確なマッチを、ポイントから前方に検索する。成功したら、見つかったマッチの終端にポイントをセットして、ポイントの新たな値をリターンする。マッチが見つからない場合の値と副作用は、@var{noerror}(以下参照)に依存する。"
+msgstr "この関数は@var{string}にたいする正確なマッチをポイントから前方に検索する。成功したら見つかったマッチの終端にポイントをセットしてポイントの新たな値をリターンする。マッチが見つからない場合の値と副作用は@var{noerror} (以下参照)に依存する。"
 
 #. type: deffn
 #: original_texis/searching.texi:56
 msgid "In the following example, point is initially at the beginning of the line.  Then @code{(search-forward \"fox\")} moves point after the last letter of @samp{fox}:"
-msgstr "以下の例では、ポイントは最初は行の先頭にある。その後の@code{(search-forward \"fox\")}により、ポイントは@samp{fox}の最後の文字の後に移動する:"
+msgstr "以下の例ではポイントは最初は行の先頭にある。その後の@code{(search-forward \"fox\")}によってポイントは@samp{fox}の最後の文字の後に移動する:"
 
 #. type: group
 #: original_texis/searching.texi:62
@@ -206,7 +205,7 @@ msgstr ""
 #. type: deffn
 #: original_texis/searching.texi:78
 msgid "The argument @var{limit} specifies the bound to the search, and should be a position in the current buffer.  No match extending after that position is accepted.  If @var{limit} is omitted or @code{nil}, it defaults to the end of the accessible portion of the buffer."
-msgstr "引数@var{limit}は検索の境界を指定し、それはカレントバッファー内の位置であること。その位置を超えるようなマッチは、受け入れられない。@var{limit}が省略または@code{nil}の場合のデフォルトは、そのバッファーのアクセス可能範囲の終端である。"
+msgstr "引数@var{limit}は検索の境界を指定するもので、それはカレントバッファー内の位置であること。その位置を超えるようなマッチは受け入れられない。@var{limit}が省略または@code{nil}の場合のデフォルトは、そのバッファーのアクセス可能範囲の終端。"
 
 #. type: kindex
 #: original_texis/searching.texi:79
@@ -217,55 +216,49 @@ msgstr "search-failed"
 #. type: deffn
 #: original_texis/searching.texi:88
 msgid "What happens when the search fails depends on the value of @var{noerror}.  If @var{noerror} is @code{nil}, a @code{search-failed} error is signaled.  If @var{noerror} is @code{t}, @code{search-forward} returns @code{nil} and does nothing.  If @var{noerror} is neither @code{nil} nor @code{t}, then @code{search-forward} moves point to the upper bound and returns @code{nil}."
-msgstr "検索失敗時に何が起こるかは、@var{noerror}の値に依存する。@var{noerror}が@code{nil}なら、@code{search-failed}はエラーをシグナルする。@var{noerror}が@code{t}なら、@code{search-forward}は@code{nil}をリターンして、何も行わない。@var{noerror}が@code{nil}と@code{t}いずれでもなければ、@code{search-forward}はポイントを境界上限に移動して、@code{nil}をリターンする。"
+msgstr "検索失敗時に何が起こるかは@var{noerror}の値に依存する。@var{noerror}が@code{nil}なら@code{search-failed}はエラーをシグナルする。@var{noerror}が@code{t}なら@code{search-forward}は@code{nil}をリターンして何も行わない。@var{noerror}が@code{nil}と@code{t}いずれでもなければ、@code{search-forward}はポイントを境界上限に移動して@code{nil}をリターンする。"
 
 #. type: deffn
 #: original_texis/searching.texi:97 original_texis/searching.texi:1055
 msgid "The argument @var{noerror} only affects valid searches which fail to find a match.  Invalid arguments cause errors regardless of @var{noerror}."
-msgstr "引数@var{noerror}は、マッチに失敗した有効な検索だけに影響する。無効な引数は、@var{noerror}とは無関係にエラーとなる。"
+msgstr "引数@var{noerror}はマッチに失敗した有効な検索だけに影響する。無効な引数は@var{noerror}とは無関係にエラーとなる。"
 
 #. type: deffn
 #: original_texis/searching.texi:106 original_texis/searching.texi:1064
-#, fuzzy
-#| msgid "If @var{repeat} is a positive number @var{n}, it serves as a repeat count: the search is repeated @var{n} times, each time starting at the end of the previous time's match.  If these successive searches succeed, the function succeeds, moving point and returning its new value.  Otherwise the search fails, with results depending on the value of @var{noerror}, as described above.  If @var{repeat} is a negative number -@var{n}, it serves as a repeat count of @var{n} for a search in the opposite (backward) direction."
 msgid "If @var{count} is a positive number @var{n}, the search is done @var{n} times; each successive search starts at the end of the previous match.  If all these successive searches succeed, the function call succeeds, moving point and returning its new value.  Otherwise the function call fails, with results depending on the value of @var{noerror}, as described above.  If @var{count} is a negative number -@var{n}, the search is done @var{n} times in the opposite (backward) direction."
-msgstr "@var{repeat}が正の数@var{n}なら、それは繰り返し回数の役目をもつ。検索は@var{n}回繰り返され、前回のマッチの終端から毎回検索が開始される。これらの連続する検索が成功した場合、関数は成功となりポイントを新たな値をリターンする。それ以外は検索失敗となり、上述したように結果は@var{noerror}の値に依存する。@var{repeat}が負の数-@var{n}なら、それは逆方向(後方)への検索の繰り返し回数@var{n}としての役目をもつ。"
+msgstr "@var{repeat}が正の数@var{n}なら検索は@var{n}回繰り返される。一連の検索は前回のマッチの終端から毎回検索が開始される。これらの一連の検索が成功すると、関数呼び出しは成功となりポイントを移動して新たな値をリターンする。それ以外は関数の呼び出しは失敗となり、結果は上述のように@var{noerror}の値に依存する。@var{repeat}が負の数-@var{n}なら検索は逆方向(後方)へ@var{n}回行われる。"
 
 #. type: deffn
 #: original_texis/searching.texi:108
-#, fuzzy, no-wrap
-#| msgid "Command search-backward string &optional limit noerror repeat"
+#, no-wrap
 msgid "Command search-backward string &optional limit noerror count"
-msgstr "Command search-backward string &optional limit noerror repeat"
+msgstr "Command search-backward string &optional limit noerror count"
 
 #. type: deffn
 #: original_texis/searching.texi:113
 msgid "This function searches backward from point for @var{string}.  It is like @code{search-forward}, except that it searches backwards rather than forwards.  Backward searches leave point at the beginning of the match."
-msgstr "この関数は、ポイントから後方に@var{string}を検索する。これは@code{search-forward}と似ているが、前方ではなく後方に検索する点が異なる。後方への検索では、ポイントはマッチの先頭に残される。"
+msgstr "この関数はポイントから後方に@var{string}を検索する。これは@code{search-forward}と似ているが、前方ではなく後方に検索する点が異なる。後方への検索ではポイントはマッチの先頭に残される。"
 
 #. type: deffn
 #: original_texis/searching.texi:115
-#, fuzzy, no-wrap
-#| msgid "Command word-search-forward string &optional limit noerror repeat"
+#, no-wrap
 msgid "Command word-search-forward string &optional limit noerror count"
-msgstr "Command word-search-forward string &optional limit noerror repeat"
+msgstr "Command word-search-forward string &optional limit noerror count"
 
 #. type: deffn
 #: original_texis/searching.texi:119
-#, fuzzy
-#| msgid "This function searches forward from point for a ``word'' match for @var{string}.  If it finds a match, it sets point to the end of the match found, and returns the new value of point."
 msgid "This function searches forward from point for a word match for @var{string}.  If it finds a match, it sets point to the end of the match found, and returns the new value of point."
-msgstr "この関数は、ポイントから前方に@var{string}にたいする``単語(word)''のマッチを検索する。マッチが見つかったら、見つかったマッチの終端にポイントをセットして、ポイントの新たな値をリターンする。"
+msgstr "この関数はポイントから前方に@var{string}にたいする単語(word)のマッチを検索する。マッチが見つかったら見つかったマッチの終端にポイントをセットしてポイントの新たな値をリターンする。"
 
 #. type: deffn
 #: original_texis/searching.texi:126
 msgid "Word matching regards @var{string} as a sequence of words, disregarding punctuation that separates them.  It searches the buffer for the same sequence of words.  Each word must be distinct in the buffer (searching for the word @samp{ball} does not match the word @samp{balls}), but the details of punctuation and spacing are ignored (searching for @samp{ball boy} does match @samp{ball.  Boy!})."
-msgstr "単語マッチは@var{string}を単語のシーケンスとみなし、それらを分ける句読点は無視する。これはバッファーから、同じ単語シーケンスを検索する。単語はそれぞれバッファー内で明確に区別されていなければならないが(単語@samp{ball}の検索は単語@samp{balls}にマッチしない)、句読点やスペース等の細部は無視される(@samp{ball boy}を検索すると@samp{ball.  Boy!}にマッチする)。"
+msgstr "単語マッチは@var{string}を単語のシーケンスとみなし、それらを分割する句読点は無視する。これはバッファーから同じ単語シーケンスを検索する。単語はそれぞれバッファー内で明確に区別されていなければならない(単語@samp{ball}の検索は単語@samp{balls}にマッチしない)が、句読点やスペース等の細部は無視される(@samp{ball boy}を検索すると@samp{ball.  Boy!}にマッチする)。"
 
 #. type: deffn
 #: original_texis/searching.texi:129
 msgid "In this example, point is initially at the beginning of the buffer; the search leaves it between the @samp{y} and the @samp{!}."
-msgstr "以下の例では、ポイントは最初バッファー先頭にある。検索により、ポイントは@samp{y}と@samp{!}の間に残される。"
+msgstr "以下の例ではポイントは最初バッファー先頭にある。検索によりポイントは@samp{y}と@samp{!}の間に残される。"
 
 #. type: group
 #: original_texis/searching.texi:136
@@ -310,17 +303,17 @@ msgstr ""
 #. type: deffn
 #: original_texis/searching.texi:152
 msgid "If @var{limit} is non-@code{nil}, it must be a position in the current buffer; it specifies the upper bound to the search.  The match found must not extend after that position."
-msgstr "@var{limit}が非@code{nil}なら、それはカレントバッファー内の位置であること。これはその検索の境界上限を指定する。見つかったマッチは、その位置を超えてはならない。"
+msgstr "@var{limit}が非@code{nil}なら、それはカレントバッファー内の位置であること。これはその検索の境界上限を指定する。見つかったマッチはその位置を超えてはならない。"
 
 #. type: deffn
 #: original_texis/searching.texi:158
 msgid "If @var{noerror} is @code{nil}, then @code{word-search-forward} signals an error if the search fails.  If @var{noerror} is @code{t}, then it returns @code{nil} instead of signaling an error.  If @var{noerror} is neither @code{nil} nor @code{t}, it moves point to @var{limit} (or the end of the accessible portion of the buffer) and returns @code{nil}."
-msgstr "@var{noerror}が@code{nil}なら、@code{word-search-forward}はエラーをシグナルする。@var{noerror}が@code{t}なら、エラーをシグナルするかわりに、@code{nil}をリターンする。@var{noerror}が@code{nil}と@code{t}いずれでもなければ、ポイントを@var{limit}(またはバッファーのアクセス可能範囲の終端)に移動して、@code{nil}をリターンする。"
+msgstr "@var{noerror}が@code{nil}なら@code{word-search-forward}はエラーをシグナルする。@var{noerror}が@code{t}なら、エラーをシグナルするかわりに@code{nil}をリターンする。@var{noerror}が@code{nil}と@code{t}いずれでもなければ、ポイントを@var{limit}(またはバッファーのアクセス可能範囲の終端)に移動して@code{nil}をリターンする。"
 
 #. type: deffn
 #: original_texis/searching.texi:163
 msgid "If @var{count} is a positive number, it specifies how many successive occurrences to search for.  Point is positioned at the end of the last match.  If @var{count} is a negative number, the search is backward and point is positioned at the beginning of the last match."
-msgstr ""
+msgstr "@var{count}が正の数なら、それは連続して検索する回数を指定する。ポイントは最後のマッチの終端に配置される。@var{count}が負の数なら、逆方向に検索してポイントは最後のマッチの先頭に配置される。"
 
 #. type: findex
 #: original_texis/searching.texi:164
@@ -331,43 +324,40 @@ msgstr "word-search-regexp"
 #. type: deffn
 #: original_texis/searching.texi:168
 msgid "Internally, @code{word-search-forward} and related functions use the function @code{word-search-regexp} to convert @var{string} to a regular expression that ignores punctuation."
-msgstr "内部的には、@code{word-search-forward}と関連する関数は、@var{string}から句読点を無視した正規表現に変換するために、関数@code{word-search-regexp}を使用する。"
+msgstr "@code{word-search-forward}および関連する関数は、@var{string}から句読点を無視した正規表現に変換するために、内部的には関数@code{word-search-regexp}を使用する。"
 
 #. type: deffn
 #: original_texis/searching.texi:170
-#, fuzzy, no-wrap
-#| msgid "Command word-search-forward-lax string &optional limit noerror repeat"
+#, no-wrap
 msgid "Command word-search-forward-lax string &optional limit noerror count"
-msgstr "Command word-search-forward-lax string &optional limit noerror repeat"
+msgstr "Command word-search-forward-lax string &optional limit noerror count"
 
 #. type: deffn
 #: original_texis/searching.texi:176
 msgid "This command is identical to @code{word-search-forward}, except that the beginning or the end of @var{string} need not match a word boundary, unless @var{string} begins or ends in whitespace.  For instance, searching for @samp{ball boy} matches @samp{ball boyee}, but does not match @samp{balls boy}."
-msgstr "このコマンドは@code{word-search-forward}と同じだが、@var{string}が空白で開始または終了していなければ、@var{string}の先頭または終端が単語境界にマッチする必要がない点が異なる。たとえば@samp{ball boy}の検索は@samp{ball boyee}にはマッチするが、@samp{balls boy}にはマッチしない。"
+msgstr "このコマンドは@code{word-search-forward}と同じだが、@var{string}が空白で開始か終了していなければ、@var{string}の先頭か終端が単語境界にマッチする必要がない点が異なる。たとえば@samp{ball boy}の検索は@samp{ball boyee}にはマッチするが、@samp{balls boy}にはマッチしない。"
 
 #. type: deffn
 #: original_texis/searching.texi:178
-#, fuzzy, no-wrap
-#| msgid "Command word-search-backward string &optional limit noerror repeat"
+#, no-wrap
 msgid "Command word-search-backward string &optional limit noerror count"
-msgstr "Command word-search-backward string &optional limit noerror repeat"
+msgstr "Command word-search-backward string &optional limit noerror count"
 
 #. type: deffn
 #: original_texis/searching.texi:183
 msgid "This function searches backward from point for a word match to @var{string}.  This function is just like @code{word-search-forward} except that it searches backward and normally leaves point at the beginning of the match."
-msgstr "この関数は、ポイントから後方へ@var{string}にマッチする単語を検索する。この関数は@code{word-search-forward}と同様だが、後方に検索して、通常はマッチの先頭にポイントを残す点が異なる。"
+msgstr "この関数はポイントから後方へ@var{string}にマッチする単語を検索する。この関数は@code{word-search-forward}と同様だが、後方に検索して通常はマッチの先頭にポイントを残す点が異なる。"
 
 #. type: deffn
 #: original_texis/searching.texi:185
-#, fuzzy, no-wrap
-#| msgid "Command word-search-backward-lax string &optional limit noerror repeat"
+#, no-wrap
 msgid "Command word-search-backward-lax string &optional limit noerror count"
-msgstr "Command word-search-backward-lax string &optional limit noerror repeat"
+msgstr "Command word-search-backward-lax string &optional limit noerror count"
 
 #. type: deffn
 #: original_texis/searching.texi:189
 msgid "This command is identical to @code{word-search-backward}, except that the beginning or the end of @var{string} need not match a word boundary, unless @var{string} begins or ends in whitespace."
-msgstr "このコマンドは@code{word-search-backward}と同じだが、文字列が空白で開始または終了していなければ、@var{string}の先頭または終端が単語境界にマッチする必要がない点が異なる。"
+msgstr "このコマンドは@code{word-search-backward}と同じだが、文字列が空白で開始か終了していなければ、@var{string}の先頭か終端が単語境界にマッチする必要がない点が異なる。"
 
 #. type: cindex
 #: original_texis/searching.texi:193
@@ -378,17 +368,17 @@ msgstr "searching and case"
 #. type: Plain text
 #: original_texis/searching.texi:200
 msgid "By default, searches in Emacs ignore the case of the text they are searching through; if you specify searching for @samp{FOO}, then @samp{Foo} or @samp{foo} is also considered a match.  This applies to regular expressions, too; thus, @samp{[aB]} would match @samp{a} or @samp{A} or @samp{b} or @samp{B}."
-msgstr "デフォルトのEmacs検索では、検索するテキストの大文字と小文字は無視されます。検索対象に@samp{FOO}を指定すると、@samp{Foo}や@samp{foo}もマッチとみなされます。これは正規表現にも適用されます。つまり@samp{[aB]}は@samp{a}、@samp{A}、@samp{b}、@samp{B}にもマッチするでしょう。"
+msgstr "デフォルトのEmacs検索では検索するテキストのcase(大文字と小文字)は無視されます。検索対象に@samp{FOO}を指定すると、@samp{Foo}や@samp{foo}もマッチとみなされます。これは正規表現にも適用されます。つまり@samp{[aB]}は@samp{a}、@samp{A}、@samp{b}、@samp{B}にもマッチするでしょう。"
 
 #. type: Plain text
 #: original_texis/searching.texi:208
 msgid "If you do not want this feature, set the variable @code{case-fold-search} to @code{nil}.  Then all letters must match exactly, including case.  This is a buffer-local variable; altering the variable affects only the current buffer.  (@xref{Intro to Buffer-Local}.)  Alternatively, you may change the default value.  In Lisp code, you will more typically use @code{let} to bind @code{case-fold-search} to the desired value."
-msgstr "この機能が望ましくなければ、変数@code{case-fold-search}を@code{nil}にセットしてください。その場合、すべての文字は大文字小文字の違いを含めて、正確にマッチしなければなりません。これはバッファーローカル変数です。この変数の変更は、カレントバッファーだけに影響を与えます(@ref{Intro to Buffer-Local}を参照)。かわりにデフォルト値を変更することもできます。Lispコードでは、@code{let}を使用して@code{case-fold-search}を望む値にバインドするほうが、より一般的でしょう。"
+msgstr "この機能が望ましくなければ変数@code{case-fold-search}に@code{nil}をセットしてください。その場合にはすべての文字はcaseを含めて正確にマッチしなければなりません。これはバッファーローカル変数です。この変数の変更はカレントバッファーだけに影響を与えます(@ref{Intro to Buffer-Local}を参照)。かわりにデフォルト値を変更することもできます。Lispコードでは@code{let}を使用して@code{case-fold-search}を望む値にバインドするほうが、より一般的でしょう。"
 
 #. type: Plain text
 #: original_texis/searching.texi:216
 msgid "Note that the user-level incremental search feature handles case distinctions differently.  When the search string contains only lower case letters, the search ignores case, but when the search string contains one or more upper case letters, the search becomes case-sensitive.  But this has nothing to do with the searching functions used in Lisp code.  @xref{Incremental Search,,, emacs, The GNU Emacs Manual}."
-msgstr "ユーザーレベルのインクリメンタル検索機能では、大文字小文字の区別が異なることに注意してください。検索文字列に含まれるのが小文字だけなら検索は大文字小文字の違いを無視しますが、検索文字列に1つ以上の大文字が含まれれば検索は大文字小文字の違いを区別するようになります。しかしLispコード内で使用される検索関数では、これは何も行いません。@ref{Incremental Search,,, emacs, The GNU Emacs Manual}を参照してください。"
+msgstr "ユーザーレベルのインクリメンタル検索機能ではcaseの区別が異なることに注意してください。検索文字列に含まれるのが小文字だけなら検索はcaseを無視しますが、検索文字列に1つ以上の大文字が含まれれば検索はcaseを区別するようになります。しかしLispコード内で使用される検索関数では、これは何も行いません。@ref{Incremental Search,,, emacs, The GNU Emacs Manual}を参照してください。"
 
 #. type: defopt
 #: original_texis/searching.texi:217
@@ -399,7 +389,7 @@ msgstr "case-fold-search"
 #. type: defopt
 #: original_texis/searching.texi:221
 msgid "This buffer-local variable determines whether searches should ignore case.  If the variable is @code{nil} they do not ignore case; otherwise (and by default) they do ignore case."
-msgstr "このバッファーローカル変数は、検索が大文字小文字の違いを無視するべきかどうかを決定する。この変数が@code{nil}なら、検索は大文字小文字の違いを無視しない。それ以外(とデフォルト)では、大文字小文字のかも無視する。"
+msgstr "このバッファーローカル変数は検索がcaseを無視するべきかどうかを決定する。この変数が@code{nil}なら検索はcaseを無視しない。それ以外(とデフォルト)ではcaseを無視する。"
 
 #. type: defopt
 #: original_texis/searching.texi:223
@@ -410,12 +400,12 @@ msgstr "case-replace"
 #. type: defopt
 #: original_texis/searching.texi:229
 msgid "This variable determines whether the higher-level replacement functions should preserve case.  If the variable is @code{nil}, that means to use the replacement text verbatim.  A non-@code{nil} value means to convert the case of the replacement text according to the text being replaced."
-msgstr "この変数は、高レベルの置換関数が大文字小文字の違いを保持するべきかどうかを決定する。この変数が@code{nil}なら、それは置換テキストをそのまま使用することを意味する。非@code{nil}値は、置換されるテキストに応じて、置換テキストの大文字小文字を変換することを意味する。"
+msgstr "この変数は高レベルの置換関数がcaseを保持するべきかどうかを決定する。この変数が@code{nil}なら、それは置換テキストをそのまま使用することを意味する。非@code{nil}値は置換されるテキストに応じて、置換テキストのcaseを変換することを意味する。"
 
 #. type: defopt
 #: original_texis/searching.texi:232
 msgid "This variable is used by passing it as an argument to the function @code{replace-match}.  @xref{Replacing Match}."
-msgstr "この変数は、それを関数@code{replace-match}の引数として渡すことにより使用される。@ref{Replacing Match}を参照のこと。"
+msgstr "この変数は関数@code{replace-match}の引数として渡すことにより使用される。@ref{Replacing Match}を参照のこと。"
 
 #. type: cindex
 #: original_texis/searching.texi:236
@@ -432,7 +422,7 @@ msgstr "regexp"
 #. type: Plain text
 #: original_texis/searching.texi:243
 msgid "A @dfn{regular expression}, or @dfn{regexp} for short, is a pattern that denotes a (possibly infinite) set of strings.  Searching for matches for a regexp is a very powerful operation.  This section explains how to write regexps; the following section says how to search for them."
-msgstr "@dfn{正規表現(regular expression)}、略して@dfn{regexp}は、文字列の(もしかしたら無限の)セットを表すパターンのことです。regexpにたいするマッチの検索は、とても強力な処理です。このセクションではregexpの記述方法、それ以降のセクションではそれらを検索する方法を示します。"
+msgstr "@dfn{正規表現(regular expression)}、略して@dfn{regexp}は文字列の(もしかしたら無限の)セットを表すパターンのことです。regexpにたいするマッチの検索はとても強力な処理です。このセクションではregexpの記述方法、それ以降のセクションではそれらを検索する方法を示します。"
 
 #. type: findex
 #: original_texis/searching.texi:244
@@ -449,7 +439,7 @@ msgstr "regular expressions, developing"
 #. type: Plain text
 #: original_texis/searching.texi:253
 msgid "For interactive development of regular expressions, you can use the @kbd{M-x re-builder} command.  It provides a convenient interface for creating regular expressions, by giving immediate visual feedback in a separate buffer.  As you edit the regexp, all its matches in the target buffer are highlighted.  Each parenthesized sub-expression of the regexp is shown in a distinct face, which makes it easier to verify even very complex regexps."
-msgstr "正規表現を対話的に開発するために、@kbd{M-x re-builder}コマンドを使用できます。このコマンドは、別のバッファーに即座に視覚的なフィードバックを表示することにより、正規表現を作成するための便利なインターフェースを提供します。regexp編集とともに、ターゲットとなるバッファーのすべてのマッチがハイライトされます。カッコで括られたregexpの部分式(sub-expression)は別のフェイスで表示され、非常に複雑なregexpを簡単に検証することが可能になります。"
+msgstr "正規表現を対話的に開発するために@kbd{M-x re-builder}コマンドを使用できます。このコマンドは別のバッファーに即座に視覚的なフィードバックを表示することにより、正規表現を作成するための便利なインターフェースを提供します。regexp編集とともにターゲットとなるバッファーのすべてのマッチがハイライトされます。カッコで括られたregexpの部分式(sub-expression)は別のフェイスで表示され、非常に複雑なregexpを簡単に検証することが可能になります。"
 
 #. type: node
 #: original_texis/searching.texi:258 original_texis/searching.texi:260
@@ -505,22 +495,22 @@ msgstr "syntax of regular expressions"
 #. type: Plain text
 #: original_texis/searching.texi:276
 msgid "Regular expressions have a syntax in which a few characters are special constructs and the rest are @dfn{ordinary}.  An ordinary character is a simple regular expression that matches that character and nothing else.  The special characters are @samp{.}, @samp{*}, @samp{+}, @samp{?}, @samp{[}, @samp{^}, @samp{$}, and @samp{\\}; no new special characters will be defined in the future.  The character @samp{]} is special if it ends a character alternative (see later).  The character @samp{-} is special inside a character alternative.  A @samp{[:} and balancing @samp{:]} enclose a character class inside a character alternative.  Any other character appearing in a regular expression is ordinary, unless a @samp{\\} precedes it."
-msgstr "正規表現は、少数の文字が特別な構成要素で、残りは@dfn{通常}の文字であるような構文をもちます。通常の文字は、その文字自身だけにマッチする、シンプルな正規表現です。特別な文字は@samp{.}、@samp{*}、@samp{+}、@samp{?}、@samp{[}、@samp{^}、@samp{$}、および@samp{\\}です。将来、新たなスペシャル文字が定義されることはないでしょう。文字候補で終わる場合、@samp{]}はスペシャル文字です。文字候補の間では、@samp{-}はスペシャル文字です。@samp{[:}と、対応する@samp{:]}は、文字候補内の文字クラスです。正規表現内に出現する他の文字は、@samp{\\}が前置されていない限り、通常の文字です。"
+msgstr "正規表現は少数の文字が特別な構成要素であり、残りは@dfn{通常}の文字であるような構文をもちます。通常の文字はその文字自身だけにマッチするシンプルな正規表現です。特別な文字は@samp{.}、@samp{*}、@samp{+}、@samp{?}、@samp{[}、@samp{^}、@samp{$}、および@samp{\\}です。将来に新たなスペシャル文字が定義されることはないでしょう。文字候補で終わる場合には@samp{]}はスペシャル文字です。文字候補の間では@samp{-}はスペシャル文字です。@samp{[:}と対応する@samp{:]}は文字候補内の文字クラスです。正規表現内に出現する他の文字は@samp{\\}が前置されていない限り通常の文字です。"
 
 #. type: Plain text
 #: original_texis/searching.texi:282
 msgid "For example, @samp{f} is not a special character, so it is ordinary, and therefore @samp{f} is a regular expression that matches the string @samp{f} and no other string.  (It does @emph{not} match the string @samp{fg}, but it does match a @emph{part} of that string.)  Likewise, @samp{o} is a regular expression that matches only @samp{o}."
-msgstr "たとえば@samp{f}はスペシャル文字ではなく通常文字なので、@samp{f}は文字列@samp{f}にマッチし、他の文字にはマッチしない正規表現です(これは文字列@samp{fg}には@emph{マッチしない}が、その文字列の@emph{部分}にマッチする)。同様に、@samp{o}は@samp{o}だけにマッチします。"
+msgstr "たとえば@samp{f}はスペシャル文字ではなく通常文字なので、@samp{f}は文字列@samp{f}にマッチして他の文字にはマッチしない正規表現です(これは文字列@samp{fg}には@emph{マッチしない}が、その文字列の@emph{部分}にマッチする)。同様に@samp{o}は@samp{o}だけにマッチします。"
 
 #. type: Plain text
 #: original_texis/searching.texi:287
 msgid "Any two regular expressions @var{a} and @var{b} can be concatenated.  The result is a regular expression that matches a string if @var{a} matches some amount of the beginning of that string and @var{b} matches the rest of the string."
-msgstr "任意の2つの正規表現@var{a}と@var{b}は、結合することができます。結合した結果は、文字列の先頭からある長さの文字列が@var{a}にマッチし、残りの文字列が@var{b}にマッチするような文字列にマッチする正規表現になります。"
+msgstr "任意の2つの正規表現@var{a}と@var{b}を結合することができます。結合した結果は文字列の先頭からある長さの文字列が@var{a}にマッチして、残りの文字列が@var{b}にマッチするような文字列にマッチする正規表現になります。"
 
 #. type: Plain text
 #: original_texis/searching.texi:292
 msgid "As a simple example, we can concatenate the regular expressions @samp{f} and @samp{o} to get the regular expression @samp{fo}, which matches only the string @samp{fo}.  Still trivial.  To do something more powerful, you need to use one of the special regular expression constructs."
-msgstr "単純な例として、文字列@samp{fo}だけにマッチする正規表現の構成要素@samp{fo}を取得するために、正規表現@samp{f}と@samp{o}を結合できます。"
+msgstr "単純な例として文字列@samp{fo}だけにマッチする正規表現の構成要素@samp{fo}を取得するために正規表現@samp{f}と@samp{o}を結合できます。"
 
 #. type: node
 #: original_texis/searching.texi:297 original_texis/searching.texi:299
@@ -570,7 +560,7 @@ msgstr "regexp, special characters in"
 #. type: Plain text
 #: original_texis/searching.texi:305
 msgid "Here is a list of the characters that are special in a regular expression."
-msgstr "以下は、正規表現内で特別な文字のリストです:"
+msgstr "以下は正規表現内で特別な文字のリストです:"
 
 #. type: item
 #: original_texis/searching.texi:308
@@ -587,7 +577,7 @@ msgstr "@samp{.} in regexp"
 #. type: table
 #: original_texis/searching.texi:314
 msgid "is a special character that matches any single character except a newline.  Using concatenation, we can make regular expressions like @samp{a.b}, which matches any three-character string that begins with @samp{a} and ends with @samp{b}."
-msgstr "これは、改行を除く1文字にマッチする。結合を使用して、@samp{a.b}のような正規表現を作成できる。これは@samp{a}で始まり@samp{b}で終わる3文字の文字列にマッチする。"
+msgstr "これは改行を除く1文字にマッチする。結合を使用して@samp{a.b}のような正規表現を作成できる。これは@samp{a}で始まり@samp{b}で終わる3文字の文字列にマッチする。"
 
 #. type: samp{#1}
 #: original_texis/searching.texi:315
@@ -604,12 +594,12 @@ msgstr "@samp{*} in regexp"
 #. type: table
 #: original_texis/searching.texi:321
 msgid "is not a construct by itself; it is a postfix operator that means to match the preceding regular expression repetitively as many times as possible.  Thus, @samp{o*} matches any number of @samp{o}s (including no @samp{o}s)."
-msgstr "これは、それ自身が構成要素ではない。これは前置された正規表現を可能な限り繰り返したものにマッチすることを意味する、後置演算子である。したがって、@samp{o*}は任意の個数の@samp{o}にマッチする(@samp{o}を含まない場合もマッチする)。"
+msgstr "これはそれ自身が構成要素ではない。これは前置された正規表現を可能な限り繰り返したものにマッチすることを意味する後置演算子である。したがって@samp{o*}は任意の個数の@samp{o}にマッチする(@samp{o}を含まない場合にもマッチする)。"
 
 #. type: table
 #: original_texis/searching.texi:325
 msgid "@samp{*} always applies to the @emph{smallest} possible preceding expression.  Thus, @samp{fo*} has a repeating @samp{o}, not a repeating @samp{fo}.  It matches @samp{f}, @samp{fo}, @samp{foo}, and so on."
-msgstr "@samp{*}は常に前置された表現の、@emph{最小}の表現に適用される。つまり@samp{fo*}は@samp{o}の繰り返しであり、@samp{fo}の繰り返しではない。これは@samp{f}、@samp{fo}、@samp{foo}、...にマッチする。"
+msgstr "@samp{*}は常に前置された表現の@emph{最小}の表現に適用される。つまり@samp{fo*}は@samp{o}の繰り返しであり@samp{fo}の繰り返しではない。これは@samp{f}、@samp{fo}、@samp{foo}、...にマッチする。"
 
 #. type: cindex
 #: original_texis/searching.texi:326
@@ -620,12 +610,12 @@ msgstr "backtracking and regular expressions"
 #. type: table
 #: original_texis/searching.texi:337
 msgid "The matcher processes a @samp{*} construct by matching, immediately, as many repetitions as can be found.  Then it continues with the rest of the pattern.  If that fails, backtracking occurs, discarding some of the matches of the @samp{*}-modified construct in the hope that that will make it possible to match the rest of the pattern.  For example, in matching @samp{ca*ar} against the string @samp{caaar}, the @samp{a*} first tries to match all three @samp{a}s; but the rest of the pattern is @samp{ar} and there is only @samp{r} left to match, so this try fails.  The next alternative is for @samp{a*} to match only two @samp{a}s.  With this choice, the rest of the regexp matches successfully."
-msgstr "マッチを行う処理は構成要素@samp{*}を、マッチングにより即座に、見つけ得る回数分処理して、その後にパターンの残りを継続する。これが失敗したら、残りのパターンのマッチが可能になるかもしれないという期待のもと、@samp{*}の変更された構成のうちいくつかのマッチを破棄することによる、バックトラッキングが発生する。たとえば文字列@samp{caaar}にたいして@samp{ca*ar}をマッチングすると、@samp{a*}はまず3つすべての@samp{a}へのマッチを試みる。しかし残りのパターンは@samp{ar}であり、マッチ対象に残されているのは@samp{r}だけなので、この試みは失敗する。@samp{a*}にたいする次の代替策は、2つの@samp{a}だけへのマッチである。この選択では、残りのregexpのマッチは成功する。"
+msgstr "マッチを行う処理は構成要素@samp{*}を、マッチングにより即座に見つけ得る回数分処理して、その後にパターンの残りを継続する。これが失敗したら残りのパターンのマッチが可能になるかもしれないという期待のもとに、@samp{*}の変更された構成のうちいくつかのマッチを破棄することによるバックトラッキングが発生する。たとえば文字列@samp{caaar}にたいして@samp{ca*ar}をマッチングすると、@samp{a*}はまず3つすべての@samp{a}へのマッチを試みる。しかし残りのパターンは@samp{ar}でありマッチ対象に残されているのは@samp{r}だけなのでこの試みは失敗する。@samp{a*}にたいする次の代替策は2つの@samp{a}だけへのマッチである。この選択では残りのregexpのマッチは成功する。"
 
 #. type: table
 #: original_texis/searching.texi:348
 msgid "@strong{Warning:} Nested repetition operators can run for an indefinitely long time, if they lead to ambiguous matching.  For example, trying to match the regular expression @samp{\\(x+y*\\)*a} against the string @samp{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxz} could take hours before it ultimately fails.  Emacs must try each way of grouping the @samp{x}s before concluding that none of them can work.  Even worse, @samp{\\(x*\\)*} can match the null string in infinitely many ways, so it causes an infinite loop.  To avoid these problems, check nested repetitions carefully, to make sure that they do not cause combinatorial explosions in backtracking."
-msgstr "@strong{警告:} ネストされた繰り返し処理は、それらが曖昧なマッチとなるような場合は、無期限な長時間の実行となり得る。たとえば文字列@samp{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxz}にたいして正規表現@samp{\\(x+y*\\)*a}のマッチを試みると、それが最終的に失敗するまでに数時間を要し得る。Emacsはその試みのいずれも機能しないと結論する前に、@samp{x}のグループ家のそれぞれを試みなければならない。さらに悪いことに、@samp{\\(x*\\)*}は無数の方法でnull文字列にマッチ可能なので、これは無限ループを引き起こす。これらの問題を避けるには、ネストされた繰り返しがバックトラッキングでの組み合わせ爆発(combinatorial explosion)が発生しないことを確実にするために注意深くチェックすること。"
+msgstr "@strong{警告:} ネストされた繰り返し処理は、それらが曖昧なマッチとなるような場合には無期限な長時間の実行となり得る。たとえば文字列@samp{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxz}にたいして正規表現@samp{\\(x+y*\\)*a}のマッチを試みると、それが最終的に失敗するまでに数時間を要す可能性がある。Emacsはその試みのいずれも機能しないと結論する前に、@samp{x}のグループ化のそれぞれを試みなければならない。さらに悪いことに@samp{\\(x*\\)*}は無数の方法でnull文字列にマッチ可能なので無限ループを引き起こす。これらの問題を避けるにはネストされた繰り返しがバックトラッキングでの組み合わせ爆発(combinatorial explosion)が発生しないことを確実にするために注意深くチェックすること。"
 
 #. type: samp{#1}
 #: original_texis/searching.texi:349
@@ -642,7 +632,7 @@ msgstr "@samp{+} in regexp"
 #. type: table
 #: original_texis/searching.texi:355
 msgid "is a postfix operator, similar to @samp{*} except that it must match the preceding expression at least once.  So, for example, @samp{ca+r} matches the strings @samp{car} and @samp{caaaar} but not the string @samp{cr}, whereas @samp{ca*r} matches all three strings."
-msgstr "これは@samp{*}のような後置演算子だが、これは前置された表現に少なくとも1回マッチしなければならない点が異なる。たとえば@samp{ca+r}は文字列@samp{car}や@samp{caaaar}にマッチするが、文字列@samp{cr}にはマッチせず、その一方で@samp{ca*r}はこれら3つすべての文字列にマッチする。"
+msgstr "これは@samp{*}のような後置演算子だが前置された表現に少なくとも1回マッチしなければならない点が異なる。たとえば@samp{ca+r}は文字列@samp{car}や@samp{caaaar}にマッチするが文字列@samp{cr}にはマッチせず、その一方で@samp{ca*r}はこれら3つすべての文字列にマッチする。"
 
 #. type: samp{#1}
 #: original_texis/searching.texi:356
@@ -659,7 +649,7 @@ msgstr "@samp{?} in regexp"
 #. type: table
 #: original_texis/searching.texi:361
 msgid "is a postfix operator, similar to @samp{*} except that it must match the preceding expression either once or not at all.  For example, @samp{ca?r} matches @samp{car} or @samp{cr}; nothing else."
-msgstr "これは@samp{*}のような後置演算子だが、これは前置された表現に1回、またはマッチしないかのいずれかでなければならない点が異なる。申@samp{ca?r}は@samp{car}と@samp{cr}にマッチするが、他にはマッチしない。"
+msgstr "これは@samp{*}のような後置演算子だが前置された表現に1回、またはマッチしないかのいずれかでなければならない点が異なる。例えば@samp{ca?r}は@samp{car}と@samp{cr}にマッチするが他にはマッチしない。"
 
 #. type: item
 #: original_texis/searching.texi:362
