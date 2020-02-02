@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-15 00:49+0900\n"
+"PO-Revision-Date: 2020-02-02 21:30+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -48,17 +48,17 @@ msgstr "process"
 #. type: Plain text
 #: original_texis/processes.texi:18
 msgid "In the terminology of operating systems, a @dfn{process} is a space in which a program can execute.  Emacs runs in a process.  Emacs Lisp programs can invoke other programs in processes of their own.  These are called @dfn{subprocesses} or @dfn{child processes} of the Emacs process, which is their @dfn{parent process}."
-msgstr "オペレーティングシステムの用語では、@dfn{プロセス(process)}とはプログラムを実行できるスペースのことです。Emacsはプロセス内で実行されます。Emacs Lispプログラムは、別のプログラムをそれら自身のプロセス内で呼び出すことができます。これらは、@dfn{親プロセス(parent process)}であるEmacsプロセスの@dfn{サブプロセス(subprocesses)}、または@dfn{子プロセス(child processes)}と呼ばれます。"
+msgstr "オペレーティングシステムの用語では@dfn{プロセス(process)}とはプログラムを実行できるスペースのことです。Emacsはプロセス内で実行されます。Emacs Lispプログラムは別のプログラムをそれら自身のプロセス内で呼び出すことができます。これらは@dfn{親プロセス(parent process)}であるEmacsプロセスの@dfn{サブプロセス(subprocesses)}、または@dfn{子プロセス(child processes)}と呼ばれます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:29
 msgid "A subprocess of Emacs may be @dfn{synchronous} or @dfn{asynchronous}, depending on how it is created.  When you create a synchronous subprocess, the Lisp program waits for the subprocess to terminate before continuing execution.  When you create an asynchronous subprocess, it can run in parallel with the Lisp program.  This kind of subprocess is represented within Emacs by a Lisp object which is also called a ``process''.  Lisp programs can use this object to communicate with the subprocess or to control it.  For example, you can send signals, obtain status information, receive output from the process, or send input to it."
-msgstr "Emacsのサブプロセスは@dfn{同期(synchronous)}、または@dfn{非同期(asynchronous)}であり、それはそれらが作成された方法に依存します。同期サブプロセスを作成した際、Lispプログラムは実行を継続する前に、そのサブプロセスの終了を待機します。非同期サブプロセスを作成したときは、それをLispプログラムと並行して実行できます。この種のサブプロセスは、EmacsではLispオブジェクととして表現され、そのオブジェクトも``プロセス''と呼ばれています。Lispプログラムはサブプロセスとのやり取りや、サブプロセスの制御のために、このオブジェクトを使用できます。たとえばシグナル送信、ステータス情報の取得、プロセス出力の受信や、プロセスへ入力を送信することができます。"
+msgstr "Emacsのサブプロセスは@dfn{同期(synchronous)}か@dfn{非同期(asynchronous)}であり、それはそれらが作成された方法に依存します。同期サブプロセスを作成した際には、Lispプログラムは実行を継続する前にそのサブプロセスの終了を待機します。非同期サブプロセスを作成したときには、それをLispプログラムと並行して実行できます。この種のサブプロセスはEmacsではLispオブジェクととして表現され、そのオブジェクトも``プロセス''と呼ばれています。Lispプログラムはサブプロセスとのやり取りやサブプロセスの制御のためにこのオブジェクトを使用できます。たとえばシグナル送信、ステータス情報の取得、プロセス出力の受信やプロセスへ入力を送信することができます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:36
 msgid "In addition to processes that run programs, Lisp programs can open connections of several types to devices or processes running on the same machine or on other machines.  The supported connection types are: TCP and UDP network connections, serial port connections, and pipe connections.  Each such connection is also represented by a process object."
-msgstr ""
+msgstr "プログラムを実行するプロセスに加えて、Lispプログラムは同一または他のマシン上で実行中のデバイスやプロセスにたいして、いくつかのタイプの接続をオープンできます。サポートされる接続タイプはネットワーク接続のTCPとUDP、シリアルポート接続、およびパイプ接続です。そのような接続はそれぞれプロセスオブジェクトとしても表現されます。"
 
 #. type: defun
 #: original_texis/processes.texi:37
@@ -68,10 +68,8 @@ msgstr "processp object"
 
 #. type: defun
 #: original_texis/processes.texi:42
-#, fuzzy
-#| msgid "This function returns @code{t} if @var{object} represents an Emacs subprocess, @code{nil} otherwise."
 msgid "This function returns @code{t} if @var{object} represents an Emacs process object, @code{nil} otherwise.  The process object can represent a subprocess running a program or a connection of any supported type."
-msgstr "この関数は、@var{object}がEmacsのサブプロセスを表すなら@code{t}、それ以外は@code{nil}をリターンする。"
+msgstr "この関数は、@var{object}がEmacsのプロセスオブジェクトを表すなら@code{t}、それ以外は@code{nil}をリターンする。プロセスオブジェクトはプログラム実行中のサブプロセスやサポートされた任意のタイプの接続を表すことができる。"
 
 #. type: Plain text
 #: original_texis/processes.texi:47
@@ -280,7 +278,7 @@ msgstr "Misc Network"
 #. type: menuentry
 #: original_texis/processes.texi:71
 msgid "Additional relevant functions for net connections."
-msgstr "ネット接続用の追加の関連関数。"
+msgstr "ネット接続用の追加の関連する関数。"
 
 #. type: node
 #: original_texis/processes.texi:71 original_texis/processes.texi:2805
@@ -324,15 +322,13 @@ msgstr "process creation"
 
 #. type: Plain text
 #: original_texis/processes.texi:86
-#, fuzzy
-#| msgid "There are three primitives that create a new subprocess in which to run a program.  One of them, @code{start-process}, creates an asynchronous process and returns a process object (@pxref{Asynchronous Processes}).  The other two, @code{call-process} and @code{call-process-region}, create a synchronous process and do not return a process object (@pxref{Synchronous Processes}).  There are various higher-level functions that make use of these primitives to run particular types of process."
 msgid "There are three primitives that create a new subprocess in which to run a program.  One of them, @code{make-process}, creates an asynchronous process and returns a process object (@pxref{Asynchronous Processes}).  The other two, @code{call-process} and @code{call-process-region}, create a synchronous process and do not return a process object (@pxref{Synchronous Processes}).  There are various higher-level functions that make use of these primitives to run particular types of process."
-msgstr "内部でプログラムを実行するサブプロセスを作成するために、3つのプリミティブが存在します。1つは@code{start-process}で、これは非同期プロセスを作成して、プロセスオブジェクトをリターンします(@ref{Asynchronous Processes}を参照)。他の2つは@code{call-process}と@code{call-process-region}で、これらは同期プロセスを作成して、プロセスオブジェクとをリターンしません(@ref{Synchronous Processes}を参照)。特定のタイプのプロセスを実行するために、これらのプリミティブを利用する、さまざまな高レベル関数が存在します。"
+msgstr "内部でプログラムを実行するサブプロセスを作成するために3つのプリミティブが存在します。それらの1つは@code{make-process}であり、これは非同期プロセスを作成してプロセスオブジェクトをリターンします(@ref{Asynchronous Processes}を参照)。他の2つは@code{call-process}と@code{call-process-region}です。これらは同期プロセスを作成してプロセスオブジェクとをリターンしません(@ref{Synchronous Processes}を参照)。特定のタイプのプロセスを実行するために、これらのプリミティブを利用するさまざまな高レベル関数が存在します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:90
 msgid "Synchronous and asynchronous processes are explained in the following sections.  Since the three functions are all called in a similar fashion, their common arguments are described here."
-msgstr "同期プロセスと非同期プロセスについては、以降のセクションで説明します。この3つの関数はすべて類似した様式で呼び出されるので、ここでそれらに共通の引数について説明します。"
+msgstr "同期プロセスと非同期プロセスについては、以降のセクションで説明します。この3つの関数はすべて類似した様式で呼び出されるので、ここではそれらに共通の引数について説明します。"
 
 #. type: cindex
 #: original_texis/processes.texi:91
@@ -354,15 +350,13 @@ msgstr "@env{HOME} environment variable"
 
 #. type: Plain text
 #: original_texis/processes.texi:105
-#, fuzzy
-#| msgid "In all cases, the function's @var{program} argument specifies the program to be run.  An error is signaled if the file is not found or cannot be executed.  If the file name is relative, the variable @code{exec-path} contains a list of directories to search.  Emacs initializes @code{exec-path} when it starts up, based on the value of the environment variable @env{PATH}.  The standard file name constructs, @samp{~}, @samp{.}, and @samp{..}, are interpreted as usual in @code{exec-path}, but environment variable substitutions (@samp{$HOME}, etc.)@: are not recognized; use @code{substitute-in-file-name} to perform them (@pxref{File Name Expansion}).  @code{nil} in this list refers to @code{default-directory}."
 msgid "In all cases, the functions specify the program to be run.  An error is signaled if the file is not found or cannot be executed.  If the file name is relative, the variable @code{exec-path} contains a list of directories to search.  Emacs initializes @code{exec-path} when it starts up, based on the value of the environment variable @env{PATH}.  The standard file name constructs, @samp{~}, @samp{.}, and @samp{..}, are interpreted as usual in @code{exec-path}, but environment variable substitutions (@samp{$HOME}, etc.)@: are not recognized; use @code{substitute-in-file-name} to perform them (@pxref{File Name Expansion}).  @code{nil} in this list refers to @code{default-directory}."
-msgstr "すべての場合において、その関数の@var{program}引数は、実行するプログラムを指定します。ファイルが見つからなかったり、実行できない場合は、エラーがシグナルされます。ファイル名が相対的な場合、検索するディレクトリーのリストは、変数@code{exec-path}に格納されています。Emacsは起動時、環境変数@env{PATH}の値にもとづいて、@code{exec-path}を初期化します。@code{exec-path}内では、標準的なファイル名構成要素@samp{~}、@samp{.}、@samp{..}は通常どおり解釈されますが、環境変数の置換(@samp{$HOME}等)は認識されません。それらの置換を行うには、@code{substitute-in-file-name}を使用してください(@ref{File Name Expansion}を参照)。このリスト内で@code{nil}は、@code{default-directory}を参照します。"
+msgstr "すべての場合において、関数は実行するプログラムを指定します。ファイルが見つからなかったり実行できなければエラーがシグナルされます。ファイル名が相対的なら、検索するディレクトリーのリストは変数@code{exec-path}に格納されています。Emacsは起動の際に環境変数@env{PATH}の値にもとづいて@code{exec-path}を初期化します。@code{exec-path}内では標準的なファイル名構成要素@samp{~}、@samp{.}、@samp{..}は通常どおりに解釈されますが、環境変数の置換(@samp{$HOME}等)は認識されません。それらの置換を行うには@code{substitute-in-file-name}を使用してください(@ref{File Name Expansion}を参照)。このリスト内で@code{nil}は@code{default-directory}を参照します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:108
 msgid "Executing a program can also try adding suffixes to the specified name:"
-msgstr "プログラムの実行では、指定された名前にサフィックスの追加を試みることもできます:"
+msgstr "プログラムの実行では指定された名前にサフィックスの追加を試みることもできます:"
 
 #. type: defopt
 #: original_texis/processes.texi:109
@@ -373,21 +367,17 @@ msgstr "exec-suffixes"
 #. type: defopt
 #: original_texis/processes.texi:114
 msgid "This variable is a list of suffixes (strings) to try adding to the specified program file name.  The list should include @code{\"\"} if you want the name to be tried exactly as specified.  The default value is system-dependent."
-msgstr "この変数は、指定されたプログラムファイル名への追加を試みるための、サフィックス(文字列)のリストである。指定されたとおりの名前を試みたいなら、このリストに@code{\"\"}を含めること。デフォルト値はシステムに依存する。"
+msgstr "この変数は指定されたプログラムファイル名への追加を試みるためのサフィックス(文字列)のリスト。指定されたとおりの名前を試みたいならリストに@code{\"\"}を含めること。デフォルト値はシステム依存。"
 
 #. type: Plain text
 #: original_texis/processes.texi:120
-#, fuzzy
-#| msgid "@strong{Please note:} The argument @var{program} contains only the name of the program; it may not contain any command-line arguments.  You must use a separate argument, @var{args}, to provide those, as described below."
 msgid "@strong{Please note:} The argument @var{program} contains only the name of the program file; it may not contain any command-line arguments.  You must use a separate argument, @var{args}, to provide those, as described below."
-msgstr "@strong{注意してください:} 引数@var{program}にはプログラム名だけが含まれ、コマンドライン引数を含めることはできない。これらを提供するために、以下で説明する別の引数@var{args}を使用しなければならない。"
+msgstr "@strong{注意してください:} 引数@var{program}にはプログラムのファイル名だけが含まれて、コマンドライン引数を含めることはできない。これらを提供するために以下で説明する別の引数@var{args}を使用しなければならない。"
 
 #. type: Plain text
 #: original_texis/processes.texi:135
-#, fuzzy
-#| msgid "Each of the subprocess-creating functions has a @var{buffer-or-name} argument that specifies where the standard output from the program will go.  It should be a buffer or a buffer name; if it is a buffer name, that will create the buffer if it does not already exist.  It can also be @code{nil}, which says to discard the output, unless a custom filter function handles it.  (@xref{Filter Functions}, and @ref{Read and Print}.)  Normally, you should avoid having multiple processes send output to the same buffer because their output would be intermixed randomly.  For synchronous processes, you can send the output to a file instead of a buffer."
 msgid "Each of the subprocess-creating functions has a @var{buffer-or-name} argument that specifies where the output from the program will go.  It should be a buffer or a buffer name; if it is a buffer name, that will create the buffer if it does not already exist.  It can also be @code{nil}, which says to discard the output, unless a custom filter function handles it.  (@xref{Filter Functions}, and @ref{Read and Print}.)  Normally, you should avoid having multiple processes send output to the same buffer because their output would be intermixed randomly.  For synchronous processes, you can send the output to a file instead of a buffer (and the corresponding argument is therefore more appropriately called @var{destination}).  By default, both standard output and standard error streams go to the same destination, but all the 3 primitives allow optionally to direct the standard error stream to a different destination."
-msgstr "サブプロセス作成関数にはそれぞれ、@var{buffer-or-name}引数があります。これはプログラムの標準出力の行き先を指定します。これはバッファーかバッファー名であるべきです。バッファー名なら、もしそのバッファーがまだ作成されていなければ、そのバッファーを作成します。@code{nil}を指定することもでき、その場合はカスタム製のフィルター関数が出力を処理するのでなければ、出力を破棄するよう指示します(@ref{Filter Functions}、および@ref{Read and Print}を参照のこと)。通常は、出力がランダムに混在してしまうため、同一バッファーに複数プロセスの出力を送信するのは避けるべきです。同期プロセスにたいしては、バッファーのかわりにファイルに出力を送信できます。"
+msgstr "サブプロセス作成関数にはそれぞれ@var{buffer-or-name}引数があります。これはプログラムの出力の行き先を指定します。これはバッファーかバッファー名であるべきです。バッファー名の場合には、もしそのバッファーがまだ作成されていなければバッファーを作成します。@code{nil}を指定することもでき、その場合にはカスタム製のフィルター関数が出力を処理するのでなければ出力を破棄するよう指示します(@ref{Filter Functions}と@ref{Read and Print}を参照)。通常は出力がランダムに混在してしまうために、同一バッファーに複数プロセスの出力を送信するのは避けるべきです。同期プロセスにたいしてはバッファーのかわりにファイルに出力を送信できます(したがって対応する引数はより適切な@var{destination}という名前で呼ばれる)。デフォルトでは標準出力と標準エラーの両ストリームの行き先(destination)は同じだが、3つのプリミティブはすべてオプションで標準エラーストリームに別の行き先を指定できる。"
 
 #. type: cindex
 #: original_texis/processes.texi:136
@@ -397,10 +387,8 @@ msgstr "program arguments"
 
 #. type: Plain text
 #: original_texis/processes.texi:147
-#, fuzzy
-#| msgid "All three of the subprocess-creating functions have a @code{&rest} argument, @var{args}.  The @var{args} must all be strings, and they are supplied to @var{program} as separate command line arguments.  Wildcard characters and other shell constructs have no special meanings in these strings, since the strings are passed directly to the specified program."
 msgid "All three of the subprocess-creating functions allow to specify command-line arguments for the process to run. For @code{call-process} and @code{call-process-region}, these come in the form of a @code{&rest} argument, @var{args}.  For @code{make-process}, both the program to run and its command-line arguments are specified as a list of strings.  The command-line arguments must all be strings, and they are supplied to the program as separate argument strings.  Wildcard characters and other shell constructs have no special meanings in these strings, since the strings are passed directly to the specified program."
-msgstr "これら3つのサブプロセス作成関数はすべて、@code{&rest}引数である@var{args}をもっています。@var{args}はすべて文字列でなければならず、それらは個別のコマンドライン引数として、@var{program}に与えられます。これらの文字列は指定されたプログラムに直接渡されるので、文字列内ではワイルドカード文字やその他のshell構成要素は特別な意味をもちません。"
+msgstr "これら3つのサブプロセス作成関数は、すべて実行するプロセスにコマンドライン引数を指定できます。@code{call-process}と@code{call-process-region}では、これらは@code{&rest}形式の引数@var{args}で与えられます。@code{make-process}では実行するプログラムとコマンドライン引数はいずれも文字列のリストとして指定されます。コマンドライン引数はすべて文字列でなければならず、それらは別個の引数文字列としてプログラムに与えられます。文字列は指定されたプログラムに直接渡されるので、ワイルドカード文字やその他のshell構文はこれらの文字列内では特別な意味をもちません。"
 
 #. type: cindex
 #: original_texis/processes.texi:148
@@ -411,7 +399,7 @@ msgstr "environment variables, subprocesses"
 #. type: Plain text
 #: original_texis/processes.texi:153
 msgid "The subprocess inherits its environment from Emacs, but you can specify overrides for it with @code{process-environment}.  @xref{System Environment}.  The subprocess gets its current directory from the value of @code{default-directory}."
-msgstr "サブプロセスはその環境をEmacsから継承しますが、@code{process-environment}でそれをオーバーラードするよう指定することができます。@ref{System Environment}を参照してください。サブプロセスは自身のカレントディレクトリーを、@code{default-directory}の値から取得します。"
+msgstr "サブプロセスはその環境をEmacsから継承しますが、@code{process-environment}でそれをオーバーラードするよう指定することができます。@ref{System Environment}を参照してください。サブプロセスは自身のカレントディレクトリーを@code{default-directory}の値から取得します。"
 
 #. type: defvar
 #: original_texis/processes.texi:154
@@ -428,7 +416,7 @@ msgstr "movemail"
 #. type: defvar
 #: original_texis/processes.texi:160
 msgid "The value of this variable is a string, the name of a directory that contains programs that come with GNU Emacs and are intended for Emacs to invoke.  The program @code{movemail} is an example of such a program; Rmail uses it to fetch new mail from an inbox."
-msgstr "この変数の値は、GNU Emacsとともに配布され、Emacsにより呼び出されることを意図したプログラムを含むディレクトリーの名前(文字列)である。プログラム@code{movemail}はそのようなプログラムの例であり、Rmailはinboxから新しいメールを読み込むためにこのプログラムを使用する。"
+msgstr "この変数の値はGNU Emacsとともに配布されて、Emacsにより呼び出されることを意図したプログラムを含むディレクトリーの名前(文字列)。プログラム@code{movemail}はそのようなプログラムの例であり、Rmailはinboxから新しいメールを読み込むためにこのプログラムを使用する。"
 
 #. type: defopt
 #: original_texis/processes.texi:162
@@ -438,10 +426,8 @@ msgstr "exec-path"
 
 #. type: defopt
 #: original_texis/processes.texi:168
-#, fuzzy
-#| msgid "The value of this variable is a list of directories to search for programs to run in subprocesses.  Each element is either the name of a directory (i.e., a string), or @code{nil}, which stands for the default directory (which is the value of @code{default-directory})."
 msgid "The value of this variable is a list of directories to search for programs to run in subprocesses.  Each element is either the name of a directory (i.e., a string), or @code{nil}, which stands for the default directory (which is the value of @code{default-directory}).  @xref{Locating Files, executable-find}, for the details of this search."
-msgstr "この変数の値は、サブプロセス内で実行するためのプログラムを検索するための、ディレクトリーのリストである。要素はそれぞれ、ディレクトリーの名前(文字列)、または@code{nil}のいずれかである。@code{nil}はデフォルトディレクトリー(@code{default-directory}の値)を意味する。"
+msgstr "この変数の値はサブプロセス内で実行するためのプログラムを検索するためのディレクトリーのリスト。要素はそれぞれディレクトリーの名前(文字列)、または@code{nil}のいずれか。@code{nil}はデフォルトディレクトリー(@code{default-directory}の値)を意味する。この検索の詳細は@ref{Locating Files, executable-find}を参照のこと。"
 
 #. type: cindex
 #: original_texis/processes.texi:168
@@ -452,12 +438,12 @@ msgstr "program directories"
 #. type: defopt
 #: original_texis/processes.texi:173
 msgid "The value of @code{exec-path} is used by @code{call-process} and @code{start-process} when the @var{program} argument is not an absolute file name."
-msgstr "@code{exec-path}の値は、@var{program}引数が絶対ファイル名でないとき、@code{call-process}および@code{start-process}により使用される。"
+msgstr "@code{exec-path}の値は、@var{program}引数が絶対ファイル名でないときに@code{call-process}と@code{start-process}により使用される。"
 
 #. type: defopt
 #: original_texis/processes.texi:178
 msgid "Generally, you should not modify @code{exec-path} directly.  Instead, ensure that your @env{PATH} environment variable is set appropriately before starting Emacs.  Trying to modify @code{exec-path} independently of @env{PATH} can lead to confusing results."
-msgstr "一般的には、@code{exec-path}を直接変更するべきではない。かわりにEmacs起動前に、環境変数@env{PATH}が適切にセットされているか確認すること。@env{PATH}とは独立に@code{exec-path}の変更を試みると、混乱した結果へと導かれ得る。"
+msgstr "一般的には@code{exec-path}を直接変更するべきではない。かわりにEmacs起動前に環境変数@env{PATH}が適切にセットされているか確認すること。@env{PATH}とは独立に@code{exec-path}の変更を試みると混乱した結果へと導かれ得る。"
 
 #. type: cindex
 #: original_texis/processes.texi:182
@@ -474,7 +460,7 @@ msgstr "shell command arguments"
 #. type: Plain text
 #: original_texis/processes.texi:191
 msgid "Lisp programs sometimes need to run a shell and give it a command that contains file names that were specified by the user.  These programs ought to be able to support any valid file name.  But the shell gives special treatment to certain characters, and if these characters occur in the file name, they will confuse the shell.  To handle these characters, use the function @code{shell-quote-argument}:"
-msgstr "Lispプログラムがshellを実行して、ユーザーが指定したファイル名を含むコマンドを与える必要がある場合が時折あります。これらのプログラムは、任意の有効なファイル名をサポート可能であるはずです。しかしshellは特定の文字を特別に扱い、それらの文字がファイル名に含まれていると、shellを混乱させるでしょう。これらの文字を処理するためには、関数@code{shell-quote-argument}を使用します。"
+msgstr "Lispプログラムがshellを実行して、ユーザーが指定したファイル名を含むコマンドを与える必要がある場合が時折あります。これらのプログラムは任意の有効なファイル名をサポート可能であるはずです。しかしshellは特定の文字を特別に扱い、それらの文字がファイル名に含まれているとshellを混乱させるでしょう。これらの文字を処理するためには関数@code{shell-quote-argument}を使用します。"
 
 #. type: defun
 #: original_texis/processes.texi:192
@@ -485,14 +471,12 @@ msgstr "shell-quote-argument argument"
 #. type: defun
 #: original_texis/processes.texi:197
 msgid "This function returns a string that represents, in shell syntax, an argument whose actual contents are @var{argument}.  It should work reliably to concatenate the return value into a shell command and then pass it to a shell for execution."
-msgstr "この関数は、実際のコンテンツが@var{argument}であるような引数を表す文字列を、shellの構文でリターンする。リターン値をshellコマンドに結合して、実行のためにそれをshellに渡すことにより、信頼性をもって機能するはずである。"
+msgstr "この関数は実際のコンテンツが@var{argument}であるような引数を表す文字列をshellの構文でリターンする。リターン値をshellコマンドに結合して実行のためにそれをshellに渡すことにより、信頼性をもって機能するはずである。"
 
 #. type: defun
 #: original_texis/processes.texi:202
-#, fuzzy
-#| msgid "Precisely what this function does depends on your operating system.  The function is designed to work with the syntax of your system's standard shell; if you use an unusual shell, you will need to redefine this function."
 msgid "Precisely what this function does depends on your operating system.  The function is designed to work with the syntax of your system's standard shell; if you use an unusual shell, you will need to redefine this function.  @xref{Security Considerations}."
-msgstr "この関数が正確に何を行うかは、オペレーティングシステムに依存する。この関数は、そのシステムの標準shellの構文で機能するようデザインされている。非標準のshellを使用する場合は、この関数を再定義する必要があるだろう。"
+msgstr "この関数が正確に何を行うかはオペレーティングシステムに依存する。この関数はそのシステムの標準shellの構文で機能するようデザインされている。非標準のshellを使用する場合には、この関数を再定義する必要があるだろう。@ref{Security Considerations}を参照のこと。"
 
 #. type: example
 #: original_texis/processes.texi:207
@@ -523,23 +507,18 @@ msgstr ""
 #. type: defun
 #: original_texis/processes.texi:215
 msgid "Here's an example of using @code{shell-quote-argument} to construct a shell command:"
-msgstr "以下は@code{shell-quote-argument}を使用して、shellコマンドを構築する例である:"
+msgstr "以下は@code{shell-quote-argument}を使用してshellコマンドを構築する例:"
 
 #. type: example
 #: original_texis/processes.texi:221
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(concat \"diff -c \"\n"
-#| "        (shell-quote-argument oldfile)\n"
-#| "        \" \"\n"
-#| "        (shell-quote-argument newfile))\n"
+#, no-wrap
 msgid ""
 "(concat \"diff -u \"\n"
 "        (shell-quote-argument oldfile)\n"
 "        \" \"\n"
 "        (shell-quote-argument newfile))\n"
 msgstr ""
-"(concat \"diff -c \"\n"
+"(concat \"diff -u \"\n"
 "        (shell-quote-argument oldfile)\n"
 "        \" \"\n"
 "        (shell-quote-argument newfile))\n"
@@ -570,10 +549,8 @@ msgstr "@code{start-process}, command-line arguments from minibuffer"
 
 #. type: Plain text
 #: original_texis/processes.texi:241
-#, fuzzy
-#| msgid "The following two functions are useful for combining a list of individual command-line argument strings into a single string, and taking a string apart into a list of individual command-line arguments.  These functions are mainly intended for converting user input in the minibuffer, a Lisp string, into a list of string arguments to be passed to @code{call-process} or @code{start-process}, or for converting such lists of arguments into a single Lisp string to be presented in the minibuffer or echo area."
 msgid "The following two functions are useful for combining a list of individual command-line argument strings into a single string, and taking a string apart into a list of individual command-line arguments.  These functions are mainly intended for converting user input in the minibuffer, a Lisp string, into a list of string arguments to be passed to @code{make-process}, @code{call-process} or @code{start-process}, or for converting such lists of arguments into a single Lisp string to be presented in the minibuffer or echo area.  Note that if a shell is involved (e.g., if using @code{call-process-shell-command}), arguments should still be protected by @code{shell-quote-argument}; @code{combine-and-quote-strings} is @emph{not} intended to protect special characters from shell evaluation."
-msgstr "以下の2つの関数は、コマンドライン引数の文字列のリストを単一の文字列に結合したり、単一の文字列を個別のコマンドライン引数のリストへ分割するために有用です。これらの関数は主に、ミニバッファーでのユーザー入力であるLisp文字列を@code{call-process}や@code{start-process}に渡す文字列引数のリストへ変換したり、そのような引数のリストをミニバッファーやエコーエリアに表示するためのLisp文字列に変換することを意図しています。"
+msgstr "以下の2つの関数はコマンドライン引数の文字列のリストを単一の文字列に結合したり、単一の文字列を個別のコマンドライン引数のリストへ分割するために有用です。これらの関数は主にミニバッファーでのユーザー入力であるLisp文字列を@code{make-process}、@code{call-process}や@code{start-process}に渡す文字列引数のリストへ変換したり、そのような引数のリストをミニバッファーやエコーエリアに表示するためのLisp文字列に変換することを意図しています。(@code{call-process-shell-command}を使用して)shellが呼び出される場合には、引数を依然として@code{shell-quote-argument}で保護する必要があることに注意。@code{combine-and-quote-strings}はshellの評価から特殊文字を保護することを@emph{意図していない}。"
 
 #. type: defun
 #: original_texis/processes.texi:242
@@ -584,17 +561,17 @@ msgstr "split-string-and-unquote string &optional separators"
 #. type: defun
 #: original_texis/processes.texi:247
 msgid "This function splits @var{string} into substrings at matches for the regular expression @var{separators}, like @code{split-string} does (@pxref{Creating Strings}); in addition, it removes quoting from the substrings.  It then makes a list of the substrings and returns it."
-msgstr "この関数は@code{split-string}(@pxref{Creating Strings}を参照)が行うように、正規表現@var{separators}にたいするマッチで、@var{string}を部分文字列に分割する。さらに加えて、その部分文字列からクォートを削除する。それから部分文字列のリストを作成して、それをリターンする。"
+msgstr "この関数は@code{split-string}(@ref{Creating Strings}を参照)が行うように、正規表現@var{separators}にたいするマッチで@var{string}を部分文字列に分割する。さらに加えてその部分文字列からクォートを削除する。それから部分文字列のリストを作成してリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:251
 msgid "If @var{separators} is omitted or @code{nil}, it defaults to @code{\"\\\\s-+\"}, which is a regular expression that matches one or more characters with whitespace syntax (@pxref{Syntax Class Table})."
-msgstr "@var{separators}が省略、または@code{nil}の場合のデフォルトは@code{\"\\\\s-+\"}で、これは空白文字構文(@ref{Syntax Class Table}を参照)をもつ1つ以上の文字にマッチする正規表現である。"
+msgstr "@var{separators}が省略または@code{nil}の場合のデフォルトは@code{\"\\\\s-+\"}であり、これは空白文字構文(@ref{Syntax Class Table}を参照)をもつ1つ以上の文字にマッチする正規表現である。"
 
 #. type: defun
 #: original_texis/processes.texi:256
 msgid "This function supports two types of quoting: enclosing a whole string in double quotes @code{\"@dots{}\"}, and quoting individual characters with a backslash escape @samp{\\}.  The latter is also used in Lisp strings, so this function can handle those as well."
-msgstr "この関数は、2つのタイプのクォートをサポートする。1つは文字列全体をダブルクォートで囲う@code{\"@dots{}\"}のようなクォートで、もう1つはバックスラッシュ@samp{\\}によるエスケープで文字を個別にクォートするタイプである。後者はLisp文字列内でも使用されるので、この関数はそれらも同様に扱うことができる。"
+msgstr "この関数は2つのタイプのクォートをサポートする。1つは文字列全体をダブルクォートで囲う@code{\"@dots{}\"}のようなクォートで、もう1つはバックスラッシュ@samp{\\}によるエスケープで文字を個別にクォートするタイプである。後者はLisp文字列内でも使用されるので、この関数はそれらも同様に扱うことができる。"
 
 #. type: defun
 #: original_texis/processes.texi:258
@@ -605,12 +582,12 @@ msgstr "combine-and-quote-strings list-of-strings &optional separator"
 #. type: defun
 #: original_texis/processes.texi:264
 msgid "This function concatenates @var{list-of-strings} into a single string, quoting each string as necessary.  It also sticks the @var{separator} string between each pair of strings; if @var{separator} is omitted or @code{nil}, it defaults to @code{\" \"}.  The return value is the resulting string."
-msgstr "この関数は、@var{list-of-strings}の各文字を必要に応じてクォートして、単一の文字列に結合する。これはさらに各文字ペアーの間に、@var{separator}文字列も挿入する。@var{separator}が省略または@code{nil}の場合のデフォルトは@code{\" \"}。リターン値は、その結果の文字列である。"
+msgstr "この関数は@var{list-of-strings}の各文字を必要に応じてクォートして単一の文字列に結合する。これはさらに各文字ペアーの間に@var{separator}文字列も挿入する。@var{separator}が省略または@code{nil}の場合のデフォルトは@code{\" \"}。リターン値はその結果の文字列。"
 
 #. type: defun
 #: original_texis/processes.texi:270
 msgid "The strings in @var{list-of-strings} that need quoting are those that include @var{separator} as their substring.  Quoting a string encloses it in double quotes @code{\"@dots{}\"}.  In the simplest case, if you are consing a command from the individual command-line arguments, every argument that includes embedded blanks will be quoted."
-msgstr "@var{list-of-strings}内のクォートを要する文字列には、部分文字列として@var{separator}を含むものが該当する。文字列のクォートは、それをダブルクォートで@code{\"@dots{}\"}のように囲う。もっとも単純な例では、個別のコマンドライン引数からコマンドをコンス(cons)する場合は、埋め込まれたブランクを含む文字列はそれぞれクォートされるだろう。"
+msgstr "@var{list-of-strings}内のクォートを要する文字列には、部分文字列として@var{separator}を含むものが該当する。文字列のクォートはそれをダブルクォートで@code{\"@dots{}\"}のように囲う。もっとも単純な例では、たとえば個別のコマンドライン引数からコマンドをコンス(cons)する場合には、埋め込まれたブランクを含む文字列はそれぞれクォートされるだろう。"
 
 #. type: section
 #: original_texis/processes.texi:273
@@ -627,22 +604,22 @@ msgstr "synchronous subprocess"
 #. type: Plain text
 #: original_texis/processes.texi:283
 msgid "After a @dfn{synchronous process} is created, Emacs waits for the process to terminate before continuing.  Starting Dired on GNU or Unix@footnote{On other systems, Emacs uses a Lisp emulation of @code{ls}; see @ref{Contents of Directories}.} is an example of this: it runs @code{ls} in a synchronous process, then modifies the output slightly.  Because the process is synchronous, the entire directory listing arrives in the buffer before Emacs tries to do anything with it."
-msgstr "@dfn{同期プロセス(synchronous process)}の作成後、Emacsは継続の前にそのプロセスが終了するのを待機します。GNUやUnix@footnote{他のシステムでは、Emacsは@code{ls}のLispエミュレーションを使用します。@ref{Contents of Directories}を参照してください。}でのDiredの起動が、この例です。プロセスは同期的なので、Emacsがそれにたいして何か行おうと試みる前に、ディレクトリーのリスト全体がバッファーに到着します。"
+msgstr "@dfn{同期プロセス(synchronous process)}の作成後、Emacsは継続する前にそのプロセスの終了を待機します。GNUやUnix@footnote{他のシステムではEmacsは@code{ls}のLispエミュレーションを使用します。@ref{Contents of Directories}を参照してください。}でのDiredの起動が例です。プロセスは同期的なので、Emacsがそれにたいして何か行おうと試みる前にディレクトリーのリスト全体がバッファーに到着します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:291
 msgid "While Emacs waits for the synchronous subprocess to terminate, the user can quit by typing @kbd{C-g}.  The first @kbd{C-g} tries to kill the subprocess with a @code{SIGINT} signal; but it waits until the subprocess actually terminates before quitting.  If during that time the user types another @kbd{C-g}, that kills the subprocess instantly with @code{SIGKILL} and quits immediately (except on MS-DOS, where killing other processes doesn't work).  @xref{Quitting}."
-msgstr "同期サブプロセス終了をEmacsが待機する間、ユーザーは@kbd{C-g}をタイプすることによりquitができます。最初のは@kbd{C-g}は@code{SIGINT}シグナルにより、サブプロセスのkillを試みます。しかしこれはquitする前に、実際にそのサブプロセスが終了されるまで待機します。その間にユーザーがさらに@kbd{C-g}をタイプすると、それは@code{SIGKILL}で即座にサブプロセスをkillしてquitします(別プロセスのkillが機能しないMS-DOSを除く)。@ref{Quitting}を参照してください。"
+msgstr "同期サブプロセス終了をEmacsが待機する間に、ユーザーは@kbd{C-g}をタイプすることでquitが可能です。最初の@kbd{C-g}は@code{SIGINT}シグナルによりサブプロセスのkillを試みます。しかしこれはquitする前に実際にそのサブプロセスが終了されるまで待機します。その間にユーザーがさらに@kbd{C-g}をタイプするとそれは@code{SIGKILL}で即座にサブプロセスをkillしてquitします(別プロセスにたいするkillが機能しないMS-DOSを除く)。@ref{Quitting}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:294
 msgid "The synchronous subprocess functions return an indication of how the process terminated."
-msgstr "同期サブプロセス関数は、プロセスがどのように終了したかの識別をリターンします。"
+msgstr "同期サブプロセス関数はプロセスがどのように終了したかの識別をリターンします。"
 
 #. type: Plain text
 #: original_texis/processes.texi:299
 msgid "The output from a synchronous subprocess is generally decoded using a coding system, much like text read from a file.  The input sent to a subprocess by @code{call-process-region} is encoded using a coding system, much like text written into a file.  @xref{Coding Systems}."
-msgstr "同期サブプロセスからの出力は、ファイルからのテキスト読み込みと同じように、一般的にはコーディングシステムを使用してデコードされます。@code{call-process-region}によりサブプロセスに送信された入力は、ファイルへのテキスト書き込みと同じように、コーディングシステムを使用してエンコードされます。@ref{Coding Systems}を参照してください。"
+msgstr "同期サブプロセスからの出力はファイルからのテキスト読み込みと同じように、一般的にはコーディングシステムを使用してデコードされます。@code{call-process-region}によりサブプロセスに送信された入力は、ファイルへのテキスト書き込みと同じようにコーディングシステムを使用してエンコードされます。@ref{Coding Systems}を参照してください。"
 
 #. type: defun
 #: original_texis/processes.texi:300
@@ -653,17 +630,17 @@ msgstr "call-process program &optional infile destination display &rest args"
 #. type: defun
 #: original_texis/processes.texi:302
 msgid "This function calls @var{program} and waits for it to finish."
-msgstr "この関数は@var{program}を呼び出して、それが完了するまで待機する。"
+msgstr "この関数は@var{program}を呼び出して完了するまで待機する。"
 
 #. type: defun
 #: original_texis/processes.texi:305
 msgid "The current working directory of the subprocess is @code{default-directory}."
-msgstr "サブプロセスのカレントワーキングディレクトリーは、@code{default-directory}である。"
+msgstr "サブプロセスのカレントワーキングディレクトリーは@code{default-directory}。"
 
 #. type: defun
 #: original_texis/processes.texi:310
 msgid "The standard input for the new process comes from file @var{infile} if @var{infile} is not @code{nil}, and from the null device otherwise.  The argument @var{destination} says where to put the process output.  Here are the possibilities:"
-msgstr "新たなプロセスの標準入力は、@var{infile}が非@code{nil}ならファイル@code{nil}から、それ以外ならnullデバイスからとなる。引数@var{destination}は、プロセスの出力をどこに送るかを指定する。以下は可能な値である:"
+msgstr "新たなプロセスの標準入力は@var{infile}が非@code{nil}ならファイル@var{infile}、それ以外ならnullデバイス。引数@var{destination}はプロセスの出力をどこに送るかを指定する。以下は可能な値:"
 
 #. type: item
 #: original_texis/processes.texi:312
@@ -674,18 +651,18 @@ msgstr "バッファー"
 #. type: table
 #: original_texis/processes.texi:315
 msgid "Insert the output in that buffer, before point.  This includes both the standard output stream and the standard error stream of the process."
-msgstr "そのバッファーの、ポイントの前に出力を挿入する。これにはプロセスの、標準出力ストリームと標準エラーストリームの両方が含まれる。"
+msgstr "そのバッファーのポイントの前に出力を挿入する。これにはプロセスの標準出力ストリームと標準エラーストリームの両方が含まれる。"
 
 #. type: item
 #: original_texis/processes.texi:316
 #, no-wrap
 msgid "a buffer name (a string)"
-msgstr ""
+msgstr "バッファー名(文字列)"
 
 #. type: table
 #: original_texis/processes.texi:318
 msgid "Insert the output in a buffer with that name, before point."
-msgstr "その名前のバッファーの、ポイントの前に出力を挿入する。"
+msgstr "その名前のバッファーのポイントの前に出力を挿入する。"
 
 #. type: code{#1}
 #: original_texis/processes.texi:319
@@ -696,7 +673,7 @@ msgstr "t"
 #. type: table
 #: original_texis/processes.texi:321
 msgid "Insert the output in the current buffer, before point."
-msgstr "カレントバッファーの、ポイントの前に出力を挿入する。"
+msgstr "カレントバッファーのポイントの前に出力を挿入する。"
 
 #. type: item
 #: original_texis/processes.texi:322 original_texis/processes.texi:1060
@@ -719,17 +696,17 @@ msgstr "0"
 #. type: table
 #: original_texis/processes.texi:328
 msgid "Discard the output, and return @code{nil} immediately without waiting for the subprocess to finish."
-msgstr "出力を破棄して、サブプロセス完了を待機することなく、即座に@code{nil}をリターンする。"
+msgstr "出力を破棄してサブプロセス完了を待機せずに即座に@code{nil}をリターンする。"
 
 #. type: table
 #: original_texis/processes.texi:333
 msgid "In this case, the process is not truly synchronous, since it can run in parallel with Emacs; but you can think of it as synchronous in that Emacs is essentially finished with the subprocess as soon as this function returns."
-msgstr "この場合、プロセスはEmacsと並列に実行可能なので、真に同期的ではない。しかしこの関数リターン後は、本質的にはすみやかにEmacsがサブプロセスを終了するという点から、これを同期的と考えることができる。"
+msgstr "この場合にはプロセスはEmacsと並列に実行可能なので真に同期的ではない。しかしこの関数リターン後は本質的にはすみやかにEmacsがサブプロセスを終了するという点から、これを同期的と考えることができる。"
 
 #. type: table
 #: original_texis/processes.texi:336
 msgid "MS-DOS doesn't support asynchronous subprocesses, so this option doesn't work there."
-msgstr "MS-DOSは非同期サブプロセスをサポートせず、このオプションは機能しない。"
+msgstr "MS-DOSは非同期サブプロセスをサポートせずこのオプションは機能しない。"
 
 #. type: code{#1}
 #: original_texis/processes.texi:337
@@ -740,7 +717,7 @@ msgstr "(:file @var{file-name})"
 #. type: table
 #: original_texis/processes.texi:340
 msgid "Send the output to the file name specified, overwriting it if it already exists."
-msgstr "指定されたファイルに出力を送信し、ファイルが既に存在すれば上書きする。"
+msgstr "指定されたファイルに出力を送信して、ファイルが既に存在すれば上書きする。"
 
 #. type: code{#1}
 #: original_texis/processes.texi:341
@@ -751,43 +728,37 @@ msgstr "(@var{real-destination} @var{error-destination})"
 #. type: table
 #: original_texis/processes.texi:348
 msgid "Keep the standard output stream separate from the standard error stream; deal with the ordinary output as specified by @var{real-destination}, and dispose of the error output according to @var{error-destination}.  If @var{error-destination} is @code{nil}, that means to discard the error output, @code{t} means mix it with the ordinary output, and a string specifies a file name to redirect error output into."
-msgstr "標準出力ストリームを、標準エラーストリームと分けて保つ。通常の出力は@var{real-destination}の指定にしたがって扱い、エラー出力は@var{error-destination}にしたがって処分する。@var{error-destination}が@code{nil}ならエラー出力の破棄、@code{t}なら通常の出力と混合することを意味し、文字列ならそれはエラー出力をリダイレクトするファイルの名前である。"
+msgstr "標準出力ストリームを標準エラーストリームと分けて保持する。通常の出力は@var{real-destination}の指定にしたがって扱い、エラー出力は@var{error-destination}にしたがって処分する。@var{error-destination}が@code{nil}ならエラー出力の破棄、@code{t}なら通常の出力と混合することを意味して、文字列ならそれはエラー出力をリダイレクトするファイルの名前である。"
 
 #. type: table
 #: original_texis/processes.texi:353
-#, fuzzy
-#| msgid "You can't directly specify a buffer to put the error output in; that is too difficult to implement.  But you can achieve this result by sending the error output to a temporary file and then inserting the file into a buffer."
 msgid "You can't directly specify a buffer to put the error output in; that is too difficult to implement.  But you can achieve this result by sending the error output to a temporary file and then inserting the file into a buffer when the subprocess finishes."
-msgstr "エラー出力先に直接バッファーを指定することはできない。ただしエラー出力を一時ファイルに送信して、そのファイルをバッファーに挿入すれば、これを達成できる。"
+msgstr "エラー出力先に直接バッファーを指定することはできない。ただしエラー出力を一時ファイルに送信して、サブプロセス終了時にそのファイルをバッファーに挿入すればこれを達成できる。"
 
 #. type: defun
 #: original_texis/processes.texi:361
 msgid "If @var{display} is non-@code{nil}, then @code{call-process} redisplays the buffer as output is inserted.  (However, if the coding system chosen for decoding output is @code{undecided}, meaning deduce the encoding from the actual data, then redisplay sometimes cannot continue once non-@acronym{ASCII} characters are encountered.  There are fundamental reasons why it is hard to fix this; see @ref{Output from Processes}.)"
-msgstr "@var{display}が非@code{nil}なら、@code{call-process}は出力の挿入にしたがって、バッファーを再表示する(しかし出力のデコードに選択されたコーディングシステムが、実データからエンコーディングを推論することを意味する@code{undecided}の場合は、非@acronym{ASCII}に一度遭遇すると再表示が継続不能になることがある。これを修正するのが困難な根本的理由が存在する。@ref{Output from Processes}を参照されたい)。"
+msgstr "@var{display}が非@code{nil}なら、@code{call-process}は出力の挿入にしたがってバッファーを再表示する(しかし出力のデコードに選択されたコーディングシステムが実データからエンコーディングを推論することを意味する@code{undecided}なら、非@acronym{ASCII}に一度遭遇すると再表示が継続不能になることがある。これを修正するのが困難な根本的理由が存在する。@ref{Output from Processes}を参照)。"
 
 #. type: defun
 #: original_texis/processes.texi:365
 msgid "Otherwise the function @code{call-process} does no redisplay, and the results become visible on the screen only when Emacs redisplays that buffer in the normal course of events."
-msgstr "それ以外なら関数@code{call-process}は再表示を行わず、通常のイベントに由来するEmacsの再表示時だけ、スクリーン上で結果が可視になります。"
+msgstr "それ以外なら関数@code{call-process}は再表示を行わずに、通常のイベントに由来するEmacsの再表示時だけスクリーン上で結果が可視になります。"
 
 #. type: defun
 #: original_texis/processes.texi:369
-#, fuzzy
-#| msgid "The remaining arguments, @var{args}, are strings that specify command line arguments for the program."
 msgid "The remaining arguments, @var{args}, are strings that specify command line arguments for the program.  Each string is passed to @var{program} as a separate argument."
-msgstr "残りの引数@var{args}は、そのプログラムにたいしてコマンドライン引数を指定する文字列です。"
+msgstr "残りの引数@var{args}はそのプログラムにたいしてコマンドライン引数を指定する文字列です。文字列はそれぞれ別個の引数として@var{program}に渡されます。"
 
 #. type: defun
 #: original_texis/processes.texi:376
-#, fuzzy
-#| msgid "The value returned by @code{call-process} (unless you told it not to wait) indicates the reason for process termination.  A number gives the exit status of the subprocess; 0 means success, and any other value means failure.  If the process terminated with a signal, @code{call-process} returns a string describing the signal."
 msgid "The value returned by @code{call-process} (unless you told it not to wait) indicates the reason for process termination.  A number gives the exit status of the subprocess; 0 means success, and any other value means failure.  If the process terminated with a signal, @code{call-process} returns a string describing the signal.  If you told @code{call-process} not to wait, it returns @code{nil}."
-msgstr "(待機するよう告げた場合)@code{call-process}がリターンする値は、プロセスが終了した理由を示します。この数字は、そのサブプロセスのexitステータスで0が成功、それ以外のすべての値は失敗を意味します。シグナルによりそのプロセスが終了された場合、@code{call-process}はそれを記述する文字列をリターンします。"
+msgstr "(待機するよう告げた場合には) @code{call-process}がリターンする値はプロセスが終了した理由を示します。この数字はそのサブプロセスのexitステータスであり0が成功、それ以外のすべての値は失敗を意味します。シグナルによりそのプロセスが終了された場合には、@code{call-process}はそれを記述する文字列をリターンします。@code{call-process}に待機しないように指示した場合には@code{nil}をリターンします。"
 
 #. type: defun
 #: original_texis/processes.texi:378
 msgid "In the examples below, the buffer @samp{foo} is current."
-msgstr "以下の例では、カレントバッファーは@samp{foo}です。"
+msgstr "以下の例ではカレントバッファーは@samp{foo}です。"
 
 #. type: group
 #: original_texis/processes.texi:383
@@ -846,7 +817,7 @@ msgstr "---------- Buffer: bar ----------\n"
 #. type: defun
 #: original_texis/processes.texi:402
 msgid "Here is an example of the use of @code{call-process}, as used to be found in the definition of the @code{insert-directory} function:"
-msgstr "以下は@code{call-process}の使用法の例で、このような使用例は@code{insert-directory}関数の定義内で見ることができます:"
+msgstr "以下は@code{call-process}の使用例であり、このような使用例は@code{insert-directory}関数の定義内で見つけることができます:"
 
 #. type: group
 #: original_texis/processes.texi:409
@@ -871,37 +842,37 @@ msgstr "process-file program &optional infile buffer display &rest args"
 #. type: defun
 #: original_texis/processes.texi:418
 msgid "This function processes files synchronously in a separate process.  It is similar to @code{call-process}, but may invoke a file handler based on the value of the variable @code{default-directory}, which specifies the current working directory of the subprocess."
-msgstr "この関数は、別プロセス内でファイルを同期的に処理する。これは@code{call-process}と似ているが、サブプロセスのカレントワーキングディレクトリーを指定する、変数@code{default-directory}の値にもとづく、ファイルハンドラーを呼び出すかもしれない。"
+msgstr "この関数は別プロセス内でファイルを同期的に処理する。これは@code{call-process}と似ているが、サブプロセスのカレントワーキングディレクトリーを指定する変数@code{default-directory}の値にもとづいて、ファイルハンドラーを呼び出すかもしれない。"
 
 #. type: defun
 #: original_texis/processes.texi:421
 msgid "The arguments are handled in almost the same way as for @code{call-process}, with the following differences:"
-msgstr "引数は@code{call-process}の場合とほとんど同様の方法で処理されるが、以下の違いがある:"
+msgstr "引数は@code{call-process}の場合とほとんど同様の方法で処理されるが以下の違いがある:"
 
 #. type: defun
 #: original_texis/processes.texi:428
 msgid "Some file handlers may not support all combinations and forms of the arguments @var{infile}, @var{buffer}, and @var{display}.  For example, some file handlers might behave as if @var{display} were @code{nil}, regardless of the value actually passed.  As another example, some file handlers might not support separating standard output and error output by way of the @var{buffer} argument."
-msgstr "引数@var{infile}、@var{buffer}、@var{display}の組み合わせと形式.をサポートしないファイルハンドラーがあるかもしれない。たとえば実際に渡された値とは無関係に、@var{display}が@code{nil}であるかのように振る舞うファイルハンドラーがいくつかある。他の例としては、@var{buffer}引数で標準出力とエラー出力を分離するのをサポートしないかもしれないファイルハンドラーがいくつか存在する。"
+msgstr "引数@var{infile}、@var{buffer}、@var{display}のすべての組み合わせと形式をサポートしないファイルハンドラーがあるかもしれない。たとえば実際に渡された値とは無関係に、@var{display}が@code{nil}であるかのように振る舞うファイルハンドラーがいくつかある。他の例としては@var{buffer}引数で標準出力とエラー出力を分離するのをサポートしないかもしれないファイルハンドラーがいくつか存在する。"
 
 #. type: defun
 #: original_texis/processes.texi:433
 msgid "If a file handler is invoked, it determines the program to run based on the first argument @var{program}.  For instance, suppose that a handler for remote files is invoked.  Then the path that is used for searching for the program might be different from @code{exec-path}."
-msgstr "ファイルハンドラーが呼び出されると、1つ目の引数@var{program}にもとづき、実行するプログラムを決定する。たとえばリモートファイルにたいするハンドラーが呼び出されたと考えてみよ。その.場合、プログラムの検索に使用されるパスは、@code{exec-path}とは異なるかもしれない。"
+msgstr "ファイルハンドラーが呼び出されると、1つ目の引数@var{program}にもとづいて実行するプログラムを決定する。たとえばリモートファイルにたいするハンドラーが呼び出されたと考えてみよ。その場合にはプログラムの検索に使用されるパスは@code{exec-path}とは異なるかもしれない。"
 
 #. type: defun
 #: original_texis/processes.texi:440
 msgid "The second argument @var{infile} may invoke a file handler.  The file handler could be different from the handler chosen for the @code{process-file} function itself.  (For example, @code{default-directory} could be on one remote host, and @var{infile} on a different remote host.  Or @code{default-directory} could be non-special, whereas @var{infile} is on a remote host.)"
-msgstr "2つ目の引数@var{infile}は、ファイルハンドラーを呼び出すかもしれない。そのファイルハンドラーは、@code{process-file}関数自身にたいして選択されたハンドラーと異なり得る(たとえば@code{default-directory}がリモートホスト上にあり、@var{infile}は別のリモートホスト上の場合があり得る。もしくは@code{default-directory}は普通だが、@var{infile}はリモートホスト上にあるかもしれない)."
+msgstr "2つ目の引数@var{infile}はファイルハンドラーを呼び出すかもしれない。そのファイルハンドラーは、@code{process-file}関数自身にたいして選択されたハンドラーと異なるかもしれない(たとえば@code{default-directory}がリモートホスト上にあり@var{infile}は別のリモートホスト上の場合があり得る。もしくは@code{default-directory}は普通だが@var{infile}はリモートホスト上にあるかもしれない)."
 
 #. type: defun
 #: original_texis/processes.texi:444
 msgid "If @var{buffer} is a list of the form @code{(@var{real-destination} @var{error-destination})}, and @var{error-destination} names a file, then the same remarks as for @var{infile} apply."
-msgstr "@var{buffer}が@code{(@var{real-destination} @var{error-destination})}という形式のリストで、@var{error-destination}がファイルの名前なら、@var{infile}と同じ注意が適用される。"
+msgstr "@var{buffer}が@code{(@var{real-destination} @var{error-destination})}という形式のリストであり、かつ@var{error-destination}がファイルの名前なら@var{infile}と同じ注意が適用される。"
 
 #. type: defun
 #: original_texis/processes.texi:452
 msgid "The remaining arguments (@var{args}) will be passed to the process verbatim.  Emacs is not involved in processing file names that are present in @var{args}.  To avoid confusion, it may be best to avoid absolute file names in @var{args}, but rather to specify all file names as relative to @code{default-directory}.  The function @code{file-relative-name} is useful for constructing such relative file names."
-msgstr "残りの引数(@var{args})は、そのままプロセスに渡される。Emacsは、@var{args}内で与えられたファイル名の処理に関与しない。混乱を避けるためには、@var{args}内で絶対ファイル名を使用しないのが最善であり、@code{default-directory}からの相対ファイル名ですべてのファイルを指定するほうがよいだろう。関数@code{file-relative-name}は、そのような相対ファイル名の構築に有用である。"
+msgstr "残りの引数(@var{args})はそのままプロセスに渡される。Emacsは@var{args}内で与えられたファイル名の処理に関与しない。混乱を避けるためには@var{args}内で絶対ファイル名を使用しないのが最善であり、@code{default-directory}からの相対ファイル名ですべてのファイルを指定するほうがよいだろう。関数@code{file-relative-name}はそのような相対ファイル名の構築に有用。"
 
 #. type: defvar
 #: original_texis/processes.texi:454
@@ -912,17 +883,17 @@ msgstr "process-file-side-effects"
 #. type: defvar
 #: original_texis/processes.texi:457
 msgid "This variable indicates whether a call of @code{process-file} changes remote files."
-msgstr "この変数は、@code{process-file}呼び出しがリモートファイルを変更するかどうかを示す。"
+msgstr "この変数は@code{process-file}呼び出しがリモートファイルを変更するかどうかを示す。"
 
 #. type: defvar
 #: original_texis/processes.texi:462
 msgid "By default, this variable is always set to @code{t}, meaning that a call of @code{process-file} could potentially change any file on a remote host.  When set to @code{nil}, a file handler could optimize its behavior with respect to remote file attribute caching."
-msgstr "この変数はデフォルトでは常に、@code{process-file}呼び出しがリモートホスト上の、任意のファイルを潜在的に変更し得ることを意味する@code{t}にセットされる。@code{nil}にセットされた際は、リモートファイル属性のキャッシュにしたがうことにより、ファイルハンドラーの挙動を最適化できる可能性がある。"
+msgstr "この変数はデフォルトでは@code{process-file}呼び出しがリモートホスト上の任意のファイルを潜在的に変更し得ることを意味する@code{t}に常にセットされる。@code{nil}にセットされた際には、リモートファイル属性のキャッシュにしたがうことによりファイルハンドラーの挙動を最適化できる可能性がある。"
 
 #. type: defvar
 #: original_texis/processes.texi:465
 msgid "You should only ever change this variable with a let-binding; never with @code{setq}."
-msgstr "この変数は決して@code{setq}ではなく、常にletバインディングによってのみ変更されるべきである。"
+msgstr "この変数は決して@code{setq}ではなく、常にletバインディングでのみ変更すること。"
 
 #. type: defun
 #: original_texis/processes.texi:467
@@ -933,27 +904,27 @@ msgstr "call-process-region start end program &optional delete destination displ
 #. type: defun
 #: original_texis/processes.texi:473
 msgid "This function sends the text from @var{start} to @var{end} as standard input to a process running @var{program}.  It deletes the text sent if @var{delete} is non-@code{nil}; this is useful when @var{destination} is @code{t}, to insert the output in the current buffer in place of the input."
-msgstr "この関数は@var{start}から@var{end}のテキストを、実行中のプロセス@var{program}に、標準入力として送信する。これは@var{delete}が非@code{nil}なら、送信したテキストを削除する。これは出力をカレントバッファーの入力箇所に挿入するために、@var{destination}を@code{t}に指定している際に有用である。"
+msgstr "この関数は@var{start}から@var{end}のテキストを、実行中のプロセス@var{program}に標準入力として送信する。これは@var{delete}が非@code{nil}なら送信したテキストを削除する。これは出力をカレントバッファーの入力箇所に挿入するために、@var{destination}を@code{t}に指定している際に有用。"
 
 #. type: defun
 #: original_texis/processes.texi:481
 msgid "The arguments @var{destination} and @var{display} control what to do with the output from the subprocess, and whether to update the display as it comes in.  For details, see the description of @code{call-process}, above.  If @var{destination} is the integer 0, @code{call-process-region} discards the output and returns @code{nil} immediately, without waiting for the subprocess to finish (this only works if asynchronous subprocesses are supported; i.e., not on MS-DOS)."
-msgstr "引数@var{destination}と@var{display}は、サブロセスからの出力にたいして何を行うか、および出力の到着にともない表示を更新するかどうかを制御する。詳細は上述の、@code{call-process}の説明を参照されたい。@var{destination}が整数の0なら、@code{call-process-region}は出力を破棄して、サブプロセス完了を待機せずに、即座に@code{nil}をリターンする(これは非同期サブプロセスがサポートされる場合、つまりMS-DOS以外でのみ機能する)。"
+msgstr "引数@var{destination}と@var{display}はサブロセスからの出力にたいして何を行うか、および出力の到着にともない表示を更新するかどうかを制御する。詳細は上述の@code{call-process}の説明を参照のこと。@var{destination}が整数の0なら@code{call-process-region}は出力を破棄して、サブプロセス完了を待機せずに即座に@code{nil}をリターンする(これは非同期サブプロセスがサポートされる場合、つまりMS-DOS以外でのみ機能する)。"
 
 #. type: defun
 #: original_texis/processes.texi:484
 msgid "The remaining arguments, @var{args}, are strings that specify command line arguments for the program."
-msgstr "残りの引数@var{args}は、そのプログラムにたいしてコマンドライン引数を指定する文字列です。"
+msgstr "残りの引数@var{args}はそのプログラムにたいしてコマンドライン引数を指定する文字列です。"
 
 #. type: defun
 #: original_texis/processes.texi:489
 msgid "The return value of @code{call-process-region} is just like that of @code{call-process}: @code{nil} if you told it to return without waiting; otherwise, a number or string which indicates how the subprocess terminated."
-msgstr "@code{call-process-region}のリターン値は、@code{call-process}の場合と同じである。待機せずにリターンするよう指示した場合は@code{nil}、数字か文字列ならそれはサブプロセスが終了した方法を表す。"
+msgstr "@code{call-process-region}のリターン値は@code{call-process}の場合と同様。待機せずにリターンするよう指示した場合には@code{nil}、数字か文字列ならそれはサブプロセスが終了した方法を表す。"
 
 #. type: defun
 #: original_texis/processes.texi:496
 msgid "In the following example, we use @code{call-process-region} to run the @code{cat} utility, with standard input being the first five characters in buffer @samp{foo} (the word @samp{input}).  @code{cat} copies its standard input into its standard output.  Since the argument @var{destination} is @code{t}, this output is inserted in the current buffer."
-msgstr "以下の例では、バッファー@samp{foo}内の最初の5文字(単語@samp{input})を標準入力として、@code{call-process-region}を使用して@code{cat}ユーティリティを実行する。@code{cat}は自身の標準入力を、標準出力へコピーする。引数@var{destination}が@code{t}なので、その出力はカレントバッファーに挿入される。"
+msgstr "以下の例ではバッファー@samp{foo}内の最初の5文字(単語@samp{input})を標準入力として、@code{call-process-region}を使用して@code{cat}ユーティリティを実行する。@code{cat}は自身の標準入力を標準出力へコピーする。引数@var{destination}が@code{t}なので出力はカレントバッファーに挿入される。"
 
 #. type: group
 #: original_texis/processes.texi:502
@@ -994,7 +965,7 @@ msgstr ""
 #. type: defun
 #: original_texis/processes.texi:516
 msgid "For example, the @code{shell-command-on-region} command uses @code{call-process-region} in a manner similar to this:"
-msgstr "たとえば@code{shell-command-on-region}コマンドは、以下のような方法で@code{call-process-region}を使用する:"
+msgstr "たとえば@code{shell-command-on-region}コマンドは以下のような方法で@code{call-process-region}を使用する:"
 
 #. type: group
 #: original_texis/processes.texi:526
@@ -1024,10 +995,8 @@ msgstr "call-process-shell-command command &optional infile destination display"
 
 #. type: defun
 #: original_texis/processes.texi:537
-#, fuzzy
-#| msgid "This function executes the shell command @var{command} synchronously.  The arguments are handled as in @code{call-process}.  An old calling convention allowed to pass any number of additional arguments after @var{display}, which were concatenated to @var{command}; this is still supported, but strongly discouraged."
 msgid "This function executes the shell command @var{command} synchronously.  The other arguments are handled as in @code{call-process}.  An old calling convention allowed passing any number of additional arguments after @var{display}, which were concatenated to @var{command}; this is still supported, but strongly discouraged."
-msgstr "この関数はshellコマンド@var{command}を、非同期に実行する。引数は@code{call-process}の場合と同様に処理される。古い呼び出し規約は、@var{display}の後に任意個数の追加引数を許容し、これは@var{command}に結合される。これはまだサポートされるものの、使用しないことを強く推奨する。"
+msgstr "この関数はshellコマンド@var{command}を非同期に実行する。他の引数は@code{call-process}の場合と同様に処理される。古い呼び出し規約は@var{display}の後に任意個数の追加引数を許容して、これは@var{command}に結合される。これはまだサポートされるものの使用しないことを強く推奨する。"
 
 #. type: defun
 #: original_texis/processes.texi:539
@@ -1037,10 +1006,8 @@ msgstr "process-file-shell-command command &optional infile destination display"
 
 #. type: defun
 #: original_texis/processes.texi:546
-#, fuzzy
-#| msgid "This function is like @code{call-process-shell-command}, but uses @code{process-file} internally.  Depending on @code{default-directory}, @var{command} can be executed also on remote hosts.  An old calling convention allowed to pass any number of additional arguments after @var{display}, which were concatenated to @var{command}; this is still supported, but strongly discouraged."
 msgid "This function is like @code{call-process-shell-command}, but uses @code{process-file} internally.  Depending on @code{default-directory}, @var{command} can be executed also on remote hosts.  An old calling convention allowed passing any number of additional arguments after @var{display}, which were concatenated to @var{command}; this is still supported, but strongly discouraged."
-msgstr "この関数は@code{call-process-shell-command}と同様だが、内部的に@code{process-file}を使用する点が異なる。@code{default-directory}に依存して、@var{command}はリモートホスト上でも実行可能である。古い呼び出し規約は、@var{display}の後に任意個数の追加引数を許容し、これは@var{command}に結合される。これはまだサポートされるものの、使用しないことを強く推奨する。"
+msgstr "この関数は@code{call-process-shell-command}と同様だが内部的に@code{process-file}を使用する点が異なる。@code{default-directory}に依存して@var{command}はリモートホスト上でも実行可能。古い呼び出し規約は@var{display}の後に任意個数の追加引数を許容して、これは@var{command}に結合される。これはまだサポートされるものの使用しないことを強く推奨する。"
 
 #. type: defun
 #: original_texis/processes.texi:548
@@ -1051,7 +1018,7 @@ msgstr "shell-command-to-string command"
 #. type: defun
 #: original_texis/processes.texi:551
 msgid "This function executes @var{command} (a string) as a shell command, then returns the command's output as a string."
-msgstr "この関数はshellコマンドとして@var{command}(文字列)を実行して、そのコマンドの出力を文字列としてリターンする。"
+msgstr "この関数はshellコマンドとして@var{command} (文字列)を実行してコマンドの出力を文字列としてリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:556
@@ -1062,17 +1029,17 @@ msgstr "process-lines program &rest args"
 #. type: defun
 #: original_texis/processes.texi:563
 msgid "This function runs @var{program}, waits for it to finish, and returns its output as a list of strings.  Each string in the list holds a single line of text output by the program; the end-of-line characters are stripped from each line.  The arguments beyond @var{program}, @var{args}, are strings that specify command-line arguments with which to run the program."
-msgstr "この関数は@var{program}を実行して完了を待機し、出力を文字列のリストとしてリターンする。リスト内の各文字列は、プログラムのテキスト出力の1つの行を保持する。各行のEOL文字(行末文字)は取り除かれる。@var{program}の後の引数@var{args}は、そのプログラム実行に際し、コマンドライン引数を指定する文字列である。"
+msgstr "この関数は@var{program}を実行して完了を待機して、出力を文字列のリストとしてリターンする。リスト内の各文字列はプログラムのテキスト出力の1つの行を保持する。各行のEOL文字(行末文字)は取り除かれる。@var{program}の後の引数@var{args}はそのプログラム実行に際して、コマンドライン引数を指定する文字列。"
 
 #. type: defun
 #: original_texis/processes.texi:566
 msgid "If @var{program} exits with a non-zero exit status, this function signals an error."
-msgstr "@var{program}が非0のexitステータスでexitした場合、この関数はエラーをシグナルする。"
+msgstr "@var{program}が非0のexitステータスでexitすると、この関数はエラーをシグナルする。"
 
 #. type: defun
 #: original_texis/processes.texi:569
 msgid "This function works by calling @code{call-process}, so program output is decoded in the same way as for @code{call-process}."
-msgstr "この関数は@code{call-process}を呼び出すことにより機能し、プログラムの出力は@code{call-process}の場合と同じ方法でデコードされる。"
+msgstr "この関数は@code{call-process}を呼び出すことにより機能して、プログラムの出力は@code{call-process}の場合と同じ方法でデコードされる。"
 
 #. type: section
 #: original_texis/processes.texi:572
@@ -1089,7 +1056,7 @@ msgstr "asynchronous subprocess"
 #. type: Plain text
 #: original_texis/processes.texi:583
 msgid "In this section, we describe how to create an @dfn{asynchronous process}.  After an asynchronous process is created, it runs in parallel with Emacs, and Emacs can communicate with it using the functions described in the following sections (@pxref{Input to Processes}, and @pxref{Output from Processes}).  Note that process communication is only partially asynchronous: Emacs sends data to the process only when certain functions are called, and Emacs accepts data from the process only while waiting for input or for a time delay."
-msgstr "このセクションでは、@dfn{非同期プロセス(asynchronous process)}を作成する方法について説明します。非同期プロセスは作成後、Emacsと並列して実行され、Emacsは以降のセクション(@ref{Input to Processes}および@ref{Output from Processes}を参照)で説明する関数を使用してプロセスとコミュニケーションができます。プロセスコミュニケーションは、部分的に非同期なだけであることに注意してください。Emacsは特定の関数を呼び出したときだけプロセスにデータを送信でき、Emacsは入力の待機中または一定の遅延時間の後にのみ、プロセスのデータを受け取ることができます。"
+msgstr "このセクションでは@dfn{非同期プロセス(asynchronous process)}を作成する方法について説明します。非同期プロセスは作成後はEmacsと並列に実行されて、Emacsは以降のセクション(@ref{Input to Processes}と@ref{Output from Processes}を参照)で説明する関数を使用してプロセスとコミュニケーションができます。プロセスコミュニケーションは部分的に非同期なだけであることに注意してください。Emacsは特定の関数を呼び出したときだけプロセスにデータを送信でき、Emacsは入力の待機中か一定の遅延時間の後にのみプロセスのデータを受け取ることができます。"
 
 #. type: cindex
 #: original_texis/processes.texi:584
@@ -1105,27 +1072,24 @@ msgstr "pipe"
 
 #. type: Plain text
 #: original_texis/processes.texi:600
-#, fuzzy
-#| msgid "An asynchronous process is controlled either via a @dfn{pty} (pseudo-terminal) or a @dfn{pipe}.  The choice of pty or pipe is made when creating the process, based on the value of the variable @code{process-connection-type} (see below).  Ptys are usually preferable for processes visible to the user, as in Shell mode, because they allow for job control (@kbd{C-c}, @kbd{C-z}, etc.)@: between the process and its children, whereas pipes do not.  For subprocesses used for internal purposes by programs, it is often better to use a pipe, because they are more efficient, and because they are immune to stray character injections that ptys introduce for large (around 500 byte) messages.  Also, the total number of ptys is limited on many systems and it is good not to waste them."
 msgid "An asynchronous process is controlled either via a @dfn{pty} (pseudo-terminal) or a @dfn{pipe}.  The choice of pty or pipe is made when creating the process, by default based on the value of the variable @code{process-connection-type} (see below).  If available, ptys are usually preferable for processes visible to the user, as in Shell mode, because they allow for job control (@kbd{C-c}, @kbd{C-z}, etc.)@: between the process and its children, and because interactive programs treat ptys as terminal devices, whereas pipes don't support these features.  However, for subprocesses used by Lisp programs for internal purposes, it is often better to use a pipe, because pipes are more efficient, and because they are immune to stray character injections that ptys introduce for large (around 500 byte) messages.  Also, the total number of ptys is limited on many systems and it is good not to waste them."
-msgstr "非同期プロセスは@dfn{pty(pseudo-terminal: 疑似端末)}、または@dfn{pipe}の、いずれかを通じて制御されます。ptyかpipeの選択は、変数@code{process-connection-type}(以下参照)の値にもとづき、プロセス作成時に行われます。ptyは通常、Shellモード内のようにユーザーから可視なプロセスに適しています。それはpipeでは不可能な、そのプロセスおよびその子プロセスとの間でジョブ制御(@kbd{C-c}、@kbd{C-z}、...等)が可能だからです。プログラムの内部的な目的のために使用されるサブプロセスにたいしては、pipeのほうが適している場合が多々あります。それはpipeがより効率的であり、ptyが大量の文字(500byte前後)にたいして導入する迷入文字インジェクション(stray character injections)にたいして免疫があるのが理由です。さらに多くのしすてむではptyの合計数に制限があり、それを浪費するのは得策ではありません。"
+msgstr "非同期プロセスは@dfn{pty(pseudo-terminal: 疑似端末)}かたは@dfn{pipe}のいずれかを通じて制御されます。ptyかpipeの選択は、デフォルトでは変数@code{process-connection-type} (以下参照)の値にもとづいてプロセス作成時に行われます。ptyが利用可能なら、通常はShellモード内のようにユーザーから可視なプロセスに適しています。ptyではプロセスとその子プロセスとの間でジョブ制御(@kbd{C-c}、@kbd{C-z}、...等)が可能であり、対話的なプログラムはptyを端末デバイスとして扱いますが、これらはpipeではサポートされない機能だからです。Lispプログラムの内部的な目的のために使用されるサブプロセスにたいしては、pipeのほうが適している場合が多々あります。それはpipeがより効率的であり、ptyが大量の文字(500byte前後)にたいして導入する迷入文字インジェクション(stray character injections)にたいして免疫があるのが理由です。さらに多くのシステムではptyの合計数に制限があり、それを浪費するのは得策ではありません。"
 
 #. type: defun
 #: original_texis/processes.texi:601
-#, fuzzy, no-wrap
-#| msgid "make-serial-process &rest args"
+#, no-wrap
 msgid "make-process &rest args"
-msgstr "make-serial-process &rest args"
+msgstr "make-process &rest args"
 
 #. type: defun
 #: original_texis/processes.texi:607
 msgid "This function is the basic low-level primitive for starting asynchronous subprocesses.  It returns a process object representing the subprocess.  Compared to the more high-level @code{start-process}, described below, it takes keyword arguments, is more flexible, and allows to specify process filters and sentinels in a single call."
-msgstr ""
+msgstr "この関数は非同期サブプロセスを開始するための基本的な低レベルなプリミティブである。これはサブプロセスを表すプロセスオブジェクトをリターンする。以下で説明するより高レベルな@code{start-process}と比較すると、この関数はキーワード引数を受け取り、より柔軟であり、単独の呼び出しでプロセスフィルターやセンチネルを指定できる。"
 
 #. type: defun
 #: original_texis/processes.texi:611
 msgid "The arguments @var{args} are a list of keyword/argument pairs.  Omitting a keyword is always equivalent to specifying it with value @code{nil}.  Here are the meaningful keywords:"
-msgstr ""
+msgstr "引数@var{args}はkeyword/argumentペアのリスト。キーワードの省略は値@code{nil}でそれを指定することと常に等価。以下は意味のあるキーワード:"
 
 #. type: itemx
 #: original_texis/processes.texi:613 original_texis/processes.texi:694
@@ -1137,10 +1101,8 @@ msgstr ":name @var{name}"
 
 #. type: table
 #: original_texis/processes.texi:617
-#, fuzzy
-#| msgid "Use the string @var{name} as the process name.  It is modified if necessary to make it unique."
 msgid "Use the string @var{name} as the process name; if a process with this name already exists, then @var{name} is modified (by appending @samp{<1>}, etc.)@: to be unique."
-msgstr "プロセス名として、文字列@var{name}を使用する。一意にするために、必要に応じて変更され得る。"
+msgstr "プロセス名として文字列@var{name}を使用する。その名前のプロセスがすでに存在すれば、(@samp{<1>}、...の追加により)一意となるように@var{name}を修正する。"
 
 #. type: itemx
 #: original_texis/processes.texi:618 original_texis/processes.texi:698
@@ -1152,22 +1114,19 @@ msgstr ":buffer @var{buffer}"
 
 #. type: table
 #: original_texis/processes.texi:621
-#, fuzzy
-#| msgid "This function sets the buffer associated with @var{process} to @var{buffer}.  If @var{buffer} is @code{nil}, the process becomes associated with no buffer."
 msgid "Use @var{buffer} as the process buffer.  If the value is @code{nil}, the subprocess is not associated with any buffer."
-msgstr "この関数は、@var{process}に関連付けられたバッファーに、@var{buffer}をセットする。@var{buffer}が@code{nil}なら、プロセスはバッファーに関連付けられない。"
+msgstr "プロセスバッファーとして@var{buffer}を使用する。値が@code{nil}なら、そのサブプロセスには何のバッファーも関連付けられない。"
 
 #. type: item
 #: original_texis/processes.texi:622
-#, fuzzy, no-wrap
-#| msgid ":capability-command @var{capability-command}"
+#, no-wrap
 msgid ":command @var{command}"
-msgstr ":capability-command @var{capability-command}"
+msgstr ":command @var{command}"
 
 #. type: table
 #: original_texis/processes.texi:630
 msgid "Use @var{command} as the command line of the process.  The value should be a list starting with the program's executable file name, followed by strings to give to the program as its arguments.  If the first element of the list is @code{nil}, Emacs opens a new pseudoterminal (pty) and associates its input and output with @var{buffer}, without actually running any program; the rest of the list elements are ignored in that case."
-msgstr ""
+msgstr "プロセスのコマドラインとして@var{command}を使用する。値はプログラムの実行可能ファイル名で始まり、後にプログラムの引数として与える文字列が続くリストであること。リストの最初の要素が@code{nil}なら、Emacsは新たな擬似端末(pty)を作成して、実際には何もプログラムを実行せずに入出力を@var{buffer}に関連付ける。この場合には残りのリスト要素は無視される。"
 
 #. type: item
 #: original_texis/processes.texi:631 original_texis/processes.texi:701
@@ -1178,27 +1137,24 @@ msgstr ":coding @var{coding}"
 
 #. type: table
 #: original_texis/processes.texi:641
-#, fuzzy
-#| msgid "If @var{coding} is a symbol, it specifies the coding system used for both reading and writing for this process.  If @var{coding} is a cons @code{(@var{decoding} . @var{encoding})}, @var{decoding} is used for reading, and @var{encoding} is used for writing.  If not specified, the default is to determine the coding systems from the data itself."
 msgid "If @var{coding} is a symbol, it specifies the coding system to be used for both reading and writing of data from and to the connection.  If @var{coding} is a cons cell @w{@code{(@var{decoding} . @var{encoding})}}, then @var{decoding} will be used for reading and @var{encoding} for writing.  The coding system used for encoding the data written to the program is also used for encoding the command-line arguments (but not the program itself, whose file name is encoded as any other file name; @pxref{Encoding and I/O, file-name-coding-system})."
-msgstr "@var{coding}は、このプロセスにたいする読み書きに使用される、コーディングシステムを指定する。@var{coding}がコンス@code{(@var{decoding} . @var{encoding})}なら、読み取りに@var{decoding}、書き込みには@var{encoding}が使用される。指定されない場合のデフォルトは、データ自身から判断されるコーディングシステムである。"
+msgstr "@var{coding}がシンボルなら、それはその接続にたいする読み取りと書き込みの両方で使用するコーディングシステムを指定する。@var{coding}がコンスセル@w{@code{(@var{decoding} . @var{encoding})}}なら読み取りに@var{decoding}、書き込みに@var{encoding}が使用される。プログラムに書き込むデータのエンコーディングに使用されるコーディングシステムは、コマンドライン引数のエンコーディングにも使用される(しかしプログラム自身にたいしてファイル名を別のファイル名にエンコードすることはない。@ref{Encoding and I/O, file-name-coding-system}を参照)。"
 
 #. type: table
 #: original_texis/processes.texi:644 original_texis/processes.texi:710
 msgid "If @var{coding} is @code{nil}, the default rules for finding the coding system will apply.  @xref{Default Coding Systems}."
-msgstr ""
+msgstr "@var{coding}が@code{nil}なら、デフォルトのコーディングシステム検出ルールを適用する。@ref{Default Coding Systems}を参照のこと。"
 
 #. type: item
 #: original_texis/processes.texi:645
-#, fuzzy, no-wrap
-#| msgid "process-connection-type"
+#, no-wrap
 msgid ":connection-type @var{TYPE}"
-msgstr "process-connection-type"
+msgstr ":connection-type @var{TYPE}"
 
 #. type: table
 #: original_texis/processes.texi:653
 msgid "Initialize the type of device used to communicate with the subprocess.  Possible values are @code{pty} to use a pty, @code{pipe} to use a pipe, or @code{nil} to use the default derived from the value of the @code{process-connection-type} variable.  This parameter and the value of @code{process-connection-type} are ignored if a non-@code{nil} value is specified for the @code{:stderr} parameter; in that case, the type will always be @code{pipe}."
-msgstr ""
+msgstr "サブプロセスとの対話に使用するデバイスのタイプを初期化する。指定できる値はptyを使用する@code{pty}、pipeを使用する@code{pipe}、または@code{process-connection-type}変数の値のデフォルトデバイスを使用する@code{nil}。@code{:stderr}パラメーターに非@code{nil}値が指定されると、このパラメーターと@code{process-connection-type}の値は無視される。この場合にはタイプは常に@code{pipe}になる。"
 
 #. type: item
 #: original_texis/processes.texi:654 original_texis/processes.texi:711
@@ -1222,10 +1178,8 @@ msgstr ":stop @var{stopped}"
 
 #. type: table
 #: original_texis/processes.texi:661 original_texis/processes.texi:718
-#, fuzzy
-#| msgid "If @var{stopped} is non-@code{nil}, start the network connection or server in the ``stopped'' state."
 msgid "If @var{stopped} is non-@code{nil}, start the process in the stopped state."
-msgstr "@var{stopped}が非@code{nil}なら、``stopped''の状態でネットワーク接続、またはサーバーを開始する。"
+msgstr "@var{stopped}が非@code{nil}なら、停止状態でプロセスを開始する。"
 
 #. type: item
 #: original_texis/processes.texi:662 original_texis/processes.texi:719
@@ -1237,7 +1191,7 @@ msgstr ":filter @var{filter}"
 #. type: table
 #: original_texis/processes.texi:666
 msgid "Initialize the process filter to @var{filter}.  If not specified, a default filter will be provided, which can be overridden later.  @xref{Filter Functions}."
-msgstr ""
+msgstr "プロセスフィルターを@var{filter}に初期化する。未指定ならデフォルトフィルターが提供されるが、これは後からオーバーライドできる。@ref{Filter Functions}を参照のこと。"
 
 #. type: item
 #: original_texis/processes.texi:667 original_texis/processes.texi:724
@@ -1249,56 +1203,50 @@ msgstr ":sentinel @var{sentinel}"
 #. type: table
 #: original_texis/processes.texi:671
 msgid "Initialize the process sentinel to @var{sentinel}.  If not specified, a default sentinel will be used, which can be overridden later.  @xref{Sentinels}."
-msgstr ""
+msgstr "プロセスセンチネルを@var{sentinel}に初期化する。未指定ならデフォルトセンチネルが使用されるが、これは後からオーバーライドできる。@ref{Sentinels}を参照のこと。"
 
 #. type: item
 #: original_texis/processes.texi:672
-#, fuzzy, no-wrap
-#| msgid ":server @var{server-flag}"
+#, no-wrap
 msgid ":stderr @var{stderr}"
-msgstr ":server @var{server-flag}"
+msgstr ":stderr @var{stderr}"
 
 #. type: table
 #: original_texis/processes.texi:676
 msgid "Associate @var{stderr} with the standard error of the process.  A non-@code{nil} value should be either a buffer or a pipe process created with @code{make-pipe-process}, described below."
-msgstr ""
+msgstr "プロセスの標準エラーに@var{stderr}を割り当てる。値が非@code{nil}ならバッファー、または以下で説明する@code{make-pipe-process}で作成されたpipeのいずれかであること。"
 
 #. type: defun
 #: original_texis/processes.texi:680 original_texis/processes.texi:732
 #: original_texis/processes.texi:2627
 msgid "The original argument list, modified with the actual connection information, is available via the @code{process-contact} function."
-msgstr "実際の接続情報で修正されたオリジナルの引数リストは、@code{process-contact}を通じて利用できる。"
+msgstr "実際の接続情報で修正されたオリジナルの引数リストは@code{process-contact}を通じて利用できる。"
 
 #. type: defun
 #: original_texis/processes.texi:682
-#, fuzzy, no-wrap
-#| msgid "make-serial-process &rest args"
+#, no-wrap
 msgid "make-pipe-process &rest args"
-msgstr "make-serial-process &rest args"
+msgstr "make-pipe-process &rest args"
 
 #. type: defun
 #: original_texis/processes.texi:686
 msgid "This function creates a bidirectional pipe which can be attached to a child process.  This is useful with the @code{:stderr} keyword of @code{make-process}.  The function returns a process object."
-msgstr ""
+msgstr "この関数は子プロセスにアタッチ可能な双方向のpipeを作成する。これは@code{make-process}の@code{:stderr}キーワードと併用することで有用。この関数はプロセスオブジェクトをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:690
-#, fuzzy
-#| msgid "The remaining arguments @var{parameters} are keyword/argument pairs that are mainly relevant to encrypted connections:"
 msgid "The arguments @var{args} are a list of keyword/argument pairs.  Omitting a keyword is always equivalent to specifying it with value @code{nil}."
-msgstr "残りの引数@var{parameters}は、主に暗号化された接続に関連する、キーワード/引数のペアーである:"
+msgstr "引数@var{args}はkeyword/argumentペアのリスト。キーワードの省略はそのキーワードに値@code{nil}を指定することと常に等価。"
 
 #. type: defun
 #: original_texis/processes.texi:692
 msgid "Here are the meaningful keywords:"
-msgstr ""
+msgstr "以下は意味のあるキーワード。"
 
 #. type: table
 #: original_texis/processes.texi:697
-#, fuzzy
-#| msgid "Use the string @var{name} as the process name.  It is modified if necessary to make it unique."
 msgid "Use the string @var{name} as the process name.  As with @code{make-process}, it is modified if necessary to make it unique."
-msgstr "プロセス名として、文字列@var{name}を使用する。一意にするために、必要に応じて変更され得る。"
+msgstr "プロセス名として文字列@var{name}を使用する。@code{make-process}の場合のように、一意にするために必要に応じて変更され得る。"
 
 #. type: table
 #: original_texis/processes.texi:700 original_texis/processes.texi:2587
@@ -1307,20 +1255,18 @@ msgstr "プロセスバッファーとして@var{buffer}を使用する。"
 
 #. type: table
 #: original_texis/processes.texi:707
-#, fuzzy
-#| msgid "If @var{coding} is a symbol, it specifies the coding system used for both reading and writing for this process.  If @var{coding} is a cons @code{(@var{decoding} . @var{encoding})}, @var{decoding} is used for reading, and @var{encoding} is used for writing.  If not specified, the default is to determine the coding systems from the data itself."
 msgid "If @var{coding} is a symbol, it specifies the coding system to be used for both reading and writing of data from and to the connection.  If @var{coding} is a cons cell @w{@code{(@var{decoding} . @var{encoding})}}, then @var{decoding} will be used for reading and @var{encoding} for writing."
-msgstr "@var{coding}は、このプロセスにたいする読み書きに使用される、コーディングシステムを指定する。@var{coding}がコンス@code{(@var{decoding} . @var{encoding})}なら、読み取りに@var{decoding}、書き込みには@var{encoding}が使用される。指定されない場合のデフォルトは、データ自身から判断されるコーディングシステムである。"
+msgstr "@var{coding}がシンボルなら、それはその接続にたいする読み取りと書き込みの両方で使用するコーディングシステムを指定する。@var{coding}がコンスセル@w{@code{(@var{decoding} . @var{encoding})}}なら読み取りに@var{decoding}、書き込みに@var{encoding}が使用される。"
 
 #. type: table
 #: original_texis/processes.texi:723
 msgid "Initialize the process filter to @var{filter}.  If not specified, a default filter will be provided, which can be changed later.  @xref{Filter Functions}."
-msgstr ""
+msgstr "プロセスフィルターを@var{filter}に初期化する。未指定ならデフォルトフィルターが提供されるが後で変更できる。@ref{Filter Functions}を参照のこと。"
 
 #. type: table
 #: original_texis/processes.texi:728
 msgid "Initialize the process sentinel to @var{sentinel}.  If not specified, a default sentinel will be used, which can be changed later.  @xref{Sentinels}."
-msgstr ""
+msgstr "プロセスセンチネルを@var{sentinel}に初期化する。未指定ならデフォルトセンチネルが使用されるが後で変更できる。@ref{Sentinels}を参照のこと。"
 
 #. type: defun
 #: original_texis/processes.texi:734
@@ -1330,27 +1276,23 @@ msgstr "start-process name buffer-or-name program &rest args"
 
 #. type: defun
 #: original_texis/processes.texi:743
-#, fuzzy
-#| msgid "This function creates a new asynchronous subprocess and starts the program @var{program} running in it.  It returns a process object that stands for the new subprocess in Lisp.  The argument @var{name} specifies the name for the process object; if a process with this name already exists, then @var{name} is modified (by appending @samp{<1>}, etc.)@: to be unique.  The buffer @var{buffer-or-name} is the buffer to associate with the process."
 msgid "This function is a higher-level wrapper around @code{make-process}, exposing an interface that is similar to @code{call-process}.  It creates a new asynchronous subprocess and starts the specified @var{program} running in it.  It returns a process object that stands for the new subprocess in Lisp.  The argument @var{name} specifies the name for the process object; as with @code{make-process}, it is modified if necessary to make it unique.  The buffer @var{buffer-or-name} is the buffer to associate with the process."
-msgstr "この関数は新たな非同期サブプロセスを作成して、その中でプログラム@var{program}の実行を開始する。これはLisp内で新たなサブプロセスを意味する、プロセスオブジェクトをリターンする。引数@var{name}は、そのプロセスオブジェクトにたいして、名前を指定する。その名前のプロセスがすでに存在する場合、(@samp{<1>}を追加することにより)一意になるよう、@var{name}を変更する。バッファー@var{buffer-or-name}は、そのプロセスに関連付けられたバッファーである。"
+msgstr "この関数は@code{call-process}の類似したインターフェースを提供する、@code{make-process}周辺の高レベルのラッパー。これは新たに非同期サブプロセスを作成して、指定された@var{program}の実行をその内部で開始する。これはLispで新たなサブプロセスを意味するプロセスオブジェクトをリターンする。引数@var{name}はプロセスオブジェクトの名前を指定する。@code{make-process}の場合のように、一意な名前となるように必要に応じて修正する。バッファー@var{buffer-or-name}はそのプロセスに関連付けるバッファー。"
 
 #. type: defun
 #: original_texis/processes.texi:748
 msgid "If @var{program} is @code{nil}, Emacs opens a new pseudoterminal (pty)  and associates its input and output with @var{buffer-or-name}, without creating a subprocess.  In that case, the remaining arguments @var{args} are ignored."
-msgstr "@var{program}が@code{nil}なら、Emacsは疑似端末(pty)を新たにオープンして、サブプロセスを新たに作成することなく、ptyの入力と出力を@var{buffer-or-name}に関連付ける。この場合、残りの引数@var{args}は無視される。"
+msgstr "@var{program}が@code{nil}ならEmacsは疑似端末(pty)を新たにオープンして、サブプロセスを新たに作成することなくptyの入力と出力を@var{buffer-or-name}に関連付ける。この場合には残りの引数@var{args}は無視される。"
 
 #. type: defun
 #: original_texis/processes.texi:751
-#, fuzzy
-#| msgid "The remaining arguments, @var{args}, are strings that specify command line arguments for the subprocess."
 msgid "The rest of @var{args} are strings that specify command line arguments for the subprocess."
-msgstr "残りの引数@var{args}は、サブプロセスにコマンドライン引数を指定する文字列である。"
+msgstr "残りの@var{args}はサブプロセスにコマンドライン引数を指定する文字列。"
 
 #. type: defun
 #: original_texis/processes.texi:760
 msgid "In the example below, the first process is started and runs (rather, sleeps) for 100 seconds (the output buffer @samp{foo} is created immediately).  Meanwhile, the second process is started, and given the name @samp{my-process<1>} for the sake of uniqueness.  It inserts the directory listing at the end of the buffer @samp{foo}, before the first process finishes.  Then it finishes, and a message to that effect is inserted in the buffer.  Much later, the first process finishes, and another message is inserted in the buffer for it."
-msgstr "以下の例では、1つ目のプロセスが開始して、100秒間実行(というよりはsleep)される。その間に2つ目のプロセスが開始して、一意性を保つために@samp{my-process<1>}という名前が与えられる。これは1つ目のプロセスが終了する前に、バッファー@samp{foo}の最後にディレクトリーのリストを挿入する。その後、2つ目のプロセスは終了して、その旨のメッセージがバッファーに挿入される。さらに遅れて1つ目のプロセスが終了して、バッファーに別のメッセージが挿入される。"
+msgstr "以下の例では1つ目のプロセスを開始して100秒間実行(というよりはsleep)される。その間に2つ目のプロセスを開始して、一意性を保つために@samp{my-process<1>}という名前が与えられる。これは1つ目のプロセスが終了する前にバッファー@samp{foo}の最後にディレクトリーのリストを挿入する。その後に2つ目のプロセスは終了して、その旨のメッセージがバッファーに挿入される。さらに遅れて1つ目のプロセスが終了して、バッファーに別のメッセージが挿入される。"
 
 #. type: group
 #: original_texis/processes.texi:765
@@ -1423,31 +1365,27 @@ msgstr "start-file-process name buffer-or-name program &rest args"
 #. type: defun
 #: original_texis/processes.texi:790
 msgid "Like @code{start-process}, this function starts a new asynchronous subprocess running @var{program} in it, and returns its process object."
-msgstr "@code{start-process}と同様、この関数は非同期サブプロセスを開始して、その内部で@var{program}を実行して、そのプロセスオブジェクトをリターンする。"
+msgstr "@code{start-process}と同じようにこの関数は非同期サブプロセスを開始して、その内部で@var{program}を実行してそのプロセスオブジェクトをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:797
-#, fuzzy
-#| msgid "The difference from @code{start-process} is that this function may invoked a file handler based on the value of @code{default-directory}.  This handler ought to run @var{program}, perhaps on the local host, perhaps on a remote host that corresponds to @code{default-directory}.  In the latter case, the local part of @code{default-directory} becomes the working directory of the process."
 msgid "The difference from @code{start-process} is that this function may invoke a file handler based on the value of @code{default-directory}.  This handler ought to run @var{program}, perhaps on the local host, perhaps on a remote host that corresponds to @code{default-directory}.  In the latter case, the local part of @code{default-directory} becomes the working directory of the process."
-msgstr "@code{start-process}との違いは、この関数が@code{default-directory}の値にもとづいて、ファイルハンドラーを呼び出すかもしれないという点である。このハンドラーはローカルホスト上、あるいは@code{default-directory}に応じたリモートホスト上で、@var{program}を実行するべきである。後者の場合、@code{default-directory}のローカル部分は、そのプロセスのワーキングディレクトリーになる。"
+msgstr "@code{start-process}との違いは、この関数が@code{default-directory}の値にもとづいてファイルハンドラーを呼び出すかもしれないという点である。このハンドラーはローカルホスト上、あるいは@code{default-directory}に応じたリモートホスト上で@var{program}を実行すること。後者の場合には、@code{default-directory}のローカル部分はそのプロセスのワーキングディレクトリーになる。"
 
 #. type: defun
 #: original_texis/processes.texi:800
-#, fuzzy
-#| msgid "This function does not try to invoke file name handlers for @var{program} or for the @var{program-args}."
 msgid "This function does not try to invoke file name handlers for @var{program} or for the rest of @var{args}."
-msgstr "この関数は@var{program}、または@var{program-args}にたいしてファイル名ハンドラーの呼び出しを試みない。"
+msgstr "この関数は@var{program}、または@var{args}の残りにたいしてファイル名ハンドラーの呼び出しを試みない。"
 
 #. type: defun
 #: original_texis/processes.texi:804
 msgid "Depending on the implementation of the file handler, it might not be possible to apply @code{process-filter} or @code{process-sentinel} to the resulting process object.  @xref{Filter Functions}, and @ref{Sentinels}."
-msgstr "そのファイルハンドラーの実装によっては、リターン結果のプロセスオブジェクトに@code{process-filter}または@code{process-sentinel}を適用することができないかもしれない。@ref{Filter Functions}および@ref{Sentinels}を参照されたい。"
+msgstr "そのファイルハンドラーの実装によっては、リターン結果のプロセスオブジェクトに@code{process-filter}や@code{process-sentinel}を適用することができないかもしれない。@ref{Filter Functions}と@ref{Sentinels}を参照のこと。"
 
 #. type: defun
 #: original_texis/processes.texi:810
 msgid "Some file handlers may not support @code{start-file-process} (for example the function @code{ange-ftp-hook-function}).  In such cases, this function does nothing and returns @code{nil}."
-msgstr "いくつかのファイルハンドラーは@code{start-file-process}をサポートしないかもしれない(たとえば@code{ange-ftp-hook-function}関数)。そのような場合、この関数は何も行わずに@code{nil}をリターンする。"
+msgstr "いくつかのファイルハンドラーは@code{start-file-process}をサポートしないかもしれない(たとえば@code{ange-ftp-hook-function}関数)。そのような場合には、この関数は何も行わずに@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:812
@@ -1457,17 +1395,13 @@ msgstr "start-process-shell-command name buffer-or-name command"
 
 #. type: defun
 #: original_texis/processes.texi:817
-#, fuzzy
-#| msgid "This function is like @code{start-process}, except that it uses a shell to execute the specified command.  The argument @var{command} is a shell command name.  The variable @code{shell-file-name} specifies which shell to use."
 msgid "This function is like @code{start-process}, except that it uses a shell to execute the specified @var{command}.  The argument @var{command} is a shell command string.  The variable @code{shell-file-name} specifies which shell to use."
-msgstr "この関数は@code{start-process}と同様だが、指定されたコマンドの実行にshellを使用する点が異なる。引数@var{command}は、shellコマンド名である。変数@code{shell-file-name}は、どのshellを使用するかを指定する。"
+msgstr "この関数は@code{start-process}と同様だが、指定された@var{command}の実行にshellを使用する点が異なる。引数@var{command}はshellコマンド文字列。変数@code{shell-file-name}はどのshellを使用するかを指定する。"
 
 #. type: defun
 #: original_texis/processes.texi:827
-#, fuzzy
-#| msgid "The point of running a program through the shell, rather than directly with @code{start-process}, is so that you can employ shell features such as wildcards in the arguments.  It follows that if you include any arbitrary user-specified arguments in the command, you should quote them with @code{shell-quote-argument} first, so that any special shell characters do @emph{not} have their special shell meanings.  @xref{Shell Arguments}.  Of course, when executing commands based on user input you should also consider the security implications."
 msgid "The point of running a program through the shell, rather than directly with @code{make-process} or @code{start-process}, is so that you can employ shell features such as wildcards in the arguments.  It follows that if you include any arbitrary user-specified arguments in the command, you should quote them with @code{shell-quote-argument} first, so that any special shell characters do @emph{not} have their special shell meanings.  @xref{Shell Arguments}.  Of course, when executing commands based on user input you should also consider the security implications."
-msgstr "@code{start-process}でプログラムを実行せずにshellを通じて実行することの要点は、引数内のワイルドカード展開のようなshell機能を利用可能にするためである。そのためにはコマンド内に任意のユーザー指定引数を含めるなら、任意の特別なshell文字が、shellでの特別な意味を@emph{もたない}ように、まず@code{shell-quote-argument}でそれらをクォートするべきである。@ref{Shell Arguments}を参照のこと。ユーザー入力にもとづいたコマンド実行時には、当然セキュリティ上の影響も考慮するべきである。"
+msgstr "@code{make-process}や@code{start-process}でプログラムを実行せずにshellを通じて実行することの要点は、引数内のワイルドカード展開のようなshell機能を利用可能にするためである。そのためにはコマンド内に任意のユーザー指定引数を含めるなら、任意の特別なshell文字がshellでの特別な意味を@emph{もたない}ように、まず@code{shell-quote-argument}でそれらをクォートするべきである。@ref{Shell Arguments}を参照のこと。ユーザー入力にもとづいたコマンド実行時には当然セキュリティ上の影響も考慮するべきである。"
 
 #. type: defun
 #: original_texis/processes.texi:829
@@ -1478,7 +1412,7 @@ msgstr "start-file-process-shell-command name buffer-or-name command"
 #. type: defun
 #: original_texis/processes.texi:833
 msgid "This function is like @code{start-process-shell-command}, but uses @code{start-file-process} internally.  Because of this, @var{command} can also be executed on remote hosts, depending on @code{default-directory}."
-msgstr "この関数は@code{start-process-shell-command}と似ているが、内部的に@code{start-file-process}を使用する点が異なる。これにより、@code{default-directory}に応じてリモートホスト上でも、@var{command}を実行できる。"
+msgstr "この関数は@code{start-process-shell-command}と似ているが、内部的に@code{start-file-process}を使用する点が異なる。これにより@code{default-directory}に応じてリモートホスト上でも@var{command}を実行できる。"
 
 #. type: defvar
 #: original_texis/processes.texi:835
@@ -1489,19 +1423,17 @@ msgstr "process-connection-type"
 #. type: defvar
 #: original_texis/processes.texi:839
 msgid "This variable controls the type of device used to communicate with asynchronous subprocesses.  If it is non-@code{nil}, then ptys are used, when available.  Otherwise, pipes are used."
-msgstr "この変数は、非同期サブプロセスと対話するために使用する、デバイスタイプを制御する。これが非@code{nil}の場合、利用可能ならpty、それ以外ならpipeが使用される。"
+msgstr "この変数は非同期サブプロセスと対話するために使用するデバイスタイプを制御する。これが非@code{nil}の場合には利用可能ならpty、それ以外ならpipeが使用される。"
 
 #. type: defvar
 #: original_texis/processes.texi:844
-#, fuzzy
-#| msgid "The value of @code{process-connection-type} takes effect when @code{start-process} is called.  So you can specify how to communicate with one subprocess by binding the variable around the call to @code{start-process}."
 msgid "The value of @code{process-connection-type} takes effect when @code{make-process} or @code{start-process} is called.  So you can specify how to communicate with one subprocess by binding the variable around the call to these functions."
-msgstr "@code{process-connection-type}の値は、@code{start-process}の呼び出し時に効果を発揮する。そのため、@code{start-process}の呼び出し前後でこの変数をバインドすることにより、サブプロセスとやり取りする方法を指定できる。"
+msgstr "@code{process-connection-type}の値は@code{make-process}や@code{start-process}の呼び出し時に効果を発揮する。そのためにこれらの関数の呼び出し前後でこの変数をバインドすることにより、サブプロセスとやり取りする方法を指定できる。"
 
 #. type: defvar
 #: original_texis/processes.texi:849
 msgid "Note that the value of this variable is ignored when @code{make-process} is called with a non-@code{nil} value of the @code{:stderr} parameter; in that case, Emacs will communicate with the process using pipes."
-msgstr ""
+msgstr "この変数の値は@code{make-process}が非@code{nil}値の@code{:stderr}パラメーターで呼び出された際には無視される。この場合には、Emacsはpipeを使用してプロセスと対話する。"
 
 #. type: group
 #: original_texis/processes.texi:854
@@ -1516,7 +1448,7 @@ msgstr ""
 #. type: defvar
 #: original_texis/processes.texi:860
 msgid "To determine whether a given subprocess actually got a pipe or a pty, use the function @code{process-tty-name} (@pxref{Process Information})."
-msgstr "与えられたサブプロセスが実際にはpipeとptyのどちらを取得したかを判断するには、関数@code{process-tty-name}を使用する(@ref{Process Information}を参照)。"
+msgstr "与えられたサブプロセスが実際にはpipeとptyのどちらを取得したかを判断するには関数@code{process-tty-name}を使用する(@ref{Process Information}を参照)。"
 
 #. type: cindex
 #: original_texis/processes.texi:864
@@ -1527,12 +1459,12 @@ msgstr "deleting processes"
 #. type: Plain text
 #: original_texis/processes.texi:873
 msgid "@dfn{Deleting a process} disconnects Emacs immediately from the subprocess.  Processes are deleted automatically after they terminate, but not necessarily right away.  You can delete a process explicitly at any time.  If you explicitly delete a terminated process before it is deleted automatically, no harm results.  Deleting a running process sends a signal to terminate it (and its child processes, if any), and calls the process sentinel.  @xref{Sentinels}."
-msgstr "@dfn{プロセス削除(deleting a process)}とは、Emacsをサブプロセスから即座に切断することです。プロセスは終了後に自動的に削除されますが、即座に削除される必要はありません。任意のタイミングで、明示的にプロセスを削除できます。終了したプロセスが自動的に削除される前に明示的に削除しても、それに害はありません。実行中のプロセスの削除は、プロセス(もしあれば子プロセスにも)を終了するためにシグナルを送信して、プロセスセンチネルを呼び出します。@ref{Sentinels}を参照してください。"
+msgstr "@dfn{プロセス削除(deleting a process)}とはEmacsをサブプロセスから即座に切断することです。プロセスは終了後に自動的に削除されますが即座に削除される必要はありません。任意のタイミングで明示的にプロセスを削除できます。終了したプロセスが自動的に削除される前に明示的に削除しても害はありません。実行中のプロセスの削除はプロセス(もしあれば子プロセスにも)を終了するためにシグナルを送信してプロセスセンチネルを呼び出します。@ref{Sentinels}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:880
 msgid "When a process is deleted, the process object itself continues to exist as long as other Lisp objects point to it.  All the Lisp primitives that work on process objects accept deleted processes, but those that do I/O or send signals will report an error.  The process mark continues to point to the same place as before, usually into a buffer where output from the process was being inserted."
-msgstr "プロセスが削除される際、そのプロセスオブジェクト自体は、それを参照する別のLispオブジェクトが存在する限り、継続し続けます。プロセスオブジェクトに作用するすべてのLispプリミティブはプロセスの削除を受け入れますが、I/Oを行ったりシグナルを送信するプリミティブは、エラーを報告するでしょう。プロセスマークは、通常はプロセスからの出力がバッファーに挿入される箇所である、以前と同じ箇所をポイントし続けます。"
+msgstr "プロセスが削除される際、そのプロセスオブジェクト自体はそれを参照する別のLispオブジェクトが存在する限り継続し続けます。プロセスオブジェクトに作用するすべてのLispプリミティブはプロセスの削除を受け入れますが、I/Oを行ったりシグナルを送信するプリミティブはエラーを報告するでしょう。プロセスマークは通常はプロセスからの出力がバッファーに挿入される箇所となる、以前と同じ箇所をポイントし続けます。"
 
 #. type: defopt
 #: original_texis/processes.texi:881
@@ -1543,7 +1475,7 @@ msgstr "delete-exited-processes"
 #. type: defopt
 #: original_texis/processes.texi:887
 msgid "This variable controls automatic deletion of processes that have terminated (due to calling @code{exit} or to a signal).  If it is @code{nil}, then they continue to exist until the user runs @code{list-processes}.  Otherwise, they are deleted immediately after they exit."
-msgstr "この変数は、(@code{exit}呼び出しやシグナルにより)終了したプロセスの、自動的な削除を制御する。これが@code{nil}なら、ユーザーが@code{list-processes}を実行するまでプロセスは存在し続け、それ以外ならexit後に即座に削除される。"
+msgstr "この変数は、(@code{exit}呼び出しやシグナルにより)終了したプロセスの自動的な削除を制御する。これが@code{nil}ならユーザーが@code{list-processes}を実行するまでプロセスは存在し続けて、それ以外ならexit後に即座に削除される。"
 
 #. type: defun
 #: original_texis/processes.texi:889
@@ -1553,15 +1485,13 @@ msgstr "delete-process process"
 
 #. type: defun
 #: original_texis/processes.texi:899
-#, fuzzy
-#| msgid "This function deletes a process, killing it with a @code{SIGKILL} signal.  The argument may be a process, the name of a process, a buffer, or the name of a buffer.  (A buffer or buffer-name stands for the process that @code{get-buffer-process} returns.)  Calling @code{delete-process} on a running process terminates it, updates the process status, and runs the sentinel immediately.  If the process has already terminated, calling @code{delete-process} has no effect on its status, or on the running of its sentinel (which will happen sooner or later)."
 msgid "This function deletes a process, killing it with a @code{SIGKILL} signal if the process was running a program.  The argument may be a process, the name of a process, a buffer, or the name of a buffer.  (A buffer or buffer-name stands for the process that @code{get-buffer-process} returns.)  Calling @code{delete-process} on a running process terminates it, updates the process status, and runs the sentinel immediately.  If the process has already terminated, calling @code{delete-process} has no effect on its status, or on the running of its sentinel (which will happen sooner or later)."
-msgstr "この関数は、@code{SIGKILL}シグナルでkillすることにより、プロセスを削除する。引数はプロセス、プロセスの名前、バッファー、バッファーの名前かもしれない(バッファーやバッファー名の場合は、@code{get-buffer-process}がリターンするプロセスを意味する)。実行中のプロセスに@code{delete-process}を呼び出すことにより、プロセスを終了してプロセス状態を更新して、即座にセンチネルを実行する。そのプロセスがすでに終了している場合、@code{delete-process}呼び出しはプロセス状態、または(遅かれ早かれ発生するであろう)プロセスセンチネルの実行に影響を与えない。"
+msgstr "この関数はプロセスがプログラムを実行していたら@code{SIGKILL}シグナルでkillすることによりプロセスを削除する。引数はプロセス、プロセスの名前、バッファー、バッファーの名前かもしれない(バッファーやバッファー名なら@code{get-buffer-process}がリターンするプロセスを意味する)。実行中のプロセスに@code{delete-process}を呼び出すことによりプロセスを終了してプロセス状態を更新して即座にセンチネルを実行する。そのプロセスがすでに終了していれば、@code{delete-process}呼び出しはプロセス状態、または(遅かれ早かれ発生するであろう)プロセスセンチネルの実行に影響を与えない。"
 
 #. type: defun
 #: original_texis/processes.texi:904
 msgid "If the process object represents a network, serial, or pipe connection, its status changes to @code{closed}; otherwise, it changes to @code{signal}, unless the process already exited.  @xref{Process Information, process-status}."
-msgstr ""
+msgstr "プロセスオブジェクトがネットワーク接続、シリアル接続、pipe接続を表す場合には状態は@code{closed}、それ以外ならそのプロセスがexit済みでなければ@code{signal}に変更される。@ref{Process Information, process-status}を参照のこと。"
 
 #. type: group
 #: original_texis/processes.texi:909
@@ -1598,7 +1528,7 @@ msgstr "このコマンドは、すべての生きたプロセスのリストを
 #. type: deffn
 #: original_texis/processes.texi:927
 msgid "The processes are shown in a buffer named @file{*Process List*} (unless you specify otherwise using the optional argument @var{buffer}), whose major mode is Process Menu mode."
-msgstr "プロセスは、メジャーモードがProcess Menuモードであるような、@file{*Process List*}という名前(オプション引数@var{buffer}で他の名前を指定していない場合)のバッファーに表示される。"
+msgstr "プロセスはメジャーモードがProcess Menuモードであるような、@file{*Process List*}という名前のバッファーに表示される(オプション引数@var{buffer}で他の名前を指定していない場合)。"
 
 #. type: deffn
 #: original_texis/processes.texi:930
@@ -1614,7 +1544,7 @@ msgstr "process-list"
 #. type: defun
 #: original_texis/processes.texi:934
 msgid "This function returns a list of all processes that have not been deleted."
-msgstr "この関数は、削除されていないすべてのプロセスのリストをリターンする。"
+msgstr "この関数は削除されていないすべてのプロセスのリストをリターンする。"
 
 #. type: group
 #: original_texis/processes.texi:939
@@ -1634,10 +1564,8 @@ msgstr "get-process name"
 
 #. type: defun
 #: original_texis/processes.texi:947
-#, fuzzy
-#| msgid "This function returns the process named @var{name} (a string), or @code{nil} if there is none."
 msgid "This function returns the process named @var{name} (a string), or @code{nil} if there is none.  The argument @var{name} can also be a process object, in which case it is returned."
-msgstr "この関数は@var{name}(文字列)というプロセス、存在しなければ@code{nil}をリターンする。"
+msgstr "この関数は@var{name} (文字列)というプロセス、存在しなければ@code{nil}をリターンする。引数@var{name}はプロセスオブジェクトでもよく、この場合にはそれがリターンされる。"
 
 #. type: group
 #: original_texis/processes.texi:952
@@ -1657,10 +1585,8 @@ msgstr "process-command process"
 
 #. type: defun
 #: original_texis/processes.texi:963
-#, fuzzy
-#| msgid "This function returns the command that was executed to start @var{process}.  This is a list of strings, the first string being the program executed and the rest of the strings being the arguments that were given to the program."
 msgid "This function returns the command that was executed to start @var{process}.  This is a list of strings, the first string being the program executed and the rest of the strings being the arguments that were given to the program.  For a network, serial, or pipe connection, this is either @code{nil}, which means the process is running or @code{t} (process is stopped)."
-msgstr "この関数は、@var{process}を開始するために実行されたコマンドをリターンする。これは文字列のリストで、1つ目の文字列は実行されたプログラム、残りの文字列はそのプログラムに与えられた引数である。"
+msgstr "この関数は@var{process}を開始するために実行されたコマンドをリターンする。これは文字列のリストで1つ目の文字列は実行されたプログラム、残りの文字列はそのプログラムに与えられた引数。ネットワーク接続、シリアル接続、pipe接続にたいしては@code{nil} (プロセスは実行中)か@code{t} (プロセスは停止中)のいずれか。"
 
 #. type: group
 #: original_texis/processes.texi:968
@@ -1680,25 +1606,18 @@ msgstr "process-contact process &optional key"
 
 #. type: defun
 #: original_texis/processes.texi:979
-#, fuzzy
-#| msgid "This function returns information about how a network or serial process was set up.  When @var{key} is @code{nil}, it returns @code{(@var{hostname} @var{service})} for a network process, and @code{(@var{port} @var{speed})} for a serial process.  For an ordinary child process, this function always returns @code{t}."
 msgid "This function returns information about how a network, a serial, or a pipe connection was set up.  When @var{key} is @code{nil}, it returns @code{(@var{hostname} @var{service})} for a network connection, @code{(@var{port} @var{speed})} for a serial connection, and @code{t} for a pipe connection.  For an ordinary child process, this function always returns @code{t} when called with a @code{nil} @var{key}."
-msgstr ""
-"この関数は、ネットワークプロセスまたはシリアルプロセスがセットアップされた方法についての情報をリターンする。\n"
-"This function returns information about how a network or serial process was set up.\n"
-"@var{key}が@code{nil}なら、ネットワークプロセスにたいしては@code{(@var{hostname} @var{service})}、シリアルプロセスにたいしては@code{(@var{port} @var{speed})}をリターンする。普通の子プロセスにたいしては、この関数は常に@code{t}をリターンする。"
+msgstr "この関数はネットワーク接続、シリアル接続、pipe接続がセットアップされた方法に関する情報をリターンする。@var{key}が@code{nil}ならネットワーク接続には@code{(@var{hostname} @var{service})}、シリアル接続には@code{(@var{port} @var{speed})}、pipe接続には@code{t}をリターンする。普通の子プロセスにたいしては、この関数は@var{key}が@code{nil}で呼び出されると常に@code{t}をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:986
-#, fuzzy
-#| msgid "If @var{key} is @code{t}, the value is the complete status information for the connection, server, or serial port; that is, the list of keywords and values specified in @code{make-network-process} or @code{make-serial-process}, except that some of the values represent the current status instead of what you specified."
 msgid "If @var{key} is @code{t}, the value is the complete status information for the connection, server, serial port, or pipe; that is, the list of keywords and values specified in @code{make-network-process}, @code{make-serial-process}, or @code{make-pipe-process}, except that some of the values represent the current status instead of what you specified."
-msgstr "@var{key}が@code{t}なら、値はその接続、サーバー、またはシリアルポートについての完全な状態情報、すなわち@code{make-network-process}または@code{make-serial-process}内で指定されるキーワードと値のリストとなる。ただしいくつかの値については、指定した値のかわりに、カレント状態を表す値となる。"
+msgstr "@var{key}が@code{t}なら値はその接続、サーバー、シリアルポート、またはpipeについての完全な状態情報、すなわち@code{make-network-process}、@code{make-serial-process}、または@code{make-pipe-process}内で指定されるキーワードと値のリストとなる。ただしいくつかの値については、指定した値のかわりにカレント状態を表す値となる。"
 
 #. type: defun
 #: original_texis/processes.texi:989
 msgid "For a network process, the values include (see @code{make-network-process} for a complete list):"
-msgstr "ネットワークプロセスにたいしては、その値が含まれる(完全なリストについては、@code{make-network-process}を参照されたい)。"
+msgstr "ネットワークプロセスにたいしては以下の値が含まれる(完全なリストは@code{make-network-process}を参照):"
 
 #. type: item
 #: original_texis/processes.texi:991
@@ -1719,10 +1638,8 @@ msgstr ":filter"
 
 #. type: table
 #: original_texis/processes.texi:996
-#, fuzzy
-#| msgid "The associated value is the process filter function."
 msgid "The associated value is the process filter function.  @xref{Filter Functions}."
-msgstr "値にはプロセスのフィルター関数が割り当てられる。"
+msgstr "値にはプロセスのフィルター関数が割り当てられる。@ref{Filter Functions}を参照のこと。"
 
 #. type: item
 #: original_texis/processes.texi:996
@@ -1746,7 +1663,7 @@ msgstr ":remote"
 #. type: table
 #: original_texis/processes.texi:1000
 msgid "In a connection, the address in internal format of the remote peer."
-msgstr "接続にたいしては、内部的なフォーマットによる、リモートピアーのアドレス。"
+msgstr "接続にたいしては内部的なフォーマットによるリモートピアーのアドレス。"
 
 #. type: item
 #: original_texis/processes.texi:1000
@@ -1757,7 +1674,7 @@ msgstr ":local"
 #. type: table
 #: original_texis/processes.texi:1002
 msgid "The local address, in internal format."
-msgstr "内部的なフォーマットによる、ローカルアドレス。"
+msgstr "内部的なフォーマットによるローカルアドレス。"
 
 #. type: item
 #: original_texis/processes.texi:1002
@@ -1768,19 +1685,17 @@ msgstr ":service"
 #. type: table
 #: original_texis/processes.texi:1005
 msgid "In a server, if you specified @code{t} for @var{service}, this value is the actual port number."
-msgstr "サーバーにおいては、@var{service}に@code{t}を指定した場合、この値は実際のポート番号。"
+msgstr "この値はサーバーでは@var{service}に@code{t}を指定すると実際のポート番号。"
 
 #. type: defun
 #: original_texis/processes.texi:1009
 msgid "@code{:local} and @code{:remote} are included even if they were not specified explicitly in @code{make-network-process}."
-msgstr "@code{make-network-process}内で明示的に指定されていなくても、@code{:local}と@code{:remote}は値に含まれる。"
+msgstr "@code{make-network-process}内で明示的に指定されていなくても@code{:local}と@code{:remote}は値に含まれる。"
 
 #. type: defun
 #: original_texis/processes.texi:1013
-#, fuzzy
-#| msgid "For a serial process, see @code{make-serial-process} and @code{serial-process-configure} for a list of keys."
 msgid "For a serial connection, see @code{make-serial-process} and @code{serial-process-configure} for the list of keys.  For a pipe connection, see @code{make-pipe-process} for the list of keys."
-msgstr "シリアルプロセスについては@code{make-serial-process}、キーのリストについては@code{serial-process-configure}を参照されたい。"
+msgstr "シリアル接続については@code{make-serial-process}、キーのリストは@code{serial-process-configure}を参照のこと。pipe接続については@code{make-pipe-process}を参照のこと。"
 
 #. type: defun
 #: original_texis/processes.texi:1016
@@ -1795,10 +1710,8 @@ msgstr "process-id process"
 
 #. type: defun
 #: original_texis/processes.texi:1026
-#, fuzzy
-#| msgid "This function returns the @acronym{PID} of @var{process}.  This is an integer that distinguishes the process @var{process} from all other processes running on the same computer at the current time.  The @acronym{PID} of a process is chosen by the operating system kernel when the process is started and remains constant as long as the process exists."
 msgid "This function returns the @acronym{PID} of @var{process}.  This is an integral number that distinguishes the process @var{process} from all other processes running on the same computer at the current time.  The @acronym{PID} of a process is chosen by the operating system kernel when the process is started and remains constant as long as the process exists.  For network, serial, and pipe connections, this function returns @code{nil}."
-msgstr "この関数は、@var{process}の@acronym{PID}をリターンする。これは同じコンピューター上でカレント時に実行中の他のすべてのプロセスから、プロセス@var{process}を区別するための整数である。プロセスの@acronym{PID}は、そのプロセスの開始時にオペレーティングシステムのカーネルにより選択され、そのプロセスが存在する限り定数として保たれる。"
+msgstr "この関数は@var{process}の@acronym{PID}をリターンする。これは同じコンピューター上でカレント時に実行中の他のすべてのプロセスからプロセス@var{process}を区別するための整数。プロセスの@acronym{PID}はプロセスの開始時にオペレーティングシステムのカーネルにより選択されて、そのプロセスが存在する限り定数として保たれる。この関数はネットワーク接続、シリアル接続、pipe接続には@code{nil}をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1028
@@ -1809,7 +1722,7 @@ msgstr "process-name process"
 #. type: defun
 #: original_texis/processes.texi:1030
 msgid "This function returns the name of @var{process}, as a string."
-msgstr "この関数は@var{process}の名前を、文字列としてリターンする。"
+msgstr "この関数は@var{process}の名前を文字列としてリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1032
@@ -1820,7 +1733,7 @@ msgstr "process-status process-name"
 #. type: defun
 #: original_texis/processes.texi:1036
 msgid "This function returns the status of @var{process-name} as a symbol.  The argument @var{process-name} must be a process, a buffer, or a process name (a string)."
-msgstr "この関数は@var{process-name}の状態を、文字列としてリターンする。引数@var{process-name}はプロセス、バッファー、またはプロセス名(文字列)かもしれない。"
+msgstr "この関数は@var{process-name}の状態を文字列でリターンする。引数@var{process-name}はプロセス、バッファー、またはプロセス名(文字列)でなければならない。"
 
 #. type: defun
 #: original_texis/processes.texi:1038
@@ -1879,10 +1792,8 @@ msgstr "open"
 
 #. type: table
 #: original_texis/processes.texi:1050
-#, fuzzy
-#| msgid "for a network connection that is open."
 msgid "for a network, serial, or pipe connection that is open."
-msgstr "オープンされたネットワーク接続。"
+msgstr "オープンされたネットワーク接続、シリアル接続、またはpipe接続。"
 
 #. type: item
 #: original_texis/processes.texi:1050
@@ -1892,10 +1803,8 @@ msgstr "closed"
 
 #. type: table
 #: original_texis/processes.texi:1054
-#, fuzzy
-#| msgid "for a network connection that is closed.  Once a connection is closed, you cannot reopen it, though you might be able to open a new connection to the same place."
 msgid "for a network, serial, or pipe connection that is closed.  Once a connection is closed, you cannot reopen it, though you might be able to open a new connection to the same place."
-msgstr "クローズされたネットワーク接続。一度クローズされた接続は、たとえ同じ場所にたいして新たな接続をオープンすることができたとしても、再度オープンすることはできない。"
+msgstr "クローズされたネットワーク接続、シリアル接続、またはpipe接続。一度クローズされた接続は、たとえ同じ場所にたいして新たな接続をオープンすることができたとしても再度オープンすることはできない。"
 
 #. type: item
 #: original_texis/processes.texi:1054
