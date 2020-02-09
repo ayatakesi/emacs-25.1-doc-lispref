@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-02-09 13:51+0900\n"
+"PO-Revision-Date: 2020-02-09 21:07+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2448,38 +2448,38 @@ msgstr "set-process-window-size process height width"
 #. type: defun
 #: original_texis/processes.texi:1498
 msgid "Tell @var{process} that its logical window size has dimensions @var{width} by @var{height}, in character units.  If this function succeeds in communicating this information to the process, it returns @code{t}; otherwise it returns @code{nil}."
-msgstr ""
+msgstr "@var{process}にたいして、その論理ウィンドウサイズが文字単位で@var{width}と@var{height}のサイズであることを告げる。関数がこの情報をプロセスとやり取りすることに成功したら@code{t}、それ以外は@code{nil}をリターンする。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1511
 msgid "When windows that display buffers associated with process change their dimensions, the affected processes should be told about these changes.  By default, when the window configuration changes, Emacs will automatically call @code{set-process-window-size} on behalf of every process whose buffer is displayed in a window, passing it the smallest dimensions of all the windows displaying the process's buffer.  This works via @code{window-configuration-change-hook} (@pxref{Window Hooks}), which is told to invoke the function that is the value of the variable @code{window-adjust-process-window-size-function} for each process whose buffer is displayed in at least one window.  You can customize this behavior by setting the value of that variable."
-msgstr ""
+msgstr "プロセスに関連付けられたバッファーを表示するウィンドウがサイズを変更された際には、影響を受けるプロセスはその変更にたいして通知される必要があります。デフォルトではウィンドウ構成(window configuration)が変更されると、ウィンドウにバッファーが表示されている各プロセスにかわり、プロセスのバッファーを表示するすべてのウィンドウのうち最小のサイズのウィンドウを引数として、Emacsが自動的に@code{set-process-window-size}を呼び出します。これはバッファーが少なくとも1つのウィンドウに表示されているプセスそれぞれにたいして、変数@code{window-adjust-process-window-size-function}の値である関数を呼び出すように指定する@code{window-configuration-change-hook} (@ref{Window Hooks}を参照)を通じて機能します。この変数をセットすることにより、この振る舞いをカスマイズできます。"
 
 #. type: defopt
 #: original_texis/processes.texi:1512
 #, no-wrap
 msgid "window-adjust-process-window-size-function"
-msgstr ""
+msgstr "window-adjust-process-window-size-function"
 
 #. type: defopt
 #: original_texis/processes.texi:1521
 msgid "The value of this variable should be a function of two arguments: a process and the list of windows displaying the process's buffer.  When the function is called, the process's buffer is the current buffer.  The function should return a cons cell @w{@code{(@var{width} . @var{height})}} that describes the dimensions of the logical process window to be passed via a call to @code{set-process-window-size}.  The function can also return @code{nil}, in which case Emacs will not call @code{set-process-window-size} for this process."
-msgstr ""
+msgstr "この変数の値はプロセスとプロセスのバッファーを表示するウィンドウのリストという2つの引数を受け取る関数であること。その関数が呼び出される際には、そのプロセスのバッファーがカレントバッファーとなる。関数は@code{set-process-window-size}の呼び出しを通じて渡される論理プロセスウィンドウ(logical process window)を記述するコンスセル@w{@code{(@var{width} . @var{height})}}をリターンすること。関数は@code{nil}をリターンすることもでき、Emacsはこの場合にはそのプロセスにたいして@code{set-process-window-size}を呼び出さない。"
 
 #. type: defopt
 #: original_texis/processes.texi:1528
 msgid "Emacs supplies two predefined values for this variable: @code{window-adjust-process-window-size-smallest}, which returns the smallest of all the dimensions of the windows that display a process's buffer; and @code{window-adjust-process-window-size-largest}, which returns the largest dimensions.  For more complex strategies, write your own function."
-msgstr ""
+msgstr "この変数にたいしてEmacsは2つの事前定義された値を提供する。1つは@code{window-adjust-process-window-size-smallest}であり、これはプロセスのバッファーを表示するウィンドウのすべてのサイズから最小のサイズもう1つの@code{window-adjust-process-window-size-largest}は最大のサイズをリターンする。より複雑な方式には独自の関数を記述すること。"
 
 #. type: defopt
 #: original_texis/processes.texi:1530
 msgid "This variable can be buffer-local."
-msgstr ""
+msgstr "この変数はバッファーローカルにできる。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1536
 msgid "If the process has the @code{adjust-window-size-function} property (@pxref{Process Information}), its value overrides the global and buffer-local values of @code{window-adjust-process-window-size-function}."
-msgstr ""
+msgstr "プロセスが@code{adjust-window-size-function}プロパティ(@ref{Process Information}を参照)をもつ場合には、その値は@code{window-adjust-process-window-size-function}のグローバル値とバッファーロール値をオーバーライドします。"
 
 #. type: subsection
 #: original_texis/processes.texi:1538
@@ -2501,47 +2501,44 @@ msgstr "process filter"
 
 #. type: cindex
 #: original_texis/processes.texi:1542
-#, fuzzy, no-wrap
-#| msgid "This function returns the filter function of @var{process}."
+#, no-wrap
 msgid "default filter function of a process"
-msgstr "この関数は、@var{process}のフィルター関数をリターンする。"
+msgstr "default filter function of a process"
 
 #. type: Plain text
 #: original_texis/processes.texi:1547
 msgid "A process @dfn{filter function} is a function that receives the standard output from the associated process.  @emph{All} output from that process is passed to the filter.  The default filter simply outputs directly to the process buffer."
-msgstr "プロセスの@dfn{フィルター関数(filter function)}は、関連付けられたプロセスからの標準出力を受信します。そのプロセスの@emph{すべて}の出力は、そのフィルターに渡されます。デフォルトのフィルターは単に、プロセスバッファーに直接出力します。"
+msgstr "プロセスの@dfn{フィルター関数(filter function)}は、関連付けられたプロセスからの標準出力を受信します。そのプロセスの@emph{すべて}の出力はそのフィルターに渡されます。デフォルトのフィルターは単にプロセスバッファーに直接出力します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1552
 msgid "By default, the error output from the process, if any, is also passed to the filter function, unless the destination for the standard error stream of the process was separated from the standard output when the process was created (@pxref{Output from Processes})."
-msgstr ""
+msgstr "デフォルトではプロセス作成時にエラーストリームの出力先が標準出力と分離されていなければ(@ref{Output from Processes}を参照)、プロセスからのエラー出力があればそれはフィルター関数にも渡されます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1559
 msgid "The filter function can only be called when Emacs is waiting for something, because process output arrives only at such times.  Emacs waits when reading terminal input (see the function @code{waiting-for-user-input-p}), in @code{sit-for} and @code{sleep-for} (@pxref{Waiting}), and in @code{accept-process-output} (@pxref{Accepting Output})."
-msgstr "サブプロセスからの出力は、Emacsが何かを待機している間だけ到着するので、フィルター関数はそのようなときだけ呼び出し可能です。Emacsは端末入力読み取り時(関数@code{waiting-for-user-input-p}、@ref{Waiting}の@code{sit-for}と@code{sleep-for}、および@ref{Accepting Output}の@code{accept-process-output}を参照されたい)に待機します。"
+msgstr "サブプロセスからの出力はEmacsが何かを待機している間だけ到着するので、フィルター関数はそのようなときだけ呼び出し可能です。Emacsは端末入力読み取り時(関数@code{waiting-for-user-input-p}、@ref{Waiting}の@code{sit-for}と@code{sleep-for}、および@ref{Accepting Output}の@code{accept-process-output}を参照)に待機します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1563
 msgid "A filter function must accept two arguments: the associated process and a string, which is output just received from it.  The function is then free to do whatever it chooses with the output."
-msgstr "フィルター関数は関連付けられたプロセス、およびそのプロセスから正に受信した出力である文字列という、2つの引数を受け取らなければなりません。関数はその後、出力にたいして何であれ、自由に行うことができます。"
+msgstr "フィルター関数は関連付けられたプロセス、およびそのプロセスから正に受信した出力である文字列という2つの引数を受け取らなければなりません。関数はその後に出力にたいして何であれ自由に行うことができます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1571
 msgid "Quitting is normally inhibited within a filter function---otherwise, the effect of typing @kbd{C-g} at command level or to quit a user command would be unpredictable.  If you want to permit quitting inside a filter function, bind @code{inhibit-quit} to @code{nil}.  In most cases, the right way to do this is with the macro @code{with-local-quit}.  @xref{Quitting}."
-msgstr "quitは通常はフィルター関数内では抑制されます。さもないと、コマンドレベルでの@kbd{C-g}のタイプ、またはユーザーコマンドのquitは予測できません。フィルター関数内部でのquitを許可したければ、@code{inhibit-quit}を@code{nil}にバインドしてください。ほとんどの場合において、これを行う正しい方法はマクロ@code{with-local-quit}です。@ref{Quitting}を参照してください。"
+msgstr "quitは通常はフィルター関数内では抑制されます。さもないとコマンドレベルでの@kbd{C-g}のタイプ、またはユーザーコマンドのquitは予測できません。フィルター関数内部でのquitを許可したければ@code{inhibit-quit}を@code{nil}にバインドしてください。ほとんどの場合において、これを行う正しい方法はマクロ@code{with-local-quit}です。@ref{Quitting}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1578
-#, fuzzy
-#| msgid "If an error happens during execution of a filter function, it is caught automatically, so that it doesn't stop the execution of whatever program was running when the filter function was started.  However, if @code{debug-on-error} is non-@code{nil}, errors are not caught.  This makes it possible to use the Lisp debugger to debug the filter function.  @xref{Debugger}."
 msgid "If an error happens during execution of a filter function, it is caught automatically, so that it doesn't stop the execution of whatever program was running when the filter function was started.  However, if @code{debug-on-error} is non-@code{nil}, errors are not caught.  This makes it possible to use the Lisp debugger to debug filter functions.  @xref{Debugger}."
-msgstr "フィルター関数の実行中にエラーが発生した場合、フィルター開始時に実行中だったプログラムが何であれ実行を停止しないように、自動的にcatchされます。しかし@code{debug-on-error}が非@code{nil}なら、エラーはcatchされません。これにより、Lispデバッガーを使用したフィルター関数のデバッグが可能になります。@ref{Debugger}を参照してください。"
+msgstr "フィルター関数の実行中にエラーが発生すると、フィルター開始時に実行中だったプログラムが何であれ実行を停止しないように自動的にcatchされます。しかし@code{debug-on-error}が非@code{nil}ならエラーはcatchされません。これによりLispデバッガーを使用したフィルター関数のデバッグが可能になります。@ref{Debugger}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1587
 msgid "Many filter functions sometimes (or always) insert the output in the process's buffer, mimicking the actions of the default filter.  Such filter functions need to make sure that they save the current buffer, select the correct buffer (if different) before inserting output, and then restore the original buffer.  They should also check whether the buffer is still alive, update the process marker, and in some cases update the value of point.  Here is how to do these things:"
-msgstr "多くのフィルター関数は時折(または常に)、デフォルトフィルターの動作を真似て、プロセスのバッファーにその出力を挿入します。そのようなフィルター関数は確実にカレントバッファーの保存と、(もし異なるなら)出力を挿入する前に正しいバッファーを選択して、その後に元のバッファーをリストアする必要があります。また、そのバッファーがまだ生きているか、プロセスマーカーを更新しているか、そしていくつかのケースにおいてはポイントの値を更新しているかもチェックするべきです。以下はこれらを行う方法です:"
+msgstr "多くのフィルター関数は時折(または常に)、デフォルトフィルターの動作を真似てプロセスのバッファーにその出力を挿入します。そのようなフィルター関数は確実にカレントバッファーの保存と、(もし異なるなら)出力を挿入する前に正しいバッファーを選択して、その後に元のバッファーをリストアする必要があります。またそのバッファーがまだ生きているか、プロセスマーカーを更新しているか、そしていくつかのケースにおいてはポイントの値を更新しているかもチェックするべきです。以下はこれらを行う方法です:"
 
 #. type: anchor{#1}
 #: original_texis/processes.texi:1589
@@ -2583,7 +2580,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/processes.texi:1609
 msgid "To make the filter force the process buffer to be visible whenever new text arrives, you could insert a line like the following just before the @code{with-current-buffer} construct:"
-msgstr "新たなテキスト到着時にフィルターが強制的にプロセスバッファーを可視にするために、@code{with-current-buffer}構成の直前に以下のような行を挿入できます:"
+msgstr "新たなテキスト到着時にフィルターが強制的にプロセスバッファーを可視にするために@code{with-current-buffer}構成の直前に以下のような行を挿入できます:"
 
 #. type: smallexample
 #: original_texis/processes.texi:1612
@@ -2593,20 +2590,18 @@ msgstr "(display-buffer (process-buffer proc))\n"
 
 #. type: Plain text
 #: original_texis/processes.texi:1617
-#, fuzzy
-#| msgid "To force point to the end of the new output, no matter where it was previously, eliminate the variable @code{moving} and call @code{goto-char} unconditionally."
 msgid "To force point to the end of the new output, no matter where it was previously, eliminate the variable @code{moving} from the example and call @code{goto-char} unconditionally."
-msgstr "以前の位置に関わらず、新たな出力の終端にポイントを強制するには、変数@code{moving}を削除して、無条件で@code{goto-char}を呼び出してください。"
+msgstr "以前の位置に関わらず新たな出力の終端にポイントを強制するには、例から変数@code{moving}を削除して無条件で@code{goto-char}を呼び出してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1626
 msgid "Note that Emacs automatically saves and restores the match data while executing filter functions.  @xref{Match Data}."
-msgstr "フィルター関数実行中、Emacsは自動的にマッチデータの保存とリストアを行うことに注意してください。@ref{Match Data}を参照してください。"
+msgstr "フィルター関数の実行中には、Emacsが自動的にマッチデータの保存とリストアを行うことに注意してください。@ref{Match Data}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1634
 msgid "The output to the filter may come in chunks of any size.  A program that produces the same output twice in a row may send it as one batch of 200 characters one time, and five batches of 40 characters the next.  If the filter looks for certain text strings in the subprocess output, make sure to handle the case where one of these strings is split across two or more batches of output; one way to do this is to insert the received text into a temporary buffer, which can then be searched."
-msgstr "フィルターへの出力は、任意のサイズのchunkで到着する可能性があります。同じ出力を連続して2回生成するプログラムは、一度に200文字を1回のバッチで送信して、次に40文字を5回のバッチで送信するかもしれません。フィルターが特定のテキスト文字列をサブプロセスの出力から探す場合は、それらの文字列が2回以上のバッチ出力を横断するケースに留意して処理してください。これを行うには、受信したテキストを一時的なバッファーに挿入してから、それを検索するのが1つの方法です。"
+msgstr "フィルターへの出力は任意のサイズのchunkで到着する可能性があります。同じ出力を連続して2回生成するプログラムは一度に200文字を1回のバッチで送信して、次に40文字を5回のバッチで送信するかもしれません。フィルターが特定のテキスト文字列をサブプロセスの出力から探す場合には、それらの文字列が2回以上のバッチ出力を横断するケースに留意して処理してください。これを行うには受信したテキストを一時的なバッファーに挿入してから検索するのが1つの方法です。"
 
 #. type: defun
 #: original_texis/processes.texi:1635
@@ -2617,7 +2612,7 @@ msgstr "set-process-filter process filter"
 #. type: defun
 #: original_texis/processes.texi:1639
 msgid "This function gives @var{process} the filter function @var{filter}.  If @var{filter} is @code{nil}, it gives the process the default filter, which inserts the process output into the process buffer."
-msgstr "この関数は、@var{process}にフィルター関数@var{filter}を与える。@var{filter}が@code{nil}ならそのプロセスにたいして、プロセスバッファーにプロセス出力を挿入する、デフォルトフィルターを与える。"
+msgstr "この関数は@var{process}にフィルター関数@var{filter}を与える。@var{filter}が@code{nil}なら、そのプロセスにたいしてプロセスバッファーにプロセス出力を挿入するデフォルトフィルターを与える。"
 
 #. type: defun
 #: original_texis/processes.texi:1641
@@ -2628,17 +2623,17 @@ msgstr "process-filter process"
 #. type: defun
 #: original_texis/processes.texi:1643
 msgid "This function returns the filter function of @var{process}."
-msgstr "この関数は、@var{process}のフィルター関数をリターンする。"
+msgstr "この関数は@var{process}のフィルター関数をリターンする。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1648
 msgid "In case the process's output needs to be passed to several filters, you can use @code{add-function} to combine an existing filter with a new one.  @xref{Advising Functions}."
-msgstr "そのプロセスの出力を複数のフィルターに渡す必要がある場合は、既存のフィルターに新たなフィルターを組み合わせるために、@code{add-function}を使用できる。@ref{Advising Functions}を参照のこと。"
+msgstr "そのプロセスの出力を複数のフィルターに渡す必要がある場合には、既存のフィルターに新たなフィルターを組み合わせるために@code{add-function}を使用できる。@ref{Advising Functions}を参照のこと。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1650
 msgid "Here is an example of the use of a filter function:"
-msgstr "以下は、フィルター関数の使用例である:"
+msgstr "以下はフィルター関数の使用例:"
 
 #. type: group
 #: original_texis/processes.texi:1656
@@ -2708,6 +2703,7 @@ msgstr ""
 "\"#backups.mss#          backup.mss~             kolstad.mss\n"
 "\")\n"
 
+# @ignore section
 #. type: group
 #: original_texis/processes.texi:1695
 #, no-wrap
@@ -2726,6 +2722,7 @@ msgstr ""
 "        (pop-up-windows t))\n"
 "    (pop-to-buffer my-shell-buffer)\n"
 
+# @ignore section
 #. type: group
 #: original_texis/processes.texi:1701
 #, no-wrap
@@ -2755,17 +2752,17 @@ msgstr "decode process output"
 #. type: Plain text
 #: original_texis/processes.texi:1714
 msgid "When Emacs writes process output directly into a multibyte buffer, it decodes the output according to the process output coding system.  If the coding system is @code{raw-text} or @code{no-conversion}, Emacs converts the unibyte output to multibyte using @code{string-to-multibyte}, and inserts the resulting multibyte text."
-msgstr "Emacsが直接マルチバイトバッファーにプロセス出力を書き込む際は、プロセス出力のコーディングシステムに応じて、出力をデコードします。コーディングシステムが@code{raw-text}か@code{no-conversion}なら、Emacsは@code{string-to-multibyte}を使用してユニバイト出力をマルチバイトに変換して、その結果のマルチバイトテキストを挿入します。"
+msgstr "Emacsが直接マルチバイトバッファーにプロセス出力を書き込む際には、プロセス出力のコーディングシステムに応じて出力をデコードします。コーディングシステムが@code{raw-text}か@code{no-conversion}ならEmacsは@code{string-to-multibyte}を使用してユニバイト出力をマルチバイトに変換して、その結果のマルチバイトテキストを挿入します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1723
 msgid "You can use @code{set-process-coding-system} to specify which coding system to use (@pxref{Process Information}).  Otherwise, the coding system comes from @code{coding-system-for-read}, if that is non-@code{nil}; or else from the defaulting mechanism (@pxref{Default Coding Systems}).  If the text output by a process contains null bytes, Emacs by default uses @code{no-conversion} for it; see @ref{Lisp and Coding Systems, inhibit-null-byte-detection}, for how to control this behavior."
-msgstr "どのコーディングシステムを使用するかは、@code{set-process-coding-system}を使用して指定できます(@ref{Process Information}を参照)。それ以外では、@code{coding-system-for-read}が非@code{nil}ならそのコーディングシステム、@code{nil}ならデフォルトのメカニズムが使用されます(@ref{Default Coding Systems}を参照)。プロセスのテキスト出力にnullバイトが含まれる場合、Emacsはそれにたいしてデフォルトでは@code{no-conversion}を使用します。この挙動を制御する方法については、@ref{Lisp and Coding Systems, inhibit-null-byte-detection}を参照してください。"
+msgstr "どのコーディングシステムを使用するかは@code{set-process-coding-system}を使用して指定できます(@ref{Process Information}を参照)。それ以外では@code{coding-system-for-read}が非@code{nil}ならそのコーディングシステム、@code{nil}ならデフォルトのメカニズムが使用されます(@ref{Default Coding Systems}を参照)。プロセスのテキスト出力にnullバイトが含まれる場合には、Emacsはそれにたいしてデフォルトでは@code{no-conversion}を使用します。この挙動を制御する方法については@ref{Lisp and Coding Systems, inhibit-null-byte-detection}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1733
 msgid "@strong{Warning:} Coding systems such as @code{undecided}, which determine the coding system from the data, do not work entirely reliably with asynchronous subprocess output.  This is because Emacs has to process asynchronous subprocess output in batches, as it arrives.  Emacs must try to detect the proper coding system from one batch at a time, and this does not always work.  Therefore, if at all possible, specify a coding system that determines both the character code conversion and the end of line conversion---that is, one like @code{latin-1-unix}, rather than @code{undecided} or @code{latin-1}."
-msgstr "@strong{警告:} データからコーディングシステムを@code{undecided}のようなコーディングシステムは、非同期サブプロセスの出力にたいして完全な信頼性をもって機能しません。これはEmacsが、到着に応じて非同期サブプロセスの出力をバッチで処理する必要があるからです。Emacsは1つのバッチが到着するたびに正しいコーディングシステムを検出しなければならず、これは常には機能しません。したがって、可能であれば文字コード変換とEOL変換の両方を決定するコーディングシステム、つまり@code{latin-1-unix}、@code{undecided}、@code{latin-1}のようなコーディングシステムを指定してください。"
+msgstr "@strong{警告:} データからコーディングシステムを判断する@code{undecided}のようなコーディングシステムは、非同期サブプロセスの出力にたいして完全な信頼性をもって機能しません。これはEmacsが到着に応じて非同期サブプロセスの出力をバッチで処理する必要があるからです。Emacsは1つのバッチが到着するたびに正しいコーディングシステムを検出しなければならずこれは常に機能するわけではありません。したがって可能であれば文字コード変換とEOL変換の両方を決定するコーディングシステムつまり@code{latin-1-unix}、@code{undecided}、@code{latin-1}のようなコーディングシステムを指定してください。"
 
 #. type: cindex
 #: original_texis/processes.texi:1736
@@ -2782,7 +2779,7 @@ msgstr "process filter multibyte flag"
 #. type: Plain text
 #: original_texis/processes.texi:1744
 msgid "When Emacs calls a process filter function, it provides the process output as a multibyte string or as a unibyte string according to the process's filter coding system.  Emacs decodes the output according to the process output coding system, which usually produces a multibyte string, except for coding systems such as @code{binary} and @code{raw-text}."
-msgstr "Emacsがプロセスフィルター関数を呼び出す際は、そのプロセスのフィルターのコーディングシステムに応じて、Emacsはプロセス出力をマルチバイト文字列、またはユニバイト文字列で提供します。Emacsはプロセス出力のコーディングシステムに応じて出力をデコードします。これは@code{binary}や@code{raw-text}のようなコーディングシステムを除き、通常はマルチバイト文字列を生成します。"
+msgstr "Emacsがプロセスフィルター関数を呼び出す際には、そのプロセスのフィルターのコーディングシステムに応じてEmacsはプロセス出力をマルチバイト文字列、またはユニバイト文字列で提供します。Emacsはプロセス出力のコーディングシステムに応じて出力をデコードします。これは@code{binary}や@code{raw-text}のようなコーディングシステムを除いて、通常はマルチバイト文字列を生成します。"
 
 #. type: subsection
 #: original_texis/processes.texi:1746
@@ -2799,7 +2796,7 @@ msgstr "accept input from processes"
 #. type: Plain text
 #: original_texis/processes.texi:1754
 msgid "Output from asynchronous subprocesses normally arrives only while Emacs is waiting for some sort of external event, such as elapsed time or terminal input.  Occasionally it is useful in a Lisp program to explicitly permit output to arrive at a specific point, or even to wait until output arrives from a process."
-msgstr "非同期サブプロセスからの出力は通常、Emacsが時間の経過や端末入力のような、ある種の外部イベントを待機する間だけ到着します。特定のポイントで出力の到着を明示的に許可したり、あるいはプロセスからの出力が到着するまで待機することさえ、Lispプログラムでは有用な場合が時折あります。"
+msgstr "非同期サブプロセスからの出力は、通常はEmacsが時間の経過や端末入力のような、ある種の外部イベントを待機する間だけ到着します。特定のポイントで出力の到着を明示的に許可したり、あるいはプロセスからの出力が到着するまで待機することでさえ、Lispプログラムでは有用な場合が時折あります。"
 
 #. type: defun
 #: original_texis/processes.texi:1755
@@ -2810,31 +2807,27 @@ msgstr "accept-process-output &optional process seconds millisec just-this-one"
 #. type: defun
 #: original_texis/processes.texi:1760
 msgid "This function allows Emacs to read pending output from processes.  The output is given to their filter functions.  If @var{process} is non-@code{nil} then this function does not return until some output has been received from @var{process}."
-msgstr "この関数はプロセスからの保留中の出力を、Emacsが読み取ることを許す。この出力は、プロセスのフィルター関数により与えられる。@var{process}が非@code{nil}なら、この関数は@var{process}から何らかの出力を受け取るまでリターンしない。"
+msgstr "この関数はプロセスからの保留中の出力をEmacsが読み取ることを許す。この出力はプロセスのフィルター関数により与えられる。@var{process}が非@code{nil}なら、この関数は@var{process}から何らかの出力を受け取るまでリターンしない。"
 
 #. type: defun
 #: original_texis/processes.texi:1767
-#, fuzzy
-#| msgid "The arguments @var{seconds} and @var{millisec} let you specify timeout periods.  The former specifies a period measured in seconds and the latter specifies one measured in milliseconds.  The two time periods thus specified are added together, and @code{accept-process-output} returns after that much time, whether or not there has been any subprocess output."
 msgid "The arguments @var{seconds} and @var{millisec} let you specify timeout periods.  The former specifies a period measured in seconds and the latter specifies one measured in milliseconds.  The two time periods thus specified are added together, and @code{accept-process-output} returns after that much time, even if there is no subprocess output."
-msgstr "引数@var{seconds}と@var{millisec}により、タイムアウトの長さを指定できる。前者は秒単位、後者はミリ秒単位でタイムアウトを指定する。この2つの秒数は、互いに足し合わせることによりタイムアウトを指定し、その秒数経過後はサブプロセスの出力の有無に関わらずリターンする。"
+msgstr "引数@var{seconds}と@var{millisec}によりタイムアウトの長さを指定できる。前者は秒単位、後者はミリ秒単位でタイムアウトを指定する。この2つの秒数は、互いに足し合わせることによりタイムアウトを指定して、その秒数経過後はサブプロセスの出力が存在しなくてもリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1772
 msgid "The argument @var{millisec} is obsolete (and should not be used), because @var{seconds} can be floating point to specify waiting a fractional number of seconds.  If @var{seconds} is 0, the function accepts whatever output is pending but does not wait."
-msgstr "@var{seconds}に浮動小数点数を指定することにより、秒を少数点で指定できるので、引数@var{millisec}は時代遅れである(そして使用するべきではない)。@var{seconds}が0なら、この関数は保留中の出力が何であれ受け取り、待機しない。"
+msgstr "@var{seconds}に浮動小数点数を指定することにより秒を少数点で指定できるので引数@var{millisec}は時代遅れ(であり使用するべきではない)。@var{seconds}が0ならこの関数は保留中の出力が何であれ受け取り待機しない。"
 
 #. type: defun
 #: original_texis/processes.texi:1781
 msgid "If @var{process} is a process, and the argument @var{just-this-one} is non-@code{nil}, only output from that process is handled, suspending output from other processes until some output has been received from that process or the timeout expires.  If @var{just-this-one} is an integer, also inhibit running timers.  This feature is generally not recommended, but may be necessary for specific applications, such as speech synthesis."
-msgstr "@var{process}がプロセスで、引数@var{just-this-one}が非@code{nil}なら、そのプロセスからの出力だけが処理され、そのプロセスからの出力を受信するか、タイムアウトとなるまで、他のプロセスの出力は停止される。@var{just-this-one}が整数なら、タイマーの実行も抑制される。この機能は一般的には推奨されないが、音声合成のような特定のアプリケーションにとっては必要かもしれない。"
+msgstr "@var{process}がプロセスで引数@var{just-this-one}が非@code{nil}ならプロセスからの出力だけが処理され、そのプロセスからの出力を受信するかタイムアウトとなるまで他のプロセスの出力は停止される。@var{just-this-one}が整数ならタイマーの実行も抑制される。この機能は一般的には推奨されないが、音声合成のような特定のアプリケーションにとっては必要かもしれない。"
 
 #. type: defun
 #: original_texis/processes.texi:1786
-#, fuzzy
-#| msgid "The function @code{accept-process-output} returns non-@code{nil} if it did get some output, or @code{nil} if the timeout expired before output arrived."
 msgid "The function @code{accept-process-output} returns non-@code{nil} if it got output from @var{process}, or from any process if @var{process} is @code{nil}.  It returns @code{nil} if the timeout expired before output arrived."
-msgstr "関数@code{accept-process-output}は、何らかの出力を取得したら非@code{nil}、出力の到着前にタイムアウトが到来したら@code{nil}をリターンする。"
+msgstr "関数@code{accept-process-output}は@var{process}、@var{process}が@code{nil}なら任意のプロセスから出力を取得したら非@code{nil}をリターンする。出力の到着前にタイムアウトが到来したら@code{nil}をリターンする。"
 
 #. type: section
 #: original_texis/processes.texi:1789
@@ -2857,25 +2850,23 @@ msgstr "sentinel (of process)"
 #. type: Plain text
 #: original_texis/processes.texi:1800
 msgid "A @dfn{process sentinel} is a function that is called whenever the associated process changes status for any reason, including signals (whether sent by Emacs or caused by the process's own actions) that terminate, stop, or continue the process.  The process sentinel is also called if the process exits.  The sentinel receives two arguments: the process for which the event occurred, and a string describing the type of event."
-msgstr "@dfn{プロセスセンチネル(process sentinel: プロセス番兵)}とは、(Emacsにより送信されたか、そのプロセス自身の動作が原因で送信された)プロセスを終了、停止、継続するシグナルを含む、何らかの理由により関連付けられたプロセスの状態が変化した際は常に呼び出される関数のことです。プロセスがexitする際にも、プロセスセンチネルが呼び出されます。センチネルは、イベントが発生したプロセスと、イベントのタイプを記述する文字列という、2つの引数を受け取ります。"
+msgstr "@dfn{プロセスセンチネル(process sentinel: プロセス番兵)}とは、(Emacsにより送信されたか、そのプロセス自身の動作が原因で送信された)プロセスを終了、停止、継続するシグナルを含む、何らかの理由により関連付けられたプロセスの状態が変化した際には常に呼び出される関数のことです。プロセスがexitする際にもプロセスセンチネルが呼び出されます。センチネルはイベントが発生したプロセスとイベントのタイプを記述する文字列という2つの引数を受け取ります。"
 
 #. type: cindex
 #: original_texis/processes.texi:1801
 #, no-wrap
 msgid "default sentinel function of a process"
-msgstr ""
+msgstr "default sentinel function of a process"
 
 #. type: Plain text
 #: original_texis/processes.texi:1805
-#, fuzzy
-#| msgid "This function associates @var{sentinel} with @var{process}.  If @var{sentinel} is @code{nil}, then the process will have the default sentinel, which inserts a message in the process's buffer when the process status changes."
 msgid "If no sentinel function was specified for a process, it will use the default sentinel function, which inserts a message in the process's buffer with the process name and the string describing the event."
-msgstr "この関数は、@var{process}に関連付ける。@var{sentinel}が@code{nil}なら、そのプロセスはプロセス状態変更時にプロセスのバッファーにメッセージを挿入する、デフォルトのセンチネルをもつことになるだろう。"
+msgstr "プロセスにたいして何もセンチネル関数が指定されていなければ、プロセスのバッファーにプロセス名とイベントを記述する文字列とともにメッセージを挿入するデフォルトのセンチネル関数を使用します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1807
 msgid "The string describing the event looks like one of the following:"
-msgstr "イベントを記述する文字列は、以下のいずれかのような外見をもちます:"
+msgstr "イベントを記述する文字列は以下のいずれかのような外見をもちます:"
 
 #. type: itemize
 #: original_texis/processes.texi:1811
@@ -2884,86 +2875,78 @@ msgstr "@code{\"finished\\n\"}."
 
 #. type: itemize
 #: original_texis/processes.texi:1814
-#, fuzzy
-#| msgid "@code{\"finished\\n\"}."
 msgid "@code{\"deleted\\n\"}."
-msgstr "@code{\"finished\\n\"}."
+msgstr "@code{\"deleted\\n\"}."
 
 #. type: itemize
 #: original_texis/processes.texi:1819
 msgid "@code{\"exited abnormally with code @var{exitcode} (core dumped)\\n\"}.  The ``core dumped'' part is optional, and only appears if the process dumped core."
-msgstr ""
+msgstr "@code{\"exited abnormally with code @var{exitcode} (core dumped)\\n\"}.@*``core dumped''の部分はオプションであり、プロセスがコアをダンプした場合のみ出現する。"
 
 #. type: itemize
 #: original_texis/processes.texi:1822
-#, fuzzy
-#| msgid "@code{\"exited abnormally with code @var{exitcode}\\n\"}."
 msgid "@code{\"failed with code @var{fail-code}\\n\"}."
-msgstr "@code{\"exited abnormally with code @var{exitcode}\\n\"}."
+msgstr "@code{\"failed with code @var{fail-code}\\n\"}."
 
 #. type: itemize
 #: original_texis/processes.texi:1829
 msgid "@code{\"@var{signal-description} (core dumped)\\n\"}.  The @var{signal-description} is a system-dependent textual description of a signal, e.g., @code{\"killed\"} for @code{SIGKILL}.  The ``core dumped'' part is optional, and only appears if the process dumped core."
-msgstr ""
+msgstr "@code{\"@var{signal-description} (core dumped)\\n\"}.@*@var{signal-description}は@code{SIGKILL}にたいする@code{\"killed\"}のようなシステム依存の説明テキスト。``core dumped''の部分はオプションであり、プロセスがコアをダンプした場合のみ出現する。"
 
 #. type: itemize
 #: original_texis/processes.texi:1832
-#, fuzzy
-#| msgid "@code{\"@var{name-of-signal}\\n\"}."
 msgid "@code{\"open from @var{host-name}\\n\"}."
-msgstr "@code{\"@var{name-of-signal}\\n\"}."
+msgstr "@code{\"open from @var{host-name}\\n\"}."
 
 #. type: itemize
 #: original_texis/processes.texi:1835
-#, fuzzy
-#| msgid "@code{\"finished\\n\"}."
 msgid "@code{\"open\\n\"}."
-msgstr "@code{\"finished\\n\"}."
+msgstr "@code{\"open\\n\"}."
 
 #. type: itemize
 #: original_texis/processes.texi:1838
 msgid "@code{\"connection broken by remote peer\\n\"}."
-msgstr ""
+msgstr "@code{\"connection broken by remote peer\\n\"}."
 
 #. type: Plain text
 #: original_texis/processes.texi:1849
 msgid "A sentinel runs only while Emacs is waiting (e.g., for terminal input, or for time to elapse, or for process output).  This avoids the timing errors that could result from running sentinels at random places in the middle of other Lisp programs.  A program can wait, so that sentinels will run, by calling @code{sit-for} or @code{sleep-for} (@pxref{Waiting}), or @code{accept-process-output} (@pxref{Accepting Output}).  Emacs also allows sentinels to run when the command loop is reading input.  @code{delete-process} calls the sentinel when it terminates a running process."
-msgstr "センチネルは、Emacsが(端末入力や時間経過、またはプロセス出力を)待機している間だけ実行されます。これは、他のLispプログラムの途中のランダムな箇所で実行されるセンチネルが原因となる、タイミングエラーを無視します。プログラムはセンチネルが実行されるように、@code{sit-for}や@code{sleep-for}(@ref{Waiting}を参照)、または@code{accept-process-output}(@ref{Accepting Output}を参照)を呼び出すことにより待機することができます。Emacsはコマンドループが入力を読み取る際にも、センチネルの実行を許可します。@code{delete-process}は、実行中のプログラムを終了させる際に、センチネルを呼び出します。"
+msgstr "センチネルはEmacsが(端末入力や時間経過、またはプロセス出力を)待機している間だけ実行されます。これは他のLispプログラムの途中のランダムな箇所で実行されるセンチネルが原因となるタイミングエラーを無視します。プログラムはセンチネルが実行されるように、@code{sit-for}や@code{sleep-for}(@ref{Waiting}を参照)、または@code{accept-process-output}(@ref{Accepting Output}を参照)を呼び出すことにより待機することができます。Emacsはコマンドループが入力を読み取る際にもセンチネルの実行を許可します。@code{delete-process}は実行中のプログラムを終了させる際にセンチネルを呼び出します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1856
 msgid "Emacs does not keep a queue of multiple reasons to call the sentinel of one process; it records just the current status and the fact that there has been a change.  Therefore two changes in status, coming in quick succession, can call the sentinel just once.  However, process termination will always run the sentinel exactly once.  This is because the process status can't change again after termination."
-msgstr "Emacsは1つのプロセスのセンチネル呼び出しの理由のために複数のキューを保持しません。これはカレント状態と、変化があった事実だけを記録します。したがって非常に短い間隔で、連続して状態に2つの変化があった場合は、一度だけセンチネルが呼び出されます。しかしプロセスの終了は、常に正確に1回センチネルを実行するでしょう。これは終了後にプロセス状態が再び変更されることはないからです。"
+msgstr "Emacsは1つのプロセスのセンチネル呼び出しの理由のために複数のキューを保持しません。これはカレント状態と変化があった事実だけを記録します。したがって非常に短い間隔で連続して状態に2つの変化があった場合には、一度だけセンチネルが呼び出されます。しかしプロセスの終了は常に正確に1回センチネルを実行するでしょう。これは終了後にプロセス状態が再び変更されることはないからです。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1860
 msgid "Emacs explicitly checks for output from the process before running the process sentinel.  Once the sentinel runs due to process termination, no further output can arrive from the process."
-msgstr "Emacsはプロセスセンチネル実行の前に、プロセスからの出力をチェックします。プロセス終了によりセンチネルが一度実行されると、そのプロセスから更なる出力は到着しません。"
+msgstr "Emacsはプロセスセンチネル実行の前にプロセスからの出力をチェックします。プロセス終了によりセンチネルが一度実行されると、そのプロセスから更なる出力は到着しません。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1865
 msgid "A sentinel that writes the output into the buffer of the process should check whether the buffer is still alive.  If it tries to insert into a dead buffer, it will get an error.  If the buffer is dead, @code{(buffer-name (process-buffer @var{process}))} returns @code{nil}."
-msgstr "プロセスのバッファーに出力を書き込むセンチネルは、そのバッファーがまだ生きているかチェックするべきです。死んだバッファーへの挿入を試みた場合は、エラーとなるでしょう。そのバッファーがすでに死んでいれば、@code{(buffer-name (process-buffer @var{process}))}は@code{nil}をリターンします。"
+msgstr "プロセスのバッファーに出力を書き込むセンチネルは、そのバッファーがまだ生きているかチェックするべきです。死んだバッファーへの挿入を試みるとエラーになるでしょう。そのバッファーがすでに死んでいれば@code{(buffer-name (process-buffer @var{process}))}は@code{nil}をリターンします。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1873
 msgid "Quitting is normally inhibited within a sentinel---otherwise, the effect of typing @kbd{C-g} at command level or to quit a user command would be unpredictable.  If you want to permit quitting inside a sentinel, bind @code{inhibit-quit} to @code{nil}.  In most cases, the right way to do this is with the macro @code{with-local-quit}.  @xref{Quitting}."
-msgstr "quitは通常はセンチネル内では抑制されます。さもないと、コマンドレベルでの@kbd{C-g}のタイプ、またはユーザーコマンドのquitは予測できません。センチネル内部でのquitを許可したければ、@code{inhibit-quit}を@code{nil}にバインドしてください。ほとんどの場合において、これを行う正しい方法はマクロ@code{with-local-quit}です。@ref{Quitting}を参照してください。"
+msgstr "quitは通常はセンチネル内では抑制されます。さもないとコマンドレベルでの@kbd{C-g}のタイプ、またはユーザーコマンドのquitは予測できません。センチネル内部でのquitを許可したければ@code{inhibit-quit}を@code{nil}にバインドしてください。ほとんどの場合において、これを行う正しい方法はマクロ@code{with-local-quit}です。@ref{Quitting}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1880
 msgid "If an error happens during execution of a sentinel, it is caught automatically, so that it doesn't stop the execution of whatever programs was running when the sentinel was started.  However, if @code{debug-on-error} is non-@code{nil}, errors are not caught.  This makes it possible to use the Lisp debugger to debug the sentinel.  @xref{Debugger}."
-msgstr "センチネルの実行中にエラーが発生した場合、センチネル開始時に実行中だったプログラムが何であれ実行を停止しないように、自動的にcatchされます。しかし@code{debug-on-error}が非@code{nil}なら、エラーはcatchされません。これにより、Lispデバッガーを使用したセンチネルのデバッグが可能になります。@ref{Debugger}を参照してください。"
+msgstr "センチネルの実行中にエラーが発生した場合には、センチネル開始時に実行中だったプログラムが何であれ実行を停止しないように自動的にcatchされます。しかし@code{debug-on-error}が非@code{nil}ならエラーはcatchされません。これによりLispデバッガーを使用したセンチネルのデバッグが可能になります。@ref{Debugger}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1885
 msgid "While a sentinel is running, the process sentinel is temporarily set to @code{nil} so that the sentinel won't run recursively.  For this reason it is not possible for a sentinel to specify a new sentinel."
-msgstr "センチネル実行中、センチネルが再帰的に実行されないよう、プロセスセンチネルは一時的に@code{nil}にセットされます。この理由により、センチネルが新たにセンチネルを指定することはできません。"
+msgstr "センチネルの実行中にはセンチネルが再帰的に実行されないように、プロセスセンチネルは一時的に@code{nil}にセットされます。この理由によりセンチネルが新たにセンチネルを指定することはできません。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1894
 msgid "Note that Emacs automatically saves and restores the match data while executing sentinels.  @xref{Match Data}."
-msgstr "センチネル実行中、Emacsは自動的にマッチデータの保存とリストアを行うことに注意してください。@ref{Match Data}を参照してください。"
+msgstr "センチネル実行中にはEmacsが自動的にマッチデータの保存とリストアを行うことに注意してください。@ref{Match Data}を参照してください。"
 
 #. type: defun
 #: original_texis/processes.texi:1895
@@ -2974,22 +2957,16 @@ msgstr "set-process-sentinel process sentinel"
 #. type: defun
 #: original_texis/processes.texi:1900
 msgid "This function associates @var{sentinel} with @var{process}.  If @var{sentinel} is @code{nil}, then the process will have the default sentinel, which inserts a message in the process's buffer when the process status changes."
-msgstr "この関数は、@var{process}に関連付ける。@var{sentinel}が@code{nil}なら、そのプロセスはプロセス状態変更時にプロセスのバッファーにメッセージを挿入する、デフォルトのセンチネルをもつことになるだろう。"
+msgstr "この関数は@var{sentinel}を@var{process}に関連付ける。@var{sentinel}が@code{nil}なら、そのプロセスはプロセス状態変更時にプロセスのバッファーにメッセージを挿入するデフォルトのセンチネルをもつことになるだろう。"
 
 #. type: defun
 #: original_texis/processes.texi:1904
 msgid "Changes in process sentinels take effect immediately---if the sentinel is slated to be run but has not been called yet, and you specify a new sentinel, the eventual call to the sentinel will use the new one."
-msgstr "プロセスセンチネルの変更は、即座に効果を発揮する。そのセンチネルが実行される予定だが、まだ呼び出されておらず、かつ新たなセンチネルを指定した場合、最終的なセンチネル呼び出しには、新たなセンチネルが使用されるだろう。"
+msgstr "プロセスセンチネルの変更は即座に効果を発揮する。そのセンチネルは実行される予定だがまだ呼び出されておらず、かつ新たなセンチネルを指定した場合には、最終的なセンチネル呼び出しには新たなセンチネルが使用されるだろう。"
 
 #. type: group
 #: original_texis/processes.texi:1912
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(defun msg-me (process event)\n"
-#| "   (princ\n"
-#| "     (format \"Process: %s had the event `%s'\" process event)))\n"
-#| "(set-process-sentinel (get-process \"shell\") 'msg-me)\n"
-#| "     @result{} msg-me\n"
+#, no-wrap
 msgid ""
 "(defun msg-me (process event)\n"
 "   (princ\n"
@@ -2999,24 +2976,20 @@ msgid ""
 msgstr ""
 "(defun msg-me (process event)\n"
 "   (princ\n"
-"     (format \"Process: %s had the event `%s'\" process event)))\n"
+"     (format \"Process: %s had the event '%s'\" process event)))\n"
 "(set-process-sentinel (get-process \"shell\") 'msg-me)\n"
 "     @result{} msg-me\n"
 
 #. type: group
 #: original_texis/processes.texi:1917
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(kill-process (get-process \"shell\"))\n"
-#| "     @print{} Process: #<process shell> had the event `killed'\n"
-#| "     @result{} #<process shell>\n"
+#, no-wrap
 msgid ""
 "(kill-process (get-process \"shell\"))\n"
 "     @print{} Process: #<process shell> had the event 'killed'\n"
 "     @result{} #<process shell>\n"
 msgstr ""
 "(kill-process (get-process \"shell\"))\n"
-"     @print{} Process: #<process shell> had the event `killed'\n"
+"     @print{} Process: #<process shell> had the event 'killed'\n"
 "     @result{} #<process shell>\n"
 
 #. type: defun
@@ -3028,12 +3001,12 @@ msgstr "process-sentinel process"
 #. type: defun
 #: original_texis/processes.texi:1923
 msgid "This function returns the sentinel of @var{process}."
-msgstr "この関数は、@var{process}のセンチネルをリターンする。"
+msgstr "この関数は@var{process}のセンチネルをリターンする。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1928
 msgid "In case a process status changes need to be passed to several sentinels, you can use @code{add-function} to combine an existing sentinel with a new one.  @xref{Advising Functions}."
-msgstr "あるプロセス状態の変化を複数のセンチネルに渡す必要がある場合は、既存のセンチネルと新たなセンチネルを組み合わせるために、@code{add-function}を使用できます。@ref{Advising Functions}を参照してください。"
+msgstr "あるプロセス状態の変化を複数のセンチネルに渡す必要がある場合には、既存のセンチネルと新たなセンチネルを組み合わせるために@code{add-function}を使用できます。@ref{Advising Functions}を参照してください。"
 
 #. type: defun
 #: original_texis/processes.texi:1929
@@ -3044,7 +3017,7 @@ msgstr "waiting-for-user-input-p"
 #. type: defun
 #: original_texis/processes.texi:1934
 msgid "While a sentinel or filter function is running, this function returns non-@code{nil} if Emacs was waiting for keyboard input from the user at the time the sentinel or filter function was called, or @code{nil} if it was not."
-msgstr "この関数は、センチネルまたはフィルター関数の実行中、もしEmacsがセンチネルまたはフィルター関数呼び出し時にユーザーのキーボード入力を待機していたら非@code{nil}、そうでなければ@code{nil}をリターンする。"
+msgstr "この関数はセンチネルやフィルター関数の実行中に、もしEmacsがセンチネルやフィルター関数呼び出し時にユーザーのキーボード入力を待機していたら非@code{nil}、そうでなければ@code{nil}をリターンする。"
 
 #. type: section
 #: original_texis/processes.texi:1937
@@ -3054,10 +3027,8 @@ msgstr "Querying Before Exit"
 
 #. type: Plain text
 #: original_texis/processes.texi:1947
-#, fuzzy
-#| msgid "When Emacs exits, it terminates all its subprocesses by sending them the @code{SIGHUP} signal.  Because subprocesses may be doing valuable work, Emacs normally asks the user to confirm that it is ok to terminate them.  Each process has a query flag, which, if non-@code{nil}, says that Emacs should ask for confirmation before exiting and thus killing that process.  The default for the query flag is @code{t}, meaning @emph{do} query."
 msgid "When Emacs exits, it terminates all its subprocesses.  For subprocesses that run a program, it sends them the @code{SIGHUP} signal; connections are simply closed.  Because subprocesses may be doing valuable work, Emacs normally asks the user to confirm that it is ok to terminate them.  Each process has a query flag, which, if non-@code{nil}, says that Emacs should ask for confirmation before exiting and thus killing that process.  The default for the query flag is @code{t}, meaning @emph{do} query."
-msgstr "Emacsがexitする際は、すべてのサブプロセスに@code{SIGHUP}を送信することにより、すべてのサブプロセスを終了します。それらのサブプロセスはさまざまな処理を行っているかもしれないので、Emacsは通常ユーザーにたいしてそれらを終了しても大丈夫か、確認を求めます。各プロセスはquery(問い合わせ)のためのフラグをもち、これが非@code{nil}なら、Emacsはプロセスをkillしてexitする前に確認を行うべきであることを示します。queryフラグにたいするデフォルトは@code{t}で、これは問い合わせを@emph{行う}ことを意味します。"
+msgstr "Emacsがexitする際にはすべてのサブプロセスを終了します。プログラムを実行しているサブプロセスには@code{SIGHUP}を送信して、接続は単にcloseされます。それらのサブプロセスはさまざまな処理を行っているかもしれないので、Emacsは通常ユーザーにたいしてそれらを終了しても大丈夫かどうか確認を求めます。各プロセスはquery(問い合わせ)のためのフラグをもち、これが非@code{nil}ならEmacsはプロセスをkillしてexitする前に確認を行うべきであることを示します。queryフラグにたいするデフォルトは@code{t}で、これは問い合わせを@emph{行う}ことを意味しています。"
 
 #. type: defun
 #: original_texis/processes.texi:1948
@@ -3068,7 +3039,7 @@ msgstr "process-query-on-exit-flag process"
 #. type: defun
 #: original_texis/processes.texi:1950
 msgid "This returns the query flag of @var{process}."
-msgstr "これは、@var{process}のqueryフラグをリターンする。"
+msgstr "これは@var{process}のqueryフラグをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1952
@@ -3079,12 +3050,12 @@ msgstr "set-process-query-on-exit-flag process flag"
 #. type: defun
 #: original_texis/processes.texi:1955
 msgid "This function sets the query flag of @var{process} to @var{flag}.  It returns @var{flag}."
-msgstr "この関数は、@var{process}のqueryフラグを@var{flag}にセットする。これは@var{flag}をリターンする。"
+msgstr "この関数は@var{process}のqueryフラグを@var{flag}にセットする。これは@var{flag}をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1958
 msgid "Here is an example of using @code{set-process-query-on-exit-flag} on a shell process to avoid querying:"
-msgstr "以下はshellプロセス上で、問い合わせを回避するために@code{set-process-query-on-exit-flag}を使用する例である:"
+msgstr "以下はshellプロセス上で問い合わせを回避するために@code{set-process-query-on-exit-flag}を使用する例:"
 
 #. type: group
 #: original_texis/processes.texi:1963
@@ -3111,12 +3082,12 @@ msgstr "system processes"
 #. type: Plain text
 #: original_texis/processes.texi:1976
 msgid "In addition to accessing and manipulating processes that are subprocesses of the current Emacs session, Emacs Lisp programs can also access other processes running on the same machine.  We call these @dfn{system processes}, to distinguish them from Emacs subprocesses."
-msgstr "カレントEmacsセッションのサブプロセスにたいするアクセスと操作に加えて、同一マシン上で実行中の他のプロセスにたいして、Emacs Lispプログラムがアクセスすることもできます。Emacsのサブプロセスと区別するために、わたしたちはこれらを@dfn{システムプロセス(system processes)}と呼んでいます。"
+msgstr "カレントEmacsセッションのサブプロセスにたいするアクセスと操作に加えて、同一マシン上で実行中の他のプロセスにたいしてEmacs Lispプログラムがアクセスすることもできます。Emacsのサブプロセスと区別するために、わたしたちはこれらを@dfn{システムプロセス(system processes)}と呼んでいます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1980
 msgid "Emacs provides several primitives for accessing system processes.  Not all platforms support these primitives; on those which don't, these primitives return @code{nil}."
-msgstr "Emacsは、システムプロセスへのアクセス用のプリミティブをいくつか提供します。これらのプリミティブは、すべてのプラットフォームではサポートされません。サポートしないシステムでは、これらのプリミティブは@code{nil}をリターンします。"
+msgstr "Emacsはシステムプロセスへのアクセス用のプリミティブをいくつか提供します。これらのプリミティブはすべてのプラットフォームではサポートされません。これらのプリミティブはサポートされないシステムでは@code{nil}をリターンします。"
 
 #. type: defun
 #: original_texis/processes.texi:1981
@@ -3127,7 +3098,7 @@ msgstr "list-system-processes"
 #. type: defun
 #: original_texis/processes.texi:1987
 msgid "This function returns a list of all the processes running on the system.  Each process is identified by its @acronym{PID}, a numerical process ID that is assigned by the OS and distinguishes the process from all the other processes running on the same machine at the same time."
-msgstr "この関数は、そのシステム上で実行中の、すべてのプロセスのリストをリターンする。各プロセスは、@acronym{PID}というOSから割り当てられた数値によるプロセスIDにより識別され、同一時に同一マシン上で実行中の他のプロセスと区別される。"
+msgstr "この関数はそのシステム上で実行中のすべてのプロセスのリストをリターンする。各プロセスは@acronym{PID}というOSから割り当てられた数値によるプロセスIDにより識別され、同一時に同一マシン上で実行中の他のプロセスと区別される。"
 
 #. type: defun
 #: original_texis/processes.texi:1989
@@ -3138,7 +3109,7 @@ msgstr "process-attributes pid"
 #. type: defun
 #: original_texis/processes.texi:1999
 msgid "This function returns an alist of attributes for the process specified by its process ID @var{pid}.  Each association in the alist is of the form @code{(@var{key} . @var{value})}, where @var{key} designates the attribute and @var{value} is the value of that attribute.  The various attribute @var{key}s that this function can return are listed below.  Not all platforms support all of these attributes; if an attribute is not supported, its association will not appear in the returned alist.  Values that are numbers can be either integer or floating point, depending on the magnitude of the value."
-msgstr "この関数は、プロセスID @var{pid}で指定されるプロセスにたいする、属性のalistをリターンする。このalist内の各属性は@code{(@var{key} . @var{value})}という形式で、@var{key}は属性を指定し、@var{value}はその属性の値である。この関数がリターン可能な、さまざまな属性にたいする@var{key}を、以下にリストした。これらすべての属性を、すべてのプラットフォームがサポートする訳ではない。ある属性がサポートされていなければ、その連想値はリターンされるalist内に出現しない。数値であるような値は整数か浮動小数点数のいずれかが可能で、それは値の大小に依存する。"
+msgstr "この関数はプロセスID @var{pid}で指定されるプロセスにたいする属性のalistをリターンする。このalist内の各属性は@code{(@var{key} . @var{value})}という形式であり@var{key}は属性、@var{value}はその属性の値である。この関数がリターン可能なさまざまな属性にたいする@var{key}を以下にリストした。これらすべての属性をすべてのプラットフォームがサポートする訳ではない。ある属性がサポートされていなければ、その連想値はリターンされるalist内に出現しない。数値であるような値は整数か浮動小数点数のいずれかが可能であり、それは値の大小に依存する。"
 
 #. type: item
 #: original_texis/processes.texi:2001
@@ -3149,7 +3120,7 @@ msgstr "euid"
 #. type: table
 #: original_texis/processes.texi:2007
 msgid "The effective user ID of the user who invoked the process.  The corresponding @var{value} is a number.  If the process was invoked by the same user who runs the current Emacs session, the value is identical to what @code{user-uid} returns (@pxref{User Identification})."
-msgstr "そのプロセスを呼び出したユーザーの、実効ユーザーID(effective user ID)。対応する@var{value}は数値。プロセスがカレントEmacsセッションを実行したユーザーと同じなら、値は@code{user-uid}がリターンする値と等しくなる(@ref{User Identification}を参照)。"
+msgstr "そのプロセスを呼び出したユーザーの実効ユーザーID(effective user ID)。対応する@var{value}は数値。プロセスがカレントEmacsセッションを実行したユーザーと同じなら値は@code{user-uid}がリターンする値と等しくなる(@ref{User Identification}を参照)。"
 
 #. type: item
 #: original_texis/processes.texi:2008
@@ -3193,7 +3164,7 @@ msgstr "comm"
 #. type: table
 #: original_texis/processes.texi:2023
 msgid "The name of the command that runs in the process.  This is a string that usually specifies the name of the executable file of the process, without the leading directories.  However, some special system processes can report strings that do not correspond to an executable file of a program."
-msgstr "そのプロセス内で実効したコマンドの名前。これは通常、先行するディレクトリーを除いた実行可能ファイル名を指定する文字列である。しかし、いくつかの特別なシステムプロセスは、実行可能ファイルまたはプログラムに対応しない文字列を報告する可能性がある。"
+msgstr "そのプロセス内で実効したコマンドの名前。これは通常は先行するディレクトリーを除いた実行可能ファイル名を指定する文字列。しかしいくつかの特別なシステムプロセスは、実行可能ファイルやプログラムに対応しない文字列を報告する可能性がある。"
 
 #. type: item
 #: original_texis/processes.texi:2024
@@ -3204,7 +3175,7 @@ msgstr "state"
 #. type: table
 #: original_texis/processes.texi:2028
 msgid "The state code of the process.  This is a short string that encodes the scheduling state of the process.  Here's a list of the most frequently seen codes:"
-msgstr "そのプロセスの状態コード。これはそのプロセスのスケジューリング状態をエンコードする短い文字列である。以下は頻繁に目にするコードのリストである:"
+msgstr "そのプロセスの状態コード。これはそのプロセスのスケジューリング状態をエンコードする短い文字列。以下は頻繁に目にするコードのリスト:"
 
 #. type: item
 #: original_texis/processes.texi:2030
@@ -3248,7 +3219,7 @@ msgstr "\"T\""
 #. type: table
 #: original_texis/processes.texi:2038
 msgid "stopped, e.g., by a job control signal"
-msgstr "たとえばジョブ制御シグナルにより停止された"
+msgstr "ジョブ制御シグナルにより停止された"
 
 #. type: item
 #: original_texis/processes.texi:2038
@@ -3258,15 +3229,13 @@ msgstr "\"Z\""
 
 #. type: table
 #: original_texis/processes.texi:2040
-#, fuzzy
-#| msgid "``zombie'': a process that terminated, but was not reaped by its parent"
 msgid "zombie: a process that terminated, but was not reaped by its parent"
-msgstr "``zombie'': 終了したが親プロセスに回収されていないプロセス"
+msgstr "zombie: 終了したが親プロセスに回収されていないプロセス"
 
 #. type: table
 #: original_texis/processes.texi:2045
 msgid "For the full list of the possible states, see the manual page of the @command{ps} command."
-msgstr "可能な状態の完全なリストは、@command{ps}コマンドのman pageを参照されたい。"
+msgstr "可能な状態の完全なリストは@command{ps}コマンドのman pageを参照のこと。"
 
 #. type: item
 #: original_texis/processes.texi:2046
@@ -3299,7 +3268,7 @@ msgstr "sess"
 #. type: table
 #: original_texis/processes.texi:2055
 msgid "The session ID of the process.  This is a number that is the process ID of the process's @dfn{session leader}."
-msgstr "そのプロセスのセッションID。これはそのプロセスの@dfn{セッションリーダー(session leader)}のプロセスIDであるような数値である。"
+msgstr "そのプロセスのセッションID。これはそのプロセスの@dfn{セッションリーダー(session leader)}のプロセスIDであるような数値。"
 
 #. type: item
 #: original_texis/processes.texi:2056
@@ -3310,7 +3279,7 @@ msgstr "ttname"
 #. type: table
 #: original_texis/processes.texi:2060
 msgid "A string that is the name of the process's controlling terminal.  On Unix and GNU systems, this is normally the file name of the corresponding terminal device, such as @file{/dev/pts65}."
-msgstr "そのプロセスの制御端末の名前であるような文字列。UnixおよびGNUシステムでは、これは通常は@file{/dev/pts65}のような、対応する端末デバイスのファイル名である。"
+msgstr "そのプロセスの制御端末の名前であるような文字列。これはUnixやGNUシステムでは通常は@file{/dev/pts65}のような対応する端末デバイスのファイル名。"
 
 #. type: item
 #: original_texis/processes.texi:2061
@@ -3321,7 +3290,7 @@ msgstr "tpgid"
 #. type: table
 #: original_texis/processes.texi:2064
 msgid "The numerical process group ID of the foreground process group that uses the process's terminal."
-msgstr "そのプロセスの端末を使用するフォアグラウンドプロセスグループの、プロセスグループIDであるような数値。"
+msgstr "そのプロセスの端末を使用するフォアグラウンドプロセスグループのプロセスグループIDであるような数値。"
 
 #. type: item
 #: original_texis/processes.texi:2065
@@ -3332,7 +3301,7 @@ msgstr "minflt"
 #. type: table
 #: original_texis/processes.texi:2069
 msgid "The number of minor page faults caused by the process since its beginning.  (Minor page faults are those that don't involve reading from disk.)"
-msgstr "そのプロセス開始以降に発生したマイナーなページフォルト数(マイナーなページフォルトとはディスクからの読み込みを発生させないページフォルトのこと)。"
+msgstr "そのプロセス開始以降に発生したマイナーなページフォルト数(マイナーなページフォルトとはディスクからの読み込みを発生させないページフォルト)。"
 
 #. type: item
 #: original_texis/processes.texi:2070
@@ -3343,7 +3312,7 @@ msgstr "majflt"
 #. type: table
 #: original_texis/processes.texi:2074
 msgid "The number of major page faults caused by the process since its beginning.  (Major page faults require a disk to be read, and are thus more expensive than minor page faults.)"
-msgstr "そのプロセス開始以降に発生したメジャーなページフォルト数(メジャーなページフォルトとは、ディスクからの読み込みを要し、それ故にマイナーページフォルトより高価なページフォルトのこと)。"
+msgstr "そのプロセス開始以降に発生したメジャーなページフォルト数(メジャーなページフォルトとはディスクからの読み込みを要し、それ故にマイナーページフォルトより高価なページフォルト)。"
 
 #. type: item
 #: original_texis/processes.texi:2075
@@ -3360,7 +3329,7 @@ msgstr "cmajflt"
 #. type: table
 #: original_texis/processes.texi:2079
 msgid "Like @code{minflt} and @code{majflt}, but include the number of page faults for all the child processes of the given process."
-msgstr "@code{minflt}と@code{majflt}と似ているが、与えられたプロセスのすべての子プロセスのページフォルト数を含む。"
+msgstr "@code{minflt}や@code{majflt}と似ているが与えられたプロセスのすべての子プロセスのページフォルト数を含む。"
 
 #. type: item
 #: original_texis/processes.texi:2080
@@ -3371,7 +3340,7 @@ msgstr "utime"
 #. type: table
 #: original_texis/processes.texi:2086
 msgid "Time spent by the process in the user context, for running the application's code.  The corresponding @var{value} is in the @w{@code{(@var{high} @var{low} @var{microsec} @var{picosec})}} format, the same format used by functions @code{current-time} (@pxref{Time of Day, current-time}) and @code{file-attributes} (@pxref{File Attributes})."
-msgstr "アプリケーションのコード実行にたいして、ユーザーコンテキスト内でプロセスに消費された時間。対応する@var{value}は@w{@code{(@var{high} @var{low} @var{microsec} @var{picosec})}}というフォーマットで、これは関数@code{current-time}が使用するフォーマットと同じである(@ref{Time of Day, current-time})および@ref{File Attributes}の@code{file-attributes}を参照)。"
+msgstr "アプリケーションのコード実行にたいしてユーザーコンテキスト内でプロセスに消費された時間。対応する@var{value}は@w{@code{(@var{high} @var{low} @var{microsec} @var{picosec})}}というフォーマットであり、これは関数@code{current-time}が使用するフォーマットと同じ(@ref{Time of Day, current-time})と@ref{File Attributes}の@code{file-attributes}を参照)。"
 
 #. type: item
 #: original_texis/processes.texi:2087
@@ -3382,7 +3351,7 @@ msgstr "stime"
 #. type: table
 #: original_texis/processes.texi:2091
 msgid "Time spent by the process in the system (kernel) context, for processing system calls.  The corresponding @var{value} is in the same format as for @code{utime}."
-msgstr "システムコールの処理にたいして、システム(kernel)コンテキスト内でプロセスに消費された時間。対応する@var{value}は@code{utime}と同じフォーマット。"
+msgstr "システムコールの処理にたいしてシステム(kernel)コンテキスト内でプロセスに消費された時間。対応する@var{value}は@code{utime}と同じフォーマット。"
 
 #. type: item
 #: original_texis/processes.texi:2092
@@ -3416,7 +3385,7 @@ msgstr "ctime"
 #. type: table
 #: original_texis/processes.texi:2101
 msgid "Like @code{utime}, @code{stime}, and @code{time}, but include the times of all the child processes of the given process."
-msgstr "@code{utime}や@code{stime}と同様だが、与えられたプロセスのすべての子プロセスの時間が含まれる点が異なる。"
+msgstr "@code{utime}や@code{stime}と同様だが与えられたプロセスのすべての子プロセスの時間が含まれる点が異なる。"
 
 #. type: item
 #: original_texis/processes.texi:2102
@@ -3460,7 +3429,7 @@ msgstr "start"
 #. type: table
 #: original_texis/processes.texi:2116
 msgid "The time when the process was started, in the same @code{(@var{high} @var{low} @var{microsec} @var{picosec})} format used by @code{file-attributes} and @code{current-time}."
-msgstr "@code{file-attributes}および@code{current-time}が使用するのと同じフォーマット@code{(@var{high} @var{low} @var{microsec} @var{picosec})}による、そのプロセスが開始された時刻。"
+msgstr "@code{file-attributes}や@code{current-time}が使用するのと同じフォーマット@code{(@var{high} @var{low} @var{microsec} @var{picosec})}による、そのプロセスが開始された時刻。"
 
 #. type: item
 #: original_texis/processes.texi:2117
@@ -3526,7 +3495,7 @@ msgstr "args"
 #. type: table
 #: original_texis/processes.texi:2146
 msgid "The command-line with which the process was invoked.  This is a string in which individual command-line arguments are separated by blanks; whitespace characters that are embedded in the arguments are quoted as appropriate for the system's shell: escaped by backslash characters on GNU and Unix, and enclosed in double quote characters on Windows.  Thus, this command-line string can be directly used in primitives such as @code{shell-command}."
-msgstr "そのプロセスが呼び出されたときのコマンドライン。これは個々のコマンドライン引数がブランクで区切られた文字列である。引数に埋め込まれた空白文字は、そのシステムに応じて適切にクォートされる。GNUおよびUnixではバックスラッシュ文字によるエスケープ、Windowsではダブルクォート文字で囲まれる。つまりこのコマンドライン文字列は、@code{shell-command}のようなプリミティブにより直接使用できる。"
+msgstr "そのプロセスが呼び出されたときのコマンドライン。これは個々のコマンドライン引数がブランクで区切られた文字列。引数に埋め込まれた空白文字はシステムに応じて適切にクォートされる。GNUやUnixではバックスラッシュ文字によるエスケープ、Windowsではダブルクォート文字で囲まれる。つまりこのコマンドライン文字列は@code{shell-command}のようなプリミティブにより直接使用できる。"
 
 #. type: cindex
 #: original_texis/processes.texi:2153
@@ -3537,7 +3506,7 @@ msgstr "transaction queue"
 #. type: Plain text
 #: original_texis/processes.texi:2161
 msgid "You can use a @dfn{transaction queue} to communicate with a subprocess using transactions.  First use @code{tq-create} to create a transaction queue communicating with a specified process.  Then you can call @code{tq-enqueue} to send a transaction."
-msgstr "トランザクションを用いてサブプロセスと対話するために、@dfn{トランザクションキュー(transaction queue)}を使用できます。まず@code{tq-create}を使用して、指定したプロセスと対話するためのトランザクションキューを作成します。それからトランザクションを送信するために、@code{tq-enqueue}を呼び出すことができます。"
+msgstr "トランザクションを用いてサブプロセスと対話するために@dfn{トランザクションキュー(transaction queue)}を使用できます。まず@code{tq-create}を使用して指定したプロセスと対話するためのトランザクションキューを作成します。それからトランザクションを送信するために@code{tq-enqueue}を呼び出すことができます。"
 
 #. type: defun
 #: original_texis/processes.texi:2162
@@ -3548,7 +3517,7 @@ msgstr "tq-create process"
 #. type: defun
 #: original_texis/processes.texi:2168
 msgid "This function creates and returns a transaction queue communicating with @var{process}.  The argument @var{process} should be a subprocess capable of sending and receiving streams of bytes.  It may be a child process, or it may be a TCP connection to a server, possibly on another machine."
-msgstr "この関数は、@var{process}と対話するトランザクションキューを作成してリターンする。引数@var{process}は、バイトストリームを送受信する能力をもつサブプロセスであること。これは子プロセス、または(おそらく別のマシン上の)サーバーへのTCP接続かもしれない。"
+msgstr "この関数は@var{process}と対話するトランザクションキューを作成してリターンする。引数@var{process}はバイトストリームを送受信する能力をもつサブプロセスであること。これは子プロセス、または(おそらく別のマシン上の)サーバーへのTCP接続かもしれない。"
 
 #. type: defun
 #: original_texis/processes.texi:2170
@@ -3559,22 +3528,22 @@ msgstr "tq-enqueue queue question regexp closure fn &optional delay-question"
 #. type: defun
 #: original_texis/processes.texi:2173
 msgid "This function sends a transaction to queue @var{queue}.  Specifying the queue has the effect of specifying the subprocess to talk to."
-msgstr "この関数は、キュー@var{queue}にトランザクションを送信する。キューの指定は、対話するサブプロセスを指定する効果をもつ。"
+msgstr "この関数はキュー@var{queue}にトランザクションを送信する。キューの指定は対話するサブプロセスを指定する効果をもつ。"
 
 #. type: defun
 #: original_texis/processes.texi:2178
 msgid "The argument @var{question} is the outgoing message that starts the transaction.  The argument @var{fn} is the function to call when the corresponding answer comes back; it is called with two arguments: @var{closure}, and the answer received."
-msgstr "引数@var{question}は、トランザクションを開始するために発信するメッセージである。引数@var{fn}は、それにたいする応答が返信された際に呼び出す関数である。これは@var{closure}と受信した応答という、2つの引数で呼び出される。"
+msgstr "引数@var{question}はトランザクションを開始するために発信するメッセージ。引数@var{fn}は、それにたいする応答が返信された際に呼び出す関数。これは@var{closure}と受信した応答という2つの引数で呼び出される。"
 
 #. type: defun
 #: original_texis/processes.texi:2182
 msgid "The argument @var{regexp} is a regular expression that should match text at the end of the entire answer, but nothing before; that's how @code{tq-enqueue} determines where the answer ends."
-msgstr "引数@var{regexp}は応答全体の終端にマッチし、それより前にはマッチしない正規表現であること。これが応答の終わりを@code{tq-enqueue}が決定する方法である。"
+msgstr "引数@var{regexp}は応答全体の終端にマッチして、それより前にはマッチしない正規表現であること。これは@code{tq-enqueue}が応答の終わりを決定する方法である。"
 
 #. type: defun
 #: original_texis/processes.texi:2186
 msgid "If the argument @var{delay-question} is non-@code{nil}, delay sending this question until the process has finished replying to any previous questions.  This produces more reliable results with some processes."
-msgstr "引数@var{delay-question}が非@code{nil}なら、そのプロセスが以前に発信したすべてのメッセージへの返信が完了するまで、このメッセージの送信を遅延する。これは、いくつかのプロセスにたいしてより信頼性のある結果が生成される。"
+msgstr "引数@var{delay-question}が非@code{nil}なら、そのプロセスが以前に発信したすべてのメッセージへの返信が完了するまでメッセージの送信を遅延する。これによりいくつかのプロセスにたいして、より信頼性のある結果が生成される。"
 
 #. type: defun
 #: original_texis/processes.texi:2193
@@ -3585,12 +3554,12 @@ msgstr "tq-close queue"
 #. type: defun
 #: original_texis/processes.texi:2196
 msgid "Shut down transaction queue @var{queue}, waiting for all pending transactions to complete, and then terminate the connection or child process."
-msgstr "保留中のすべてのトランザクションの完了を待機して、トランザクションキュー@var{queue}をシャットダウンし、それから接続または子プロセスを終了する。"
+msgstr "保留中のすべてのトランザクションの完了を待機して、トランザクションキュー@var{queue}をシャットダウンして、それから接続または子プロセスを終了する。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2200
 msgid "Transaction queues are implemented by means of a filter function.  @xref{Filter Functions}."
-msgstr "トランザクションキューは、フィルター関数により実装されています。@ref{Filter Functions}を参照してください。"
+msgstr "トランザクションキューはフィルター関数により実装されています。@ref{Filter Functions}を参照してください。"
 
 #. type: section
 #: original_texis/processes.texi:2202
@@ -3619,36 +3588,32 @@ msgstr "UDP"
 #. type: Plain text
 #: original_texis/processes.texi:2217
 msgid "Emacs Lisp programs can open stream (TCP) and datagram (UDP) network connections (@pxref{Datagrams}) to other processes on the same machine or other machines.  A network connection is handled by Lisp much like a subprocess, and is represented by a process object.  However, the process you are communicating with is not a child of the Emacs process, has no process @acronym{ID}, and you can't kill it or send it signals.  All you can do is send and receive data.  @code{delete-process} closes the connection, but does not kill the program at the other end; that program must decide what to do about closure of the connection."
-msgstr "Emacs Lispプログラムは、同一マシンまたは他のマシン上の別プロセスにたいして、ストリーム(TCP)およびデータグラム(UDP)のネットワーク接続(@ref{Datagrams}を参照)をオープンできます。ネットワーク接続はLispにより、サブプロセスと同様に処理され、プロセスオブジェクトとして表されます。しかし対話を行うそのプロセスは、Emacsの子プロセスではなく、プロセス@acronym{ID}をもたず、それをkillしたりシグナルを送信することはできません。行うことができるのは、データの送信と受信だけです。@code{delete-process}は接続をクローズしますが、他端のプログラムをkillしません。そのプログラムは接続のクローズについて何を行うか、決定しなければなりません。"
+msgstr "Emacs Lispプログラムは同一マシンまたは他のマシン上の別プロセスにたいしてストリーム(TCP)やデータグラム(UDP)のネットワーク接続(@ref{Datagrams}を参照)をオープンできます。ネットワーク接続はLispによりサブプロセスと同様に処理されて、プロセスオブジェクトとして表されます。しかし対話を行うそのプロセスはEmacsの子プロセスではなく、プロセス@acronym{ID}をもたず、それをkillしたりシグナルを送信することはできません。行うことができるのはデータの送信と受信だけです。@code{delete-process}は接続をクローズしますが、他方の端のプログラムをkillしません。そのプログラムは接続のクローズについて何を行うか決定しなければなりません。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2226
 msgid "Lisp programs can listen for connections by creating network servers.  A network server is also represented by a kind of process object, but unlike a network connection, the network server never transfers data itself.  When it receives a connection request, it creates a new network connection to represent the connection just made.  (The network connection inherits certain information, including the process plist, from the server.)  The network server then goes back to listening for more connection requests."
-msgstr "ネットワークサーバーを作成することにより、Lispプログラムは接続をlistenできます。ネットワークサーバーもある種のプロセスオブジェクトとして表されますが、ネットワーク接続とは異なり、ネットワークサーバーがデータ自体を転送することは決してありません。接続リクエストを受信したときは、それにたいして作成した接続を表す、新たなネットワーク接続を作成します(そのネットワーク接続はサーバーから、プロセスplistを含む特定の情報を継承する)。その後、ネットワークサーバーは更なる接続リクエストのlistenに戻ります。"
+msgstr "ネットワークサーバーを作成することによりLispプログラムは接続をlistenできます。ネットワークサーバーもある種のプロセスオブジェクトとして表されますが、ネットワーク接続とは異なりネットワークサーバーがデータ自体を転送することは決してありません。接続リクエストを受信したときは、それにたいして作成した接続を表す新たなネットワーク接続を作成します(そのネットワーク接続はサーバーからプロセスplistを含む特定の情報を継承する)。その後でネットワークサーバーは更なる接続リクエストのlistenに戻ります。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2233
 msgid "Network connections and servers are created by calling @code{make-network-process} with an argument list consisting of keyword/argument pairs, for example @code{:server t} to create a server process, or @code{:type 'datagram} to create a datagram connection.  @xref{Low-Level Network}, for details.  You can also use the @code{open-network-stream} function described below."
-msgstr "ネットワーク接続およびサーバーは、キーワード/引数のペアーで構成される引数リストで@code{make-network-process}を呼び出すことにより作成されます。たとえば@code{:server t}はサーバープロセス、@code{:type 'datagram}はデータグラム接続を作成します。詳細は@ref{Low-Level Network}を参照してください。以下で説明する@code{open-network-stream}を使用することもできます。"
+msgstr "ネットワーク接続とサーバーは、キーワード/引数のペアーで構成される引数リストで@code{make-network-process}を呼び出すことにより作成されます。たとえば@code{:server t}はサーバープロセス、@code{:type 'datagram}はデータグラム接続を作成します。詳細は@ref{Low-Level Network}を参照してください。以下で説明する@code{open-network-stream}を使用することもできます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2239
-#, fuzzy
-#| msgid "To distinguish the different types of processes, the @code{process-type} function returns the symbol @code{network} for a network connection or server, @code{serial} for a serial port connection, or @code{real} for a real subprocess."
 msgid "To distinguish the different types of processes, the @code{process-type} function returns the symbol @code{network} for a network connection or server, @code{serial} for a serial port connection, @code{pipe} for a pipe connection, or @code{real} for a real subprocess."
-msgstr "異なるプロセスのタイプを区別するために、@code{process-type}関数はネットワーク接続またはサーバーにたいしてはシンボル@code{network}、シリアルポート接続は@code{serial}、実際のサブプロセスにたいしては@code{real}をリターンします。"
+msgstr "異なるプロセスのタイプを区別するために@code{process-type}関数はネットワーク接続とサーバーには@code{network}、シリアルポート接続は@code{serial}、pipe接続には@code{pipe}、実際のサブプロセスには@code{real}をリターンします。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2245
-#, fuzzy
-#| msgid "The @code{process-status} function returns @code{open}, @code{closed}, @code{connect}, or @code{failed} for network connections.  For a network server, the status is always @code{listen}.  None of those values is possible for a real subprocess.  @xref{Process Information}."
 msgid "The @code{process-status} function returns @code{open}, @code{closed}, @code{connect}, @code{stop}, or @code{failed} for network connections.  For a network server, the status is always @code{listen}.  Except for @code{stop}, none of those values is possible for a real subprocess.  @xref{Process Information}."
-msgstr "ネットワーク接続にたいして、@code{process-status}関数は@code{open}、@code{closed}、@code{connect}、@code{failed}をリターンします。ネットワークサーバーにたいしては、状態は常に@code{listen}になります。実際のサブプロセスにたいしては、これらの値はリターンされません。@ref{Process Information}を参照してください。"
+msgstr "ネットワーク接続にたいして@code{process-status}関数は@code{open}、@code{closed}、@code{connect}、@code{stop}、または@code{failed}をリターンします。ネットワークサーバーにたいしては状態は常に@code{listen}になります。実際のサブプロセスにたいしては@code{stop}以外の値はリターンされません。@ref{Process Information}を参照してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2258
 msgid "You can stop and resume operation of a network process by calling @code{stop-process} and @code{continue-process}.  For a server process, being stopped means not accepting new connections.  (Up to 5 connection requests will be queued for when you resume the server; you can increase this limit, unless it is imposed by the operating system---see the @code{:server} keyword of @code{make-network-process}, @ref{Network Processes}.)  For a network stream connection, being stopped means not processing input (any arriving input waits until you resume the connection).  For a datagram connection, some number of packets may be queued but input may be lost.  You can use the function @code{process-command} to determine whether a network connection or server is stopped; a non-@code{nil} value means yes."
-msgstr "@code{stop-process}と@code{continue-process}を呼び出すことにより、ネットワークプロセスの処理の停止と再開が可能です。サーバープロセスにたいする停止は、新たな接続の受け付けないことを意味します(サーバー再開時は5つまでの接続リクエストがキューされる。これがOSによる制限でなければこの制限は増やすことができる。@ref{Network Processes}の@code{make-network-process}の@code{:server}を参照されたい)。ネットワークストリーム接続にたいしては、停止は入力の処理を行わないことを意味します(到着するすべての入力は接続の再開まで待つ)。データグラム接続にたいしては、いくらかのパケットはキューされますが、入力は失われるかもしれません。ネットワーク接続またはサーバーが停止しているかどうかを判断するために、関数@code{process-command}を使用できます。これが非@code{nil}なら停止しています。"
+msgstr "@code{stop-process}と@code{continue-process}を呼び出すことにより、ネットワークプロセスの処理の停止と再開が可能です。サーバープロセスにたいする停止は新たな接続の受け付けないことを意味します(サーバー再開時は5つまでの接続リクエストがキューされる。これがOSによる制限でなければこの制限は増やすことができる。@ref{Network Processes}の@code{make-network-process}の@code{:server}を参照)。ネットワークストリーム接続にたいしては、停止は入力の処理を行わないことを意味します(到着するすべての入力は接続の再開まで待つ)。データグラム接続にたいしては、いくらかのパケットはキューされますが入力は失われるかもしれません。ネットワーク接続またはサーバーが停止しているかどうかを判断するために、関数@code{process-command}を使用できます。これが非@code{nil}なら停止しています。"
 
 #. type: cindex
 #: original_texis/processes.texi:2259
@@ -3676,10 +3641,8 @@ msgstr "@acronym{STARTTLS} network connections"
 
 #. type: Plain text
 #: original_texis/processes.texi:2275
-#, fuzzy
-#| msgid "Emacs can create encrypted network connections, using either built-in or external support.  The built-in support uses the GnuTLS (``Transport Layer Security'') library; see @uref{http://www.gnu.org/software/gnutls/, the GnuTLS project page}.  If your Emacs was compiled with GnuTLS support, the function @code{gnutls-available-p} is defined and returns non-@code{nil}.  For more details, @pxref{Top,, Overview, emacs-gnutls, The Emacs-GnuTLS manual}.  The external support uses the @file{starttls.el} library, which requires a helper utility such as @command{gnutls-cli} to be installed on the system.  The @code{open-network-stream} function can transparently handle the details of creating encrypted connections for you, using whatever support is available."
 msgid "Emacs can create encrypted network connections, using either built-in or external support.  The built-in support uses the GnuTLS Transport Layer Security Library; see @uref{http://www.gnu.org/software/gnutls/, the GnuTLS project page}.  If your Emacs was compiled with GnuTLS support, the function @code{gnutls-available-p} is defined and returns non-@code{nil}.  For more details, @pxref{Top,, Overview, emacs-gnutls, The Emacs-GnuTLS manual}.  The external support uses the @file{starttls.el} library, which requires a helper utility such as @command{gnutls-cli} to be installed on the system.  The @code{open-network-stream} function can transparently handle the details of creating encrypted connections for you, using whatever support is available."
-msgstr "ビルトインまたは外部のサポートを使用することにより、Emacsは暗号化されたネットワーク接続を作成できます。ビルトインのサポートはGnuTLSライブラリー(``TLS: Transport Layer Security'')を使用します。@uref{http://www.gnu.org/software/gnutls/, the GnuTLS project page}を参照してください。GnuTLSサポートつきでEmacsをコンパイルした場合は、関数@code{gnutls-available-p}が定義され、非@code{nil}をリターンします。詳細は@pxref{Top,, Overview, emacs-gnutls, The Emacs-GnuTLS manual}を参照してください。外部のサポートの場合は、@file{starttls.el}ライブラリーを使用します。これはシステム上に@command{gnutls-cli}のようなヘルパーユーティリティーのインストールを必要とします。@code{open-network-stream}関数は、何であれ利用可能なサポートを使用して、暗号化接続作成の詳細を透過的に処理できます。"
+msgstr "ビルトインや外部のサポートを使用することによりEmacsは暗号化されたネットワーク接続を作成できます。ビルトインのサポートはGnuTLSライブラリー(TLS: Transport Layer Security)を使用します。@uref{http://www.gnu.org/software/gnutls/, the GnuTLS project page}を参照してください。GnuTLSサポートつきでEmacsをコンパイルした場合には関数@code{gnutls-available-p}が定義されて非@code{nil}をリターンします。詳細は@ref{Top,, Overview, emacs-gnutls, The Emacs-GnuTLS manual}を参照してください。外部のサポートの場合は@file{starttls.el}ライブラリーを使用します。これはシステム上に@command{gnutls-cli}のようなヘルパーユーティリティーのインストールを必要とします。@code{open-network-stream}関数は利用可能なサポートを何であれ使用して暗号化接続作成の詳細を透過的に処理できます。"
 
 #. type: defun
 #: original_texis/processes.texi:2276
@@ -3690,27 +3653,27 @@ msgstr "open-network-stream name buffer host service &rest parameters"
 #. type: defun
 #: original_texis/processes.texi:2279
 msgid "This function opens a TCP connection, with optional encryption, and returns a process object that represents the connection."
-msgstr "この関数は、オプションで暗号つきでTCP接続をオープンして、その接続を表すプロセスオブジェクトをリターンする。"
+msgstr "この関数はオプションで暗号つきでTCP接続をオープンして、その接続を表すプロセスオブジェクトをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:2282
 msgid "The @var{name} argument specifies the name for the process object.  It is modified as necessary to make it unique."
-msgstr "@var{name}引数は、プロセスオブジェクトの名前を指定する。これは必要に応じて一意になるよう修正される。"
+msgstr "@var{name}引数はプロセスオブジェクトの名前を指定する。これは必要に応じて一意になるよう変更される。"
 
 #. type: defun
 #: original_texis/processes.texi:2288
 msgid "The @var{buffer} argument is the buffer to associate with the connection.  Output from the connection is inserted in the buffer, unless you specify your own filter function to handle the output.  If @var{buffer} is @code{nil}, it means that the connection is not associated with any buffer."
-msgstr "@var{buffer}引数は、その接続に関連付けるバッファーである。その接続からの出力は、その出力を処理する独自のフィルター関数を指定していなければ、@var{buffer}が@code{nil}なら、その接続はバッファーに関連付けられない。"
+msgstr "@var{buffer}引数はその接続に関連付けるバッファー。その接続からの出力は出力を処理する独自のフィルター関数を指定していない場合には、@var{buffer}が@code{nil}ならその接続はバッファーに関連付けられない。"
 
 #. type: defun
 #: original_texis/processes.texi:2292
 msgid "The arguments @var{host} and @var{service} specify where to connect to; @var{host} is the host name (a string), and @var{service} is the name of a defined network service (a string) or a port number (an integer)."
-msgstr "引数@var{host}と@var{service}は、どこに接続するかを指定する。@var{host}はホスト名(文字列)、@var{service}は定義済みのネットワークサービス名(文字列)、またはポート番号(数字)である。"
+msgstr "引数@var{host}と@var{service}はどこに接続するかを指定する。@var{host}はホスト名(文字列)、@var{service}は定義済みのネットワークサービス名(文字列)、またはポート番号(数字)。"
 
 #. type: defun
 #: original_texis/processes.texi:2295
 msgid "The remaining arguments @var{parameters} are keyword/argument pairs that are mainly relevant to encrypted connections:"
-msgstr "残りの引数@var{parameters}は、主に暗号化された接続に関連する、キーワード/引数のペアーである:"
+msgstr "残りの引数@var{parameters}は主に暗号化された接続に関連するキーワード/引数のペアー:"
 
 #. type: item
 #: original_texis/processes.texi:2298
@@ -3759,10 +3722,8 @@ msgstr "ssl"
 
 #. type: table
 #: original_texis/processes.texi:2310
-#, fuzzy
-#| msgid "A @acronym{TLS} (``Transport Layer Security'') connection."
 msgid "A @acronym{TLS} (Transport Layer Security) connection."
-msgstr "@acronym{TLS}(``Transport Layer Security'')接続。"
+msgstr "@acronym{TLS} (Transport Layer Security)接続。"
 
 #. type: itemx
 #: original_texis/processes.texi:2311
@@ -3773,7 +3734,7 @@ msgstr "network"
 #. type: table
 #: original_texis/processes.texi:2316
 msgid "Start with a plain connection, and if parameters @samp{:success} and @samp{:capability-command} are supplied, try to upgrade to an encrypted connection via @acronym{STARTTLS}.  If that fails, retain the unencrypted connection."
-msgstr "plain接続を開始して、パラメーター@samp{:success}および@samp{:capability-command}が与えられたら、@acronym{STARTTLS}を通じて暗号化接続への更新を試みる。これが失敗したら、暗号化されていない接続のまま留まる。"
+msgstr "plain接続を開始してパラメーター@samp{:success}と@samp{:capability-command}が与えられたら、@acronym{STARTTLS}を通じて暗号化接続への更新を試みる。これが失敗したら暗号化されていない接続のまま留まる。"
 
 #. type: item
 #: original_texis/processes.texi:2316
@@ -3784,7 +3745,7 @@ msgstr "starttls"
 #. type: table
 #: original_texis/processes.texi:2318
 msgid "As for @code{nil}, but if @acronym{STARTTLS} fails drop the connection."
-msgstr "@code{nil}と同様だが、@acronym{STARTTLS}が失敗したらその接続を切断する。"
+msgstr "@code{nil}と同様だが@acronym{STARTTLS}が失敗したらその接続を切断する。"
 
 #. type: item
 #: original_texis/processes.texi:2318
@@ -3806,7 +3767,7 @@ msgstr ":always-query-capabilities @var{boolean}"
 #. type: table
 #: original_texis/processes.texi:2325
 msgid "If non-@code{nil}, always ask for the server's capabilities, even when doing a @samp{plain} connection."
-msgstr "非@code{nil}なら、たとえ@samp{plain}な接続を行っているときでも、常にサーバーの能力を問い合わせる。"
+msgstr "非@code{nil}なら、たとえ@samp{plain}な接続を行っているときでも常にサーバーの能力を問い合わせる。"
 
 #. type: item
 #: original_texis/processes.texi:2326
@@ -3834,7 +3795,7 @@ msgstr ":end-of-capability @var{regexp}"
 #. type: table
 #: original_texis/processes.texi:2333
 msgid "Regular expression matching the end of a command, or the end of the command @var{capability-command}.  The latter defaults to the former."
-msgstr "コマンドの終端、またはコマンド@var{capability-command}の終端にマッチする正規表現。前者は後者のデフォルトである。"
+msgstr "コマンドの終端、またはコマンド@var{capability-command}の終端にマッチする正規表現。前者は後者のデフォルト。"
 
 #. type: item
 #: original_texis/processes.texi:2334
@@ -3871,15 +3832,14 @@ msgstr "非@code{nil}なら、たとえEmacsがビルトインの@acronym{TLS}�
 
 #. type: item
 #: original_texis/processes.texi:2346
-#, fuzzy, no-wrap
-#| msgid ":always-query-capabilities @var{boolean}"
+#, no-wrap
 msgid ":warn-unless-encrypted @var{boolean}"
-msgstr ":always-query-capabilities @var{boolean}"
+msgstr ":warn-unless-encrypted @var{boolean}"
 
 #. type: table
 #: original_texis/processes.texi:2351
 msgid "If non-@code{nil}, and @code{:return-value} is also non-@code{nil}, Emacs will warn if the connection isn't encrypted.  This is useful for protocols like @acronym{IMAP} and the like, where most users would expect the network traffic to be encrypted."
-msgstr ""
+msgstr "非@code{nil}、かつ@code{:return-value}も非@code{nil}なら、接続が暗号化されていない場合にはEmacsは警告するだろう。これはほとんどのユーザーがネットワークトラフィックが暗号化されているこを期待するであろう@acronym{IMAP}やその類のプロトコルにたいして有用。"
 
 #. type: item
 #: original_texis/processes.texi:2352
@@ -3890,7 +3850,7 @@ msgstr ":client-certificate @var{list-or-t}"
 #. type: table
 #: original_texis/processes.texi:2358
 msgid "Either a list of the form @code{(@var{key-file} @var{cert-file})}, naming the certificate key file and certificate file itself, or @code{t}, meaning to query @code{auth-source} for this information (@pxref{Top,,Overview, auth, The Auth-Source Manual}).  Only used for @acronym{TLS} or @acronym{STARTTLS}."
-msgstr "証明書(certificate)のキーと、証明書のファイル自身を命名する@code{(@var{key-file} @var{cert-file})}という形式のリスト、またはこの情報にたいして@code{auth-source}を尋ねることを意味する@code{t}のいずれか(@ref{Top,,Overview, auth, The Auth-Source Manual}を参照)。@acronym{TLS}または@acronym{STARTTLS}にたいしてのみ使用される。"
+msgstr "証明書(certificate)のキーと、証明書のファイル自身を命名する@code{(@var{key-file} @var{cert-file})}という形式のリスト、またはこの情報にたいして@code{auth-source}を尋ねることを意味する@code{t}のいずれか(@ref{Top,,Overview, auth, The Auth-Source Manual}を参照)。@acronym{TLS}や@acronym{STARTTLS}にたいしてのみ使用される。"
 
 #. type: item
 #: original_texis/processes.texi:2359
@@ -3901,7 +3861,7 @@ msgstr ":return-list @var{cons-or-nil}"
 #. type: table
 #: original_texis/processes.texi:2363
 msgid "The return value of this function.  If omitted or @code{nil}, return a process object.  Otherwise, a cons of the form @code{(@var{process-object} . @var{plist})}, where @var{plist} has keywords:"
-msgstr "この関数のリターン値。省略または@code{nil}なら、プロセスオブジェクトをリターンする。それ以外なら、@code{(@var{process-object} . @var{plist})}という形式のコンスセルをリターンする。ここで@var{plist}は以下のキーワードである:"
+msgstr "この関数のリターン値。省略または@code{nil}ならプロセスオブジェクトをリターンする。それ以外なら@code{(@var{process-object} . @var{plist})}という形式のコンスセルをリターンする。ここで@var{plist}は以下のキーワード:"
 
 #. type: item
 #: original_texis/processes.texi:2365
@@ -3912,7 +3872,7 @@ msgstr ":greeting @var{string-or-nil}"
 #. type: table
 #: original_texis/processes.texi:2367
 msgid "If non-@code{nil}, the greeting string returned by the host."
-msgstr "非@code{nil}なら、ホストからリターンされたgreeting(挨拶)文字列。"
+msgstr "非@code{nil}ならホストからリターンされたgreeting(挨拶)文字列。"
 
 #. type: item
 #: original_texis/processes.texi:2367
@@ -3923,7 +3883,7 @@ msgstr ":capabilities @var{string-or-nil}"
 #. type: table
 #: original_texis/processes.texi:2369
 msgid "If non-@code{nil}, the host's capability string."
-msgstr "非@code{nil}なら、ホストの能力(capability)文字列。"
+msgstr "非@code{nil}ならホストの能力(capability)文字列。"
 
 #. type: item
 #: original_texis/processes.texi:2369
@@ -3934,7 +3894,7 @@ msgstr ":type @var{symbol}"
 #. type: table
 #: original_texis/processes.texi:2371
 msgid "The connection type: @samp{plain} or @samp{tls}."
-msgstr "接続タイプで、@samp{plain}か@samp{tls}のいずれか。"
+msgstr "接続タイプであり、@samp{plain}か@samp{tls}のいずれか。"
 
 #. type: cindex
 #: original_texis/processes.texi:2380
@@ -3945,42 +3905,42 @@ msgstr "network servers"
 #. type: Plain text
 #: original_texis/processes.texi:2387
 msgid "You create a server by calling @code{make-network-process} (@pxref{Network Processes}) with @code{:server t}.  The server will listen for connection requests from clients.  When it accepts a client connection request, that creates a new network connection, itself a process object, with the following parameters:"
-msgstr "@code{:server t}で@code{make-network-process}を呼び出すことによりサーバーが作成されます(@ref{Network Processes}を参照)。そのサーバーは、クライアントからの接続リクエストをlistenするでしょう。クライアントの接続リクエストをaccept(受け入れる)する際は、以下のようなパラメーターで、それ自体がプロセスオブジェクトであるようなネットワーク接続を作成します。"
+msgstr "@code{:server t}で@code{make-network-process}を呼び出すことによりサーバーが作成されます(@ref{Network Processes}を参照)。そのサーバーはクライアントからの接続リクエストをlistenするでしょう。クライアントの接続リクエストをaccept(受け入れる)する際は以下のようなパラメーターで、それ自体がプロセスオブジェクトであるようなネットワーク接続を作成します。"
 
 #. type: itemize
 #: original_texis/processes.texi:2398
 msgid "The connection's process name is constructed by concatenating the server process's @var{name} with a client identification string.  The client identification string for an IPv4 connection looks like @samp{<@var{a}.@var{b}.@var{c}.@var{d}:@var{p}>}, which represents an address and port number.  Otherwise, it is a unique number in brackets, as in @samp{<@var{nnn}>}.  The number is unique for each connection in the Emacs session."
-msgstr "その接続のプロセス名は、サーバープロセスの@var{name}と、クライアント識別文字列を結合して構築される。IPv4接続にたいするクライアント識別文字列は、アドレスとポート番号を表す、@samp{<@var{a}.@var{b}.@var{c}.@var{d}:@var{p}>}のような文字列である。それ以外なら、@samp{<@var{nnn}>}のようにカッコで囲まれた一意な数字である。この数字は、そのEmacsセッション内のそれぞれの接続にたいして一意である。"
+msgstr "その接続のプロセス名はサーバープロセスの@var{name}とクライアント識別文字列を結合して構築される。IPv4接続にたいするクライアント識別文字列はアドレスとポート番号を表す@samp{<@var{a}.@var{b}.@var{c}.@var{d}:@var{p}>}のような文字列。それ以外なら@samp{<@var{nnn}>}のようにカッコで囲まれた一意な数字。この数字はそのEmacsセッション内のそれぞれの接続にたいして一意。"
 
 #. type: itemize
 #: original_texis/processes.texi:2404
 msgid "If the server has a non-default filter, the connection process does not get a separate process buffer; otherwise, Emacs creates a new buffer for the purpose.  The buffer name is the server's buffer name or process name, concatenated with the client identification string."
-msgstr "サーバーが非デフォルトのフィルターをもつ場合、その接続プロセスは別個にプロセスバッファーを取得しない。それ以外なら、Emacsはその目的のために新たにバッファーを作成する。サーバーのバッファー名またはプロセス名にクライアント識別文字列に結合したものがバッファー名になる。"
+msgstr "サーバーが非デフォルトのフィルターをもつ場合には、その接続プロセスは別個にプロセスバッファーを取得しない。それ以外ならEmacsはその目的のために新たにバッファーを作成する。サーバーのバッファー名かプロセス名にクライアント識別文字列に結合したものがバッファー名になる。"
 
 #. type: itemize
 #: original_texis/processes.texi:2408
 msgid "The server's process buffer value is never used directly, but the log function can retrieve it and use it to log connections by inserting text there."
-msgstr "サーバーのプロセスバッファーの値が直接使用されることは決してないが、log関数はそれを取得して、そこにテキストを挿入することにより、接続のログを記録するために使用することができる。"
+msgstr "サーバーのプロセスバッファーの値が直接使用されることは決してないが、log関数は接続のログを記録するためにそれを取得して、そこにテキストを挿入して使用することができる。"
 
 #. type: itemize
 #: original_texis/processes.texi:2414
 msgid "The communication type and the process filter and sentinel are inherited from those of the server.  The server never directly uses its filter and sentinel; their sole purpose is to initialize connections made to the server."
-msgstr "通信タイプ(communication type)、プロセスフィルター、およびセンチネルはそれぞれ、サーバーのものから継承される。サーバーが直接フィルターとセンチネルを使用することは決してない。それらの唯一の目的は、サーバーへの接続を初期化することである。"
+msgstr "通信タイプ(communication type)、プロセスフィルター、およびセンチネルはそれぞれサーバーのものから継承される。サーバーが直接フィルターとセンチネルを使用することは決してない。それらの唯一の目的はサーバーへの接続を初期化することである。"
 
 #. type: itemize
 #: original_texis/processes.texi:2420
 msgid "The connection's process contact information is set according to the client's addressing information (typically an IP address and a port number).  This information is associated with the @code{process-contact} keywords @code{:host}, @code{:service}, @code{:remote}."
-msgstr "その接続のプロセスコンタクト情報は、クライアントのアドレス情報(通常はIPアドレスとポート番号)に応じてセットされる。この情報は、@code{process-contact}のキーワード@code{:host}、@code{:service}、@code{:remote}に関連付けられる。"
+msgstr "その接続のプロセスコンタクト情報は、クライアントのアドレス情報(通常はIPアドレスとポート番号)に応じてセットされる。この情報は@code{process-contact}のキーワード@code{:host}、@code{:service}、@code{:remote}に関連付けられる。"
 
 #. type: itemize
 #: original_texis/processes.texi:2424
 msgid "The connection's local address is set up according to the port number used for the connection."
-msgstr "その接続のローカルアドレスは、それが使用するポート番号に応じてセットアップされる。"
+msgstr "その接続のローカルアドレスは使用するポート番号に応じてセットアップされる。"
 
 #. type: itemize
 #: original_texis/processes.texi:2427
 msgid "The client process's plist is initialized from the server's plist."
-msgstr "クライアントプロセスのplistは、サーバーのplistからインストールされる。"
+msgstr "クライアントプロセスのplistはサーバーのplistからインストールされる。"
 
 #. type: cindex
 #: original_texis/processes.texi:2431
@@ -3991,12 +3951,12 @@ msgstr "datagrams"
 #. type: Plain text
 #: original_texis/processes.texi:2437
 msgid "A @dfn{datagram} connection communicates with individual packets rather than streams of data.  Each call to @code{process-send} sends one datagram packet (@pxref{Input to Processes}), and each datagram received results in one call to the filter function."
-msgstr "@dfn{データグラム(datagram)}接続は、データストリームではなく個別のパッケージで対話します。@code{process-send}を呼び出すたびに1つのデータグラムパケット(@pxref{Input to Processes})が送信され、受信されたデータグラムごとに1回フィルター関数が呼び出されます。"
+msgstr "@dfn{データグラム(datagram)}接続は、データストリームではなく個別のパッケージで対話します。@code{process-send}を呼び出すたびに1つのデータグラムパケット(@ref{Input to Processes}を参照)が送信されて、受信されたデータグラムごとに1回フィルター関数が呼び出されます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2447
 msgid "The datagram connection doesn't have to talk with the same remote peer all the time.  It has a @dfn{remote peer address} which specifies where to send datagrams to.  Each time an incoming datagram is passed to the filter function, the peer address is set to the address that datagram came from; that way, if the filter function sends a datagram, it will go back to that place.  You can specify the remote peer address when you create the datagram connection using the @code{:remote} keyword.  You can change it later on by calling @code{set-process-datagram-address}."
-msgstr "データグラム接続は、毎回同じリモートピア(remote peer)と対話する必要はありません。データグラム接続は、データグラムの送信先を指定する、@dfn{リモートピアアドレス(remote peer address)}をもちます。フィルター関数にたいして受信されたデータグラムが渡されるたびに、そのデータグラムの送信元アドレスがピアアドレスにセットされます。このように、もしフィルター関数がデータグラムを送信したら、それは元の場所へ戻ることになります。@code{:remote}キーワードを使用してデータグラム接続を作成する際は、リモートピアアドレスを指定できます。@code{set-process-datagram-address}を呼び出すことにより、後からそれを変更できます。"
+msgstr "データグラム接続は毎回同じリモートピア(remote peer)と対話する必要はありません。データグラム接続はデータグラムの送信先を指定する@dfn{リモートピアアドレス(remote peer address)}をもちます。フィルター関数にたいして受信されたデータグラムが渡されるたびに、そのデータグラムの送信元アドレスがピアアドレスにセットされます。このようにもしフィルター関数がデータグラムを送信したら、それは元の場所へ戻ることになります。@code{:remote}キーワードを使用してデータグラム接続を作成する際にはリモートピアアドレスを指定できます。@code{set-process-datagram-address}を呼び出すことにより後からそれを変更できます。"
 
 #. type: defun
 #: original_texis/processes.texi:2448
@@ -4007,7 +3967,7 @@ msgstr "process-datagram-address process"
 #. type: defun
 #: original_texis/processes.texi:2451
 msgid "If @var{process} is a datagram connection or server, this function returns its remote peer address."
-msgstr "@var{process}がデータグラム接続またはサーバーなら、この関数はそれのリモートピアアドレスをリターンする。"
+msgstr "@var{process}がデータグラム接続かサーバーなら、この関数はそれのリモートピアアドレスをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:2453
@@ -4018,7 +3978,7 @@ msgstr "set-process-datagram-address process address"
 #. type: defun
 #: original_texis/processes.texi:2456
 msgid "If @var{process} is a datagram connection or server, this function sets its remote peer address to @var{address}."
-msgstr "@var{process}がデータグラム接続またはサーバーなら、この関数はそのリモートピアアドレスに@var{address}をセットする。"
+msgstr "@var{process}がデータグラム接続かサーバーなら、この関数はそのリモートピアアドレスに@var{address}をセットする。"
 
 #. type: section
 #: original_texis/processes.texi:2459
@@ -4029,7 +3989,7 @@ msgstr "Low-Level Network Access"
 #. type: Plain text
 #: original_texis/processes.texi:2464
 msgid "You can also create network connections by operating at a lower level than that of @code{open-network-stream}, using @code{make-network-process}."
-msgstr "@code{make-network-process}を使用することにより、@code{open-network-stream}より低レベルでの処理により、ネットワーク接続を作成することもできます。"
+msgstr "@code{make-network-process}を使用することにより、@code{open-network-stream}より低レベルでの処理からネットワーク接続を作成することもできます。"
 
 #. type: menuentry
 #: original_texis/processes.texi:2471
@@ -4076,7 +4036,7 @@ msgstr "make-network-process"
 #. type: Plain text
 #: original_texis/processes.texi:2479
 msgid "The basic function for creating network connections and network servers is @code{make-network-process}.  It can do either of those jobs, depending on the arguments you give it."
-msgstr "ネットワーク接続およびネットワークサーバーを作成する基本的な関数は、@code{make-network-process}です。これは与えられた引数に応じて、これらの仕事のいずれかを行うことができます。"
+msgstr "ネットワーク接続やネットワークサーバーを作成する基本的な関数は@code{make-network-process}です。これは与えられた引数に応じて、これらの仕事のいずれかを行うことができます。"
 
 #. type: defun
 #: original_texis/processes.texi:2480
@@ -4087,19 +4047,17 @@ msgstr "make-network-process &rest args"
 #. type: defun
 #: original_texis/processes.texi:2488
 msgid "This function creates a network connection or server and returns the process object that represents it.  The arguments @var{args} are a list of keyword/argument pairs.  Omitting a keyword is always equivalent to specifying it with value @code{nil}, except for @code{:coding}, @code{:filter-multibyte}, and @code{:reuseaddr}.  Here are the meaningful keywords (those corresponding to network options are listed in the following section):"
-msgstr "この関数は、ネットワーク接続またはサーバーを作成して、それを表すプロセスオブジェクトをリターンする。引数@var{args}は、キーワード/引数のペアからなるリストである。キーワードの省略は@code{:coding}、@code{:filter-multibyte}、@code{:reuseaddr}を除き、常に値として@code{nil}を指定したのと同じことになる。重要なキーワードを以下に示す(ネットワークオプションに対応するキーワードを、以降のセクションにリストする)。"
+msgstr "この関数はネットワーク接続やサーバーを作成して、それを表すプロセスオブジェクトをリターンする。引数@var{args}はキーワード/引数のペアからなるリスト。キーワードの省略は@code{:coding}、@code{:filter-multibyte}、@code{:reuseaddr}を除いて、常に値として@code{nil}を指定したのと同じことになる。重要なキーワードを以下に示す(ネットワークオプションに対応するキーワードを以降のセクションにリストする)。"
 
 #. type: table
 #: original_texis/processes.texi:2493
 msgid "Use the string @var{name} as the process name.  It is modified if necessary to make it unique."
-msgstr "プロセス名として、文字列@var{name}を使用する。一意にするために、必要に応じて変更され得る。"
+msgstr "プロセス名として文字列@var{name}を使用する。一意にするために必要に応じて変更され得る。"
 
 #. type: table
 #: original_texis/processes.texi:2499
-#, fuzzy
-#| msgid "Specify the communication type.  A value of @code{nil} specifies a stream connection (the default); @code{datagram} specifies a datagram connection; @code{seqpacket} specifies a ``sequenced packet stream'' connection.  Both connections and servers can be of these types."
 msgid "Specify the communication type.  A value of @code{nil} specifies a stream connection (the default); @code{datagram} specifies a datagram connection; @code{seqpacket} specifies a sequenced packet stream connection.  Both connections and servers can be of these types."
-msgstr "コミュニケーションのタイプを指定する。値@code{nil}はストリーム接続(デフォルト)、@code{datagram}はデータグラム接続、@code{seqpacket}は``シーケンスパケットストリーム(sequenced packet stream)''による接続を指定する。接続およびサーバーの両方で、これらのタイプを指定できる。"
+msgstr "コミュニケーションのタイプを指定する。値@code{nil}はストリーム接続(デフォルト)、@code{datagram}はデータグラム接続、@code{seqpacket}はシーケンスパケットストリーム(sequenced packet stream)による接続を指定する。接続およびサーバーの両方でこれらのタイプを指定できる。"
 
 #. type: item
 #: original_texis/processes.texi:2500
@@ -4110,7 +4068,7 @@ msgstr ":server @var{server-flag}"
 #. type: table
 #: original_texis/processes.texi:2505
 msgid "If @var{server-flag} is non-@code{nil}, create a server.  Otherwise, create a connection.  For a stream type server, @var{server-flag} may be an integer, which then specifies the length of the queue of pending connections to the server.  The default queue length is 5."
-msgstr "@var{server-flag}が非@code{nil}ならサーバー、それ以外なら接続を作成する。ストリームタイプのサーバーでは、@var{server-flag}はそのサーバーへの保留中の接続キューの長さを指定する、整数を指定できる。キューのデフォルト長は5。"
+msgstr "@var{server-flag}が非@code{nil}ならサーバー、それ以外なら接続を作成する。ストリームタイプのサーバーでは@var{server-flag}はそのサーバーへの保留中の接続キューの長さを指定する整数を指定できる。キューのデフォルト長は5。"
 
 #. type: item
 #: original_texis/processes.texi:2506
@@ -4121,7 +4079,7 @@ msgstr ":host @var{host}"
 #. type: table
 #: original_texis/processes.texi:2512
 msgid "Specify the host to connect to.  @var{host} should be a host name or Internet address, as a string, or the symbol @code{local} to specify the local host.  If you specify @var{host} for a server, it must specify a valid address for the local host, and only clients connecting to that address will be accepted."
-msgstr "接続するホストを指定する。@var{host}は、ホスト名またはインターネットアドレスを表す文字列、またはローカルホストを表すシンボル@code{local}であること。サーバーのときに@var{host}を指定する場合は、有効なローカルホストのアドレスを指定しなければならず、そのアドレスに接続するクライアントだけが受け入れられるだろう。"
+msgstr "接続するホストを指定する。@var{host}はホスト名かインターネットアドレスを表す文字列、またはローカルホストを表すシンボル@code{local}であること。サーバーのときに@var{host}を指定する場合には有効なローカルホストのアドレスを指定しなければならず、そのアドレスに接続するクライアントだけが受け入れられるだろう。"
 
 #. type: item
 #: original_texis/processes.texi:2513
@@ -4132,7 +4090,7 @@ msgstr ":service @var{service}"
 #. type: table
 #: original_texis/processes.texi:2519
 msgid "@var{service} specifies a port number to connect to; or, for a server, the port number to listen on.  It should be a service name that translates to a port number, or an integer specifying the port number directly.  For a server, it can also be @code{t}, which means to let the system select an unused port number."
-msgstr "@var{service}は接続先のポート番号、またはサーバーにたいしてはlistenするポート番号である。これはポート番号に変換されるようなサービス名、または直接ポート番号を指定する整数であること。サーバーにたいしては@code{t}も指定でき、これは未使用のポート番号をシステムに選択させることを意味する。"
+msgstr "@var{service}は接続先のポート番号、またはサーバーにたいしてはlistenするポート番号。これはポート番号に変換されるようなサービス名、または直接ポート番号を指定する整数であること。サーバーにたいしては@code{t}も指定でき、これは未使用のポート番号をシステムに選択させることを意味する。"
 
 #. type: item
 #: original_texis/processes.texi:2520
@@ -4143,7 +4101,7 @@ msgstr ":family @var{family}"
 #. type: table
 #: original_texis/processes.texi:2527
 msgid "@var{family} specifies the address (and protocol) family for communication.  @code{nil} means determine the proper address family automatically for the given @var{host} and @var{service}.  @code{local} specifies a Unix socket, in which case @var{host} is ignored.  @code{ipv4} and @code{ipv6} specify to use IPv4 and IPv6, respectively."
-msgstr "@var{family}は、接続のアドレス(またはプロトコル)のファミリーを指定する。@code{nil}は、与えられた@var{host}と@var{service}にたいして、自動的に適切なアドレスファミリーを決定する。@code{local}はUnixのsocketを指定し、この場合@var{host}は無視される。@code{ipv4}と@code{ipv6}はそれぞれ、IPv4とIPv6の使用を指定する。"
+msgstr "@var{family}は接続のアドレス(またはプロトコル)のファミリーを指定する。@code{nil}は与えられた@var{host}と@var{service}にたいして自動的に適切なアドレスファミリーを決定する。@code{local}はUnixのsocketを指定して、この場合には@var{host}は無視される。@code{ipv4}と@code{ipv6}はそれぞれIPv4とIPv6の使用を指定する。"
 
 #. type: item
 #: original_texis/processes.texi:2528
@@ -4154,7 +4112,7 @@ msgstr ":local @var{local-address}"
 #. type: table
 #: original_texis/processes.texi:2532
 msgid "For a server process, @var{local-address} is the address to listen on.  It overrides @var{family}, @var{host} and @var{service}, so you might as well not specify them."
-msgstr "サーバープロセスでは、@var{local-address}はlistenするアドレスである。これは@var{family}、@var{host}、@var{service}をオーバーライドするので、これらを指定しないこともできる。"
+msgstr "サーバープロセスでは@var{local-address}はlistenするアドレスである。これは@var{family}、@var{host}、@var{service}をオーバーライドするので、これらを指定しないこともできる。"
 
 #. type: item
 #: original_texis/processes.texi:2533
@@ -4165,39 +4123,37 @@ msgstr ":remote @var{remote-address}"
 #. type: table
 #: original_texis/processes.texi:2537
 msgid "For a connection, @var{remote-address} is the address to connect to.  It overrides @var{family}, @var{host} and @var{service}, so you might as well not specify them."
-msgstr "接続プロセスでは、@var{remote-address}は接続先のアドレスである。これは@var{family}、@var{host}、@var{service}をオーバーライドするので、これらを指定しないこともできる。"
+msgstr "接続プロセスでは@var{remote-address}は接続先のアドレス。これは@var{family}、@var{host}、@var{service}をオーバーライドするので、これらを指定しないこともできる。"
 
 #. type: table
 #: original_texis/processes.texi:2540
 msgid "For a datagram server, @var{remote-address} specifies the initial setting of the remote datagram address."
-msgstr "データグラムサーバーでは、@var{remote-address}はリモートデータグラムアドレスの初期セッティングを指定する。"
+msgstr "データグラムサーバーでは@var{remote-address}はリモートデータグラムアドレスの初期セッティングを指定する。"
 
 #. type: table
 #: original_texis/processes.texi:2543
 msgid "The format of @var{local-address} or @var{remote-address} depends on the address family:"
-msgstr "@var{local-address}と@var{remote-address}のフォーマットは、そのアドレスファミリーに依存する:"
+msgstr "@var{local-address}と@var{remote-address}のフォーマットはアドレスファミリーに依存する:"
 
 #. type: itemize
 #: original_texis/processes.texi:2551
 msgid "An IPv4 address is represented as a five-element vector of four 8-bit integers and one 16-bit integer @code{[@var{a} @var{b} @var{c} @var{d} @var{p}]} corresponding to numeric IPv4 address @var{a}.@var{b}.@var{c}.@var{d} and port number @var{p}."
-msgstr "IPv4アドレスは、4つの8ビット整数と1つの16ビット整数からなる5要素のベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{p}]}で表され、それぞれ数値的なIPv4アドレス@var{a}.@var{b}.@var{c}.@var{d}、およびポート番号@var{p}に対応する。"
+msgstr "IPv4アドレスは4つの8ビット整数と1つの16ビット整数からなる5要素のベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{p}]}で表され、それぞれ数値的なIPv4アドレス@var{a}.@var{b}.@var{c}.@var{d}、およびポート番号@var{p}に対応する。"
 
 #. type: itemize
 #: original_texis/processes.texi:2558
 msgid "An IPv6 address is represented as a nine-element vector of 16-bit integers @code{[@var{a} @var{b} @var{c} @var{d} @var{e} @var{f} @var{g} @var{h} @var{p}]} corresponding to numeric IPv6 address @var{a}:@var{b}:@var{c}:@var{d}:@var{e}:@var{f}:@var{g}:@var{h} and port number @var{p}."
-msgstr "IPv6アドレスは、9要素の16ビット整数ベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{e} @var{f} @var{g} @var{h} @var{p}]}で表され、それぞれ数値的なIPv６アドレス@var{a}:@var{b}:@var{c}:@var{d}:@var{e}:@var{f}:@var{g}:@var{h}、およびポート番号@var{p}に対応する。"
+msgstr "IPv6アドレスは9要素の16ビット整数ベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{e} @var{f} @var{g} @var{h} @var{p}]}で表され、それぞれ数値的なIPv６アドレス@var{a}:@var{b}:@var{c}:@var{d}:@var{e}:@var{f}:@var{g}:@var{h}、およびポート番号@var{p}に対応する。"
 
 #. type: itemize
 #: original_texis/processes.texi:2562
 msgid "A local address is represented as a string, which specifies the address in the local address space."
-msgstr "ローカルアドレスは、ローカルアドレススペース内でアドレスを指定する文字列として表される。"
+msgstr "ローカルアドレスはローカルアドレススペース内でアドレスを指定する文字列として表される。"
 
 #. type: itemize
 #: original_texis/processes.texi:2570
-#, fuzzy
-#| msgid "An ``unsupported family'' address is represented by a cons @code{(@var{f} . @var{av})}, where @var{f} is the family number and @var{av} is a vector specifying the socket address using one element per address data byte.  Do not rely on this format in portable code, as it may depend on implementation defined constants, data sizes, and data structure alignment."
 msgid "An unsupported-family address is represented by a cons @code{(@var{f} . @var{av})}, where @var{f} is the family number and @var{av} is a vector specifying the socket address using one element per address data byte.  Do not rely on this format in portable code, as it may depend on implementation defined constants, data sizes, and data structure alignment."
-msgstr "``未サポートファミリー(unsupported family)''のアドレスは、コンスセル@code{(@var{f} . @var{av})}で表される。ここで@var{f}はファミリー名、@var{av}はアドレスデータバイトごとに1つの要素を使用する、ソケットアドレスを指定するベクターである。可搬性のあるコードでこのフォーマットを信頼してはならない。これは実装定義の定数、データサイズ、データ構造のアライメントに依存する可能性があるからだ。"
+msgstr "未サポートファミリー(unsupported family)のアドレスはコンスセル@code{(@var{f} . @var{av})}で表される。ここで@var{f}はファミリー名、@var{av}はアドレスデータバイトごとに1つの要素を使用するソケットアドレスを指定するベクター。可搬性のあるコードでこのフォーマットを信頼してはならない。これは実装定義の定数、データサイズ、データ構造のアライメントに依存する可能性があるからだ。"
 
 #. type: item
 #: original_texis/processes.texi:2572
@@ -4208,19 +4164,17 @@ msgstr ":nowait @var{bool}"
 #. type: table
 #: original_texis/processes.texi:2580
 msgid "If @var{bool} is non-@code{nil} for a stream connection, return without waiting for the connection to complete.  When the connection succeeds or fails, Emacs will call the sentinel function, with a second argument matching @code{\"open\"} (if successful) or @code{\"failed\"}.  The default is to block, so that @code{make-network-process} does not return until the connection has succeeded or failed."
-msgstr "ストリーム接続にたいして@var{bool}が非@code{nil}なら、その接続の完了を待機せずにリターンする。接続が成功または失敗時には、Emacsは@code{\"open\"}(成功時)、または@code{\"failed\"}(失敗時)にマッチするような第2引数により、センチネル関数を呼び出すだろう。デフォルトではwaitせずにblockするので、@code{make-network-process}はその接続が成功または失敗するまで、リターンしない。"
+msgstr "ストリーム接続にたいして@var{bool}が非@code{nil}なら、その接続の完了を待機せずにリターンする。接続の成功や失敗時には、Emacsは@code{\"open\"} (成功時)、または@code{\"failed\"} (失敗時)にマッチするような第2引数によりセンチネル関数を呼び出すだろう。デフォルトではwaitせずにblockするので、@code{make-network-process}はその接続が成功または失敗するまでリターンしない。"
 
 #. type: table
 #: original_texis/processes.texi:2584
-#, fuzzy
-#| msgid "If @var{stopped} is non-@code{nil}, start the network connection or server in the ``stopped'' state."
 msgid "If @var{stopped} is non-@code{nil}, start the network connection or server in the stopped state."
-msgstr "@var{stopped}が非@code{nil}なら、``stopped''の状態でネットワーク接続、またはサーバーを開始する。"
+msgstr "@var{stopped}が非@code{nil}ならstopped(停止)の状態でネットワーク接続、またはサーバーを開始する。"
 
 #. type: table
 #: original_texis/processes.texi:2593
 msgid "Use @var{coding} as the coding system for this process.  To specify different coding systems for decoding data from the connection and for encoding data sent to it, specify @code{(@var{decoding} .  @var{encoding})} for @var{coding}."
-msgstr "このプロセスにたいするコーディングシステムとして、@var{coding}を使用する。接続からのデータのデコード、および接続への送信データのエンコードに異なるコーディングシステムを指定するには、@var{coding}にたいして@code{(@var{decoding} .  @var{encoding})}と指定する。"
+msgstr "このプロセスにたいするコーディングシステムとして@var{coding}を使用する。接続からのデータのデコードおよび接続への送信データのエンコードに異なるコーディングシステムを指定するには、@var{coding}にたいして@code{(@var{decoding} .  @var{encoding})}と指定する。"
 
 #. type: table
 #: original_texis/processes.texi:2596
@@ -4241,7 +4195,7 @@ msgstr ":filter-multibyte @var{multibyte}"
 #. type: table
 #: original_texis/processes.texi:2608
 msgid "If @var{multibyte} is non-@code{nil}, strings given to the process filter are multibyte, otherwise they are unibyte.  The default is the default value of @code{enable-multibyte-characters}."
-msgstr "@var{multibyte}が非@code{nil}ならマルチバイト文字列、それ以外ならユニバイト文字列がプロセスフィルターに与えられるデフォルトは、@code{enable-multibyte-characters}のデフォルト値である。"
+msgstr "@var{multibyte}が非@code{nil}ならマルチバイト文字列、それ以外ならユニバイト文字列がプロセスフィルターに与えられるデフォルトは@code{enable-multibyte-characters}のデフォルト値。"
 
 #. type: table
 #: original_texis/processes.texi:2611
@@ -4257,7 +4211,7 @@ msgstr ":log @var{log}"
 #. type: table
 #: original_texis/processes.texi:2620
 msgid "Initialize the log function of a server process to @var{log}.  The log function is called each time the server accepts a network connection from a client.  The arguments passed to the log function are @var{server}, @var{connection}, and @var{message}; where @var{server} is the server process, @var{connection} is the new process for the connection, and @var{message} is a string describing what has happened."
-msgstr "サーバープロセスのlog関数を、@var{log}に初期化する。サーバーがクライアントからネットワーク接続をacceptするたびに、そのlog関数が呼び出される。log関数に渡される引数は@var{server}、@var{connection}、@var{message}である。ここで@var{server}はサーバープロセス、@var{connection}はその接続にたいする新たなプロセス、@var{message}は何が発生したかを説明する文字列である。"
+msgstr "サーバープロセスのlog関数を@var{log}に初期化する。サーバーがクライアントからネットワーク接続をacceptするたびにそのlog関数が呼び出される。log関数に渡される引数は@var{server}、@var{connection}、@var{message}。ここで@var{server}はサーバープロセス、@var{connection}はその接続にたいする新たなプロセス、@var{message}は何が発生したかを説明する文字列。"
 
 #. type: item
 #: original_texis/processes.texi:2621 original_texis/processes.texi:2903
@@ -4279,12 +4233,12 @@ msgstr "Network Options"
 #. type: Plain text
 #: original_texis/processes.texi:2635
 msgid "The following network options can be specified when you create a network process.  Except for @code{:reuseaddr}, you can also set or modify these options later, using @code{set-network-process-option}."
-msgstr "以下のネットワークオプションは、ネットワークプロセス作成時に指定できます。@code{:reuseaddr}を除き、@code{set-network-process-option}を使用して、これらのオプションを後からセットまたは変更することもできます。"
+msgstr "以下のネットワークオプションはネットワークプロセス作成時に指定できます。@code{:reuseaddr}を除き、@code{set-network-process-option}を使用してこれらのオプションを後からセットや変更することもできます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2640
 msgid "For a server process, the options specified with @code{make-network-process} are not inherited by the client connections, so you will need to set the necessary options for each child connection as it is created."
-msgstr "サーバープロセスにたいしては、@code{make-network-process}で指定されたオプションはクライアントに継承されないので、子接続が作成されるたびに、必要なオプションをセットする必要があるでしょう。"
+msgstr "サーバープロセスにたいしては、@code{make-network-process}で指定されたオプションはクライアントに継承されないので、子接続が作成されるたびに必要なオプションをセットする必要があるでしょう。"
 
 #. type: item
 #: original_texis/processes.texi:2642
@@ -4295,12 +4249,12 @@ msgstr ":bindtodevice @var{device-name}"
 #. type: table
 #: original_texis/processes.texi:2647
 msgid "If @var{device-name} is a non-empty string identifying a network interface name (see @code{network-interface-list}), only handle packets received on that interface.  If @var{device-name} is @code{nil} (the default), handle packets received on any interface."
-msgstr "@var{device-name}が空でないネットワークインターフェースを指定する文字列なら、そのインターフェースで受信したパケットだけを処理する。@var{device-name}が@code{nil}(デフォルト)なら、任意のインターフェースが受信したパケットを処理する。"
+msgstr "@var{device-name}がネットワークインターフェースを指定する空でない文字列なら、そのインターフェースで受信したパケットだけを処理する。@var{device-name}が@code{nil}(デフォルト)なら任意のインターフェースが受信したパケットを処理する。"
 
 #. type: table
 #: original_texis/processes.texi:2649
 msgid "Using this option may require special privileges on some systems."
-msgstr "このオプションの使用にたいして、特別な特権を要求するシステムがいくつかあるかもしれない。"
+msgstr "このオプションの使用にたいして特別な特権を要求するシステムがいくつかあるかもしれない。"
 
 #. type: item
 #: original_texis/processes.texi:2650
@@ -4311,7 +4265,7 @@ msgstr ":broadcast @var{broadcast-flag}"
 #. type: table
 #: original_texis/processes.texi:2655
 msgid "If @var{broadcast-flag} is non-@code{nil} for a datagram process, the process will receive datagram packet sent to a broadcast address, and be able to send packets to a broadcast address.  This is ignored for a stream connection."
-msgstr "データグラムプロセスにたいして@var{broadcast-flag}が非@code{nil}なら、そのプロセスはブロードキャストアドレスに送信されたデータグラムパケットを受信し、ブロードキャストアドレスにパケットを送信できるだろう。これはストリーム接続では無視される。"
+msgstr "データグラムプロセスにたいして@var{broadcast-flag}が非@code{nil}なら、そのプロセスはブロードキャストアドレスに送信されたデータグラムパケットを受信して、ブロードキャストアドレスにパケットを送信できるだろう。これはストリーム接続では無視される。"
 
 #. type: item
 #: original_texis/processes.texi:2656
@@ -4322,7 +4276,7 @@ msgstr ":dontroute @var{dontroute-flag}"
 #. type: table
 #: original_texis/processes.texi:2659
 msgid "If @var{dontroute-flag} is non-@code{nil}, the process can only send to hosts on the same network as the local host."
-msgstr "@var{dontroute-flag}が非@code{nil}なら、プロセスはローカルホストと同一ネットワーク上のホストだけに送信することができる。"
+msgstr "@var{dontroute-flag}が非@code{nil}ならプロセスはローカルホストと同一ネットワーク上のホストだけに送信することができる。"
 
 #. type: item
 #: original_texis/processes.texi:2660
@@ -4344,7 +4298,7 @@ msgstr ":linger @var{linger-arg}"
 #. type: table
 #: original_texis/processes.texi:2672
 msgid "If @var{linger-arg} is non-@code{nil}, wait for successful transmission of all queued packets on the connection before it is deleted (see @code{delete-process}).  If @var{linger-arg} is an integer, it specifies the maximum time in seconds to wait for queued packets to be sent before closing the connection.  The default is @code{nil}, which means to discard unsent queued packets when the process is deleted."
-msgstr "@var{linger-arg}が非@code{nil}なら、接続を削除(@code{delete-process}を参照)する前にキューされたすべてのパケットの送信が成功するまで待機する。@var{linger-arg}が整数なら、接続クローズ前のキュー済みパケット送信のために待機する、最大の秒数を指定する。デフォルトは@code{nil}で、これはプロセス削除時に未送信のキュー済みパケットを破棄することを意味する。"
+msgstr "@var{linger-arg}が非@code{nil}なら、接続を削除(@code{delete-process}を参照)する前にキューされたすべてのパケットの送信が成功するまで待機する。@var{linger-arg}が整数なら、接続クローズ前のキュー済みパケット送信のために待機する最大の秒数を指定する。デフォルトは@code{nil}で、これはプロセス削除時に未送信のキュー済みパケットを破棄することを意味する。"
 
 #. type: item
 #: original_texis/processes.texi:2674
@@ -4355,7 +4309,7 @@ msgstr ":oobinline @var{oobinline-flag}"
 #. type: table
 #: original_texis/processes.texi:2678
 msgid "If @var{oobinline-flag} is non-@code{nil} for a stream connection, receive out-of-band data in the normal data stream.  Otherwise, ignore out-of-band data."
-msgstr "ストリーム接続にたいして@var{oobinline-flag}が非@code{nil}なら、通常のデータストリーム内の帯域外(out-of-band)データを受信し、それ以外なら帯域外データは破棄する。"
+msgstr "ストリーム接続にたいして@var{oobinline-flag}が非@code{nil}なら、通常のデータストリーム内の帯域外(out-of-band)データを受信して、それ以外なら帯域外データは破棄する。"
 
 #. type: item
 #: original_texis/processes.texi:2679
@@ -4366,7 +4320,7 @@ msgstr ":priority @var{priority}"
 #. type: table
 #: original_texis/processes.texi:2686
 msgid "Set the priority for packets sent on this connection to the integer @var{priority}.  The interpretation of this number is protocol specific; such as setting the TOS (type of service) field on IP packets sent on this connection.  It may also have system dependent effects, such as selecting a specific output queue on the network interface."
-msgstr "この接続で送信するパケットの優先順位を、整数@var{priority}にセットする。たとえばこの接続で送信するIPパケットのTOS(type of service)フィールドにセットする等、この数字の解釈はプロトコル固有である。また、そのネットワークインターフェース上で特定の出力キューを選択する等、これにはシステム依存の効果もある。"
+msgstr "この接続で送信するパケットの優先順位を整数@var{priority}にセットする。たとえばこの接続で送信するIPパケットのTOS(type of service)フィールドにセットする等、この数字の解釈はプロトコルに固有である。またそのネットワークインターフェース上で特定の出力キューを選択する等、これにはシステム依存の効果もある。"
 
 #. type: item
 #: original_texis/processes.texi:2687
@@ -4377,7 +4331,7 @@ msgstr ":reuseaddr @var{reuseaddr-flag}"
 #. type: table
 #: original_texis/processes.texi:2695
 msgid "If @var{reuseaddr-flag} is non-@code{nil} (the default) for a stream server process, allow this server to reuse a specific port number (see @code{:service}), unless another process on this host is already listening on that port.  If @var{reuseaddr-flag} is @code{nil}, there may be a period of time after the last use of that port (by any process on the host) where it is not possible to make a new server on that port."
-msgstr "ストリームプロセスサーバーにたいして@var{reuseaddr-flag}が非@code{nil}(デフォルト)なら、そのホスト上の別プロセスがそのポートですでにlistenしていなければ、このサーバーは特定のポート番号(@code{:service}を参照)を再使用できる。@var{reuseaddr-flag}が@code{nil}なら、(そのホスト上の任意のプロセスが)そのポートを最後に使用した後、そのポート上で新たなサーバーを作成するのが不可能となるような、一定の期間が存在するかもしれない。"
+msgstr "ストリームプロセスサーバーにたいして@var{reuseaddr-flag}が非@code{nil} (デフォルト)なら、そのホスト上の別プロセスがそのポートですでにlistenしていなければ、このサーバーは特定のポート番号(@code{:service}を参照)を再使用できる。@var{reuseaddr-flag}が@code{nil}なら、(そのホスト上の任意のプロセスが)そのポートを最後に使用した後、そのポート上で新たなサーバーを作成するのが不可能となるような一定の期間が存在するかもしれない。"
 
 #. type: defun
 #: original_texis/processes.texi:2697
@@ -4388,12 +4342,12 @@ msgstr "set-network-process-option process option value &optional no-error"
 #. type: defun
 #: original_texis/processes.texi:2704
 msgid "This function sets or modifies a network option for network process @var{process}.  The accepted options and values are as for @code{make-network-process}.  If @var{no-error} is non-@code{nil}, this function returns @code{nil} instead of signaling an error if @var{option} is not a supported option.  If the function successfully completes, it returns @code{t}."
-msgstr "この関数はネットワークプロセス@var{process}にたいして、ネットワークオプションのセットまたは変更を行う。指定できるオプションは@code{make-network-process}と同様。@var{no-error}が非@code{nil}なら、@var{option}がサポートされないオプションの場合に、この関数はエラーをシグナルせずに、@code{nil}をリターンする。この関数が成功裏に完了したら、@code{t}をリターンする。"
+msgstr "この関数はネットワークプロセス@var{process}にたいしてネットワークオプションのセットや変更を行う。指定できるオプションは@code{make-network-process}と同様。@var{no-error}が非@code{nil}なら、@var{option}がサポートされないオプションの場合に、この関数はエラーをシグナルせずに@code{nil}をリターンする。この関数が成功裏に完了したら@code{t}をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:2707
 msgid "The current setting of an option is available via the @code{process-contact} function."
-msgstr "あるオプションのカレントのセッティングは、@code{process-contact}関数を通じて利用できる。"
+msgstr "あるオプションのカレントのセッティングは@code{process-contact}関数を通じて利用できる。"
 
 #. type: node
 #: original_texis/processes.texi:2709
@@ -4410,7 +4364,7 @@ msgstr "Testing Availability of Network Features"
 #. type: Plain text
 #: original_texis/processes.texi:2714
 msgid "To test for the availability of a given network feature, use @code{featurep} like this:"
-msgstr "与えられネットワーク機能が利用可能かテストするためには、以下のように@code{featurep}を使用します:"
+msgstr "与えられネットワーク機能が利用可能かテストするためには以下のように@code{featurep}を使用します:"
 
 #. type: example
 #: original_texis/processes.texi:2717
@@ -4421,7 +4375,7 @@ msgstr "(featurep 'make-network-process '(@var{keyword} @var{value}))\n"
 #. type: Plain text
 #: original_texis/processes.texi:2724
 msgid "The result of this form is @code{t} if it works to specify @var{keyword} with value @var{value} in @code{make-network-process}.  Here are some of the @var{keyword}---@var{value} pairs you can test in this way."
-msgstr "このフォームの結果は、@code{make-network-process}内で@var{keyword}に値@var{value}を指定することが機能するなら、@code{t}になります。以下は、この方法でテストできる@var{keyword}/@var{value}ペアーのいくつかです。"
+msgstr "このフォームの結果は@code{make-network-process}内で@var{keyword}に値@var{value}を指定することが機能するなら@code{t}になります。以下はこの方法でテストできる@var{keyword}/@var{value}ペアーのいくつかです。"
 
 #. type: item
 #: original_texis/processes.texi:2726
@@ -4492,7 +4446,7 @@ msgstr "(featurep 'make-network-process '@var{keyword})\n"
 #. type: Plain text
 #: original_texis/processes.texi:2750
 msgid "The accepted @var{keyword} values are @code{:bindtodevice}, etc.  For the complete list, @pxref{Network Options}.  This form returns non-@code{nil} if that particular network option is supported by @code{make-network-process} (or @code{set-network-process-option})."
-msgstr "指定できる@var{keyword}の値は@code{:bindtodevice}等です。完全なリストは@ref{Network Options}を参照してください。このフォームは、@code{make-network-process}(または@code{set-network-process-option})が特定のネットワークオプションをサポートしていれば、非@code{nil}をリターンする。"
+msgstr "指定できる@var{keyword}の値は@code{:bindtodevice}等です。完全なリストは@ref{Network Options}を参照してください。このフォームは@code{make-network-process} (または@code{set-network-process-option})が特定のネットワークオプションをサポートしていれば非@code{nil}をリターンします。"
 
 #. type: section
 #: original_texis/processes.texi:2752
@@ -4503,7 +4457,7 @@ msgstr "Misc Network Facilities"
 #. type: Plain text
 #: original_texis/processes.texi:2757
 msgid "These additional functions are useful for creating and operating on network connections.  Note that they are supported only on some systems."
-msgstr "以下の追加の関数は、ネットワーク接続の作成や操作に有用です。これらは、いくつかのシステムでのみサポートされることに注意してください。"
+msgstr "以下の追加の関数はネットワーク接続の作成や操作に有用です。これらはいくつかのシステムでのみサポートされることに注意してください。"
 
 #. type: defun
 #: original_texis/processes.texi:2758
@@ -4514,7 +4468,7 @@ msgstr "network-interface-list"
 #. type: defun
 #: original_texis/processes.texi:2764
 msgid "This function returns a list describing the network interfaces of the machine you are using.  The value is an alist whose elements have the form @code{(@var{name} . @var{address})}.  @var{address} has the same form as the @var{local-address} and @var{remote-address} arguments to @code{make-network-process}."
-msgstr "この関数は、使用しているマシン上のネットワークインターフェースを記述する、リストをリターンする。値は、要素が@code{(@var{name} . @var{address})}という形式をもつようなalistである。@var{address}は、@code{make-network-process}の引数@var{local-address}および@var{remote-address}と同じ形式をもつ。"
+msgstr "この関数は使用しているマシン上のネットワークインターフェースを記述するリストをリターンする。値は要素が@code{(@var{name} . @var{address})}という形式をもつようなalist。@var{address}は@code{make-network-process}の引数@var{local-address}や@var{remote-address}と同じ形式。"
 
 #. type: defun
 #: original_texis/processes.texi:2766
@@ -4525,7 +4479,7 @@ msgstr "network-interface-info ifname"
 #. type: defun
 #: original_texis/processes.texi:2770
 msgid "This function returns information about the network interface named @var{ifname}.  The value is a list of the form @code{(@var{addr} @var{bcast} @var{netmask} @var{hwaddr} @var{flags})}."
-msgstr "この関数は、@var{ifname}という名前のネットワークインターフェースに関する情報をリターンする。値は、@code{(@var{addr} @var{bcast} @var{netmask} @var{hwaddr} @var{flags})}という形式をもつリストである。"
+msgstr "この関数は@var{ifname}という名前のネットワークインターフェースに関する情報をリターンする。値は@code{(@var{addr} @var{bcast} @var{netmask} @var{hwaddr} @var{flags})}という形式をもつリスト。"
 
 #. type: item
 #: original_texis/processes.texi:2772
@@ -4591,22 +4545,22 @@ msgstr "format-network-address address &optional omit-port"
 #. type: defun
 #: original_texis/processes.texi:2788
 msgid "This function converts the Lisp representation of a network address to a string."
-msgstr "この関数は、ネットワークアドレスのLisp表現を文字列に変換する。"
+msgstr "この関数はネットワークアドレスのLisp表現を文字列に変換する。"
 
 #. type: defun
 #: original_texis/processes.texi:2793
 msgid "A five-element vector @code{[@var{a} @var{b} @var{c} @var{d} @var{p}]} represents an IPv4 address @var{a}.@var{b}.@var{c}.@var{d} and port number @var{p}.  @code{format-network-address} converts that to the string @code{\"@var{a}.@var{b}.@var{c}.@var{d}:@var{p}\"}."
-msgstr "5要素のベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{p}]}はIPv4アドレス@var{a}.@var{b}.@var{c}.@var{d}、およびポート番号@var{p}を表す。@code{format-network-address}はこれを、文字列@code{\\\"@var{a}.@var{b}.@var{c}.@var{d}:@var{p}\\\"}に変換する。"
+msgstr "5要素のベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{p}]}はIPv4アドレス@var{a}.@var{b}.@var{c}.@var{d}、およびポート番号@var{p}を表す。@code{format-network-address}はこれを文字列@code{\\\"@var{a}.@var{b}.@var{c}.@var{d}:@var{p}\\\"}に変換する。"
 
 #. type: defun
 #: original_texis/processes.texi:2799
 msgid "A nine-element vector @code{[@var{a} @var{b} @var{c} @var{d} @var{e} @var{f} @var{g} @var{h} @var{p}]} represents an IPv6 address along with a port number.  @code{format-network-address} converts that to the string @code{\"[@var{a}:@var{b}:@var{c}:@var{d}:@var{e}:@var{f}:@var{g}:@var{h}]:@var{p}\"}."
-msgstr "9要素のベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{e} @var{f} @var{g} @var{h} @var{p}]}はポート番号とともに、IPv6アドレスを表す。@code{format-network-address}はこれを、文字列@code{\"[@var{a}:@var{b}:@var{c}:@var{d}:@var{e}:@var{f}:@var{g}:@var{h}]:@var{p}\"}に変換する。"
+msgstr "9要素のベクター@code{[@var{a} @var{b} @var{c} @var{d} @var{e} @var{f} @var{g} @var{h} @var{p}]}はポート番号とともにIPv6アドレスを表す。@code{format-network-address}はこれを文字列@code{\"[@var{a}:@var{b}:@var{c}:@var{d}:@var{e}:@var{f}:@var{g}:@var{h}]:@var{p}\"}に変換する。"
 
 #. type: defun
 #: original_texis/processes.texi:2803
 msgid "If the vector does not include the port number, @var{p}, or if @var{omit-port} is non-@code{nil}, the result does not include the @code{:@var{p}} suffix."
-msgstr "このベクターにポート番号が含まれない、または@var{omit-port}が非@code{nil}なら、結果にサフィックス@code{:@var{p}}は含まれない。"
+msgstr "このベクターにポート番号が含まれない、または@var{omit-port}が非@code{nil}なら結果にサフィックス@code{:@var{p}}は含まれない。"
 
 #. type: section
 #: original_texis/processes.texi:2806
@@ -4635,27 +4589,27 @@ msgstr "serial connections"
 #. type: Plain text
 #: original_texis/processes.texi:2814
 msgid "Emacs can communicate with serial ports.  For interactive use, @kbd{M-x serial-term} opens a terminal window.  In a Lisp program, @code{make-serial-process} creates a process object."
-msgstr "Emacsはシリアルポートと対話できます。インタラクティブな使用、@kbd{M-x serial-term}にたいしては端末ウィンドウをオープンし、Lispプログラム@code{make-serial-process}にたいしてはプロセスオブジェクトを作成します。"
+msgstr "Emacsはシリアルポートと対話できます。インタラクティブな@kbd{M-x serial-term}の使用にたいしては端末ウィンドウをオープンして、Lispプログラム@code{make-serial-process}にたいしてはプロセスオブジェクトを作成します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2820
 msgid "The serial port can be configured at run-time, without having to close and re-open it.  The function @code{serial-process-configure} lets you change the speed, bytesize, and other parameters.  In a terminal window created by @code{serial-term}, you can click on the mode line for configuration."
-msgstr "シリアルポートは、クローズと再オープンなして、実行時に設定することができます。関数@code{serial-process-configure}によりスピード、バイトサイズ、およびその他のパラメーターを変更できます。@code{serial-term}で作成された端末ウィンドウでは、モードラインをクリックして設定を行うことができます。"
+msgstr "シリアルポートはクローズと再オープンなしで実行時に設定することができます。関数@code{serial-process-configure}によりスピード、バイトサイズ、およびその他のパラメーターを変更できます。@code{serial-term}で作成された端末ウィンドウではモードラインをクリックして設定を行うことができます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2829
 msgid "A serial connection is represented by a process object, which can be used in a similar way to a subprocess or network process.  You can send and receive data, and configure the serial port.  A serial process object has no process ID, however, and you can't send signals to it, and the status codes are different from other types of processes.  @code{delete-process} on the process object or @code{kill-buffer} on the process buffer close the connection, but this does not affect the device connected to the serial port."
-msgstr "シリアル接続はプロセスオブジェクトとして表され、サブプロセスやネットワークプロセスと同様の方法で使用できます。これによりデータの送受信や、シリアルポートの設定ができます。しかし、シリアルプロセスオブジェクトにプロセスIDはありません。それにたいしてシグナルの送信はできず、ステータスコードは他のタイプのプロセスオブジェクトとは異なります。プロセスオブジェクトへの@code{delete-process}、またはプロセスバッファーにたいする@code{kill-buffer}は接続をクローズしますが、そのシリアルポートに接続されたデバイスに影響はありません。"
+msgstr "シリアル接続はプロセスオブジェクトとして表されて、サブプロセスやネットワークプロセスと同様の方法で使用できます。これによりデータの送受信やシリアルポートの設定ができます。しかしシリアルプロセスオブジェクトにプロセスIDはありません。それにたいしてシグナルの送信はできずステータスコードは他のタイプのプロセスオブジェクトとは異なります。プロセスオブジェクトへの@code{delete-process}、またはプロセスバッファーにたいする@code{kill-buffer}は接続をクローズしますが、そのシリアルポートに接続されたデバイスに影響はありません。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2832
 msgid "The function @code{process-type} returns the symbol @code{serial} for a process object representing a serial port connection."
-msgstr "関数@code{process-type}は、シリアルポート接続を表すプロセスオブジェクトにたいする、シンボル@code{serial}をリターンします。"
+msgstr "関数@code{process-type}はシリアルポート接続を表すプロセスオブジェクトにたいするシンボル@code{serial}をリターンします。"
 
 #. type: Plain text
 #: original_texis/processes.texi:2834
 msgid "Serial ports are available on GNU/Linux, Unix, and MS Windows systems."
-msgstr "シリアルポートはGNU/Linux、Unix、およびMS Windowsのシステムで利用できます。"
+msgstr "シリアルポートはGNU/LinuxやUnix、そしてMS Windowsのシステムで利用できます。"
 
 #. type: deffn
 #: original_texis/processes.texi:2835
@@ -4666,12 +4620,12 @@ msgstr "Command serial-term port speed"
 #. type: deffn
 #: original_texis/processes.texi:2841
 msgid "Start a terminal-emulator for a serial port in a new buffer.  @var{port} is the name of the serial port to connect to.  For example, this could be @file{/dev/ttyS0} on Unix.  On MS Windows, this could be @file{COM1}, or @file{\\\\.\\COM10} (double the backslashes in Lisp strings)."
-msgstr "新たなバッファー内で、シリアルポートにたいする端末エミュレーターを開始する。@var{port}は、接続先のシリアルポートの名前である。たとえばUnixでは、これは@file{/dev/ttyS0}のようになるだろう。MS Windowsでは、@file{COM1}や@file{\\\\.\\COM10}のようになるかもしれない(Lisp文字列ではバックスラッシュは2重にする)。"
+msgstr "新たなバッファー内でシリアルポートにたいする端末エミュレーターを開始する。@var{port}は接続先のシリアルポートの名前。たとえばUnixではこれは@file{/dev/ttyS0}のようになるだろう。MS Windowsでは@file{COM1}や@file{\\\\.\\COM10}のようになるかもしれない(Lisp文字列ではバックスラッシュは2重にすること)。"
 
 #. type: deffn
 #: original_texis/processes.texi:2848
 msgid "@var{speed} is the speed of the serial port in bits per second.  9600 is a common value.  The buffer is in Term mode; see @ref{Term Mode,,, emacs, The GNU Emacs Manual}, for the commands to use in that buffer.  You can change the speed and the configuration in the mode line menu."
-msgstr "@var{speed}は、ビット毎秒でのシリアルポートのスピードである。一般的な値は9600。そのバッファーはTermモードになる。このバッファーで使用するコマンドについては、@ref{Term Mode,,, emacs, The GNU Emacs Manual}を参照のこと。モードラインメニューから、スピードと設定を変更できる。"
+msgstr "@var{speed}はビット毎秒でのシリアルポートのスピード。一般的な値は9600。そのバッファーはTermモードになる。このバッファーで使用するコマンドについては@ref{Term Mode,,, emacs, The GNU Emacs Manual}を参照のこと。モードラインメニューからスピードと設定を変更できる。"
 
 #. type: defun
 #: original_texis/processes.texi:2850
@@ -4682,7 +4636,7 @@ msgstr "make-serial-process &rest args"
 #. type: defun
 #: original_texis/processes.texi:2854
 msgid "This function creates a process and a buffer.  Arguments are specified as keyword/argument pairs.  Here's the list of the meaningful keywords, with the first two (@var{port} and @var{speed}) being mandatory:"
-msgstr "この関数は、プロセスとバッファーを作成する。引数は、キーワード/引数ペアーで指定する。以下は意味のあるキーワードのリストで、最初の2つ(@var{port}と@var{speed})は必須である:"
+msgstr "この関数はプロセスとバッファーを作成する。引数はキーワード/引数ペアーで指定する。以下は意味のあるキーワードのリストで、最初の2つ(@var{port}と@var{speed})は必須:"
 
 #. type: itemx
 #: original_texis/processes.texi:2856 original_texis/processes.texi:2941
@@ -4693,7 +4647,7 @@ msgstr ":port @var{port}"
 #. type: table
 #: original_texis/processes.texi:2861
 msgid "This is the name of the serial port.  On Unix and GNU systems, this is a file name such as @file{/dev/ttyS0}.  On Windows, this could be @file{COM1}, or @file{\\\\.\\COM10} for ports higher than @file{COM9} (double the backslashes in Lisp strings)."
-msgstr "これは、シリアルポートの名前である。UnixおよびGNUシステムでは@file{/dev/ttyS0}のようなファイル名、Windowsでは@file{COM1}、@file{COM9}より高位のポートでは@file{\\\\.\\COM10}のようになるかもしれない(Lisp文字列ではバックスラッシュは2重にする)。"
+msgstr "これはシリアルポートの名前。UnixやGNUシステムでは@file{/dev/ttyS0}のようなファイル名、Windowsでは@file{COM1}、@file{COM9}より高位のポートでは@file{\\\\.\\COM10}のようになるかもしれない(Lisp文字列ではバックスラッシュは2重にすること)。"
 
 #. type: item
 #: original_texis/processes.texi:2862 original_texis/processes.texi:2946
@@ -4704,27 +4658,27 @@ msgstr ":speed @var{speed}"
 #. type: table
 #: original_texis/processes.texi:2866
 msgid "The speed of the serial port in bits per second.  This function calls @code{serial-process-configure} to handle the speed; see the following documentation of that function for more details."
-msgstr "ビット毎秒でのシリアルポートのスピード。この関数は@code{serial-process-configure}を呼び出すことにより、スピードを操作する。この関数の更なる詳細については、以降のドキュメントを参照されたい。"
+msgstr "ビット毎秒でのシリアルポートのスピード。この関数は@code{serial-process-configure}を呼び出すことによりスピードを操作する。この関数の更なる詳細については以降のドキュメントを参照のこと。"
 
 #. type: table
 #: original_texis/processes.texi:2870
 msgid "The name of the process.  If @var{name} is not given, @var{port} will serve as the process name as well."
-msgstr "そのプロセスの名前。@var{name}が与えられなければ、@var{port}が同様にプロセス名の役目を果たす。"
+msgstr "そのプロセスの名前。@var{name}が与えられなければ@var{port}がプロセス名の役目も同様に果たす。"
 
 #. type: table
 #: original_texis/processes.texi:2878
 msgid "The buffer to associate with the process.  The value can be either a buffer or a string that names a buffer.  Process output goes at the end of that buffer, unless you specify an output stream or filter function to handle the output.  If @var{buffer} is not given, the process buffer's name is taken from the value of the @code{:name} keyword."
-msgstr "そのプロセスに関連付けられたバッファー。値はバッファー、またはそれがバッファーの名前であるような文字列かもしれない。出力を処理するために出力ストリーム、あるいはフィルター関数を指定しなければ、プロセス出力はそのバッファーの終端に出力される。@var{buffer}が与えられなければ、そのプロセスバッファーの名前は、@code{:name}キーワードから取得される。"
+msgstr "そのプロセスに関連付けられたバッファー。値はバッファー、またはそれがバッファーの名前であるような文字列かもしれない。出力を処理するために出力ストリームやフィルター関数を指定しなければ、プロセス出力はそのバッファーの終端に出力される。@var{buffer}が与えられなければ、そのプロセスバッファーの名前は@code{:name}キーワードから取得される。"
 
 #. type: table
 #: original_texis/processes.texi:2885
 msgid "If @var{coding} is a symbol, it specifies the coding system used for both reading and writing for this process.  If @var{coding} is a cons @code{(@var{decoding} . @var{encoding})}, @var{decoding} is used for reading, and @var{encoding} is used for writing.  If not specified, the default is to determine the coding systems from the data itself."
-msgstr "@var{coding}は、このプロセスにたいする読み書きに使用される、コーディングシステムを指定する。@var{coding}がコンス@code{(@var{decoding} . @var{encoding})}なら、読み取りに@var{decoding}、書き込みには@var{encoding}が使用される。指定されない場合のデフォルトは、データ自身から判断されるコーディングシステムである。"
+msgstr "@var{coding}はこのプロセスにたいする読み書きに使用されるコーディングシステムを指定する。@var{coding}がコンス@code{(@var{decoding} . @var{encoding})}なら読み取りに@var{decoding}、書き込みには@var{encoding}が使用される。指定されない場合のデフォルトはデータ自身から判断されるコーディングシステム。"
 
 #. type: table
 #: original_texis/processes.texi:2889
 msgid "Initialize the process query flag to @var{query-flag}.  @xref{Query Before Exit}.  The flags defaults to @code{nil} if unspecified."
-msgstr "プロセスqueryフラグを、@var{query-flag}に初期化する。@ref{Query Before Exit}を参照のこと。未指定の場合のフラグのデフォルトは@code{nil}。"
+msgstr "プロセスqueryフラグを@var{query-flag}に初期化する。@ref{Query Before Exit}を参照のこと。未指定の場合のフラグのデフォルトは@code{nil}。"
 
 #. type: item
 #: original_texis/processes.texi:2890
@@ -4734,25 +4688,23 @@ msgstr ":stop @var{bool}"
 
 #. type: table
 #: original_texis/processes.texi:2896
-#, fuzzy
-#| msgid "Start process in the ``stopped'' state if @var{bool} is non-@code{nil}.  In the stopped state, a serial process does not accept incoming data, but you can send outgoing data.  The stopped state is cleared by @code{continue-process} and set by @code{stop-process}."
 msgid "Start process in the stopped state if @var{bool} is non-@code{nil}.  In the stopped state, a serial process does not accept incoming data, but you can send outgoing data.  The stopped state is cleared by @code{continue-process} and set by @code{stop-process}."
-msgstr "@var{bool}が非@code{nil}なら、``stopped''の状態でプロセスを開始する。stopped状態では、シリアルプロセスは入力データを受け付けないが、出力データの送信は可能。stopped状態のクリアーは@code{continue-process}、セットは@code{stop-process}で行う。"
+msgstr "@var{bool}が非@code{nil}ならstoppedの状態でプロセスを開始する。stopped状態ではシリアルプロセスは入力データを受け付けないが出力データの送信は可能。stopped状態のクリアーは@code{continue-process}、セットは@code{stop-process}で行う。"
 
 #. type: table
 #: original_texis/processes.texi:2899
 msgid "Install @var{filter} as the process filter."
-msgstr "プロセスフィルターとして、@var{filter}をインストールする。"
+msgstr "プロセスフィルターとして@var{filter}をインストールする。"
 
 #. type: table
 #: original_texis/processes.texi:2902
 msgid "Install @var{sentinel} as the process sentinel."
-msgstr "プロセスセンチネルとして、@var{sentinel}をインストールする。"
+msgstr "プロセスセンチネルとして@var{sentinel}をインストールする。"
 
 #. type: table
 #: original_texis/processes.texi:2905
 msgid "Install @var{plist} as the initial plist of the process."
-msgstr "プロセスの初期plistとして、@var{plist}をインストールする。"
+msgstr "プロセスの初期plistとして@var{plist}をインストールする。"
 
 #. type: item
 #: original_texis/processes.texi:2906
@@ -4781,17 +4733,17 @@ msgstr ":flowcontrol"
 #. type: table
 #: original_texis/processes.texi:2912
 msgid "These are handled by @code{serial-process-configure}, which is called by @code{make-serial-process}."
-msgstr "これらは、@code{make-serial-process}が呼び出す、@code{serial-process-configure}により処理される。"
+msgstr "これらは@code{make-serial-process}が呼び出す@code{serial-process-configure}により処理される。"
 
 #. type: defun
 #: original_texis/processes.texi:2916
 msgid "The original argument list, possibly modified by later configuration, is available via the function @code{process-contact}."
-msgstr "後の設定により変更され得るオリジナルの引数リストは、関数@code{process-contact}を通じて利用可能。"
+msgstr "後の設定により変更され得るオリジナルの引数リストは関数@code{process-contact}を通じて利用可能。"
 
 #. type: defun
 #: original_texis/processes.texi:2918
 msgid "Here is an example:"
-msgstr "以下に例を示す:"
+msgstr "以下は例:"
 
 #. type: example
 #: original_texis/processes.texi:2921
@@ -4838,7 +4790,7 @@ msgstr "flowcontrol, in serial connections"
 #. type: defun
 #: original_texis/processes.texi:2936
 msgid "This function configures a serial port connection.  Arguments are specified as keyword/argument pairs.  Attributes that are not given are re-initialized from the process's current configuration (available via the function @code{process-contact}), or set to reasonable default values.  The following arguments are defined:"
-msgstr "この関数は、シリアルポート接続を設定する。引数はキーワード/引数ペアーで指定する。与えられない属性は、そのプロセスのカレントの設定(関数@code{process-contact}を通じて利用可能)から再初期化されるか、妥当なデフォルトにセットされる。以下の引数が定義されている:"
+msgstr "この関数はシリアルポート接続を設定する。引数はキーワード/引数ペアーで指定する。与えられない属性はそのプロセスのカレントの設定(関数@code{process-contact}を通じて利用可能)から再初期化されるか、妥当なデフォルトにセットされる。以下の引数が定義されている:"
 
 #. type: item
 #: original_texis/processes.texi:2938
@@ -4849,12 +4801,12 @@ msgstr ":process @var{process}"
 #. type: table
 #: original_texis/processes.texi:2945
 msgid "Any of these arguments can be given to identify the process that is to be configured.  If none of these arguments is given, the current buffer's process is used."
-msgstr "設定するプロセスを識別するために、これらの引数のいずれかを与えられる。これらの引数が何も与えられなければ、カレントバッファーのプロセスが使用される。"
+msgstr "設定するプロセスを識別するために、これらの引数のいずれかが与えられる。これらの引数が何も与えられなければカレントバッファーのプロセスが使用される。"
 
 #. type: table
 #: original_texis/processes.texi:2957
 msgid "The speed of the serial port in bits per second, a.k.a.@: @dfn{baud rate}.  The value can be any number, but most serial ports work only at a few defined values between 1200 and 115200, with 9600 being the most common value.  If @var{speed} is @code{nil}, the function ignores all other arguments and does not configure the port.  This may be useful for special serial ports such as Bluetooth-to-serial converters, which can only be configured through @samp{AT} commands sent through the connection.  The value of @code{nil} for @var{speed} is valid only for connections that were already opened by a previous call to @code{make-serial-process} or @code{serial-term}."
-msgstr "ビット毎秒、別名@dfn{ボーレート(baud rate)}での、シリアルポートのスピード。値には任意の数字が可能だが、ほとんどのシリアルポートは1200から115200の間の数少ない定義済みの値でのみ機能し、もっとも一般的な値は9600である。@var{speed}が@code{nil}なら、この関数は他のすべての引数を無視して、そのポートを設定しない。これは接続を通じて送信された@samp{AT}コマンドでのみ設定可能な、Bluetooth/シリアル変換アダプターのような、特殊なシリアルポートで有用かもしれない。@var{speed}にたいする値@code{nil}は、@code{make-serial-process}または@code{serial-term}の呼び出しにより、すでにオープン済みの接続にたいしてのみ有効である。"
+msgstr "ビット毎秒、別名@dfn{ボーレート(baud rate)}によるシリアルポートのスピード。値には任意の数字が可能だが、ほとんどのシリアルポートは1200から115200の間の数少ない定義済みの値でのみ機能して、もっとも一般的な値は9600。@var{speed}が@code{nil}なら、この関数は他のすべての引数を無視してそのポートを設定しない。これは接続を通じて送信された@samp{AT}コマンドでのみ設定可能な、Bluetooth/シリアル変換アダプターのような特殊なシリアルポートで有用かもしれない。@var{speed}にたいする値@code{nil}は@code{make-serial-process}か@code{serial-term}の呼び出しにより、すでにオープン済みの接続にたいしてのみ有効。"
 
 #. type: item
 #: original_texis/processes.texi:2958
@@ -4865,7 +4817,7 @@ msgstr ":bytesize @var{bytesize}"
 #. type: table
 #: original_texis/processes.texi:2961
 msgid "The number of bits per byte, which can be 7 or 8.  If @var{bytesize} is not given or @code{nil}, it defaults to 8."
-msgstr "ビット/バイトでの数値で、7か8を指定できる。@var{bytesize}が与えられない、または@code{nil}の場合のデフォルトは8。"
+msgstr "ビット/バイトでの数値で7か8を指定できる。@var{bytesize}が与えられない、または@code{nil}の場合のデフォルトは8。"
 
 #. type: item
 #: original_texis/processes.texi:2962
@@ -4876,7 +4828,7 @@ msgstr ":parity @var{parity}"
 #. type: table
 #: original_texis/processes.texi:2966
 msgid "The value can be @code{nil} (don't use parity), the symbol @code{odd} (use odd parity), or the symbol @code{even} (use even parity).  If @var{parity} is not given, it defaults to no parity."
-msgstr "値には@code{nil}(パリティなし)、シンボル@code{odd}(奇数パリティ)、シンボル@code{even}(偶数パリティ)を指定できる。@var{parity}が与えられない場合のデフォルトはパリティなし。"
+msgstr "値には@code{nil} (パリティなし)、シンボル@code{odd} (奇数パリティ)、シンボル@code{even} (偶数パリティ)を指定できる。@var{parity}が与えられない場合のデフォルトはパリティなし。"
 
 #. type: item
 #: original_texis/processes.texi:2967
@@ -4898,12 +4850,12 @@ msgstr ":flowcontrol @var{flowcontrol}"
 #. type: table
 #: original_texis/processes.texi:2978
 msgid "The type of flow control to use for this connection, which is either @code{nil} (don't use flow control), the symbol @code{hw} (use RTS/CTS hardware flow control), or the symbol @code{sw} (use XON/XOFF software flow control).  If @var{flowcontrol} is not given, it defaults to no flow control."
-msgstr "この接続にたいして使用するフロー制御のタイプで、@code{nil}(フロー制御を使用しない)、シンボル@code{hw}(RTS/CTSハードウェアフロー制御)、シンボル@code{sw}(XON/XOFFソフトウェアフロー制御)のいずれか。@var{flowcontrol}が与えられない場合のデフォルトは、フロー制御なし。"
+msgstr "この接続にたいして使用するフロー制御のタイプで@code{nil} (フロー制御を使用しない)、シンボル@code{hw} (RTS/CTSハードウェアフロー制御)、シンボル@code{sw} (XON/XOFFソフトウェアフロー制御)のいずれか。@var{flowcontrol}が与えられない場合のデフォルトはフロー制御なし。"
 
 #. type: defun
 #: original_texis/processes.texi:2983
 msgid "Internally, @code{make-serial-process} calls @code{serial-process-configure} for the initial configuration of the serial port."
-msgstr "シリアルポートの初期設定のために、@code{make-serial-process}は内部的に@code{serial-process-configure}を呼び出す。"
+msgstr "シリアルポートの初期設定のために@code{make-serial-process}は内部的に@code{serial-process-configure}を呼び出す。"
 
 #. type: section
 #: original_texis/processes.texi:2986
@@ -4920,7 +4872,7 @@ msgstr "byte packing and unpacking"
 #. type: Plain text
 #: original_texis/processes.texi:2998
 msgid "This section describes how to pack and unpack arrays of bytes, usually for binary network protocols.  These functions convert byte arrays to alists, and vice versa.  The byte array can be represented as a unibyte string or as a vector of integers, while the alist associates symbols either with fixed-size objects or with recursive sub-alists.  To use the functions referred to in this section, load the @code{bindat} library."
-msgstr "このセクションでは、通常はバイナリーのネットワークプロトコル用のバイト配列を、packおよびunpackする朴を説明します。以下の関数は、バイト配列とalistとの間で相互に変換を行います。バイト配列はユニバイト文字列、または整数ベクターとして表現することができます。一方alistはシンボルを固定サイズのオブジェクト、または再帰的な複alistのいずれかに関連付けます。このセクションで参照する関数を使用するためには、@code{bindat}ライブラリーをロードしてください。"
+msgstr "このセクションでは通常はバイナリーのネットワークプロトコル用のバイト配列をpackやunpackする方法を説明します。以下の関数はバイト配列とalistとの間で相互に変換を行います。バイト配列はユニバイト文字列、または整数ベクターとして表現することができます。一方でalistはシンボルを固定サイズのオブジェクト、または再帰的な副alistのいずれかに関連付けます。このセクションで参照する関数を使用するためには@code{bindat}ライブラリーをロードしてください。"
 
 #. type: cindex
 #: original_texis/processes.texi:2999
@@ -4949,7 +4901,7 @@ msgstr "unpacking"
 #. type: Plain text
 #: original_texis/processes.texi:3006
 msgid "Conversion from byte arrays to nested alists is also known as @dfn{deserializing} or @dfn{unpacking}, while going in the opposite direction is also known as @dfn{serializing} or @dfn{packing}."
-msgstr "バイト配列からネストされたalistへの変換は、逆方向への変換が@dfn{シリアライズ化(serializing)}、または@dfn{pack化(packing)}として呼ばれることから、@dfn{非シリアル化【deserializing)}、または@dfn{unpack化(unpacking)}として知られています。"
+msgstr "バイト配列からネストされたalistへの変換は逆方向への変換が@dfn{シリアライズ化(serializing)}または@dfn{pack化(packing)}として呼ばれることから、@dfn{非シリアル化【deserializing)}または@dfn{unpack化(unpacking)}として知られています。"
 
 #. type: node
 #: original_texis/processes.texi:3011 original_texis/processes.texi:3013
@@ -4992,10 +4944,8 @@ msgstr "Describing Data Layout"
 
 #. type: Plain text
 #: original_texis/processes.texi:3022
-#, fuzzy
-#| msgid "To control unpacking and packing, you write a @dfn{data layout specification}, a special nested list describing named and typed @dfn{fields}.  This specification controls the length of each field to be processed, and how to pack or unpack it.  We normally keep bindat specs in variables whose names end in @samp{-bindat-spec}; that kind of name is automatically recognized as ``risky''."
 msgid "To control unpacking and packing, you write a @dfn{data layout specification}, a special nested list describing named and typed @dfn{fields}.  This specification controls the length of each field to be processed, and how to pack or unpack it.  We normally keep bindat specs in variables whose names end in @samp{-bindat-spec}; that kind of name is automatically recognized as risky."
-msgstr "unpackとpackを制御するためには、@dfn{データレイアウト仕様(data layout specification)}を記述します。これは名前付きで、かつタイプ付けされた@dfn{フィールド(field)}を記述する、特別なネスト化リストです。これは、処理する各フィールドの長さ、およびそれをpackおよびunpackする方法を制御します。わたしたちは、名前が@samp{-bindat-spec}で終わる変数では、bindatの仕様を遵守します。この類の変数名は、自動的に``risky(危険)''だと認識されます。"
+msgstr "unpackとpackを制御するためには@dfn{データレイアウト仕様(data layout specification)}を記述します。これは名前付きかつタイプ付けされた@dfn{フィールド(field)}を記述する特別なネスト化リストです。これは処理する各フィールドの長さ、およびそれをpackおよびunpackする方法を制御します。わたしたちは名前が@samp{-bindat-spec}で終わる変数ではbindatの仕様を遵守します。この類の変数名は自動的にrisky(危険)だと認識されます。"
 
 #. type: cindex
 #: original_texis/processes.texi:3023
@@ -5023,10 +4973,8 @@ msgstr "network byte ordering"
 
 #. type: Plain text
 #: original_texis/processes.texi:3035
-#, fuzzy
-#| msgid "A field's @dfn{type} describes the size (in bytes) of the object that the field represents and, in the case of multibyte fields, how the bytes are ordered within the field.  The two possible orderings are ``big endian'' (also known as ``network byte ordering'') and ``little endian''.  For instance, the number @code{#x23cd} (decimal 9165) in big endian would be the two bytes @code{#x23} @code{#xcd}; and in little endian, @code{#xcd} @code{#x23}.  Here are the possible type values:"
 msgid "A field's @dfn{type} describes the size (in bytes) of the object that the field represents and, in the case of multibyte fields, how the bytes are ordered within the field.  The two possible orderings are @dfn{big endian} (also known as ``network byte ordering'') and @dfn{little endian}.  For instance, the number @code{#x23cd} (decimal 9165) in big endian would be the two bytes @code{#x23} @code{#xcd}; and in little endian, @code{#xcd} @code{#x23}.  Here are the possible type values:"
-msgstr "フィールドの@dfn{タイプ(type)}は、そのフィールドが表すオブジェクトのサイズ(バイト単位)、およびそれがマルチバイトフィールドなら、そのフィールがバイトオーダーされる方法を記述します。可能なオーダーは``ビッグエンディアン(big endian。ネットワークバイトオーダーとも呼ばれる)''、および``リトルエンディアン(little endian)''の2つです。たとえば数字@code{#x23cd}(10進の9165)のビッグエンディアンは@code{#x23} @code{#xcd}の2バイト、リトルエンディアンは@code{#xcd} @code{#x23}になるでしょう。以下は可能なタイプの値です:"
+msgstr "フィールドの@dfn{タイプ(type)}はフィールドが表すオブジェクトのサイズ(バイト単位)、およびそれがマルチバイトフィールドならフィールがバイトオーダーされる方法を記述します。可能なオーダーはビッグエンディアン(big endian。ネットワークバイトオーダーとも呼ばれる)、およびリトルエンディアン(little endian)の2つです。たとえば数字@code{#x23cd} (10進の9165)のビッグエンディアンは@code{#x23} @code{#xcd}の2バイト、リトルエンディアンは@code{#xcd} @code{#x23}になるでしょう。以下は可能なタイプの値です:"
 
 #. type: item
 #: original_texis/processes.texi:3037
@@ -5066,7 +5014,7 @@ msgstr "short"
 #. type: table
 #: original_texis/processes.texi:3045
 msgid "Unsigned integer in network byte order, with length 2."
-msgstr "長さ2の、ネットワークバイトオーダーによる符号なし整数。"
+msgstr "長さ2のネットワークバイトオーダーによる符号なし整数。"
 
 #. type: item
 #: original_texis/processes.texi:3046
@@ -5077,7 +5025,7 @@ msgstr "u24"
 #. type: table
 #: original_texis/processes.texi:3048
 msgid "Unsigned integer in network byte order, with length 3."
-msgstr "長さ3の、ネットワークバイトオーダーによる符号なし整数。"
+msgstr "長さ3のネットワークバイトオーダーによる符号なし整数。"
 
 #. type: item
 #: original_texis/processes.texi:3049
@@ -5100,7 +5048,7 @@ msgstr "long"
 #. type: table
 #: original_texis/processes.texi:3054
 msgid "Unsigned integer in network byte order, with length 4.  Note: These values may be limited by Emacs's integer implementation limits."
-msgstr "長さ4の、ネットワークバイトオーダーによる符号なし整数。注意: これらの値はEmacsの整数の実装に制限されるだろう。"
+msgstr "長さ4のネットワークバイトオーダーによる符号なし整数。注意: これらの値はEmacsの整数の実装に制限されるだろう。"
 
 #. type: item
 #: original_texis/processes.texi:3055
@@ -5145,7 +5093,7 @@ msgstr "strz @var{len}"
 #. type: table
 #: original_texis/processes.texi:3065
 msgid "Zero-terminated string, in a fixed-size field with length @var{len}."
-msgstr "長さ@var{len}の固定長フィールド内の、NUL終端された文字列。"
+msgstr "長さ@var{len}の固定長フィールド内のNUL終端された文字列。"
 
 #. type: item
 #: original_texis/processes.texi:3066
@@ -5156,7 +5104,7 @@ msgstr "vec @var{len} [@var{type}]"
 #. type: table
 #: original_texis/processes.texi:3070
 msgid "Vector of @var{len} elements of type @var{type}, defaulting to bytes.  The @var{type} is any of the simple types above, or another vector specified as a list of the form @code{(vec @var{len} [@var{type}])}."
-msgstr "タイプ@var{type}(デフォルトはbyte)の@var{len}要素のベクター。@var{type}は上述した単純なタイプのいずれか、あるいは@code{(vec @var{len} [@var{type}])}という形式のリストによる別ベクターの指定である。"
+msgstr "タイプ@var{type} (デフォルトはbyte)の@var{len}要素のベクター。@var{type}は上述した単純なタイプのいずれか、あるいは@code{(vec @var{len} [@var{type}])}という形式のリストによる別ベクターの指定。"
 
 #. type: item
 #: original_texis/processes.texi:3071
@@ -5167,7 +5115,7 @@ msgstr "ip"
 #. type: table
 #: original_texis/processes.texi:3075
 msgid "Four-byte vector representing an Internet address.  For example: @code{[127 0 0 1]} for localhost."
-msgstr "インターネット 」アドレスを表す、4つのbyteのベクター。たとえばlocalhostは@code{[127 0 0 1]}。"
+msgstr "インターネットアドレスを表す4つのbyteのベクター。たとえばlocalhostは@code{[127 0 0 1]}。"
 
 #. type: item
 #: original_texis/processes.texi:3076
@@ -5178,7 +5126,7 @@ msgstr "bits @var{len}"
 #. type: table
 #: original_texis/processes.texi:3082
 msgid "List of set bits in @var{len} bytes.  The bytes are taken in big endian order and the bits are numbered starting with @code{8 * @var{len} @minus{} 1} and ending with zero.  For example: @code{bits 2} unpacks @code{#x28} @code{#x1c} to @code{(2 3 4 11 13)} and @code{#x1c} @code{#x28} to @code{(3 5 10 11 12)}."
-msgstr "@var{len}バイト内のセットされたビット位置のリスト。バイトはビッグエンディアンで、ビット位置は@code{8 * @var{len} @minus{} 1}で始まり0で終わるよう番号が付与される。たとえば@code{bits 2}では、@code{#x28} @code{#x1c}は@code{(2 3 4 11 13)}、@code{#x1c} @code{#x28}は@code{(3 5 10 11 12)}にunpackされる。"
+msgstr "@var{len}バイト内のセットされたビット位置のリスト。バイトはビッグエンディアンでビット位置は@code{8 * @var{len} @minus{} 1}で始まり0で終わるよう番号が付与される。たとえば@code{bits 2}では、@code{#x28} @code{#x1c}は@code{(2 3 4 11 13)}、@code{#x1c} @code{#x28}は@code{(3 5 10 11 12)}にunpackされる。"
 
 #. type: item
 #: original_texis/processes.texi:3083
@@ -5189,27 +5137,27 @@ msgstr "(eval @var{form})"
 #. type: table
 #: original_texis/processes.texi:3087
 msgid "@var{form} is a Lisp expression evaluated at the moment the field is unpacked or packed.  The result of the evaluation should be one of the above-listed type specifications."
-msgstr "@var{form}は、フィールドがpackまたはunpackされた瞬間に評価されるLisp式。評価した結果は、上記にリストしたタイプ使用のいずれかであること。"
+msgstr "@var{form}はフィールドがpackやunpackされた瞬間に評価されるLisp式。評価した結果は上記にリストしたタイプ使用のいずれかであること。"
 
 #. type: Plain text
 #: original_texis/processes.texi:3091
 msgid "For a fixed-size field, the length @var{len} is given as an integer specifying the number of bytes in the field."
-msgstr "固定長フィールドでは長さ@var{len}が、フィールド内のバイト数を指定する整数として与えられます。"
+msgstr "固定長フィールドでは長さ@var{len}がフィールド内のバイト数を指定する整数として与えられます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:3098
 msgid "When the length of a field is not fixed, it typically depends on the value of a preceding field.  In this case, the length @var{len} can be given either as a list @code{(@var{name} ...)} identifying a @dfn{field name} in the format specified for @code{bindat-get-field} below, or by an expression @code{(eval @var{form})} where @var{form} should evaluate to an integer, specifying the field length."
-msgstr "フィールド長が固定でない場合、通常は先行するフィールドの値に依存します。この場合、長さ@var{len}は後述の@code{bindat-get-field}のフォーマット指定により@dfn{フィールド名(field name)}を指定するリスト@code{(@var{name} ...)}、または式@code{(eval @var{form})}(@var{form}はフィールド長を指定する整数に評価されること)のいずれかで与えることもできます。"
+msgstr "フィールド長が固定でなければ通常は先行するフィールドの値に依存します。この場合には長さ@var{len}は後述の@code{bindat-get-field}のフォーマット指定により@dfn{フィールド名(field name)}を指定するリスト@code{(@var{name} ...)}、または式@code{(eval @var{form})} (@var{form}はフィールド長を指定する整数に評価されること)のいずれかで与えることもできます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:3105
 msgid "A field specification generally has the form @code{([@var{name}] @var{handler})}, where @var{name} is optional.  Don't use names that are symbols meaningful as type specifications (above) or handler specifications (below), since that would be ambiguous.  @var{name} can be a symbol or an expression @code{(eval @var{form})}, in which case @var{form} should evaluate to a symbol."
-msgstr "フィールド仕様は一般的に@code{([@var{name}] @var{handler})}という形式をもち、@var{name}はオプションです。紛らわしくなるので、タイプ仕様(上述)やハンドラー仕様(後述)で意味をもつシンボルの名前は使用しないでください。@var{name}はシンボルまたは式@code{(eval @var{form})}でもよく、この場合@var{form}はシンボルに評価される必要があります。"
+msgstr "フィールド仕様は一般的に@code{([@var{name}] @var{handler})}という形式をもち、@var{name}はオプションです。紛らわしくなるのでタイプ仕様(上述)やハンドラー仕様(後述)で意味をもつシンボルの名前は使用しないでください。@var{name}はシンボルまたは式@code{(eval @var{form})}でもよく、この場合には@var{form}はシンボルに評価される必要があります。"
 
 #. type: Plain text
 #: original_texis/processes.texi:3108
 msgid "@var{handler} describes how to unpack or pack the field and can be one of the following:"
-msgstr "@var{handler}はそのフィールドがpackまたはunpackされる方法を記述し、以下のいずれかを指定できます:"
+msgstr "@var{handler}はそのフィールドがpackやunpackされる方法を記述して、以下のいずれかを指定できます:"
 
 #. type: var{#1}
 #: original_texis/processes.texi:3110
@@ -5231,7 +5179,7 @@ msgstr "eval @var{form}"
 #. type: table
 #: original_texis/processes.texi:3116
 msgid "Evaluate @var{form}, a Lisp expression, for side-effect only.  If the field name is specified, the value is bound to that field name."
-msgstr "副作用のためだけにLisp式@var{form}を評価する。フィールド名が指定された場合、値はそのフィールド名にバインドされる。"
+msgstr "副作用のためだけにLisp式@var{form}を評価する。フィールド名が指定されたら値はそのフィールド名にバインドされる。"
 
 #. type: item
 #: original_texis/processes.texi:3117
@@ -5242,7 +5190,7 @@ msgstr "fill @var{len}"
 #. type: table
 #: original_texis/processes.texi:3121
 msgid "Skip @var{len} bytes.  In packing, this leaves them unchanged, which normally means they remain zero.  In unpacking, this means they are ignored."
-msgstr "@var{len}バイトをスキップする。pack化ではそれらを未変更のままとし、通常それらは0のままとなることを意味する。unpack化では、それらが無視されることを意味する。"
+msgstr "@var{len}バイトをスキップする。pack化ではそれらを未変更のままとして、通常それらは0のままとなることを意味する。unpack化ではそれらが無視されることを意味する。"
 
 #. type: item
 #: original_texis/processes.texi:3122
@@ -5275,12 +5223,12 @@ msgstr "union @var{form} (@var{tag} @var{spec})@dots{}"
 #. type: table
 #: original_texis/processes.texi:3135
 msgid "Evaluate @var{form}, a Lisp expression, find the first @var{tag} that matches it, and process its associated data layout specification @var{spec}.  Matching can occur in one of three ways:"
-msgstr "Lisp式@var{form}を評価して、それにマッチする最初の@var{tag}を探し、それに関連付けられたレイアウト仕様@var{spec}を処理する。マッチングは以下の3つのいずれかで発生し得る:"
+msgstr "Lisp式@var{form}を評価、それにマッチする最初の@var{tag}を探して、それに関連付けられたレイアウト仕様@var{spec}を処理する。マッチングは以下の3つのいずれかで発生し得る:"
 
 #. type: itemize
 #: original_texis/processes.texi:3141
 msgid "If a @var{tag} has the form @code{(eval @var{expr})}, evaluate @var{expr} with the variable @code{tag} dynamically bound to the value of @var{form}.  A non-@code{nil} result indicates a match."
-msgstr "@var{tag}が@code{(eval @var{expr})}という形式をもつ場合、変数@code{tag}を動的に@var{form}の値にバインドして、@var{expr}を評価する。結果が非@code{nil}ならマッチを示す。"
+msgstr "@var{tag}が@code{(eval @var{expr})}という形式をもつ場合には、変数@code{tag}を動的に@var{form}の値にバインドして@var{expr}を評価する。結果が非@code{nil}ならマッチを示す。"
 
 #. type: itemize
 #: original_texis/processes.texi:3144
@@ -5301,7 +5249,7 @@ msgstr "repeat @var{count} @var{field-specs}@dots{}"
 #. type: table
 #: original_texis/processes.texi:3156
 msgid "Process the @var{field-specs} recursively, in order, then repeat starting from the first one, processing all the specifications @var{count} times overall.  The @var{count} is given using the same formats as a field length---if an @code{eval} form is used, it is evaluated just once.  For correct operation, each specification in @var{field-specs} must include a name."
-msgstr "@var{field-specs}を順次、再帰的に処理した後、最初のものから繰り返して、すべての仕様全体を@var{count}回処理する。@var{count}はフィールド長と同じフォーマットを使用して与えられる。@code{eval}フォームが使用された場合は、1回だけ評価される。正しく処理されるには、@var{field-specs}内の各仕様は名前を含まなければならない。"
+msgstr "@var{field-specs}を再帰的に順次処理した後に、最初のものから繰り返して、すべての仕様全体を@var{count}回処理する。@var{count}はフィールド長と同じフォーマットを使用して与えられる。@code{eval}フォームが使用された場合には1回だけ評価される。正しく処理されるためには、@var{field-specs}内の各仕様が名前を含まなければならない。"
 
 #. type: Plain text
 #: original_texis/processes.texi:3161
@@ -5350,7 +5298,7 @@ msgstr "struct"
 #. type: table
 #: original_texis/processes.texi:3176
 msgid "The alist containing the structured data that have been unpacked so far, or the entire structure being packed.  You can use @code{bindat-get-field} to access specific fields of this structure."
-msgstr "これまでにunpackされた構造化データ、またはpackされた構造体全体を含むalist。この構造体の特定のフィールドにアクセスするために、@code{bindat-get-field}を使用できる。"
+msgstr "これまでにunpackされた構造化データ、またはpackされた構造体全体を含むalist。この構造体の特定のフィールドにアクセスするために@code{bindat-get-field}を使用できる。"
 
 #. type: item
 #: original_texis/processes.texi:3177
@@ -5367,7 +5315,7 @@ msgstr "index"
 #. type: table
 #: original_texis/processes.texi:3184
 msgid "Inside a @code{repeat} block, these contain the maximum number of repetitions (as specified by the @var{count} parameter), and the current repetition number (counting from 0).  Setting @code{count} to zero will terminate the inner-most repeat block after the current repetition has completed."
-msgstr "@code{repeat}ブロック内部では、これらは(@var{count}パラメーターで指定された)繰り返しの最大回数、および(0から数えた)カレント繰り返し回数を含む。@code{count}を0にセットすることにより、カレントの繰り返し終了後に、最内繰り返しブロックを終了する。"
+msgstr "@code{repeat}ブロック内部では、これらは(@var{count}パラメーターで指定された)繰り返しの最大回数、および(0から数えた)カレント繰り返し回数を含む。@code{count}を0にセットすることにより、カレントの繰り返し終了後に最内繰り返しブロックを終了する。"
 
 #. type: subsection
 #: original_texis/processes.texi:3187
@@ -5378,7 +5326,7 @@ msgstr "Functions to Unpack and Pack Bytes"
 #. type: Plain text
 #: original_texis/processes.texi:3192
 msgid "In the following documentation, @var{spec} refers to a data layout specification, @code{bindat-raw} to a byte array, and @var{struct} to an alist representing unpacked field data."
-msgstr "以降のドキュメントでは、@var{spec}はデータレイアウト仕様、@code{bindat-raw}はバイト配列、@var{struct}はunpackされたフィールドデータを表すalistを参照します。"
+msgstr "以降のドキュメントでは@var{spec}はデータレイアウト仕様、@code{bindat-raw}はバイト配列、@var{struct}はunpackされたフィールドデータを表すalistを参照します。"
 
 #. type: defun
 #: original_texis/processes.texi:3193
@@ -5389,12 +5337,12 @@ msgstr "bindat-unpack spec bindat-raw &optional bindat-idx"
 #. type: defun
 #: original_texis/processes.texi:3200
 msgid "This function unpacks data from the unibyte string or byte array @code{bindat-raw} according to @var{spec}.  Normally, this starts unpacking at the beginning of the byte array, but if @var{bindat-idx} is non-@code{nil}, it specifies a zero-based starting position to use instead."
-msgstr "この関数はユニバイト文字列、またはバイト配列@code{bindat-raw}のデータを、@var{spec}に応じてunpackする。これは通常はバイト配列の先頭からunpack化を開始するが、@var{bindat-idx}が非@code{nil}なら、それはかわりに使用する0基準の開始位置を指定する。"
+msgstr "この関数はユニバイト文字列、またはバイト配列@code{bindat-raw}のデータを@var{spec}に応じてunpackする。これは通常はバイト配列の先頭からunpack化を開始するが、@var{bindat-idx}が非@code{nil}ならかわりに使用する0基準の開始位置を指定する。"
 
 #. type: defun
 #: original_texis/processes.texi:3203
 msgid "The value is an alist or nested alist in which each element describes one unpacked field."
-msgstr "値は、それぞれの要素がunpackされたフィールドを記述する、alistまたはネストされたalist。"
+msgstr "値はそれぞれの要素がunpackされたフィールドを記述するalistかネストされたalist。"
 
 #. type: defun
 #: original_texis/processes.texi:3205
@@ -5405,17 +5353,17 @@ msgstr "bindat-get-field struct &rest name"
 #. type: defun
 #: original_texis/processes.texi:3212
 msgid "This function selects a field's data from the nested alist @var{struct}.  Usually @var{struct} was returned by @code{bindat-unpack}.  If @var{name} corresponds to just one argument, that means to extract a top-level field value.  Multiple @var{name} arguments specify repeated lookup of sub-structures.  An integer name acts as an array index."
-msgstr "この関数はネストされたalistである@var{struct}から、フィールドのデータを選択する。@var{struct}は通常、@code{bindat-unpack}がリターンしたもの。@var{name}が単一の引数に対応する場合、それはトップレベルのフィールド値を抽出することを意味する。複数の@var{name}引数は、副構造体を繰り返して照合することを指定する。整数の名前は、配列のインデックスとして動作する。"
+msgstr "この関数はネストされたalistである@var{struct}からフィールドのデータを選択する。@var{struct}は通常は@code{bindat-unpack}がリターンしたもの。@var{name}が単一の引数に対応する場合にはトップレベルのフィールド値を抽出することを意味する。複数の@var{name}引数は副構造体を繰り返して照合することを指定する。整数の名前は配列のインデックスとして動作する。"
 
 #. type: defun
 #: original_texis/processes.texi:3216
 msgid "For example, if @var{name} is @code{(a b 2 c)}, that means to find field @code{c} in the third element of subfield @code{b} of field @code{a}.  (This corresponds to @code{struct.a.b[2].c} in C.)"
-msgstr "たとえば@var{name}が@code{(a b 2 c)}なら、それはフィールド@code{a}の副フィールド@code{b}の3番目の要素内のフィールド@code{c}(Cでは@code{struct.a.b[2].c}に相当)を意味する。"
+msgstr "たとえば@var{name}が@code{(a b 2 c)}なら、それはフィールド@code{a}の副フィールド@code{b}の3番目の要素内のフィールド@code{c} (Cでは@code{struct.a.b[2].c}に相当)を意味する。"
 
 #. type: Plain text
 #: original_texis/processes.texi:3225
 msgid "Although packing and unpacking operations change the organization of data (in memory), they preserve the data's @dfn{total length}, which is the sum of all the fields' lengths, in bytes.  This value is not generally inherent in either the specification or alist alone; instead, both pieces of information contribute to its calculation.  Likewise, the length of a string or array being unpacked may be longer than the data's total length as described by the specification."
-msgstr "packまたはunpackの処理をすることにより、メモリー内でデータ構造が変化しても、そのデータの全フィールド長の合計バイト数である、@dfn{トータル長(total length)}は保たれます。この値は一般的に仕様またはalist単独では、固有ではありません。そのかわり、これら両方の情報が、この計算に役立つのです。同様に、unpackされる文字列や配列の長さは、仕様の記述にしたがい、そのデータのトータル長より長くなるかもしれません。"
+msgstr "packやunpackの処理をすることによりメモリー内でデータ構造が変化しても、そのデータの全フィールド長の合計バイト数である@dfn{トータル長(total length)}は保たれます。この値は一般的に仕様またはalist単独では固有ではありません。そのかわりこれら両方の情報がこの計算に役立ちます。同様にunpackされる文字列や配列の長さは仕様の記述にしたがってデータのトータル長より長くなるかもしれません。"
 
 #. type: defun
 #: original_texis/processes.texi:3226
@@ -5426,7 +5374,7 @@ msgstr "bindat-length spec struct"
 #. type: defun
 #: original_texis/processes.texi:3229
 msgid "This function returns the total length of the data in @var{struct}, according to @var{spec}."
-msgstr "この関数は@var{struct}内のデータの、@var{spec}に応じたトータル長をリターンする。"
+msgstr "この関数は@var{struct}内のデータの@var{spec}に応じたトータル長をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:3231
@@ -5437,12 +5385,12 @@ msgstr "bindat-pack spec struct &optional bindat-raw bindat-idx"
 #. type: defun
 #: original_texis/processes.texi:3238
 msgid "This function returns a byte array packed according to @var{spec} from the data in the alist @var{struct}.  It normally creates and fills a new byte array starting at the beginning.  However, if @var{bindat-raw} is non-@code{nil}, it specifies a pre-allocated unibyte string or vector to pack into.  If @var{bindat-idx} is non-@code{nil}, it specifies the starting offset for packing into @code{bindat-raw}."
-msgstr "この関数は、alist @var{struct}内のデータから、@var{spec}に応じてpackされたバイト配列をリターンする。これは通常、先頭から充填された、新たなバイト配列を作成する。しかし@var{bindat-raw}が非@code{nil}なら、それはpack先として事前に割り当てられたユニバイト文字列、またはベクターを指定する。@var{bindat-idx}が非@code{nil}なら、それは@code{bindat-raw}へpackする開始オフセットを指定する。"
+msgstr "この関数はalist @var{struct}内のデータから@var{spec}に応じてpackされたバイト配列をリターンする。これは通常は先頭から充填された新たなバイト配列を作成する。しかし@var{bindat-raw}が非@code{nil}なら、それはpack先として事前に割り当てられたユニバイト文字列かベクターを指定する。@var{bindat-idx}が非@code{nil}なら@code{bindat-raw}へpackする開始オフセットを指定する。"
 
 #. type: defun
 #: original_texis/processes.texi:3241
 msgid "When pre-allocating, you should make sure @code{(length @var{bindat-raw})} meets or exceeds the total length to avoid an out-of-range error."
-msgstr "事前に割り当てる際には、out-of-rangeエラーを避けるために、@code{(length @var{bindat-raw})}がトータル長またはそれ以上であることを確認すること。"
+msgstr "事前に割り当てる際にはout-of-rangeエラーを避けるために、@code{(length @var{bindat-raw})}がトータル長またはそれ以上であることを確認すること。"
 
 #. type: defun
 #: original_texis/processes.texi:3243
@@ -5453,7 +5401,7 @@ msgstr "bindat-ip-to-string ip"
 #. type: defun
 #: original_texis/processes.texi:3247
 msgid "Convert the Internet address vector @var{ip} to a string in the usual dotted notation."
-msgstr "インターネットアドレスのベクター@var{ip}を、通常のドット表記による文字列に変換する。"
+msgstr "インターネットアドレスのベクター@var{ip}を通常のドット表記による文字列に変換する。"
 
 #. type: example
 #: original_texis/processes.texi:3251
@@ -5474,7 +5422,7 @@ msgstr "Examples of Byte Unpacking and Packing"
 #. type: Plain text
 #: original_texis/processes.texi:3262
 msgid "Here is a complete example of byte unpacking and packing:"
-msgstr "以下は、バイトにたいしてunpackおよびpackを行う完全な例です:"
+msgstr "以下はバイトにたいしてunpackおよびpackを行う完全な例です:"
 
 #. type: lisp
 #: original_texis/processes.texi:3265
