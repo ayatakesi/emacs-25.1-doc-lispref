@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-02-02 21:30+0900\n"
+"PO-Revision-Date: 2020-02-09 13:51+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1649,10 +1649,8 @@ msgstr ":sentinel"
 
 #. type: table
 #: original_texis/processes.texi:998
-#, fuzzy
-#| msgid "The associated value is the process sentinel function."
 msgid "The associated value is the process sentinel function.  @xref{Sentinels}."
-msgstr "値にはプロセスのセンチネル関数が割り当てられる。"
+msgstr "値にはプロセスのセンチネル関数が割り当てられる。@ref{Sentinels}を参照のこと。"
 
 #. type: item
 #: original_texis/processes.texi:998
@@ -1856,10 +1854,8 @@ msgstr ""
 
 #. type: defun
 #: original_texis/processes.texi:1076
-#, fuzzy
-#| msgid "For a network connection, @code{process-status} returns one of the symbols @code{open} or @code{closed}.  The latter means that the other side closed the connection, or Emacs did @code{delete-process}."
 msgid "For a network, serial, or pipe connection, @code{process-status} returns one of the symbols @code{open}, @code{stop}, or @code{closed}.  The latter means that the other side closed the connection, or Emacs did @code{delete-process}.  The value @code{stop} means that @code{stop-process} was called on the connection."
-msgstr "ネットワーク接続にたいしては、@code{process-status}は@code{open}か@code{closed}のシンボルいずれかをリターンする。後者は相手側が接続をクローズしたか、Emacsが@code{delete-process}を行なったことを意味する。"
+msgstr "ネットワーク接続、シリアル接続、pipe接続にたいして@code{process-status}は@code{open}、@code{stop}、または@code{closed}いずれかのシンボルをリターンする。@code{closed}は相手側が接続をクローズしたか、あるいはEmacsが@code{delete-process}を行なったことを意味する。値@code{stop}はその接続で@code{stop-process}が呼び出されたことを意味する。"
 
 #. type: defun
 #: original_texis/processes.texi:1078
@@ -1870,7 +1866,7 @@ msgstr "process-live-p process"
 #. type: defun
 #: original_texis/processes.texi:1082
 msgid "This function returns non-@code{nil} if @var{process} is alive.  A process is considered alive if its status is @code{run}, @code{open}, @code{listen}, @code{connect} or @code{stop}."
-msgstr "この関数は、@var{process}がアクティブなら、非@code{nil}をリターンする。状態が@code{run}、@code{open}、@code{listen}、@code{connect}、@code{stop}のプロセスはアクティブとみなされる。"
+msgstr "この関数は@var{process}がアクティブなら、非@code{nil}をリターンする。状態が@code{run}、@code{open}、@code{listen}、@code{connect}、@code{stop}のプロセスはアクティブとみなされる。"
 
 #. type: defun
 #: original_texis/processes.texi:1084
@@ -1880,10 +1876,8 @@ msgstr "process-type process"
 
 #. type: defun
 #: original_texis/processes.texi:1089
-#, fuzzy
-#| msgid "This function returns the symbol @code{network} for a network connection or server, @code{serial} for a serial port connection, or @code{real} for a real subprocess."
 msgid "This function returns the symbol @code{network} for a network connection or server, @code{serial} for a serial port connection, @code{pipe} for a pipe connection, or @code{real} for a subprocess created for running a program."
-msgstr "この関数はネットワーク接続またはサーバーにたいしてはシンボル@code{network}、シリアルポート接続にたいしては@code{serial}、実際のサブプロセスにたいしては@code{real}をリターンする。"
+msgstr "この関数はネットワーク接続やサーバーにたいしては@code{network}、シリアルポート接続にたいしては@code{serial}、pipe接続にたいしては@code{pipe}、プログラム実行用に作成されたサブプロセスにたいしては@code{real}というシンボルをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1091
@@ -1893,10 +1887,8 @@ msgstr "process-exit-status process"
 
 #. type: defun
 #: original_texis/processes.texi:1098
-#, fuzzy
-#| msgid "This function returns the exit status of @var{process} or the signal number that killed it.  (Use the result of @code{process-status} to determine which of those it is.)  If @var{process} has not yet terminated, the value is 0."
 msgid "This function returns the exit status of @var{process} or the signal number that killed it.  (Use the result of @code{process-status} to determine which of those it is.)  If @var{process} has not yet terminated, the value is 0.  For network, serial, and pipe connections that are already closed, the value is either 0 or 256, depending on whether the connection was closed normally or abnormally."
-msgstr "この関数は@var{process}のexitステータス、またはプロセスをkillしたシグナル番号をリターンする(いずれかであるかの判定には、@code{process-status}の結果を使用する)。@var{process}がまだ終了していなければ、値は0。"
+msgstr "この関数は@var{process}のexitステータス、またはプロセスをkillしたシグナル番号をリターンする(いずれであるかの判定には@code{process-status}の結果を使用)。@var{process}がまだ終了していなければ値は0。すでにcloseされたネットワーク接続、シリアル接続、pipe接続についての値は接続のcloseが正常か異常かによって0か256のいずれかとなる。"
 
 #. type: defun
 #: original_texis/processes.texi:1100
@@ -1906,10 +1898,8 @@ msgstr "process-tty-name process"
 
 #. type: defun
 #: original_texis/processes.texi:1109
-#, fuzzy
-#| msgid "This function returns the terminal name that @var{process} is using for its communication with Emacs---or @code{nil} if it is using pipes instead of a terminal (see @code{process-connection-type} in @ref{Asynchronous Processes}).  If @var{process} represents a program running on a remote host, the terminal name used by that program on the remote host is provided as process property @code{remote-tty}."
 msgid "This function returns the terminal name that @var{process} is using for its communication with Emacs---or @code{nil} if it is using pipes instead of a pty (see @code{process-connection-type} in @ref{Asynchronous Processes}).  If @var{process} represents a program running on a remote host, the terminal name used by that program on the remote host is provided as process property @code{remote-tty}.  If @var{process} represents a network, serial, or pipe connection, the value is @code{nil}."
-msgstr "この関数は@var{process}がEmacsとの対話に使用する端末名、端末のかわりにpipeを使用する場合は@code{nil}をリターンする(@ref{Asynchronous Processes}の@code{process-connection-type}を参照)。@var{process}がリモートホスト上で実行中のプログラムを表す場合は、プロセスの@code{remote-tty}プロパティとして、リモートホスト上でそのプログラムに使用される端末名が提供される。"
+msgstr "この関数は@var{process}がEmacsとの対話に使用する端末名、ptyではなくpipeを使用する場合には@code{nil}をリターンする(@ref{Asynchronous Processes}の@code{process-connection-type}を参照)。@var{process}がリモートホスト上で実行中のプログラムを表す場合には、プロセスの@code{remote-tty}プロパティとしてリモートホスト上でそのプログラムに使用される端末名が提供される。@var{process}がネットワーク接続、シリアル接続、pipe接続を表す場合には値は@code{nil}。"
 
 #. type: defun
 #: original_texis/processes.texi:1111
@@ -1925,7 +1915,7 @@ msgstr "Coding systems for a subprocess"
 #. type: defun
 #: original_texis/processes.texi:1116
 msgid "This function returns a cons cell @code{(@var{decode} . @var{encode})}, describing the coding systems in use for decoding output from, and encoding input to, @var{process} (@pxref{Coding Systems})."
-msgstr "この関数は、@var{process}からの出力のデコードに使用するコーディングシステム、@var{process}への入力のエンコードに使用するコーディングシステムを記述するコンスセル@code{(@var{decode} . @var{encode})}をリターンする(@ref{Coding Systems}を参照)。"
+msgstr "この関数は@var{process}からの出力のデコードに使用するコーディングシステムと、@var{process}への入力のエンコードに使用するコーディングシステムを記述するコンスセル@code{(@var{decode} . @var{encode})}をリターンする(@ref{Coding Systems}を参照)。"
 
 #. type: defun
 #: original_texis/processes.texi:1118
@@ -1936,12 +1926,12 @@ msgstr "set-process-coding-system process &optional decoding-system encoding-sys
 #. type: defun
 #: original_texis/processes.texi:1123
 msgid "This function specifies the coding systems to use for subsequent output from and input to @var{process}.  It will use @var{decoding-system} to decode subprocess output, and @var{encoding-system} to encode subprocess input."
-msgstr "この関数は、@var{process}にたいする後続の入出力に使用するコーディングシステムを指定する。これはサブプロセスの出力のデコードに@var{decoding-system}、入力のエンコードに@var{encoding-system}を使用するだろう。"
+msgstr "この関数は@var{process}にたいする後続の入出力に使用するコーディングシステムを指定する。これはサブプロセスの出力のデコードに@var{decoding-system}、入力のエンコードに@var{encoding-system}を使用する。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1127
 msgid "Every process also has a property list that you can use to store miscellaneous values associated with the process."
-msgstr "すべてのプロセスには、そのプロセスに関連するさまざまな値を格納するために使用できる、プロパティリストもあります。"
+msgstr "すべてのプロセスには、そのプロセスに関連するさまざまな値を格納するために使用できるプロパティリストもあります。"
 
 #. type: defun
 #: original_texis/processes.texi:1128
@@ -1952,7 +1942,7 @@ msgstr "process-get process propname"
 #. type: defun
 #: original_texis/processes.texi:1131
 msgid "This function returns the value of the @var{propname} property of @var{process}."
-msgstr "この関数は、@var{process}のプロパティ@var{propname}の値をリターンする。"
+msgstr "この関数は@var{process}のプロパティ@var{propname}の値をリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1133
@@ -1963,7 +1953,7 @@ msgstr "process-put process propname value"
 #. type: defun
 #: original_texis/processes.texi:1136
 msgid "This function sets the value of the @var{propname} property of @var{process} to @var{value}."
-msgstr "この関数は、@var{process}のプロパティ@var{propname}の値に@var{value}をセットする。"
+msgstr "この関数は@var{process}のプロパティ@var{propname}の値に@var{value}をセットする。"
 
 #. type: defun
 #: original_texis/processes.texi:1138
@@ -1974,7 +1964,7 @@ msgstr "process-plist process"
 #. type: defun
 #: original_texis/processes.texi:1140
 msgid "This function returns the process plist of @var{process}."
-msgstr "この関数は、@var{process}のプロセスplistをリターンする。"
+msgstr "この関数は@var{process}のプロセスplistをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1142
@@ -1985,7 +1975,7 @@ msgstr "set-process-plist process plist"
 #. type: defun
 #: original_texis/processes.texi:1144
 msgid "This function sets the process plist of @var{process} to @var{plist}."
-msgstr "この関数は、@var{process}のプロセスplistに@var{plist}をセットする。"
+msgstr "この関数は@var{process}のプロセスplistに@var{plist}をセットする。"
 
 #. type: section
 #: original_texis/processes.texi:1147
@@ -2001,30 +1991,28 @@ msgstr "process input"
 
 #. type: Plain text
 #: original_texis/processes.texi:1156
-#, fuzzy
-#| msgid "Asynchronous subprocesses receive input when it is sent to them by Emacs, which is done with the functions in this section.  You must specify the process to send input to, and the input data to send.  The data appears on the ``standard input'' of the subprocess."
 msgid "Asynchronous subprocesses receive input when it is sent to them by Emacs, which is done with the functions in this section.  You must specify the process to send input to, and the input data to send.  If the subprocess runs a program, the data appears on the standard input of that program; for connections, the data is sent to the connected device or program."
-msgstr "非同期サブプロセスは、Emacsにより入力が送信されたときに入力を受信し、それはこのセクション内の関数で行われます。これを行うには入力を送信するプロセスと、送信するための入力データを指定しなければなりません。そのデータは、サブプロセスの``標準入力''として表れます。"
+msgstr "非同期サブプロセスはEmacsにより入力が送信されたときに入力を受信して、それはこのセクション内の関数で行われます。これを行うには入力を送信するプロセスと送信するための入力データを指定しなければなりません。サブプロセスがプログラムを実行していたら、データはプログラムの標準入力として出現します。接続にたいしては、データは接続されたデバイスかプログラムに送信されます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1162
 msgid "Some operating systems have limited space for buffered input in a pty.  On these systems, Emacs sends an @acronym{EOF} periodically amidst the other characters, to force them through.  For most programs, these @acronym{EOF}s do no harm."
-msgstr "オペレーティングシステムには、ptyのバッファーされた入力にたいして制限をもつものがいくつかあります。それらのシステムでは、Emacsは他の文字列の間に定期的かつ強制的に、@acronym{EOF}を送信します。ほとんどのプログラムにたいして、これらの@acronym{EOF}は無害です。"
+msgstr "オペレーティングシステムにはptyのバッファーされた入力にたいして制限をもつものがいくつかあります。それらのシステムでは、Emacsは他の文字列の間に定期的かつ強制的に@acronym{EOF}を送信します。ほとんどのプログラムにたいして、これらの@acronym{EOF}は無害です。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1169
 msgid "Subprocess input is normally encoded using a coding system before the subprocess receives it, much like text written into a file.  You can use @code{set-process-coding-system} to specify which coding system to use (@pxref{Process Information}).  Otherwise, the coding system comes from @code{coding-system-for-write}, if that is non-@code{nil}; or else from the defaulting mechanism (@pxref{Default Coding Systems})."
-msgstr "サブプロセスの入力は通常、テキストをファイルに書き込むときと同じように、サブプロセスが受信する前に、コーディングシステムを使用してエンコードされます。どのコーディングシステムを使用するかを指定するには、@code{set-process-coding-system}を使用できます(@ref{Process Information}を参照)。それ以外の場合、非@code{nil}なら@code{coding-system-for-write}がコーディングシステムとなり、さもなくばデフォルトのメカニズムがコーディングシステムを決定します(@ref{Default Coding Systems}を参照)。"
+msgstr "サブプロセスの入力はテキストをファイルに書き込むときと同じように、通常はサブプロセスが受信する前、コーディングシステムを使用してエンコードされます。どのコーディングシステムを使用するかを指定するには@code{set-process-coding-system}を使用できます(@ref{Process Information}を参照)。それ以外の場合には、非@code{nil}なら@code{coding-system-for-write}がコーディングシステムとなり、さもなくばデフォルトのメカニズムがコーディングシステムを決定します(@ref{Default Coding Systems}を参照)。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1176
 msgid "Sometimes the system is unable to accept input for that process, because the input buffer is full.  When this happens, the send functions wait a short while, accepting output from subprocesses, and then try again.  This gives the subprocess a chance to read more of its pending input and make space in the buffer.  It also allows filters, sentinels and timers to run---so take account of that in writing your code."
-msgstr "入力バッファーが一杯のため、システムがプロセスからの入力を受け取ることができないことがあります。これが発生したときは、送信関数はしばらく待機して、サブプロセスの出力を受け取り、再度送信を試みます。これは保留となっている更なる入力を読み取り、バッファーに空きを作る機会をサブプロセスに与えます。これはフィルター、センチネル、タイマーの実行も可能にするので、コードを記述する際はそれを考慮してください。"
+msgstr "入力バッファーが一杯でシステムがプロセスからの入力を受け取ることができないことがあります。これが発生したときには送信関数はしばらく待機してからサブプロセスの出力を受け取って再度送信を試みます。これは保留となっている更なる入力を読み取ってバッファーに空きを作る機会をサブプロセスに与えます。これはフィルター、センチネル、タイマーの実行も可能にするのでコードを記述する際はそれを考慮してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1181
 msgid "In these functions, the @var{process} argument can be a process or the name of a process, or a buffer or buffer name (which stands for a process via @code{get-buffer-process}).  @code{nil} means the current buffer's process."
-msgstr "以下の関数では、@var{process}引数はプロセス、プロセス名、またはバッファー、バッファー名(これは@code{get-buffer-process}で取得されるプロセスを意味する)。@code{nil}は、カレントバッファーのプロセスを意味します。"
+msgstr "以下の関数では@var{process}引数はプロセス、プロセス名、またはバッファー、バッファー名(@code{get-buffer-process}で取得されるプロセス)、@code{nil}はカレントバッファーのプロセスを意味します。"
 
 #. type: defun
 #: original_texis/processes.texi:1182
@@ -2035,7 +2023,7 @@ msgstr "process-send-string process string"
 #. type: defun
 #: original_texis/processes.texi:1186
 msgid "This function sends @var{process} the contents of @var{string} as standard input.  It returns @code{nil}.  For example, to make a Shell buffer list files:"
-msgstr "この関数は@var{string}のコンテンツを、標準入力として@var{process}に送信する。たとえばファイルをリストするShellバッファーを作成するには:"
+msgstr "この関数は@var{string}のコンテンツを標準入力として@var{process}に送信する。たとえばファイルをリストするShellバッファーを作成するには:"
 
 #. type: group
 #: original_texis/processes.texi:1191
@@ -2056,12 +2044,12 @@ msgstr "process-send-region process start end"
 #. type: defun
 #: original_texis/processes.texi:1198
 msgid "This function sends the text in the region defined by @var{start} and @var{end} as standard input to @var{process}."
-msgstr "この関数は@var{start}と@var{end}で定義されるリージョンのテキストを、標準入力として@var{process}に送信する。"
+msgstr "この関数は@var{start}と@var{end}で定義されるリージョンのテキストを標準入力として@var{process}に送信する。"
 
 #. type: defun
 #: original_texis/processes.texi:1202
 msgid "An error is signaled unless both @var{start} and @var{end} are integers or markers that indicate positions in the current buffer.  (It is unimportant which number is larger.)"
-msgstr "@var{start}と@var{end}が、カレントバッファー内の位置を示す整数かマーカーでなければ、エラーがシグナルされる(いずれかの大小は重要ではない)。"
+msgstr "@var{start}と@var{end}が、カレントバッファー内の位置を示す整数かマーカーでなければエラーがシグナルされる(いずれかの大小は重要ではない)。"
 
 #. type: defun
 #: original_texis/processes.texi:1204
@@ -2072,7 +2060,7 @@ msgstr "process-send-eof &optional process"
 #. type: defun
 #: original_texis/processes.texi:1208
 msgid "This function makes @var{process} see an end-of-file in its input.  The @acronym{EOF} comes after any text already sent to it.  The function returns @var{process}."
-msgstr "この関数は、@var{process}が入力内の@acronym{EOF}(end-of-file)を見ることを可能にする。@acronym{EOF}は、すべての送信済みテキストの後になる。この関数は@var{process}をリターンする。"
+msgstr "この関数は@var{process}が入力内の@acronym{EOF} (end-of-file)を見ることを可能にする。@acronym{EOF}はすべての送信済みテキストの後になる。この関数は@var{process}をリターンする。"
 
 #. type: group
 #: original_texis/processes.texi:1213
@@ -2093,7 +2081,7 @@ msgstr "process-running-child-p &optional process"
 #. type: defun
 #: original_texis/processes.texi:1226
 msgid "This function will tell you whether a @var{process}, which must not be a connection but a real subprocess, has given control of its terminal to a child process of its own.  If this is true, the function returns the numeric ID of the foreground process group of @var{process}; it returns @code{nil} if Emacs can be certain that this is not so.  The value is @code{t} if Emacs cannot tell whether this is true.  This function signals an error if @var{process} is a network, serial, or pipe connection, or is the subprocess is not active."
-msgstr ""
+msgstr "この関数は@var{process}が接続ではない実際のサブプロセスであり、端末の制御を自身の子プロセスに与えたかどうかを示す。これが真なら関数は@var{process}のフォアグラウンドプロセスグループの数値ID、これが真ではないとEmacsが判断すれば@code{nil}をリターンする。これが真かどうかをEmacsが判断できなければ値は@code{t}。@var{process}がネットワーク接続、シリアル接続、pipe接続、またはサブプロセスが非アクティブなら関数はエラーをシグナルする。"
 
 #. type: section
 #: original_texis/processes.texi:1229
@@ -2122,41 +2110,37 @@ msgstr "signals"
 #. type: Plain text
 #: original_texis/processes.texi:1239
 msgid "@dfn{Sending a signal} to a subprocess is a way of interrupting its activities.  There are several different signals, each with its own meaning.  The set of signals and their names is defined by the operating system.  For example, the signal @code{SIGINT} means that the user has typed @kbd{C-c}, or that some analogous thing has happened."
-msgstr "サブプロセスへの@dfn{シグナル送信(sending a signal)}は、プロセスの活動に割り込む手段の1つです。異なる複数のシグナルがあり、それぞれが独自の意味をもっています。シグナルのセットとそれらの意味は、オペレーティングシステムにより定義されます。たとえばシグナル@code{SIGINT}は、ユーザーが@kbd{C-c}をタイプしたか、それに類似する何かが発生したことを意味します。"
+msgstr "サブプロセスへの@dfn{シグナル送信(sending a signal)}はプロセス活動に割り込む手段の1つです。異なる複数のシグナルがあり、それぞれが独自に意味をもちます。シグナルのセットとそれらの意味はオペレーティングシステムにより定義されます。たとえばシグナル@code{SIGINT}はユーザーが@kbd{C-c}をタイプしたか、それに類似する何かが発生したことを意味します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1244
 msgid "Each signal has a standard effect on the subprocess.  Most signals kill the subprocess, but some stop (or resume) execution instead.  Most signals can optionally be handled by programs; if the program handles the signal, then we can say nothing in general about its effects."
-msgstr "各シグナルは、サブプロセスに標準的な効果をもちます。ほとんどのシグナルはサブプロセスをkillしますが、かわりに実行を停止(あるいは再開)するものもいくつかあります。ほとんどのシグナルは、オプションでプログラムによりハンドル((処理)することができます。プログラムがそのシグナルをハンドルする場合、その影響についてわたしたちは一般的には何も言うことはできません。"
+msgstr "各シグナルはサブプロセスに標準的な効果をもちます。ほとんどのシグナルはサブプロセスをkillしますが、かわりに実行を停止(や再開)するものもいくつかあります。ほとんどのシグナルはオプションでプログラムでハンドル(処理)することができます。プログラムがそのシグナルをハンドルする場合には、その影響についてわたしたちは一般的には何も言うことはできません。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1251
 msgid "You can send signals explicitly by calling the functions in this section.  Emacs also sends signals automatically at certain times: killing a buffer sends a @code{SIGHUP} signal to all its associated processes; killing Emacs sends a @code{SIGHUP} signal to all remaining processes.  (@code{SIGHUP} is a signal that usually indicates that the user ``hung up the phone'', i.e., disconnected.)"
-msgstr "このセクション内の関数を呼び出すことにより、明示的にシグナルを送信できます。Emacsも、特定のタイミングで自動的にシグナルを送信します。バッファーのkillにより、それに関連するプロセスには@code{SIGHUP}シグナルが送信され、Emacsのkillにより、残されたすべてのプロセスに@code{SIGHUP}シグナルが送信されます(@code{SIGHUP}は通常、ユーザーが``hung up the phone''、電話を切った、つまり接続を断ったことを示す)。"
+msgstr "このセクション内の関数を呼び出すことにより明示的にシグナルを送信できます。Emacsも特定のタイミングで自動的にシグナルを送信します。バッファーのkillにより、それに関連するプロセスには@code{SIGHUP}シグナル、Emacsのkillにより残されたすべてのプロセスに@code{SIGHUP}シグナルが送信されます(@code{SIGHUP}は通常はユーザーが``hung up the phone''、電話を切った、つまり接続を断ったことを示す)。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1254
 msgid "Each of the signal-sending functions takes two optional arguments: @var{process} and @var{current-group}."
-msgstr "シグナル送信関数はそれぞれ@var{process}と@var{current-group}いう、2つのオプション引数を受け取ります。"
+msgstr "シグナル送信関数はそれぞれ@var{process}と@var{current-group}いう2つのオプション引数を受け取ります。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1262
-#, fuzzy
-#| msgid "The argument @var{process} must be either a process, a process name, a buffer, a buffer name, or @code{nil}.  A buffer or buffer name stands for a process through @code{get-buffer-process}.  @code{nil} stands for the process associated with the current buffer.  An error is signaled if @var{process} does not identify a process."
 msgid "The argument @var{process} must be either a process, a process name, a buffer, a buffer name, or @code{nil}.  A buffer or buffer name stands for a process through @code{get-buffer-process}.  @code{nil} stands for the process associated with the current buffer.  Except with @code{stop-process} and @code{continue-process}, an error is signaled if @var{process} does not identify an active process, or if it represents a network, serial, or pipe connection."
-msgstr "引数@var{process}はプロセス、プロセス名、バッファー、バッファー名、または@code{nil}のいずれかでなければなりません。バッファーまたはバッファー名は、@code{get-buffer-process}を通じて得られるプロセスを意味します。@code{nil}は、カレントバッファーに関連付けられたプロセスを意味します。@var{process}がプロセスを識別しなければ、エラーがシグナルされます。"
+msgstr "引数@var{process}はプロセス、プロセス名、バッファー、バッファー名、または@code{nil}のいずれかでなければなりません。バッファーやバッファー名は@code{get-buffer-process}を通じて得られるプロセスを意味します。@code{nil}はカレントバッファーに関連付けられたプロセスを意味します。@code{stop-process} and @code{continue-process}を除いて、@var{process}がプロセスを識別しない、あるいはネットワーク接続、シリアル接続、pipe接続を表す場合にはエラーがシグナルされます。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1274
-#, fuzzy
-#| msgid "The argument @var{current-group} is a flag that makes a difference when you are running a job-control shell as an Emacs subprocess.  If it is non-@code{nil}, then the signal is sent to the current process-group of the terminal that Emacs uses to communicate with the subprocess.  If the process is a job-control shell, this means the shell's current subjob.  If it is @code{nil}, the signal is sent to the process group of the immediate subprocess of Emacs.  If the subprocess is a job-control shell, this is the shell itself."
 msgid "The argument @var{current-group} is a flag that makes a difference when you are running a job-control shell as an Emacs subprocess.  If it is non-@code{nil}, then the signal is sent to the current process-group of the terminal that Emacs uses to communicate with the subprocess.  If the process is a job-control shell, this means the shell's current subjob.  If @var{current-group} is @code{nil}, the signal is sent to the process group of the immediate subprocess of Emacs.  If the subprocess is a job-control shell, this is the shell itself.  If @var{current-group} is @code{lambda}, the signal is sent to the process-group that owns the terminal, but only if it is not the shell itself."
-msgstr "引数@var{current-group}は、Emacsのサブプロセスとしてジョブ制御shell(job-control shell)を実行中の場合に、異なる処理を行うためのフラグです。これが非@code{nil}なら、そのシグナルはEmacsがサブプロセスとの対話に使用する端末のカレントプロセスグループに送信されます。そのプロセスがジョブ制御shellなら、これはそのshellのカレントのsubジョブになります。@code{nil}なら、そのシグナルはEmacs自身のサブプロセスのプロセスグループに送信されます。そのプロセスがジョブ制御shellなら、それはshell自身になります。"
+msgstr "引数@var{current-group}は、Emacsのサブプロセスとしてジョブ制御shell(job-control shell)を実行中の場合に異なる処理を行うためのフラグです。これが非@code{nil}なら、そのシグナルはEmacsがサブプロセスとの対話に使用する端末のカレントプロセスグループに送信されます。そのプロセスがジョブ制御shellなら、これはそのshellのカレントのsubジョブになります。@var{current-group}が@code{nil}なら、そのシグナルはEmacs自身のサブプロセスのプロセスグループに送信されます。そのプロセスがジョブ制御shellなら、それはshell自身になります。@var{current-group}が@code{lambda}なら、端末を所有するもののそれ自身はshellでない場合にはプロセスグループにシグナルを送信します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1280
 msgid "The flag @var{current-group} has no effect when a pipe is used to communicate with the subprocess, because the operating system does not support the distinction in the case of pipes.  For the same reason, job-control shells won't work when a pipe is used.  See @code{process-connection-type} in @ref{Asynchronous Processes}."
-msgstr "サブプロセスとの対話にpipeが使用されている際は、オペレーティングシステムがpipeでの区別をサポートしないので、フラグ@var{current-group}に効果はありません。同じ理由により、pipeが使用されている場合は、ジョブ制御shellは機能しないでしょう。@ref{Asynchronous Processes}内の@code{process-connection-type}を参照してください。"
+msgstr "サブプロセスとの対話にpipeが使用されている際には、オペレーティングシステムがpipeの区別をサポートしないのでフラグ@var{current-group}に効果はありません。同じ理由によりpipeが使用されていればジョブ制御shellは機能しないでしょう。@ref{Asynchronous Processes}の@code{process-connection-type}を参照してください。"
 
 #. type: defun
 #: original_texis/processes.texi:1281
@@ -2166,10 +2150,8 @@ msgstr "interrupt-process &optional process current-group"
 
 #. type: defun
 #: original_texis/processes.texi:1288
-#, fuzzy
-#| msgid "This function interrupts the process @var{process} by sending the signal @code{SIGINT}.  Outside of Emacs, typing the ``interrupt character'' (normally @kbd{C-c} on some systems, and @key{DEL} on others) sends this signal.  When the argument @var{current-group} is non-@code{nil}, you can think of this function as ``typing @kbd{C-c}'' on the terminal by which Emacs talks to the subprocess."
 msgid "This function interrupts the process @var{process} by sending the signal @code{SIGINT}.  Outside of Emacs, typing the interrupt character (normally @kbd{C-c} on some systems, and @key{DEL} on others) sends this signal.  When the argument @var{current-group} is non-@code{nil}, you can think of this function as typing @kbd{C-c} on the terminal by which Emacs talks to the subprocess."
-msgstr "この関数は、シグナル@code{SIGINT}を送信することにより、プロセス@var{process}に割り込む。Emacs外部では、``interrupt character''(割り込み文字。通常いくつかのシステムでは@kbd{C-c}、それ以外のシステムでは@key{DEL})をタイプすることにより、このシグナルが送信される。引数@var{current-group}が非@code{nil}のときは、Emacsがサブプロセスと対話する端末上で``@kbd{C-c}がタイプされた''と考えることができる。"
+msgstr "この関数はシグナル@code{SIGINT}を送信することによりプロセス@var{process}に割り込む。Emacs外部ではinterrupt character(割り込み文字。いくつかのシステムでは通常は@kbd{C-c}、それ以外のシステムでは@key{DEL})をタイプすることによりシグナルが送信される。引数@var{current-group}が非@code{nil}のときは、Emacsがサブプロセスと対話する端末上で@kbd{C-c}がタイプされたと考えることができる。"
 
 #. type: defun
 #: original_texis/processes.texi:1290
@@ -2180,7 +2162,7 @@ msgstr "kill-process &optional process current-group"
 #. type: defun
 #: original_texis/processes.texi:1294
 msgid "This function kills the process @var{process} by sending the signal @code{SIGKILL}.  This signal kills the subprocess immediately, and cannot be handled by the subprocess."
-msgstr "この関数は、シグナル@code{SIGKILL}を送信することにより、プロセス@var{process}をkillする。このシグナルは即座にサブプロセスをkillして、サブプロセスでハンドルすることはできない。"
+msgstr "この関数はシグナル@code{SIGKILL}を送信することにより、プロセス@var{process}をkillする。このシグナルは即座にサブプロセスをkillしてサブプロセスでハンドルすることはできない。"
 
 #. type: defun
 #: original_texis/processes.texi:1296
@@ -2190,10 +2172,8 @@ msgstr "quit-process &optional process current-group"
 
 #. type: defun
 #: original_texis/processes.texi:1301
-#, fuzzy
-#| msgid "This function sends the signal @code{SIGQUIT} to the process @var{process}.  This signal is the one sent by the ``quit character'' (usually @kbd{C-b} or @kbd{C-\\}) when you are not inside Emacs."
 msgid "This function sends the signal @code{SIGQUIT} to the process @var{process}.  This signal is the one sent by the quit character (usually @kbd{C-\\}) when you are not inside Emacs."
-msgstr "この関数は、プロセス@var{process}にシグナル@code{SIGQUIT}を送信する。これはEmacs外部では``quit character''(通常は@kbd{C-b}か@kbd{C-\\})により送信されるシグナルである。"
+msgstr "この関数はプロセス@var{process}にシグナル@code{SIGQUIT}を送信する。これはEmacs外部ではquit character(通常は@kbd{C-\\})により送信されるシグナル。"
 
 #. type: defun
 #: original_texis/processes.texi:1303
@@ -2204,14 +2184,12 @@ msgstr "stop-process &optional process current-group"
 #. type: defun
 #: original_texis/processes.texi:1311
 msgid "This function stops the specified @var{process}.  If it is a real subprocess running a program, it sends the signal @code{SIGTSTP} to that subprocess.  If @var{process} represents a network, serial, or pipe connection, this function inhibits handling of the incoming data from the connection; for a network server, this means not accepting new connections.  Use @code{continue-process} to resume normal execution."
-msgstr ""
+msgstr "この関数は指定した@var{process}を停止する。それがプログラムを実行中の実際のサブプロセスなら、そのサブプロセスにシグナル@code{SIGTSTP}を送信する。@var{process}がネットワーク接続、シリアル接続、pipe接続を表す場合には、この関数はその接続から到達するデータのハンドリングを抑制する。ネットワークサーバーでは、これは新たな接続をacceptしないことを意味する。通常の実行の再開には@code{continue-process}を使用すること。"
 
 #. type: defun
 #: original_texis/processes.texi:1317
-#, fuzzy
-#| msgid "Outside of Emacs, on systems with job control, the ``stop character'' (usually @kbd{C-z}) normally sends this signal.  When @var{current-group} is non-@code{nil}, you can think of this function as ``typing @kbd{C-z}'' on the terminal Emacs uses to communicate with the subprocess."
 msgid "Outside of Emacs, on systems with job control, the stop character (usually @kbd{C-z}) normally sends the @code{SIGTSTP} signal to a subprocess.  When @var{current-group} is non-@code{nil}, you can think of this function as typing @kbd{C-z} on the terminal Emacs uses to communicate with the subprocess."
-msgstr "ジョブ制御をもつシステム上のEmacs外部では、``stop character''(通常は@kbd{C-z})がこのシグナルを送信する。@var{current-group}が非@code{nil}なら、この関数をサブプロセスとの対話にEmacsが使用する端末上で``@kbd{C-z}がタイプされた''と考えることができる。"
+msgstr "ジョブ制御をもつシステム上のEmacs外部ではstop character(通常は@kbd{C-z})が@code{SIGTSTP}シグナルを送信する。@var{current-group}が非@code{nil}なら、この関数をサブプロセスとの対話にEmacsが使用する端末上で@kbd{C-z}がタイプされたと考えることができる。"
 
 #. type: defun
 #: original_texis/processes.texi:1319
@@ -2222,7 +2200,7 @@ msgstr "continue-process &optional process current-group"
 #. type: defun
 #: original_texis/processes.texi:1327
 msgid "This function resumes execution of the process @var{process}.  If it is a real subprocess running a program, it sends the signal @code{SIGCONT} to that subprocess; this presumes that @var{process} was stopped previously.  If @var{process} represents a network, serial, or pipe connection, this function resumes handling of the incoming data from the connection.  For serial connections, data that arrived during the time the process was stopped might be lost."
-msgstr ""
+msgstr "この関数はプロセス@var{process}の実行を再開する。それがプログラムを実行中の実際のサブプロセスなら、そのサブプロセスにシグナル@code{SIGCONT}を送信する。この関数は@var{process}が以前に停止されたとみなす。@var{process}がネットワーク接続、シリアル接続、pipe接続を表す場合には、この関数はその接続から到達するデータのハンドリングを再開する。シリアル接続ではプロセス停止中に到達したデータは失われるかもしれない。"
 
 #. type: deffn
 #: original_texis/processes.texi:1329
@@ -2233,12 +2211,12 @@ msgstr "Command signal-process process signal"
 #. type: deffn
 #: original_texis/processes.texi:1333
 msgid "This function sends a signal to process @var{process}.  The argument @var{signal} specifies which signal to send; it should be an integer, or a symbol whose name is a signal."
-msgstr "この関数は、プロセス@var{process}にシグナルを送信する。引数@var{signal}は、どのシグナルを送信するかを指定する。これは整数、または名前がシグナルであるようなシンボルであること。"
+msgstr "この関数はプロセス@var{process}にシグナルを送信する。引数@var{signal}はどのシグナルを送信するかを指定する。これは整数、または名前がシグナルであるようなシンボルであること。"
 
 #. type: deffn
 #: original_texis/processes.texi:1337
 msgid "The @var{process} argument can be a system process @acronym{ID} (an integer); that allows you to send signals to processes that are not children of Emacs.  @xref{System Processes}."
-msgstr "@var{process}引数にはシステムプロセス@acronym{ID}(整数)を指定できる。これによりEmacsの子プロセス以外のプロセスにシグナルを送信できる。@ref{System Processes}を参照のこと。"
+msgstr "@var{process}引数にはシステムプロセス@acronym{ID} (整数)を指定できる。これによりEmacsの子プロセス以外のプロセスにシグナルを送信できる。@ref{System Processes}を参照のこと。"
 
 #. type: section
 #: original_texis/processes.texi:1340
@@ -2260,32 +2238,30 @@ msgstr "output from processes"
 
 #. type: Plain text
 #: original_texis/processes.texi:1350
-#, fuzzy
-#| msgid "The output that a subprocess writes to its standard output stream is passed to a function called the @dfn{filter function}.  The default filter function simply inserts the output into a buffer, which is called the associated buffer of the process (@pxref{Process Buffers}).  If the process has no buffer then the default filter discards the output."
 msgid "The output that an asynchronous subprocess writes to its standard output stream is passed to a function called the @dfn{filter function}.  The default filter function simply inserts the output into a buffer, which is called the associated buffer of the process (@pxref{Process Buffers}).  If the process has no buffer then the default filter discards the output."
-msgstr "サブプロセスが自身の標準出力に書き込んだ出力は、@dfn{フィルター関数(filter function)}と呼ばれる関数に渡されます。デフォルトのフィルター関数は単に出力をバッファーに挿入します。このバッファーを、そのプロセスに関連付けられたバッファーと呼びます(@ref{Process Buffers}を参照)。プロセスがバッファーをもたなければ、デフォルトフィルターは出力を破棄します。"
+msgstr "非同期サブプロセスが自身の標準出力に書き込んだ出力は@dfn{フィルター関数(filter function)}と呼ばれる関数に渡されます。デフォルトのフィルター関数は単に出力をバッファーに挿入します。このバッファーをプロセスに関連付けられたバッファーと呼びます(@ref{Process Buffers}を参照)。プロセスがバッファーをもたなければデフォルトフィルターは出力を破棄します。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1360
-#, fuzzy
-#| msgid "It is impossible to separate the standard output and standard error streams of the subprocess, because Emacs normally spawns the subprocess inside a pseudo-TTY, and a pseudo-TTY has only one output channel.  If you want to keep the output to those streams separate, you should redirect one of them to a file---for example, by using an appropriate shell command."
 msgid "If the subprocess writes to its standard error stream, by default the error output is also passed to the process filter function.  If Emacs uses a pseudo-TTY (pty) for communication with the subprocess, then it is impossible to separate the standard output and standard error streams of the subprocess, because a pseudo-TTY has only one output channel.  In that case, if you want to keep the output to those streams separate, you should redirect one of them to a file---for example, by using an appropriate shell command via @code{start-process-shell-command} or a similar function."
-msgstr "Emacsは通常、疑似端末(pseudo-TTY)内部でサブプロセスをspawnし、かつ疑似端末は出力チャンネルを1つしかもてないので、サブプロセスの標準出力ストリームと標準エラーストリームを区別するのは不可能です。それらのストリームの出力を区別して保ちたい場合は、たとえば適当なshellコマンドを使用して、いずれか1つをファイルにリダイレクトするべきです。"
+msgstr ""
+"サブプロセスが標準エラーストリームに書き込む場合には、デフォルトではエラー出力もフィルター関数に渡されて処理されます。Emacsがサブプロセスとの対話に疑似端末(pty: pseudo-TTY)を使用する場合には、疑似端末は出力チャンネルを1つしかもてないので、サブプロセスの標準出力ストリームと標準エラーストリームを区別するのは不可能です。それらのストリームの出力を区別して保ちたい場合は、たとえば\n"
+"@code{start-process-shell-command}や類似コマンドを通じて適当なshellコマンドを使用することにより、いずれか1つをファイルにリダイレクトする必要があります。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1366
 msgid "Alternatively, you could use the @code{:stderr} parameter with a non-@code{nil} value in a call to @code{make-process} (@pxref{Asynchronous Processes, make-process}) to make the destination of the error output separate from the standard output; in that case, Emacs will use pipes for communicating with the subprocess."
-msgstr ""
+msgstr "エラー出力先を標準出力から区別するためには、かわりに非@code{nil}の@code{:stderr}パラメーターで@code{make-process} (@ref{Asynchronous Processes, make-process}を参照)を呼び出すことができます。この場合には、サブプロセスとの対話にEmacsはpipeを使用することになります。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1371
 msgid "When a subprocess terminates, Emacs reads any pending output, then stops reading output from that subprocess.  Therefore, if the subprocess has children that are still live and still producing output, Emacs won't receive that output."
-msgstr "サブプロセス終了時、Emacsは保留中の出力を読み取り、その後そのサブプロセスからの出力の読み取りを停止します。したがって、そのサブプロセスに生きた子プロセスがあり、まだ出力を生成するような場合、Emacsはその出力を受け取らないでしょう。"
+msgstr "サブプロセス終了時にEmacsは保留中の出力を読み取って、その後そのサブプロセスからの出力の読み取りを停止します。したがってそのサブプロセスに生きた子プロセスがあり、まだ出力を生成するような場合には、Emacsはその出力を受け取らないでしょう。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1381
 msgid "Output from a subprocess can arrive only while Emacs is waiting: when reading terminal input (see the function @code{waiting-for-user-input-p}), in @code{sit-for} and @code{sleep-for} (@pxref{Waiting}), and in @code{accept-process-output} (@pxref{Accepting Output}).  This minimizes the problem of timing errors that usually plague parallel programming.  For example, you can safely create a process and only then specify its buffer or filter function; no output can arrive before you finish, if the code in between does not call any primitive that waits."
-msgstr "サブプロセスからの出力は、Emacsが待機している間、端末入力読み取り時(関数@code{waiting-for-user-input-p}、@ref{Waiting}の@code{sit-for}と@code{sleep-for}、および@ref{Accepting Output}の@code{accept-process-output}を参照されたい)のみ到着可能です。これは、並列プログラミングで普遍的に悩みの種である、タイミングエラーの問題を最小化します。たとえば、安全にプロセスを作成して、その後でのみプロセスのバッファーやフィルター関数を指定できます。その間にあるコードが待機するプリミティブを何も呼び出さなければ、完了するまで到着可能な出力はありません。"
+msgstr "サブプロセスからの出力はEmacsが待機している間の端末入力読み取り時(関数@code{waiting-for-user-input-p}、@ref{Waiting}の@code{sit-for}と@code{sleep-for}、および@ref{Accepting Output}の@code{accept-process-output}を参照)のみ到着可能です。これは並列プログラミングで普遍的に悩みの種であるタイミングエラーの問題を最小化します。たとえば安全にプロセスを作成して、その後でのみプロセスのバッファーやフィルター関数を指定できます。その間にあるコードが待機するプリミティブを何も呼び出さなければ完了するまで到達可能な出力はありません。"
 
 #. type: defvar
 #: original_texis/processes.texi:1382
@@ -2296,7 +2272,7 @@ msgstr "process-adaptive-read-buffering"
 #. type: defvar
 #: original_texis/processes.texi:1390
 msgid "On some systems, when Emacs reads the output from a subprocess, the output data is read in very small blocks, potentially resulting in very poor performance.  This behavior can be remedied to some extent by setting the variable @code{process-adaptive-read-buffering} to a non-@code{nil} value (the default), as it will automatically delay reading from such processes, thus allowing them to produce more output before Emacs tries to read it."
-msgstr "いくつかのシステムでは、Emacsがサブプロセスの出力を読み取る際、出力データを非常に小さいブロックで読み取るため、結果として潜在的に非常に貧弱なパフォーマンスとなることがる。この挙動は、変数@code{process-adaptive-read-buffering}を非@code{nil}値(デフォルト)にセットして拡張することにより改善し得る。これにより、そのようなプロセスからの読み取りを自動的に遅延して、Emacsが読み取りを試みる前に、出力がより生成されるようになる。"
+msgstr "いくつかのシステムではEmacsがサブプロセスの出力を読み取る際に出力データを非常に小さいブロックで読み取るために、結果として潜在的に非常に貧弱なパフォーマンスとなることがる。この挙動は変数@code{process-adaptive-read-buffering}を非@code{nil}値(デフォルト)にセットして拡張することにより改善し得る。これにより、そのようなプロセスからの読み取りを自動的に遅延して、Emacsが読み取りを試みる前に出力がより多く生成されるようになる。"
 
 #. type: subsection
 #: original_texis/processes.texi:1397 original_texis/processes.texi:1399
@@ -2308,7 +2284,7 @@ msgstr "Process Buffers"
 #. type: menuentry
 #: original_texis/processes.texi:1397
 msgid "By default, output is put in a buffer."
-msgstr "デフォルトでは、出力はバッファーに送信される。"
+msgstr "デフォルトでは出力はバッファーに送信される。"
 
 #. type: node
 #: original_texis/processes.texi:1397 original_texis/processes.texi:1537
@@ -2330,7 +2306,7 @@ msgstr "Decoding Output"
 #. type: menuentry
 #: original_texis/processes.texi:1397
 msgid "Filters can get unibyte or multibyte strings."
-msgstr "フィルターはユニバイトおよびマルチバイトの文字列を取得できる。"
+msgstr "フィルターはユニバイトやマルチバイトの文字列を取得できる。"
 
 #. type: node
 #: original_texis/processes.texi:1397 original_texis/processes.texi:1745
@@ -2346,12 +2322,12 @@ msgstr "プロセスの出力到着まで待機する方法。"
 #. type: Plain text
 #: original_texis/processes.texi:1409
 msgid "A process can (and usually does) have an @dfn{associated buffer}, which is an ordinary Emacs buffer that is used for two purposes: storing the output from the process, and deciding when to kill the process.  You can also use the buffer to identify a process to operate on, since in normal practice only one process is associated with any given buffer.  Many applications of processes also use the buffer for editing input to be sent to the process, but this is not built into Emacs Lisp."
-msgstr "プロセスは@dfn{関連付けられたバッファー(associated buffer)}をもつことができます(通常はもつ)。これは普通のEmacsバッファーであり、2つの目的のために使用されます。1つはプロセスからの出力の格納、もう1つはプロセスをkillする時期を判断するためです。通常の習慣では、任意の与えられたバッファーにたいして関連付けられるプロセスは1つだけなので、処理対象のプロセスを識別するためにそのバッファーを使用することもできます。プロセス使用の多くはプロセスに送信する入力を編集するためにもこのバッファーを使用しますが、これはEmacs Lispに組み込まれてはいません。"
+msgstr "プロセスは@dfn{関連付けられたバッファー(associated buffer)}をもつことができます(通常はもつ)。これは普通のEmacsバッファーであり、2つの目的のために使用されます。1つはプロセスからの出力の格納、もう1つはプロセスをkillする時期を判断するためです。通常の習慣では任意の与えられたバッファーにたいして関連付けられるプロセスは1つだけなので、処理対象のプロセスを識別するためにそのバッファーを使用することもできます。プロセス使用の多くはプロセスに送信する入力を編集するためにもこのバッファーを使用しますが、これはEmacs Lispの組み込みではありません。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1416
 msgid "By default, process output is inserted in the associated buffer.  (You can change this by defining a custom filter function, @pxref{Filter Functions}.)  The position to insert the output is determined by the @code{process-mark}, which is then updated to point to the end of the text just inserted.  Usually, but not always, the @code{process-mark} is at the end of the buffer."
-msgstr "デフォルトでは、プロセスの出力は関連付けられたバッファーに挿入されます(カスタムフィルター関数の定義により変更可能。@ref{Filter Functions}を参照されたい)。出力を挿入する位置は、@code{process-mark}により決定されます。これは正に挿入されたテキストの終端に、ポイントを更新します。通常、ただし常にではありませんが、@code{process-mark}はバッファーの終端になります。"
+msgstr "デフォルトでは、プロセスの出力は関連付けられたバッファーに挿入されます(カスタムフィルター関数の定義により変更可能。@ref{Filter Functions}を参照)。出力を挿入する位置は@code{process-mark}により決定されます。これは正に挿入されたテキストの終端にポイントを更新します。通常(常にではない)は@code{process-mark}はバッファーの終端になります。"
 
 #. type: findex
 #: original_texis/processes.texi:1417
@@ -2362,7 +2338,7 @@ msgstr "process-kill-buffer-query-function"
 #. type: Plain text
 #: original_texis/processes.texi:1424
 msgid "Killing the associated buffer of a process also kills the process.  Emacs asks for confirmation first, if the process's @code{process-query-on-exit-flag} is non-@code{nil} (@pxref{Query Before Exit}).  This confirmation is done by the function @code{process-kill-buffer-query-function}, which is run from @code{kill-buffer-query-functions} (@pxref{Killing Buffers})."
-msgstr "プロセスに関連付けられたバッファーをkillすることにより、そのプロセスもkillされます。そのプロセスの@code{process-query-on-exit-flag}が非@code{nil}なら、Emacsはまず確認を求めます(@ref{Query Before Exit}を参照)。この確認は関数@code{process-kill-buffer-query-function}により行われ、これは@code{kill-buffer-query-functions}から実行されます(@ref{Killing Buffers}を参照)。"
+msgstr "プロセスに関連付けられたバッファーをkillすることによりプロセスもkillされます。そのプロセスの@code{process-query-on-exit-flag}が非@code{nil}なら、Emacsはまず確認を求めます(@ref{Query Before Exit}を参照)。この確認は関数@code{process-kill-buffer-query-function}により行われて、これは@code{kill-buffer-query-functions}から実行されます(@ref{Killing Buffers}を参照)。"
 
 #. type: defun
 #: original_texis/processes.texi:1425
@@ -2372,10 +2348,8 @@ msgstr "process-buffer process"
 
 #. type: defun
 #: original_texis/processes.texi:1428
-#, fuzzy
-#| msgid "This function returns the associated buffer of the process @var{process}."
 msgid "This function returns the associated buffer of the specified @var{process}."
-msgstr "この関数は、プロセス@var{process}の関連付けられたバッファーをリターンする。"
+msgstr "この関数は指定された@var{process}の関連付けられたバッファーをリターンする。"
 
 #. type: group
 #: original_texis/processes.texi:1433
@@ -2396,27 +2370,27 @@ msgstr "process-mark process"
 #. type: defun
 #: original_texis/processes.texi:1440
 msgid "This function returns the process marker for @var{process}, which is the marker that says where to insert output from the process."
-msgstr "この関数は、@var{process}にたいするプロセスマーカーをリターンする。これはプロセスからの出力をどこに挿入するかを示すマーカーである。"
+msgstr "この関数は@var{process}にたいするプロセスマーカーをリターンする。これはプロセスからの出力をどこに挿入するかを示すマーカー。"
 
 #. type: defun
 #: original_texis/processes.texi:1443
 msgid "If @var{process} does not have a buffer, @code{process-mark} returns a marker that points nowhere."
-msgstr "@var{process}バッファーをもたなければ、@code{process-mark}は存在しない場所を指すマーカーをリターンする。"
+msgstr "@var{process}がバッファーをもたなければ、@code{process-mark}は存在しない場所を指すマーカーをリターンする。"
 
 #. type: defun
 #: original_texis/processes.texi:1447
 msgid "The default filter function uses this marker to decide where to insert process output, and updates it to point after the inserted text.  That is why successive batches of output are inserted consecutively."
-msgstr "デフォルトフィルター関数は、プロセス出力の挿入場所の決定にこのマーカーを使用し、挿入したテキストの後にポイントを更新する。連続するバッチ出力が、連続して挿入されるのは、これが理由である。"
+msgstr "デフォルトのフィルター関数はプロセス出力の挿入場所の決定にこのマーカーを使用して、挿入したテキストの後にポイントを更新する。連続するバッチ出力が連続して挿入されるのはこれが理由。"
 
 #. type: defun
 #: original_texis/processes.texi:1451
 msgid "Custom filter functions normally should use this marker in the same fashion.  For an example of a filter function that uses @code{process-mark}, @pxref{Process Filter Example}."
-msgstr "カスタムフィルター関数は、このマーカーを通常は同じ方式で使用するべきである。@code{process-mark}を使用するフィルター関数の例は、@ref{Process Filter Example}を参照のこと。"
+msgstr "カスタムフィルター関数はこのマーカーを通常は同じ方式で使用すること。@code{process-mark}を使用するフィルター関数の例は@ref{Process Filter Example}を参照のこと。"
 
 #. type: defun
 #: original_texis/processes.texi:1455
 msgid "When the user is expected to enter input in the process buffer for transmission to the process, the process marker separates the new input from previous output."
-msgstr "ユーザーにプロセスバッファー内でプロセスに送信するための入力を期待する際は、プロセスマーカーは以前の出力から新たな入力を区別する。"
+msgstr "ユーザーにプロセスバッファー内でプロセスに送信するための入力を期待する際には、プロセスマーカーは以前の出力から新たな入力を区別する。"
 
 #. type: defun
 #: original_texis/processes.texi:1457
@@ -2427,7 +2401,7 @@ msgstr "set-process-buffer process buffer"
 #. type: defun
 #: original_texis/processes.texi:1461
 msgid "This function sets the buffer associated with @var{process} to @var{buffer}.  If @var{buffer} is @code{nil}, the process becomes associated with no buffer."
-msgstr "この関数は、@var{process}に関連付けられたバッファーに、@var{buffer}をセットする。@var{buffer}が@code{nil}なら、プロセスはバッファーに関連付けられない。"
+msgstr "この関数は@var{process}に関連付けられたバッファーに@var{buffer}をセットする。@var{buffer}が@code{nil}ならプロセスはバッファーに関連付けられない。"
 
 #. type: defun
 #: original_texis/processes.texi:1463
@@ -2438,7 +2412,7 @@ msgstr "get-buffer-process buffer-or-name"
 #. type: defun
 #: original_texis/processes.texi:1470
 msgid "This function returns a nondeleted process associated with the buffer specified by @var{buffer-or-name}.  If there are several processes associated with it, this function chooses one (currently, the one most recently created, but don't count on that).  Deletion of a process (see @code{delete-process}) makes it ineligible for this function to return."
-msgstr "この関数は、@var{buffer-or-name}で指定されるバッファーに関連付けられた、削除されていないプロセスをリターンする。そのバッファーに複数のプロセスが関連付けられている場合、この関数はいずれか1つ(現在のところもっとも最近作成されたプロセスだが、これを当てにしないこと)を選択する。プロセスの削除(@code{delete-process}を参照)により、そのプロセスはこの関数がリターンするプロセスとしては不適格となる。"
+msgstr "この関数は@var{buffer-or-name}で指定されるバッファーに関連付けられた、削除されていないプロセスをリターンする。そのバッファーに複数のプロセスが関連付けられている場合には、この関数はいずれか1つ(現在のところもっとも最近作成されたプロセスだがこれを期待しないこと)を選択する。プロセスの削除(@code{delete-process}を参照)により、そのプロセスはこの関数がリターンするプロセスとしては不適格となる。"
 
 #. type: defun
 #: original_texis/processes.texi:1473
@@ -2458,19 +2432,18 @@ msgstr ""
 #. type: defun
 #: original_texis/processes.texi:1483
 msgid "Killing the process's buffer deletes the process, which kills the subprocess with a @code{SIGHUP} signal (@pxref{Signals to Processes})."
-msgstr "プロセスのバッファーをkillすることにより、@code{SIGHUP}シグナルでサブプロセスをkillして、プロセスを削除する(@ref{Signals to Processes}を参照)。"
+msgstr "プロセスのバッファーをkillすることにより、@code{SIGHUP}シグナルでサブプロセスをkillしてプロセスを削除する(@ref{Signals to Processes}を参照)。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1492
 msgid "If the process's buffer is displayed in a window, your Lisp program may wish to tell the process the dimensions of that window, so that the process could adapt its output to those dimensions, much as it adapts to the screen dimensions.  The following functions allow communicating this kind of information to processes; however, not all systems support the underlying functionality, so it is best to provide fallbacks, e.g., via command-line arguments or environment variables."
-msgstr ""
+msgstr "プロセスのバッファーがウィンドウに表示されている場合には、プロセスが出力をスクリーンのサイズに適応させるのと同様に、Lispプログラムでウィンドウのサイズにプロセス出力を適応させるようにプロセスに指示したいと思うでしょう。以下の関数によりプロセスにたいしてこの種の情報をやり取りできます。しかしすべてのシステムが基礎となる機能をサポートする訳ではないので、コマンドライン引数や環境変数を通じたフォールバックを提供するのが最良です。"
 
 #. type: defun
 #: original_texis/processes.texi:1493
-#, fuzzy, no-wrap
-#| msgid "set-process-plist process plist"
+#, no-wrap
 msgid "set-process-window-size process height width"
-msgstr "set-process-plist process plist"
+msgstr "set-process-window-size process height width"
 
 #. type: defun
 #: original_texis/processes.texi:1498
