@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-02-16 18:48+0900\n"
+"PO-Revision-Date: 2020-02-17 00:17+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -7239,24 +7239,18 @@ msgstr "bottom dividers"
 
 #. type: Plain text
 #: original_texis/display.texi:4312
-#, fuzzy
-#| msgid "Window dividers are bars drawn between a frame's windows.  A ``right'' divider is drawn between a window and any adjacent windows on the right.  Its width (thickness) is specified by the frame parameter @code{right-divider-width}.  A ``bottom'' divider is drawn between a window and adjacent windows on the bottom or the echo area.  Its width is specified by the frame parameter @code{bottom-divider-width}.  In either case, specifying a width of zero means to not draw such dividers.  @xref{Layout Parameters}."
 msgid "Window dividers are bars drawn between a frame's windows.  A right divider is drawn between a window and any adjacent windows on the right.  Its width (thickness) is specified by the frame parameter @code{right-divider-width}.  A bottom divider is drawn between a window and adjacent windows on the bottom or the echo area.  Its width is specified by the frame parameter @code{bottom-divider-width}.  In either case, specifying a width of zero means to not draw such dividers.  @xref{Layout Parameters}."
-msgstr "ウィンドウディバイダーとは、フレームのウィンドウ間に描画されるバーのことです。``右(right)''ディバイダーは、あるウィンドウと、その右に隣接する任意のウィンドウの間に描画されます。その幅(厚さ)は、フレームパラメーター@code{right-divider-width}で指定されます。``下(bottom)''ディバイダーは、あるウィンドウと、その下に隣接するウィンドウ、またはエコーエリアとの間に描画されます。その幅は、フレームパラメーター@code{bottom-divider-width}で指定されます。いずれの場合も、幅に0を指定すると、そのようなディバイダーを描画しないことを意味します。@ref{Layout Parameters}を参照してください。"
+msgstr "ウィンドウディバイダーとはフレームのウィンドウ間に描画されるバーのことです。右(right)ディバイダーはあるウィンドウと、その右に隣接する任意のウィンドウの間に描画されます。その幅(厚さ)はフレームパラメーター@code{right-divider-width}で指定されます。下(bottom)ディバイダーはあるウィンドウと、その下に隣接するウィンドウやエコーエリアとの間に描画されます。その幅はフレームパラメーター@code{bottom-divider-width}で指定されます。いずれの場合でも幅に0を指定すると、そのようなディバイダーを描画しないことを意味します。@ref{Layout Parameters}を参照してください。"
 
 #. type: Plain text
 #: original_texis/display.texi:4321
-#, fuzzy
-#| msgid "Technically, a right divider ``belongs'' to the window on its left, which means that its width contributes to the total width of that window.  A bottom divider ``belongs'' to the window above it, which means that its width contributes to the total height of that window.  @xref{Window Sizes}.  When a window has both, a right and a bottom divider, the bottom divider ``prevails''.  This means that a bottom divider is drawn over the full total width of its window while the right divider ends above the bottom divider."
 msgid "Technically, a right divider belongs to the window on its left, which means that its width contributes to the total width of that window.  A bottom divider belongs to the window above it, which means that its width contributes to the total height of that window.  @xref{Window Sizes}.  When a window has both, a right and a bottom divider, the bottom divider prevails.  This means that a bottom divider is drawn over the full total width of its window while the right divider ends above the bottom divider."
-msgstr "技術的には、右ディバイダーはそれの左にあるウィンドウに``所属''し、その幅がそのウィンドウのトータル幅に寄与することを意味します。下ディバイダーは上にあるウィンドウに``所属''し、その幅がそのウィンドウのトータル高さに寄与することを意味します。@ref{Window Sizes}を参照してください。あるウィンドウが右ディバイダーと左ディバイダーの両方をもつ場合、下ディバイダーが``優勢''になります。これは、右ディバイダーが下ディバイダーの上で終端されるのに比べて、下ディバイダーはそのウィンドウの完全なトータル幅で描画されることを意味します。"
+msgstr "技術的には右ディバイダーはそれの左にあるウィンドウに所属して、その幅がそのウィンドウのトータル幅に寄与することを意味します。下ディバイダーは上にあるウィンドウに所属して、その幅がそのウィンドウのトータル高さに寄与することを意味します。@ref{Window Sizes}を参照してください。あるウィンドウが右ディバイダーと左ディバイダーの両方をもつ場合には下ディバイダーが優勢になります。これは右ディバイダーが下ディバイダーの上で終端されるのに比べて、下ディバイダーはそのウィンドウの完全なトータル幅で描画されることを意味しています。"
 
 #. type: Plain text
 #: original_texis/display.texi:4327
-#, fuzzy
-#| msgid "Dividers can be dragged with the mouse and are therefore useful for adjusting the sizes of adjacent windows with the mouse.  They also serve to visually set apart adjacent windows when no scroll bars or mode lines are present.  The following three faces allow to customize the appearance of dividers:"
 msgid "Dividers can be dragged with the mouse and are therefore useful for adjusting the sizes of adjacent windows with the mouse.  They also serve to visually set apart adjacent windows when no scroll bars or mode lines are present.  The following three faces allow the customization of the appearance of dividers:"
-msgstr "ディバイダーはマウスでドラッグでき、それゆえマウスで隣接するウィンドウのサイズを調整するために有用です。これらはスクロールバーやモードラインが表示されていないときに、隣接するウィンドウを視覚的に分離する役目もあります。以下の3つのフェイスにより、ディバイダーの外観をカスタマイズできます:"
+msgstr "ディバイダーはマウスでドラッグできるのでマウスで隣接するウィンドウのサイズを調整するために有用です。これらはスクロールバーやモードラインが表示されていないときに隣接するウィンドウを視覚的に分離する役目もあります。以下の3つのフェイスによりディバイダーの外観をカスタマイズできます:"
 
 #. type: item
 #: original_texis/display.texi:4329
@@ -7267,7 +7261,7 @@ msgstr "window-divider"
 #. type: table
 #: original_texis/display.texi:4333
 msgid "When a divider is less than three pixels wide, it is drawn solidly with the foreground of this face.  For larger dividers this face is used for the inner part only, excluding the first and last pixel."
-msgstr "ディバイダーの幅が3ピクセル未満のときは、このフェイスのフォアグラウンドカラーで塗りつぶしで描画される。これより広いディバイダーでは、最初と最後のピクセルを除く、内部にたいしてのみこのフェイスが使用される。"
+msgstr "ディバイダーの幅が3ピクセル未満のときは、このフェイスのフォアグラウンドカラーで塗りつぶしで描画される。これより広いディバイダーでは、最初と最後のピクセルを除いた内部にたいしてのみこのフェイスが使用される。"
 
 #. type: item
 #: original_texis/display.texi:4334
@@ -7278,7 +7272,7 @@ msgstr "window-divider-first-pixel"
 #. type: table
 #: original_texis/display.texi:4338
 msgid "This is the face used for drawing the first pixel of a divider that is at least three pixels wide.  To obtain a solid appearance, set this to the same value used for the @code{window-divider} face."
-msgstr "これは少なくとも幅が3ピクセルあるディバイダーの、最初のピクセルを描画するために使用される。塗りつぶし(solid)の外観を得るためには、@code{window-divider}フェイスに使用されるのと同じ値をセットすること。"
+msgstr "これは少なくとも幅が3ピクセルあるディバイダーの最初のピクセルを描画するために使用される。塗りつぶし(solid)の外観を得るためには@code{window-divider}フェイスに使用されるのと同じ値をセットすること。"
 
 #. type: item
 #: original_texis/display.texi:4339
@@ -7289,12 +7283,12 @@ msgstr "window-divider-last-pixel"
 #. type: table
 #: original_texis/display.texi:4343
 msgid "This is the face used for drawing the last pixel of a divider that is at least three pixels wide.  To obtain a solid appearance, set this to the same value used for the @code{window-divider} face."
-msgstr "これは少なくとも幅が3ピクセルあるディバイダーの、最後のピクセルを描画するために使用される。塗りつぶし(solid)の外観を得るためには、@code{window-divider}フェイスに使用されるのと同じ値をセットすること。"
+msgstr "これは少なくとも幅が3ピクセルあるディバイダーの最後のピクセルを描画するために使用される。塗りつぶし(solid)の外観を得るためには@code{window-divider}フェイスに使用されるのと同じ値をセットすること。"
 
 #. type: Plain text
 #: original_texis/display.texi:4347
 msgid "You can get the sizes of the dividers of a specific window with the following two functions."
-msgstr "以下の2つの関数により、特定のウィンドウのディバイダーのサイズを取得できます。"
+msgstr "以下の2つの関数により特定のウィンドウのディバイダーのサイズを取得できます。"
 
 #. type: defun
 #: original_texis/display.texi:4348
@@ -7305,7 +7299,7 @@ msgstr "window-right-divider-width &optional window"
 #. type: defun
 #: original_texis/display.texi:4352
 msgid "Return the width (thickness) in pixels of @var{window}'s right divider.  @var{window} must be a live window and defaults to the selected one.  The return value is always zero for a rightmost window."
-msgstr "@var{window}の右ディバイダーの幅(厚さ)を、ピクセル単位でリターンする。@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウである。最右ウィンドウにたいするリターン値は、常に0である。"
+msgstr "@var{window}の右ディバイダーの幅(厚さ)をピクセル単位でリターンする。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。最右ウィンドウにたいするリターン値は常に0。"
 
 #. type: defun
 #: original_texis/display.texi:4354
@@ -7316,7 +7310,7 @@ msgstr "window-bottom-divider-width &optional window"
 #. type: defun
 #: original_texis/display.texi:4359
 msgid "Return the width (thickness) in pixels of @var{window}'s bottom divider.  @var{window} must be a live window and defaults to the selected one.  The return value is zero for the minibuffer window or a bottommost window on a minibuffer-less frame."
-msgstr "@var{window}の下ディバイダーの幅(厚さ)を、ピクセル単位でリターンする。@var{window}は生きたウィンドウでなければならず、デフォルトは選択されたウィンドウである。ミニバッファーウィンドウ、またはミニバッファーがないフレームの最下ウィンドウにたいするリターン値は、常に0である。"
+msgstr "@var{window}の下ディバイダーの幅(厚さ)をピクセル単位でリターンする。@var{window}は生きたウィンドウでなければならずデフォルトは選択されたウィンドウ。ミニバッファーウィンドウやミニバッファーがないフレームの最下ウィンドウにたいするリターン値は常に0。"
 
 #. type: section
 #: original_texis/display.texi:4363
@@ -7339,17 +7333,17 @@ msgstr "display @r{(text property)}"
 #. type: Plain text
 #: original_texis/display.texi:4373
 msgid "The @code{display} text property (or overlay property) is used to insert images into text, and to control other aspects of how text displays.  The value of the @code{display} property should be a display specification, or a list or vector containing several display specifications.  Display specifications in the same @code{display} property value generally apply in parallel to the text they cover."
-msgstr "テキストプロパティ(またはオーバーレイプロパティ)@code{display}は、テキストへのイメージ挿入、およびテキスト表示のその他の事相を制御します。@code{display}プロパティの値は、ディスプレイ仕様、または複数のディスプレイ仕様を含むリストかベクターであるべきです。同じ@code{display}プロパティ値内のディスプレイ仕様は、一般的にはそれらがカバーするテキストにたいして並行して適用されます。"
+msgstr "テキストプロパティ(またはオーバーレイプロパティ)の@code{display}はテキストへのイメージ挿入、およびテキスト表示のその他の事相を制御します。@code{display}プロパティの値はディスプレイ仕様、または複数のディスプレイ仕様を含むリストかベクターであるべきです。同じ@code{display}プロパティ値内のディスプレイ仕様は、一般的にはそれらがカバーするテキストにたいして並行して適用されます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4378
 msgid "If several sources (overlays and/or a text property) specify values for the @code{display} property, only one of the values takes effect, following the rules of @code{get-char-property}.  @xref{Examining Properties}."
-msgstr "複数のソース(オーバーレイ、および/またはテキストプロパティ)が@code{display}プロパティにたいして値を指定しますが、1つの値だけが効果をもち、これは@code{get-char-property}のルールにしたがいます。@ref{Examining Properties}を参照してください。"
+msgstr "複数のソース(オーバーレイおよび/またはテキストプロパティ)が@code{display}プロパティにたいして値を指定しますが1つの値だけが効果をもち、それは@code{get-char-property}のルールにしたがいます。@ref{Examining Properties}を参照してください。"
 
 #. type: Plain text
 #: original_texis/display.texi:4381
 msgid "The rest of this section describes several kinds of display specifications and what they mean."
-msgstr "このセクションの残りの部分では、複数の種類のディスプレイ仕様と、それらの意味を説明します。"
+msgstr "このセクションの残りの部分では、複数の種類のディスプレイ仕様とそれらの意味を説明します。"
 
 #. type: node
 #: original_texis/display.texi:4389 original_texis/display.texi:4391
@@ -7382,7 +7376,7 @@ msgstr "Pixel Specification"
 #. type: menuentry
 #: original_texis/display.texi:4389
 msgid "Specifying space width or height in pixels."
-msgstr "ピクセル単位でスペースの幅または高さを指定する。"
+msgstr "ピクセル単位でスペースの幅や高さを指定する。"
 
 #. type: node
 #: original_texis/display.texi:4389 original_texis/display.texi:4579
@@ -7404,7 +7398,7 @@ msgstr "Display Margins"
 #. type: menuentry
 #: original_texis/display.texi:4389
 msgid "Displaying text or images to the side of the main text."
-msgstr "メインテキスト側面へのテキストまたはイメージの表示。"
+msgstr "メインテキスト側面へのテキストやイメージの表示。"
 
 #. type: subsection
 #: original_texis/display.texi:4392
@@ -7421,24 +7415,22 @@ msgstr "replacing display specs"
 #. type: Plain text
 #: original_texis/display.texi:4400
 msgid "Some kinds of display specifications specify something to display instead of the text that has the property.  These are called @dfn{replacing} display specifications.  Emacs does not allow the user to interactively move point into the middle of buffer text that is replaced in this way."
-msgstr "ある種のディスプレイ仕様は、そのプロパティをもつテキストのかわりに表示する何かを指定します。これらは@dfn{置換(replacing)}ディスプレイ仕様と呼ばれます。Emacsはユーザーにたいして、この方法で置換されたバッファーテキストの中間への対話的なポイント移動を許していません。"
+msgstr "ある種のディスプレイ仕様は、そのプロパティをもつテキストのかわりに表示する何かを指定します。これらは@dfn{置換(replacing)}ディスプレイ仕様と呼ばれます。Emacsはユーザーにたいして、この方法で置換されたバッファーテキストの中間への対話的なポイント移動を許可しません。"
 
 #. type: Plain text
 #: original_texis/display.texi:4405
 msgid "If a list of display specifications includes more than one replacing display specification, the first overrides the rest.  Replacing display specifications make most other display specifications irrelevant, since those don't apply to the replacement."
-msgstr "ディスプレイ仕様のリストに1つ以上の置換ディスプレイ仕様が含まれる場合は、最初の置換ディスプレイ仕様が残りをオーバーライドします。置換ディスプレイ仕様は、他のほとんどのディスプレイ仕様は置換を許容しないので、それらとは無関係です。"
+msgstr "ディスプレイ仕様のリストに1つ以上の置換ディスプレイ仕様が含まれる場合には、最初の置換ディスプレイ仕様が残りをオーバーライドします。置換ディスプレイ仕様は他のほとんどのディスプレイ仕様は置換を許容しないので、それらとは無関係です。"
 
 #. type: Plain text
 #: original_texis/display.texi:4412
-#, fuzzy
-#| msgid "For replacing display specifications, ``the text that has the property'' means all the consecutive characters that have the same Lisp object as their @code{display} property; these characters are replaced as a single unit.  If two characters have different Lisp objects as their @code{display} properties (i.e., objects which are not @code{eq}), they are handled separately."
 msgid "For replacing display specifications, @dfn{the text that has the property} means all the consecutive characters that have the same Lisp object as their @code{display} property; these characters are replaced as a single unit.  If two characters have different Lisp objects as their @code{display} properties (i.e., objects which are not @code{eq}), they are handled separately."
-msgstr "置換ディスプレイ仕様では、``そのプロパティをもつテキスト''とは、@code{display}プロパティとして同一のLispオブジェクトをもつ、連続したすべての文字を意味します。これらの文字は単一の単位として置換されます。@code{display}プロパティに異なるLispオブジェクト(@code{eq}ではないオブジェクト)をもつ2つの文字は、個別に処理されます。"
+msgstr "置換ディスプレイ仕様では、@dfn{そのプロパティをもつテキスト}とは、@code{display}プロパティとして同一のLispオブジェクトをもつ連続したすべての文字を意味します。これらの文字は単一の単位として置換されます。@code{display}プロパティに異なるLispオブジェクト(@code{eq}ではないオブジェクト)をもつ2つの文字は個別に処理されます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4417
 msgid "Here is an example which illustrates this point.  A string serves as a replacing display specification, which replaces the text that has the property with the specified string (@pxref{Other Display Specs}).  Consider the following function:"
-msgstr "以下は、この要点を示すための例です。文字列が置換ディスプレイ仕様としての役割をもち、指定された文字列のプロパティをもつテキストを置換します(@ref{Other Display Specs}を参照)。以下の関数を考えてみてください:"
+msgstr "以下はこの要点を示すための例です。文字列が置換ディスプレイ仕様としての役割をもち、指定された文字列のプロパティをもつテキストを置換します(@ref{Other Display Specs}を参照)。以下の関数を考えてみてください:"
 
 #. type: smallexample
 #: original_texis/display.texi:4425
@@ -7461,7 +7453,7 @@ msgstr ""
 #. type: Plain text
 #: original_texis/display.texi:4437
 msgid "This function gives each of the first ten characters in the buffer a @code{display} property which is a string @code{\"A\"}, but they don't all get the same string object.  The first two characters get the same string object, so they are replaced with one @samp{A}; the fact that the display property was assigned in two separate calls to @code{put-text-property} is irrelevant.  Similarly, the next two characters get a second string (@code{concat} creates a new string object), so they are replaced with one @samp{A}; and so on.  Thus, the ten characters appear as five A's."
-msgstr "この関数は、バッファー内の最初の10文字それぞれにたいして、文字列@code{\"A\"}であるような@code{display}プロパティを与えますが、これらはすべて同じ文字列オブジェクトを取得しません。最初の2文字は同じ文字列オブジェクトなので、1つの@samp{A}に置換されます。2つの別々の@code{put-text-property}呼び出しでそのディスプレイプロパティが割り当てられたという事実は、無関係です。同様に次の2文字は2つ目の文字列(@code{concat}により新たに作成された文字列オブジェクト)を取得するので、1つの@samp{A}で置換され、...となります。したがって、10文字は5つのAで表示されます。"
+msgstr "この関数はバッファー内の最初の10文字それぞれにたいして文字列@code{\"A\"}であるような@code{display}プロパティを与えますが、これらはすべて同じ文字列オブジェクトを取得しません。最初の2文字は同じ文字列オブジェクトなので1つの@samp{A}に置換されます。2つの別々の@code{put-text-property}呼び出しでそのディスプレイプロパティが割り当てられたという事実は無関係です。同様に次の2文字は2つ目の文字列(@code{concat}により新たに作成された文字列オブジェクト)を取得するので1つの@samp{A}で置換されて、...となります。したがって10文字は5つのAで表示されます。"
 
 #. type: subsection
 #: original_texis/display.texi:4439
@@ -7484,7 +7476,7 @@ msgstr "variable-width spaces"
 #. type: Plain text
 #: original_texis/display.texi:4450
 msgid "To display a space of specified width and/or height, use a display specification of the form @code{(space . @var{props})}, where @var{props} is a property list (a list of alternating properties and values).  You can put this property on one or more consecutive characters; a space of the specified height and width is displayed in place of @emph{all} of those characters.  These are the properties you can use in @var{props} to specify the weight of the space:"
-msgstr "指定された幅、および/または高さのスペースを表示するためには、@code{(space . @var{props})}という形式のディスプレイ仕様を使用します。このプロパティを、1つ以上の連続する文字にputすることができます。これら@emph{すべて}の文字のかわりに、指定された高さと幅のスペースが表示されます。以下は、スペースのウェイトを指定するために、@var{props}内で使用できるプロパティです:"
+msgstr "指定された幅および/または高さのスペースを表示するためには@code{(space . @var{props})}という形式のディスプレイ仕様を使用します。このプロパティを1つ以上の連続する文字にputすることができます。これら@emph{すべて}の文字のかわりに指定された高さと幅のスペースが表示されます。以下はスペースのウェイトを指定するために@var{props}内で使用できるプロパティです:"
 
 #. type: item
 #: original_texis/display.texi:4452 original_texis/display.texi:5092
@@ -7506,9 +7498,8 @@ msgstr ":relative-width @var{factor}"
 #. type: table
 #: original_texis/display.texi:4465
 #, fuzzy
-#| msgid "Specifies that the width of the stretch should be computed from the first character in the group of consecutive characters that have the same @code{display} property.  The space width is the width of that character, multiplied by @var{factor}."
 msgid "Specifies that the width of the stretch should be computed from the first character in the group of consecutive characters that have the same @code{display} property.  The space width is the pixel width of that character, multiplied by @var{factor}.  (On text-mode terminals, the ``pixel width'' of a character is usually 1, but it could be more for TABs and double-width CJK characters.)"
-msgstr "同じ@code{display}プロパティをもつ連続する文字グループ内の最初の文字から計算される、範囲の幅を指定する。スペースの幅は、@var{factor}を乗じたその文字の幅。"
+msgstr "同じ@code{display}プロパティをもつ連続する文字グループ内の最初の文字から計算される範囲の幅を指定する。スペースの幅は@var{factor}を乗じたその文字の幅。"
 
 #. type: item
 #: original_texis/display.texi:4466
@@ -7519,12 +7510,12 @@ msgstr ":align-to @var{hpos}"
 #. type: table
 #: original_texis/display.texi:4471
 msgid "Specifies that the space should be wide enough to reach @var{hpos}.  If @var{hpos} is a number, it is measured in units of the normal character width.  @var{hpos} can also be a @dfn{pixel width} specification (@pxref{Pixel Specification})."
-msgstr "スペースが@var{hpos}に達するほど、十分に広くあるべきことを指定する。@var{hpos}が数字なら、それは通常の文字幅の単位で量られる。@var{hpos}は@dfn{ピクセル幅(pixel width)}仕様でも可(@ref{Pixel Specification}を参照)。"
+msgstr "スペースが@var{hpos}に達するほど十分に広くあるべきことを指定する。@var{hpos}が数字なら通常の文字幅の単位で量られる。@var{hpos}は@dfn{ピクセル幅(pixel width)}仕様でも可(@ref{Pixel Specification}を参照)。"
 
 #. type: Plain text
 #: original_texis/display.texi:4475
 msgid "You should use one and only one of the above properties.  You can also specify the height of the space, with these properties:"
-msgstr "上記プロパティのいずれか1つのみを使用するべきです。以下のプロパティで、スペースの高さも指定できます:"
+msgstr "上記プロパティのいずれか1つのみを使用するべきです。以下のプロパティでスペースの高さも指定できます:"
 
 #. type: item
 #: original_texis/display.texi:4477 original_texis/display.texi:5095
@@ -7535,7 +7526,7 @@ msgstr ":height @var{height}"
 #. type: table
 #: original_texis/display.texi:4483
 msgid "Specifies the height of the space.  If @var{height} is a number, it specifies that the space height should be @var{height} times the normal character height.  The @var{height} may also be a @dfn{pixel height} specification (@pxref{Pixel Specification})."
-msgstr "スペースの高さを指定する。@var{height}が数字なら、それはスペースの高さが通常の文字高さの@var{height}倍であるべきことを指定する。@var{height}は@dfn{ピクセル高さ仕様(pixel height)}でも可(@ref{Pixel Specification}を参照)。"
+msgstr "スペースの高さを指定する。@var{height}が数字ならスペースの高さが通常の文字高さの@var{height}倍であるべきことを指定する。@var{height}は@dfn{ピクセル高さ仕様(pixel height)}でも可(@ref{Pixel Specification}を参照)。"
 
 #. type: item
 #: original_texis/display.texi:4484
@@ -7546,7 +7537,7 @@ msgstr ":relative-height @var{factor}"
 #. type: table
 #: original_texis/display.texi:4487
 msgid "Specifies the height of the space, multiplying the ordinary height of the text having this display specification by @var{factor}."
-msgstr "このディスプレイ仕様をもつテキストの通常の高さに@var{factor}を乗じることにより、スペースの高さを指定する。"
+msgstr "このディスプレイ仕様をもつテキストの通常の高さに@var{factor}を乗じることによりスペースの高さを指定する。"
 
 #. type: item
 #: original_texis/display.texi:4488 original_texis/display.texi:4879
@@ -7557,12 +7548,12 @@ msgstr ":ascent @var{ascent}"
 #. type: table
 #: original_texis/display.texi:4494
 msgid "If the value of @var{ascent} is a non-negative number no greater than 100, it specifies that @var{ascent} percent of the height of the space should be considered as the ascent of the space---that is, the part above the baseline.  The ascent may also be specified in pixel units with a @dfn{pixel ascent} specification (@pxref{Pixel Specification})."
-msgstr "@var{ascent}の値が非負の100以下の数字なら、スペースの高さの@var{ascent}パーセントをスペースのアセント(ascent: 上方)、すなわちベースラインより上の部分とみなす。@dfn{ピクセルアセント(pixel ascent)}仕様により、アセントをピクセル単位で指定することも可(@ref{Pixel Specification}を参照)。"
+msgstr "@var{ascent}の値が非負の100以下の数字ならスペースの高さの@var{ascent}パーセントをスペースのアセント(ascent: 上方)、すなわちベースラインより上の部分とみなす。@dfn{ピクセルアセント(pixel ascent)}仕様によりアセントをピクセル単位で指定することも可(@ref{Pixel Specification}を参照)。"
 
 #. type: Plain text
 #: original_texis/display.texi:4498
 msgid "Don't use both @code{:height} and @code{:relative-height} together."
-msgstr "@code{:height}と@code{:relative-height}を両方一緒に使用しないでください。"
+msgstr "@code{:height}と@code{:relative-height}を両方同時に使用しないでください。"
 
 #. type: Plain text
 #: original_texis/display.texi:4502
@@ -7572,7 +7563,7 @@ msgstr "@code{:width}と@code{:align-to}プロパティは非グラフィック�
 #. type: Plain text
 #: original_texis/display.texi:4506
 msgid "Note that space properties are treated as paragraph separators for the purposes of reordering bidirectional text for display.  @xref{Bidirectional Display}, for the details."
-msgstr "スペースプロパティは、双方向テキスト表示の並べ替えのために、パラグラフ区切りとして扱われます。詳細は、@ref{Bidirectional Display}を参照してください。"
+msgstr "スペースプロパティは双方向テキスト表示の並べ替えのためのパラグラフ区切りとして扱われます。詳細は@ref{Bidirectional Display}を参照してください。"
 
 #. type: subsection
 #: original_texis/display.texi:4508
@@ -7589,7 +7580,7 @@ msgstr "spaces, pixel specification"
 #. type: Plain text
 #: original_texis/display.texi:4515
 msgid "The value of the @code{:width}, @code{:align-to}, @code{:height}, and @code{:ascent} properties can be a special kind of expression that is evaluated during redisplay.  The result of the evaluation is used as an absolute number of pixels."
-msgstr "プロパティ@code{:width}、@code{:align-to}、@code{:height}、@code{:ascent}の値は再表示の間に評価される、特別な種類の式です。その評価の結果は、ピクセルの絶対数として使用されます。"
+msgstr "プロパティ@code{:width}、@code{:align-to}、@code{:height}、@code{:ascent}の値は再表示の間に評価される特別な種類の式です。その評価の結果はピクセルの絶対数として使用されます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4517
@@ -7627,30 +7618,27 @@ msgstr ""
 #. type: Plain text
 #: original_texis/display.texi:4537
 msgid "The form @var{num} specifies a fraction of the default frame font height or width.  The form @code{(@var{num})} specifies an absolute number of pixels.  If @var{num} is a symbol, @var{symbol}, its buffer-local variable binding is used."
-msgstr "フォーム@var{num}は、デフォルトフレームフォントの高さか幅を、フォーム@code{(@var{num})}は絶対ピクセル数を指定します。@var{num}がシンボル@var{symbol}なら、それのバッファーローカルな変数バインディングが使用されます。"
+msgstr "フォーム@var{num}はデフォルトフレームフォントの高さか幅、フォーム@code{(@var{num})}は絶対ピクセル数を指定します。@var{num}がシンボル@var{symbol}なら、それにたいするバッファーローカルな変数バインディングが使用されます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4543
 msgid "The @code{in}, @code{mm}, and @code{cm} units specify the number of pixels per inch, millimeter, and centimeter, respectively.  The @code{width} and @code{height} units correspond to the default width and height of the current face.  An image specification @code{image} corresponds to the width or height of the image."
-msgstr "単位@code{in}、@code{mm}、@code{cm}はそれぞれインチ、ミリメートル、センチメートルごとのピクセル数を指定します。単位@code{width}と@code{height}はそれぞれ、カレントフェイスのデフォルトの幅と高さに対応します。イメージ仕様@code{image}は、そのイメージの幅、または高さに対応します。"
+msgstr "単位@code{in}、@code{mm}、@code{cm}はそれぞれインチ、ミリメートル、センチメートルごとのピクセル数を指定します。単位@code{width}と@code{height}はそれぞれカレントフェイスのデフォルトの幅と高さに対応します。イメージ仕様@code{image}はイメージの幅や高さに対応します。"
 
 #. type: Plain text
 #: original_texis/display.texi:4548
 msgid "The elements @code{left-fringe}, @code{right-fringe}, @code{left-margin}, @code{right-margin}, @code{scroll-bar}, and @code{text} specify to the width of the corresponding area of the window."
-msgstr "要素@code{left-fringe}、@code{right-fringe}、@code{left-margin}、@code{right-margin}、@code{scroll-bar}、@code{text}は、そのウィンドウの対応する領域の幅を指定します。"
+msgstr "要素@code{left-fringe}、@code{right-fringe}、@code{left-margin}、@code{right-margin}、@code{scroll-bar}、@code{text}はそのウィンドウの対応する領域の幅を指定します。"
 
 #. type: Plain text
 #: original_texis/display.texi:4552
 msgid "The @code{left}, @code{center}, and @code{right} positions can be used with @code{:align-to} to specify a position relative to the left edge, center, or right edge of the text area."
-msgstr "位置@code{left}、@code{center}、@code{right}はテキストエリアの左端、中央、右端から相対的に位置を指定するために、@code{:align-to}とともに使用できます。"
+msgstr "位置@code{left}、@code{center}、@code{right}はテキストエリアの左端、中央、右端から相対的に位置を指定するために@code{:align-to}とともに使用できます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4560
 msgid "Any of the above window elements (except @code{text}) can also be used with @code{:align-to} to specify that the position is relative to the left edge of the given area.  Once the base offset for a relative position has been set (by the first occurrence of one of these symbols), further occurrences of these symbols are interpreted as the width of the specified area.  For example, to align to the center of the left-margin, use"
-msgstr ""
-"(@code{text}を除く)上記ウィンドウ要素は、与えられたエリアの左端から相対的に位置を指定するために、@code{:align-to}とともに使用することもできます。\n"
-"Any of the above window elements (except ) can also be used with  to specify that the position is relative to the left edge of the given area.\n"
-"(最初に出現するこれらシンボルのいずれかにより)相対的位置にたいするベースオフセットが一度セットがされると、残りのシンボルは指定されたエリアの幅として解釈されます。たとえば左マージンの中央に位置揃えするには、以下のようにします"
+msgstr "(@code{text}を除く)上記ウィンドウ要素は与えられたエリアの左端から相対的に位置を指定するために@code{:align-to}とともに使用することもできます。(最初に出現するこれらシンボルのいずれかにより)相対的位置にたいするベースオフセットが一度セットがされると、残りのシンボルは指定されたエリアの幅として解釈されます。たとえば左マージンの中央に位置揃えするには以下のようにします"
 
 #. type: example
 #: original_texis/display.texi:4563
@@ -7661,12 +7649,12 @@ msgstr ":align-to (+ left-margin (0.5 . left-margin))\n"
 #. type: Plain text
 #: original_texis/display.texi:4568
 msgid "If no specific base offset is set for alignment, it is always relative to the left edge of the text area.  For example, @samp{:align-to 0} in a header-line aligns with the first text column in the text area."
-msgstr "位置揃えにたいしてベースオフセットが何も指定されなければ、テキストエリア左端にたいして常に相対的になります。たとえばヘッダーライン内の@samp{:align-to 0}は、テキストエリアの最初のテキスト行に位置揃えします。"
+msgstr "位置揃えにたいしてベースオフセットが何も指定されなければ、テキストエリア左端にたいして常に相対的になります。たとえばヘッダーライン内の@samp{:align-to 0}はテキストエリアの最初のテキスト行に位置揃えします。"
 
 #. type: Plain text
 #: original_texis/display.texi:4574
 msgid "A value of the form @code{(@var{num} . @var{expr})} stands for the product of the values of @var{num} and @var{expr}.  For example, @code{(2 . in)} specifies a width of 2 inches, while @code{(0.5 .  @var{image})} specifies half the width (or height) of the specified image."
-msgstr "@code{(@var{num} . @var{expr})}という形式の値は、@var{num}と@var{expr}により生成される値を意味します。たとえば@code{(2 . in)}は2インチの幅、@code{(0.5 .  @var{image})}は指定されたイメージの幅(または高さ)の半分を指定します。"
+msgstr "@code{(@var{num} . @var{expr})}という形式の値は@var{num}と@var{expr}により生成される値を意味します。たとえば@code{(2 . in)}は2インチの幅、@code{(0.5 .  @var{image})}は指定されたイメージの幅(または高さ)の半分を指定します。"
 
 #. type: Plain text
 #: original_texis/display.texi:4578
