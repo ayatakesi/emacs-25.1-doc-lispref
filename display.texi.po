@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-02-17 00:17+0900\n"
+"PO-Revision-Date: 2020-02-21 22:17+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -5632,7 +5632,6 @@ msgstr "@var{name}が@code{t}ならこの関数はshort名が@samp{fontset-defau
 
 #. type: defun
 #: original_texis/display.texi:3338
-#, fuzzy
 msgid "In addition to specifying a single codepoint, @var{character} may be a cons @code{(@var{from} . @var{to})}, where @var{from} and @var{to} are character codepoints.  In that case, use @var{font-spec} for all the characters in the range @var{from} and @var{to} (inclusive)."
 msgstr "@var{character}には@code{(@var{from} . @var{to})}のようなコンスを指定できる。ここで@var{from}と@var{to}は文字コードポイント。この場合には範囲@var{from}から@var{to} (両端を含む)までのすべての文字にたいして@var{font-spec}を使用する。"
 
@@ -7497,9 +7496,8 @@ msgstr ":relative-width @var{factor}"
 
 #. type: table
 #: original_texis/display.texi:4465
-#, fuzzy
 msgid "Specifies that the width of the stretch should be computed from the first character in the group of consecutive characters that have the same @code{display} property.  The space width is the pixel width of that character, multiplied by @var{factor}.  (On text-mode terminals, the ``pixel width'' of a character is usually 1, but it could be more for TABs and double-width CJK characters.)"
-msgstr "同じ@code{display}プロパティをもつ連続する文字グループ内の最初の文字から計算される範囲の幅を指定する。スペースの幅は@var{factor}を乗じたその文字の幅。"
+msgstr "幅の広さは同じ@code{display}プロパティをもつ連続する文字のグループ内の最初の文字から計算される必要があることを指定する。スペースの幅はその文字のピクセル幅に@var{factor}を乗じた幅である(テキストモード端末では文字の``ピクセル幅''は通常は1だがTAB文字や2倍の幅をもつCJK文字では1以上になり得る)。"
 
 #. type: item
 #: original_texis/display.texi:4466
@@ -7515,7 +7513,7 @@ msgstr "スペースが@var{hpos}に達するほど十分に広くあるべき�
 #. type: Plain text
 #: original_texis/display.texi:4475
 msgid "You should use one and only one of the above properties.  You can also specify the height of the space, with these properties:"
-msgstr "上記プロパティのいずれか1つのみを使用するべきです。以下のプロパティでスペースの高さも指定できます:"
+msgstr "上記プロパティのいずれか1つだけを使用するべきです。以下のプロパティでスペースの高さも指定できます:"
 
 #. type: item
 #: original_texis/display.texi:4477 original_texis/display.texi:5095
@@ -7638,7 +7636,7 @@ msgstr "位置@code{left}、@code{center}、@code{right}はテキストエリア
 #. type: Plain text
 #: original_texis/display.texi:4560
 msgid "Any of the above window elements (except @code{text}) can also be used with @code{:align-to} to specify that the position is relative to the left edge of the given area.  Once the base offset for a relative position has been set (by the first occurrence of one of these symbols), further occurrences of these symbols are interpreted as the width of the specified area.  For example, to align to the center of the left-margin, use"
-msgstr "(@code{text}を除く)上記ウィンドウ要素は与えられたエリアの左端から相対的に位置を指定するために@code{:align-to}とともに使用することもできます。(最初に出現するこれらシンボルのいずれかにより)相対的位置にたいするベースオフセットが一度セットがされると、残りのシンボルは指定されたエリアの幅として解釈されます。たとえば左マージンの中央に位置揃えするには以下のようにします"
+msgstr "(@code{text}を除いた)上記ウィンドウ要素は与えられたエリアの左端から相対的に位置を指定するために@code{:align-to}とともに使用することもできます。(最初に出現するこれらシンボルのいずれかにより)相対的位置にたいするベースオフセットが一度セットがされると、残りのシンボルは指定されたエリアの幅として解釈されます。たとえば左マージンの中央に位置揃えするには以下のようにします"
 
 #. type: example
 #: original_texis/display.texi:4563
@@ -7654,12 +7652,12 @@ msgstr "位置揃えにたいしてベースオフセットが何も指定され
 #. type: Plain text
 #: original_texis/display.texi:4574
 msgid "A value of the form @code{(@var{num} . @var{expr})} stands for the product of the values of @var{num} and @var{expr}.  For example, @code{(2 . in)} specifies a width of 2 inches, while @code{(0.5 .  @var{image})} specifies half the width (or height) of the specified image."
-msgstr "@code{(@var{num} . @var{expr})}という形式の値は@var{num}と@var{expr}により生成される値を意味します。たとえば@code{(2 . in)}は2インチの幅、@code{(0.5 .  @var{image})}は指定されたイメージの幅(または高さ)の半分を指定します。"
+msgstr "@code{(@var{num} . @var{expr})}という形式の値は@var{num}と@var{expr}により生成される値を意味します。たとえば@code{(2 . in)}は2インチの幅、@code{(0.5 .  @var{image})}は指定されたイメージの幅(や高さ)の半分を指定します。"
 
 #. type: Plain text
 #: original_texis/display.texi:4578
 msgid "The form @code{(+ @var{expr} ...)} adds up the value of the expressions.  The form @code{(- @var{expr} ...)} negates or subtracts the value of the expressions."
-msgstr "フォーム@code{(+ @var{expr} ...)}は、式の値を合計します。フォーム@code{(- @var{expr} ...)}は式の値を否定または減算します。"
+msgstr "フォーム@code{(+ @var{expr} ...)}は式の値を合計します。フォーム@code{(- @var{expr} ...)}は式の値を符号反転または減算します。"
 
 #. type: subsection
 #: original_texis/display.texi:4580
@@ -7670,7 +7668,7 @@ msgstr "Other Display Specifications"
 #. type: Plain text
 #: original_texis/display.texi:4584
 msgid "Here are the other sorts of display specifications that you can use in the @code{display} text property."
-msgstr "以下は、@code{display}テキストプロパティ内で使用できる、その他のディスプレイ仕様です。"
+msgstr "以下は@code{display}テキストプロパティ内で使用できる他のディスプレイ仕様です。"
 
 #. type: var{#1}
 #: original_texis/display.texi:4586
@@ -7681,12 +7679,12 @@ msgstr "string"
 #. type: table
 #: original_texis/display.texi:4588
 msgid "Display @var{string} instead of the text that has this property."
-msgstr "このプロパティをもつテキストのかわりに、@var{string}を表示する。"
+msgstr "このプロパティをもつテキストのかわりに@var{string}を表示する。"
 
 #. type: table
 #: original_texis/display.texi:4591
 msgid "Recursive display specifications are not supported---@var{string}'s @code{display} properties, if any, are not used."
-msgstr "再帰的なディスプレイ仕様はサポートされない。つまり@var{string}の@code{display}プロパティがあっても、それは使用されない。"
+msgstr "再帰的なディスプレイ仕様はサポートされない。つまり@var{string}の@code{display}プロパティがあっても使用されない。"
 
 #. type: item
 #: original_texis/display.texi:4592
@@ -7697,7 +7695,7 @@ msgstr "(image . @var{image-props})"
 #. type: table
 #: original_texis/display.texi:4596
 msgid "This kind of display specification is an image descriptor (@pxref{Images}).  When used as a display specification, it means to display the image instead of the text that has the display specification."
-msgstr "この種のディスプレイ仕様は、イメージディスクリプタである(@ref{Images}を参照)。ディスプレイ仕様として使用時は、そのディスプレイ仕様をもつテキストのかわりに表示するイメージを意味する。"
+msgstr "この種のディスプレイ仕様はイメージディスクリプタである(@ref{Images}を参照)。ディスプレイ仕様として使用時には、そのディスプレイ仕様をもつテキストのかわりに表示するイメージを意味する。"
 
 #. type: item
 #: original_texis/display.texi:4597
@@ -7708,7 +7706,7 @@ msgstr "(slice @var{x} @var{y} @var{width} @var{height})"
 #. type: table
 #: original_texis/display.texi:4605
 msgid "This specification together with @code{image} specifies a @dfn{slice} (a partial area) of the image to display.  The elements @var{y} and @var{x} specify the top left corner of the slice, within the image; @var{width} and @var{height} specify the width and height of the slice.  Integers are numbers of pixels.  A floating-point number in the range 0.0--1.0 stands for that fraction of the width or height of the entire image."
-msgstr "この仕様は@code{image}とともに、表示するイメージの@dfn{スライス(slice: イメージの特定の領域)}を指定する。要素@var{y}と@var{x}は、そのイメージ内での左上隅を指定し、@var{width}と@var{height}はそのスライスの幅と高さを指定する。整数はピクセル数、0.0から1.0までの浮動小数点数はイメージ全体の幅または高さの割合を意味する。A floating-point number in the range 0.0--1.0 stands for that fraction of the width or height of the entire image."
+msgstr "この仕様は@code{image}とともに、表示するイメージの@dfn{スライス(slice: イメージの特定の領域)}を指定する。要素@var{y}と@var{x}はイメージ内での左上隅、@var{width}と@var{height}はそのスライスの幅と高さを指定する。整数はピクセル数、0.0から1.0までの浮動小数点数はイメージ全体の幅や高さの割合を意味する。"
 
 #. type: item
 #: original_texis/display.texi:4606
@@ -7719,7 +7717,7 @@ msgstr "((margin nil) @var{string})"
 #. type: table
 #: original_texis/display.texi:4612
 msgid "A display specification of this form means to display @var{string} instead of the text that has the display specification, at the same position as that text.  It is equivalent to using just @var{string}, but it is done as a special case of marginal display (@pxref{Display Margins})."
-msgstr "この形式のディスプレイ仕様は、このディスプレイ仕様をもつテキストのかわりに、そのテキストと同じ位置に表示する@var{string}を意味する。これは単に@var{string}を使用するのと同じだが、マージン表示(@ref{Display Margins}を参照)の特殊なケースとして行われる点が異なる。"
+msgstr "この形式のディスプレイ仕様は、このディスプレイ仕様をもつテキストのかわりにテキストと同じ位置に表示する@var{string}を意味する。これは単に@var{string}を使用するのと同じだが、マージン表示(@ref{Display Margins}を参照)の特殊なケースとして行われる点が異なる。"
 
 #. type: item
 #: original_texis/display.texi:4613
@@ -7736,7 +7734,7 @@ msgstr "(right-fringe @var{bitmap} @r{[}@var{face}@r{]})"
 #. type: table
 #: original_texis/display.texi:4620
 msgid "This display specification on any character of a line of text causes the specified @var{bitmap} be displayed in the left or right fringes for that line, instead of the characters that have the display specification.  The optional @var{face} specifies the colors to be used for the bitmap.  @xref{Fringe Bitmaps}, for the details."
-msgstr "テキスト行の任意の文字がこのディスプレイ仕様をもつ場合は、その文字のかわりにその行の左または右フリンジに表示する@var{bitmap}を指定する。オプションの@var{face}は、そのビットマップにたいして使用するカラーを指定する。詳細は@ref{Fringe Bitmaps}を参照のこと。"
+msgstr "テキスト行の任意の文字がこのディスプレイ仕様をもつ場合には、その文字のかわりにその行の左や右のフリンジに表示する@var{bitmap}を指定する。オプションの@var{face}はビットマップにたいして使用するカラーを指定する。詳細は@ref{Fringe Bitmaps}を参照のこと。"
 
 #. type: item
 #: original_texis/display.texi:4621
@@ -7747,7 +7745,7 @@ msgstr "(space-width @var{factor})"
 #. type: table
 #: original_texis/display.texi:4627
 msgid "This display specification affects all the space characters within the text that has the specification.  It displays all of these spaces @var{factor} times as wide as normal.  The element @var{factor} should be an integer or float.  Characters other than spaces are not affected at all; in particular, this has no effect on tab characters."
-msgstr "このディスプレイ仕様は、この仕様をもつテキスト内のすべてのスペース文字に効果を及ぼす。これらすべてのスペースは、通常の幅の@var{factor}倍の幅で表示される。要素@var{factor}は整数か浮動小数点数であること。スペース以外の文字は影響を受けない。特に、これはタブ文字に影響を与えない。"
+msgstr "このディスプレイ仕様は、この仕様をもつテキスト内のすべてのスペース文字に効果を及ぼす。これらすべてのスペースは通常の幅の@var{factor}倍の幅で表示される。要素@var{factor}は整数か浮動小数点数であること。スペース以外の文字は影響を受けない。特にこれはタブ文字に影響を与えない。"
 
 #. type: item
 #: original_texis/display.texi:4628
@@ -7758,7 +7756,7 @@ msgstr "(height @var{height})"
 #. type: table
 #: original_texis/display.texi:4631
 msgid "This display specification makes the text taller or shorter.  Here are the possibilities for @var{height}:"
-msgstr "このディスプレイ仕様は、テキストを高く(taller)、または低く(shorter)する。@var{height}には以下を指定できる:"
+msgstr "このディスプレイ仕様はテキストを高く(taller)、または低く(shorter)する。@var{height}には以下を指定できる:"
 
 #. type: code{#1}
 #: original_texis/display.texi:4633
@@ -7768,10 +7766,8 @@ msgstr "(+ @var{n})"
 
 #. type: table
 #: original_texis/display.texi:4640
-#, fuzzy
-#| msgid "This means to use a font that is @var{n} steps larger.  A ``step'' is defined by the set of available fonts---specifically, those that match what was otherwise specified for this text, in all attributes except height.  Each size for which a suitable font is available counts as another step.  @var{n} should be an integer."
 msgid "This means to use a font that is @var{n} steps larger.  A @dfn{step} is defined by the set of available fonts---specifically, those that match what was otherwise specified for this text, in all attributes except height.  Each size for which a suitable font is available counts as another step.  @var{n} should be an integer."
-msgstr "これは、@var{n}ステップ大きいフォントの使用を意味する。``ステップ''は利用可能なフォントのセットから定義される。具体的に``ステップ''は、このテキストに指定されたheight以外のすべての属性にマッチする。適切なフォントの各サイズは、別のステップとして利用可能とみなされる。@var{n}は整数であること。"
+msgstr "これは@var{n}ステップ大きいフォントの使用を意味する。@dfn{ステップ}は利用可能なフォントのセットから定義される。利用可能なフォントとは、具体的には、このような場合でなければ、heightを除いてそのテキストに指定されたすべての属性にマッチするフォント。適切なフォントの各サイズは別のステップとして利用可能とみなされる。@var{n}は整数であること。"
 
 #. type: code{#1}
 #: original_texis/display.texi:4641
@@ -7788,34 +7784,34 @@ msgstr "これは@var{n}ステップ小さいフォントの使用を意味す�
 #: original_texis/display.texi:4644
 #, no-wrap
 msgid "a number, @var{factor}"
-msgstr "@var{factor}(数値)"
+msgstr "@var{factor} (数値)"
 
 #. type: table
 #: original_texis/display.texi:4647
 msgid "A number, @var{factor}, means to use a font that is @var{factor} times as tall as the default font."
-msgstr "数値@var{factor}は、デフォルトフォントの@var{factor}倍高いフォントの使用を意味する。"
+msgstr "数値@var{factor}はデフォルトフォントの@var{factor}倍高いフォントの使用を意味する。"
 
 #. type: item
 #: original_texis/display.texi:4648
 #, no-wrap
 msgid "a symbol, @var{function}"
-msgstr "@var{function}(シンボル)"
+msgstr "@var{function} (シンボル)"
 
 #. type: table
 #: original_texis/display.texi:4651
 msgid "A symbol is a function to compute the height.  It is called with the current height as argument, and should return the new height to use."
-msgstr "高さを計算する関数。この関数はカレントの高さを引数として呼び出され、使用する新たな高さをリターンすること。"
+msgstr "高さを計算する関数。この関数はカレントの高さを引数として呼び出されて、使用する新たな高さをリターンすること。"
 
 #. type: item
 #: original_texis/display.texi:4652
 #, no-wrap
 msgid "anything else, @var{form}"
-msgstr "@var{form}(上記以外)"
+msgstr "@var{form} (上記以外)"
 
 #. type: table
 #: original_texis/display.texi:4656
 msgid "If the @var{height} value doesn't fit the previous possibilities, it is a form.  Emacs evaluates it to get the new height, with the symbol @code{height} bound to the current specified font height."
-msgstr "@var{height}の値が上記のいずれにもマッチしなければ、それはフォームである。Emacsは@code{height}をカレントで指定されたフォントの高さにバインドして、新たな高さを取得するために、そのフォームを評価する。"
+msgstr "@var{height}の値が上記のいずれにもマッチしなければ、それはフォームである。Emacsは@code{height}をカレントで指定されたフォントの高さにバインドして新たな高さを取得するためにフォームを評価する。"
 
 #. type: item
 #: original_texis/display.texi:4658
@@ -7826,22 +7822,22 @@ msgstr "(raise @var{factor})"
 #. type: table
 #: original_texis/display.texi:4661
 msgid "This kind of display specification raises or lowers the text it applies to, relative to the baseline of the line."
-msgstr "この種のディスプレイ仕様は、その行のベースラインに相対的に、テキストを上(raise)、または下(lower)に指定する。"
+msgstr "この種のディスプレイ仕様は、その行のベースラインに相対的にテキストを上(raise)か下(lower)に指定する。"
 
 #. type: table
 #: original_texis/display.texi:4666
 msgid "@var{factor} must be a number, which is interpreted as a multiple of the height of the affected text.  If it is positive, that means to display the characters raised.  If it is negative, that means to display them lower down."
-msgstr "@var{factor}は、影響を受けるテキストの高さにたいする乗数として解釈される数値でなければならない。これが正なら、その文字を上に、負なら下に表示することを意味する。"
+msgstr "@var{factor}、影響を受けるテキストの高さにたいする乗数として解釈される数値でなければならない。これが正なら文字を上に、負なら下に表示することを意味する。"
 
 #. type: table
 #: original_texis/display.texi:4670
 msgid "If the text also has a @code{height} display specification, that does not affect the amount of raising or lowering, which is based on the faces used for the text."
-msgstr "そのテキストが@code{height}ディスプレイ仕様ももつ場合、それは上または下に表示する量には影響を与えない。上または下に表示する量は、そのテキストにたいして使用されるフェイスにもとづく。"
+msgstr "そのテキストが@code{height}ディスプレイ仕様ももつ場合には、上や下に表示する量には影響を与えない。上や下に表示する量はテキストにたいして使用されるフェイスにもとづく。"
 
 #. type: Plain text
 #: original_texis/display.texi:4686
 msgid "You can make any display specification conditional.  To do that, package it in another list of the form @code{(when @var{condition} . @var{spec})}.  Then the specification @var{spec} applies only when @var{condition} evaluates to a non-@code{nil} value.  During the evaluation, @code{object} is bound to the string or buffer having the conditional @code{display} property.  @code{position} and @code{buffer-position} are bound to the position within @code{object} and the buffer position where the @code{display} property was found, respectively.  Both positions can be different when @code{object} is a string."
-msgstr "任意のディスプレイ仕様にたいして、条件を作成できます。これを行うには、@code{(when @var{condition} . @var{spec})}という形式の別リスト内にパッケージします。この場合、仕様@var{spec}は@var{condition}が非@code{nil}値に評価されたときだけ適用されます。この評価の間、@code{object}は条件つき@code{display}プロパティをもつ文字列、またはバッファーにバインドされます。@code{position}と@code{buffer-position}はそれぞれ@code{object}内の位置、および@code{display}プロパティが見つかったバッファー位置にバインドされます。@code{object}が文字列の際は、両者の位置は異なるかもしれません。"
+msgstr "任意のディスプレイ仕様にたいして条件を作成できます。これを行うには、@code{(when @var{condition} . @var{spec})}という形式の別リスト内にパッケージします。この場合には、仕様@var{spec}は@var{condition}が非@code{nil}値に評価されたときだけ適用されます。この評価の間に@code{object}は条件つき@code{display}プロパティをもつ文字列、またはバッファーにバインドされます。@code{position}と@code{buffer-position}はそれぞれ@code{object}内の位置、および@code{display}プロパティが見つかったバッファー位置にバインドされます。@code{object}が文字列の際には両者の位置は異なるかもしれません。"
 
 #. type: subsection
 #: original_texis/display.texi:4688
@@ -7864,27 +7860,27 @@ msgstr "margins, display"
 #. type: Plain text
 #: original_texis/display.texi:4697
 msgid "A buffer can have blank areas called @dfn{display margins} on the left and on the right.  Ordinary text never appears in these areas, but you can put things into the display margins using the @code{display} property.  There is currently no way to make text or images in the margin mouse-sensitive."
-msgstr "バッファーはその左側と右側に、@dfn{ディスプレイマージン(display margins)}と呼ばれる、ブランクエリアをもつことができます。それらのエリア内には、通常はテキストが出現することはありませんが、@code{display}プロパティを使用して、ディスプレイマージン内に何かを配置することができます。現在のところ、マージン内のテキストやイメージをマウスセンシティブにする方法はありません。"
+msgstr "バッファーはその左側と右側に@dfn{ディスプレイマージン(display margins)}と呼ばれるブランクエリアをもつことができます。それらのエリア内には通常はテキストが出現することはありませんが、@code{display}プロパティを使用してディスプレイマージン内に何かを配置することができます。現在のところマージン内のテキストやイメージをマウスセンシティブにする方法はありません。"
 
 #. type: Plain text
 #: original_texis/display.texi:4703
 msgid "The way to display something in the margins is to specify it in a margin display specification in the @code{display} property of some text.  This is a replacing display specification, meaning that the text you put it on does not get displayed; the margin display appears, but that text does not."
-msgstr "マージン内に何かを表示するには、テキストの@code{display}プロパティのマージン表示仕様(margin display specification)で、それを指定します。これは、配置したテキストが表示されないことを意味する、置換表示仕様です。マージン表示は表示されますが、そのテキストは表示されません。"
+msgstr "マージン内に何かを表示するにはテキストの@code{display}プロパティのマージン表示仕様(margin display specification)で指定します。これは配置したテキストが表示されないことを意味する置換表示仕様です。マージン表示は表示されますがそのテキストは表示されません。"
 
 #. type: Plain text
 #: original_texis/display.texi:4709
 msgid "A margin display specification looks like @code{((margin right-margin) @var{spec})} or @code{((margin left-margin) @var{spec})}.  Here, @var{spec} is another display specification that says what to display in the margin.  Typically it is a string of text to display, or an image descriptor."
-msgstr "マージン表示仕様とは@code{((margin right-margin) @var{spec})}や@code{((margin left-margin) @var{spec})}のようなものです。ここで@var{spec}は、マージン内に何を表示するかを告げる、別の表示仕様です。典型的にはこれは表示するテキスト文字列、またはイメージディスクリプタです。"
+msgstr "マージン表示仕様とは@code{((margin right-margin) @var{spec})}や@code{((margin left-margin) @var{spec})}のようなものです。ここで@var{spec}はマージン内に何を表示するかを告げる別の表示仕様です。典型的にはこれは表示するテキスト文字列やイメージディスクリプタです。"
 
 #. type: Plain text
 #: original_texis/display.texi:4714
 msgid "To display something in the margin @emph{in association with} certain buffer text, without altering or preventing the display of that text, put a @code{before-string} property on the text and put the margin display specification on the contents of the before-string."
-msgstr "特定のバッファーテキストに@emph{関連する}マージンに何かを表示するためには、そのテキストに@code{before-string}プロパティを付して、そのコンテンツとしてマージン表示仕様をputします。"
+msgstr "特定のバッファーテキストに@emph{割り当てられた}マージンに何かを表示するためには、そのテキストに@code{before-string}プロパティを付してコンテンツとしてマージン表示仕様をputします。"
 
 #. type: Plain text
 #: original_texis/display.texi:4718
 msgid "Before the display margins can display anything, you must give them a nonzero width.  The usual way to do that is to set these variables:"
-msgstr "ディスプレイマージンが何かを表示可能になる前に、それらに非0の幅を与えなければなりません。これを行う通常の方法は、以下の変数をセットする方法です:"
+msgstr "ディスプレイマージンが何かを表示可能になる前に、それらに非0の幅を与えなければなりません。これを行う通常の方法は以下の変数をセットする方法です:"
 
 #. type: defvar
 #: original_texis/display.texi:4719
@@ -7895,7 +7891,7 @@ msgstr "left-margin-width"
 #. type: defvar
 #: original_texis/display.texi:4723
 msgid "This variable specifies the width of the left margin, in character cell (a.k.a.@: ``column'') units.  It is buffer-local in all buffers.  A value of @code{nil} means no left marginal area."
-msgstr "この変数は左マージンの幅を、文字セル(別名は``列'')単位で指定する。これは、すべてのバッファーでバッファーローカルである。値@code{nil}は、左マージンエリアなしを意味する。"
+msgstr "この変数は左マージンの幅を文字セル(別名は``列'')単位で指定する。これ、すべてのバッファーでバッファーローカルである。値@code{nil}は左マージンエリアなしを意味する。"
 
 #. type: defvar
 #: original_texis/display.texi:4725
@@ -7906,12 +7902,12 @@ msgstr "right-margin-width"
 #. type: defvar
 #: original_texis/display.texi:4729
 msgid "This variable specifies the width of the right margin, in character cell units.  It is buffer-local in all buffers.  A value of @code{nil} means no right marginal area."
-msgstr "この変数は右マージンの幅を、文字セル単位で指定する。これは、すべてのバッファーでバッファーローカルである。値@code{nil}は、右マージンエリアなしを意味する。"
+msgstr "この変数は右マージンの幅を文字セル単位で指定する。これはすべてのバッファーでバッファーローカルである。値@code{nil}は右マージンエリアなしを意味する。"
 
 #. type: Plain text
 #: original_texis/display.texi:4735
 msgid "Setting these variables does not immediately affect the window.  These variables are checked when a new buffer is displayed in the window.  Thus, you can make changes take effect by calling @code{set-window-buffer}."
-msgstr "これらの変数をセットしても、そのウィンドウには即座には反映されません。これらの変数は、そのウィンドウ内に新たなバッファーを表示する際にチェックされます。したがって、@code{set-window-buffer}を呼び出すことにより、変更を反映することができます。"
+msgstr "これらの変数をセットしてもウィンドウには即座には反映されません。これらの変数はウィンドウ内に新たなバッファーを表示する際にチェックされます。したがって@code{set-window-buffer}を呼び出すことにより変更を反映することができます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4737
@@ -7927,7 +7923,7 @@ msgstr "set-window-margins window left &optional right"
 #. type: defun
 #: original_texis/display.texi:4742
 msgid "This function specifies the margin widths for window @var{window}, in character cell units.  The argument @var{left} controls the left margin, and @var{right} controls the right margin (default @code{0})."
-msgstr "この関数は、ウィンドウ@var{window}のマージン幅を、文字セル単位で指定する。引数@var{left}は左マージン、@var{right}は右マージン(デフォルトは@code{0})を制御する。"
+msgstr "この関数はウィンドウ@var{window}のマージン幅、文字セル単位で指定する。引数@var{left}は左マージン、@var{right}は右マージン(デフォルトは@code{0})を制御する。"
 
 #. type: defun
 #: original_texis/display.texi:4744
@@ -7938,7 +7934,7 @@ msgstr "window-margins &optional window"
 #. type: defun
 #: original_texis/display.texi:4751
 msgid "This function returns the width of the left and right margins of @var{window} as a cons cell of the form @w{@code{(@var{left} . @var{right})}}.  If one of the two marginal areas does not exist, its width is returned as @code{nil}; if neither of the two margins exist, the function returns @code{(nil)}.  If @var{window} is @code{nil}, the selected window is used."
-msgstr "この関数は、@var{window}の左マージンと右マージンの幅を、@w{@code{(@var{left} . @var{right})}}という形式のコンスセルでリターンする。2つのマージンエリアのいずれか一方が存在しなければ、その幅は@code{nil}としてリターンされる。2つのマージンがどちらも存在しない場合、この関数は@code{(nil)}をリターンする。@var{window}が@code{nil}なら、選択されたウィンドウが使用される。"
+msgstr "この関数は@var{window}の左マージンと右マージンの幅を@w{@code{(@var{left} . @var{right})}}という形式のコンスセルでリターンする。2つのマージンエリアのいずれか一方が存在しなければ幅は@code{nil}でリターンされる。2つのマージンがどちらも存在しなければ、この関数は@code{(nil)}をリターンする。@var{window}が@code{nil}なら選択されたウィンドウが使用される。"
 
 #. type: cindex
 #: original_texis/display.texi:4755
@@ -7949,12 +7945,12 @@ msgstr "images in buffers"
 #. type: Plain text
 #: original_texis/display.texi:4760
 msgid "To display an image in an Emacs buffer, you must first create an image descriptor, then use it as a display specifier in the @code{display} property of text that is displayed (@pxref{Display Property})."
-msgstr "Emacsバッファー内にイメージを表示するためには、最初にイメージディスクリプタを作成して、それを表示されるテキストの@code{display}プロパティ(@ref{Display Property}を参照)内のディスプレイ指定子として使用しなければなりません。"
+msgstr "Emacsバッファー内にイメージを表示するためには最初にイメージディスクリプタを作成して、それを表示されるテキストの@code{display}プロパティ(@ref{Display Property}を参照)内のディスプレイ指定子として使用しなければなりません。"
 
 #. type: Plain text
 #: original_texis/display.texi:4767
 msgid "Emacs is usually able to display images when it is run on a graphical terminal.  Images cannot be displayed in a text terminal, on certain graphical terminals that lack the support for this, or if Emacs is compiled without image support.  You can use the function @code{display-images-p} to determine if images can in principle be displayed (@pxref{Display Feature Testing})."
-msgstr "Emacsはグラフィカルな端末で実行時は、通常はイメージの表示が可能です。テキスト端末、イメージサポートを欠く特定のグラフ^ィカル端末、またはイメージサポートなしでコンパイルされたEmacsでは、イメージは表示できません。原則イメージが表示可能か判断するためには、関数@code{display-images-p}を使用できます(@ref{Display Feature Testing}を参照)。"
+msgstr "Emacsはグラフィカルな端末で実行時には、通常はイメージの表示が可能です。テキスト端末、イメージサポートを欠く特定のグラフィカル端末、またはイメージサポートなしでコンパイルされたEmacsではイメージを表示できません。原則的にイメージが表示可能か判断するためには関数@code{display-images-p}を使用できます(@ref{Display Feature Testing}を参照)。"
 
 #. type: subsection
 #: original_texis/display.texi:4780 original_texis/display.texi:4782
@@ -8038,7 +8034,7 @@ msgstr "Other Image Types"
 #. type: menuentry
 #: original_texis/display.texi:4780
 msgid "Various other formats are supported."
-msgstr "サポートされるその他さまざまなフォーマット。"
+msgstr "サポートされる他のさまざまなフォーマット。"
 
 #. type: subsection
 #: original_texis/display.texi:4780 original_texis/display.texi:5270
@@ -8103,7 +8099,7 @@ msgstr "image types"
 #. type: Plain text
 #: original_texis/display.texi:4793
 msgid "Emacs can display a number of different image formats.  Some of these image formats are supported only if particular support libraries are installed.  On some platforms, Emacs can load support libraries on demand; if so, the variable @code{dynamic-library-alist} can be used to modify the set of known names for these dynamic libraries.  @xref{Dynamic Libraries}."
-msgstr "Emacsは、いくつかの異なるフォーマットのイメージを表示できます。これらのイメージフォーマットのいくつかは、特定のサポートライブラリーがインストールされている場合のみサポートされます。いくつかのプラットフォームでは、Emacsはオンデマンドでサポートライブラリーをロードできます。そのような場合には、それらの動的ライブラリーにたいする既知の名前セットを変更するために、変数@code{dynamic-library-alist}を使用できます。@ref{Dynamic Libraries}を参照してください。"
+msgstr "Emacsはいくつかの異なるフォーマットのイメージを表示できます。これらのイメージフォーマットのいくつかは、特定のサポートライブラリーがインストールされている場合のみサポートされます。いくつかのプラットフォームではEmacsはオンデマンドでサポートライブラリーをロードできます。そのような場合には、それらの動的ライブラリーにたいする既知の名前セットを変更するために変数@code{dynamic-library-alist}を使用できます。@ref{Dynamic Libraries}を参照してください。"
 
 #. type: Plain text
 #: original_texis/display.texi:4799
@@ -8113,12 +8109,12 @@ msgstr "サポートされるイメージフォーマット(と要求される�
 #. type: Plain text
 #: original_texis/display.texi:4804
 msgid "Each of these image formats is associated with an @dfn{image type symbol}.  The symbols for the above formats are, respectively, @code{pbm}, @code{xbm}, @code{xpm}, @code{gif}, @code{postscript}, @code{jpeg}, @code{tiff}, @code{png}, and @code{svg}."
-msgstr "これらのイメージフォーマットはそれぞれ、@dfn{イメージタイプシンボル(image type symbol)}に関連付けられます。上記のフォーマットにたいするシンボルは順に@code{pbm}、@code{xbm}、@code{xpm}、@code{gif}、@code{postscript}、@code{jpeg}、@code{tiff}、@code{png}、@code{svg}になります。"
+msgstr "これらのイメージフォーマットはそれぞれ@dfn{イメージタイプシンボル(image type symbol)}に関連付けられます。上記のフォーマットにたいするシンボルは順に@code{pbm}、@code{xbm}、@code{xpm}、@code{gif}、@code{postscript}、@code{jpeg}、@code{tiff}、@code{png}、@code{svg}です。"
 
 #. type: Plain text
 #: original_texis/display.texi:4809
 msgid "Furthermore, if you build Emacs with ImageMagick (@code{libMagickWand}) support, Emacs can display any image format that ImageMagick can.  @xref{ImageMagick Images}.  All images displayed via ImageMagick have type symbol @code{imagemagick}."
-msgstr "さらにImageMagick(@code{libMagickWand})のサポートつきでEmacsをビルドした場合には、EmacsはImageMagickが表示可能なイメージフォーマットを表示できます。@ref{ImageMagick Images}を参照してください。ImageMagickを通じて表示されるすべてのイメージは、タイプシンボル@code{imagemagick}をもちます。"
+msgstr "さらにImageMagick(@code{libMagickWand})のサポートつきでEmacsをビルドした場合には、EmacsはImageMagickが表示可能なイメージフォーマットを表示できます。@ref{ImageMagick Images}を参照してください。ImageMagickを通じて表示されるすべてのイメージはタイプシンボル@code{imagemagick}をもちます。"
 
 #. type: defvar
 #: original_texis/display.texi:4810
@@ -8129,12 +8125,12 @@ msgstr "image-types"
 #. type: defvar
 #: original_texis/display.texi:4813
 msgid "This variable contains a list of type symbols for image formats which are potentially supported in the current configuration."
-msgstr "この変数はカレント構成で潜在的にサポートされるイメージフォーマットにたいする、タイプシンボルのリストを含む。"
+msgstr "この変数はカレント構成で潜在的にサポートされるイメージフォーマットにたいするタイプシンボルのリストを含む。"
 
 #. type: defvar
 #: original_texis/display.texi:4818
 msgid "``Potentially'' means that Emacs knows about the image types, not necessarily that they can be used (for example, they could depend on unavailable dynamic libraries).  To know which image types are really available, use @code{image-type-available-p}."
-msgstr "``潜在的''とは、Emacsがそのイメージタイプを知っていることを意味しており、実際に使用可能である必要はない(たとえば動的ライブラリーが利用できないせいかもしれない)。どのイメージタイプが実際に利用できるか知るためには、@code{image-type-available-p}を使用すること。"
+msgstr "``潜在的''とはEmacsがそのイメージタイプを知っていることを意味しており、実際に使用可能である必要はない(たとえば動的ライブラリーが利用できないせいかもしれない)。どのイメージタイプが実際に利用できるか知るためには@code{image-type-available-p}を使用すること。"
 
 #. type: defun
 #: original_texis/display.texi:4820
@@ -8145,12 +8141,12 @@ msgstr "image-type-available-p type"
 #. type: defun
 #: original_texis/display.texi:4823
 msgid "This function returns non-@code{nil} if images of type @var{type} can be loaded and displayed.  @var{type} must be an image type symbol."
-msgstr "この関数は、タイプ@var{type}のイメージのロードおよび表示が可能なら非@code{nil}をリターンする。@var{type}はイメージタイプシンボルであること。"
+msgstr "この関数はタイプ@var{type}のイメージのロードと表示が可能なら非@code{nil}をリターンする。@var{type}はイメージタイプシンボルであること。"
 
 #. type: defun
 #: original_texis/display.texi:4828
 msgid "For image types whose support libraries are statically linked, this function always returns @code{t}.  For image types whose support libraries are dynamically loaded, it returns @code{t} if the library could be loaded and @code{nil} otherwise."
-msgstr "サポートライブラリーが静的にリンクされたイメージタイプにたいして、この関数は常に@code{t}をリターンする。サポートライブラリーが動的にロードされるイメージタイプにたいしては、そのライブラリーがロード可能なら@code{t}、それ以外なら@code{nil}をリターンする。"
+msgstr "サポートライブラリーが静的にリンクされたイメージタイプにたいして、この関数は常に@code{t}をリターンする。サポートライブラリーが動的にロードされるイメージタイプにたいしてはライブラリーがロード可能なら@code{t}、それ以外なら@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/display.texi:4832
@@ -8161,17 +8157,17 @@ msgstr "image descriptor"
 #. type: Plain text
 #: original_texis/display.texi:4839
 msgid "An @dfn{image descriptor} is a list which specifies the underlying data for an image, and how to display it.  It is typically used as the value of a @code{display} overlay or text property (@pxref{Other Display Specs}); but @xref{Showing Images}, for convenient helper functions to insert images into buffers."
-msgstr "@dfn{イメージディスクリプタ(image descriptor)}とは、イメージにたいする基礎的なデータと、それを表示する方法を指定するリストです。これは通常、オーバーレイプロパティまたはテキストプロパティ@code{display}(@ref{Other Display Specs}を参照)の値を通じて使用されますが、バッファーにイメージを挿入する便利なヘルパー関数については、@ref{Showing Images}を参照してください。"
+msgstr "@dfn{イメージディスクリプタ(image descriptor)}とは、イメージにたいする基礎的なデータと表示する方法を指定するリストです。これは通常はオーバーレイプロパティかテキストプロパティ@code{display}(@ref{Other Display Specs}を参照)の値を通じて使用されますが、バッファーにイメージを挿入する便利なヘルパー関数については@ref{Showing Images}を参照してください。"
 
 #. type: Plain text
 #: original_texis/display.texi:4844
 msgid "Each image descriptor has the form @code{(image . @var{props})}, where @var{props} is a property list of alternating keyword symbols and values, including at least the pair @code{:type @var{type}} that specifies the image type."
-msgstr "イメージディスクリプタはそれぞれ@code{(image . @var{props})}という形式をもちます。ここで@var{props}はキーワードシンボルと値のペアーからなるプロパティリストで、少なくともそのイメージタイプを指定するペアー@code{:type @var{type}}を含みます。"
+msgstr "イメージディスクリプタはそれぞれ@code{(image . @var{props})}という形式をもちます。ここで@var{props}はキーワードシンボルと値のペアーからなるプロパティリストであり、少なくともそのイメージタイプを指定するペアー@code{:type @var{type}}を含みます。"
 
 #. type: Plain text
 #: original_texis/display.texi:4848
 msgid "The following is a list of properties that are meaningful for all image types (there are also properties which are meaningful only for certain image types, as documented in the following subsections):"
-msgstr "以下は、すべてのイメージタイプにたいして意味のあるプロパティのリストです(以降のサブセクションで説明するように、特定のイメージタイプにたいしてのみ意味があるプロパティも存在する):"
+msgstr "以下はすべてのイメージタイプにたいして意味のあるプロパティのリストです(以降のサブセクションで説明するように特定のイメージタイプにたいしてのみ意味があるプロパティも存在する):"
 
 #. type: item
 #: original_texis/display.texi:4850
@@ -8203,7 +8199,7 @@ msgstr ":file @var{file}"
 #. type: table
 #: original_texis/display.texi:4860
 msgid "This says to load the image from file @var{file}.  If @var{file} is not an absolute file name, it is expanded in @code{data-directory}."
-msgstr "これは、ファイル@var{file}からイメージをロードすることを意味する。@var{file}が絶対ファイル名でなければ、それは@code{data-directory}内で展開される。"
+msgstr "これはファイル@var{file}からイメージをロードすることを意味する。@var{file}が絶対ファイル名でなければ@code{data-directory}内で展開される。"
 
 #. type: item
 #: original_texis/display.texi:4861 original_texis/display.texi:5068
@@ -8214,12 +8210,12 @@ msgstr ":data @var{data}"
 #. type: table
 #: original_texis/display.texi:4864
 msgid "This specifies the raw image data.  Each image descriptor must have either @code{:data} or @code{:file}, but not both."
-msgstr "これは、rawイメージデータを指定する。すべてのイメージディスクリプタは、@code{:data}か@code{:file}のいずれかをもたなければならないが、両方もつことはできない。"
+msgstr "これはrawイメージデータを指定する。すべてのイメージディスクリプタは@code{:data}か@code{:file}のいずれかをもたなければならないが両方もつことはできない。"
 
 #. type: table
 #: original_texis/display.texi:4870
 msgid "For most image types, the value of a @code{:data} property should be a string containing the image data.  Some image types do not support @code{:data}; for some others, @code{:data} alone is not enough, so you need to use other image properties along with @code{:data}.  See the following subsections for details."
-msgstr "ほとんどのイメージタイプにたいして、@code{:data}プロパティの値はイメージデータを含む、文字列であること。いくつかのイメージタイプは、@code{:data}をサポートしない。それ以外のイメージタイプにたいしては、@code{:data}単独では不十分であり、@code{:data}とともに他のイメージプロパティを使用する必要がある。詳細は、以下のサブセクションを参照のこと。"
+msgstr "ほとんどのイメージタイプにたいして、@code{:data}プロパティの値はイメージデータを含む文字列であること。いくつかのイメージタイプは@code{:data}をサポートしない。それ以外のイメージタイプにたいしては@code{:data}単独では不十分であり、@code{:data}とともに他のイメージプロパティを使用する必要がある。詳細は以下のサブセクションを参照のこと。"
 
 #. type: item
 #: original_texis/display.texi:4871
@@ -8230,27 +8226,27 @@ msgstr ":margin @var{margin}"
 #. type: table
 #: original_texis/display.texi:4878
 msgid "This specifies how many pixels to add as an extra margin around the image.  The value, @var{margin}, must be a non-negative number, or a pair @code{(@var{x} . @var{y})} of such numbers.  If it is a pair, @var{x} specifies how many pixels to add horizontally, and @var{y} specifies how many pixels to add vertically.  If @code{:margin} is not specified, the default is zero."
-msgstr "これは、そのイメージ周囲に余分なマージンとして、何ピクセル追加するかを指定する。値@var{margin}は非負の数値、またはそのような数値のペアー@code{(@var{x} . @var{y})}でなければならない。ペアーの場合、@var{x}は水平方向に追加するピクセル数、@var{y}は垂直方向に追加するピクセル数を指定する。@code{:margin}が指定されない場合のデフォルトは0。"
+msgstr "これはイメージ周囲に余分なマージンとして何ピクセル追加するかを指定する。値@var{margin}は非負の数値か、そのような数値のペアー@code{(@var{x} . @var{y})}でなければならない。ペアーなら@var{x}は水平方向に追加するピクセル数、@var{y}は垂直方向に追加するピクセル数を指定する。@code{:margin}が指定されない場合のデフォルトは0。"
 
 #. type: table
 #: original_texis/display.texi:4884
 msgid "This specifies the amount of the image's height to use for its ascent---that is, the part above the baseline.  The value, @var{ascent}, must be a number in the range 0 to 100, or the symbol @code{center}."
-msgstr "これは、イメージのアセント(ベースラインの上の部分)に使用する、そのイメージの高さの分量を指定する。値@var{ascent}は、から100の数値、またはシンボル@code{center}でなければならない。"
+msgstr "これはイメージのアセント(ベースラインの上の部分)に使用するイメージの高さの分量を指定する。値@var{ascent}は0から100の数値かシンボル@code{center}でなければならない。"
 
 #. type: table
 #: original_texis/display.texi:4887
 msgid "If @var{ascent} is a number, that percentage of the image's height is used for its ascent."
-msgstr "@var{ascent}が数値なら、アセントに使用するイメージの高さのパーセンテージであること。"
+msgstr "@var{ascent}が数値ならアセントに使用するイメージの高さのパーセンテージであること。"
 
 #. type: table
 #: original_texis/display.texi:4892
 msgid "If @var{ascent} is @code{center}, the image is vertically centered around a centerline which would be the vertical centerline of text drawn at the position of the image, in the manner specified by the text properties and overlays that apply to the image."
-msgstr "@var{ascent}が@code{center}なら、そのイメージにたいしてテキストプロパティおよびオーバーレイプロパティにより指定される方法で、センターライン(そのイメージ位置にテキストを描画する際の垂直方向のセンターライン)の垂直方向中心にイメージが配置される。"
+msgstr "@var{ascent}が@code{center}なら、イメージにたいしてテキストプロパティやオーバーレイプロパティにより指定される方法で、センターライン(そのイメージ位置にテキストを描画する際の垂直方向のセンターライン)の垂直方向中心にイメージが配置される。"
 
 #. type: table
 #: original_texis/display.texi:4894
 msgid "If this property is omitted, it defaults to 50."
-msgstr "このプロパティが省略された場合のデフォルトは500。"
+msgstr "このプロパティが省略された場合のデフォルトは50。"
 
 #. type: item
 #: original_texis/display.texi:4895
@@ -8261,7 +8257,7 @@ msgstr ":relief @var{relief}"
 #. type: table
 #: original_texis/display.texi:4900
 msgid "This adds a shadow rectangle around the image.  The value, @var{relief}, specifies the width of the shadow lines, in pixels.  If @var{relief} is negative, shadows are drawn so that the image appears as a pressed button; otherwise, it appears as an unpressed button."
-msgstr "これは、イメージ注意にシャドー矩形を追加する。値@var{relief}は、シャドーライン幅をピクセルで指定する。@var{relief}が負ならボタンを押下した状態、それ以外はボタンを押下していない状態のイメージでシャドーを描画する。"
+msgstr "これはイメージ周辺にシャドー矩形を追加する。値@var{relief}はシャドーライン幅をピクセルで指定する。@var{relief}が負ならボタンを押下した状態、それ以外はボタンを押下していない状態のイメージでシャドーを描画する。"
 
 #. type: item
 #: original_texis/display.texi:4901
@@ -8272,7 +8268,7 @@ msgstr ":conversion @var{algorithm}"
 #. type: table
 #: original_texis/display.texi:4905
 msgid "This specifies a conversion algorithm that should be applied to the image before it is displayed; the value, @var{algorithm}, specifies which algorithm."
-msgstr "これは、イメージを表示する前に適用するべき、変換アルゴリズムを指定する。値@var{algorithm}は、どのアルゴリズムかを指定する。"
+msgstr "これはイメージを表示する前に適用するべき変換アルゴリズムを指定する。値@var{algorithm}は何のアルゴリズムかを指定する。"
 
 #. type: item
 #: original_texis/display.texi:4907
@@ -8288,10 +8284,8 @@ msgstr "emboss"
 
 #. type: table
 #: original_texis/display.texi:4913
-#, fuzzy
-#| msgid "Specifies the Laplace edge detection algorithm, which blurs out small differences in color while highlighting larger differences.  People sometimes consider this useful for displaying the image for a ``disabled'' button."
 msgid "Specifies the Laplace edge detection algorithm, which blurs out small differences in color while highlighting larger differences.  People sometimes consider this useful for displaying the image for a disabled button."
-msgstr "カラーの大きい差異を強調して小さな差異を不鮮明にする、ラプラスエッジ検出アルゴリズム(Laplace edge detection algorithm)を指定する。``無効''なボタンのイメージ表示に、これが役立つと考える人もいます。"
+msgstr "カラーの大きな差異を強調して小さな差異を不鮮明にするラプラスエッジ検出アルゴリズム(Laplace edge detection algorithm)を指定する。無効なボタンのイメージ表示に、これが役立つと考える人もいます。"
 
 #. type: item
 #: original_texis/display.texi:4914
@@ -8308,7 +8302,7 @@ msgstr "edge detection, images"
 #. type: table
 #: original_texis/display.texi:4924
 msgid "Specifies a general edge-detection algorithm.  @var{matrix} must be either a nine-element list or a nine-element vector of numbers.  A pixel at position @math{x/y} in the transformed image is computed from original pixels around that position.  @var{matrix} specifies, for each pixel in the neighborhood of @math{x/y}, a factor with which that pixel will influence the transformed pixel; element @math{0} specifies the factor for the pixel at @math{x-1/y-1}, element @math{1} the factor for the pixel at @math{x/y-1} etc., as shown below:"
-msgstr "一般的なエッジ検出アルゴリズムを指定する。@var{matrix}は数値からなる9要素のリスト、またはベクターでなければならない。変換されたイメージ内の位置@math{x/y}にあるピクセルは、その位置周辺にある元のピクセルから計算される。@var{matrix}は、@math{x/y}に近接する各ピクセルにたいして、そのピクセルが変換先ピクセルに影響するファクター(factor: 要因)を指定する。以下のように、要素@math{0}は@math{x-1/y-1}にあるピクセルのファクター、要素@math{1}は@math{x/y-1}にあるピクセルにたいするファクター、...を指定する。"
+msgstr "一般的なエッジ検出アルゴリズムを指定する。@var{matrix}は数値からなる9要素のリストかベクターでなければならない。変換されたイメージ内の位置@math{x/y}にあるピクセルは、その位置周辺にある元のピクセルから計算される。@var{matrix}は@math{x/y}に近接する各ピクセルにたいして、そのピクセルが変換先ピクセルに影響するファクター(factor: 要因)を指定する。以下のように要素@math{0}は@math{x-1/y-1}にあるピクセルのファクター、要素@math{1}は@math{x/y-1}にあるピクセルにたいするファクター、...を指定する。"
 
 #. type: tex
 #: original_texis/display.texi:4929
@@ -8337,12 +8331,12 @@ msgstr ""
 #. type: table
 #: original_texis/display.texi:4943
 msgid "The resulting pixel is computed from the color intensity of the color resulting from summing up the RGB values of surrounding pixels, multiplied by the specified factors, and dividing that sum by the sum of the factors' absolute values."
-msgstr "結果のピクセルは、周辺ピクセルのRGB値を合計したカラーを指定されたファクターで乗じ、その合計をファクター絶対値の合計で除した色強度から計算される。"
+msgstr "結果となるピクセルは周辺ピクセルのRGB値を合計したカラーを指定されたファクターで乗じて、その合計をファクター絶対値の合計で除した色強度から計算される。"
 
 #. type: table
 #: original_texis/display.texi:4945
 msgid "Laplace edge-detection currently uses a matrix of"
-msgstr "ラプラスエッジ検出は、現在のところは以下のマトリクス"
+msgstr "ラプラスエッジ検出は現在のところは以下のマトリクス"
 
 #. type: tex
 #: original_texis/display.texi:4950
@@ -8405,10 +8399,8 @@ msgstr "disabled"
 
 #. type: table
 #: original_texis/display.texi:4978
-#, fuzzy
-#| msgid "Specifies transforming the image so that it looks ``disabled''."
 msgid "Specifies transforming the image so that it looks disabled."
-msgstr "イメージが``無効(disabled)''に見えるよう変換することを指定する。"
+msgstr "イメージが無効(disabled)に見えるよう変換することを指定する。"
 
 #. type: item
 #: original_texis/display.texi:4980
@@ -8419,12 +8411,12 @@ msgstr ":mask @var{mask}"
 #. type: table
 #: original_texis/display.texi:4989
 msgid "If @var{mask} is @code{heuristic} or @code{(heuristic @var{bg})}, build a clipping mask for the image, so that the background of a frame is visible behind the image.  If @var{bg} is not specified, or if @var{bg} is @code{t}, determine the background color of the image by looking at the four corners of the image, assuming the most frequently occurring color from the corners is the background color of the image.  Otherwise, @var{bg} must be a list @code{(@var{red} @var{green} @var{blue})} specifying the color to assume for the background of the image."
-msgstr "@var{mask}が@code{heuristic}か@code{(heuristic @var{bg})}なら、フレームのバックグラウンドがイメージ背後に見えるよう、そのイメージのクリッピングマスクを構築する。@var{bg}が未指定または@code{t}なら、イメージ4隅に最頻するカラーをそのイメージのバックグラウンドカラーとみなしてバックグラウンドカラーを決定する。それ以外なら@var{bg}は、そのイメージのバックグラウンドとみなすべきカラーを指定するリスト@code{(@var{red} @var{green} @var{blue})}でなければならない。"
+msgstr "@var{mask}が@code{heuristic}か@code{(heuristic @var{bg})}なら、フレームのバックグラウンドがイメージ背後に見えるようにイメージのクリッピングマスクを構築する。@var{bg}が未指定か@code{t}なら、イメージ4隅に最頻するカラーをそのイメージのバックグラウンドカラーとみなしてバックグラウンドカラーを決定する。それ以外なら@var{bg}はイメージのバックグラウンドとみなすべきカラーを指定するリスト@code{(@var{red} @var{green} @var{blue})}でなければならない。"
 
 #. type: table
 #: original_texis/display.texi:4993
 msgid "If @var{mask} is @code{nil}, remove a mask from the image, if it has one.  Images in some formats include a mask which can be removed by specifying @code{:mask nil}."
-msgstr "@var{mask}が@code{nil}なら、イメージがマスクをもつ場合はマスクを削除する。マスクを含むフォーマットのイメージは、@code{:mask nil}を指定することにより削除される可能性がある。"
+msgstr "@var{mask}が@code{nil}なら、イメージがマスクをもつ場合にはマスクを削除する。マスクを含むフォーマットのイメージは@code{:mask nil}を指定することにより削除される可能性がある。"
 
 #. type: item
 #: original_texis/display.texi:4994
@@ -8435,7 +8427,7 @@ msgstr ":pointer @var{shape}"
 #. type: table
 #: original_texis/display.texi:4997
 msgid "This specifies the pointer shape when the mouse pointer is over this image.  @xref{Pointer Shape}, for available pointer shapes."
-msgstr "これはマウスポインターがそのイメージ上にある際の、ポインターシェイプを指定する。利用可能なポインターシェイプについては、@ref{Pointer Shape}を参照のこと。"
+msgstr "これはマウスポインターがそのイメージ上にある際のポインターシェイプを指定する。利用可能なポインターシェイプについては@ref{Pointer Shape}を参照のこと。"
 
 #. type: item
 #: original_texis/display.texi:4998
@@ -8452,37 +8444,37 @@ msgstr "image maps"
 #. type: table
 #: original_texis/display.texi:5001
 msgid "This associates an image map of @dfn{hot spots} with this image."
-msgstr "これは、そのイメージに@dfn{ホットスポット(hot spots)}のイメージマップを関連付ける。"
+msgstr "これはイメージに@dfn{ホットスポット(hot spots)}のイメージマップを関連付ける。"
 
 #. type: table
 #: original_texis/display.texi:5005
 msgid "An image map is an alist where each element has the format @code{(@var{area} @var{id} @var{plist})}.  An @var{area} is specified as either a rectangle, a circle, or a polygon."
-msgstr "イメージマップは、各要素が@code{(@var{area} @var{id} @var{plist})}という形式をもつalistである。@var{area}はにはrectangle(矩形)、circle(円)、またはpolygon(ポリゴン、多角形)のいずれかを指定する。"
+msgstr "イメージマップは各要素が@code{(@var{area} @var{id} @var{plist})}という形式をもつalist。@var{area}にはrectangle(矩形)、circle(円)、またはpolygon(ポリゴン、多角形)のいずれかを指定する。"
 
 #. type: table
 #: original_texis/display.texi:5010
 msgid "A rectangle is a cons @code{(rect . ((@var{x0} . @var{y0}) . (@var{x1} . @var{y1})))} which specifies the pixel coordinates of the upper left and bottom right corners of the rectangle area."
-msgstr "rectangleは、矩形エリアの左上隅と右下隅のピクセル座標を指定するコンス@code{(rect . ((@var{x0} . @var{y0}) . (@var{x1} . @var{y1})))}である。"
+msgstr "rectangleは矩形エリアの左上隅と右下隅のピクセル座標を指定するコンス@code{(rect . ((@var{x0} . @var{y0}) . (@var{x1} . @var{y1})))}。"
 
 #. type: table
 #: original_texis/display.texi:5015
 msgid "A circle is a cons @code{(circle . ((@var{x0} . @var{y0}) . @var{r}))} which specifies the center and the radius of the circle; @var{r} may be a float or integer."
-msgstr "circleは、円の中心と半径を指定するコンス@code{(circle . ((@var{x0} . @var{y0}) . @var{r}))}である。@var{r}は整数または浮動小数点数。"
+msgstr "circleは円の中心と半径を指定するコンス@code{(circle . ((@var{x0} . @var{y0}) . @var{r}))}。@var{r}は整数か浮動小数点数。"
 
 #. type: table
 #: original_texis/display.texi:5019
 msgid "A polygon is a cons @code{(poly . [@var{x0} @var{y0} @var{x1} @var{y1} ...])} where each pair in the vector describes one corner in the polygon."
-msgstr "polygonは、各ペアーが多角形の1つの頂点を記述するコンス@code{(poly . [@var{x0} @var{y0} @var{x1} @var{y1} ...])}である。"
+msgstr "polygonは各ペアーが多角形の1つの頂点を記述するコンス@code{(poly . [@var{x0} @var{y0} @var{x1} @var{y1} ...])}。"
 
 #. type: table
 #: original_texis/display.texi:5026
 msgid "When the mouse pointer lies on a hot-spot area of an image, the @var{plist} of that hot-spot is consulted; if it contains a @code{help-echo} property, that defines a tool-tip for the hot-spot, and if it contains a @code{pointer} property, that defines the shape of the mouse cursor when it is on the hot-spot.  @xref{Pointer Shape}, for available pointer shapes."
-msgstr "マウスポインターがホットスポット上にある際は、そのホットスポットの@var{plist}が参照される。これが@code{help-echo}プロパティを含むならそのホットスポットのツールチップを指定し、@code{pointer}プロパティを含む場合はマウスカーソルがホットスポット上にあるときのマウスカーソルのシェイプを指定する。利用可能なポインターシェイプについては、@ref{Pointer Shape}を参照のこと。"
+msgstr "マウスポインターがホットスポット上にある際には、ホットスポットの@var{plist}が参照される。これが@code{help-echo}プロパティを含むならそのホットスポットのツールチップ、@code{pointer}プロパティを含む場合はマウスカーソルがホットスポット上にあるときのマウスカーソルのシェイプを指定する。利用可能なポインターシェイプについては@ref{Pointer Shape}を参照のこと。"
 
 #. type: table
 #: original_texis/display.texi:5031
 msgid "When you click the mouse when the mouse pointer is over a hot-spot, an event is composed by combining the @var{id} of the hot-spot with the mouse event; for instance, @code{[area4 mouse-1]} if the hot-spot's @var{id} is @code{area4}."
-msgstr "マウスポインターがホットスポット上にあるときにマウスをクリックしたときのイベントは、ホットスポットの@var{id}とマウスイベントを組み合わせて構成される。たとえば、ホットスポットの@var{id}が@code{area4}なら、@code{[area4 mouse-1]}となる。"
+msgstr "マウスポインターがホットスポット上にあるときにマウスをクリックしたときのイベントは、ホットスポットの@var{id}とマウスイベントを組み合わせて構成される。たとえばホットスポットの@var{id}が@code{area4}なら@code{[area4 mouse-1]}。"
 
 #. type: defun
 #: original_texis/display.texi:5033
@@ -8493,7 +8485,7 @@ msgstr "image-mask-p spec &optional frame"
 #. type: defun
 #: original_texis/display.texi:5038
 msgid "This function returns @code{t} if image @var{spec} has a mask bitmap.  @var{frame} is the frame on which the image will be displayed.  @var{frame} @code{nil} or omitted means to use the selected frame (@pxref{Input Focus})."
-msgstr "この関数は、イメージ@var{spec}がマスクビットマップをもつなら、@code{t}をリターンする。@var{frame}はそのイメージが表示されるフレームである。@var{frame}が@code{nil}または省略された場合は、選択されたフレームが使用される(@ref{Input Focus}を参照)。"
+msgstr "この関数はイメージ@var{spec}がマスクビットマップをもつなら@code{t}をリターンする。@var{frame}はそのイメージが表示されるフレーム。@var{frame}が@code{nil}か省略された場合には選択されたフレームが使用される(@ref{Input Focus}を参照)。"
 
 #. type: cindex
 #: original_texis/display.texi:5042
@@ -8504,12 +8496,12 @@ msgstr "XBM"
 #. type: Plain text
 #: original_texis/display.texi:5047
 msgid "To use XBM format, specify @code{xbm} as the image type.  This image format doesn't require an external library, so images of this type are always supported."
-msgstr "XBMフォーマットを使用するには、イメージタイプとして@code{xbm}を指定します。このイメージフォーマットは外部ライブラリーを要求せず、このタイプのイメージは常にサポートされます。"
+msgstr "XBMフォーマットを使用するにはイメージタイプとして@code{xbm}を指定します。このイメージフォーマットは外部ライブラリーを要求せず、このタイプのイメージは常にサポートされます。"
 
 #. type: Plain text
 #: original_texis/display.texi:5049
 msgid "Additional image properties supported for the @code{xbm} image type are:"
-msgstr "@code{xbm}イメージタイプにたいして、追加のイメージプロパティがサポートされます:"
+msgstr "@code{xbm}イメージタイプにたいして追加のイメージプロパティがサポートされます:"
 
 #. type: item
 #: original_texis/display.texi:5051 original_texis/display.texi:5235
@@ -8520,7 +8512,7 @@ msgstr ":foreground @var{foreground}"
 #. type: table
 #: original_texis/display.texi:5056
 msgid "The value, @var{foreground}, should be a string specifying the image foreground color, or @code{nil} for the default color.  This color is used for each pixel in the XBM that is 1.  The default is the frame's foreground color."
-msgstr "値@var{foreground}はそのイメージのフォアグラウンドカラーを指定する文字列、またはデフォルトカラーを指定する@code{nil}であること。このカラーはXBM内の1の各ピクセルに使用される。デフォルトは、そのフレームのフォアグラウンドカラーである。"
+msgstr "値@var{foreground}はそのイメージのフォアグラウンドカラーを指定する文字列、またはデフォルトカラーを指定する@code{nil}であること。このカラーはXBM内の1の各ピクセルに使用される。デフォルトはフレームのフォアグラウンドカラー。"
 
 #. type: item
 #: original_texis/display.texi:5057 original_texis/display.texi:5191
@@ -8532,42 +8524,42 @@ msgstr ":background @var{background}"
 #. type: table
 #: original_texis/display.texi:5062
 msgid "The value, @var{background}, should be a string specifying the image background color, or @code{nil} for the default color.  This color is used for each pixel in the XBM that is 0.  The default is the frame's background color."
-msgstr "値@var{background}はそのイメージのバックグラウンドカラーを指定する文字列、またはデフォルトカラーを指定する@code{nil}であること。このカラーはXBM内の0の各ピクセルに使用される。デフォルトは、そのフレームのバックグラウンドカラーである。"
+msgstr "値@var{background}はそのイメージのバックグラウンドカラーを指定する文字列、またはデフォルトカラーを指定する@code{nil}であること。このカラーはXBM内の0の各ピクセルに使用される。デフォルトはフレームのバックグラウンドカラー。"
 
 #. type: Plain text
 #: original_texis/display.texi:5066
 msgid "If you specify an XBM image using data within Emacs instead of an external file, use the following three properties:"
-msgstr "外部ファイルのかわりに、Emacs内のデータを指定してXBMイメージを指定するには、以下の3つのプロパティを使用する:"
+msgstr "外部ファイルのかわりにEmacs内のデータを指定してXBMイメージを指定するには以下の3つのプロパティを使用する:"
 
 #. type: table
 #: original_texis/display.texi:5071
 msgid "The value, @var{data}, specifies the contents of the image.  There are three formats you can use for @var{data}:"
-msgstr "値@var{data}は、そのイメージのコンテンツを指定する。@var{data}として使用できる、3つのフォーマットが存在する:"
+msgstr "値@var{data}はイメージのコンテンツを指定する。@var{data}として使用できる3つのフォーマットが存在する:"
 
 #. type: itemize
 #: original_texis/display.texi:5076
 msgid "A vector of strings or bool-vectors, each specifying one line of the image.  Do specify @code{:height} and @code{:width}."
-msgstr "それぞれがイメージの1ラインを指定するような、文字列ベクターまたはboolベクター。@code{:height}と@code{:width}を指定する。"
+msgstr "それぞれがイメージの1ラインを指定するような文字列ベクターかboolベクター。@code{:height}と@code{:width}を指定する。"
 
 #. type: itemize
 #: original_texis/display.texi:5082
 msgid "A string containing the same byte sequence as an XBM file would contain.  You must not specify @code{:height} and @code{:width} in this case, because omitting them is what indicates the data has the format of an XBM file.  The file contents specify the height and width of the image."
-msgstr "文字列なら、XBMファイルが含むのと同じバイトシーケンスを含む。この場合は@code{:height}と@code{:width}を指定してはならない。これらを省略することが、そのデータがXBMファイルのフォーマットをもつことを示すからである。イメージの高さと幅は、ファイルのコンテンツにより指定される。"
+msgstr "文字列ならXBMファイルが含むのと同じバイトシーケンスを含む。この場合は@code{:height}と@code{:width}を指定してはならない。これらを省略することが、そのデータがXBMファイルのフォーマットをもつことを示すからである。イメージの高さと幅はファイルのコンテンツにより指定される。"
 
 #. type: itemize
 #: original_texis/display.texi:5090
 msgid "A string or a bool-vector containing the bits of the image (plus perhaps some extra bits at the end that will not be used).  It should contain at least @var{width} * @code{height} bits.  In this case, you must specify @code{:height} and @code{:width}, both to indicate that the string contains just the bits rather than a whole XBM file, and to specify the size of the image."
-msgstr "イメージのビット(もしかしたら終端の使用されない余分なビットを含む)を含む文字列、またはboolベクター。少なくとも@var{width} * @code{height}ビットを含むこと。この場合は、その文字列がXBMファイル全体ではなく、単にビットだけを含むことを示すとともに、そのイメージのサイズを指定するために、@code{:height}と@code{:width}を指定しなければならない。"
+msgstr "イメージのビットを含む文字列かboolベクター(終端の使用されない余分なビットを含むかもしれない)。少なくとも@var{width} * @code{height}ビットを含むこと。この場合にはその文字列がXBMファイル全体ではなく、単にビットだけを含むことを示すとともに、そのイメージのサイズを指定するために@code{:height}と@code{:width}を指定しなければならない。"
 
 #. type: table
 #: original_texis/display.texi:5094
 msgid "The value, @var{width}, specifies the width of the image, in pixels."
-msgstr "値@var{width}は、ピクセル単位でイメージの幅を指定する。"
+msgstr "値@var{width}はピクセル単位でイメージの幅を指定する。"
 
 #. type: table
 #: original_texis/display.texi:5097
 msgid "The value, @var{height}, specifies the height of the image, in pixels."
-msgstr "値@var{height}は、ピクセル単位でイメージの高さを指定する。"
+msgstr "値@var{height}はピクセル単位でイメージの高さを指定する。"
 
 #. type: cindex
 #: original_texis/display.texi:5101
@@ -8578,7 +8570,7 @@ msgstr "XPM"
 #. type: Plain text
 #: original_texis/display.texi:5106
 msgid "To use XPM format, specify @code{xpm} as the image type.  The additional image property @code{:color-symbols} is also meaningful with the @code{xpm} image type:"
-msgstr "XPMフォーマットを使用するには、イメージタイプに@code{xpm}を指定します。@code{xpm}イメージタイプでは、追加のプロパティ@code{:color-symbols}にも意味があります。"
+msgstr "XPMフォーマットを使用するにはイメージタイプに@code{xpm}を指定します。@code{xpm}イメージタイプでは追加のプロパティ@code{:color-symbols}にも意味があります。"
 
 #. type: item
 #: original_texis/display.texi:5108
@@ -8589,7 +8581,7 @@ msgstr ":color-symbols @var{symbols}"
 #. type: table
 #: original_texis/display.texi:5113
 msgid "The value, @var{symbols}, should be an alist whose elements have the form @code{(@var{name} . @var{color})}.  In each element, @var{name} is the name of a color as it appears in the image file, and @var{color} specifies the actual color to use for displaying that name."
-msgstr "値@var{symbols}は、要素が@code{(@var{name} . @var{color})}という形式をもつようなalistであること。各要素において、@var{name}はイメージファイル内に出現するカラー名、@var{color}はそのカラー名の実際の表示に使用するカラーを指定する。"
+msgstr "値@var{symbols}は要素が@code{(@var{name} . @var{color})}という形式をもつようなalistであること。各要素において@var{name}はイメージファイル内に出現するカラー名、@var{color}はそのカラー名の実際の表示に使用するカラーを指定する。"
 
 #. type: cindex
 #: original_texis/display.texi:5117
@@ -8600,7 +8592,7 @@ msgstr "postscript images"
 #. type: Plain text
 #: original_texis/display.texi:5122
 msgid "To use PostScript for an image, specify image type @code{postscript}.  This works only if you have Ghostscript installed.  You must always use these three properties:"
-msgstr "あるイメージにたいしてPostScriptを使用するには、イメージタイプ@code{postscript}を指定します。これは、Ghostscriptがインストールされている場合のみ機能します。常に以下の3つのプロパティを使用しなければなりません:"
+msgstr "あるイメージにたいしてPostScriptを使用するにはイメージタイプ@code{postscript}を指定します。これはGhostscriptがインストールされている場合のみ機能します。常に以下の3つのプロパティを使用しなければなりません:"
 
 #. type: item
 #: original_texis/display.texi:5124
@@ -8633,7 +8625,7 @@ msgstr ":bounding-box @var{box}"
 #. type: table
 #: original_texis/display.texi:5136
 msgid "The value, @var{box}, must be a list or vector of four integers, which specifying the bounding box of the PostScript image, analogous to the @samp{BoundingBox} comment found in PostScript files."
-msgstr "値@var{box}は、4つの整数からなるリストかベクターでなければならない。これらの整数は、PostScriptファイルの@samp{BoundingBox}に類似した、PostScriptイメージのバウンディングボックスを指定する。"
+msgstr "値@var{box}は4つの整数からなるリストかベクターでなければならない。これらの整数は、PostScriptファイルの@samp{BoundingBox}に類似したPostScriptイメージのバウンディングボックスを指定する。"
 
 #. type: example
 #: original_texis/display.texi:5139
@@ -8656,7 +8648,7 @@ msgstr "images, support for more formats"
 #. type: Plain text
 #: original_texis/display.texi:5152
 msgid "If you build Emacs with ImageMagick support, you can use the ImageMagick library to load many image formats (@pxref{File Conveniences,,, emacs, The GNU Emacs Manual}).  The image type symbol for images loaded via ImageMagick is @code{imagemagick}, regardless of the actual underlying image format."
-msgstr "ImageMagickのサポートつきでEmacsをビルドした場合には、多くくのイメージフォーマットをロードするために、ImageMagickライブラリーを使用できます(@ref{File Conveniences,,, emacs, The GNU Emacs Manual}を参照)。ImageMagickを通じてロードしたイメージのイメージタイプシンボルは、基礎となる実際のイメージフォーマットとは無関係に、@code{imagemagick}になります。"
+msgstr "ImageMagickのサポートつきでEmacsをビルドした場合には、多くくのイメージフォーマットをロードするためにImageMagickライブラリーを使用できます(@ref{File Conveniences,,, emacs, The GNU Emacs Manual}を参照)。ImageMagickを通じてロードしたイメージのイメージタイプシンボルは、基礎となる実際のイメージフォーマットとは無関係に@code{imagemagick}になります。"
 
 #. type: defun
 #: original_texis/display.texi:5153
@@ -8667,7 +8659,7 @@ msgstr "imagemagick-types"
 #. type: defun
 #: original_texis/display.texi:5158
 msgid "This function returns a list of image file extensions supported by the current ImageMagick installation.  Each list element is a symbol representing an internal ImageMagick name for an image type, such as @code{BMP} for @file{.bmp} images."
-msgstr "この関数は、カレントのImageMagickインストールによりサポートされる、イメージファイル拡張子のリストをリターンする。リストの各要素は、@file{.bmp}イメージは@code{BMP}のように、イメージタイプにたいして内部的なImageMagick名を表すシンボルである。"
+msgstr "この関数はカレントのImageMagickインストールによりサポートされるイメージファイル拡張子のリストをリターンする。リストの各要素は@file{.bmp}イメージは@code{BMP}のような、イメージタイプにたいして内部的なImageMagick名を表すシンボル。"
 
 #. type: defopt
 #: original_texis/display.texi:5160
@@ -8678,7 +8670,7 @@ msgstr "imagemagick-enabled-types"
 #. type: defopt
 #: original_texis/display.texi:5168
 msgid "The value of this variable is a list of ImageMagick image types which Emacs may attempt to render using ImageMagick.  Each list element should be one of the symbols in the list returned by @code{imagemagick-types}, or an equivalent string.  Alternatively, a value of @code{t} enables ImageMagick for all possible image types.  Regardless of the value of this variable, @code{imagemagick-types-inhibit} (see below) takes precedence."
-msgstr "この変数の値は、EmacsがImageMagickを使用してレンダリングを試みるかもしれない、ImageMagickイメージタイプのリストである。リストの各要素は、@code{imagemagick-types}がリターンするリスト内のシンボルのいずれか、または等価な文字列である。もしくは値@code{t}はImageMagickにたいして利用できるすべてのイメージタイプを有効にする。この変数の値とは関係なく、@code{imagemagick-types-inhibit}(以下参照)が優先される。"
+msgstr "この変数の値はEmacsがImageMagickを使用してレンダリングを試みるかもしれないImageMagickイメージタイプのリスト。リストの各要素は@code{imagemagick-types}がリターンするリスト内のシンボルのいずれか、または等価な文字列。もしくは値@code{t}はImageMagickにたいして利用できるすべてのイメージタイプを有効にする。この変数の値とは関係なく@code{imagemagick-types-inhibit} (以下参照)が優先される。"
 
 #. type: defopt
 #: original_texis/display.texi:5170
@@ -8689,7 +8681,7 @@ msgstr "imagemagick-types-inhibit"
 #. type: defopt
 #: original_texis/display.texi:5175
 msgid "The value of this variable lists the ImageMagick image types which should never be rendered using ImageMagick, regardless of the value of @code{imagemagick-enabled-types}.  A value of @code{t} disables ImageMagick entirely."
-msgstr "この変数の値は、@code{imagemagick-enabled-types}の値とは無関係に、ImageMagickを使用して決してレンダリングされることのない、ImageMagickイメージタイプのリストである。値@code{t}は、ImageMagickを完全に無効にする。"
+msgstr "この変数の値は@code{imagemagick-enabled-types}の値とは無関係に、ImageMagickを使用して決してレンダリングされることのないImageMagickイメージタイプのリスト。値@code{t}はImageMagickを完全に無効にする。"
 
 #. type: defvar
 #: original_texis/display.texi:5177
@@ -8700,7 +8692,7 @@ msgstr "image-format-suffixes"
 #. type: defvar
 #: original_texis/display.texi:5185
 msgid "This variable is an alist mapping image types to file name extensions.  Emacs uses this in conjunction with the @code{:format} image property (see below) to give a hint to the ImageMagick library as to the type of an image.  Each element has the form @code{(@var{type} @var{extension})}, where @var{type} is a symbol specifying an image content-type, and @var{extension} is a string that specifies the associated file name extension."
-msgstr "この変数は、イメージタイプをファイル名拡張子にマッピングするalistである。Emacsは、ImageMagickライブラリーにイメージのタイプに関するヒントを与えるために、この変数と@code{:format}イメージプロパティ(以下参照)を組み合わせて使用する。各要素は@code{(@var{type} @var{extension})}という形式をもち、@var{type}はイメージのcontent-typeを指定するシンボル、@var{extension}は関連付けられるファイル名拡張子を指定する文字列である。"
+msgstr "この変数はイメージタイプをファイル名拡張子にマッピングするalist。EmacsはImageMagickライブラリーにイメージのタイプに関するヒントを与えるために、この変数と@code{:format}イメージプロパティ(以下参照)を組み合わせて使用する。各要素は@code{(@var{type} @var{extension})}という形式をもち@var{type}はイメージのcontent-typeを指定するシンボル、@var{extension}は関連付けられるファイル名拡張子を指定する文字列。"
 
 #. type: Plain text
 #: original_texis/display.texi:5189
@@ -8710,7 +8702,7 @@ msgstr "ImageMagickによりロードされたイメージは、追加で以下�
 #. type: table
 #: original_texis/display.texi:5196
 msgid "@var{background}, if non-@code{nil}, should be a string specifying a color, which is used as the image's background color if the image supports transparency.  If the value is @code{nil}, it defaults to the frame's background color."
-msgstr "@var{background}が非@code{nil}なら、カラーを指定する文字列であること。これはイメージが透明度をサポートする場合に、そのイメージのバックグラウンドカラーとして使用される。値が@code{nil}の場合のデフォルトは、そのフレームのバックグラウンドカラー。"
+msgstr "@var{background}が非@code{nil}なら、カラーを指定する文字列であること。これはイメージが透明度をサポートする場合に、イメージのバックグラウンドカラーとして使用される。値が@code{nil}の場合のデフォルトはフレームのバックグラウンドカラー。"
 
 #. type: item
 #: original_texis/display.texi:5197
@@ -8721,7 +8713,7 @@ msgstr ":width @var{width}, :height @var{height}"
 #. type: table
 #: original_texis/display.texi:5202
 msgid "The @code{:width} and @code{:height} keywords are used for scaling the image.  If only one of them is specified, the other one will be calculated so as to preserve the aspect ratio.  If both are specified, aspect ratio may not be preserved."
-msgstr "キーワード@code{:width}と@code{:height}は、イメージのスケーリングに使用される。いずれか一方のみが指定された場合には、アスペクト比を保つために、もう一方は算出される。両方が指定された場合には、アスペクト比は保たれないかもしれない。"
+msgstr "キーワード@code{:width}と@code{:height}はイメージのスケーリングに使用される。いずれか一方のみが指定された場合には、アスペクト比を保つためにもう一方が算出される。両方が指定された場合にはアスペクト比は保たれないかもしれない。"
 
 #. type: item
 #: original_texis/display.texi:5203
@@ -8732,7 +8724,7 @@ msgstr ":max-width @var{max-width}, :max-height @var{max-height}"
 #. type: table
 #: original_texis/display.texi:5211
 msgid "The @code{:max-width} and @code{:max-height} keywords are used for scaling if the size of the image of the image exceeds these values.  If @code{:width} is set it will have precedence over @code{max-width}, and if @code{:height} is set it will have precedence over @code{max-height}, but you can otherwise mix these keywords as you wish.  @code{:max-width} and @code{:max-height} will always preserve the aspect ratio."
-msgstr "キーワード@code{:max-width}と@code{:max-height}は、イメージのサイズがこれらの値を超過した場合のスケーリングに使用される。@code{:width}がセットされた場合には@code{max-width}より優先され、@code{:height}がセットされた場合には@code{max-height}より優先されるだろうが、それ以外ではこれらのキーワードを望むように混交できる。@code{:max-width}と@code{:max-height}は常に、アスペクト比を保つであろう。"
+msgstr "キーワード@code{:max-width}と@code{:max-height}は、イメージのサイズがこれらの値を超過した場合のスケーリングに使用される。@code{:width}がセットされた場合には@code{max-width}より優先されて、@code{:height}がセットされた場合には@code{max-height}より優先されるだろうが、それ以外ではこれらのキーワードを望むように混交できる。@code{:max-width}と@code{:max-height}は常にアスペクト比を保つであろう。"
 
 #. type: item
 #: original_texis/display.texi:5212
@@ -8743,7 +8735,7 @@ msgstr ":format @var{type}"
 #. type: table
 #: original_texis/display.texi:5217
 msgid "The value, @var{type}, should be a symbol specifying the type of the image data, as found in @code{image-format-suffixes}.  This is used when the image does not have an associated file name, to provide a hint to ImageMagick to help it detect the image type."
-msgstr "値@var{type}は、@code{image-format-suffixes}で見られるような、イメージのタイプを指定するシンボルであること。これはイメージが関連付けられたファイル名をもたない際に、そのイメージタイプを検出する助けとなるヒントをImageMagickに提供する。"
+msgstr "値@var{type}は@code{image-format-suffixes}で見られるような、イメージのタイプを指定するシンボルであること。これはイメージが関連付けられたファイル名をもたない際に、イメージタイプを検出する助けとなるヒントをImageMagickに提供する。"
 
 #. type: item
 #: original_texis/display.texi:5218
@@ -8776,22 +8768,22 @@ msgstr "PBM"
 #. type: Plain text
 #: original_texis/display.texi:5233
 msgid "For PBM images, specify image type @code{pbm}.  Color, gray-scale and monochromatic images are supported.  For mono PBM images, two additional image properties are supported."
-msgstr "PBMイメージには、イメージタイプ@code{pbm}を指定します。カラー、グレースケール、およびモノクロのイメージがサポートされます。モノクロのPBMイメージにたいしては、2つの追加イメージプロパティがサポートされます。"
+msgstr "PBMイメージにはイメージタイプ@code{pbm}を指定します。カラー、グレースケール、およびモノクロのイメージがサポートされます。モノクロのPBMイメージにたいしては、2つの追加イメージプロパティがサポートされます。"
 
 #. type: table
 #: original_texis/display.texi:5240
 msgid "The value, @var{foreground}, should be a string specifying the image foreground color, or @code{nil} for the default color.  This color is used for each pixel in the PBM that is 1.  The default is the frame's foreground color."
-msgstr "値@var{foreground}は、そのイメージのフォアグラウンドカラーを指定する文字列、またはデフォルトカラーなら@code{nil}であること。このカラーは、そのPBM内の1であるようなピクセルすべてに使用される。デフォルトは、フレームのフォアグラウンドカラー。"
+msgstr "値@var{foreground}はイメージのフォアグラウンドカラーを指定する文字列、またはデフォルトカラーなら@code{nil}であること。このカラーはPBM内の1であるようなピクセルすべてに使用される。デフォルトはフレームのフォアグラウンドカラー。"
 
 #. type: table
 #: original_texis/display.texi:5246
 msgid "The value, @var{background}, should be a string specifying the image background color, or @code{nil} for the default color.  This color is used for each pixel in the PBM that is 0.  The default is the frame's background color."
-msgstr "値@var{background}は、そのイメージのバックグラウンドカラーを指定する文字列、またはデフォルトカラーなら@code{nil}であること。このカラーは、そのPBM内の0であるようなピクセルすべてに使用される。デフォルトは、フレームのバックグラウンドカラー。"
+msgstr "値@var{background}はイメージのバックグラウンドカラーを指定する文字列、またはデフォルトカラーなら@code{nil}であること。このカラーはPBM内の0であるようなピクセルすべてに使用される。デフォルトはフレームのバックグラウンドカラー。"
 
 #. type: Plain text
 #: original_texis/display.texi:5250
 msgid "The remaining image types that Emacs can support are:"
-msgstr "Emacsがサポート可能な、残りのイメージタイプは以下のとおり:"
+msgstr "Emacsがサポート可能な残りのイメージタイプは以下のとおり:"
 
 #. type: item
 #: original_texis/display.texi:5252
@@ -8868,12 +8860,12 @@ msgstr "create-image file-or-data &optional type data-p &rest props"
 #. type: defun
 #: original_texis/display.texi:5282
 msgid "This function creates and returns an image descriptor which uses the data in @var{file-or-data}.  @var{file-or-data} can be a file name or a string containing the image data; @var{data-p} should be @code{nil} for the former case, non-@code{nil} for the latter case."
-msgstr "この関数は、@var{file-or-data}内のデータを使用するイメージディスクリプタを作成してリターンする。@var{file-or-data}はファイル名、またはイメージデータを含む文字列を指定できる。前者の場合@var{data-p}は@code{nil}、後者なら非@code{nil}であること。"
+msgstr "この関数は@var{file-or-data}内のデータを使用するイメージディスクリプタを作成してリターンする。@var{file-or-data}はファイル名、またはイメージデータを含む文字列を指定できる。前者なら@var{data-p}は@code{nil}、後者なら非@code{nil}であること。"
 
 #. type: defun
 #: original_texis/display.texi:5287
 msgid "The optional argument @var{type} is a symbol specifying the image type.  If @var{type} is omitted or @code{nil}, @code{create-image} tries to determine the image type from the file's first few bytes, or else from the file's name."
-msgstr "オプション引数@var{type}は、イメージタイプを指定するシンボルである。@var{type}が省略または@code{nil}なら、@code{create-image}はファイル先頭の数バイト、またはファイル名からイメージタイプの判断を試みる。"
+msgstr "オプション引数@var{type}はイメージタイプを指定するシンボル。@var{type}が省略か@code{nil}なら、@code{create-image}はファイル先頭の数バイトかファイル名からイメージタイプの判断を試みる。"
 
 #. type: defun
 #: original_texis/display.texi:5290
@@ -8889,7 +8881,7 @@ msgstr "(create-image \"foo.xpm\" 'xpm nil :heuristic-mask t)\n"
 #. type: defun
 #: original_texis/display.texi:5298
 msgid "The function returns @code{nil} if images of this type are not supported.  Otherwise it returns an image descriptor."
-msgstr "このタイプのイメージがサポートされていなければ、この関数は@code{nil}、それ以外ならイメージディスクリプタをリターンする。"
+msgstr "この関数はそのタイプのイメージがサポートされていなければ@code{nil}、それ以外ならイメージディスクリプタをリターンする。"
 
 #. type: defmac
 #: original_texis/display.texi:5300
@@ -8900,12 +8892,12 @@ msgstr "defimage symbol specs &optional doc"
 #. type: defmac
 #: original_texis/display.texi:5304
 msgid "This macro defines @var{symbol} as an image name.  The arguments @var{specs} is a list which specifies how to display the image.  The third argument, @var{doc}, is an optional documentation string."
-msgstr "このマクロは、イメージマクロとして@var{symbol}を定義する。引数@var{specs}は、そのイメージの表示方法を指定するリストである。3つ目の引数@var{doc}は、オプションのドキュメント文字列である。"
+msgstr "このマクロはイメージマクロとして@var{symbol}を定義する。引数@var{specs}はイメージの表示方法を指定するリストである。3つ目の引数@var{doc}はオプションのドキュメント文字列。"
 
 #. type: defmac
 #: original_texis/display.texi:5312
 msgid "Each argument in @var{specs} has the form of a property list, and each one should specify at least the @code{:type} property and either the @code{:file} or the @code{:data} property.  The value of @code{:type} should be a symbol specifying the image type, the value of @code{:file} is the file to load the image from, and the value of @code{:data} is a string containing the actual image data.  Here is an example:"
-msgstr "@var{specs}内の各要素はプロパティリストの形式をもち、それぞれが少なくとも@code{:type}プロパティと、@code{:file}か@code{:data}いずれかのプロパティをもつべきである。@code{:type}の値はイメージタイプを指定するシンボル、@code{:file}の値はイメージをロードするファイル、@code{:data}の値は実際のイメージデータを含む文字列であること。以下は例である:"
+msgstr "@var{specs}内の各要素はプロパティリストの形式をもち、それぞれが少なくとも@code{:type}プロパティと、@code{:file}か@code{:data}いずれかのプロパティをもつこと。@code{:type}の値はイメージタイプを指定するシンボル、@code{:file}の値はイメージをロードするファイル、@code{:data}の値は実際のイメージデータを含む文字列であること。以下は例:"
 
 #. type: example
 #: original_texis/display.texi:5317
@@ -8922,12 +8914,12 @@ msgstr ""
 #. type: defmac
 #: original_texis/display.texi:5323
 msgid "@code{defimage} tests each argument, one by one, to see if it is usable---that is, if the type is supported and the file exists.  The first usable argument is used to make an image descriptor which is stored in @var{symbol}."
-msgstr "@code{defimage}はそれが使用可能か、つまりそのタイプがサポートされているかとファイルが存在するかを確認するために、各要素を1つずつテストする。最初に使用可能な引数が、@var{symbol}内に格納するイメージディスクリプタを作成するために使用される。"
+msgstr "@code{defimage}はそれが使用可能か、つまりそのタイプがサポートされているかとファイルが存在するかを確認するために各要素を1つずつテストする。最初に使用可能な引数が@var{symbol}内に格納するイメージディスクリプタを作成するために使用される。"
 
 #. type: defmac
 #: original_texis/display.texi:5326
 msgid "If none of the alternatives will work, then @var{symbol} is defined as @code{nil}."
-msgstr "機能する候補がなければ、@var{symbol}は@code{nil}として定義される。"
+msgstr "機能する候補がなければ@var{symbol}は@code{nil}として定義される。"
 
 #. type: defun
 #: original_texis/display.texi:5328
@@ -8938,17 +8930,17 @@ msgstr "find-image specs"
 #. type: defun
 #: original_texis/display.texi:5331
 msgid "This function provides a convenient way to find an image satisfying one of a list of image specifications @var{specs}."
-msgstr "この関数は、イメージ仕様@var{specs}のリストの1つを満足するイメージを探す、便利な手段を提供する。"
+msgstr "この関数はイメージ仕様@var{specs}のリストの1つを満足するイメージを探すための、便利な手段を提供する。"
 
 #. type: defun
 #: original_texis/display.texi:5341
 msgid "Each specification in @var{specs} is a property list with contents depending on image type.  All specifications must at least contain the properties @code{:type @var{type}} and either @w{@code{:file @var{file}}} or @w{@code{:data @var{data}}}, where @var{type} is a symbol specifying the image type, e.g., @code{xbm}, @var{file} is the file to load the image from, and @var{data} is a string containing the actual image data.  The first specification in the list whose @var{type} is supported, and @var{file} exists, is used to construct the image specification to be returned.  If no specification is satisfied, @code{nil} is returned."
-msgstr "@var{specs}内の各仕様は、イメージタイプに応じた内容のプロパティリストである。すべての仕様は少なくとも@code{:type @var{type}}、および@w{@code{:file @var{file}}}か@w{@code{:data @var{data}}}いずれかのプロパティを含まなければならない。ここで@var{type}は@code{xbm}のようにイメージタイプを指定するシンボル、@var{file}はイメージをロードするファイル、@var{data}は実際のイメージデータを含む文字列である。このリスト内で@var{type}がサポートされていて、かつ@var{file}が存在する最初の仕様は、リターンされるイメージ仕様の構築に使用される。満足する仕様がなければ、@code{nil}がリターンされる。"
+msgstr "@var{specs}内の各仕様はイメージタイプに応じた内容のプロパティリストである。すべての仕様は少なくとも@code{:type @var{type}}、および@w{@code{:file @var{file}}}か@w{@code{:data @var{data}}}のいずれかのプロパティを含まなければならない。ここで@var{type}は@code{xbm}のようにイメージタイプを指定するシンボル、@var{file}はイメージをロードするファイル、@var{data}は実際のイメージデータを含む文字列。このリスト内で@var{type}がサポートされていて、かつ@var{file}が存在する最初の仕様が、リターンされるイメージ仕様の構築に使用される。満足する仕様がなければ@code{nil}がリターンされる。"
 
 #. type: defun
 #: original_texis/display.texi:5343
 msgid "The image is looked for in @code{image-load-path}."
-msgstr "イメージは、@code{image-load-path}内で検索される。"
+msgstr "イメージは@code{image-load-path}内で検索される。"
 
 #. type: defopt
 #: original_texis/display.texi:5345
@@ -8959,12 +8951,12 @@ msgstr "image-load-path"
 #. type: defopt
 #: original_texis/display.texi:5351
 msgid "This variable's value is a list of locations in which to search for image files.  If an element is a string or a variable symbol whose value is a string, the string is taken to be the name of a directory to search.  If an element is a variable symbol whose value is a list, that is taken to be a list of directory names to search."
-msgstr "この変数の値は、イメージファイルを検索する場所のリストである。要素が文字列、または値が文字列であるような変数シンボルなら、その文字列は検索を行うディレクトリーとされる。値がリストであるような変数シンボルの場合、それは検索を行うディレクトリーのリストとされる。"
+msgstr "この変数の値はイメージファイルを検索する場所のリストである。要素が文字列、または値が文字列であるような変数シンボルなら、その文字列は検索を行うディレクトリーとみなされる。値がリストであるような変数シンボルなら、検索を行うディレクトリーのリストとみなされる。"
 
 #. type: defopt
 #: original_texis/display.texi:5360
 msgid "The default is to search in the @file{images} subdirectory of the directory specified by @code{data-directory}, then the directory specified by @code{data-directory}, and finally in the directories in @code{load-path}.  Subdirectories are not automatically included in the search, so if you put an image file in a subdirectory, you have to supply the subdirectory name explicitly.  For example, to find the image @file{images/foo/bar.xpm} within @code{data-directory}, you should specify the image as follows:"
-msgstr "デフォルトでは@code{data-directory}で指定されたディレクトリーのサブディレクトリー@file{images}、次に@code{data-directory}で指定されたディレクトリー、最後に@code{load-path}で指定されたディレクトリー内を検索する。サブディレクトリーは自動的には検索に含まれないので、イメージファイルをサブディレクトリー内に配置した場合は、サブディレクトリー名を明示的に与える必要がある。たとえば@code{data-directory}内でイメージ@file{images/foo/bar.xpm}を見つけるには、以下のようにそのイメージを指定すること:"
+msgstr "デフォルトでは@code{data-directory}で指定されたディレクトリーのサブディレクトリー@file{images}、次に@code{data-directory}で指定されたディレクトリー、最後に@code{load-path}で指定されたディレクトリー内を検索する。サブディレクトリーは自動的には検索に含まれないので、イメージファイルをサブディレクトリー内に配置した場合には、サブディレクトリー名を明示的に与える必要がある。たとえば@code{data-directory}内でイメージ@file{images/foo/bar.xpm}を見つけるには、以下のようにそのイメージを指定すること:"
 
 #. type: example
 #: original_texis/display.texi:5363
@@ -8981,27 +8973,27 @@ msgstr "image-load-path-for-library library image &optional path no-error"
 #. type: defun
 #: original_texis/display.texi:5369
 msgid "This function returns a suitable search path for images used by the Lisp package @var{library}."
-msgstr "この関数は、Lispパッケージ@var{library}により使用されるイメージにたいして、適切な検索パスをリターンする。"
+msgstr "この関数はLispパッケージ@var{library}により使用されるイメージにたいして適切な検索パスをリターンする。"
 
 #. type: defun
 #: original_texis/display.texi:5376
 msgid "The function searches for @var{image} first using @code{image-load-path}, excluding @file{@code{data-directory}/images}, and then in @code{load-path}, followed by a path suitable for @var{library}, which includes @file{../../etc/images} and @file{../etc/images} relative to the library file itself, and finally in @file{@code{data-directory}/images}."
-msgstr "この関数はまず@code{image-load-path}(@file{@code{data-directory}/images}を除外)を使用し、次に@code{load-path}の後に@var{library}にとって適切なパス(ライブラリーファイル自身にたいする相対パス@file{../../etc/images}と@file{../etc/images}を含む)を補い、最後に@file{@code{data-directory}/images}から@var{image}を検索する。"
+msgstr "この関数はまず@code{image-load-path} (@file{@code{data-directory}/images}を除外)を使用し、次に@code{load-path}の後に@var{library}にとって適切なパス(ライブラリーファイル自身にたいする相対パス@file{../../etc/images}と@file{../etc/images}を含む)を補い、最後に@file{@code{data-directory}/images}から@var{image}を検索する。"
 
 #. type: defun
 #: original_texis/display.texi:5381
 msgid "Then this function returns a list of directories which contains first the directory in which @var{image} was found, followed by the value of @code{load-path}.  If @var{path} is given, it is used instead of @code{load-path}."
-msgstr "その後にこの関数は、先頭に@var{image}が見つかったディレクトリー、その後に@code{load-path}の値が続く、ディレクトリーのリストをリターンする。@var{path}が与えられた場合は、それを@code{load-path}のかわりに使用する。"
+msgstr "それからこの関数は先頭に@var{image}が見つかったディレクトリー、その後に@code{load-path}の値が続くディレクトリーのリストをリターンする。@var{path}が与えられたら@code{load-path}のかわりに使用する。"
 
 #. type: defun
 #: original_texis/display.texi:5385
 msgid "If @var{no-error} is non-@code{nil} and a suitable path can't be found, don't signal an error.  Instead, return a list of directories as before, except that @code{nil} appears in place of the image directory."
-msgstr "@var{no-error}が非@code{nil}で、かつ適切なパスが見つからない場合に、エラーをシグナルしない。かわりに前記のディレクトリーリストをリターンするが、イメージのディレクトリーの箇所に@code{nil}が出現する点が異なる。"
+msgstr "@var{no-error}が非@code{nil}、かつ適切なパスが見つからない場合にはエラーをシグナルしない。かわりに前記のディレクトリーリストをリターンするが、イメージのディレクトリーの箇所に@code{nil}が出現する点が異なる。"
 
 #. type: defun
 #: original_texis/display.texi:5387
 msgid "Here is an example of using @code{image-load-path-for-library}:"
-msgstr "以下は@code{image-load-path-for-library}の使用例である:"
+msgstr "以下は@code{image-load-path-for-library}の使用例:"
 
 #. type: example
 #: original_texis/display.texi:5395
@@ -9030,7 +9022,7 @@ msgstr "show image"
 #. type: Plain text
 #: original_texis/display.texi:5405
 msgid "You can use an image descriptor by setting up the @code{display} property yourself, but it is easier to use the functions in this section."
-msgstr "自分で@code{display}プロパティをセットアップすることでイメージディスクリプタを使用できますが、このセクションの関数を使用するほうがより簡単です。"
+msgstr "自分で@code{display}プロパティをセットアップしてイメージディスクリプタを使用できますが、このセクションの関数を使用するほうがより簡単です。"
 
 #. type: defun
 #: original_texis/display.texi:5406
@@ -9041,22 +9033,22 @@ msgstr "insert-image image &optional string area slice"
 #. type: defun
 #: original_texis/display.texi:5413
 msgid "This function inserts @var{image} in the current buffer at point.  The value @var{image} should be an image descriptor; it could be a value returned by @code{create-image}, or the value of a symbol defined with @code{defimage}.  The argument @var{string} specifies the text to put in the buffer to hold the image.  If it is omitted or @code{nil}, @code{insert-image} uses @code{\" \"} by default."
-msgstr "この関数は、カレントバッファーのポイント位置に@var{image}を挿入する。@var{image}は、イメージディスクリプタであること。これは@code{create-image}によりリターンされた値、または@code{defimage}で定義されたシンボルの値かもしれない。引数@var{string}は、イメージを保持するためにバッファー内に配すテキストを指定する。これが省略または@code{nil}なら、@code{insert-image}はデフォルトで@code{\" \"}を使用する。"
+msgstr "この関数はカレントバッファーのポイント位置に@var{image}を挿入する。@var{image}はイメージディスクリプタであること。これは@code{create-image}によりリターンされた値、または@code{defimage}で定義されたシンボルの値を使用できる。引数@var{string}はイメージを保持するためにバッファー内に配置するテキストを指定する。これが省略か@code{nil}なら、@code{insert-image}はデフォルトで@code{\" \"}を使用する。"
 
 #. type: defun
 #: original_texis/display.texi:5419 original_texis/display.texi:5462
 msgid "The argument @var{area} specifies whether to put the image in a margin.  If it is @code{left-margin}, the image appears in the left margin; @code{right-margin} specifies the right margin.  If @var{area} is @code{nil} or omitted, the image is displayed at point within the buffer's text."
-msgstr "引数@var{area}は、マージン内にイメージを置くかどうかを指定する。これが@code{left-margin}なら左マージンにイメージが表示され、@code{right-margin}なら右マージンを指定する。@var{area}が@code{nil}または省略された場合、イメージはバッファーのテキスト内のポイント位置に表示される。"
+msgstr "引数@var{area}はマージン内にイメージを置くかどうかを指定する。これが@code{left-margin}なら左マージンにイメージが表示され、@code{right-margin}なら右マージンを指定する。@var{area}が@code{nil}か省略なら、イメージはバッファーのテキスト内のポイント位置に表示される。"
 
 #. type: defun
 #: original_texis/display.texi:5428
 msgid "The argument @var{slice} specifies a slice of the image to insert.  If @var{slice} is @code{nil} or omitted the whole image is inserted.  Otherwise, @var{slice} is a list @code{(@var{x} @var{y} @var{width} @var{height})} which specifies the @var{x} and @var{y} positions and @var{width} and @var{height} of the image area to insert.  Integer values are in units of pixels.  A floating-point number in the range 0.0--1.0 stands for that fraction of the width or height of the entire image."
-msgstr "引数@var{slice}は、挿入するイメージのスライスを指定する。@var{slice}が@code{nil}または省略された場合は、そのイメージ全体が挿入される。それ以外では、@var{slice}がリスト@code{(@var{x} @var{y} @var{width} @var{height})}なら@var{x}と@var{y}は位置、@var{width}と@var{height}は挿入するイメージの領域を指定する。整数値はピクセル単位。0.0から1.0までの浮動小数点数は、イメージ全体の幅または高さにたいする割合を指定する。"
+msgstr "引数@var{slice}は挿入するイメージのスライスを指定する。@var{slice}が@code{nil}か省略された場に合はイメージ全体が挿入される。それ以外では、@var{slice}がリスト@code{(@var{x} @var{y} @var{width} @var{height})}なら@var{x}と@var{y}は位置、@var{width}と@var{height}は挿入するイメージの領域を指定する。整数値はピクセル単位。0.0から1.0までの浮動小数点数はイメージ全体の幅や高さにたいする割合を指定する。"
 
 #. type: defun
 #: original_texis/display.texi:5432
 msgid "Internally, this function inserts @var{string} in the buffer, and gives it a @code{display} property which specifies @var{image}.  @xref{Display Property}."
-msgstr "内部的には、この関数はバッファー内に@var{string}を挿入して、@var{image}を指定する@code{display}プロパティにそれを渡す。@ref{Display Property}を参照のこと。"
+msgstr "この関数は内部的にはバッファー内に@var{string}を挿入して、@var{image}を指定する@code{display}プロパティにそれを渡す。@ref{Display Property}を参照のこと。"
 
 #. type: cindex
 #: original_texis/display.texi:5434
@@ -9079,14 +9071,12 @@ msgstr "insert-sliced-image image &optional string area rows cols"
 #. type: defun
 #: original_texis/display.texi:5440
 msgid "This function inserts @var{image} in the current buffer at point, like @code{insert-image}, but splits the image into @var{rows}x@var{cols} equally sized slices."
-msgstr "この関数は@code{insert-image}と同様、カレントバッファー内に@var{image}を挿入するが、イメージを@var{rows}✕@var{cols}の同一サイズのスライスに分割する。"
+msgstr "この関数は@code{insert-image}と同様にカレントバッファー内に@var{image}を挿入するが、イメージを@var{rows}✕@var{cols}の同一サイズのスライスに分割する点が異なる。"
 
 #. type: defun
 #: original_texis/display.texi:5445
-#, fuzzy
-#| msgid "If an image is inserted ``sliced'', Emacs displays each slice as a separate image, and allow more intuitive scrolling up/down, instead of jumping up/down the entire image when paging through a buffer that displays (large) images."
 msgid "Emacs displays each slice as a separate image, and allows more intuitive scrolling up/down, instead of jumping up/down the entire image when paging through a buffer that displays (large) images."
-msgstr "イメージが``スライス''されて挿入されると、Emacsは各スライスを個別のイメージとして表示して、(巨大な)イメージを表示するバッファーのページングの際、イメージ全体を上下にジャンプするのではなく、より直感的な上下スクロールが可能になる。"
+msgstr "Emacsは各スライスを個別のイメージとして表示して、(巨大な)イメージを表示するバッファーのページングの際にイメージ全体を上下にジャンプするのではなく、より直感的な上下スクロールが可能になる。"
 
 #. type: defun
 #: original_texis/display.texi:5447
@@ -9097,7 +9087,7 @@ msgstr "put-image image pos &optional string area"
 #. type: defun
 #: original_texis/display.texi:5453
 msgid "This function puts image @var{image} in front of @var{pos} in the current buffer.  The argument @var{pos} should be an integer or a marker.  It specifies the buffer position where the image should appear.  The argument @var{string} specifies the text that should hold the image as an alternative to the default."
-msgstr "この関数は、カレントバッファー内の@var{pos}の前に、イメージ@var{image}を配置する。引数@var{pos}は整数、またはマーカーであること。これは、イメージが表示されるべきバッファー位置を指定する。引数@var{string}は、代替として表示されるべきデフォルトのイメージを保持するテキストであること。"
+msgstr "この関数はカレントバッファー内の@var{pos}の前にイメージ@var{image}を配置する。引数@var{pos}は整数かマーカーであること。これはイメージが表示されるべきバッファー位置を指定する。引数@var{string}は代替として表示されるべきデフォルトのイメージを保持するテキストであること。"
 
 #. type: defun
 #: original_texis/display.texi:5456
@@ -9118,12 +9108,12 @@ msgstr "remove-images start end &optional buffer"
 #. type: defun
 #: original_texis/display.texi:5472
 msgid "This function removes images in @var{buffer} between positions @var{start} and @var{end}.  If @var{buffer} is omitted or @code{nil}, images are removed from the current buffer."
-msgstr "この関数は、@var{buffer}の位置@var{start}と@var{end}の間のイメージを削除する。@var{buffer}が省略または@code{nil}なら、カレントバッファーからイメージを削除する。"
+msgstr "この関数は@var{buffer}の位置@var{start}と@var{end}の間のイメージを削除する。@var{buffer}が省略か@code{nil}ならカレントバッファーからイメージを削除する。"
 
 #. type: defun
 #: original_texis/display.texi:5476
 msgid "This removes only images that were put into @var{buffer} the way @code{put-image} does it, not images that were inserted with @code{insert-image} or in other ways."
-msgstr "これは@code{put-image}が行う方法で@var{buffer}に配置されたイメージだけを削除し、@code{insert-image}や他の方法で挿入されたイメージは削除しない。"
+msgstr "これは@code{put-image}が行う方法で@var{buffer}に配置されたイメージだけを削除して、@code{insert-image}や他の方法で挿入されたイメージは削除しない。"
 
 #. type: defun
 #: original_texis/display.texi:5478
@@ -9139,10 +9129,8 @@ msgstr "size of image"
 
 #. type: defun
 #: original_texis/display.texi:5487
-#, fuzzy
-#| msgid "This function returns the size of an image as a pair @w{@code{(@var{width} . @var{height})}}.  @var{spec} is an image specification.  @var{pixels} non-@code{nil} means return sizes measured in pixels, otherwise return sizes measured in canonical character units (fractions of the width/height of the frame's default font).  @var{frame} is the frame on which the image will be displayed.  @var{frame} null or omitted means use the selected frame (@pxref{Input Focus})."
 msgid "This function returns the size of an image as a pair @w{@code{(@var{width} . @var{height})}}.  @var{spec} is an image specification.  @var{pixels} non-@code{nil} means return sizes measured in pixels, otherwise return sizes measured in the default character size of @var{frame} (@pxref{Frame Font}).  @var{frame} is the frame on which the image will be displayed.  @var{frame} null or omitted means use the selected frame (@pxref{Input Focus})."
-msgstr "この関数は、ペアー@w{@code{(@var{width} . @var{height})}}として、イメージのサイズをリターンする。@var{spec}はイメージ仕様である。@var{pixels}が非@code{nil}ならピクセル単位、それ以外ならcanonicalな文字単位(そのフレームのデフォルトフォントの幅/高さの割合)で量ったサイズをリターンする。@var{frame}は、イメージが表示されるフレームである。@var{frame}が@code{nil}または省略された場合は、選択されたフレームを使用する(@ref{Input Focus}を参照)。"
+msgstr "この関数はペアー@w{@code{(@var{width} . @var{height})}}としてイメージのサイズをリターンする。@var{spec}はイメージ仕様。@var{pixels}が非@code{nil}ならピクセル単位、それ以外なら@var{frame}のデフォルトの文字サイズの単位で量ったサイズをリターンする。@var{frame}はイメージが表示されるフレーム。@var{frame}が@code{nil}か省略された場合はに選択されたフレームを使用する(@ref{Input Focus}を参照)。"
 
 #. type: defvar
 #: original_texis/display.texi:5489
@@ -9153,12 +9141,12 @@ msgstr "max-image-size"
 #. type: defvar
 #: original_texis/display.texi:5493
 msgid "This variable is used to define the maximum size of image that Emacs will load.  Emacs will refuse to load (and display) any image that is larger than this limit."
-msgstr "この変数は、Emacsがロードするイメージの最大サイズを定義するために使用される。Emacsはこの制限より大きいイメージのロード(と表示)を拒絶するだろう。"
+msgstr "この変数はEmacsがロードするイメージの最大サイズを定義するために使用される。Emacsはこの制限より大きいイメージのロード(と表示)を拒絶するだろう。"
 
 #. type: defvar
 #: original_texis/display.texi:5499
 msgid "If the value is an integer, it directly specifies the maximum image height and width, measured in pixels.  If it is floating point, it specifies the maximum image height and width as a ratio to the frame height and width.  If the value is non-numeric, there is no explicit limit on the size of images."
-msgstr "値が整数なら、それはピクセル単位で量ったイメージの最大の高さと幅を、直接指定する。浮動小数点数なら、そのフレームの高さおよび幅にたいする比率として、イメージの最大の高さと幅を指定する。値が数値でなければ、イメージサイズにたいする明示的な制限は存在しない。"
+msgstr "値が整数ならピクセル単位で量ったイメージの最大の高さと幅を直接指定する。浮動小数点数ならフレームの高さと幅にたいする比率として、イメージの最大の高さと幅を指定する。値が数値でなければイメージサイズにたいする明示的な制限は存在しない。"
 
 #. type: defvar
 #: original_texis/display.texi:5505
