@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2019-10-19 00:47+0900\n"
+"PO-Revision-Date: 2020-02-23 12:56+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -35,7 +35,7 @@ msgstr "これはEmacsの開始と終了、オペレーティングシステム�
 #. type: Plain text
 #: original_texis/os.texi:15
 msgid "@xref{Building Emacs}, for related information.  @xref{Display}, for additional operating system status information pertaining to the terminal and the screen."
-msgstr "関連する情報は@ref{Building Emacs}を参照してください。端末とスクリーンに関連するオペレーティングシステムの状態に関する追加情報は、@ref{Display}を参照してください。"
+msgstr "関連する情報は@ref{Building Emacs}を参照してください。端末とスクリーンに関連するオペレーティングシステムの状態に関する追加情報は@ref{Display}を参照してください。"
 
 #. type: node
 #: original_texis/os.texi:42 original_texis/os.texi:44
@@ -80,7 +80,7 @@ msgstr "User Identification"
 #. type: menuentry
 #: original_texis/os.texi:42
 msgid "Finding the name and user id of the user."
-msgstr "そのユーザーの名前とユーザーIDを調べる。"
+msgstr "ユーザーの名前とユーザーIDを調べる。"
 
 #. type: section
 #: original_texis/os.texi:42 original_texis/os.texi:1220
@@ -97,15 +97,14 @@ msgstr "カレント時刻の取得。"
 #. type: section
 #: original_texis/os.texi:42 original_texis/os.texi:1307
 #: original_texis/os.texi:1308
-#, fuzzy, no-wrap
-#| msgid "Time Conversion"
+#, no-wrap
 msgid "Time Zone Rules"
-msgstr "Time Conversion"
+msgstr "Time Zone Rules"
 
 #. type: menuentry
 #: original_texis/os.texi:42
 msgid "Rules for time zones and daylight saving time."
-msgstr ""
+msgstr "タイムゾーンと夏時間のルール。"
 
 #. type: section
 #: original_texis/os.texi:42 original_texis/os.texi:1360
@@ -286,14 +285,12 @@ msgstr "サポートライブラリーのオンデマンドロード。"
 #: original_texis/os.texi:2939
 #, no-wrap
 msgid "Security Considerations"
-msgstr ""
+msgstr "Security Considerations"
 
 #. type: menuentry
 #: original_texis/os.texi:42
-#, fuzzy
-#| msgid "Running Emacs without terminal interaction."
 msgid "Running Emacs in an unfriendly environment."
-msgstr "端末との対話なしでEmacsを実行する。"
+msgstr "非有効的な環境でのEmacsの実行。"
 
 #. type: section
 #: original_texis/os.texi:45
@@ -304,7 +301,7 @@ msgstr "Starting Up Emacs"
 #. type: Plain text
 #: original_texis/os.texi:49
 msgid "This section describes what Emacs does when it is started, and how you can customize these actions."
-msgstr "このセクションでは、Emacsが開始時に何を行うかと、それらのアクションのカスタマイズ方法を説明します。"
+msgstr "このセクションではEmacsが開始時に何を行うか、およびそれらのアクションのカスタマイズ方法を説明します。"
 
 #. type: node
 #: original_texis/os.texi:56 original_texis/os.texi:58
