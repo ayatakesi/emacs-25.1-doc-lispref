@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-02-25 00:08+0900\n"
+"PO-Revision-Date: 2020-02-26 21:21+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -4096,7 +4096,6 @@ msgstr "コマンドラインオプション@samp{-batch}でEmacsを非対話的
 
 #. type: Plain text
 #: original_texis/os.texi:2283
-#, fuzzy
 msgid "Any Lisp program output that would normally go to the echo area, either using @code{message}, or using @code{prin1}, etc., with @code{t} as the stream, goes instead to Emacs's standard descriptors when in batch mode: @code{message} writes to the standard error descriptor, while @code{prin1} and other print functions write to the standard output.  Similarly, input that would normally come from the minibuffer is read from the standard input descriptor.  Thus, Emacs behaves much like a noninteractive application program.  (The echo area output that Emacs itself normally generates, such as command echoing, is suppressed entirely.)"
 msgstr "通常はエコーエリアに出力したりストリームとして@code{t}を指定する@code{message}や@code{prin1}等を使用したLispプログラムの出力はbatchモードではEmacsの標準記述子へと送られます(@code{prin1}や他のプリント関数は標準記述子に書き込むが@code{message}は標準エラー記述子に書き込む)。同様に通常はミニバッファーから読み取られる入力は標準入力から読み取られます。つまりEmacsは非インタラクティブなアプリケーションプログラムのように振る舞います(コマンドのエコーのようにEmacsが通常生成するエコーエリアへの出力はすべて抑制される)。"
 
@@ -4822,46 +4821,44 @@ msgstr "通知の重大度レベルで@code{info}、@code{warning}、@code{error
 #. type: table
 #: original_texis/os.texi:2640
 msgid "The title of the notification.  If @var{title} is a string, it is displayed in a larger font immediately above the body text.  The title text can be up to 63 characters long; longer text will be truncated."
-msgstr ""
+msgstr "通知のタイトル。@var{title}が文字列ならbodyテキストの直上に大きなフォントで表示される。タイトルのテキストは63文字まで。それより長い文字列は切り捨てられる。"
 
 #. type: item
 #: original_texis/os.texi:2641
-#, fuzzy, no-wrap
-#| msgid ":body @var{text}"
+#, no-wrap
 msgid ":body @var{body}"
-msgstr ":body @var{text}"
+msgstr ":body @var{body}"
 
 #. type: table
 #: original_texis/os.texi:2647
 msgid "The body of the notification.  If @var{body} is a string, it specifies the text of the notification message.  Use embedded newlines to control how the text is broken into lines.  The body text can be up to 255 characters long, and will be truncated if it's longer.  Unlike with D-Bus, the body text should be plain text, with no markup."
-msgstr ""
+msgstr "通知のbody(本文)。@var{body}が文字列なら通知メッセージのテキストを指定する。テキストを行に分割する方法を制御するには埋め込みの改行を使用する。bodyのテキストは255文字までで、それより長ければ切り捨てられる。D-Busとは異なりbodyテキストはマークアップを含まないプレーンテキストであること。"
 
 #. type: defun
 #: original_texis/os.texi:2652
 msgid "Note that versions of Windows before W2K support only @code{:icon} and @code{:tip}.  The other parameters can be passed, but they will be ignored on those old systems."
-msgstr ""
+msgstr "Windows 2000以前のWindowsでは@code{:icon}と@code{:tip}だけがサポートされることに注意。他のパラメーターを渡すことは可能だが、それらの古いシステムでは無視されるだろう。"
 
 #. type: defun
 #: original_texis/os.texi:2656
 msgid "There can be at most one active notification at any given time.  An active notification must be removed by calling @code{w32-notification-close} before a new one can be shown."
-msgstr ""
+msgstr "一度にアクティブな通知は最大でも常に1つ。新たな通知を表示できるようにするには@code{w32-notification-close}を呼び出してアクティブな通知を削除しなければならない。"
 
 #. type: Plain text
 #: original_texis/os.texi:2660
 msgid "To remove the notification and its icon from the taskbar, use the following function:"
-msgstr ""
+msgstr "タスクバーから通知とアイコンを削除するには以下の関数を使用します:"
 
 #. type: defun
 #: original_texis/os.texi:2661
-#, fuzzy, no-wrap
-#| msgid "notifications-close-notification"
+#, no-wrap
 msgid "w32-notification-close id"
-msgstr "通知がクローズされたら@code{close-notification}。"
+msgstr "w32-notification-close id"
 
 #. type: defun
 #: original_texis/os.texi:2664
 msgid "This function removes the tray notification given by its unique @var{id}."
-msgstr ""
+msgstr "この関数は与えられた一意な@var{id}でトレー通知を削除する。"
 
 #. type: section
 #: original_texis/os.texi:2667
@@ -4883,15 +4880,13 @@ msgstr "watch, for filesystem events"
 
 #. type: Plain text
 #: original_texis/os.texi:2676
-#, fuzzy
-#| msgid "Several operating systems support watching of filesystems for changes of files.  If configured properly, Emacs links a respective library like @file{gfilenotify}, @file{inotify}, or @file{w32notify} statically.  These libraries enable watching of filesystems on the local machine."
 msgid "Several operating systems support watching of filesystems for changes of files.  If configured properly, Emacs links a respective library like @file{inotify}, @file{kqueue}, @file{gfilenotify}, or @file{w32notify} statically.  These libraries enable watching of filesystems on the local machine."
-msgstr "いくつかのオペレーティングシステムは、ファイル変更にたいする、ファイルシステムの監視をサポートします。正しく設定されている場合には、Emacsは@file{gfilenotify}、@file{inotify}、@file{w32notify}のようなライブラリーを静的にリンクします。これらのライブラリーにより、ローカルマシン上でのファイルシステムの監視が有効になります。"
+msgstr "いくつかのオペレーティングシステムはファイル変更にたいするファイルシステムの監視をサポートします。正しく設定されていれば、Emacsは@file{inotify}、@file{kqueue}、@file{gfilenotify}、@file{w32notify}のようなライブラリーを静的にリンクします。これらのライブラリーによりローカルマシン上でのファイルシステムの監視が有効になります。"
 
 #. type: Plain text
 #: original_texis/os.texi:2680
 msgid "It is also possible to watch filesystems on remote machines, @pxref{Remote Files,, Remote Files, emacs, The GNU Emacs Manual} This does not depend on one of the libraries linked to Emacs."
-msgstr "リモートマシン上のファイルシステムの監視も可能です。@ref{Remote Files,, Remote Files, emacs, The GNU Emacs Manual}を参照してください。これはEmacsにリンク済みのライブラリーの、いずれか1つに依存する訳ではありません。"
+msgstr "リモートマシン上のファイルシステムの監視も可能です。@ref{Remote Files,, Remote Files, emacs, The GNU Emacs Manual}を参照してください。これはEmacsにリンク済みのライブラリーのいずれかに依存する訳ではありません。"
 
 #. type: Plain text
 #: original_texis/os.texi:2684
@@ -4907,27 +4902,27 @@ msgstr "file-notify-add-watch file flags callback"
 #. type: defun
 #: original_texis/os.texi:2689
 msgid "Add a watch for filesystem events pertaining to @var{file}.  This arranges for filesystem events pertaining to @var{file} to be reported to Emacs."
-msgstr "@var{file}に関するファイルシステムイベントの監視を追加する。これは、@var{file}に関するファイルシステムイベントがEmacsに報告されるように取り計らう。"
+msgstr "@var{file}に関するファイルシステムイベントの監視を追加する。これは@var{file}に関するファイルシステムイベントがEmacsに報告されるように取り計らう。"
 
 #. type: defun
 #: original_texis/os.texi:2694
 msgid "The returned value is a descriptor for the added watch.  Its type depends on the underlying library, it cannot be assumed to be an integer as in the example below.  It should be used for comparison by @code{equal} only."
-msgstr "リターン値は、追加された監視のディスクリプター(descriptor)である。これのタイプは背景にあるライブラリーに依存し、以下の例に示すとおり、整数とみなすことはできない。これの比較には、@code{equal}を使用すること。"
+msgstr "リターン値は追加された監視ディスクリプター(descriptor)。タイプは背景にあるライブラリーに依存しており、以下の例に示すとおり整数とみなすことはできない。比較には@code{equal}を使用すること。"
 
 #. type: defun
 #: original_texis/os.texi:2697
 msgid "If the @var{file} cannot be watched for some reason, this function signals a @code{file-notify-error} error."
-msgstr "何らかの理由により、@var{file}が監視不可能なら、この関数はエラー@code{file-notify-error}をシグナルする。"
+msgstr "何らかの理由により@var{file}が監視不可能なら、この関数はエラー@code{file-notify-error}をシグナルする。"
 
 #. type: defun
 #: original_texis/os.texi:2701
 msgid "Sometimes, mounted filesystems cannot be watched for file changes.  This is not detected by this function, a non-@code{nil} return value does not guarantee that changes on @var{file} will be notified."
-msgstr "マウントされたファイルシステムでファイル変更を監視できないことがある。これはこの関数により検出されず、非@code{nil}のリターン値が@var{file}の変更の通知を保証するものではない。"
+msgstr "マウントされたファイルシステムでファイル変更を監視できないことがある。これはこの関数により検出されないので、非@code{nil}のリターン値が@var{file}の変更の通知を保証するものではない。"
 
 #. type: defun
 #: original_texis/os.texi:2704
 msgid "@var{flags} is a list of conditions to set what will be watched for.  It can include the following symbols:"
-msgstr "@var{flags}は、何を監視するかセットするための、コンディションのリストである。以下のシンボルを含めることができる:"
+msgstr "@var{flags}は何を監視するかセットするためのコンディションのリスト。以下のシンボルを含めることができる:"
 
 #. type: item
 #: original_texis/os.texi:2706
@@ -4949,17 +4944,17 @@ msgstr "attribute-change"
 #. type: table
 #: original_texis/os.texi:2711
 msgid "watch for file attribute changes, like permissions or modification time"
-msgstr "パーミッションや変更時刻のような、ファイル属性の変更を監視。"
+msgstr "パーミッションや変更時刻のようなファイル属性の変更を監視。"
 
 #. type: defun
 #: original_texis/os.texi:2715
 msgid "If @var{file} is a directory, changes for all files in that directory will be notified.  This does not work recursively."
-msgstr "@var{file}がディレクトリーなら、そのディレクトリー内のすべてのファイルの変更が通知される。これは再帰的には機能しない。"
+msgstr "@var{file}がディレクトリーならディレクトリー内のすべてのファイルの変更が通知される。これは再帰的に機能しない。"
 
 #. type: defun
 #: original_texis/os.texi:2718
 msgid "When any event happens, Emacs will call the @var{callback} function passing it a single argument @var{event}, which is of the form"
-msgstr "何らかのイベント発生時には、以下の形式の@var{event}を単一の引数として、Emacsは関数@var{callback}を呼び出す:"
+msgstr "Emacsは何らかのイベント発生時には以下の形式の@var{event}を単一の引数として関数@var{callback}を呼び出す:"
 
 #. type: lisp
 #: original_texis/os.texi:2721
@@ -4970,7 +4965,7 @@ msgstr "(@var{descriptor} @var{action} @var{file} [@var{file1}])\n"
 #. type: defun
 #: original_texis/os.texi:2726
 msgid "@var{descriptor} is the same object as the one returned by this function.  @var{action} is the description of the event.  It could be any one of the following symbols:"
-msgstr "@var{descriptor}は、この関数がリターンするオブジェクトと同じである。@var{action}はイベントを示し、以下のシンボルのいずれかである:"
+msgstr "@var{descriptor}はこの関数がリターンするオブジェクトと同じ。@var{action}はイベントを示し、以下のシンボルのいずれか:"
 
 #. type: item
 #: original_texis/os.texi:2728
@@ -5003,7 +4998,7 @@ msgstr "changed"
 #. type: table
 #: original_texis/os.texi:2735
 msgid "@var{file}'s contents has changed; with @file{w32notify} library, reports attribute changes as well"
-msgstr ""
+msgstr "@var{file}の内容が変更された。@file{w32notify}ライブラリーでは属性の変更でも同様に報告される。"
 
 #. type: item
 #: original_texis/os.texi:2735
@@ -5031,29 +5026,27 @@ msgstr "@var{file}の属性が変更された。"
 #: original_texis/os.texi:2739
 #, no-wrap
 msgid "stopped"
-msgstr ""
+msgstr "stopped"
 
 #. type: table
 #: original_texis/os.texi:2741
-#, fuzzy
-#| msgid "@var{file} was deleted"
 msgid "watching @var{file} has been stopped"
-msgstr "@var{file}が削除された。"
+msgstr "監視中の@var{file}が削除された。"
 
 #. type: defun
 #: original_texis/os.texi:2748
 msgid "Note that the @file{w32notify} library does not report @code{attribute-changed} events.  When some file's attribute, like permissions or modification time, has changed, this library reports a @code{changed} event.  Likewise, the @file{kqueue} library does not report reliably file attribute changes when watching a directory."
-msgstr ""
+msgstr "@file{w32notify}ライブラリーは@code{attribute-changed}イベントを報告しないことに注意。このライブラリーはパーミッションや変更時刻のようなファイル属性が何か変更された際には@code{changed}イベントを報告する。同じように@file{kqueue}ライブラリーでは、ディレクトリー監視時にはファイル属性変更の報告に信頼性がない。"
 
 #. type: defun
 #: original_texis/os.texi:2753
 msgid "The @code{stopped} event reports, that watching the file has been stopped.  This could be because @code{file-notify-rm-watch} was called (see below), or because the file being watched was deleted, or due to another error reported from the underlying library."
-msgstr ""
+msgstr "@code{stopped}イベントはファイル監視の停止を報告する。これは@code{file-notify-rm-watch}の呼び出された(以下参照)、監視中のファイルが削除された、または背後にあるライブラリーから別のエラーが報告された可能性がある。"
 
 #. type: defun
 #: original_texis/os.texi:2756
 msgid "@var{file} and @var{file1} are the name of the file(s) whose event is being reported.  For example:"
-msgstr "@var{file}および@var{file1}は、イベントが報告されたファイルの名前である。たとえば:"
+msgstr "@var{file}と@var{file1}はイベントが報告されたファイルの名前。たとえば:"
 
 #. type: group
 #: original_texis/os.texi:2761
@@ -5107,12 +5100,7 @@ msgstr ""
 
 #. type: group
 #: original_texis/os.texi:2788
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(write-region \"bla\" nil \"/tmp/foo\")\n"
-#| "     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
-#| "        Event (35025468 changed \"/tmp/foo\") [2 times]\n"
-#| "        Event (35025468 deleted \"/tmp/.#foo\")\n"
+#, no-wrap
 msgid ""
 "(write-region \"bla\" nil \"/tmp/foo\")\n"
 "     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
@@ -5121,7 +5109,7 @@ msgid ""
 msgstr ""
 "(write-region \"bla\" nil \"/tmp/foo\")\n"
 "     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
-"        Event (35025468 changed \"/tmp/foo\") [2 times]\n"
+"        Event (35025468 changed \"/tmp/foo\")\n"
 "        Event (35025468 deleted \"/tmp/.#foo\")\n"
 
 #. type: group
@@ -5136,10 +5124,8 @@ msgstr ""
 
 #. type: defun
 #: original_texis/os.texi:2799
-#, fuzzy
-#| msgid "Whether the action @code{renamed} is returned, depends on the used watch library.  It can be expected, when a directory is watched, and both @var{file} and @var{file1} belong to this directory.  Otherwise, the actions @code{deleted} and @code{created} could be returned in a random order."
 msgid "Whether the action @code{renamed} is returned, depends on the used watch library.  Otherwise, the actions @code{deleted} and @code{created} could be returned in a random order."
-msgstr "アクション@code{renamed}がリターンされるかどうかは、使用する監視ライブラリーに依存する。@var{file}と@var{file1}の両方が同じディレクトリーに属し、そのディレクトリーが監視されていればリターンを期待できる。それ以外ではアクション@code{deleted}と@code{created}がランダムな順にリターンされる。"
+msgstr "アクション@code{renamed}がリターンされるかどうかは使用する監視ライブラリーに依存する。それ以外では@code{deleted}と@code{created}のアクションがランダムな順にリターンされる。"
 
 #. type: group
 #: original_texis/os.texi:2804
@@ -5153,16 +5139,13 @@ msgstr ""
 
 #. type: group
 #: original_texis/os.texi:2809
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(rename-file \"/tmp/foo\" \"/tmp/bla\")\n"
-#| "     @result{} Event (35025468 renamed \"/tmp/foo\" \"/tmp/bla\")\n"
+#, no-wrap
 msgid ""
 "(delete-file \"/tmp/bla\")\n"
 "     @result{} Event (35025468 deleted \"/tmp/bla\")\n"
 msgstr ""
-"(rename-file \"/tmp/foo\" \"/tmp/bla\")\n"
-"     @result{} Event (35025468 renamed \"/tmp/foo\" \"/tmp/bla\")\n"
+"(delete-file \"/tmp/bla\")\n"
+"     @result{} Event (35025468 deleted \"/tmp/bla\")\n"
 
 #. type: defun
 #: original_texis/os.texi:2813
@@ -5173,79 +5156,61 @@ msgstr "file-notify-rm-watch descriptor"
 #. type: defun
 #: original_texis/os.texi:2817
 msgid "Removes an existing file watch specified by its @var{descriptor}.  @var{descriptor} should be an object returned by @code{file-notify-add-watch}."
-msgstr "@var{descriptor}に指定された、既存のファイル監視を削除する。@var{descriptor}は、@code{file-notify-add-watch}がリターンしたオブジェクトであること。"
+msgstr "@var{descriptor}に指定された既存のファイル監視を削除する。@var{descriptor}は@code{file-notify-add-watch}がリターンしたオブジェクトであること。"
 
 #. type: defun
 #: original_texis/os.texi:2819
-#, fuzzy, no-wrap
-#| msgid "file-notify-rm-watch descriptor"
+#, no-wrap
 msgid "file-notify-valid-p descriptor"
-msgstr "file-notify-rm-watch descriptor"
+msgstr "file-notify-valid-p descriptor"
 
 #. type: defun
 #: original_texis/os.texi:2823
-#, fuzzy
-#| msgid "Removes an existing file watch specified by its @var{descriptor}.  @var{descriptor} should be an object returned by @code{file-notify-add-watch}."
 msgid "Checks a watch specified by its @var{descriptor} for validity.  @var{descriptor} should be an object returned by @code{file-notify-add-watch}."
-msgstr "@var{descriptor}に指定された、既存のファイル監視を削除する。@var{descriptor}は、@code{file-notify-add-watch}がリターンしたオブジェクトであること。"
+msgstr "@var{descriptor}で指定された監視の有効性をチェックする。@var{descriptor}は@code{file-notify-add-watch}がリターンしたオブジェクトであること。"
 
 #. type: defun
 #: original_texis/os.texi:2828
 msgid "A watch can become invalid if the file or directory it watches is deleted, or if the watcher thread exits abnormally for any other reason.  Removing the watch by calling @code{file-notify-rm-watch} also makes it invalid."
-msgstr ""
+msgstr "監視するファイルやディレクトリーの削除や別の理由による監視スレッドの異常exitにより監視が無効になる可能性がある。@code{file-notify-rm-watch}の呼び出しで削除することにより監視も無効になる。"
 
 #. type: group
 #: original_texis/os.texi:2833
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(rename-file \"/tmp/foo\" \"/tmp/bla\")\n"
-#| "     @result{} Event (35025468 renamed \"/tmp/foo\" \"/tmp/bla\")\n"
+#, no-wrap
 msgid ""
 "(make-directory \"/tmp/foo\")\n"
 "     @result{} Event (35025468 created \"/tmp/foo\")\n"
 msgstr ""
-"(rename-file \"/tmp/foo\" \"/tmp/bla\")\n"
-"     @result{} Event (35025468 renamed \"/tmp/foo\" \"/tmp/bla\")\n"
+"(make-directory \"/tmp/foo\")\n"
+"     @result{} Event (35025468 created \"/tmp/foo\")\n"
 
 #. type: group
 #: original_texis/os.texi:2840
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(file-notify-add-watch\n"
-#| "  \"/tmp\" '(change attribute-change) 'my-notify-callback)\n"
-#| "     @result{} 35025468\n"
+#, no-wrap
 msgid ""
 "(setq desc\n"
 "      (file-notify-add-watch\n"
 "        \"/tmp/foo\" '(change) 'my-notify-callback))\n"
 "     @result{} 11359632\n"
 msgstr ""
-"(file-notify-add-watch\n"
-"  \"/tmp\" '(change attribute-change) 'my-notify-callback)\n"
-"     @result{} 35025468\n"
+"(setq desc\n"
+"      (file-notify-add-watch\n"
+"        \"/tmp/foo\" '(change) 'my-notify-callback))\n"
+"     @result{} 11359632\n"
 
 #. type: group
 #: original_texis/os.texi:2845
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(require 'filenotify)\n"
-#| "     @result{} filenotify\n"
+#, no-wrap
 msgid ""
 "(file-notify-valid-p desc)\n"
 "     @result{} t\n"
 msgstr ""
-"(require 'filenotify)\n"
-"     @result{} filenotify\n"
+"(file-notify-valid-p desc)\n"
+"     @result{} t\n"
 
 #. type: group
 #: original_texis/os.texi:2853 original_texis/os.texi:2867
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(write-region \"foo\" nil \"/tmp/foo\")\n"
-#| "     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
-#| "        Event (35025468 created \"/tmp/foo\")\n"
-#| "        Event (35025468 changed \"/tmp/foo\")\n"
-#| "        Event (35025468 deleted \"/tmp/.#foo\")\n"
+#, no-wrap
 msgid ""
 "(write-region \"bla\" nil \"/tmp/foo/bla\")\n"
 "     @result{} Event (11359632 created \"/tmp/foo/.#bla\")\n"
@@ -5253,11 +5218,11 @@ msgid ""
 "        Event (11359632 changed \"/tmp/foo/bla\")\n"
 "        Event (11359632 deleted \"/tmp/foo/.#bla\")\n"
 msgstr ""
-"(write-region \"foo\" nil \"/tmp/foo\")\n"
-"     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
-"        Event (35025468 created \"/tmp/foo\")\n"
-"        Event (35025468 changed \"/tmp/foo\")\n"
-"        Event (35025468 deleted \"/tmp/.#foo\")\n"
+"(write-region \"bla\" nil \"/tmp/foo/bla\")\n"
+"     @result{} Event (11359632 created \"/tmp/foo/.#bla\")\n"
+"        Event (11359632 created \"/tmp/foo/bla\")\n"
+"        Event (11359632 changed \"/tmp/foo/bla\")\n"
+"        Event (11359632 deleted \"/tmp/foo/.#bla\")\n"
 
 #. type: group
 #: original_texis/os.texi:2859
@@ -5267,16 +5232,13 @@ msgid ""
 "(delete-file \"/tmp/foo/bla\")\n"
 "     @result{} Event (11359632 deleted \"/tmp/foo/bla\")\n"
 msgstr ""
+";; ディレクトリーのファイル削除では監視は無効にならない\n"
+"(delete-file \"/tmp/foo/bla\")\n"
+"     @result{} Event (11359632 deleted \"/tmp/foo/bla\")\n"
 
 #. type: group
 #: original_texis/os.texi:2877
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(write-region \"foo\" nil \"/tmp/foo\")\n"
-#| "     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
-#| "        Event (35025468 created \"/tmp/foo\")\n"
-#| "        Event (35025468 changed \"/tmp/foo\")\n"
-#| "        Event (35025468 deleted \"/tmp/.#foo\")\n"
+#, no-wrap
 msgid ""
 ";; Deleting the directory invalidates the watch.\n"
 ";; Events arrive for different watch descriptors.\n"
@@ -5286,24 +5248,23 @@ msgid ""
 "        Event (11359632 deleted \"/tmp/foo\")\n"
 "        Event (11359632 stopped \"/tmp/foo\")\n"
 msgstr ""
-"(write-region \"foo\" nil \"/tmp/foo\")\n"
-"     @result{} Event (35025468 created \"/tmp/.#foo\")\n"
-"        Event (35025468 created \"/tmp/foo\")\n"
-"        Event (35025468 changed \"/tmp/foo\")\n"
-"        Event (35025468 deleted \"/tmp/.#foo\")\n"
+";; ディレクトリー削除により監視は無効になる\n"
+";; 別の監視ディスクリプターからイベントが到着\n"
+"(delete-directory \"/tmp/foo\" 'recursive)\n"
+"     @result{} Event (35025468 deleted \"/tmp/foo\")\n"
+"        Event (11359632 deleted \"/tmp/foo/bla\")\n"
+"        Event (11359632 deleted \"/tmp/foo\")\n"
+"        Event (11359632 stopped \"/tmp/foo\")\n"
 
 #. type: group
 #: original_texis/os.texi:2882
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(require 'filenotify)\n"
-#| "     @result{} filenotify\n"
+#, no-wrap
 msgid ""
 "(file-notify-valid-p desc)\n"
 "     @result{} nil\n"
 msgstr ""
-"(require 'filenotify)\n"
-"     @result{} filenotify\n"
+"(file-notify-valid-p desc)\n"
+"     @result{} nil\n"
 
 #. type: section
 #: original_texis/os.texi:2887
@@ -5320,7 +5281,7 @@ msgstr "dynamic libraries"
 #. type: Plain text
 #: original_texis/os.texi:2893
 msgid "A @dfn{dynamically loaded library} is a library that is loaded on demand, when its facilities are first needed.  Emacs supports such on-demand loading of support libraries for some of its features."
-msgstr "@dfn{ダイナミックにロードされるライブラリー(dynamically loaded library)}とは、その機能が最初に必要になったときに、オンデマンドでロードされるライブラリーです。Emacsは自身の機能をサポートするライブラリーのオンデマンドロードのように、それらをサポートします。"
+msgstr "@dfn{ダイナミックにロードされるライブラリー(dynamically loaded library)}とは機能が最初に必要になったときにオンデマンドでロードされるライブラリーです。Emacsは自身の機能をサポートするライブラリーのオンデマンドロードのように、それらをサポートします。"
 
 #. type: defvar
 #: original_texis/os.texi:2894
@@ -5331,39 +5292,26 @@ msgstr "dynamic-library-alist"
 #. type: defvar
 #: original_texis/os.texi:2897
 msgid "This is an alist of dynamic libraries and external library files implementing them."
-msgstr "これはダイナミックライブラリーと、それらを実装する外部ライブラリーファイルのalistである。"
+msgstr "ダイナミックライブラリーとそれらを実装する外部ライブラリーファイルのalist。"
 
 #. type: defvar
 #: original_texis/os.texi:2902
 msgid "Each element is a list of the form @w{@code{(@var{library} @var{files}@dots{})}}, where the @code{car} is a symbol representing a supported external library, and the rest are strings giving alternate filenames for that library."
-msgstr "要素はそれぞれ、@w{@code{(@var{library} @var{files}@dots{})}}という形式のリストである。ここで@code{car}はサポートされた外部ライブラリーを表すシンボルで、残りはそのライブラリーにたいして候補となるファイル名を与える文字列である。"
+msgstr "要素はそれぞれ@w{@code{(@var{library} @var{files}@dots{})}}という形式のリスト。ここで@code{car}はサポートされた外部ライブラリーを表すシンボル、残りはそのライブラリーにたいして候補となるファイル名を与える文字列。"
 
 #. type: defvar
 #: original_texis/os.texi:2907
 msgid "Emacs tries to load the library from the files in the order they appear in the list; if none is found, the Emacs session won't have access to that library, and the features it provides will be unavailable."
-msgstr "Emacsは、このリスト内のファイル出現順で、そのライブラリーのロードを試みる。何も見つからない場合、そのEmacsセッションはライブラリーにアクセスできず、それが提供する機能は利用できない。"
+msgstr "Emacsはリスト内のファイル出現順でライブラリーのロードを試みる。何も見つからなければEmacsセッションはライブラリーにアクセスできず、それが提供する機能は利用できない。"
 
 #. type: defvar
 #: original_texis/os.texi:2910
 msgid "Image support on some platforms uses this facility.  Here's an example of setting this variable for supporting images on MS-Windows:"
-msgstr "いくつかのプラットフォーム上におけるイメージのサポートは、この機能を使用している。以下は、MS-Windows上でイメージをサポートするために、この変数をセットする例である:"
+msgstr "いくつかのプラットフォーム上におけるイメージのサポートはこの機能を使用している。以下は、S-Windows上でイメージをサポートするためにこの変数をセットする例:"
 
 #. type: example
 #: original_texis/os.texi:2924
-#, fuzzy, no-wrap
-#| msgid ""
-#| "(setq dynamic-library-alist\n"
-#| "      '((xpm \"libxpm.dll\" \"xpm4.dll\" \"libXpm-nox4.dll\")\n"
-#| "        (png \"libpng12d.dll\" \"libpng12.dll\" \"libpng.dll\"\n"
-#| "             \"libpng13d.dll\" \"libpng13.dll\")\n"
-#| "        (jpeg \"jpeg62.dll\" \"libjpeg.dll\" \"jpeg-62.dll\"\n"
-#| "              \"jpeg.dll\")\n"
-#| "        (tiff \"libtiff3.dll\" \"libtiff.dll\")\n"
-#| "        (gif \"giflib4.dll\" \"libungif4.dll\" \"libungif.dll\")\n"
-#| "        (svg \"librsvg-2-2.dll\")\n"
-#| "        (gdk-pixbuf \"libgdk_pixbuf-2.0-0.dll\")\n"
-#| "        (glib \"libglib-2.0-0.dll\")\n"
-#| "\t(gobject \"libgobject-2.0-0.dll\")))\n"
+#, no-wrap
 msgid ""
 "(setq dynamic-library-alist\n"
 "      '((xpm \"libxpm.dll\" \"xpm4.dll\" \"libXpm-nox4.dll\")\n"
@@ -5389,161 +5337,157 @@ msgstr ""
 "        (svg \"librsvg-2-2.dll\")\n"
 "        (gdk-pixbuf \"libgdk_pixbuf-2.0-0.dll\")\n"
 "        (glib \"libglib-2.0-0.dll\")\n"
-"\t(gobject \"libgobject-2.0-0.dll\")))\n"
+"        (gobject \"libgobject-2.0-0.dll\")))\n"
 
 #. type: defvar
 #: original_texis/os.texi:2929
 msgid "Note that image types @code{pbm} and @code{xbm} do not need entries in this variable because they do not depend on external libraries and are always available in Emacs."
-msgstr "イメージタイプ@code{pbm}と@code{xbm}は外部ライブラリーに依存せず、Emacsで常に利用可能なので、この変数内にエントリーがないことに注意。"
+msgstr "イメージタイプ@code{pbm}と@code{xbm}は外部ライブラリーに依存せずEmacsで常に利用可能なので、この変数内にエントリーがないことに注意。"
 
 #. type: defvar
 #: original_texis/os.texi:2933
 msgid "Also note that this variable is not meant to be a generic facility for accessing external libraries; only those already known by Emacs can be loaded through it."
-msgstr "これは、外部ライブラリーへのアクセスにたいする、一般的な機能を意図したものではないことにも注意されたい。Emacsにとって既知のライブラリーだけが、これを通じてロードできる。"
+msgstr "これは外部ライブラリーへのアクセスにたいする一般的な機能を意図したものではないことにも注意。Emacsにとって既知のライブラリーだけがこれを通じてロードできる。"
 
 #. type: defvar
 #: original_texis/os.texi:2936
 msgid "This variable is ignored if the given @var{library} is statically linked into Emacs."
-msgstr "与えられた@var{library}が、Emacsに静的にリンクされている場合、この変数は無視される。"
+msgstr "与えられた@var{library}がEmacsに静的にリンクされていれば、この変数は無視される。"
 
 #. type: cindex
 #: original_texis/os.texi:2940
 #, no-wrap
 msgid "security"
-msgstr ""
+msgstr "security"
 
 #. type: cindex
 #: original_texis/os.texi:2941
 #, no-wrap
 msgid "hardening"
-msgstr ""
+msgstr "hardening"
 
 #. type: Plain text
 #: original_texis/os.texi:2953
 msgid "Like any application, Emacs can be run in a secure environment, where the operating system enforces rules about access and the like.  With some care, Emacs-based applications can also be part of a security perimeter that checks such rules.  Although the default settings for Emacs work well for a typical software development environment, they may require adjustment in environments containing untrusted users that may include attackers.  Here is a compendium of security issues that may be helpful if you are developing such applications.  It is by no means complete; it is intended to give you an idea of the security issues involved, rather than to be a security checklist."
-msgstr ""
+msgstr "すべてのアプリケーションと同じように、アクセス等のルールを励行するオペレーティングシステムでは、Emacsを安全な環境で実行できます。注意を払えばEmacsベースのアプリケーションがそのようなルールをチェックするセキュリティ境界の一部になることもできます。Emacsのデフォルトのセッティングでは典型的なソフトウェア開発環境としても良好に機能しますが、アタッカーを含んだ信頼されないユーザーの存在する環境では調整を要します。以下はそのようなアプリケーションを開発する際に助けとなるセキュリティ問題の要覧です。これは完全なものではありません。これはセキュリティチェックリストではなく、セキュリティに関する問題にたいするアイデアを与えることを意図したものです。"
 
 #. type: item
 #: original_texis/os.texi:2955
 #, no-wrap
 msgid "File local variables"
-msgstr ""
+msgstr "ファイルローカル変数"
 
 #. type: cindex
 #: original_texis/os.texi:2956
 #, no-wrap
 msgid "file local variables"
-msgstr ""
+msgstr "file local variables"
 
 #. type: table
 #: original_texis/os.texi:2966
 msgid "A file that Emacs visits can contain variable settings that affects the buffer visiting that file; @xref{File Local Variables}.  Similarly, a directory can specify local variable values common to all files in that directory; @xref{Directory Local Variables}.  Although Emacs takes some effort to protect against misuse of these variables, a security hole can be created merely by a package setting @code{safe-local-variable} too optimistically, a problem that is all too common.  To disable this feature for both files and directories, set @code{enable-local-variables} to @code{nil}."
-msgstr ""
+msgstr "Emacsがvisitするファイルは、ファイルをvisitするバッファーに影響を与える変数セッティングを含むことができる。@ref{File Local Variables}を参照のこと。同様にディレクトリーはディレクトリー内のすべてのファイルに共通なローカル変数値を指定できる。@ref{Directory Local Variables}を参照のこと。これらの変数の悪用から守るためにEmacsはある程度の努力をしているにしても、過度に楽観してパッケージで@code{safe-local-variable}をセットすることにより単にセキュリティホールが作られてしまうというのは、あまりにも有りがちな問題である。ファイルとディレクトリーの両方でこの機能を無効にするには、@code{enable-local-variables}に@code{nil}をセットする。"
 
 #. type: item
 #: original_texis/os.texi:2967
 #, no-wrap
 msgid "Access control"
-msgstr ""
+msgstr "アクセスコントロール"
 
 #. type: table
 #: original_texis/os.texi:2976
 msgid "Although Emacs normally respects access permissions of the underlying operating system, in some cases it handles accesses specially.  For example, file names can have handlers that treat the files specially, with their own access checking.  @xref{Magic File Names}.  Also, a buffer can be read-only even if the corresponding file is writeable, and vice versa, which can result in messages such as @samp{File passwd is write-protected; try to save anyway? (yes or no)}.  @xref{Read Only Buffers}."
-msgstr ""
+msgstr "Emacsが通常は背後にあるオペレーティングシステムのアクセス権限にしたがうとしても、アクセスを特別に扱うケースがある。たとえばファイル名は独自のアクセスチェックによりファイルを特別に扱うハンドラーをもつことができる。@ref{Magic File Names}を参照のこと。また対応するファイルが書き込み可でもバッファーを読み取り専用にできるが逆も可能であり、その結果は@samp{File passwd is write-protected; try to save anyway? (yes or no)}のようなメッセージとなるかもしれない。@ref{Read Only Buffers}を参照のこと。"
 
 #. type: item
 #: original_texis/os.texi:2977
-#, fuzzy, no-wrap
-#| msgid "user identification"
+#, no-wrap
 msgid "Authentication"
-msgstr "user identification"
+msgstr "認証"
 
 #. type: table
 #: original_texis/os.texi:2986
 msgid "Emacs has several functions that deal with passwords, e.g., @code{read-passwd}.  @xref{Reading a Password}.  Although these functions do not attempt to broadcast passwords to the world, their implementations are not proof against determined attackers with access to Emacs internals.  For example, even if Elisp code uses @code{clear-string} to scrub a password from its memory after using it, remnants of the password may still reside in the garbage-collected free list.  @xref{Modifying Strings}."
-msgstr ""
+msgstr "Emacsには@code{read-passwd}のようなパスワードを扱う関数がいくつかある。@ref{Reading a Password}を参照のこと。これらの関数はパスワードを公に喧伝しないにしても、Emacs内部にアクセスする猛者なアタッカーにたいする実装の証左はない。たとえばパスワード使用後にメモリーをクリアーするためにelispコードが@code{clear-string}を使用しても、パスワードの残滓は依然としてガーベージコレクトされたフリーリスト内に存在する。@ref{Modifying Strings}を参照のこと。"
 
 #. type: item
 #: original_texis/os.texi:2987
 #, no-wrap
 msgid "Code injection"
-msgstr ""
+msgstr "コードインジェクション"
 
 #. type: table
 #: original_texis/os.texi:3002
 msgid "Emacs can send commands to many other applications, and applications should take care that strings sent as operands of these commands are not misinterpreted as directives.  For example, when using a shell command to rename a file @var{a} to @var{b}, do not simply use the string @code{mv @var{a} @var{b}}, because either file name might start with @samp{-}, or might contain shell metacharacters like @samp{;}.  Although functions like @code{shell-quote-argument} can help avoid this sort of problem, they are not panaceas; for example, on a POSIX platform @code{shell-quote-argument} quotes shell metacharacters but not leading @samp{-}.  @xref{Shell Arguments}.  Typically it is safer to use @code{call-process} than a subshell.  @xref{Synchronous Processes}.  And it is safer yet to use builtin Emacs functions; for example, use @code{(rename-file \"@var{a}\" \"@var{b}\" t)} instead of invoking @command{mv}.  @xref{Changing Files}."
-msgstr ""
+msgstr "Emacsは他の多くのアプリケーションにコマンドを送信でき、アプリケーションはコマンドの値として送信された文字列を命令と誤解しないように注意を払う必要がある。たとえばファイルを@var{a}から@var{b}にリネームするためにシェルコマンドを使用する際には単に文字列@code{mv @var{a} @var{b}}を使用するべきではない。なぜならいずれかのファイル名が@samp{-}で始まったり、@samp{;}のようなシェルのメタ文字を含むかもしれない。この種の問題は@code{shell-quote-argument}のような関数の使用で回避できるものの、POSIXプラットフォームでは@code{shell-quote-argument}はシェルのメタ文字はクォートするが先頭の@samp{-}はクォートしない。@ref{Shell Arguments}を参照のこと。@code{call-process}を使用するほうが通常はサブシェルより安全である。@ref{Synchronous Processes}を参照のこと。同様に、たとえば@command{mv}を呼び出すかわりに@code{(rename-file \"@var{a}\" \"@var{b}\" t)}を使用する等、Emacsのビルドイン関数を使用するほうが安全である。@ref{Changing Files}を参照のこと。"
 
 #. type: item
 #: original_texis/os.texi:3003
-#, fuzzy, no-wrap
-#| msgid "operating system signal"
+#, no-wrap
 msgid "Coding systems"
-msgstr "operating system signal"
+msgstr "コーディングシステム"
 
 #. type: table
 #: original_texis/os.texi:3013
 msgid "Emacs attempts to infer the coding systems of the files and network connections it accesses.  @xref{Coding Systems}.  If Emacs infers incorrectly, or if the other parties to the network connection disagree with Emacs's inferences, the resulting system could be unreliable.  Also, even when it infers correctly, Emacs often can use bytes that other programs cannot.  For example, although to Emacs the null byte is just a character like any other, many other applications treat it as a string terminator and mishandle strings or files containing null bytes."
-msgstr ""
+msgstr "Emacsはアクセスするファイルとネットワークのコーディングシステムを推察する。@ref{Coding Systems}を参照のこと。Emacsの推察が誤っていたりネットワークの相手先がEmacsの推察に不同意なら、結果となるコーディングシステムは信頼できないかもしれない。更にその推察が正しいときでさえ、他のプログラムが使用できないバイトをEmacsが使用できる場合がよくある。たとえばEmacsEmacsにとってはnullバイトは他と同じ単なる文字だとしても、他の多くのアプリケーションはnull文字を文字列終端として扱うので、nullバイトを含む文字列やファイルを誤って処理する。"
 
 #. type: item
 #: original_texis/os.texi:3014
-#, fuzzy, no-wrap
-#| msgid "environment variable access"
+#, no-wrap
 msgid "Environment and configuration variables"
-msgstr "environment variable access"
+msgstr "Environment and configuration variables"
 
 #. type: table
 #: original_texis/os.texi:3025
 msgid "POSIX specifies several environment variables that can affect how Emacs behaves.  Any environment variable whose name consists entirely of uppercase ASCII letters, digits, and the underscore may affect the internal behavior of Emacs.  Emacs uses several such variables, e.g., @env{EMACSLOADPATH}.  @xref{Library Search}.  On some platforms some environment variables (e.g., @env{PATH}, @env{POSIXLY_CORRECT}, @env{SHELL}, @env{TMPDIR}) need to have properly-configured values in order to get standard behavior for any utility Emacs might invoke.  Even seemingly-benign variables like @env{TZ} may have security implications.  @xref{System Environment}."
-msgstr ""
+msgstr "POSIXはEmacsの挙動に影響し得る環境変数をいくつか指定する。ASCII英大文字、数字、アンダースコアだけから構成される名前をもつ任意の環境変数がEmacsの内部の動作に影響を及ぼし得る。Emacsはその種の@env{EMACSLOADPATH}のような変数をいくつか使用する。@xref{Library Search}を参照のこと。Emacsが呼び出すかもしれないユーティリティーすべてにたいして標準の挙動を得るためには、いくつかの環境変数(@env{PATH}、@env{POSIXLY_CORRECT}、@env{SHELL}、@env{TMPDIR})が正しく設定されていることを要するシステムがいくつかある。@env{TZ}のような一見は無害な変数でさえセキュリティに影響し得る。@ref{System Environment}を参照のこと。"
 
 #. type: table
 #: original_texis/os.texi:3030
 msgid "Emacs has customization and other variables with similar considerations.  For example, if the variable @code{shell-file-name} specifies a shell with nonstandard behavior, an Emacs-based application may misbehave."
-msgstr ""
+msgstr "Emacsにはカスタマイズと同義な変数が他にある。たとえば変数@code{shell-file-name}に非標準的な動作を行うシェルを指定すれば、Emacsベースのアプリケーションはご堂する可能性がある。"
 
 #. type: item
 #: original_texis/os.texi:3031
-#, fuzzy, no-wrap
-#| msgid "installation-directory"
+#, no-wrap
 msgid "Installation"
-msgstr "installation-directory"
+msgstr "Installation"
 
 #. type: table
 #: original_texis/os.texi:3036
 msgid "When Emacs is installed, if the installation directory hierarchy can be modified by untrusted users, the application cannot be trusted.  This applies also to the directory hierarchies of the programs that Emacs uses, and of the files that Emacs reads and writes."
-msgstr ""
+msgstr "Emacsのインストールの際にインストール先のディレクトリー階層が信頼できないユーザーに変更可能なら、そのアプリケーションは信頼できない。これはEmacsが使用するプログラムや読み書きするファイルのディレクトリー階層にも適用される。"
 
 #. type: item
 #: original_texis/os.texi:3037
 #, no-wrap
 msgid "Network access"
-msgstr ""
+msgstr "Network access"
 
 #. type: table
 #: original_texis/os.texi:3044
 msgid "Emacs often accesses the network, and you may want to configure it to avoid network accesses that it would normally do.  For example, unless you set @code{tramp-mode} to @code{nil}, file names using a certain syntax are interpreted as being network files, and are retrieved across the network.  @xref{Top, The Tramp Manual,, tramp, The Tramp Manual}."
-msgstr ""
+msgstr "Emacsでは多くの場合にネットワークにアクセスするので、通常行うようなネットワークアクセスを回避したいと思うかもしれない。たとえば@code{tramp-mode}を@code{nil}にセットしていなければ、特定の構文を使用するファイル名はネットワークファイルとして解釈されて、ネットワーク越しに取得される。@ref{Top, The Tramp Manual,, tramp, The Tramp Manual}を参照のこと。"
 
 #. type: item
 #: original_texis/os.texi:3045
 #, no-wrap
 msgid "Race conditions"
-msgstr ""
+msgstr "Race conditions"
 
 #. type: table
 #: original_texis/os.texi:3052
 msgid "Emacs applications have the same sort of race-condition issues that other applications do.  For example, even when @code{(file-readable-p \"foo.txt\")} returns @code{t}, it could be that @file{foo.txt} is unreadable because some other program changed the file's permissions between the call to @code{file-readable-p} and now.  @xref{Testing Accessibility}."
-msgstr ""
+msgstr "Emacsアプリケーションには、他のアプリケーションが行う競合状態に関するものと同種の問題がある。たとえば@code{(file-readable-p \"foo.txt\")}が@code{t}をリターンしたときでさえ、@code{file-readable-p}の呼び出しからその時点の間に別のアプリケーションがファイルの権限を変更したために読み取りできないかもしれない。@ref{Testing Accessibility}を参照のこと。"
 
 #. type: item
 #: original_texis/os.texi:3053
 #, no-wrap
 msgid "Resource limits"
-msgstr ""
+msgstr "Resource limits"
 
 #. type: table
 #: original_texis/os.texi:3058
 msgid "When Emacs exhausts memory or other operating system resources, its behavior can be less reliable, in that computations that ordinarily run to completion may abort back to the top level.  This may cause Emacs to neglect operations that it normally would have done."
-msgstr ""
+msgstr "Emacsがメモリーや他のオペレーティングシステムのリソースを使い切ったときには、通常は完了まで実行される計算が異常終了でトップレベルに戻るかもしれないので挙動の信頼性が減少し得る。これにより通常は完了する操作をEmacsが放棄するかもしれない。"
