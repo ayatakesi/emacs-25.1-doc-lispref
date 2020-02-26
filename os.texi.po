@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-02-26 21:21+0900\n"
+"PO-Revision-Date: 2020-02-26 21:22+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1657,7 +1657,7 @@ msgstr "シリコングラフィックスのIrixシステム。"
 #: original_texis/os.texi:910
 #, no-wrap
 msgid "nacl"
-msgstr ""
+msgstr "nacl"
 
 #. type: table
 #: original_texis/os.texi:912
