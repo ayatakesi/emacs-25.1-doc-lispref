@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-02-29 01:04+0900\n"
+"PO-Revision-Date: 2020-02-29 01:05+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: original_texis/package.texi:5
 #, no-wrap
 msgid "Packaging"
-msgstr ""
+msgstr "Packaging"
 
 #. type: chapter
 #: original_texis/package.texi:6
