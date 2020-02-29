@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-09 23:58+0900\n"
+"PO-Revision-Date: 2020-03-01 01:20+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -35,7 +35,7 @@ msgstr "このセクションでは、より一般的なキーマップをリス
 #. type: Plain text
 #: original_texis/maps.texi:18
 msgid "There are many other, more specialized, maps than these; in particular those associated with major and minor modes.  The minibuffer uses several keymaps (@pxref{Completion Commands}).  For more details on keymaps, @pxref{Keymaps}."
-msgstr "他にもより特化された、多くのキーマップがあります。それらは特にメジャーモードやマイナーモードに関連付けられています。ミニバッファーはいくつかのキーマップを使用します(@ref{Completion Commands}を参照)。キーマップの詳細については、@ref{Keymaps}を参照してください。"
+msgstr "他にもより特化された多くのキーマップがあります。それらは特にメジャーモードやマイナーモードに関連付けられています。ミニバッファーはいくつかのキーマップを使用します(@ref{Completion Commands}を参照)。キーマップの詳細については@ref{Keymaps}を参照してください。"
 
 #. type: item
 #: original_texis/maps.texi:23
@@ -90,7 +90,7 @@ msgstr "ctl-x-4-map"
 #. type: table
 #: original_texis/maps.texi:41
 msgid "A sparse keymap for subcommands of the prefix @kbd{C-x 4}."
-msgstr "プレフィックス@kbd{C-x 4}のサブコマンドのsparseキーマップである。"
+msgstr "プレフィックス@kbd{C-x 4}のサブコマンドのsparseキーマップ。"
 
 #. type: item
 #: original_texis/maps.texi:42
@@ -101,7 +101,7 @@ msgstr "ctl-x-5-map"
 #. type: table
 #: original_texis/maps.texi:44
 msgid "A sparse keymap for subcommands of the prefix @kbd{C-x 5}."
-msgstr "プレフィックス@kbd{C-x 5}のサブコマンドのsparseキーマップである。"
+msgstr "プレフィックス@kbd{C-x 5}のサブコマンドのsparseキーマップ。"
 
 #. type: item
 #: original_texis/maps.texi:45
@@ -134,7 +134,7 @@ msgstr "esc-map"
 #. type: table
 #: original_texis/maps.texi:55
 msgid "A full keymap for @kbd{ESC} (or @kbd{Meta}) commands."
-msgstr "@kbd{ESC}(または@kbd{Meta})コマンドにたいする完全なキーマップ。"
+msgstr "@kbd{ESC} (や@kbd{Meta})コマンドにたいする完全なキーマップ。"
 
 #. type: item
 #: original_texis/maps.texi:56
@@ -156,7 +156,7 @@ msgstr "function-key-map"
 #. type: table
 #: original_texis/maps.texi:61
 msgid "The parent keymap of all @code{local-function-key-map} (q.v.@:) instances."
-msgstr "すべての@code{local-function-key-map}のインスタンスの親キーマップ(@code{local-function-key-map}を参照せよ)。"
+msgstr "すべての@code{local-function-key-map}のインスタンスの親キーマップ(@code{local-function-key-map}を参照)。"
 
 #. type: vindex
 #: original_texis/maps.texi:64 original_texis/maps.texi:65
@@ -228,7 +228,7 @@ msgstr "key-translation-map"
 #. type: table
 #: original_texis/maps.texi:94
 msgid "A keymap for translating keys.  This one overrides ordinary key bindings, unlike @code{local-function-key-map}.  @xref{Translation Keymaps}."
-msgstr "キー変換にたいするキーマップ。@code{local-function-key-map}と異なり、これは通常のキーバインディングをオーバーライドする。@ref{Translation Keymaps}を参照のこと。"
+msgstr "キー変換にたいするキーマップ。@code{local-function-key-map}と異なり通常のキーバインディングをオーバーライドする。@ref{Translation Keymaps}を参照のこと。"
 
 #. type: vindex
 #: original_texis/maps.texi:95 original_texis/maps.texi:96
@@ -239,7 +239,7 @@ msgstr "kmacro-keymap"
 #. type: table
 #: original_texis/maps.texi:99
 msgid "A sparse keymap for keys that follows the @kbd{C-x C-k} prefix search.@* @xref{Keyboard Macros,,, emacs, The GNU Emacs Manual}."
-msgstr "プレフィクス検索@kbd{C-x C-k}に後続するキーにたいするsparseキーマップ。@*@ref{Keyboard Macros,,, emacs, The GNU Emacs Manual}ヲ参照のこと。"
+msgstr "プレフィクス検索@kbd{C-x C-k}に後続するキーにたいするsparseキーマップ。@*@ref{Keyboard Macros,,, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: item
 #: original_texis/maps.texi:100
@@ -250,7 +250,7 @@ msgstr "local-function-key-map"
 #. type: table
 #: original_texis/maps.texi:104
 msgid "The keymap for translating key sequences to preferred alternatives.@* If there are none, then it contains an empty sparse keymap.  @xref{Translation Keymaps}."
-msgstr "キーシーケンスを優先する代替えへと変換するキーマップ。@*存在しなければ空のsparseキーマップが含まれる。@ref{Translation Keymaps}を参照のこと。"
+msgstr "キーシーケンスを優先する代替えに変換するキーマップ。@*存在しなければ空のsparseキーマップが含まれる。@ref{Translation Keymaps}を参照のこと。"
 
 #. type: vindex
 #: original_texis/maps.texi:105 original_texis/maps.texi:112
@@ -297,7 +297,7 @@ msgstr "menu bar keymaps"
 #. type: table
 #: original_texis/maps.texi:120
 msgid "These keymaps display the main, top-level menus in the menu bar.@* Some of them contain sub-menus.  For example, the Edit menu contains @code{menu-bar-search-menu}, etc.  @xref{Menu Bar}."
-msgstr "これらのキーマップはメニューバー内の、メインとなるトップレベルメニューを表示する。@*これらのいくつかはサブメニューを含む。たとえばEditメニューは@code{menu-bar-search-menu}を含む等。@ref{Menu Bar}を参照のこと。"
+msgstr "これらのキーマップはメニューバー内のメインとなるトップレベルメニューを表示する。@*これらのいくつかはサブメニューを含む。たとえばEditメニューは@code{menu-bar-search-menu}を含む等。@ref{Menu Bar}を参照のこと。"
 
 #. type: item
 #: original_texis/maps.texi:131
@@ -342,7 +342,7 @@ msgstr "mode-specific-map"
 #. type: table
 #: original_texis/maps.texi:149
 msgid "The keymap for characters following @kbd{C-c}.  Note, this is in the global map.  This map is not actually mode-specific: its name was chosen to be informative in @kbd{C-h b} (@code{display-bindings}), where it describes the main use of the @kbd{C-c} prefix key."
-msgstr "@kbd{C-c}に後続する文字にたいするキーマップ。これはグローバルキーマップ内にあることに注意。これは実際にはモード固有のものではない。プフィクスキー@kbd{C-c}の使用方法を主に記述する@kbd{C-h b} (@code{display-bindings})内で有益なので、この名前が選ばれた。"
+msgstr "@kbd{C-c}に後続する文字にたいするキーマップ。これはグローバルキーマップ内にあることに注意。これは実際にはモード固有のものではない。プフィクスキー@kbd{C-c}の使用方法を主に記述する@kbd{C-h b} (@code{display-bindings})内で有益なのでこの名前が選ばれた。"
 
 #. type: vindex
 #: original_texis/maps.texi:151 original_texis/maps.texi:152
@@ -386,7 +386,7 @@ msgstr "prog-mode-map"
 #. type: table
 #: original_texis/maps.texi:165
 msgid "The keymap used by Prog mode.@* @xref{Basic Major Modes}."
-msgstr "Progモードにより使用されるキーマップ。@*@ref{Basic Major Modes}ヲ参照のこと。"
+msgstr "Progモードにより使用されるキーマップ。@*@ref{Basic Major Modes}を参照のこと。"
 
 #. type: item
 #: original_texis/maps.texi:166
@@ -403,7 +403,7 @@ msgstr "multi-query-replace-map"
 #. type: table
 #: original_texis/maps.texi:173
 msgid "A sparse keymap used for responses in @code{query-replace} and related commands; also for @code{y-or-n-p} and @code{map-y-or-n-p}.  The functions that use this map do not support prefix keys; they look up one event at a time.  @code{multi-query-replace-map} extends @code{query-replace-map} for multi-buffer replacements.  @xref{Search and Replace, query-replace-map}."
-msgstr "@code{query-replace}での応答と、それに関連するコマンド、@code{y-or-n-p}と@code{map-y-or-n-p}にたいしても使用されるsparseキーマップ。このマップを使用する関数はプレフィクスキーを使用せず、一度に1つのイベントを照会する。複数バッファーの置換では、@code{multi-query-replace-map}が@code{query-replace-map}を拡張する。@ref{Search and Replace, query-replace-map}を参照のこと。"
+msgstr "@code{query-replace}での応答と関連するコマンド、@code{y-or-n-p}と@code{map-y-or-n-p}にたいしても使用されるsparseキーマップ。このマップを使用する関数はプレフィクスキーを使用せず一度に1つのイベントを照会する。複数バッファーの置換では@code{multi-query-replace-map}が@code{query-replace-map}を拡張する。@ref{Search and Replace, query-replace-map}を参照のこと。"
 
 #. type: item
 #: original_texis/maps.texi:174
@@ -414,7 +414,7 @@ msgstr "search-map"
 #. type: table
 #: original_texis/maps.texi:176
 msgid "A sparse keymap that provides global bindings for search-related commands."
-msgstr "検索関連コマンドにたいしてグローバルバインディングを提供する、sparseキーマップ。"
+msgstr "検索関連コマンドにたいしてグローバルバインディングを提供するsparseキーマップ。"
 
 #. type: item
 #: original_texis/maps.texi:177
