@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2020-03-01 00:12+0900\n"
+"PO-Revision-Date: 2020-03-01 00:19+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -3415,7 +3415,7 @@ msgstr "符号なしタイプと符号付きタイプを組み合わせるとコ
 #. type: itemize
 #: original_texis/internals.texi:1613
 msgid "Prefer @code{int} for Emacs character codes, in the range 0 ..@: 0x3FFFFF@.  More generally, prefer @code{int} for integers known to be in @code{int} range, e.g., screen column counts."
-msgstr "0から0x3FFFFF@までの範囲ではEmacs文字コードには@code{int}を優先すること。より一般的には、たとえばスクリーン列数のように@code{int}範囲と既知である整数には@code{int}を優先すること。"
+msgstr "0から0x3FFFFFまでの範囲ではEmacs文字コードには@code{int}を優先すること。より一般的には、たとえばスクリーン列数のように@code{int}範囲と既知である整数には@code{int}を優先すること。"
 
 #. type: itemize
 #: original_texis/internals.texi:1622
