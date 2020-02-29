@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-10 01:15+0900\n"
+"PO-Revision-Date: 2020-03-01 01:46+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -36,27 +36,27 @@ msgstr "hook variables, list of"
 #. type: Plain text
 #: original_texis/hooks.texi:13
 msgid "The following is a list of some hook variables that let you provide functions to be called from within Emacs on suitable occasions."
-msgstr "以下は、EMacsで適切なタイミングで呼び出す関数を提供するための、いくつかのフック関数のリストです。"
+msgstr "以下はEmacsで適切なタイミングで呼び出す関数を提供するためのいくつかのフック関数のリストです。"
 
 #. type: Plain text
 #: original_texis/hooks.texi:20
 msgid "Most of these variables have names ending with @samp{-hook}.  They are @dfn{normal hooks}, run by means of @code{run-hooks}.  The value of such a hook is a list of functions; the functions are called with no arguments and their values are completely ignored.  The recommended way to put a new function on such a hook is to call @code{add-hook}.  @xref{Hooks}, for more information about using hooks."
-msgstr "これらの変数のほとんどは、@samp{-hook}で始まる名前をもちます。これらは@dfn{ノーマルフック(normal hooks)}と呼ばれ、@code{run-hooks}により実行されます。そのようなフックの値は関数のリストです。これらの関数は引数なしで呼び出され、値は完全にに無視されます。そのようなフック上に新たに関数を配置するための推奨は、@code{add-hook}を呼び出す方法です。フック使用についての詳細は、@ref{Hooks}を参照してください。"
+msgstr "これらの変数のほとんどは@samp{-hook}で終わる名前をもちます。これらは@dfn{ノーマルフック(normal hooks)}と呼ばれており@code{run-hooks}により実行されます。そのようなフックの値は関数のリストです。これらの関数は引数なしで呼び出されて値は完全に無視されます。そのようなフック上に新たに関数を配置するためには@code{add-hook}を呼び出す方法を推奨します。フック使用についての詳細は@ref{Hooks}を参照してください。"
 
 #. type: Plain text
 #: original_texis/hooks.texi:26
 msgid "The variables whose names end in @samp{-functions} are usually @dfn{abnormal hooks} (some old code may also use the deprecated @samp{-hooks} suffix); their values are lists of functions, but these functions are called in a special way (they are passed arguments, or their return values are used).  The variables whose names end in @samp{-function} have single functions as their values."
-msgstr "@samp{-functions}で終わる名前の変数は、通常は@dfn{アブノーマルフック(abnormal hooks)}です(古いコードには推奨されない@samp{-hooks}サフィクスを使用するものもある)。これらの値は関数のリストですが、これらの関数は特殊な方法で呼び出されます(引数を渡されたりリターン値が使用される)。@samp{-function}で終わる名前の変数は、値として単一の関数をもちます。"
+msgstr "@samp{-functions}で終わる名前の変数は通常は@dfn{アブノーマルフック(abnormal hooks)}です(古いコードの中には非推奨の@samp{-hooks}サフィクスを使用するものもある)。これらの値は関数のリストですが関数は特殊な方法で呼び出されます(引数を渡されたりリターン値が使用される)。@samp{-function}で終わる名前の変数は値として単一の関数をもちます。"
 
 #. type: Plain text
 #: original_texis/hooks.texi:32
 msgid "This is not an exhaustive list, it only covers the more general hooks.  For example, every major mode defines a hook named @samp{@var{modename}-mode-hook}.  The major mode command runs this normal hook with @code{run-mode-hooks} as the very last thing it does.  @xref{Mode Hooks}.  Most minor modes have mode hooks too."
-msgstr "以下のリストはすべてを網羅したリストではなく、より一般的なフックだけをカバーしています。たとえばメジャーモードはそれぞれ、@samp{@var{modename}-mode-hook}という名前のフックを定義します。メジャーモードは自身が行う最後のこととして、@code{run-mode-hooks}でこのノーマルフックを実行します。@ref{Mode Hooks}を参照してください。ほとんどのマイナーモードにもフックがあります。"
+msgstr "以下のリストはすべてを網羅したリストではなく、より一般的なフックだけをカバーしています。たとえばメジャーモードはそれぞれ@samp{@var{modename}-mode-hook}という名前のフックを定義します。メジャーモードは自身が行う最後のこととして@code{run-mode-hooks}でこのノーマルフックを実行します。@ref{Mode Hooks}を参照してください。ほとんどのマイナーモードにもフックがあります。"
 
 #. type: Plain text
 #: original_texis/hooks.texi:36
 msgid "A special feature allows you to specify expressions to evaluate if and when a file is loaded (@pxref{Hooks for Loading}).  That feature is not exactly a hook, but does a similar job."
-msgstr "特別な機能により、あるファイルがロードされたときに評価する式を指定できます(@ref{Hooks for Loading}を参照)。この機能は正確にはフックではありませんが、同様のことを行います。"
+msgstr "特別な機能によりファイルがロードされたときに評価する式を指定できます(@ref{Hooks for Loading}を参照)。この機能は正確にはフックではありませんが同様のことを行います。"
 
 #. type: item
 #: original_texis/hooks.texi:43
@@ -252,7 +252,7 @@ msgstr "after-setting-font-hook"
 #. type: table
 #: original_texis/hooks.texi:90
 msgid "Hook run after a frame's font changes."
-msgstr "Hook run after a frame's font changes."
+msgstr "フレームのフォント変更後に実行されるフック。"
 
 #. type: item
 #: original_texis/hooks.texi:91
@@ -312,10 +312,8 @@ msgstr "buffer-quit-function"
 
 #. type: table
 #: original_texis/hooks.texi:108
-#, fuzzy
-#| msgid "Function to call to ``quit'' the current buffer."
 msgid "Function to call to quit the current buffer."
-msgstr "カレントバッファーを``quit''するために呼び出されるフック。"
+msgstr "カレントバッファーをquitするために呼び出されるフック。"
 
 #. type: item
 #: original_texis/hooks.texi:109
@@ -599,39 +597,36 @@ msgstr "@ref{Mouse Position}を参照のこと。"
 
 #. type: vindex
 #: original_texis/hooks.texi:183 original_texis/hooks.texi:184
-#, fuzzy, no-wrap
-#| msgid "command-line-functions"
+#, no-wrap
 msgid "prefix-command-echo-keystrokes-functions"
-msgstr "command-line-functions"
+msgstr "prefix-command-echo-keystrokes-functions"
 
 #. type: table
 #: original_texis/hooks.texi:191
 msgid "An abnormal hook run by prefix commands (such as @kbd{C-u}) which should return a string describing the current prefix state.  For example, @kbd{C-u} produces @samp{C-u-} and @samp{C-u 1 2 3-}.  Each hook function is called with no arguments and should return a string describing the current prefix state, or @code{nil} if there's no prefix state.  @xref{Prefix Command Arguments}."
-msgstr ""
+msgstr "(@kbd{C-u}のような)プレフィクスコマンドにより実行されるアブノーマルフックであり、カレントのプレフィクス状態を記述する文字列をリターンすること。たとえば@kbd{C-u}は@samp{C-u-}や@samp{C-u 1 2 3-}を生成する。フック関数はそれぞれ引数なしで呼び出されてカレントのプレフィクス状態を記述する文字列、プレフィクス状態がなければ@code{nil}をリターンすること。@ref{Prefix Command Arguments}を参照のこと。"
 
 #. type: vindex
 #: original_texis/hooks.texi:192 original_texis/hooks.texi:193
-#, fuzzy, no-wrap
-#| msgid "pre-command-hook"
+#, no-wrap
 msgid "prefix-command-preserve-state-hook"
-msgstr "pre-command-hook"
+msgstr "prefix-command-preserve-state-hook"
 
 #. type: table
 #: original_texis/hooks.texi:198
 msgid "Hook run when a prefix command needs to preserve the prefix by passing the current prefix command state to the next command.  For example, @kbd{C-u} needs to pass the state to the next command when the user types @kbd{C-u -} or follows @kbd{C-u} with a digit."
-msgstr ""
+msgstr "プレフィクスコマンドが次のコマンドにカレントのプレフィクスコマンドを渡すことによりプレフィクスを確保する必要はある際にフックが実行される。たとえば@kbd{C-u}はユーザーが@kbd{C-u -}や@kbd{C-u}の後に数字をタイプした際には、その状態を次のコマンドに渡す必要がある。"
 
 #. type: item
 #: original_texis/hooks.texi:199
-#, fuzzy, no-wrap
-#| msgid "resume-tty-functions"
+#, no-wrap
 msgid "pre-redisplay-functions"
-msgstr "resume-tty-functions"
+msgstr "pre-redisplay-functions"
 
 #. type: table
 #: original_texis/hooks.texi:202
 msgid "Hook run in each window just before redisplaying it.  @xref{Forcing Redisplay}."
-msgstr ""
+msgstr "フックはそれぞれのウィンドウで再表示の直前に実行される。@ref{Forcing Redisplay}を参照のこと。"
 
 #. type: item
 #: original_texis/hooks.texi:203
@@ -740,7 +735,7 @@ msgstr "font-lock-syntactic-face-function"
 #. type: table
 #: original_texis/hooks.texi:231
 msgid "@xref{Syntactic Font Lock}.  @xref{Syntax Properties}."
-msgstr "@ref{Syntactic Font Lock}および@ref{Syntax Properties}を参照されたい。"
+msgstr "@ref{Syntactic Font Lock}と@ref{Syntax Properties}を参照のこと。"
 
 #. type: item
 #: original_texis/hooks.texi:232
