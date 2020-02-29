@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-08 19:03+0900\n"
+"PO-Revision-Date: 2020-02-29 20:06+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -23,6 +23,7 @@ msgstr "GNU Emacs Internals"
 
 #. type: Plain text
 #: original_texis/internals.texi:12
+#, fuzzy
 msgid "This chapter describes how the runnable Emacs executable is dumped with the preloaded Lisp libraries in it, how storage is allocated, and some internal aspects of GNU Emacs that may be of interest to C programmers."
 msgstr "このチャプターでは、実行可能なEmacs実行可能形式を事前ロードされたLispライブラリーとともにダンプする方法と、ストレージが割り当てられる方法、およびCプログラマーが興味をもつかもしれないGNU Emacsの内部的な側面のいくつかを説明します。"
 
