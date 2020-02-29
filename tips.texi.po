@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:49+0900\n"
-"PO-Revision-Date: 2020-02-29 16:06+0900\n"
+"PO-Revision-Date: 2020-02-29 16:21+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -886,7 +886,7 @@ msgstr "curved quotes"
 #. type: itemize
 #: original_texis/tips.texi:676
 msgid "When a documentation string refers to a Lisp symbol, write it as it would be printed (which usually means in lower case), surrounding it with curved single quotes (@t{‘} and @t{’}).  There are two exceptions: write @code{t} and @code{nil} without surrounding punctuation.  For example: @samp{CODE can be ‘lambda’, nil, or t}.  @xref{Quotation Marks,,, emacs, The GNU Emacs Manual}, for how to enter curved single quotes."
-msgstr "ドキュメント文字列がLispシンボルを参照する際には、たとえば@samp{`lambda'}のように、それがプリントされるとき(通常は小文字を意味する)のように curved single quotes(@t{‘と @t{’で括ること。例外が2つある。@code{t}と@code{nil}は区切り文字で括らない。たとえば@samp{CODE can be ‘lambda’, nil, or t}。curved single quotesの入力方法は@ref{Quotation Marks,,, emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "ドキュメント文字列がLispシンボルを参照する際には、たとえば@samp{`lambda'}のように、それがプリントされるとき(通常は小文字を意味する)のようにcurved single quotes(@t{‘}と@t{’})で括ること。例外が2つある。@code{t}と@code{nil}は区切り文字で括らない。たとえば@samp{CODE can be ‘lambda’, nil, or t}。curved single quotesの入力方法は@ref{Quotation Marks,,, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: itemize
 #: original_texis/tips.texi:682
