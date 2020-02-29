@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-19 04:36+0900\n"
-"PO-Revision-Date: 2019-10-03 19:03+0900\n"
+"PO-Revision-Date: 2020-02-29 10:25+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -23,94 +23,90 @@ msgstr "Antinews"
 
 #. type: appendix
 #: original_texis/anti.texi:9
-#, fuzzy, no-wrap
-#| msgid "Emacs 23 Antinews"
+#, no-wrap
 msgid "Emacs 24 Antinews"
-msgstr "Emacs 23 Antinews"
+msgstr "Emacs 24 Antinews"
 
 #. type: Plain text
 #: original_texis/anti.texi:16
-#, fuzzy
-#| msgid "For those users who live backwards in time, here is information about downgrading to Emacs version 23.4.  We hope you will enjoy the greater simplicity that results from the absence of many Emacs @value{EMACSVER} features."
 msgid "For those users who live backwards in time, here is information about downgrading to Emacs version 24.5.  We hope you will enjoy the greater simplicity that results from the absence of many Emacs @value{EMACSVER} features."
-msgstr "時代に逆らって生きるユーザーのために、以下はEmacsバージョン23.4へのダウングレードに関する情報です。Emacs @value{EMACSVER}機能の不在による結果としての偉大なる単純さを、ぜひ堪能してください。"
+msgstr "時代に逆らって生きるユーザーのために以下はEmacsバージョン24。5へのダウングレードに関する情報です。Emacs @value{EMACSVER}機能の不在による結果としての偉大なる単純さを、ぜひ堪能してください。"
 
 #. type: section
 #: original_texis/anti.texi:17
-#, fuzzy, no-wrap
-#| msgid "Old Lisp Features in Emacs 23"
+#, no-wrap
 msgid "Old Lisp Features in Emacs 24"
-msgstr "Old Lisp Features in Emacs 23"
+msgstr "Old Lisp Features in Emacs 24"
 
 #. type: itemize
 #: original_texis/anti.texi:25
 msgid "The requirement that @code{setq} and @code{setf} must be called with an even number of arguments has been removed.  You can now call them with an odd number of arguments, and Emacs will helpfully supply a @code{nil} for the missing one.  Simplicity rules!"
-msgstr ""
+msgstr "偶数個の引数で呼び出さなければならないという@code{setq}と@code{setf}の要件は削除されました。これで奇数個の引数でこれらを呼び出すことが可能になり、欠落分にはEmacsが@code{nil}を提供するでしょう。単純明快なルールです!"
 
 #. type: itemize
 #: original_texis/anti.texi:31
 msgid "@kbd{M-x shell} and @kbd{M-x compile} set the @env{EMACS} environment variable, as they should, to indicate that the subprocess is run by Emacs.  This is so packages that took years to learn how to work around that setting could continue using their code to that effect."
-msgstr ""
+msgstr "サブプロセスがEmacsにより実行されたことを示すために、@kbd{M-x shell}と@kbd{M-x compile}は必要に応じて環境変数@env{EMACS}をセットします。このセッティングに対処する方法を何年もかけて習得したパッケージは、対処コードの使用を継続できます。"
 
 #. type: itemize
 #: original_texis/anti.texi:36
 msgid "The @code{save-excursion} form saves and restores the mark, as expected.  No more need for the new @code{save-mark-and-excursion}, which has been deleted."
-msgstr ""
+msgstr "@code{save-excursion}フォームは期待どおりにマークの保存とリストアを行います。新しい@code{save-mark-and-excursion}は必要なくなったので削除しました。"
 
 #. type: itemize
 #: original_texis/anti.texi:46
 msgid "We have removed the @code{text-quoting-style} variable and the associated functionality that translates quote characters in messages displayed to the user and in help buffers.  Emacs now shows exactly the same quote characters as you wrote in your code! Likewise, @code{substitute-command-keys} leaves the quote characters alone.  As you move back in time, Unicode support becomes less and less important, so no need to display those fancy new quotes the Unicode Standard invented."
-msgstr ""
+msgstr "ユーザーに表示するメッセージやヘルプバッファーのクォート文字を変換するための@code{text-quoting-style}変数および関連する機能は削除されました。これでEmacsはコードに記述したのと完全に同一なクォート文字を表示するようになりました! 同様に@code{substitute-command-keys}はクォート文字を加工しません。時代を遡るにつれてUnicodeのサポートと重要性は減少するので、Unicode標準が考案したこれらのfancyな新クォートの表示は不必要になります。"
 
 #. type: itemize
 #: original_texis/anti.texi:55
 msgid "Regular expressions have been simplified by removing support for Unicode character properties in regexp classes.  As result, @code{[:alpha:]} and @code{[:alnum:]} will match any character with a word syntax, and @code{[:graph:]} and @code{[:print:]} will match any multibyte character, including surrogates and unassigned codepoints.  Once again, this is in line with diminishing importance of Unicode as you move back in time."
-msgstr ""
+msgstr "regexpクラス内のUnicode文字プロパティのサポートを削除することにより正規表現が簡略化されました。結果として@code{[:alpha:]}と@code{[:alnum:]}は単語構文をもつ任意の文字、@code{[:graph:]}と@code{[:print:]}は任意のマルチバイト文字にマッチして、それらには代替コードポイントと未割り当てのコードポイントが含まれます。繰り返しますが、これは時代の逆行によるUnicodeの重要性減少に沿っています。"
 
 #. type: itemize
 #: original_texis/anti.texi:60
 msgid "Evaluating @samp{(/ @var{n})} will now yield @var{n}.  We have realized that interpreting that as in Common Lisp was a bad mistake that needed to be corrected."
-msgstr ""
+msgstr "@samp{(/ @var{n})}の評価により@var{n}を得るようになりました。Common Lispでの解釈は訂正を要する酷い間違いだとわたしたちは気がついたのです。"
 
 #. type: itemize
 #: original_texis/anti.texi:66
 msgid "The @code{pcase} form was significantly simplified by removing the UPatterns @code{quote} and @code{app}.  To further simplify this facility, we've removed @code{pcase-defmacro}, since we found no need for letting Lisp programs define new UPatterns."
-msgstr ""
+msgstr "UPatternの@code{quote}と@code{app}を削除することにより@code{pcase}は大幅に簡略化されました。Lispプログラムに新たにUPatternを定義させる必要がないことも判明したにで、この機能をさらに簡略化するために@code{pcase-defmacro}も削除しました。"
 
 #. type: itemize
 #: original_texis/anti.texi:76
 msgid "We've removed the text properties @code{cursor-intangible} and @code{cursor-sensor-functions}, replacing them by the much simpler @code{intangible}, @code{point-entered}, and @code{point-left} properties.  The latter are implemented on a much lower level, and therefore are better integrated with user expectations.  For similar reasons, @code{cursor-intangible-mode} and @code{cursor-sensor-mode} were removed; use the hook variable @code{inhibit-point-motion-hooks} which is no longer obsolete."
-msgstr ""
+msgstr "テキストプロパティ@code{cursor-intangible}と@code{cursor-sensor-functions}を、より単純な@code{intangible}、@code{point-entered}、@code{point-left}プロパティに置き換えることにより削除しました。後者はより低レベルで実装されるので、ユーザーの期待により統合されるでしょう。同様の理由により@code{cursor-intangible-mode}と@code{cursor-sensor-mode}は削除されました。フック変数@code{inhibit-point-motion-hooks}の使用はもはや時代遅れではありません。"
 
 #. type: itemize
 #: original_texis/anti.texi:82
 msgid "Process creation and management functions were significantly improved and simplified by removing @code{make-process} and the @code{pipe} connection type.  Redirecting @code{stderr} of a subprocess should be done with shell facilities, not by Emacs."
-msgstr ""
+msgstr "@code{make-process}と接続タイプ@code{pipe}の削除により、プロセスの作成と管理を行う関数が大幅に改善、簡略化されました。サブプロセスの@code{stderr}へのリダイレクトはEmacsではなくシェルの機能により行われるべきなのです。"
 
 #. type: itemize
 #: original_texis/anti.texi:87
 msgid "We decided that shutting up informative messages is bad for user interaction, so we've removed the @code{inhibit-message} variable which could be used to that effect."
-msgstr ""
+msgstr "有益なメッセージを妨げることはユーザーとの対話に有益ではないので、それに使用され得る@code{inhibit-message}変数の削除を決定しました。"
 
 #. type: itemize
 #: original_texis/anti.texi:91
 msgid "Support for generators and for finalizers has been removed, as we found no real need for these facilities."
-msgstr ""
+msgstr "ジェネレーターとファイナライザーにたいするサポートは真に必要ではないことが判明したので削除しました。"
 
 #. type: itemize
 #: original_texis/anti.texi:101
 msgid "Due to excessive complexity and the diminishing need for Unicode support, the functions @code{string-collate-lessp} and @code{string-collate-equalp} were removed.  Their locale-independent counterparts @code{string-lessp} and @code{string-equal} are so much more simple and yield predictable results that we don't see any situation where the locale-dependent collation could be useful in Emacs.  As result, the @file{ls-lisp.el} package sorts files in a locale-independent manner."
-msgstr ""
+msgstr "過度な複雑さとUnicodeサポートの減少の必要性のために、関数@code{string-collate-lessp}と@code{string-collate-equalp}は削除されました。これらのlocale非依存なカウンターパートである@code{string-lessp}と@code{string-equal}はよりシンプルであり、locale依存の照合がEmacsにおいて有用たりえる状況をわたしたちが確認できない予測可能な結果を得ることができます。結果として@file{ls-lisp.el}パッケージはlocale非依存な方法でソートを行います。"
 
 #. type: itemize
 #: original_texis/anti.texi:107
 msgid "In preparation for removal in some past version of Emacs of the bidirectional editing support, we started by deleting two functions @code{bidi-find-overridden-directionality} and @code{buffer-substring-with-bidi-context}."
-msgstr ""
+msgstr "Emacsの過去のバージョンにおける双方向編集サポートの削除にたいする準備として、2つの関数@code{bidi-find-overridden-directionality}と@code{buffer-substring-with-bidi-context}の削除を開始しました。"
 
 #. type: itemize
 #: original_texis/anti.texi:113
 msgid "Time conversion functions, such as @code{current-time-string}, no longer accept an optional @var{zone} argument.  If you need to change the current time zone (why?), do that explicitly with @code{set-time-zone-rule}."
-msgstr ""
+msgstr "@code{current-time-string}のような時刻変換関数はオプション引数@var{zone}を受け取らなくなりました。カレントタイムゾーンを変更する必要があるなら(何で?)、@code{set-time-zone-rule}で明示的に行ってください。"
 
 #. type: itemize
 #: original_texis/anti.texi:117
