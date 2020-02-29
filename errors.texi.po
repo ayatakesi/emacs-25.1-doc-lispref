@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2019-10-14 22:48+0900\n"
-"PO-Revision-Date: 2019-10-08 22:02+0900\n"
+"PO-Revision-Date: 2020-03-01 00:53+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -30,27 +30,27 @@ msgstr "standard errors"
 #. type: Plain text
 #: original_texis/errors.texi:13
 msgid "Here is a list of the more important error symbols in standard Emacs, grouped by concept.  The list includes each symbol's message and a cross reference to a description of how the error can occur."
-msgstr "以下は、標準的なEmacsにおけるより重要なエラーシンボルを概念別にグループ分けしたリストです。このリストには各シンボルのメッセージと、そのエラーを発生し得る方法へのクロスリファレンスが含まれています。"
+msgstr "以下は標準的なEmacsにおける、より重要なエラーシンボルを概念別にグループ分けしたリストです。このリストには各シンボルのメッセージ、およびエラーを発生し得る方法へのクロスリファレンスが含まれています。"
 
 #. type: Plain text
 #: original_texis/errors.texi:22
 msgid "Each error symbol has an set of parent error conditions that is a list of symbols.  Normally this list includes the error symbol itself and the symbol @code{error}.  Occasionally it includes additional symbols, which are intermediate classifications, narrower than @code{error} but broader than a single error symbol.  For example, all the errors in accessing files have the condition @code{file-error}.  If we do not say here that a certain error symbol has additional error conditions, that means it has none."
-msgstr "これらのエラーシンボルはそれぞれ、親となるエラー条件のセットを、シンボルのリストとして保持します。通常このリストには、そのエラーシンボル自身と、シンボル@code{error}が含まれます。このリストは、@code{error}より狭義ですが単一のエラーシンボルより広義であるような、中間的なクラス分けのための追加シンボルを含む場合があります。たとえば、ファイルアクセスでのすべてのエラーは、条件@code{file-error}をもちます。ここでわたしたちが、特定のエラーシンボルにたいする追加エラー条件に言及していなければ、それがないことを意味しています。"
+msgstr "これらのエラーシンボルはそれぞれ親となるエラー条件のセットをシンボルのリストとして保持します。このリストには通常はエラーシンボル自身とシンボル@code{error}が含まれます。このリストは@code{error}より狭義ですが単一のエラーシンボルより広義であるような中間的なクラス分けのための追加シンボルを含む場合があります。たとえばファイルアクセスでのすべてのエラーは条件@code{file-error}をもちます。ここでわたしたちが特定のエラーシンボルにたいする追加エラー条件に言及していなければ、それがないことを意味しています。"
 
 #. type: Plain text
 #: original_texis/errors.texi:25
 msgid "As a special exception, the error symbol @code{quit} does not have the condition @code{error}, because quitting is not considered an error."
-msgstr "特別な例外として、エラーシンボル@code{quit}は、quitはエラーとみなされないので、コンディション@code{error}をもっていません。"
+msgstr "特別な例外としてエラーシンボル@code{quit}は、quitはエラーとみなされないのでコンディション@code{error}をもっていません。"
 
 #. type: Plain text
 #: original_texis/errors.texi:32
 msgid "Most of these error symbols are defined in C (mainly @file{data.c}), but some are defined in Lisp.  For example, the file @file{userlock.el} defines the @code{file-locked} and @code{file-supersession} errors.  Several of the specialized Lisp libraries distributed with Emacs define their own error symbols.  We do not attempt to list of all those here."
-msgstr "これらのエラーシンボルのほとんどは、C(主に@file{data.c})で定義されていますが、いくつかはLispで定義されています。たとえばファイル@file{userlock.el}では、@code{file-locked}と@code{file-supersession}のエラーが定義されています。Emacsとともに配布される専門的なLispライブラリーのいくつかは、それら自身のエラーシンボルを定義しています。それらのすべてをここでリストはしません。"
+msgstr "これらのエラーシンボルのほとんどはC(主に@file{data.c})で定義されていますが、いくつかはLispで定義されています。たとえばファイル@file{userlock.el}では@code{file-locked}と@code{file-supersession}のエラーが定義されています。Emacsとともに配布される専門的なLispライブラリーのいくつかは、それら自身のエラーシンボルを定義しています。それらのすべてをここではリストしません。"
 
 #. type: Plain text
 #: original_texis/errors.texi:35
 msgid "@xref{Errors}, for an explanation of how errors are generated and handled."
-msgstr "エラーの発生とそれを処理する方法については、@ref{Errors}を参照してください。"
+msgstr "エラーの発生とそれを処理する方法については@ref{Errors}を参照してください。"
 
 #. type: item
 #: original_texis/errors.texi:37
@@ -83,7 +83,7 @@ msgstr "args-out-of-range"
 #. type: table
 #: original_texis/errors.texi:48
 msgid "The message is @samp{Args out of range}.  This happens when trying to access an element beyond the range of a sequence, buffer, or other container-like object.  @xref{Sequences Arrays Vectors}, and @xref{Text}."
-msgstr "メッセージは@samp{Args out of range}。これはシーケンス、バッファー、その他コンテナー風オブジェクトの範囲を超えた要素へのアクセスを試みたときに発生する。@ref{Sequences Arrays Vectors}と@ref{Text}を参照されたい。"
+msgstr "メッセージは@samp{Args out of range}。これはシーケンス、バッファー、その他コンテナー類似オブジェクトにたいして範囲を超えた要素にアクセスを試みたときに発生する。@ref{Sequences Arrays Vectors}と@ref{Text}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:49
@@ -94,7 +94,7 @@ msgstr "arith-error"
 #. type: table
 #: original_texis/errors.texi:53
 msgid "The message is @samp{Arithmetic error}.  This occurs when trying to perform integer division by zero.  @xref{Numeric Conversions}, and @xref{Arithmetic Operations}."
-msgstr "メッセージは@samp{Arithmetic error}。これは0による整数除算を試みたときに発生する。@ref{Numeric Conversions}と@ref{Arithmetic Operations}を参照されたい。"
+msgstr "メッセージは@samp{Arithmetic error}。これは0による整数除算を試みたときに発生する。@ref{Numeric Conversions}と@ref{Arithmetic Operations}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:54
@@ -204,7 +204,7 @@ msgstr "end-of-file"
 #. type: table
 #: original_texis/errors.texi:93
 msgid "The message is @samp{End of file during parsing}.  Note that this is not a subcategory of @code{file-error}, because it pertains to the Lisp reader, not to file I/O@.  @xref{Input Functions}."
-msgstr "メッセージは@samp{End of file during parsing}。これはファイルI/OではなくLispリーダーに属するので、@code{file-error}のサブカテゴリーではないことに注意のこと。@ref{Input Functions}を参照されたい。"
+msgstr "メッセージは@samp{End of file during parsing}。これはファイルI/OではなくLispリーダーに属するので@code{file-error}のサブカテゴリーではないことに注意のこと。@ref{Input Functions}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:94
@@ -215,7 +215,7 @@ msgstr "file-already-exists"
 #. type: table
 #: original_texis/errors.texi:96
 msgid "This is a subcategory of @code{file-error}.  @xref{Writing to Files}."
-msgstr "これは@code{file-error}のサブカテゴリーである。@ref{Writing to Files}を参照のこと。"
+msgstr "これは@code{file-error}のサブカテゴリー。@ref{Writing to Files}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:97
@@ -226,7 +226,7 @@ msgstr "file-date-error"
 #. type: table
 #: original_texis/errors.texi:101
 msgid "This is a subcategory of @code{file-error}.  It occurs when @code{copy-file} tries and fails to set the last-modification time of the output file.  @xref{Changing Files}."
-msgstr "これは@code{file-error}のサブカテゴリーである。これは@code{copy-file}を試行して、出力ファイルの最終変更時刻のセットに失敗したときに発生する。@ref{Changing Files}を参照のこと。"
+msgstr "これは@code{file-error}のサブカテゴリー。これは@code{copy-file}を試行して出力ファイルの最終変更時刻のセットに失敗したときに発生する。@ref{Changing Files}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:102
@@ -237,7 +237,7 @@ msgstr "file-error"
 #. type: table
 #: original_texis/errors.texi:109
 msgid "We do not list the error-strings of this error and its subcategories, because the error message is normally constructed from the data items alone when the error condition @code{file-error} is present.  Thus, the error-strings are not very relevant.  However, these error symbols do have @code{error-message} properties, and if no data is provided, the @code{error-message} property @emph{is} used.  @xref{Files}."
-msgstr "これのエラーメッセージは通常、エラー条件@code{file-error}が与えられたときはデータアイテムだけから構築されるので、これのエラー文字列とサブカテゴリーはここにリストしない。つまりエラー文字列は特に関連しない。しかしこれらのエラーシンボルは@code{error-message}プロパティをもち、何もデータが与えられなければ、@code{error-message}が@emph{使用される}。@ref{Files}を参照のこと。"
+msgstr "このエラーメッセージは、通常はエラー条件@code{file-error}が与えられたときはデータアイテムだけから構築されるので、エラー文字列とサブカテゴリーはここにリストしない。つまりエラー文字列は特に関連しない。しかしこれらのエラーシンボルは@code{error-message}プロパティをもち、何もデータが与えられなければ、code{error-message}が@emph{使用される}。@ref{Files}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:111
@@ -248,7 +248,7 @@ msgstr "compression-error"
 #. type: table
 #: original_texis/errors.texi:114
 msgid "This is a subcategory of @code{file-error}, which results from problems handling a compressed file.  @xref{How Programs Do Loading}."
-msgstr "これは圧縮ファイルの処理の問題を起因とする、@code{file-error}のサブカテゴリーである。@ref{How Programs Do Loading}を参照のこと。"
+msgstr "これは圧縮ファイルの処理の問題を起因とする@code{file-error}のサブカテゴリー。@ref{How Programs Do Loading}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:116
@@ -259,7 +259,7 @@ msgstr "file-locked"
 #. type: table
 #: original_texis/errors.texi:118
 msgid "This is a subcategory of @code{file-error}.  @xref{File Locks}."
-msgstr "これは@code{file-error}のサブカテゴリーである。@ref{File Locks}を参照のこと。"
+msgstr "これは@code{file-error}のサブカテゴリー。@ref{File Locks}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:120
@@ -270,7 +270,7 @@ msgstr "file-supersession"
 #. type: table
 #: original_texis/errors.texi:122
 msgid "This is a subcategory of @code{file-error}.  @xref{Modification Time}."
-msgstr "これは@code{file-error}のサブカテゴリーである。@ref{Modification Time}を参照のこと。"
+msgstr "これは@code{file-error}のサブカテゴリー。@ref{Modification Time}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:124
@@ -281,7 +281,7 @@ msgstr "file-notify-error"
 #. type: table
 #: original_texis/errors.texi:127
 msgid "This is a subcategory of @code{file-error}.  It happens, when a file could not be watched for changes.  @xref{File Notifications}."
-msgstr "これは@code{file-error}のサブカテゴリーである。@ref{File Notifications}を参照のこと。"
+msgstr "これは@code{file-error}のサブカテゴリー。@ref{File Notifications}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:129
@@ -292,7 +292,7 @@ msgstr "ftp-error"
 #. type: table
 #: original_texis/errors.texi:133
 msgid "This is a subcategory of @code{file-error}, which results from problems in accessing a remote file using ftp.  @xref{Remote Files,,, emacs, The GNU Emacs Manual}."
-msgstr "これはftpを使用したリモートファイルへのアクセスの問題を起因とする、@code{file-error}のサブカテゴリーである。@ref{Remote Files,,, emacs, The GNU Emacs Manual}を参照のこと。"
+msgstr "これはftpを使用したリモートファイルへのアクセスの問題を起因とする@code{file-error}のサブカテゴリー。@ref{Remote Files,,, emacs, The GNU Emacs Manual}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:134
@@ -363,10 +363,8 @@ msgstr "scan-error"
 
 #. type: table
 #: original_texis/errors.texi:164
-#, fuzzy
-#| msgid "The message is @samp{Scan error}.  This happens when certain syntax-parsing functions find invalid syntax or mismatched parentheses.  @xref{List Motion}, and @xref{Parsing Expressions}."
 msgid "The message is @samp{Scan error}.  This happens when certain syntax-parsing functions find invalid syntax or mismatched parentheses.  Conventionally raised with three argument: a human-readable error message, the start of the obstacle that cannot be moved over, and the end of the obstacle.  @xref{List Motion}, and @xref{Parsing Expressions}."
-msgstr "メッセージは@samp{Scan error}。これは特定の構文解析関数が無効な構文やマッチしないカッコを見つけたときに発生する。@ref{List Motion}と@ref{Parsing Expressions}を参照されたい。"
+msgstr "メッセージは@samp{Scan error}。これは特定の構文解析関数が無効な構文やマッチしないカッコを見つけたときに発生する。慣習的に人間が可読なエラーメッセージ、移動を妨害する開始位置、妨害の終了位置という3つの引数でraiseされる。@ref{List Motion}と@ref{Parsing Expressions}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:165
@@ -399,7 +397,7 @@ msgstr "text-read-only"
 #. type: table
 #: original_texis/errors.texi:177
 msgid "The message is @samp{Text is read-only}.  This is a subcategory of @code{buffer-read-only}.  @xref{Special Properties}."
-msgstr "メッセージは@samp{Text is read-only}。これは@code{buffer-read-only}のサブカテゴリーである。@ref{Special Properties}を参照のこと。"
+msgstr "メッセージは@samp{Text is read-only}。これは@code{buffer-read-only}のサブカテゴリー。@ref{Special Properties}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:178
@@ -410,7 +408,7 @@ msgstr "undefined-color"
 #. type: table
 #: original_texis/errors.texi:180
 msgid "The message is @samp{Undefined color}.  @xref{Color Names}."
-msgstr "メッセージは@samp{Undefined color}、@ref{Color Names}を参照のこと。"
+msgstr "メッセージは@samp{Undefined color}。@ref{Color Names}を参照のこと。"
 
 #. type: item
 #: original_texis/errors.texi:181
@@ -472,7 +470,7 @@ msgstr "メッセージは@samp{Wrong type argument}。@ref{Type Predicates}を�
 #: original_texis/errors.texi:206
 #, no-wrap
 msgid "domain-error"
-msgstr ""
+msgstr "domain-error"
 
 # grouped by @ignore.
 #. type: table
@@ -481,14 +479,14 @@ msgstr ""
 msgid ""
 "The message is @samp{Arithmetic domain error}.\n"
 "\n"
-msgstr ""
+msgstr "The message is @samp{Arithmetic domain error}.\n\n"
 
 # grouped by @ignore.
 #. type: item
 #: original_texis/errors.texi:209
 #, no-wrap
 msgid "overflow-error"
-msgstr ""
+msgstr "overflow-error"
 
 # grouped by @ignore.
 #. type: table
@@ -499,13 +497,16 @@ msgid ""
 "of @code{domain-error}.\n"
 "\n"
 msgstr ""
+"The message is @samp{Arithmetic overflow error}.  This is a subcategory\n"
+"of @code{domain-error}.\n"
+"\n"
 
 # grouped by @ignore.
 #. type: item
 #: original_texis/errors.texi:213
 #, no-wrap
 msgid "range-error"
-msgstr ""
+msgstr "range-error"
 
 # grouped by @ignore.
 #. type: table
@@ -514,14 +515,14 @@ msgstr ""
 msgid ""
 "The message is @code{Arithmetic range error}.\n"
 "\n"
-msgstr ""
+msgstr "The message is @code{Arithmetic range error}.\n\n"
 
 # grouped by @ignore.
 #. type: item
 #: original_texis/errors.texi:216
 #, no-wrap
 msgid "singularity-error"
-msgstr ""
+msgstr "singularity-error"
 
 # grouped by @ignore.
 #. type: table
@@ -532,13 +533,16 @@ msgid ""
 "subcategory of @code{domain-error}.\n"
 "\n"
 msgstr ""
+"The message is @samp{Arithmetic singularity error}.  This is a\n"
+"subcategory of @code{domain-error}.\n"
+"\n"
 
 # grouped by @ignore.
 #. type: item
 #: original_texis/errors.texi:220
 #, no-wrap
 msgid "underflow-error"
-msgstr ""
+msgstr "underflow-error"
 
 # grouped by @ignore.
 #. type: table
@@ -548,3 +552,5 @@ msgid ""
 "The message is @samp{Arithmetic underflow error}.  This is a\n"
 "subcategory of @code{domain-error}.\n"
 msgstr ""
+"The message is @samp{Arithmetic underflow error}.  This is a\n"
+"subcategory of @code{domain-error}.\n"
